@@ -1,0 +1,54 @@
+{
+	"id": "f9e96930-e6df-11dc-8c6a-00304881ac9a",
+	"advisories": [
+		{
+			"id": "f9e96930-e6df-11dc-8c6a-00304881ac9a",
+			"title": "pcre -- buffer overflow vulnerability",
+			"description": "\n\t<p>PCRE developers report:</p>\n\t<blockquote cite=\"http://pcre.org/changelog.txt\">\n\t  <p>A character class containing a very large number of characters with\n\t    codepoints greater than 255 (in UTF-8 mode, of course) caused a\n\t    buffer overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f9e96930-e6df-11dc-8c6a-00304881ac9a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://pcre.org/changelog.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/27786"
+				}
+			],
+			"published": "2008-02-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-0674",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0674"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

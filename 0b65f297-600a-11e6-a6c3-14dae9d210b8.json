@@ -1,0 +1,51 @@
+{
+	"id": "0b65f297-600a-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "0b65f297-600a-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- Insecure default GELI keyfile permissions",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The default permission set by bsdinstall(8) installer\n\twhen configuring full disk encrypted ZFS is too open.</p>\n\t<h1>Impact:</h1>\n\t<p>A local attacker may be able to get a copy of the geli(8)\n\tprovider's keyfile which is located at a fixed location.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0b65f297-600a-11e6-a6c3-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:08.bsdinstall.asc"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1415",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1415"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.1_9",
+						"ge": "10.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

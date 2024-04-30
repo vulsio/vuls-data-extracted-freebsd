@@ -1,0 +1,49 @@
+{
+	"id": "0dc91089-ca41-11df-aade-0050568f000c",
+	"advisories": [
+		{
+			"id": "0dc91089-ca41-11df-aade-0050568f000c",
+			"title": "FreeBSD -- Unvalidated input in nfsclient",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The NFS client subsystem fails to correctly validate the length of a\n\t  parameter provided by the user when a filesystem is mounted.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0dc91089-ca41-11df-aade-0050568f000c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:06.nfsclient.asc"
+				}
+			],
+			"published": "2010-10-24T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.2_8",
+						"ge": "7.2"
+					},
+					{
+						"lt": "7.3_1",
+						"ge": "7.3"
+					},
+					{
+						"lt": "8.0_3",
+						"ge": "8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

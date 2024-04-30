@@ -1,0 +1,84 @@
+{
+	"id": "b4f0ad36-94a5-11e8-9007-080027ac955c",
+	"advisories": [
+		{
+			"id": "b4f0ad36-94a5-11e8-9007-080027ac955c",
+			"title": "mailman -- content spoofing with invalid list names in web UI",
+			"description": "\n\t<p>Mark Sapiro reports:</p>\n\t<blockquote cite=\"https://bugs.launchpad.net/mailman/+bug/1780874\">\n\t  <p>A URL with a very long text listname such as</p>\n\t  <pre>http://www.example.com/mailman/listinfo/This_is_a_long_string_with_some_phishing_text</pre>\n\t    <p>will echo the text in the \"No such list\" error response. This can be used to make a potential victim think the phishing text comes from a trusted site.</p>\n\t    <p>This issue was discovered by Hammad Qureshi.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b4f0ad36-94a5-11e8-9007-080027ac955c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.launchpad.net/mailman/+bug/1780874"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mail.python.org/pipermail/mailman-announce/2018-July/000241.html"
+				}
+			],
+			"published": "2018-07-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-13796",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-13796"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.28"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman-with-htdig"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.28"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-mailman"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.14.j7_6,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

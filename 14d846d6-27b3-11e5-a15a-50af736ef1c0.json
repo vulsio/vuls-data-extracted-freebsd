@@ -1,0 +1,46 @@
+{
+	"id": "14d846d6-27b3-11e5-a15a-50af736ef1c0",
+	"advisories": [
+		{
+			"id": "14d846d6-27b3-11e5-a15a-50af736ef1c0",
+			"title": "pivotx -- cross-site scripting (XSS) vulnerability",
+			"description": "\n\t<p>pivotx reports:</p>\n\t<blockquote cite=\"http://pivotx.net/page/security\">\n\t  <p>cross-site scripting (XSS) vulnerability in the nickname (and\n\t    possibly the email) field. Mitigated by the fact that an attacker\n\t    must have a PivotX account.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/14d846d6-27b3-11e5-a15a-50af736ef1c0.html"
+				}
+			],
+			"published": "2015-07-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0341",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0341"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pivotx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.9"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

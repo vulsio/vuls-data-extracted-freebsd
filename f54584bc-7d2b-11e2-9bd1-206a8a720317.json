@@ -1,0 +1,50 @@
+{
+	"id": "f54584bc-7d2b-11e2-9bd1-206a8a720317",
+	"advisories": [
+		{
+			"id": "f54584bc-7d2b-11e2-9bd1-206a8a720317",
+			"title": "krb5 -- null pointer dereference in the KDC PKINIT code [CVE-2013-1415]",
+			"description": "\n\t<p>No advisory has been released yet.</p>\n\t<blockquote cite=\"http://web.mit.edu/kerberos/www/krb5-1.11/\">\n\t  <p>Fix a null pointer dereference in the KDC PKINIT code [CVE-2013-1415].</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f54584bc-7d2b-11e2-9bd1-206a8a720317.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://web.mit.edu/kerberos/www/krb5-1.11/"
+				}
+			],
+			"published": "2013-02-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1415",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1415"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "krb5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.11"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

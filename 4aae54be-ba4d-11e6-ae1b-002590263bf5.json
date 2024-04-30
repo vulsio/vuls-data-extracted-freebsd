@@ -1,0 +1,54 @@
+{
+	"id": "4aae54be-ba4d-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "4aae54be-ba4d-11e6-ae1b-002590263bf5",
+			"title": "xen-kernel -- x86 HVM: Overflow of sh_ctxt->seg_reg[]",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"https://xenbits.xen.org/xsa/advisory-187.html\">\n\t  <p>x86 HVM guests running with shadow paging use a subset of the x86\n\t    emulator to handle the guest writing to its own pagetables. There\n\t    are situations a guest can provoke which result in exceeding the\n\t    space allocated for internal state.</p>\n\t  <p>A malicious HVM guest administrator can cause Xen to fail a bug\n\t    check, causing a denial of service to the host.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4aae54be-ba4d-11e6-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://xenbits.xen.org/xsa/advisory-187.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=214936"
+				}
+			],
+			"published": "2016-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-7094",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7094"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xen-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.7.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

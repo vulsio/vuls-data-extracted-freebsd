@@ -1,0 +1,50 @@
+{
+	"id": "44d0f8dc-6607-11e3-bb11-0025900931f8",
+	"advisories": [
+		{
+			"id": "44d0f8dc-6607-11e3-bb11-0025900931f8",
+			"title": "zabbix -- shell command injection vulnerability",
+			"description": "\n\t<p>Recurity Labs Team project reports:</p>\n\t<blockquote cite=\"https://support.zabbix.com/browse/ZBX-7479\">\n\t  <p>Zabbix agent is vulnerable to remote command execution\n\t    from the Zabbix server in some cases.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/44d0f8dc-6607-11e3-bb11-0025900931f8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://support.zabbix.com/browse/ZBX-7479"
+				}
+			],
+			"published": "2013-12-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-6824",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6824"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zabbix2-agent"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

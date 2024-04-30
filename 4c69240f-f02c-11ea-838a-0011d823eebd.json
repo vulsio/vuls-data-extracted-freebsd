@@ -1,0 +1,50 @@
+{
+	"id": "4c69240f-f02c-11ea-838a-0011d823eebd",
+	"advisories": [
+		{
+			"id": "4c69240f-f02c-11ea-838a-0011d823eebd",
+			"title": "Mbed TLS -- Local side channel attack on classical CBC decryption in (D)TLS",
+			"description": "\n\t<p>Manuel Pégourié-Gonnard reports:</p>\n\t<blockquote cite=\"https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2020-09-1\">\n\t  <p>When decrypting/authenticating (D)TLS record in a connection using\n\t    a CBC ciphersuite without the Encrypt-then-Mac extension RFC 7366,\n\t    Mbed TLS used dummy rounds of the compression function associated\n\t    with the hash used for HMAC in order to hide the length of the\n\t    padding to remote attackers, as recommended in the original Lucky\n\t    Thirteen paper.</p>\n\t  <p>A local attacker who is able to observe the state of the cache\n\t    could monitor the presence of mbedtls_md_process() in the cache in\n\t    order to determine when the actual computation ends and when the\n\t    dummy rounds start. This is a reliable target as it's always called\n\t    at least once, in response to a previous attack. The attacker can\n\t    then continue with one of many well-documented Lucky 13\n\t    variants.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4c69240f-f02c-11ea-838a-0011d823eebd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2020-09-1"
+				}
+			],
+			"published": "2020-09-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-16150",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-16150"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mbedtls"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.16.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

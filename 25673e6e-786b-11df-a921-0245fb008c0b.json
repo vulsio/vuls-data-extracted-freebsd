@@ -1,0 +1,46 @@
+{
+	"id": "25673e6e-786b-11df-a921-0245fb008c0b",
+	"advisories": [
+		{
+			"id": "25673e6e-786b-11df-a921-0245fb008c0b",
+			"title": "ziproxy -- security vulnerability in PNG decoder",
+			"description": "\n       <p>Daniel Mealha Cabrita reports:</p>\n       <blockquote cite=\"http://ziproxy.sourceforge.net/#news\">\n\t <p>Fixed security vulnerability (heap-related) in PNG decoder.\n\t   (new bug from 3.1.0)</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/25673e6e-786b-11df-a921-0245fb008c0b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://ziproxy.sourceforge.net/#news"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/mailarchive/message.php?msg_name=201006150731.30474.dancab%40gmx.net"
+				}
+			],
+			"published": "2010-06-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ziproxy"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "3.1.0"
+					},
+					{
+						"lt": "3.1.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

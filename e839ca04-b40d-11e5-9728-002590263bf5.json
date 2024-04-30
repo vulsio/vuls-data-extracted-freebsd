@@ -1,0 +1,54 @@
+{
+	"id": "e839ca04-b40d-11e5-9728-002590263bf5",
+	"advisories": [
+		{
+			"id": "e839ca04-b40d-11e5-9728-002590263bf5",
+			"title": "xen-kernel -- information leak in legacy x86 FPU/XMM initialization",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-165.html\">\n\t  <p>When XSAVE/XRSTOR are not in use by Xen to manage guest extended\n\t    register state, the initial values in the FPU stack and XMM\n\t    registers seen by the guest upon first use are those left there by\n\t    the previous user of those registers.</p>\n\t  <p>A malicious domain may be able to leverage this to obtain sensitive\n\t    information such as cryptographic keys from another domain.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e839ca04-b40d-11e5-9728-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xenbits.xen.org/xsa/advisory-165.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=205841"
+				}
+			],
+			"published": "2016-01-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8555",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8555"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xen-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

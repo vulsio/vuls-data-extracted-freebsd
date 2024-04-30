@@ -1,0 +1,80 @@
+{
+	"id": "4eeb93bf-f204-11ec-8fbd-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "4eeb93bf-f204-11ec-8fbd-d4c9ef517024",
+			"title": "OpenSSL -- Command injection vulnerability",
+			"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20220621.txt\">\n\t  <p>Circumstances where the c_rehash script does not properly\n\t    sanitise shell metacharacters to prevent command injection were\n\t    found by code review.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4eeb93bf-f204-11ec-8fbd-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20220621.txt"
+				}
+			],
+			"published": "2022-06-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2068",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-2068"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.1p,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-quictls"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

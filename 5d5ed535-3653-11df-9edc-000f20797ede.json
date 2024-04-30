@@ -1,0 +1,51 @@
+{
+	"id": "5d5ed535-3653-11df-9edc-000f20797ede",
+	"advisories": [
+		{
+			"id": "5d5ed535-3653-11df-9edc-000f20797ede",
+			"title": "firefox -- WOFF heap corruption due to integer overflow",
+			"description": "\n\t<p>Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2010-08  WOFF heap corruption due to integer overflow</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5d5ed535-3653-11df-9edc-000f20797ede.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-08.html"
+				}
+			],
+			"published": "2010-03-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1028",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1028"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.2,1",
+						"gt": "3.6,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

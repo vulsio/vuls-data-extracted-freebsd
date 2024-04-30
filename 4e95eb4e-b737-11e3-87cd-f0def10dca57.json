@@ -1,0 +1,50 @@
+{
+	"id": "4e95eb4e-b737-11e3-87cd-f0def10dca57",
+	"advisories": [
+		{
+			"id": "4e95eb4e-b737-11e3-87cd-f0def10dca57",
+			"title": "Icinga -- buffer overflow in classic web interface",
+			"description": "\n\t<p>The Icinga Team reports:</p>\n\t<blockquote cite=\"https://git.icinga.org/?p=icinga-core.git;a=commitdiff;h=73285093b71a5551abdaab0a042d3d6bae093b0d\">\n\t  <p>Wrong strlen check against MAX_INPUT_BUFFER without taking '\\0' into account [...]</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4e95eb4e-b737-11e3-87cd-f0def10dca57.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-2386"
+				}
+			],
+			"published": "2014-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-2386",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-2386"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "icinga"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.11.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

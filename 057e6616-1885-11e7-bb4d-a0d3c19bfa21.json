@@ -1,0 +1,116 @@
+{
+	"id": "057e6616-1885-11e7-bb4d-a0d3c19bfa21",
+	"advisories": [
+		{
+			"id": "057e6616-1885-11e7-bb4d-a0d3c19bfa21",
+			"title": "NVIDIA UNIX driver -- multiple vulnerabilities in the kernel mode layer handler",
+			"description": "\n\t<p>NVIDIA Unix security team reports:</p>\n\t<blockquote cite=\"http://nvidia.custhelp.com/app/answers/detail/a_id/4398\">\n\t  <p>NVIDIA GPU Display Driver contains vulnerabilities in the\n\t    kernel mode layer handler where multiple integer overflows,\n\t    improper access control, and improper validation of a user\n\t    input may cause a denial of service or potential escalation\n\t    of privileges.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/057e6616-1885-11e7-bb4d-a0d3c19bfa21.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://nvidia.custhelp.com/app/answers/detail/a_id/4398"
+				}
+			],
+			"published": "2017-04-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-0309",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0309"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0310",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0310"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0311",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0311"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0318",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0318"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0321",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0321"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nvidia-driver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "375.39"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nvidia-driver-340"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "340.102"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nvidia-driver-304"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "304.135"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

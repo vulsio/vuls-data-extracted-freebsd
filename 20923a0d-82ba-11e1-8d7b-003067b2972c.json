@@ -1,0 +1,77 @@
+{
+	"id": "20923a0d-82ba-11e1-8d7b-003067b2972c",
+	"advisories": [
+		{
+			"id": "20923a0d-82ba-11e1-8d7b-003067b2972c",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://www.adobe.com/support/security/bulletins/apsb12-07.html\">\n\t  <p>Multiple Priority 2 vulnerabilities could cause a crash and\n\t    potentially allow an attacker to take control of the affected\n\t    system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/20923a0d-82ba-11e1-8d7b-003067b2972c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.adobe.com/support/security/bulletins/apsb12-07.html"
+				}
+			],
+			"published": "2012-04-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-0724",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0724"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0725",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0725"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0772",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0772"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0773",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0773"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-flashplugin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.2r202.228"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

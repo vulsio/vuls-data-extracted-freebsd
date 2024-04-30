@@ -1,0 +1,51 @@
+{
+	"id": "5797c807-4279-11ea-b184-f8b156ac3ff9",
+	"advisories": [
+		{
+			"id": "5797c807-4279-11ea-b184-f8b156ac3ff9",
+			"title": "FreeBSD -- Missing IPsec anti-replay window check",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A missing check means that an attacker can reinject an old packet and\n\tit will be accepted and processed by the IPsec endpoint.</p>\n\t<h1>Impact:</h1>\n\t<p>The impact depends on the higher-level protocols in use over IPsec.\n\tFor example, an attacker who can capture and inject packets could\n\tcause an action that was intentionally performed once to be repeated.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5797c807-4279-11ea-b184-f8b156ac3ff9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:02.ipsec.asc"
+				}
+			],
+			"published": "2020-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-5613",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5613"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.0_13",
+						"ge": "12.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

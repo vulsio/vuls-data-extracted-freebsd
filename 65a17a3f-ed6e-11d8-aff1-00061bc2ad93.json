@@ -1,0 +1,59 @@
+{
+	"id": "65a17a3f-ed6e-11d8-aff1-00061bc2ad93",
+	"advisories": [
+		{
+			"id": "65a17a3f-ed6e-11d8-aff1-00061bc2ad93",
+			"title": "Arbitrary code execution via a format string vulnerability in jftpgw",
+			"description": "\n\t<p>The log functions in jftpgw may allow\n\t  remotely authenticated user to execute\n\t  arbitrary code via the format string\n\t  specifiers in certain syslog messages.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/65a17a3f-ed6e-11d8-aff1-00061bc2ad93.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2004/dsa-510"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/16271"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10438"
+				}
+			],
+			"published": "2004-08-13T00:00:00Z",
+			"modified": "2004-08-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0448",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0448"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jftpgw"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.13.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

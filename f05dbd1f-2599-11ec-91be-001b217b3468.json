@@ -1,0 +1,59 @@
+{
+	"id": "f05dbd1f-2599-11ec-91be-001b217b3468",
+	"advisories": [
+		{
+			"id": "f05dbd1f-2599-11ec-91be-001b217b3468",
+			"title": "Bacula-Web -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Bacula-Web reports:</p>\n\t<blockquote cite=\"https://www.bacula-web.org/releases/2021-07-11-bacula-web-8.4.2/\">\n\t  <p>Address Smarty CVE</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f05dbd1f-2599-11ec-91be-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.bacula-web.org/releases/2021-07-11-bacula-web-8.4.2/"
+				}
+			],
+			"published": "2021-10-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-26119",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-26119"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-26120",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-26120"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bacula-web"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.4.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

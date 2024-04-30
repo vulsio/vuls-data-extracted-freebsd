@@ -1,0 +1,64 @@
+{
+	"id": "b95e5674-b4d6-11e7-b895-0cc47a494882",
+	"advisories": [
+		{
+			"id": "b95e5674-b4d6-11e7-b895-0cc47a494882",
+			"title": "arj -- multiple vulnerabilities",
+			"description": "\n\t<p>Several vulnerabilities: symlink directory traversal, absolute path directory\n\ttraversal and buffer overflow were discovered in the arj archiver.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b95e5674-b4d6-11e7-b895-0cc47a494882.html"
+				}
+			],
+			"published": "2017-10-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0556",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0556"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0557",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0557"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-2782",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-2782"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "arj"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.10.22_5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

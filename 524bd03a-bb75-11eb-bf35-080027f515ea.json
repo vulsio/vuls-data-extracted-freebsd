@@ -1,0 +1,54 @@
+{
+	"id": "524bd03a-bb75-11eb-bf35-080027f515ea",
+	"advisories": [
+		{
+			"id": "524bd03a-bb75-11eb-bf35-080027f515ea",
+			"title": "libxml2 -- Possible denial of service",
+			"description": "\n\t<p>Daniel Veillard reports:</p>\n\t<blockquote cite=\"https://ubuntu.com/security/CVE-2021-3541\">\n\t  <p>\n\t    A flaw was found in libxml2. Exponential entity expansion attack\n\t    its possible bypassing all existing protection mechanisms and\n\t    leading to denial of service.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/524bd03a-bb75-11eb-bf35-080027f515ea.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://ubuntu.com/security/CVE-2021-3541"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.gnome.org/GNOME/libxml2/-/commit/8598060bacada41a0eb09d95c97744ff4e428f8e"
+				}
+			],
+			"published": "2021-05-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-3541",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-3541"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libxml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.9.10_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

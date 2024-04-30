@@ -1,0 +1,54 @@
+{
+	"id": "0ac68e68-d32b-11dd-b540-d1288664c17e",
+	"advisories": [
+		{
+			"id": "0ac68e68-d32b-11dd-b540-d1288664c17e",
+			"title": "ampache -- insecure temporary file usage",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/31657\">\n\t  <p>A security issue has been reported in Ampache, which can be\n\t    exploited by malicious, local users to perform certain actions\n\t    with escalated privileges.</p>\n\t  <p>The security issue is caused due to the \"gather-messages.sh\"\n\t    script handling temporary files in an insecure manner.\n\t    This can be exploited via symlink attacks to overwrite arbitrary\n\t    files with the privileges of the user running the script.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0ac68e68-d32b-11dd-b540-d1288664c17e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31657"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/30875"
+				}
+			],
+			"published": "2008-12-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3929",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3929"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ampache"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.4.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

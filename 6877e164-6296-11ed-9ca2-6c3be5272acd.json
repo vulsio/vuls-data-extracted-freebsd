@@ -1,0 +1,102 @@
+{
+	"id": "6877e164-6296-11ed-9ca2-6c3be5272acd",
+	"advisories": [
+		{
+			"id": "6877e164-6296-11ed-9ca2-6c3be5272acd",
+			"title": "Grafana -- Data source and plugin proxy endpoints leaking authentication tokens to some destination plugins",
+			"description": "\n\t<p>Grafana Labs reports:</p>\n\t<blockquote cite=\"https://grafana.com/blog/2022/10/12/grafana-security-releases-new-versions-with-fixes-for-cve-2022-39229-cve-2022-39201-cve-2022-31130-cve-2022-31123/\">\n\t  <p>On September 7th as a result of an internal security audit we have discovered\n\t  that Grafana could leak the authentication cookie of users to plugins. After\n\t  further analysis the vulnerability impacts data source and plugin proxy\n\t  endpoints under certain conditions.</p>\n\t  <p>We believe that this vulnerability is rated at CVSS 6.8\n\t  (CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6877e164-6296-11ed-9ca2-6c3be5272acd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/grafana/grafana/security/advisories/GHSA-x744-mm8v-vpgr"
+				}
+			],
+			"published": "2022-11-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-39201",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39201"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.5.14",
+						"ge": "5.0.0"
+					},
+					{
+						"lt": "9.1.8",
+						"ge": "9.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "7.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.5.14",
+						"ge": "8.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana9"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.1.8",
+						"ge": "9.0.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,43 @@
+{
+	"id": "4b68d917-e705-11dd-afcd-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "4b68d917-e705-11dd-afcd-00e0815b8da8",
+			"title": "Teamspeak Server -- Directory Traversal Vulnerability",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/33256\">\n\t  <p>TeamSpeak is prone to a directory-traversal vulnerability because\n\t    it fails to sufficiently sanitize user-supplied input data.\n\t    Exploiting the issue may allow an attacker to obtain sensitive\n\t    information that could aid in further attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4b68d917-e705-11dd-afcd-00e0815b8da8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/33256"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/33256"
+				}
+			],
+			"published": "2009-01-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "teamspeak_server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.0.23.17"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

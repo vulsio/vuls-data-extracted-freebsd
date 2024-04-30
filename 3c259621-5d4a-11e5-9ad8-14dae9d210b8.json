@@ -1,0 +1,50 @@
+{
+	"id": "3c259621-5d4a-11e5-9ad8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "3c259621-5d4a-11e5-9ad8-14dae9d210b8",
+			"title": "openslp -- denial of service vulnerability",
+			"description": "\n\t<p>Qinghao Tang reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/559\">\n\t  <p>The function ParseExtension() in openslp 1.2.1 contains\n\t    vulnerability: an attacker can cause a denial of service\n\t    (infinite loop) via a packet with crafted \"nextoffset\"\n\t    value and \"extid\" value.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c259621-5d4a-11e5-9ad8-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2015/q3/559"
+				}
+			],
+			"published": "2015-09-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5155",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5155"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openslp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

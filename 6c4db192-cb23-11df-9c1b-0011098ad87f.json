@@ -1,0 +1,48 @@
+{
+	"id": "6c4db192-cb23-11df-9c1b-0011098ad87f",
+	"advisories": [
+		{
+			"id": "6c4db192-cb23-11df-9c1b-0011098ad87f",
+			"title": "horde-imp -- XSS vulnerability",
+			"description": "\n\t<p>The Horde team reports:</p>\n\t<blockquote cite=\"http://article.gmane.org/gmane.comp.horde.announce/516\">\n\t  <p>Thanks to Naumann IT Security Consulting for reporting the XSS\n\t    vulnerability.</p>\n\t  <p>The major changes compared to IMP version H3 (4.3.7) are:</p>\n\t  <p>* Fixed an XSS vulnerability in the Fetchmail configuration.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6c4db192-cb23-11df-9c1b-0011098ad87f.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.horde.announce/516"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://git.horde.org/diff.php/imp/docs/CHANGES?rt=horde&r1=1.699.2.424&r2=1.699.2.430&ty=h"
+				}
+			],
+			"published": "2010-09-28T00:00:00Z",
+			"modified": "2011-09-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde-imp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.8,1",
+						"gt": "4.2,1"
+					},
+					{
+						"lt": "4.3.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

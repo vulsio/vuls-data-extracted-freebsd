@@ -1,0 +1,51 @@
+{
+	"id": "08f5c27d-4326-11ea-af8b-00155d0a0200",
+	"advisories": [
+		{
+			"id": "08f5c27d-4326-11ea-af8b-00155d0a0200",
+			"title": "OpenSMTPd -- critical LPE / RCE vulnerability",
+			"description": "\n\t<p>OpenSMTPD developers report:</p>\n\t<blockquote cite=\"https://opensmtpd.org/security.html\">\n\t  <p>An incorrect check allows an attacker to trick mbox delivery\n\t   into executing arbitrary commands as root and lmtp delivery\n\t    into executing arbitrary commands as an unprivileged user</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/08f5c27d-4326-11ea-af8b-00155d0a0200.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openwall.com/lists/oss-security/2020/01/28/3"
+				}
+			],
+			"published": "2020-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7247",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7247"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opensmtpd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.6.2,1",
+						"ge": "6.4.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

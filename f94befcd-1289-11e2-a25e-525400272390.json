@@ -1,0 +1,51 @@
+{
+	"id": "f94befcd-1289-11e2-a25e-525400272390",
+	"advisories": [
+		{
+			"id": "f94befcd-1289-11e2-a25e-525400272390",
+			"title": "gitolite -- path traversal vulnerability",
+			"description": "\n\t<p>Sitaram Chamarty reports:</p>\n\t<blockquote cite=\"https://groups.google.com/forum/#!topic/gitolite/K9SnQNhCQ-0/discussion\">\n\t  <p>I'm sorry to say there is a potential path traversal vulnerability in\n\t  v3. Thanks to Stephane Chazelas for finding it and alerting me.</p>\n\t  <p>Can it affect you? This can only affect you if you are using wild\n\t  card repos, *and* at least one of your patterns allows the string\n\t  \"../\" to match multiple times.</p>\n\t  <p>How badly can it affect you? A malicious user who *also* has the\n\t  ability to create arbitrary files in, say, /tmp (e.g., he has his own\n\t  userid on the same box), can compromise the entire \"git\" user.\n\t  Otherwise the worst he can do is create arbitrary repos in /tmp.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f94befcd-1289-11e2-a25e-525400272390.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/forum/#!topic/gitolite/K9SnQNhCQ-0/discussion"
+				}
+			],
+			"published": "2012-10-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4506",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4506"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitolite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "3.04",
+						"ge": "3.01"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,43 @@
+{
+	"id": "e308c61a-2060-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "e308c61a-2060-11e5-a4a5-002590263bf5",
+			"title": "ansible -- multiple vulnerabilities",
+			"description": "\n\t<p>Ansible, Inc. reports:</p>\n\t<blockquote cite=\"http://www.ansible.com/security\">\n\t  <p>Arbitrary execution from data from compromised remote hosts or\n\t    local data when using a legacy Ansible syntax - resolved in\n\t    Ansible 1.7</p>\n\t  <p>ansible-galaxy command when used on local tarballs (and not\n\t    galaxy.ansible.com) can install a malformed tarball if so provided\n\t    - resolved in Ansible 1.7</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e308c61a-2060-11e5-a4a5-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ansible.com/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://raw.githubusercontent.com/ansible/ansible/devel/CHANGELOG.md"
+				}
+			],
+			"published": "2015-07-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

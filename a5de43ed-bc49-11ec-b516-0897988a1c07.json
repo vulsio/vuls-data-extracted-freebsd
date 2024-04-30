@@ -1,0 +1,65 @@
+{
+	"id": "a5de43ed-bc49-11ec-b516-0897988a1c07",
+	"advisories": [
+		{
+			"id": "a5de43ed-bc49-11ec-b516-0897988a1c07",
+			"title": "Asterisk -- func_odbc: Possible SQL Injection",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories/\">\n\t  <p>Some databases can use backslashes to escape certain\n\t  characters, such as backticks. If input is provided to\n\t  func_odbc which includes backslashes it is possible for\n\t  func_odbc to construct a broken SQL query and the SQL\n\t  query to fail.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a5de43ed-bc49-11ec-b516-0897988a1c07.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2022-003.html"
+				}
+			],
+			"published": "2022-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-26651",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-26651"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.25.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk18"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "18.11.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,103 @@
+{
+	"id": "81f127a8-0038-11da-86bc-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "81f127a8-0038-11da-86bc-000e0c2e438a",
+			"title": "vim -- vulnerabilities in modeline handling: glob, expand",
+			"description": "\n\t<p>Georgi Guninski discovered a way to construct Vim modelines\n\t  that execute arbitrary shell commands.  The vulnerability\n\t  can be exploited by including shell commands in modelines\n\t  that call the glob() or expand() functions.  An attacker\n\t  could trick an user to read or edit a trojaned file with\n\t  modelines enabled, after which the attacker is able to\n\t  execute arbitrary commands with the privileges of the user.</p>\n\t<p><strong>Note:</strong> It is generally recommended that VIM\n\t  users use <code>set nomodeline</code> in\n\t  <code>~/.vimrc</code> to avoid the possibility of trojaned\n\t  text files.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/81f127a8-0038-11da-86bc-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.guninski.com/where_do_you_want_billg_to_go_today_5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14374"
+				}
+			],
+			"published": "2005-07-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2368",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2368"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.82",
+						"ge": "6.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-console"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.82",
+						"ge": "6.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.82",
+						"ge": "6.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim+ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.82",
+						"ge": "6.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

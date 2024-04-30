@@ -1,0 +1,51 @@
+{
+	"id": "32498c8f-fc84-11e8-be12-a4badb2f4699",
+	"advisories": [
+		{
+			"id": "32498c8f-fc84-11e8-be12-a4badb2f4699",
+			"title": "FreeBSD -- Insufficient bounds checking in bhyve(8) device model",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Insufficient bounds checking in one of the device models\n\tprovided by bhyve(8) can permit a guest operating system\n\tto overwrite memory in the bhyve(8) processing possibly\n\tpermitting arbitary code execution.</p>\n\t<h1>Impact:</h1>\n\t<p>A guest OS using a firmware image can cause the bhyve\n\tprocess to crash, or possibly execute arbitrary code on the\n\thost as root.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/32498c8f-fc84-11e8-be12-a4badb2f4699.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-18:14.bhyve.asc"
+				}
+			],
+			"published": "2018-12-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1716",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1716"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.2_6",
+						"ge": "11.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

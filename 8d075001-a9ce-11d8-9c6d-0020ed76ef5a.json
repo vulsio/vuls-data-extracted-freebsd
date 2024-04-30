@@ -1,0 +1,70 @@
+{
+	"id": "8d075001-a9ce-11d8-9c6d-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "8d075001-a9ce-11d8-9c6d-0020ed76ef5a",
+			"title": "neon date parsing vulnerability",
+			"description": "\n\t<p>Stefan Esser reports:</p>\n\t<blockquote cite=\"http://security.e-matters.de/advisories/062004.html\">\n\t  <p>A vulnerability within a libneon date parsing function\n\t    could cause a heap overflow which could lead to remote\n\t    code execution, depending on the application using\n\t    libneon.</p>\n\t</blockquote>\n\t<p>The vulnerability is in the function ne_rfc1036_parse,\n\t  which is in turn used by the function ne_httpdate_parse.\n\t  Applications using either of these neon functions may be\n\t  vulnerable.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8d075001-a9ce-11d8-9c6d-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.e-matters.de/advisories/062004.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/11785"
+				}
+			],
+			"published": "2004-05-19T00:00:00Z",
+			"modified": "2004-06-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0398",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0398"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "neon"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.24.5_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "sitecopy"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.13.4_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

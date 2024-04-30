@@ -1,0 +1,66 @@
+{
+	"id": "e94cb43d-0c4a-11db-9016-0050bf27ba24",
+	"advisories": [
+		{
+			"id": "e94cb43d-0c4a-11db-9016-0050bf27ba24",
+			"title": "horde -- various problems in dereferrer",
+			"description": "\n\t<p>Horde 3.1.2 release announcement:</p>\n\t<blockquote cite=\"http://lists.horde.org/archives/announce/2006/000288.html\">\n\t  <p>Security Fixes:</p>\n\t  <ul>\n\t    <li>Closed XSS problems in dereferrer (IE only), help viewer\n\t      and problem reporting screen.</li>\n\t    <li>Removed unused image proxy code from dereferrer.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e94cb43d-0c4a-11db-9016-0050bf27ba24.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.horde.org/archives/announce/2006/000288.html"
+				}
+			],
+			"published": "2006-07-05T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-3548",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-3548"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde-php5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

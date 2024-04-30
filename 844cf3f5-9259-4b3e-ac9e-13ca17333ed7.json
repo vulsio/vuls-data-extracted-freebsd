@@ -1,0 +1,40 @@
+{
+	"id": "844cf3f5-9259-4b3e-ac9e-13ca17333ed7",
+	"advisories": [
+		{
+			"id": "844cf3f5-9259-4b3e-ac9e-13ca17333ed7",
+			"title": "ruby -- DoS vulnerability in REXML",
+			"description": "\n\t<p>Ruby developers report:</p>\n\t<blockquote cite=\"http://www.ruby-lang.org/en/news/2013/02/22/rexml-dos-2013-02-22/\">\n\t  <p>Unrestricted entity expansion can lead to a DoS vulnerability in\n\t     REXML. (The CVE identifier will be assigned later.) We strongly\n\t     recommend to upgrade ruby.\n\t  </p>\n\t  <p>When reading text nodes from an XML document, the REXML parser can\n\t     be coerced in to allocating extremely large string objects which\n\t     can consume all of the memory on a machine, causing a denial of\n\t     service.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/844cf3f5-9259-4b3e-ac9e-13ca17333ed7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ruby-lang.org/en/news/2013/02/22/rexml-dos-2013-02-22/"
+				}
+			],
+			"published": "2013-02-24T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.9.3.392,1",
+						"ge": "1.9,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

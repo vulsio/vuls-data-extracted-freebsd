@@ -1,0 +1,50 @@
+{
+	"id": "c682923d-b444-11ed-9268-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "c682923d-b444-11ed-9268-b42e991fc52e",
+			"title": "freerdp -- clients using `/parallel` command line switch might read uninitialized data",
+			"description": "\n\t<p>MITRE reports:</p>\n      <blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39282\">\n\t<p>\n\t  FreeRDP based clients on unix systems using\n\t  `/parallel` command line switch might read uninitialized\n\t  data and send it to the server the client is currently\n\t  connected to. FreeRDP based server implementations are not\n\t  affected.\n\t</p>\n      </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c682923d-b444-11ed-9268-b42e991fc52e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-c45q-wcpg-mxjq"
+				}
+			],
+			"published": "2023-02-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-39282",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39282"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freerdp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

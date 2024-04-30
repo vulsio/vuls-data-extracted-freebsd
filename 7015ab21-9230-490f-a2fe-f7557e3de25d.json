@@ -1,0 +1,78 @@
+{
+	"id": "7015ab21-9230-490f-a2fe-f7557e3de25d",
+	"advisories": [
+		{
+			"id": "7015ab21-9230-490f-a2fe-f7557e3de25d",
+			"title": "electron{26,27} -- multiple vulnerabilities",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v26.6.3\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2023-6508.</li>\n\t    <li>Security: backported fix for CVE-2023-7024.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7015ab21-9230-490f-a2fe-f7557e3de25d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-3pr6-6r34-c98x"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-7c6v-f3h8-2x89"
+				}
+			],
+			"published": "2023-12-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-6508",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6508"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-7024",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-7024"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "electron26"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "26.6.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "electron27"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "27.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

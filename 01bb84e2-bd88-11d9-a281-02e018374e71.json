@@ -1,0 +1,63 @@
+{
+	"id": "01bb84e2-bd88-11d9-a281-02e018374e71",
+	"advisories": [
+		{
+			"id": "01bb84e2-bd88-11d9-a281-02e018374e71",
+			"title": "groff -- pic2graph and eqn2graph are vulnerable to symlink attack through temporary files",
+			"description": "\n\t<p>The eqn2graph and pic2graph scripts in groff 1.18.1\n\t  allow local users to overwrite arbitrary files via\n\t  a symlink attack on temporary files.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/01bb84e2-bd88-11d9-a281-02e018374e71.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286371"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286372"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=80671"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12058"
+				}
+			],
+			"published": "2005-05-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1296",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1296"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-groff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.18.1_8",
+						"ge": "1.18.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,51 @@
+{
+	"id": "ed8a4215-675c-11ec-8dd4-a0f3c100ae18",
+	"advisories": [
+		{
+			"id": "ed8a4215-675c-11ec-8dd4-a0f3c100ae18",
+			"title": "Pillow -- Regular Expression Denial of Service (ReDoS)",
+			"description": "\n\t<p>GitHub Advisory Database reports:</p>\n\t<blockquote cite=\"https://github.com/advisories/GHSA-98vv-pw6r-q6q4\">\n\t  <p>Uncontrolled Resource Consumption in pillow.</p>\n\t  <p>The package pillow from 0 and before 8.3.2 are vulnerable to Regular\n\t     Expression Denial of Service (ReDoS) via the getrgb function.</p>\n\t  <p>References:</p>\n\t  <ul>\n\t    <li>https://nvd.nist.gov/vuln/detail/CVE-2021-23437</li>\n\t    <li>https://github.com/python-pillow/Pillow/commit/9e08eb8f78fdfd2f476e1b20b7cf38683754866b</li>\n\t    <li>https://pillow.readthedocs.io/en/stable/releasenotes/8.3.2.html</li>\n\t    <li>https://snyk.io/vuln/SNYK-PYTHON-PILLOW-1319443</li>\n\t    <li>https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RNSG6VFXTAROGF7ACYLMAZNQV4EJ6I2C/</li>\n\t    <li>https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VKRCL7KKAKOXCVD7M6WC5OKFGL4L3SJT/</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ed8a4215-675c-11ec-8dd4-a0f3c100ae18.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23437"
+				}
+			],
+			"published": "2021-09-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-23437",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-23437"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py38-pillow"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.3.2",
+						"ge": "5.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

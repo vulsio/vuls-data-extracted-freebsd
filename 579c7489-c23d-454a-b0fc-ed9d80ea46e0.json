@@ -1,0 +1,63 @@
+{
+	"id": "579c7489-c23d-454a-b0fc-ed9d80ea46e0",
+	"advisories": [
+		{
+			"id": "579c7489-c23d-454a-b0fc-ed9d80ea46e0",
+			"title": "electron22 -- multiple vulnerabilities",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v22.3.23\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2023-4427.</li>\n\t    <li>Security: backported fix for CVE-2023-4428.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/579c7489-c23d-454a-b0fc-ed9d80ea46e0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-qqwc-fhxf-4mf3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-m56x-9vph-h345"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-4427",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4427"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4428",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4428"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "electron22"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "22.3.23"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,129 @@
+{
+	"id": "96d84238-b500-490b-b6aa-2b77090a0410",
+	"advisories": [
+		{
+			"id": "96d84238-b500-490b-b6aa-2b77090a0410",
+			"title": "xorg-server -- Overlay Window Use-After-Free",
+			"description": "\n\t<p>The X.Org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2023-March/003374.html\">\n\t  <ul>\n\t    <li>ZDI-CAN-19866/CVE-2023-1393: X.Org Server Overlay Window Use-After-Free\n\t    Local Privilege Escalation Vulnerability\n\n\t    <p>If a client explicitly destroys the compositor overlay window (aka COW),\n\t    the Xserver would leave a dangling pointer to that window in the CompScreen\n\t    structure, which will trigger a use-after-free later.</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/96d84238-b500-490b-b6aa-2b77090a0410.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.x.org/archives/xorg-announce/2023-March/003374.html"
+				}
+			],
+			"published": "2023-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-1393",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1393"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "21.1.8,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xephyr"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "21.1.8,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-vfbserver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "21.1.8,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-nestserver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "21.1.8,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xwayland"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "23.1.1,1",
+						"ge": "23.0.0,1"
+					},
+					{
+						"lt": "22.1.9,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xwayland-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "21.0.99.1.439"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

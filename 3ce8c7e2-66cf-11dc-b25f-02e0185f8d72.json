@@ -1,0 +1,186 @@
+{
+	"id": "3ce8c7e2-66cf-11dc-b25f-02e0185f8d72",
+	"advisories": [
+		{
+			"id": "3ce8c7e2-66cf-11dc-b25f-02e0185f8d72",
+			"title": "mozilla -- code execution via Quicktime media-link files",
+			"description": "\n\t<p>The Mozilla Foundation reports a vulnerability within the\n\t  mozilla browser.  This vulnerability also affects various\n\t  other browsers like firefox and seamonkey.  The vulnerability\n\t  is caused by QuickTime Media-Link files that contain a qtnext\n\t  attribute.  This could allow an attacker to start the browser\n\t  with arbitrary command-line options.\tThis could allow the\n\t  attacker to install malware, steal local data and possibly\n\t  execute and/or do other arbitrary things within the users\n\t  context.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3ce8c7e2-66cf-11dc-b25f-02e0185f8d72.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-28.html"
+				}
+			],
+			"published": "2007-09-19T00:00:00Z",
+			"modified": "2007-12-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-4965",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4965"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.7,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.a2007.12.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.a2007.12.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-ja"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,43 @@
+{
+	"id": "7f3fdef7-51d2-11da-8e93-0010dc4afb40",
+	"advisories": [
+		{
+			"id": "7f3fdef7-51d2-11da-8e93-0010dc4afb40",
+			"title": "p5-Mail-SpamAssassin -- long message header denial of service",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/17386/\">\n\t  <p>A vulnerability has been reported in SpamAssassin,\n\t    which can be exploited by malicious people to cause\n\t    a DoS (Denial of Service).</p>\n\t  <p>The vulnerability is caused due to the use of\n\t    an inefficient regular expression in\n\t    \"/SpamAssassin/Message.pm\" to parse email headers.\n\t    This can cause perl to crash when it runs out of stack\n\t    space and can be exploited via a malicious email that\n\t    contains a large number of recipients.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7f3fdef7-51d2-11da-8e93-0010dc4afb40.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17386/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://issues.apache.org/SpamAssassin/show_bug.cgi?id=4570"
+				}
+			],
+			"published": "2005-11-10T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p5-Mail-SpamAssassin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

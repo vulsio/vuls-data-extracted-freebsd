@@ -1,0 +1,71 @@
+{
+	"id": "df587aa2-b5a5-11e5-9728-002590263bf5",
+	"advisories": [
+		{
+			"id": "df587aa2-b5a5-11e5-9728-002590263bf5",
+			"title": "dhcpcd -- multiple vulnerabilities",
+			"description": "\n\t<p>Nico Golde reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/01/07/3\">\n\t  <p>heap overflow via malformed dhcp responses later in print_option\n\t    (via dhcp_envoption1) due to incorrect option length values.\n\t    Exploitation is non-trivial, but I'd love to be proven wrong.</p>\n\t  <p>invalid read/crash via malformed dhcp responses. not exploitable\n\t    beyond DoS as far as I can judge.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/df587aa2-b5a5-11e5-9728-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://roy.marples.name/projects/dhcpcd/info/76a1609352263bd9def1300d7ba990679571fa30"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://roy.marples.name/projects/dhcpcd/info/595883e2a431f65d8fabf33059aa4689cca17403"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/01/07/3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206015"
+				}
+			],
+			"published": "2016-01-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1503",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1503"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1504",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1504"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcpcd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.10.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

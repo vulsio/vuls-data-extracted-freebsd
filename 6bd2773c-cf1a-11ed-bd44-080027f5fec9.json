@@ -1,0 +1,142 @@
+{
+	"id": "6bd2773c-cf1a-11ed-bd44-080027f5fec9",
+	"advisories": [
+		{
+			"id": "6bd2773c-cf1a-11ed-bd44-080027f5fec9",
+			"title": "rubygem-time -- ReDoS vulnerability",
+			"description": "\n\t<p>ooooooo_q reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2023/03/30/redos-in-time-cve-2023-28756/\">\n\t  <p>\n\t    The Time parser mishandles invalid strings that have\n\t    specific characters. It causes an increase in execution\n\t    time for parsing strings to Time objects.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6bd2773c-cf1a-11ed-bd44-080027f5fec9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.ruby-lang.org/en/news/2023/03/30/redos-in-time-cve-2023-28756/"
+				}
+			],
+			"published": "2023-03-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28756",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28756"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.8,1",
+						"ge": "2.7.0,1"
+					},
+					{
+						"lt": "3.0.6,1",
+						"ge": "3.0.0,1"
+					},
+					{
+						"lt": "3.1.4,1",
+						"ge": "3.1.0,1"
+					},
+					{
+						"lt": "3.2.2,1",
+						"ge": "3.2.0.p1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby27"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.8,1",
+						"ge": "2.7.0,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby30"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.6,1",
+						"ge": "3.0.0,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby31"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.4,1",
+						"ge": "3.1.0,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby32"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.2,1",
+						"ge": "3.2.0.p1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-time"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

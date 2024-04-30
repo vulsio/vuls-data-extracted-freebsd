@@ -1,0 +1,65 @@
+{
+	"id": "77f67b46-bd75-11e8-81b6-001999f8d30b",
+	"advisories": [
+		{
+			"id": "77f67b46-bd75-11e8-81b6-001999f8d30b",
+			"title": "asterisk -- Remote crash vulnerability in HTTP websocket upgrade",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>There is a stack overflow vulnerability in the\n\t  res_http_websocket.so module of Asterisk that allows an\n\t  attacker to crash Asterisk via a specially crafted HTTP\n\t  request to upgrade the connection to a websocket. The\n\t  attackers request causes Asterisk to run out of stack\n\t  space and crash.</p>\n\t  <p>As a workaround disable HTTP websocket access by not\n\t  loading the res_http_websocket.so module.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/77f67b46-bd75-11e8-81b6-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2018-009.html"
+				}
+			],
+			"published": "2018-09-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-17281",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-17281"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk13"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.23.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk15"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.6.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

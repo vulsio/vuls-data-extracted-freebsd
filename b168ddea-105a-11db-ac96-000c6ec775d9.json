@@ -1,0 +1,67 @@
+{
+	"id": "b168ddea-105a-11db-ac96-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "b168ddea-105a-11db-ac96-000c6ec775d9",
+			"title": "samba -- memory exhaustion DoS in smbd",
+			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CAN-2006-3403.html\">\n\t  <p>The smbd daemon maintains internal data structures used\n\t    track active connections to file and printer shares.  In\n\t    certain circumstances an attacker may be able to\n\t    continually increase the memory usage of an smbd process\n\t    by issuing a large number of share connection requests.\n\t    This defect affects all Samba configurations.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b168ddea-105a-11db-ac96-000c6ec775d9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.samba.org/samba/security/CAN-2006-3403.html"
+				}
+			],
+			"published": "2006-07-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-3403",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-3403"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.23,1",
+						"ge": "3.0.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-samba"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.23,1",
+						"ge": "3.0.1,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "6107efb9-aae3-11da-aea1-000854d03344",
+	"advisories": [
+		{
+			"id": "6107efb9-aae3-11da-aea1-000854d03344",
+			"title": "gtar -- invalid headers buffer overflow",
+			"description": "\n\t<p>GNU tar is vulnerable to a buffer overflow, caused by\n\t  improper bounds checking of the PAX extended headers. By\n\t  tricking an user into processing a specially crafted tar\n\t  archive, this could be exploited to execute arbitrary\n\t  code with the privileges of the user.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6107efb9-aae3-11da-aea1-000854d03344.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/16764"
+				}
+			],
+			"published": "2006-03-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0300",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0300"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gtar"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.15.1_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

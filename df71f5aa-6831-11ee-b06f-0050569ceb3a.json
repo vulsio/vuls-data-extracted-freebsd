@@ -1,0 +1,51 @@
+{
+	"id": "df71f5aa-6831-11ee-b06f-0050569ceb3a",
+	"advisories": [
+		{
+			"id": "df71f5aa-6831-11ee-b06f-0050569ceb3a",
+			"title": "File deletion through document upload process in GLPI",
+			"description": "\n\t<p>security-advisories@github.com reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/security/advisories/GHSA-hm76-jh96-7j75\">\n\t  <p>GLPI stands for Gestionnaire Libre de Parc Informatique is a Free\n\tAsset and IT Management Software package, that provides ITIL Service\n\tDesk features, licenses tracking and software auditing.  The document\n\tupload process can be diverted to delete some files.  Users are\n\tadvised to upgrade to version 10.0.10.  There are no known workarounds\n\tfor this vulnerability.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/df71f5aa-6831-11ee-b06f-0050569ceb3a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42462"
+				}
+			],
+			"published": "2023-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-42462",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-42462"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.10,1",
+						"ge": "10.0.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,210 @@
+{
+	"id": "ef434839-a6a4-11e5-8275-000c292e4fd8",
+	"advisories": [
+		{
+			"id": "ef434839-a6a4-11e5-8275-000c292e4fd8",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>Samba team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/latest_news.html#4.3.3\">\n\t  <p>[CVE-2015-3223] Malicious request can cause Samba LDAP server to hang, spinning using CPU.</p>\n\t  <p>[CVE-2015-5330] Malicious request can cause Samba LDAP server\n\t     to return uninitialized memory that should not be part of the reply.</p>\n\t  <p>[CVE-2015-5296] Requesting encryption should also request\n\t     signing when setting up the connection to protect against man-in-the-middle attacks.</p>\n\t  <p>[CVE-2015-5299] A missing access control check in the VFS\n\t     shadow_copy2 module could allow unauthorized users to access snapshots.</p>\n\t  <p>[CVE-2015-7540] Malicious request can cause Samba LDAP server to return crash.</p>\n\t  <p>[CVE-2015-8467] Samba can expose Windows DCs to MS15-096\n\t     Denial of service via the creation of multiple machine accounts(The Microsoft issue is CVE-2015-2535).</p>\n\t  <p>[CVE-2015-5252] Insufficient symlink verification could allow data access outside share path.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ef434839-a6a4-11e5-8275-000c292e4fd8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-3223.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-5252.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-5296.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-5299.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-5330.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-7540.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2015-8467.html"
+				}
+			],
+			"published": "2015-12-19T00:00:00Z",
+			"modified": "2016-02-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3223",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3223"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5252",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5252"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5296",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5296"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5299",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5299"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5330",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5330"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7540",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7540"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-8467",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8467"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba36"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.25_2",
+						"ge": "3.6.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.0.26",
+						"ge": "4.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba41"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.22",
+						"ge": "4.1.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba42"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.7",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba43"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.3",
+						"ge": "4.3.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ldb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.24",
+						"ge": "1.0.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

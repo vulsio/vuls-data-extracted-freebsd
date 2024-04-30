@@ -1,0 +1,81 @@
+{
+	"id": "78348ea2-ec91-11d8-b913-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "78348ea2-ec91-11d8-b913-000c41e2cdad",
+			"title": "acroread uudecoder input validation error",
+			"description": "\n\t<p>An iDEFENSE security advisory reports:</p>\n\t<blockquote cite=\"www.idefense.com/application/poi/display?id=124&amp;type=vulnerabilities\">\n\t  <p>Remote exploitation of an input validation error in the\n\t    uudecoding feature of Adobe Acrobat Reader (Unix) 5.0\n\t    allows an attacker to execute arbitrary code.</p>\n\t  <p>The Unix and Linux versions of Adobe Acrobat Reader 5.0\n\t    automatically attempt to convert uuencoded documents\n\t    back into their original format.  The vulnerability\n\t    specifically exists in the failure of Acrobat Reader to\n\t    check for the backtick shell metacharacter in the filename\n\t    before executing a command with a shell. This allows a\n\t    maliciously constructed filename to execute arbitrary\n\t    programs.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/78348ea2-ec91-11d8-b913-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.idefense.com/application/poi/display?id=124&type=vulnerabilities"
+				}
+			],
+			"published": "2004-08-12T00:00:00Z",
+			"modified": "2005-01-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0630",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0630"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "acroread"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "acroread4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "acroread5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.9"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

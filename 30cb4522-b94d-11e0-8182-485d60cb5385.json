@@ -1,0 +1,54 @@
+{
+	"id": "30cb4522-b94d-11e0-8182-485d60cb5385",
+	"advisories": [
+		{
+			"id": "30cb4522-b94d-11e0-8182-485d60cb5385",
+			"title": "libsoup -- unintentionally allow access to entire local filesystem",
+			"description": "\n\t<p>Dan Winship reports:</p>\n\t<blockquote cite=\"http://mail.gnome.org/archives/ftp-release-list/2011-July/msg00176.html\">\n\t  <p>Fixed a security hole that caused some SoupServer users to\n\t    unintentionally allow accessing the entire local filesystem when\n\t    they thought they were only providing access to a single\n\t    directory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/30cb4522-b94d-11e0-8182-485d60cb5385.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail.gnome.org/archives/ftp-release-list/2011-July/msg00176.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.gnome.org/show_bug.cgi?id=653258"
+				}
+			],
+			"published": "2011-07-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2054"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libsoup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.32.2_3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

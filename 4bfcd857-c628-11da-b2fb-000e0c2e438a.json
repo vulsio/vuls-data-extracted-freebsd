@@ -1,0 +1,55 @@
+{
+	"id": "4bfcd857-c628-11da-b2fb-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "4bfcd857-c628-11da-b2fb-000e0c2e438a",
+			"title": "kaffeine -- buffer overflow vulnerability",
+			"description": "\n\t<p>The KDE team reports:</p>\n\t<blockquote cite=\"http://www.kde.org/info/security/advisory-20060404-1.txt\">\n\t  <p>Kaffeine can produce a buffer overflow in http_peek() while\n\t    creating HTTP request headers for fetching remote playlists,\n\t    which under certain circumstances could be used to crash the\n\t    application and/or execute arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4bfcd857-c628-11da-b2fb-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kde.org/info/security/advisory-20060404-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/17372"
+				}
+			],
+			"published": "2006-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0051",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0051"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kaffeine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8.0",
+						"ge": "0.4.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

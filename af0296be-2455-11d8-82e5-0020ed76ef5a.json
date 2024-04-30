@@ -1,0 +1,40 @@
+{
+	"id": "af0296be-2455-11d8-82e5-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "af0296be-2455-11d8-82e5-0020ed76ef5a",
+			"title": "fetchmail -- address parsing vulnerability",
+			"description": "\n\t<p>Fetchmail can be crashed by a malicious email message.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/af0296be-2455-11d8-82e5-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.e-matters.de/advisories/052002.html"
+				}
+			],
+			"published": "2003-10-25T00:00:00Z",
+			"modified": "2012-09-04T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fetchmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "6.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,355 @@
+{
+	"id": "0592f49f-b3b8-4260-b648-d1718762656c",
+	"advisories": [
+		{
+			"id": "0592f49f-b3b8-4260-b648-d1718762656c",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/\">\n\t  <p>CVE-2019-9811: Sandbox escape via installation of malicious language pack</p>\n\t  <p>CVE-2019-11711: Script injection within domain through inner window reuse</p>\n\t  <p>CVE-2019-11712: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects</p>\n\t  <p>CVE-2019-11713: Use-after-free with HTTP/2 cached stream</p>\n\t  <p>CVE-2019-11714: NeckoChild can trigger crash when accessed off of main thread</p>\n\t  <p>CVE-2019-11729: Empty or malformed p256-ECDH public keys may trigger a segmentation fault</p>\n\t  <p>CVE-2019-11715: HTML parsing error can contribute to content XSS</p>\n\t  <p>CVE-2019-11716: globalThis not enumerable until accessed</p>\n\t  <p>CVE-2019-11717: Caret character improperly escaped in origins</p>\n\t  <p>CVE-2019-11718: Activity Stream writes unsanitized content to innerHTML</p>\n\t  <p>CVE-2019-11719: Out-of-bounds read when importing curve25519 private key</p>\n\t  <p>CVE-2019-11720: Character encoding XSS vulnerability</p>\n\t  <p>CVE-2019-11721: Domain spoofing through unicode latin 'kra' character</p>\n\t  <p>CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin</p>\n\t  <p>CVE-2019-11723: Cookie leakage during add-on fetching across private browsing boundaries</p>\n\t  <p>CVE-2019-11724: Retired site input.mozilla.org has remote troubleshooting permissions</p>\n\t  <p>CVE-2019-11725: Websocket resources bypass safebrowsing protections</p>\n\t  <p>CVE-2019-11727: PKCS#1 v1.5 signatures can be used for TLS 1.3</p>\n\t  <p>CVE-2019-11728: Port scanning through Alt-Svc header</p>\n\t  <p>CVE-2019-11710: Memory safety bugs fixed in Firefox 68</p>\n\t  <p>CVE-2019-11709: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0592f49f-b3b8-4260-b648-d1718762656c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2019-21/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2019-22/"
+				}
+			],
+			"published": "2019-07-09T00:00:00Z",
+			"modified": "2019-07-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-11709",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11709"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11710",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11710"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11711",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11711"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11712",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11712"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11713",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11713"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11714",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11714"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11715",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11715"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11716",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11716"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11717",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11717"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11718"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11719",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11719"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11720",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11720"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11721",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11721"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11723",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11723"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11724",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11724"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11725",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11725"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11727",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11727"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11728",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11728"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11729",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11729"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11730",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11730"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9811",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9811"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "68.0_4,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "waterfox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "56.2.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.53.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.53.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-esr"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.8.0,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.8.0,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libxul"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

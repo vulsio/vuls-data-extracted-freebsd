@@ -1,0 +1,66 @@
+{
+	"id": "37a8603d-4494-11de-bea7-000c29a67389",
+	"advisories": [
+		{
+			"id": "37a8603d-4494-11de-bea7-000c29a67389",
+			"title": "nsd -- buffer overflow vulnerability",
+			"description": "\n\t<p>NLnet Labs:</p>\n\t<blockquote cite=\"http://www.nlnetlabs.nl/publications/NSD_vulnerability_announcement.html\">\n\t  <p>A one-byte buffer overflow has been reported in NSD. The\n\t    problem affects all versions 2.0.0 to 3.2.1. The bug allows\n\t    a carefully crafted exploit to bring down your DNS server. It\n\t    is highly unlikely that this one byte overflow can lead to\n\t    other (system) exploits.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/37a8603d-4494-11de-bea7-000c29a67389.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.nlnetlabs.nl/publications/NSD_vulnerability_announcement.html"
+				}
+			],
+			"published": "2009-05-19T00:00:00Z",
+			"modified": "2009-05-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-1755",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1755"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nsd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nsd2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.7_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

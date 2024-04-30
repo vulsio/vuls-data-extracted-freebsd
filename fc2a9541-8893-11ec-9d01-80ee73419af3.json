@@ -1,0 +1,68 @@
+{
+	"id": "fc2a9541-8893-11ec-9d01-80ee73419af3",
+	"advisories": [
+		{
+			"id": "fc2a9541-8893-11ec-9d01-80ee73419af3",
+			"title": "xrdp -- privilege escalation",
+			"description": "\n\t<p>xrdp project reports:</p>\n\t<blockquote cite=\"https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-8h98-h426-xf32\">\n\t  <p>An integer underflow leading to a heap overflow in the sesman server allows any unauthenticated attacker which is accessible to a sesman server (listens by default on localhost when installing xrdp, but can be remote if configured otherwise) to execute code as root.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc2a9541-8893-11ec-9d01-80ee73419af3.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-8h98-h426-xf32"
+				}
+			],
+			"published": "2022-02-08T00:00:00Z",
+			"modified": "2022-02-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23613",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23613"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xrdp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.18.1,1",
+						"ge": "0.9.17,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xrdp-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.18.1,1",
+						"ge": "0.9.17,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,102 @@
+{
+	"id": "30c560ff-e0df-11dc-891a-02061b08fc24",
+	"advisories": [
+		{
+			"id": "30c560ff-e0df-11dc-891a-02061b08fc24",
+			"title": "opera -- multiple vulnerabilities",
+			"description": "\n\t<p>Opera Software ASA reports about multiple security\n\t  fixes:</p>\n\t<blockquote cite=\"http://www.opera.com/docs/changelogs/freebsd/925/\">\n\t  <ul>\n\t    <li>Fixed an issue where simulated text inputs could trick\n\t      users into uploading arbitrary files, as reported by\n\t      Mozilla.</li>\n\t    <li>Image properties can no longer be used to execute\n\t      scripts, as reported by Max Leonov.</li>\n\t    <li>Fixed an issue where the representation of DOM\n\t      attribute values could allow cross site scripting, as\n\t      reported by Arnaud.lb.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/30c560ff-e0df-11dc-891a-02061b08fc24.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/docs/changelogs/freebsd/926/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/877/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/879/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/880/"
+				}
+			],
+			"published": "2008-02-22T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1080",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1080"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1081",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1081"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.26"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.26"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.26"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

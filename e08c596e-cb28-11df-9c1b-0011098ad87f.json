@@ -1,0 +1,47 @@
+{
+	"id": "e08c596e-cb28-11df-9c1b-0011098ad87f",
+	"advisories": [
+		{
+			"id": "e08c596e-cb28-11df-9c1b-0011098ad87f",
+			"title": "horde-gollem -- XSS vulnerability",
+			"description": "\n\t<p>The Horde team reports:</p>\n\t<blockquote cite=\"http://article.gmane.org/gmane.comp.horde.announce/523\">\n\t  <p>The major changes compared to Gollem version H3 (1.1.1) are:</p>\n\t  <p>* Fixed an XSS vulnerability in the file viewer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e08c596e-cb28-11df-9c1b-0011098ad87f.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.horde.announce/523"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://git.horde.org/diff.php/gollem/docs/CHANGES?rt=horde&r1=1.114.2.55&r2=1.114.2.59&ty=h"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.horde.org/ticket/9191"
+				}
+			],
+			"published": "2010-09-28T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde-gollem"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

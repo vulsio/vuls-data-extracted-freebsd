@@ -1,0 +1,50 @@
+{
+	"id": "d460b640-4cdf-11ea-a59e-6451062f0f7a",
+	"advisories": [
+		{
+			"id": "d460b640-4cdf-11ea-a59e-6451062f0f7a",
+			"title": "Flash Player -- arbitrary code execution",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb20-06.html\">\n\t  <ul>\n\t    <li>This update resolves a type confusion vulnerability that\n\t      could lead to arbitrary code execution (CVE-2020-3757).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d460b640-4cdf-11ea-a59e-6451062f0f7a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb20-06.html"
+				}
+			],
+			"published": "2020-02-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-3757",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-3757"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-flashplayer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "32.0.0.330"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

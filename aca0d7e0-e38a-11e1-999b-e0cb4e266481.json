@@ -1,0 +1,50 @@
+{
+	"id": "aca0d7e0-e38a-11e1-999b-e0cb4e266481",
+	"advisories": [
+		{
+			"id": "aca0d7e0-e38a-11e1-999b-e0cb4e266481",
+			"title": "phpMyAdmin -- Path disclosure due to missing library",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2012-3.php\">\n\t  <p>The show_config_errors.php script does not include a\n\t     library, so an error message shows the full path of this\n\t     file, leading to possible further attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/aca0d7e0-e38a-11e1-999b-e0cb4e266481.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2012-3.php"
+				}
+			],
+			"published": "2012-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4219",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4219"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

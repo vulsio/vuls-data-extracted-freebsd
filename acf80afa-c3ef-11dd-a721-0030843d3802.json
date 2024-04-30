@@ -1,0 +1,59 @@
+{
+	"id": "acf80afa-c3ef-11dd-a721-0030843d3802",
+	"advisories": [
+		{
+			"id": "acf80afa-c3ef-11dd-a721-0030843d3802",
+			"title": "vlc -- arbitrary code execution in the RealMedia processor",
+			"description": "\n\t<p>Tobias Klein from TrapKit reports:</p>\n\t<blockquote cite=\"http://www.trapkit.de/advisories/TKADV2008-013.txt\">\n\t  <p>The VLC media player contains an integer overflow vulnerability\n\t    while parsing malformed RealMedia (.rm) files. The vulnerability\n\t    leads to a heap overflow that can be exploited by a (remote)\n\t    attacker to execute arbitrary code in the context of VLC media\n\t    player.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/acf80afa-c3ef-11dd-a721-0030843d3802.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.trapkit.de/advisories/TKADV2008-013.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.videolan.org/security/sa0811.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/32545"
+				}
+			],
+			"published": "2008-12-06T00:00:00Z",
+			"modified": "2008-12-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5276",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5276"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vlc-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.8a"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

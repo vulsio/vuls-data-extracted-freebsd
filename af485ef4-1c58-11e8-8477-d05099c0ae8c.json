@@ -1,0 +1,139 @@
+{
+	"id": "af485ef4-1c58-11e8-8477-d05099c0ae8c",
+	"advisories": [
+		{
+			"id": "af485ef4-1c58-11e8-8477-d05099c0ae8c",
+			"title": "ntp -- multiple vulnerabilities",
+			"description": "\n\t<p>Network Time Foundation reports:</p>\n\t<blockquote cite=\"http://support.ntp.org/bin/view/Main/SecurityNotice#February_2018_ntp_4_2_8p11_NTP_S\">\n\t  <p>The NTP Project at Network Time Foundation is releasing ntp-4.2.8p11.</p>\n\t  <p>This release addresses five security issues in ntpd:</p>\n\t  <ul>\n\t    <li>LOW/MEDIUM: Sec 3012 / CVE-2016-1549 / VU#961909: Sybil\n\t      vulnerability: ephemeral association attack</li>\n\t    <li>INFO/MEDIUM: Sec 3412 / CVE-2018-7182 / VU#961909:\n\t      ctl_getitem(): buffer read overrun leads to undefined\n\t      behavior and information leak</li>\n\t    <li>LOW: Sec 3415 / CVE-2018-7170 / VU#961909: Multiple\n\t      authenticated ephemeral associations</li>\n\t    <li>LOW: Sec 3453 / CVE-2018-7184 / VU#961909: Interleaved\n\t      symmetric mode cannot recover from bad state</li>\n\t    <li>LOW/MEDIUM: Sec 3454 / CVE-2018-7185 / VU#961909:\n\t      Unauthenticated packet can reset authenticated interleaved\n\t      association</li>\n\t  </ul>\n\t  <p>one security issue in ntpq:</p>\n\t  <ul>\n\t    <li>MEDIUM: Sec 3414 / CVE-2018-7183 / VU#961909:\n\t      ntpq:decodearr() can write beyond its buffer limit</li>\n\t  </ul>\n\t  <p>and provides over 33 bugfixes and 32 other improvements.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/af485ef4-1c58-11e8-8477-d05099c0ae8c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://support.ntp.org/bin/view/Main/SecurityNotice#February_2018_ntp_4_2_8p11_NTP_S"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-18:02.ntp.asc"
+				}
+			],
+			"published": "2018-02-28T00:00:00Z",
+			"modified": "2018-03-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1549",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1549"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7182",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7182"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7170",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7170"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7184"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7185",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7185"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7183",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7183"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.1_7",
+						"ge": "11.1"
+					},
+					{
+						"lt": "10.4_6",
+						"ge": "10.4"
+					},
+					{
+						"lt": "10.3_27",
+						"ge": "10.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.8p11"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,163 @@
+{
+	"id": "6b771fe2-b84e-11e5-92f9-485d605f4717",
+	"advisories": [
+		{
+			"id": "6b771fe2-b84e-11e5-92f9-485d605f4717",
+			"title": "php -- multiple vulnerabilities",
+			"description": "\n\t<p>PHP reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php#5.5.31\">\n\t  <ul><li>Core:\n\t  <ul>\n\t  <li>Fixed bug #70755 (fpm_log.c memory leak and buffer overflow).</li>\n\t  </ul></li>\n\t  <li>GD:\n\t  <ul>\n\t  <li>Fixed bug #70976 (Memory Read via gdImageRotateInterpolated Array\n\t      Index Out of Bounds).</li>\n\t  </ul></li>\n\t  <li>SOAP:\n\t  <ul>\n\t  <li>Fixed bug #70900 (SoapClient systematic out of memory error).</li>\n\t  </ul></li>\n\t  <li>Wddx\n\t  <ul>\n\t  <li>Fixed bug #70661 (Use After Free Vulnerability in WDDX Packet\n\t      Deserialization).</li>\n\t  <li>Fixed bug #70741 (Session WDDX Packet Deserialization Type\n\t      Confusion Vulnerability).</li>\n\t  </ul></li>\n\t  <li>XMLRPC:\n\t  <ul>\n\t  <li>Fixed bug #70728 (Type Confusion Vulnerability in\n\t      PHP_to_XMLRPC_worker()).</li>\n\t  </ul></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6b771fe2-b84e-11e5-92f9-485d605f4717.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.5.31"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.6.17"
+				}
+			],
+			"published": "2016-01-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php55"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.31"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php55-gd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.31"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php55-wddx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.31"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php55-xmlrpc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.31"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56-gd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56-soap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56-wddx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56-xmlrpc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.17"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

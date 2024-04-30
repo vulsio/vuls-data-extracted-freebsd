@@ -1,0 +1,69 @@
+{
+	"id": "cc7548ef-06e1-11e5-8fda-002590263bf5",
+	"advisories": [
+		{
+			"id": "cc7548ef-06e1-11e5-8fda-002590263bf5",
+			"title": "libmspack -- frame_end overflow which could cause infinite loop",
+			"description": "\n\t<p>There is a denial of service vulnerability in libmspack.  The\n\t  libmspack code is built into cabextract, so it is also\n\t  vulnerable.</p>\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9556\">\n\t  <p>Integer overflow in the qtmd_decompress function in libmspack 0.4\n\t    allows remote attackers to cause a denial of service (hang) via a\n\t    crafted CAB file, which triggers an infinite loop.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cc7548ef-06e1-11e5-8fda-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.debian.org/773041"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/01/07/2"
+				}
+			],
+			"published": "2015-05-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-9556",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-9556"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libmspack"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cabextract"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

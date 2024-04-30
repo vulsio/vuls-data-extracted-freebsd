@@ -1,0 +1,63 @@
+{
+	"id": "be3069c9-67e7-11e5-9909-002590263bf5",
+	"advisories": [
+		{
+			"id": "be3069c9-67e7-11e5-9909-002590263bf5",
+			"title": "james -- multiple vulnerabilities",
+			"description": "\n\t<p>The Apache James Project reports:</p>\n\t<blockquote cite=\"http://james.apache.org/download.cgi#Apache_James_Server\">\n\t  <p>This release has many enhancements and bug fixes over the previous\n\t    release. See the Release Notes for a detailed list of changes. Some\n\t    of the earlier defects could turn a James mail server into an Open\n\t    Relay and allow files to be written on disk. All users of James\n\t    Server are urged to upgrade to version v2.3.2.1 as soon as\n\t    possible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/be3069c9-67e7-11e5-9909-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://james.apache.org/download.cgi#Apache_James_Server"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blogs.apache.org/james/entry/apache_james_server_2_3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=203461"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/988628"
+				}
+			],
+			"published": "2015-10-01T00:00:00Z",
+			"modified": "2015-10-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7611",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7611"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "james"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

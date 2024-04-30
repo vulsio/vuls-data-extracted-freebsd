@@ -1,0 +1,50 @@
+{
+	"id": "a9bcaf57-4a7b-11e6-97f7-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "a9bcaf57-4a7b-11e6-97f7-5453ed2e2b49",
+			"title": "p7zip -- heap overflow vulnerability",
+			"description": "\n\t<p>Cisco Talos reports:</p>\n\t<blockquote cite=\"http://www.talosintelligence.com/reports/TALOS-2016-0093/\">\n\t  <p>An exploitable heap overflow vulnerability exists in the\n\t  NArchive::NHfs::CHandler::ExtractZlibFile method functionality of\n\t  7zip that can lead to arbitrary code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a9bcaf57-4a7b-11e6-97f7-5453ed2e2b49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.talosintel.com/2016/05/multiple-7-zip-vulnerabilities.html"
+				}
+			],
+			"published": "2016-07-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2334",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2334"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p7zip"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.14_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

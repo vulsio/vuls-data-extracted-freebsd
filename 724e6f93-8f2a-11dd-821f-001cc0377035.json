@@ -1,0 +1,126 @@
+{
+	"id": "724e6f93-8f2a-11dd-821f-001cc0377035",
+	"advisories": [
+		{
+			"id": "724e6f93-8f2a-11dd-821f-001cc0377035",
+			"title": "mplayer -- multiple integer overflows",
+			"description": "\n\t<p>The oCERT team reports:</p>\n\t<blockquote cite=\"http://www.ocert.org/advisories/ocert-2008-013.html\">\n\t  <p>The MPlayer multimedia player suffers from a vulnerability which\n\t    could result in arbitrary code execution and at the least, in\n\t    unexpected process termination. Three integer underflows located\n\t    in the Real demuxer code can be used to exploit a heap overflow,\n\t    a specific video file can be crafted in order to make the\n\t    stream_read function reading or writing arbitrary amounts of\n\t    memory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/724e6f93-8f2a-11dd-821f-001cc0377035.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ocert.org/advisories/ocert-2008-013.html"
+				}
+			],
+			"published": "2008-10-01T00:00:00Z",
+			"modified": "2008-10-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3827",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3827"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.11_7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.11_7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.11_7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.11_7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.11_7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk2-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.11_7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,44 @@
+{
+	"id": "88ff90f2-6e43-11d9-8c87-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "88ff90f2-6e43-11d9-8c87-000a95bc6fae",
+			"title": "mod_dosevasive -- insecure temporary file creation",
+			"description": "\n\t<p>An LSS Security Advisory reports:</p>\n\t<blockquote cite=\"http://security.lss.hr/en/index.php?page=details&amp;ID=LSS-2005-01-01\">\n\t  <p>When a denial of service attack is detected,\n\t    mod_dosevasive will, among other things, create a\n\t    temporary file which it will use to trace actions from the\n\t    offensive IP address. This file is insecurely created in\n\t    /tmp and it's name is easily predictable.</p>\n\t  <p>It is then easy for an attacker to create arbitrary files\n\t    in any directory that the user under which apache runs has\n\t    privileges to write.</p>\n\t  <p><em>[...]</em> once the target file is opened, there is a\n\t    race attack (although difficult to exploit) which can lead\n\t    to mod_dosevasive overwriting any file that the user under\n\t    which apache runs has privileges to write.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/88ff90f2-6e43-11d9-8c87-000a95bc6fae.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.lss.hr/en/index.php?page=details&ID=LSS-2005-01-01"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=77513"
+				}
+			],
+			"published": "2005-01-24T00:00:00Z",
+			"modified": "2005-02-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_dosevasive20"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

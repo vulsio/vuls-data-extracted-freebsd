@@ -1,0 +1,39 @@
+{
+	"id": "5d1e4f6a-ee4f-11ec-86c2-485b3931c969",
+	"advisories": [
+		{
+			"id": "5d1e4f6a-ee4f-11ec-86c2-485b3931c969",
+			"title": "Tor - Unspecified high severity vulnerability",
+			"description": "\n\t<p>Tor organization reports:</p>\n\t<blockquote cite=\"https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/TROVE\">\n\t  <p>TROVE-2022-001</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5d1e4f6a-ee4f-11ec-86c2-485b3931c969.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/TROVE"
+				}
+			],
+			"published": "2022-06-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tor"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.7.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

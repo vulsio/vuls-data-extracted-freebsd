@@ -1,0 +1,140 @@
+{
+	"id": "d7dbd2db-599c-11e1-a2fb-14dae9ebcf89",
+	"advisories": [
+		{
+			"id": "d7dbd2db-599c-11e1-a2fb-14dae9ebcf89",
+			"title": "mozilla -- heap-buffer overflow",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2012-11 libpng integer overflow</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d7dbd2db-599c-11e1-a2fb-14dae9ebcf89.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2012/mfsa2012-11.html"
+				}
+			],
+			"published": "2012-02-17T00:00:00Z",
+			"modified": "2012-03-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3026",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3026"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.2,1",
+						"ge": "10.0,1"
+					},
+					{
+						"lt": "3.6.27",
+						"ge": "3.6.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.2,1",
+						"ge": "10.0,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.2",
+						"ge": "2.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.2",
+						"ge": "10.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.2",
+						"ge": "2.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.2",
+						"ge": "10.0"
+					},
+					{
+						"lt": "3.1.19",
+						"gt": "3.1.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

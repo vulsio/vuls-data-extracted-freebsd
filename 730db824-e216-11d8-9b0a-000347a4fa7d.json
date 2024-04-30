@@ -1,0 +1,135 @@
+{
+	"id": "730db824-e216-11d8-9b0a-000347a4fa7d",
+	"advisories": [
+		{
+			"id": "730db824-e216-11d8-9b0a-000347a4fa7d",
+			"title": "Mozilla / Firefox user interface spoofing vulnerability",
+			"description": "\n\t<p>The Mozilla project's family of browsers contain a design\n\t  flaw that can allow a website to spoof almost perfectly any\n\t  part of the Mozilla user interface, including spoofing web\n\t  sites for phishing or internal elements such as the \"Master\n\t  Password\" dialog box.  This achieved by manipulating \"chrome\"\n\t  through remote XUL content.  Recent versions of Mozilla have\n\t  been fixed to not allow untrusted documents to utilize\n\t  \"chrome\" in this way.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/730db824-e216-11d8-9b0a-000347a4fa7d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.mozilla.org/show_bug.cgi?id=22183"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.mozilla.org/show_bug.cgi?id=244965"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.mozilla.org/show_bug.cgi?id=252198"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.nd.edu/~jsmith30/xul/test/spoof.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/12188"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10832"
+				}
+			],
+			"published": "2004-07-30T00:00:00Z",
+			"modified": "2004-08-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0764",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0764"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.9.1_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.7.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.7.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.7.1,2"
+					},
+					{
+						"le": "1.8.a2,2",
+						"ge": "1.8.a,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-gtk1"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.7.1_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

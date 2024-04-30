@@ -1,0 +1,59 @@
+{
+	"id": "f4eb9a25-fde0-11e6-9ad0-b8aeed92ecc4",
+	"advisories": [
+		{
+			"id": "f4eb9a25-fde0-11e6-9ad0-b8aeed92ecc4",
+			"title": "potrace -- multiple memory failure",
+			"description": "\n\t<p>potrace reports:</p>\n\t<blockquote cite=\"https://sourceforge.net/p/potrace/news/2017/02/potrace-114-released/\">\n\t  <p>CVE-2016-8685: invalid memory access in findnext</p>\n\t  <p>CVE-2016-8686: memory allocation failure</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f4eb9a25-fde0-11e6-9ad0-b8aeed92ecc4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://sourceforge.net/p/potrace/news/2017/02/potrace-114-released/"
+				}
+			],
+			"published": "2017-02-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-8685",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8685"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8686"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "potrace"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.13"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

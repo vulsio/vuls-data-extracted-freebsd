@@ -1,0 +1,95 @@
+{
+	"id": "688e73a2-e514-11e3-a52a-98fc11cdc4f5",
+	"advisories": [
+		{
+			"id": "688e73a2-e514-11e3-a52a-98fc11cdc4f5",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb14-14.html\">\n\t  <p>These updates address vulnerabilities that could cause a crash\n\t    and potentially allow an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/688e73a2-e514-11e3-a52a-98fc11cdc4f5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb14-14.html"
+				}
+			],
+			"published": "2014-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0510",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0510"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0516",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0516"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0517",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0517"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0518",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0518"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0519",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0519"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0520",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0520"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-flashplugin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.2r202.359"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

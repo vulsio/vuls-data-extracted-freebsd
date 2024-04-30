@@ -1,0 +1,121 @@
+{
+	"id": "8d823883-0ca9-11d9-8a8a-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "8d823883-0ca9-11d9-8a8a-000c41e2cdad",
+			"title": "mozilla -- built-in CA certificates may be overridden",
+			"description": "\n\t<p>Under some situations, Mozilla will automatically import\n\t  a certificate from an email message or web site.  This\n\t  behavior can be used as a denial-of-service attack: if the\n\t  certificate has a distinguished name (DN) identical to one\n\t  of the built-in Certificate Authorities (CAs), then Mozilla\n\t  will no longer be able to certify sites with certificates\n\t  issued from that CA.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8d823883-0ca9-11d9-8a8a-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=249004"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://banquo.inf.ethz.ch:8080/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/160360"
+				}
+			],
+			"published": "2004-09-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0758",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0758"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2,2"
+					},
+					{
+						"ge": "1.8.a,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-gtk1"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

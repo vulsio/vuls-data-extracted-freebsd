@@ -1,0 +1,54 @@
+{
+	"id": "fd24a530-c202-11eb-b217-b42e99639323",
+	"advisories": [
+		{
+			"id": "fd24a530-c202-11eb-b217-b42e99639323",
+			"title": "wayland -- integer overflow",
+			"description": "\n\t<p>Tobias Stoeckmann reports:</p>\n\t<blockquote cite=\"https://gitlab.freedesktop.org/wayland/wayland/-/merge_requests/133\">\n\t  <p>The libXcursor fix for CVE-2013-2003 has never been imported into wayland, leaving it vulnerable to it.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fd24a530-c202-11eb-b217-b42e99639323.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.freedesktop.org/wayland/wayland/-/merge_requests/133"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=256273"
+				}
+			],
+			"published": "2021-05-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2003",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2003"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wayland"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.19.0_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

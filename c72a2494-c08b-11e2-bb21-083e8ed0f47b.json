@@ -1,0 +1,54 @@
+{
+	"id": "c72a2494-c08b-11e2-bb21-083e8ed0f47b",
+	"advisories": [
+		{
+			"id": "c72a2494-c08b-11e2-bb21-083e8ed0f47b",
+			"title": "plib -- stack-based buffer overflow",
+			"description": "\n\t<p>CVE reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=2012-4552\">\n\t  <p>Stack-based buffer overflow in the error function in\n\t  ssg/ssgParser.cxx in PLIB 1.8.5 allows remote attackers to\n\t  execute arbitrary code via a crafted 3d model file that\n\t  triggers a long error message, as demonstrated by a .ase\n\t  file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c72a2494-c08b-11e2-bb21-083e8ed0f47b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2012/10/29/8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/55839"
+				}
+			],
+			"published": "2013-05-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4552",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4552"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "plib"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.5_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

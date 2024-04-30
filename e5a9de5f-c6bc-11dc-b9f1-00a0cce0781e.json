@@ -1,0 +1,54 @@
+{
+	"id": "e5a9de5f-c6bc-11dc-b9f1-00a0cce0781e",
+	"advisories": [
+		{
+			"id": "e5a9de5f-c6bc-11dc-b9f1-00a0cce0781e",
+			"title": "IRC Services-- Denial of Service Vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/27761\">\n\t  <p>A vulnerability has been reported in IRC Services,\n\t    which can be exploited by malicious people to cause\n\t    a Denial of Service. The vulnerability is caused due\n\t    to the improper handling of overly long passwords within\n\t    the \"default_encrypt()\" function in encrypt.c and can be\n\t    exploited to crash an affected server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e5a9de5f-c6bc-11dc-b9f1-00a0cce0781e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/27761"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://ircservices.za.net/Changes.txt"
+				}
+			],
+			"published": "2008-01-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-6122",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6122"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ircservices"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.63"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

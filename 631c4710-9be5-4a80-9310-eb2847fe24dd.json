@@ -1,0 +1,92 @@
+{
+	"id": "631c4710-9be5-4a80-9310-eb2847fe24dd",
+	"advisories": [
+		{
+			"id": "631c4710-9be5-4a80-9310-eb2847fe24dd",
+			"title": "jenkins -- multiple vulnerabilities",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://jenkins.io/security/advisory/2017-04-26/\">\n\t  <h1>Description</h1>\n\t  <h5>SECURITY-412 through SECURITY-420 / CVE-2017-1000356</h5>\n\t  <p>CSRF: Multiple vulnerabilities</p>\n\t  <h5>SECURITY-429 / CVE-2017-1000353</h5>\n\t  <p>CLI: Unauthenticated remote code execution</p>\n\t  <h5>SECURITY-466 / CVE-2017-1000354</h5>\n\t  <p>CLI: Login command allowed impersonating any Jenkins user</p>\n\t  <h5>SECURITY-503 / CVE-2017-1000355</h5>\n\t  <p>XStream: Java crash when trying to instantiate void/Void</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/631c4710-9be5-4a80-9310-eb2847fe24dd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jenkins.io/security/advisory/2017-04-26/"
+				}
+			],
+			"published": "2017-04-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-1000356",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1000356"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-1000353",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1000353"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-1000354",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1000354"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-1000355",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1000355"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.57"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins-lts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.46.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,89 @@
+{
+	"id": "93eb0e48-14ba-11ec-875e-901b0e9408dc",
+	"advisories": [
+		{
+			"id": "93eb0e48-14ba-11ec-875e-901b0e9408dc",
+			"title": "Matrix clients -- several vulnerabilities",
+			"description": "\n\t<p>Matrix developers report:</p>\n\t<blockquote cite=\"https://matrix.org/blog/2021/09/13/vulnerability-disclosure-key-sharing\">\n\t  <p>Today we are disclosing a critical security issue affecting\n\t  multiple Matrix clients and libraries including Element\n\t  (Web/Desktop/Android), FluffyChat, Nheko, Cinny, and SchildiChat.</p>\n\t  <p>Specifically, in certain circumstances it may be possible to\n\t  trick vulnerable clients into disclosing encryption keys for\n\t  messages previously sent by that client to user accounts later\n\t  compromised by an attacker.</p>\n\t  <p>Exploiting this vulnerability to read encrypted messages requires\n\t  gaining control over the recipient’s account. This requires either\n\t  compromising their credentials directly or compromising their homeserver.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/93eb0e48-14ba-11ec-875e-901b0e9408dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://matrix.org/blog/2021/09/13/vulnerability-disclosure-key-sharing"
+				}
+			],
+			"published": "2021-09-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-40823",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-40823"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-40824",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-40824"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cinny"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "element-web"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nheko"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.8.2_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

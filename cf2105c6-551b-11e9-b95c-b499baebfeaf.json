@@ -1,0 +1,90 @@
+{
+	"id": "cf2105c6-551b-11e9-b95c-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "cf2105c6-551b-11e9-b95c-b499baebfeaf",
+			"title": "Apache -- Multiple vulnerabilities",
+			"description": "\n\t<p>The Apache httpd Project reports:</p>\n\t<blockquote cite=\"https://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <p>Apache HTTP Server privilege escalation from modules' scripts\n\t    (CVE-2019-0211) (important)</p>\n\t  <p>mod_auth_digest access control bypass (CVE-2019-0217)\n\t    (important)</p>\n\t  <p>mod_ssl access control bypass (CVE-2019-0215) (important)</p>\n\t  <p>mod_http2, possible crash on late upgrade (CVE-2019-0197) (low)</p>\n\t  <p>mod_http2, read-after-free on a string compare (CVE-2019-0196)\n\t    (low)</p>\n\t  <p>Apache httpd URL normalization inconsistincy (CVE-2019-0220)\n\t    (low)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cf2105c6-551b-11e9-b95c-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.apache.org/dist/httpd/CHANGES_2.4.39"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+				}
+			],
+			"published": "2019-04-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-0211",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0211"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0217",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0217"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0215",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0215"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0196",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0196"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0220",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0220"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.39"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

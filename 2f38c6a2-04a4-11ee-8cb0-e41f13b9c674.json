@@ -1,0 +1,65 @@
+{
+	"id": "2f38c6a2-04a4-11ee-8cb0-e41f13b9c674",
+	"advisories": [
+		{
+			"id": "2f38c6a2-04a4-11ee-8cb0-e41f13b9c674",
+			"title": "qpress -- directory traversal",
+			"description": "\n\t<p>cve@mitre.org reports:</p>\n\t<blockquote cite=\"https://github.com/EvgeniyPatlan/qpress/commit/ddb312090ebd5794e81bc6fb1dfb4e79eda48761\">\n\t  <p>qpress before PierreLvx/qpress 20220819 and before version 11.3,\n\tas used in Percona XtraBackup and other products, allows directory\n\ttraversal via ../ in a .qp file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2f38c6a2-04a4-11ee-8cb0-e41f13b9c674.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-45866"
+				}
+			],
+			"published": "2023-06-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-45866",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-45866"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "qpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xtrabackup8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.32"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

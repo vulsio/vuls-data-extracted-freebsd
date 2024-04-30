@@ -1,0 +1,80 @@
+{
+	"id": "bb7d4791-a5bf-11e5-a0e5-00262d5ed8ee",
+	"advisories": [
+		{
+			"id": "bb7d4791-a5bf-11e5-a0e5-00262d5ed8ee",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.nl/2015/12/stable-channel-update_15.html\">\n\t  <p>2 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[569486] CVE-2015-6792: Fixes from internal audits and\n\t      fuzzing.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bb7d4791-a5bf-11e5-a0e5-00262d5ed8ee.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.nl/2015/12/stable-channel-update_15.html"
+				}
+			],
+			"published": "2015-12-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-6792",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6792"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "47.0.2526.106"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium-npapi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "47.0.2526.106"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium-pulse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "47.0.2526.106"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

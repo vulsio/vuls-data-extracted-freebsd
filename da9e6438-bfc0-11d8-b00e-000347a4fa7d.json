@@ -1,0 +1,58 @@
+{
+	"id": "da9e6438-bfc0-11d8-b00e-000347a4fa7d",
+	"advisories": [
+		{
+			"id": "da9e6438-bfc0-11d8-b00e-000347a4fa7d",
+			"title": "MoinMoin administrative group name privilege escalation vulnerability",
+			"description": "\n\t<p>A serious flaw exists in the MoinMoin software\n\t  which may allow a malicious user to gain access to\n\t  unauthorized privileges.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/da9e6438-bfc0-11d8-b00e-000347a4fa7d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/6704"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/11807"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10568"
+				}
+			],
+			"published": "2004-06-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0708",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0708"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "moinmoin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

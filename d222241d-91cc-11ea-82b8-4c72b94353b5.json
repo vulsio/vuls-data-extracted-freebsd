@@ -1,0 +1,59 @@
+{
+	"id": "d222241d-91cc-11ea-82b8-4c72b94353b5",
+	"advisories": [
+		{
+			"id": "d222241d-91cc-11ea-82b8-4c72b94353b5",
+			"title": "glpi -- stored XSS",
+			"description": "\n\t<p>MITRE Corporation reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13239\">\n\t  <p>inc/user.class.php in GLPI before 9.4.3 allows XSS via a user picture.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d222241d-91cc-11ea-82b8-4c72b94353b5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/commit/c2aa7a7cd6af28be3809acc7e7842d2d2008c0fb"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.synacktiv.com/ressources/advisories/GLPI_9.4.0_stored_XSS.pdf"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13239"
+				}
+			],
+			"published": "2020-05-09T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-13239",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-13239"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.3,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

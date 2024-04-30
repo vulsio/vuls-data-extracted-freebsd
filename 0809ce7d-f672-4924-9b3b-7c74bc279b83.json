@@ -1,0 +1,54 @@
+{
+	"id": "0809ce7d-f672-4924-9b3b-7c74bc279b83",
+	"advisories": [
+		{
+			"id": "0809ce7d-f672-4924-9b3b-7c74bc279b83",
+			"title": "gtar -- GNU TAR safer_name_suffix Remote Denial of Service Vulnerability",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/26445/\">\n\t  <p>GNUs tar and cpio utilities are prone to a denial-of-service\n\t    vulnerability because of insecure use of the alloca()\n\t    function.</p>\n\t  <p>Successfully exploiting this issue allows attackers\n\t    to crash the affected utilities and possibly to execute\n\t    code but this has not been confirmed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0809ce7d-f672-4924-9b3b-7c74bc279b83.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/26445/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/26445"
+				}
+			],
+			"published": "2009-01-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-4476",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-4476"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gtar"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.19"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

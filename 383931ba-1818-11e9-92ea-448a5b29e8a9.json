@@ -1,0 +1,95 @@
+{
+	"id": "383931ba-1818-11e9-92ea-448a5b29e8a9",
+	"advisories": [
+		{
+			"id": "383931ba-1818-11e9-92ea-448a5b29e8a9",
+			"title": "py-matrix-synapse -- undisclosed vulnerability",
+			"description": "\n\t<p>Matrix developers report:</p>\n\t  <blockquote cite=\"https://matrix.org/blog/2019/01/10/critical-security-update-synapse-0-34-0-1-synapse-0-34-1-1/\">\n\t  <p>The matrix team announces the availablility of synapse security releases 0.34.0.1 and 0.34.1.1, fixing CVE-2019-5885.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/383931ba-1818-11e9-92ea-448a5b29e8a9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://matrix.org/blog/2019/01/10/critical-security-update-synapse-0-34-0-1-synapse-0-34-1-1/"
+				}
+			],
+			"published": "2019-01-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-5885",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5885"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-matrix-synapse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.34.1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py35-matrix-synapse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.34.1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py36-matrix-synapse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.34.1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-matrix-synapse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.34.1.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

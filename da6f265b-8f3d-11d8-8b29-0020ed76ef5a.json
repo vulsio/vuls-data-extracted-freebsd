@@ -1,0 +1,51 @@
+{
+	"id": "da6f265b-8f3d-11d8-8b29-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "da6f265b-8f3d-11d8-8b29-0020ed76ef5a",
+			"title": "kdepim exploitable buffer overflow in VCF reader",
+			"description": "\n\t<p>A buffer overflow is present in some versions of the KDE\n\t  personal information manager (kdepim) which may be triggered\n\t  when processing a specially crafted VCF file.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/da6f265b-8f3d-11d8-8b29-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kde.org/info/security/advisory-20040114-1.txt"
+				}
+			],
+			"published": "2004-04-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-0988",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0988"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kdepim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.4_1",
+						"ge": "3.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

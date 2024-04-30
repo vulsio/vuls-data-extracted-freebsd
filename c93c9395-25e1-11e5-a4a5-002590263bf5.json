@@ -1,0 +1,51 @@
+{
+	"id": "c93c9395-25e1-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "c93c9395-25e1-11e5-a4a5-002590263bf5",
+			"title": "wpa_supplicant -- WPS_NFC option payload length validation vulnerability",
+			"description": "\n\t<p>Jouni Malinen reports:</p>\n\t<blockquote cite=\"http://w1.fi/security/2015-5/incomplete-wps-and-p2p-nfc-ndef-record-payload-length-validation.txt\">\n\t  <p>Incomplete WPS and P2P NFC NDEF record payload length\n\t    validation. (2015-5)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c93c9395-25e1-11e5-a4a5-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://w1.fi/security/2015-5/incomplete-wps-and-p2p-nfc-ndef-record-payload-length-validation.txt"
+				}
+			],
+			"published": "2015-07-09T00:00:00Z",
+			"modified": "2015-11-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8041",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8041"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wpa_supplicant"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,98 @@
+{
+	"id": "0032400f-624f-11ea-b495-000d3ab229d6",
+	"advisories": [
+		{
+			"id": "0032400f-624f-11ea-b495-000d3ab229d6",
+			"title": "Node.js -- multiple vulnerabilities",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/february-2020-security-releases/\">\n\t  <p>Updates are now available for all active Node.js release lines for the following issues.</p>\n\t  <h1>HTTP request smuggling using malformed Transfer-Encoding header (Critical) (CVE-2019-15605)HTTP request smuggling using malformed Transfer-Encoding header (Critical) (CVE-2019-15605)</h1>\n\t  <p>Affected Node.js versions can be exploited to perform HTTP desync attacks and deliver malicious payloads to unsuspecting users. The payloads can be crafted by an attacker to hijack user sessions, poison cookies, perform clickjacking, and a multitude of other attacks depending on the architecture of the underlying system.</p>\n\t  <h1>HTTP header values do not have trailing OWS trimmed (High) (CVE-2019-15606)</h1>\n\t  <p>Optional whitespace should be trimmed from HTTP header values. Its presence may allow attackers to bypass security checks based on HTTP header values.</p>\n\t  <h1>Remotely trigger an assertion on a TLS server with a malformed certificate string (High) (CVE-2019-15604)</h1>\n\t  <p>Connecting to a NodeJS TLS server with a client certificate that has a type 19 string in its subjectAltName will crash the TLS server if it tries to read the peer certificate.</p>\n\t  <h1>Strict HTTP header parsing (None)</h1>\n\t  <p>Increase the strictness of HTTP header parsing. There are no known vulnerabilities addressed, but lax HTTP parsing has historically been a source of problems. Some commonly used sites are known to generate invalid HTTP headers, a --insecure-http-parser CLI option or insecureHTTPParser http option can be used if necessary for interoperability, but is not recommended.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0032400f-624f-11ea-b495-000d3ab229d6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/february-2020-security-releases/"
+				}
+			],
+			"published": "2020-03-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-15605",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15605"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-15606",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15606"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-15604",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15604"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node12"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.15.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node10"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.19.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,99 @@
+{
+	"id": "ada8db8a-8471-11e9-8170-0050562a4d7b",
+	"advisories": [
+		{
+			"id": "ada8db8a-8471-11e9-8170-0050562a4d7b",
+			"title": "buildbot -- OAuth Authentication Vulnerability",
+			"description": "\n\t<blockquote cite=\"https://github.com/buildbot/buildbot/wiki/OAuth-vulnerability-in-using-submitted-authorization-token-for-authentication\">\n\t  <p>Buildbot accepted user-submitted authorization token from OAuth and used\n\t  it to authenticate user.</p>\n\t  <p>The vulnerability can lead to malicious attackers to authenticate as legitimate users\n\t  of a Buildbot instance without knowledge of the victim's login credentials on certain\n\t  scenarios.</p>\n\t  <p>If an attacker has an application authorized to access data of another user at the\n\t  same Identity Provider as the used by the Buildbot instance, then he can acquire a token\n\t  to access the data of that user, supply the token to the Buildbot instance and successfully\n\t  login as the victim.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ada8db8a-8471-11e9-8170-0050562a4d7b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/buildbot/buildbot/wiki/OAuth-vulnerability-in-using-submitted-authorization-token-for-authentication"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/buildbot/buildbot/pull/4763"
+				}
+			],
+			"published": "2019-06-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-12300",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-12300"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py35-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py36-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

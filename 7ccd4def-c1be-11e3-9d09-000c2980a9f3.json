@@ -1,0 +1,103 @@
+{
+	"id": "7ccd4def-c1be-11e3-9d09-000c2980a9f3",
+	"advisories": [
+		{
+			"id": "7ccd4def-c1be-11e3-9d09-000c2980a9f3",
+			"title": "OpenSSL -- Local Information Disclosure",
+			"description": "\n\t<p>OpenSSL reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/vulnerabilities.html#2014-0076\">\n\t  <p>A flaw in the implementation of Montgomery Ladder Approach would\n\t    create a side-channel that leaks sensitive timing information.</p>\n\t  <p>A local attacker might be able to snoop a signing process and\n\t    might recover the signing key from it.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7ccd4def-c1be-11e3-9d09-000c2980a9f3.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/vulnerabilities.html#2014-0076"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:06.openssl.asc"
+				}
+			],
+			"published": "2014-04-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0076",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0076"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.1_10",
+						"ge": "1.0.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mingw32-openssl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.1g",
+						"ge": "1.0.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.3_15",
+						"ge": "8.3"
+					},
+					{
+						"lt": "8.4_8",
+						"ge": "8.4"
+					},
+					{
+						"lt": "9.1_11",
+						"ge": "9.1"
+					},
+					{
+						"lt": "9.2_4",
+						"ge": "9.2"
+					},
+					{
+						"lt": "10.0_1",
+						"ge": "10.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

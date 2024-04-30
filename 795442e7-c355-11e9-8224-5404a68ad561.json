@@ -1,0 +1,149 @@
+{
+	"id": "795442e7-c355-11e9-8224-5404a68ad561",
+	"advisories": [
+		{
+			"id": "795442e7-c355-11e9-8224-5404a68ad561",
+			"title": "vlc -- multiple vulnerabilities",
+			"description": "\n\t<p>The VLC project reports:</p>\n\t<blockquote cite=\"https://www.videolan.org/developers/vlc-branch/NEWS\">\n\t  <p>Security:\n\t     * Fix a buffer overflow in the MKV demuxer (CVE-2019-14970)\n\t     * Fix a read buffer overflow in the avcodec decoder (CVE-2019-13962)\n\t     * Fix a read buffer overflow in the FAAD decoder\n\t     * Fix a read buffer overflow in the OGG demuxer (CVE-2019-14437, CVE-2019-14438)\n\t     * Fix a read buffer overflow in the ASF demuxer (CVE-2019-14776)\n\t     * Fix a use after free in the MKV demuxer (CVE-2019-14777, CVE-2019-14778)\n\t     * Fix a use after free in the ASF demuxer (CVE-2019-14533)\n\t     * Fix a couple of integer underflows in the MP4 demuxer (CVE-2019-13602)\n\t     * Fix a null dereference in the dvdnav demuxer\n\t     * Fix a null dereference in the ASF demuxer (CVE-2019-14534)\n\t     * Fix a null dereference in the AVI demuxer\n\t     * Fix a division by zero in the CAF demuxer (CVE-2019-14498)\n\t     * Fix a division by zero in the ASF demuxer (CVE-2019-14535)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/795442e7-c355-11e9-8224-5404a68ad561.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.videolan.org/developers/vlc-branch/NEWS"
+				}
+			],
+			"published": "2019-08-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-13602",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-13602"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-13962",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-13962"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14437",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14437"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14438",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14438"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14498",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14498"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14533",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14533"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14534",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14534"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14535",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14535"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14776",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14776"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14777",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14777"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14778",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14778"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14970",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14970"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vlc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.8,4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

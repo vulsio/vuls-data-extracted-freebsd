@@ -1,0 +1,50 @@
+{
+	"id": "fd47fcfe-ec69-4000-b9ce-e5e62102c1c7",
+	"advisories": [
+		{
+			"id": "fd47fcfe-ec69-4000-b9ce-e5e62102c1c7",
+			"title": "couchdb -- information sharing via couchjs processes",
+			"description": "\n\t<p>Nick Vatamane reports:</p>\n    <blockquote cite=\"https://docs.couchdb.org/en/stable/cve/2023-26268.html\">\n\t<p>Design documents with matching document IDs, from databases on the\n      same cluster, may share a mutable Javascript environment when using\n      various design document functions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fd47fcfe-ec69-4000-b9ce-e5e62102c1c7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.couchdb.org/en/stable/cve/2023-26268.html"
+				}
+			],
+			"published": "2023-12-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-26268",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-26268"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "couchdb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.3.2,2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

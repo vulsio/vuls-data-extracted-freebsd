@@ -1,0 +1,180 @@
+{
+	"id": "049332d2-f6e1-11e2-82f3-000c29ee3065",
+	"advisories": [
+		{
+			"id": "049332d2-f6e1-11e2-82f3-000c29ee3065",
+			"title": "wordpress -- multiple vulnerabilities",
+			"description": "\n\t<p>The wordpress development team reports:</p>\n\t<blockquote cite=\"https://wordpress.org/news/2013/06/wordpress-3-5-2/\">\n\t  <ul>\n\t    <li>Blocking server-side request forgery attacks, which could\n\t      potentially enable an attacker to gain access to a site</li>\n\t    <li>Disallow contributors from improperly publishing posts</li>\n\t    <li>An update to the SWFUpload external library to fix cross-site\n\t    scripting vulnerabilities</li>\n\t    <li>Prevention of a denial of service attack, affecting sites\n\t      using password-protected posts</li>\n\t    <li>An update to an external TinyMCE library to fix a cross-site\n\t      scripting vulnerability</li>\n\t    <li>Multiple fixes for cross-site scripting</li>\n\t    <li>Avoid disclosing a full file path when a upload fails</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/049332d2-f6e1-11e2-82f3-000c29ee3065.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wordpress.org/news/2013/06/wordpress-3-5-2/"
+				}
+			],
+			"published": "2013-07-27T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2199",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2199"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2200",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2200"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2201",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2201"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2202",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2202"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2203",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2203"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2204",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2204"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2205",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2205"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-wordpress-zh_CN"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-wordpress-zh_TW"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "de-wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ru-wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

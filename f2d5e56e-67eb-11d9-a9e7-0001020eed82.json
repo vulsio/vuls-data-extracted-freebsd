@@ -1,0 +1,55 @@
+{
+	"id": "f2d5e56e-67eb-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "f2d5e56e-67eb-11d9-a9e7-0001020eed82",
+			"title": "unrtf -- buffer overflow vulnerability",
+			"description": "\n\t<p>Yosef Klein and Limin Wang have found a buffer overflow\n\t  vulnerability in unrtf that can allow an attacker to execute\n\t  arbitrary code with the permissions of the user running\n\t  unrtf, by running unrtf on a specially crafted rtf\n\t  document.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f2d5e56e-67eb-11d9-a9e7-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tigger.uic.edu/~jlongs2/holes/unrtf.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12030"
+				}
+			],
+			"published": "2005-01-16T00:00:00Z",
+			"modified": "2005-02-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1297",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1297"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "unrtf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.19.3_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

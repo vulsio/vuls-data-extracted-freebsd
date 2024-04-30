@@ -1,0 +1,59 @@
+{
+	"id": "9b5162de-6f39-11e8-818e-e8e0b747a45a",
+	"advisories": [
+		{
+			"id": "9b5162de-6f39-11e8-818e-e8e0b747a45a",
+			"title": "libgcrypt -- side-channel attack vulnerability",
+			"description": "\n\t<p>GnuPG reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0495\">\n\t  <p>Mitigate a local side-channel attack on ECDSA signature as described in the white paper \"Return on the Hidden Number Problem\".</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9b5162de-6f39-11e8-818e-e8e0b747a45a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.nccgroup.trust/us/our-research/technical-advisory-return-of-the-hidden-number-problem/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0495"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.7.4-relnotes.txt"
+				}
+			],
+			"published": "2018-06-13T00:00:00Z",
+			"modified": "2018-06-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-0495",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-0495"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libgcrypt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

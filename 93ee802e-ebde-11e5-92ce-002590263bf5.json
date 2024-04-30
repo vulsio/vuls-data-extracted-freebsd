@@ -1,0 +1,62 @@
+{
+	"id": "93ee802e-ebde-11e5-92ce-002590263bf5",
+	"advisories": [
+		{
+			"id": "93ee802e-ebde-11e5-92ce-002590263bf5",
+			"title": "git -- potential code execution",
+			"description": "\n\t<p>Debian reports:</p>\n\t<blockquote cite=\"https://security-tracker.debian.org/tracker/CVE-2016-2315\">\n\t  <p>\"int\" is the wrong data type for ... nlen assignment.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/93ee802e-ebde-11e5-92ce-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/03/15/6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://marc.info/?l=oss-security&m=145809217306686&w=2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/git/git/commit/34fa79a6cde56d6d428ab0d3160cb094ebad3305"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://security-tracker.debian.org/tracker/CVE-2016-2315"
+				}
+			],
+			"published": "2016-03-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2315",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2315"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "git"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

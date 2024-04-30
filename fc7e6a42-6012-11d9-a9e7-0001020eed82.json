@@ -1,0 +1,209 @@
+{
+	"id": "fc7e6a42-6012-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "fc7e6a42-6012-11d9-a9e7-0001020eed82",
+			"title": "tiff -- directory entry count integer overflow vulnerability",
+			"description": "\n\t<p>In an iDEFENSE Security Advisory infamous41md reports:</p>\n\t<blockquote cite=\"http://www.idefense.com/application/poi/display?id=174&amp;type=vulnerabilities\">\n\t  <p>Remote exploitation of a heap-based buffer overflow\n\t    vulnerability within the LibTIFF package could allow\n\t    attackers to execute arbitrary code.</p>\n\t  <p>The vulnerability specifically exists due to insufficient\n\t    validation of user-supplied data when calculating the size\n\t    of a directory entry. A TIFF file includes a number of\n\t    directory entry header fields that describe the data in\n\t    the file. Included in these entries is an entry count and\n\t    offset value that are calculated to determine the size and\n\t    location of the data for that entry.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc7e6a42-6012-11d9-a9e7-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.idefense.com/application/poi/display?id=174&type=vulnerabilities"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12075"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/125598"
+				}
+			],
+			"published": "2005-01-06T00:00:00Z",
+			"modified": "2006-06-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1308",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1308"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.7.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-tiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.1_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pdflib"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.1_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pdflib-perl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.1_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gdal"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ivtools"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "paraview"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fractorama"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.7_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "iv"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-iv"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-libimg"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

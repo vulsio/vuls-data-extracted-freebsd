@@ -1,0 +1,51 @@
+{
+	"id": "06f931c0-0be0-11e7-b4bf-5404a68ad561",
+	"advisories": [
+		{
+			"id": "06f931c0-0be0-11e7-b4bf-5404a68ad561",
+			"title": "irssi -- use-after-free potential code execution",
+			"description": "\n\t<p>The irssi project reports:</p>\n\t<blockquote cite=\"https://irssi.org/security/irssi_sa_2017_03.txt\">\n\t  <p>Use after free while producing list of netjoins (CWE-416).\n       This issue was found and reported to us by APic.\n       This issue usually leads to segmentation faults.\n       Targeted code execution should be difficult.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/06f931c0-0be0-11e7-b4bf-5404a68ad561.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://irssi.org/security/irssi_sa_2017_03.txt"
+				}
+			],
+			"published": "2017-03-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-7191",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7191"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "irssi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.2,1",
+						"gt": "0.8.21,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

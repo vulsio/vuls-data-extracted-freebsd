@@ -1,0 +1,50 @@
+{
+	"id": "81946ace-6961-4488-a164-22d58ebc8d66",
+	"advisories": [
+		{
+			"id": "81946ace-6961-4488-a164-22d58ebc8d66",
+			"title": "rails-html-sanitizer -- possible XSS vulnerability",
+			"description": "\n\t<p>OSS-Security list:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2018/03/22/4\">\n\t  <p>There is a possible XSS vulnerability in rails-html-sanitizer. The gem\n\t    allows non-whitelisted attributes to be present in sanitized output\n\t    when input with specially-crafted HTML fragments, and these attributes\n\t    can lead to an XSS attack on target applications.</p>\n\t  <p>This issue is similar to CVE-2018-8048 in Loofah.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/81946ace-6961-4488-a164-22d58ebc8d66.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2018/03/22/4"
+				}
+			],
+			"published": "2018-03-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-3741",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-3741"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-rails-html-sanitizer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

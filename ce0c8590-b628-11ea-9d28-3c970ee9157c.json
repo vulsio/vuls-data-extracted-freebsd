@@ -1,0 +1,63 @@
+{
+	"id": "ce0c8590-b628-11ea-9d28-3c970ee9157c",
+	"advisories": [
+		{
+			"id": "ce0c8590-b628-11ea-9d28-3c970ee9157c",
+			"title": "CUPS -- memory corruption",
+			"description": "\n\t<p>Apple reports:</p>\n\t<blockquote cite=\"https://github.com/apple/cups/releases/tag/v2.3.3\">\n\t  <ul>\n\t    <li>CVE-2019-8842: The ippReadIO function may under-read an\n\t      extension.</li>\n\t    <li>CVE-2020-3898: The ppdOpen function did not handle invalid UI\n\t      constraint. ppdcSource::get_resolution function did not handle\n\t      invalid resolution strings. An application may be able to gain\n\t      elevated privileges.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ce0c8590-b628-11ea-9d28-3c970ee9157c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/apple/cups/releases/tag/v2.3.3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://support.apple.com/en-us/HT211100"
+				}
+			],
+			"published": "2020-06-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-8842",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8842"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-3898",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-3898"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cups"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.3_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

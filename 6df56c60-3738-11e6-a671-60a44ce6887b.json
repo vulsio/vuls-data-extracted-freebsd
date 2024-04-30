@@ -1,0 +1,50 @@
+{
+	"id": "6df56c60-3738-11e6-a671-60a44ce6887b",
+	"advisories": [
+		{
+			"id": "6df56c60-3738-11e6-a671-60a44ce6887b",
+			"title": "wget -- HTTP to FTP redirection file name confusion vulnerability",
+			"description": "\n\t<p>Giuseppe Scrivano reports:</p>\n\t<blockquote cite=\"http://lists.gnu.org/archive/html/info-gnu/2016-06/msg00004.html\">\n\t  <p>On a server redirect from HTTP to a FTP resource, wget would trust the\n\t    HTTP server and uses the name in the redirected URL as the destination\n\t    filename.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6df56c60-3738-11e6-a671-60a44ce6887b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.gnu.org/archive/html/info-gnu/2016-06/msg00004.html"
+				}
+			],
+			"published": "2016-06-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4971",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4971"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wget"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.18"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

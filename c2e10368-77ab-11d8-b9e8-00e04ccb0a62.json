@@ -1,0 +1,52 @@
+{
+	"id": "c2e10368-77ab-11d8-b9e8-00e04ccb0a62",
+	"advisories": [
+		{
+			"id": "c2e10368-77ab-11d8-b9e8-00e04ccb0a62",
+			"title": "ModSecurity for Apache 2.x remote off-by-one overflow",
+			"description": "\n\t<p>When the directive \"SecFilterScanPost\" is enabled,\n\t  the Apache 2.x version of ModSecurity is vulnerable\n\t  to an off-by-one overflow</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c2e10368-77ab-11d8-b9e8-00e04ccb0a62.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.s-quadra.com/advisories/Adv-20040315.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/11138"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9885"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/779438"
+				}
+			],
+			"published": "2004-03-17T00:00:00Z",
+			"modified": "2004-06-27T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_security"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

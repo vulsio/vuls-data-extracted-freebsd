@@ -1,0 +1,39 @@
+{
+	"id": "38fec4bd-90f7-11e8-aafb-1c39475b9f84",
+	"advisories": [
+		{
+			"id": "38fec4bd-90f7-11e8-aafb-1c39475b9f84",
+			"title": "Fix a buffer overflow in the tiff reader",
+			"description": "\n\t<p>libvips reports:</p>\n\t<blockquote cite=\"https://github.com/jcupitt/libvips/releases/tag/v8.6.5\">\n\t  <p>A buffer overflow was found and fixed in the libvips code</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/38fec4bd-90f7-11e8-aafb-1c39475b9f84.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/jcupitt/libvips/releases/tag/v8.6.5"
+				}
+			],
+			"published": "2018-07-26T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vips"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.6.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

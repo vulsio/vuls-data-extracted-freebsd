@@ -1,0 +1,70 @@
+{
+	"id": "1d23109a-9005-11e2-9602-d43d7e0c7c02",
+	"advisories": [
+		{
+			"id": "1d23109a-9005-11e2-9602-d43d7e0c7c02",
+			"title": "php5 -- Multiple vulnerabilities",
+			"description": "\n\t<p>The PHP development team reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php\">\n\t  <p>PHP does not validate the relationship between the soap.wsdl_cache_dir\n\t    directive and the open_basedir directive, which allows remote attackers to\n\t    bypass intended access restrictions by triggering the creation of cached\n\t    SOAP WSDL files in an arbitrary directory.</p>\n\t  <p>The SOAP parser in PHP allows remote attackers to read arbitrary files\n\t    via a SOAP WSDL file containing an XML external entity declaration in\n\t    conjunction with an entity reference, related to an XML External Entity\n\t    (XXE) issue in the soap_xmlParseFile and soap_xmlParseMemory functions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1d23109a-9005-11e2-9602-d43d7e0c7c02.html"
+				}
+			],
+			"published": "2013-03-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1635",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1635"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1643",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1643"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.4.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php53"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.23"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

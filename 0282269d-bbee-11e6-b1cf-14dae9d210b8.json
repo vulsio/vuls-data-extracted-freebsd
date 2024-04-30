@@ -1,0 +1,68 @@
+{
+	"id": "0282269d-bbee-11e6-b1cf-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "0282269d-bbee-11e6-b1cf-14dae9d210b8",
+			"title": "FreeBSD -- link_ntoa(3) buffer overflow",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A specially crafted argument can trigger a static buffer\n\toverflow in the library, with possibility to rewrite following\n\tstatic buffers that belong to other library functions.</p>\n\t<h1>Impact:</h1>\n\t<p>Due to very limited use of the function in the existing\n\tapplications, and limited length of the overflow, exploitation\n\tof the vulnerability does not seem feasible. None of the\n\tutilities and daemons in the base system are known to be\n\tvulnerable. However, careful review of third party software\n\tthat may use the function was not performed.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0282269d-bbee-11e6-b1cf-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:37.libc.asc"
+				}
+			],
+			"published": "2016-12-06T00:00:00Z",
+			"modified": "2016-12-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6559",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6559"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.0_5",
+						"ge": "11.0"
+					},
+					{
+						"lt": "10.3_14",
+						"ge": "10.3"
+					},
+					{
+						"lt": "10.2_27",
+						"ge": "10.2"
+					},
+					{
+						"lt": "10.1_44",
+						"ge": "10.1"
+					},
+					{
+						"lt": "9.3_52",
+						"ge": "9.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

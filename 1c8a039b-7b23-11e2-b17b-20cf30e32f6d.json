@@ -1,0 +1,145 @@
+{
+	"id": "1c8a039b-7b23-11e2-b17b-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "1c8a039b-7b23-11e2-b17b-20cf30e32f6d",
+			"title": "bugzilla -- multiple vulnerabilities",
+			"description": "\n\t<h1>A Bugzilla Security Advisory reports:</h1>\n\t<blockquote cite=\"http://www.bugzilla.org/security/3.6.12/\">\n\t  <h1>Cross-Site Scripting</h1>\n\t  <p>When viewing a single bug report, which is the default,\n\t    the bug ID is validated and rejected if it is invalid.\n\t    But when viewing several bug reports at once, which is\n\t    specified by the format=multiple parameter, invalid bug\n\t    IDs can go through and are sanitized in the HTML page\n\t    itself. But when an invalid page format is passed to the\n\t    CGI script, the wrong HTML page is called and data are not\n\t    correctly sanitized, which can lead to XSS.</p>\n\t  <h1>Information Leak</h1>\n\t  <p>When running a query in debug mode, the generated SQL\n\t    query used to collect the data is displayed. The way this\n\t    SQL query is built permits the user to determine if some\n\t    confidential field value (such as a product name) exists.\n\t    This problem only affects Bugzilla 4.0.9 and older. Newer\n\t  releases are not affected by this issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1c8a039b-7b23-11e2-b17b-20cf30e32f6d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=842038"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=824399"
+				}
+			],
+			"published": "2013-02-20T00:00:00Z",
+			"modified": "2013-03-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0785",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0785"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-0786",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0786"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bugzilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.13",
+						"ge": "3.6.0"
+					},
+					{
+						"lt": "4.0.10",
+						"ge": "4.0.0"
+					},
+					{
+						"lt": "4.2.5",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "de-bugzilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.13",
+						"ge": "3.6.0"
+					},
+					{
+						"lt": "4.0.10",
+						"ge": "4.0.0"
+					},
+					{
+						"lt": "4.2.5",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ru-bugzilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.13",
+						"ge": "3.6.0"
+					},
+					{
+						"lt": "4.0.10",
+						"ge": "4.0.0"
+					},
+					{
+						"lt": "4.2.5",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-bugzilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.13",
+						"ge": "3.6.0"
+					},
+					{
+						"lt": "4.0.10",
+						"ge": "4.0.0"
+					},
+					{
+						"lt": "4.2.5",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,43 @@
+{
+	"id": "2fe40238-480f-11e5-adde-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "2fe40238-480f-11e5-adde-14dae9d210b8",
+			"title": "tarsnap -- buffer overflow and local DoS",
+			"description": "\n\t<p>Colin Percival reports:</p>\n\t<blockquote cite=\"http://mail.tarsnap.com/tarsnap-announce/msg00032.html\">\n\t  <p>1. SECURITY FIX: When constructing paths of objects being archived, a buffer\n\t    could overflow by one byte upon encountering 1024, 2048, 4096, etc. byte\n\t    paths. Theoretically this could be exploited by an unprivileged user whose\n\t    files are being archived; I do not believe it is exploitable in practice,\n\t    but I am offering a $1000 bounty for the first person who can prove me wrong:\n\t    http://www.daemonology.net/blog/2015-08-21-tarsnap-1000-exploit-bounty.html</p>\n\t  <p>2. SECURITY FIX: An attacker with a machine's write keys, or with read keys\n\t    and control of the tarsnap service, could make tarsnap allocate a large\n\t    amount of memory upon listing archives or reading an archive the attacker\n\t    created; on 32-bit machines, tarsnap can be caused to crash under the\n\t    aforementioned conditions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2fe40238-480f-11e5-adde-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail.tarsnap.com/tarsnap-announce/msg00032.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.daemonology.net/blog/2015-08-21-tarsnap-1000-exploit-bounty.html"
+				}
+			],
+			"published": "2015-08-21T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tarsnap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.36"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

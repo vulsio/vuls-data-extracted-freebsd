@@ -1,0 +1,114 @@
+{
+	"id": "40544e8c-9f7b-11e0-9bec-6c626dd55a41",
+	"advisories": [
+		{
+			"id": "40544e8c-9f7b-11e0-9bec-6c626dd55a41",
+			"title": "Asterisk -- multiple vulnerabilities",
+			"description": "\n\t<p>The Asterisk Development Team reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/node/51650\">\n\t  <p>AST-2011-008: If a remote user sends a SIP packet containing a\n\t    NULL, Asterisk assumes available data extends past the null to\n\t    the end of the packet when the buffer is actually truncated when\n\t    copied.  This causes SIP header parsing to modify data past the\n\t    end of the buffer altering unrelated memory structures.  This\n\t    vulnerability does not affect TCP/TLS connections.</p>\n\t  <p>AST-2011-009: A remote user sending a SIP packet containing a\n\t    Contact header with a missing left angle bracket causes Asterisk\n\t    to access a null pointer.</p>\n\t  <p>AST-2011-010: A memory address was inadvertently transmitted\n\t    over the network via IAX2 via an option control frame and the\n\t    remote party would try to access it.</p>\n\t  <p>Possible enumeration of SIP users due to differing\n\t    authentication responses.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40544e8c-9f7b-11e0-9bec-6c626dd55a41.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-008.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-009.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-010.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-011.html"
+				}
+			],
+			"published": "2011-06-25T00:00:00Z",
+			"modified": "2011-06-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2529",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2529"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2535",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2535"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2536",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2536"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk14"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.41.2",
+						"gt": "1.4.*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.2.18.2",
+						"gt": "1.6.*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk18"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.4.4",
+						"gt": "1.8.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

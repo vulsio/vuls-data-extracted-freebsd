@@ -1,0 +1,88 @@
+{
+	"id": "ea0f45e2-6c4b-11e2-98d9-003067c2616f",
+	"advisories": [
+		{
+			"id": "ea0f45e2-6c4b-11e2-98d9-003067c2616f",
+			"title": "opera -- execution of arbitrary code",
+			"description": "\n\t<p>Opera reports:</p>\n\t<blockquote cite=\"http://www.opera.com/support/kb/view/1042/\">\n\t  <p>Particular DOM event manipulations can cause Opera to crash. In\n\t    some cases, this crash might occur in a way that allows execution\n\t    of arbitrary code. To inject code, additional techniques would\n\t    have to be employed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ea0f45e2-6c4b-11e2-98d9-003067c2616f.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/kb/view/1042/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/kb/view/1043/"
+				}
+			],
+			"published": "2013-02-01T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.13"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

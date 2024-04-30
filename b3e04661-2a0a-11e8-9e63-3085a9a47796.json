@@ -1,0 +1,50 @@
+{
+	"id": "b3e04661-2a0a-11e8-9e63-3085a9a47796",
+	"advisories": [
+		{
+			"id": "b3e04661-2a0a-11e8-9e63-3085a9a47796",
+			"title": "slurm-wlm -- SQL Injection attacks against SlurmDBD",
+			"description": "\n\t<p>SchedMD reports:</p>\n\t<blockquote cite=\"https://lists.schedmd.com/pipermail/slurm-announce/2018/000006.html\">\n\t  <p>Several issues were discovered with incomplete sanitization of\n\t     user-provided text strings, which could potentially lead to SQL\n\t     injection attacks against SlurmDBD itself. Such exploits could lead to a\n\t     loss of accounting data, or escalation of user privileges on the cluster.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b3e04661-2a0a-11e8-9e63-3085a9a47796.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2018-7033"
+				}
+			],
+			"published": "2018-03-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-7033",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7033"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "slurm-wlm"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "17.02.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

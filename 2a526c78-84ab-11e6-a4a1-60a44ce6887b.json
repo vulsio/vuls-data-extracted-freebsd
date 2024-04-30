@@ -1,0 +1,78 @@
+{
+	"id": "2a526c78-84ab-11e6-a4a1-60a44ce6887b",
+	"advisories": [
+		{
+			"id": "2a526c78-84ab-11e6-a4a1-60a44ce6887b",
+			"title": "libgd -- integer overflow which could lead to heap buffer overflow",
+			"description": "\n       <p>LibGD reports:</p>\n       <blockquote cite=\"https://github.com/libgd/libgd/issues/308\">\n\t <p>An integer overflow issue was found in function gdImageWebpCtx of file gd_webp.c which could lead to heap buffer overflow.</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a526c78-84ab-11e6-a4a1-60a44ce6887b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libgd/libgd/issues/308"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.php.net/bug.php?id=73003"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=213023"
+				}
+			],
+			"published": "2016-10-11T00:00:00Z",
+			"modified": "2016-10-18T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.2.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php70-gd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "7.0.11"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56-gd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "5.6.26"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

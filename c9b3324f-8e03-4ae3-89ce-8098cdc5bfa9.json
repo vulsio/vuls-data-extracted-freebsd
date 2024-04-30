@@ -1,0 +1,114 @@
+{
+	"id": "c9b3324f-8e03-4ae3-89ce-8098cdc5bfa9",
+	"advisories": [
+		{
+			"id": "c9b3324f-8e03-4ae3-89ce-8098cdc5bfa9",
+			"title": "py-markdown2 -- regular expression denial of service vulnerability",
+			"description": "\n    <p>Ben Caller reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/PYSEC-2021-20\">\n      <p>markdown2 &gt;=1.0.1.18, fixed in 2.4.0, is affected by a regular expression denial of service vulnerability.</p>\n      <p>If an attacker provides a malicious string, it can make markdown2 processing difficult or delayed for an extended period of time.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c9b3324f-8e03-4ae3-89ce-8098cdc5bfa9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/PYSEC-2021-20"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-jr9p-r423-9m2r"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-26813",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-26813"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-markdown2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py38-markdown2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-markdown2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py310-markdown2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py311-markdown2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

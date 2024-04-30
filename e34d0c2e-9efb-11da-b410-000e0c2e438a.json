@@ -1,0 +1,54 @@
+{
+	"id": "e34d0c2e-9efb-11da-b410-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "e34d0c2e-9efb-11da-b410-000e0c2e438a",
+			"title": "rssh -- privilege escalation vulnerability",
+			"description": "\n\t<p>Pizzashack reports:</p>\n\t<blockquote cite=\"http://www.pizzashack.org/rssh/security.shtml\">\n\t  <p>Max Vozeler has reported a problem whereby rssh can\n\t    allow users who have shell access to systems where rssh\n\t    is installed (and rssh_chroot_helper is installed SUID)\n\t    to gain root access to the system, due to the ability to\n\t    chroot to arbitrary locations. There are a lot of\n\t    potentially mitigating factors, but to be safe you should\n\t    upgrade immediately.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e34d0c2e-9efb-11da-b410-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pizzashack.org/rssh/security.shtml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/16050"
+				}
+			],
+			"published": "2006-02-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-3345",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-3345"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rssh"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

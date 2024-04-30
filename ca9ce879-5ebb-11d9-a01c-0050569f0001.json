@@ -1,0 +1,151 @@
+{
+	"id": "ca9ce879-5ebb-11d9-a01c-0050569f0001",
+	"advisories": [
+		{
+			"id": "ca9ce879-5ebb-11d9-a01c-0050569f0001",
+			"title": "exim -- two buffer overflow vulnerabilities",
+			"description": "\n\t<p>1. The function host_aton() can overflow a buffer\n\t   if it is presented with an illegal IPv6 address\n\t   that has more than 8 components.</p>\n\t<p>2. The second report described a buffer overflow\n\t   in the function spa_base64_to_bits(), which is part\n\t   of the code for SPA authentication.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ca9ce879-5ebb-11d9-a01c-0050569f0001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.exim.org/mail-archives/exim-announce/2005/msg00000.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110573573800377"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12185"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12188"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12268"
+				}
+			],
+			"published": "2005-01-05T00:00:00Z",
+			"modified": "2005-01-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0021",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0021"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0022",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0022"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.43+28_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim-ldap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.43+28_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim-ldap2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.43+28_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim-mysql"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.43+28_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim-postgresql"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.43+28_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim-sa-exim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.43+28_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

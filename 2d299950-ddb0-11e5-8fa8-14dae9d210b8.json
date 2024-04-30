@@ -1,0 +1,89 @@
+{
+	"id": "2d299950-ddb0-11e5-8fa8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "2d299950-ddb0-11e5-8fa8-14dae9d210b8",
+			"title": "moodle -- multiple vulnerabilities",
+			"description": "\n\t<p>Marina Glancy reports:</p>\n\t<blockquote cite=\"https://moodle.org/security/\">\n\t  <ul>\n\t    <li><p>MSA-16-0001: Two enrolment-related web services don't\n\t    check course visibility</p></li>\n\t    <li><p>MSA-16-0002: XSS Vulnerability in course management\n\t    search</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2d299950-ddb0-11e5-8fa8-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://moodle.org/security/"
+				}
+			],
+			"published": "2016-02-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-0724",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0724"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0725",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0725"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "moodle28"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "moodle29"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.9.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "moodle30"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

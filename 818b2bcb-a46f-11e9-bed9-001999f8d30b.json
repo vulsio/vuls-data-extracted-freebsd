@@ -1,0 +1,80 @@
+{
+	"id": "818b2bcb-a46f-11e9-bed9-001999f8d30b",
+	"advisories": [
+		{
+			"id": "818b2bcb-a46f-11e9-bed9-001999f8d30b",
+			"title": "asterisk -- Remote crash vulnerability with MESSAGE messages",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>A specially crafted SIP in-dialog MESSAGE message can cause Asterisk to crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/818b2bcb-a46f-11e9-bed9-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2019-002.html"
+				}
+			],
+			"published": "2019-07-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-12827",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-12827"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk13"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.27.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk15"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.7.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

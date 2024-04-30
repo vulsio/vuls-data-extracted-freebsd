@@ -1,0 +1,65 @@
+{
+	"id": "406636fe-055d-11e5-aab1-d050996490d0",
+	"advisories": [
+		{
+			"id": "406636fe-055d-11e5-aab1-d050996490d0",
+			"title": "krb5 -- requires_preauth bypass in PKINIT-enabled KDC",
+			"description": "\n\t<p>MIT reports:</p>\n\t<blockquote cite=\"http://krbdev.mit.edu/rt/Ticket/Display.html?id=8160\">\n\t  <p>In MIT krb5 1.12 and later, when the KDC is configured\n\t    with PKINIT support, an unauthenticated remote attacker\n\t    can bypass the requires_preauth flag on a client principal\n\t    and obtain a ciphertext encrypted in the principal's\n\t    long-term key.  This ciphertext could be used to conduct\n\t    an off-line dictionary attack against the user's password.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/406636fe-055d-11e5-aab1-d050996490d0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://krbdev.mit.edu/rt/Ticket/Display.html?id=8160"
+				}
+			],
+			"published": "2015-05-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-2694",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-2694"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "krb5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.13.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "krb5-112"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.3_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

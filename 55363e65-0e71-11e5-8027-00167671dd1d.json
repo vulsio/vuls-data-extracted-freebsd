@@ -1,0 +1,52 @@
+{
+	"id": "55363e65-0e71-11e5-8027-00167671dd1d",
+	"advisories": [
+		{
+			"id": "55363e65-0e71-11e5-8027-00167671dd1d",
+			"title": "strongswan -- Denial-of-service and potential remote code execution vulnerability",
+			"description": "\n\t<p>StrongSwan Project reports</p>\n\t<blockquote cite=\"https://www.strongswan.org/blog/2015/06/01/strongswan-vulnerability-(cve-2015-3991).html\">\n\t  <p>A denial-of-service and potential remote code execution vulnerability\n\t    triggered by crafted IKE messages was discovered in strongSwan. Versions\n\t    5.2.2 and 5.3.0 are affected.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/55363e65-0e71-11e5-8027-00167671dd1d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.strongswan.org/blog/2015/06/01/strongswan-vulnerability-(cve-2015-3991).html"
+				}
+			],
+			"published": "2015-06-09T00:00:00Z",
+			"modified": "2015-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3991",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3991"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "strongswan"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.1",
+						"ge": "5.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

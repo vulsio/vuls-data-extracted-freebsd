@@ -1,0 +1,84 @@
+{
+	"id": "cebd05d6-ed7b-11e7-95f2-005056925db4",
+	"advisories": [
+		{
+			"id": "cebd05d6-ed7b-11e7-95f2-005056925db4",
+			"title": "OTRS -- Multiple vulnerabilities",
+			"description": "\n\t<p>OTRS reports:</p>\n\t<blockquote cite=\"https://www.otrs.com/security-advisory-2017-07-security-update-otrs-framework/\">\n\t  <p>An attacker who is logged into OTRS as an agent can request special URLs\n\t    from OTRS which can lead to the execution of shell commands with the\n\t    permissions of the web server user.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.otrs.com/security-advisory-2017-08-security-update-otrs-framework/\">\n\t  <p>An attacker who is logged into OTRS as a customer can use the ticket search\n\t    form to disclose internal article information of their customer tickets.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.otrs.com/security-advisory-2017-09-security-update-otrs-framework/\">\n\t  <p>An attacker who is logged into OTRS as an agent can manipulate form\n\t    parameters and execute arbitrary shell commands with the permissions of the\n\t    OTRS or web server user.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.otrs.com/security-advisory-2017-10-security-update-otrs-framework/\">\n\t  <p>An attacker can send a specially prepared email to an OTRS system. If this\n\t    system has cookie support disabled, and a logged in agent clicks a link in this\n\t    email, the session information could be leaked to external systems, allowing the\n\t    attacker to take over the agent’s session.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cebd05d6-ed7b-11e7-95f2-005056925db4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.otrs.com/security-advisory-2017-07-security-update-otrs-framework/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.otrs.com/security-advisory-2017-08-security-update-otrs-framework/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.otrs.com/security-advisory-2017-09-security-update-otrs-framework/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.otrs.com/security-advisory-2017-10-security-update-otrs-framework/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=224729"
+				}
+			],
+			"published": "2017-12-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-16664",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-16664"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-16854",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-16854"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-16921",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-16921"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "otrs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.26"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

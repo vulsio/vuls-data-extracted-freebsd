@@ -1,0 +1,59 @@
+{
+	"id": "b3b8d491-0fbb-11e3-8c50-1c6f65c11ee6",
+	"advisories": [
+		{
+			"id": "b3b8d491-0fbb-11e3-8c50-1c6f65c11ee6",
+			"title": "cacti -- allow remote attackers to execute arbitrary SQL commands",
+			"description": "\n\t<p>Cacti release reports:</p>\n\t<blockquote cite=\"http://www.cacti.net/release_notes_0_8_8b.php\">\n\t  <p>Multiple security vulnerabilities have been fixed:</p>\n\t  <ul>\n\t    <li>SQL injection vulnerabilities</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b3b8d491-0fbb-11e3-8c50-1c6f65c11ee6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cacti.net/release_notes_0_8_8b.php"
+				}
+			],
+			"published": "2013-08-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1434",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1434"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1435",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1435"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cacti"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8.8b"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

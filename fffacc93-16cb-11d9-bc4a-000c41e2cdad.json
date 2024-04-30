@@ -1,0 +1,55 @@
+{
+	"id": "fffacc93-16cb-11d9-bc4a-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "fffacc93-16cb-11d9-bc4a-000c41e2cdad",
+			"title": "xv -- exploitable buffer overflows",
+			"description": "\n\t<p>In a Bugtraq posting, infamous41md(at)hotpop.com reported:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=109302498125092\">\n\t  <p>there are at least 5 exploitable buffer and heap\n\t    overflows in the image handling code. this allows someone\n\t    to craft a malicious image, trick a user into viewing the\n\t    file in xv, and upon viewing that image execute arbitrary\n\t    code under privileges of the user viewing image. note\n\t    the AT LEAST part of the above sentence. there is such a\n\t    plethora of bad code that I just stopped reading after\n\t    a while. there are at least 100 calls to sprintf() and\n\t    strcpy() with no regards for bounds of buffers. 95% of\n\t    these deal with program arguments or filenames, so they\n\t    are of no interest to exploit. however I just got sick of\n\t    reading this code after not too long. so im sure there are\n\t    still other overflows in the image handling code for other\n\t    image types.</p>\n\t</blockquote>\n\t<p>The posting also included an exploit.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fffacc93-16cb-11d9-bc4a-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109302498125092"
+				}
+			],
+			"published": "2004-10-05T00:00:00Z",
+			"modified": "2004-10-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xv"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.10a_4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xv-m17n"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.10a_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,85 @@
+{
+	"id": "ec255bd8-02c6-11e2-92d1-000d601460a4",
+	"advisories": [
+		{
+			"id": "ec255bd8-02c6-11e2-92d1-000d601460a4",
+			"title": "php5-sqlite -- open_basedir bypass",
+			"description": "\n\t<p>MITRE CVE team reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3365\">\n\t  <p>The SQLite functionality in PHP before 5.3.15 allows remote\n\t    attackers to bypass the open_basedir protection mechanism via\n\t    unspecified vectors.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ec255bd8-02c6-11e2-92d1-000d601460a4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3365"
+				}
+			],
+			"published": "2012-09-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3365",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3365"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php5-sqlite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.17_11",
+						"ge": "5.2"
+					},
+					{
+						"lt": "5.3.15",
+						"ge": "5.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php52-sqlite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.17_11"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php53-sqlite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.15"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

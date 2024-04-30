@@ -1,0 +1,54 @@
+{
+	"id": "3dd7eb58-80ae-11db-b4ec-000854d03344",
+	"advisories": [
+		{
+			"id": "3dd7eb58-80ae-11db-b4ec-000854d03344",
+			"title": "gtar -- GNUTYPE_NAMES directory traversal vulnerability",
+			"description": "\n\t<p>Teemu Salmela reports:</p>\n\t<blockquote cite=\"http://archives.neohapsis.com/archives/fulldisclosure/2006-11/0344.html\">\n\t  <p>There is a tar record type, called GNUTYPE_NAMES (an\n\t    obsolete GNU extension), that allows the creation of\n\t    symbolic links pointing to arbitrary locations in the\n\t    filesystem, which makes it possible to create/overwrite\n\t    arbitrary files.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3dd7eb58-80ae-11db-b4ec-000854d03344.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://archives.neohapsis.com/archives/fulldisclosure/2006-11/0344.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/21235"
+				}
+			],
+			"published": "2006-11-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-6097",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-6097"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gtar"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.16_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

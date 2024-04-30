@@ -1,0 +1,39 @@
+{
+	"id": "47197b47-6a1a-11ec-8be6-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "47197b47-6a1a-11ec-8be6-d4c9ef517024",
+			"title": "Roundcube -- XSS vulnerability",
+			"description": "\n\t<p>The Roundcube project reports:</p>\n\t<blockquote cite=\"://roundcube.net/news/2021/12/30/update-1.5.2-released\">\n\t  <p>Cross-site scripting (XSS) via HTML messages with malicious CSS\n\t    content</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/47197b47-6a1a-11ec-8be6-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://roundcube.net/news/2021/12/30/update-1.5.2-released"
+				}
+			],
+			"published": "2021-12-31T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "roundcube"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.2,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

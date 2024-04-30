@@ -1,0 +1,66 @@
+{
+	"id": "7033b42d-ef09-11e5-b766-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "7033b42d-ef09-11e5-b766-14dae9d210b8",
+			"title": "pcre -- stack buffer overflow",
+			"description": "\n\t<p>Philip Hazel reports:</p>\n\t<blockquote cite=\"https://bugs.exim.org/show_bug.cgi?id=1791\">\n\t  <p>PCRE does not validate that handling the (*ACCEPT) verb\n\t    will occur within the bounds of the cworkspace stack buffer, leading to\n\t    a stack buffer overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7033b42d-ef09-11e5-b766-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.exim.org/show_bug.cgi?id=1791"
+				}
+			],
+			"published": "2016-03-21T00:00:00Z",
+			"modified": "2016-03-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-3191",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3191"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.38"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.20_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

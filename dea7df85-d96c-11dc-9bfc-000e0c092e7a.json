@@ -1,0 +1,39 @@
+{
+	"id": "dea7df85-d96c-11dc-9bfc-000e0c092e7a",
+	"advisories": [
+		{
+			"id": "dea7df85-d96c-11dc-9bfc-000e0c092e7a",
+			"title": "cacti -- Multiple security vulnerabilities have been discovered",
+			"description": "\n\t<p>The cacti development team reports:</p>\n\t<blockquote cite=\"http://forums.cacti.net/about25749.html\">\n\t  <p>Multiple security vulnerabilities have been discovered in\n\t    Cacti's web interface:</p>\n\t    <ul>\n\t      <li>XSS vulnerabilities</li>\n\t      <li>Path disclosure vulnerabilities</li>\n\t      <li>SQL injection vulnerabilities</li>\n\t      <li>HTTP response splitting vulnerabilities</li>\n\t    </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dea7df85-d96c-11dc-9bfc-000e0c092e7a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://forums.cacti.net/about25749.html"
+				}
+			],
+			"published": "2008-02-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cacti"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8.7b"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

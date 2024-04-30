@@ -1,0 +1,65 @@
+{
+	"id": "61349f77-c620-11da-b2fb-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "61349f77-c620-11da-b2fb-000e0c2e438a",
+			"title": "thunderbird -- javascript execution",
+			"description": "\n\t<p>Renaud Lifchitz reports a vulnerability within thunderbird.\n\t  The vulnerability is caused by improper checking of javascript\n\t  scripts.  This could lead to javascript code execution which\n\t  can lead to information disclosure or a denial of service\n\t  (application crash).\tThis vulnerability is present even if\n\t  javascript had been disabled in the preferences.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/61349f77-c620-11da-b2fb-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/16770"
+				}
+			],
+			"published": "2006-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CAN-2006-0884",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CAN-2006-0884"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.0.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.0.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

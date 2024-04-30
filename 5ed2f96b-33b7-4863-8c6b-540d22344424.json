@@ -1,0 +1,40 @@
+{
+	"id": "5ed2f96b-33b7-4863-8c6b-540d22344424",
+	"advisories": [
+		{
+			"id": "5ed2f96b-33b7-4863-8c6b-540d22344424",
+			"title": "imap-uw -- University of Washington IMAP c-client Remote Format String Vulnerability",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/33795\">\n\t  <p>University of Washington IMAP c-client is prone to a remote\n\t    format-string vulnerability because the software fails to adequately\n\t    sanitize user-supplied input before passing it as the\n\t    format-specifier to a formatted-printing function.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5ed2f96b-33b7-4863-8c6b-540d22344424.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/33795"
+				}
+			],
+			"published": "2009-05-21T00:00:00Z",
+			"modified": "2009-05-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "imap-uw"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2007e"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

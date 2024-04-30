@@ -1,0 +1,50 @@
+{
+	"id": "8f483746-d45d-11dd-84ec-001fc66e7203",
+	"advisories": [
+		{
+			"id": "8f483746-d45d-11dd-84ec-001fc66e7203",
+			"title": "roundcube -- remote execution of arbitrary code",
+			"description": "\n\t<p>Entry for CVE-2008-5619 says:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5619\">\n\t  <p>html2text.php in RoundCube Webmail (roundcubemail)\n\t    0.2-1.alpha and 0.2-3.beta allows remote attackers to execute\n\t    arbitrary code via crafted input that is processed by the\n\t    preg_replace function with the eval switch.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8f483746-d45d-11dd-84ec-001fc66e7203.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://trac.roundcube.net/ticket/1485618"
+				}
+			],
+			"published": "2008-12-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5619",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5619"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "roundcube"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.2.b2,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

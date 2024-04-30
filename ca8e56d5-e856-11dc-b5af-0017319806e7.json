@@ -1,0 +1,69 @@
+{
+	"id": "ca8e56d5-e856-11dc-b5af-0017319806e7",
+	"advisories": [
+		{
+			"id": "ca8e56d5-e856-11dc-b5af-0017319806e7",
+			"title": "ghostscript -- zseticcspace() function buffer overflow vulnerability",
+			"description": "\n\t<p>Chris Evans from the Google Security Team reports:</p>\n\t<blockquote cite=\"http://scary.beasts.org/security/CESA-2008-001.html\">\n\t  <p>Severity: parsing of evil PostScript file will result in\n\t    arbitrary code execution.</p>\n\t  <p>A stack-based buffer overflow in the zseticcspace() function\n\t    in zicc.c allows remote arbitrary code execution via a\n\t    malicious PostScript file (.ps) that contains a long Range\n\t    array.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ca8e56d5-e856-11dc-b5af-0017319806e7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://scary.beasts.org/security/CESA-2008-001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/28017"
+				}
+			],
+			"published": "2008-03-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-0411",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0411"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript-gpl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.61_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ghostscript-gpl-nox11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.61_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,51 @@
+{
+	"id": "00644f03-fb58-11d8-9837-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "00644f03-fb58-11d8-9837-000c41e2cdad",
+			"title": "imlib -- BMP decoder heap buffer overflow",
+			"description": "\n\t<p>Marcus Meissner discovered that imlib's BMP decoder would\n\t  crash when loading the test BMP file created by Chris Evans\n\t  for testing the previous Qt vulnerability.  It is believed\n\t  that this bug could be exploited for arbitrary code execution.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/00644f03-fb58-11d8-9837-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.gnome.org/show_bug.cgi?id=151034"
+				}
+			],
+			"published": "2004-08-31T00:00:00Z",
+			"modified": "2004-09-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0817",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0817"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "imlib"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.9.14_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,69 @@
+{
+	"id": "b971d2a6-1670-11da-978e-0001020eed82",
+	"advisories": [
+		{
+			"id": "b971d2a6-1670-11da-978e-0001020eed82",
+			"title": "pcre -- regular expression buffer overflow",
+			"description": "\n\t<p>The pcre library is vulnerable to a buffer overflow\n\t  vulnerability due to insufficient validation of quantifier\n\t  values.  This could lead execution of arbitrary code with\n\t  the permissions of the program using pcre by way of a\n\t  specially crated regular expression.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b971d2a6-1670-11da-978e-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pcre.org/changelog.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14620"
+				}
+			],
+			"published": "2005-08-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2491",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2491"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre-utf8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

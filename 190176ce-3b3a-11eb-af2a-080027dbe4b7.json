@@ -1,0 +1,51 @@
+{
+	"id": "190176ce-3b3a-11eb-af2a-080027dbe4b7",
+	"advisories": [
+		{
+			"id": "190176ce-3b3a-11eb-af2a-080027dbe4b7",
+			"title": "glpi -- Insecure Direct Object Reference on ajax/comments.ph",
+			"description": "\n\t<p>MITRE Corporation reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27662\">\n\t  <p>In GLPI before 9.5.3, ajax/comments.php has an Insecure Direct Object Reference (IDOR) vulnerability that allows an attacker to read data from any database table (e.g., glpi_tickets, glpi_users, etc.).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/190176ce-3b3a-11eb-af2a-080027dbe4b7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-wq38-gwxp-8p5p"
+				}
+			],
+			"published": "2020-10-22T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-27662",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-27662"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.5.3,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

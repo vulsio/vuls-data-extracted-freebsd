@@ -1,0 +1,254 @@
+{
+	"id": "759a5599-3ce8-11ee-a0d1-84a93843eb75",
+	"advisories": [
+		{
+			"id": "759a5599-3ce8-11ee-a0d1-84a93843eb75",
+			"title": "MySQL -- Multiple vulnerabilities",
+			"description": "\n\t<p>Oracle reports:</p>\n\t<blockquote cite=\"https://www.oracle.com/security-alerts/cpujul2023.html#AppendixMSQL\">\n\t  <p>This Critical Patch Update contains 24 new security patches for Oracle\n\t    MySQL. 11 of these vulnerabilities may be remotely exploitable without\n\t    authentication, i.e., may be exploited over a network without requiring\n\t    user credentials.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/759a5599-3ce8-11ee-a0d1-84a93843eb75.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.oracle.com/security-alerts/cpujul2023.html#AppendixMSQL"
+				}
+			],
+			"published": "2023-08-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-4899",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-4899"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-0361",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-0361"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-4899",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-4899"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-4899",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-4899"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22053",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22053"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22008",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22008"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22046",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22046"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22054"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22056",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22056"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-21950",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-21950"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22007",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22007"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22057",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22057"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22033",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22033"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22058",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22058"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22005",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22005"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22048",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22048"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22038",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22038"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-connector-c++"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.33"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-client57"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.43"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-server57"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.43"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-client80"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.34"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-server80"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.34"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

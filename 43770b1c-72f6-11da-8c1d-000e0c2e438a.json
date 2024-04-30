@@ -1,0 +1,51 @@
+{
+	"id": "43770b1c-72f6-11da-8c1d-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "43770b1c-72f6-11da-8c1d-000e0c2e438a",
+			"title": "nbd-server -- buffer overflow vulnerability",
+			"description": "\n\t<p>Kurt Fitzner reports a buffer overflow vulnerability\n\t  within nbd.  This could potentially allow the execution\n\t  of arbitrary code on the nbd server.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/43770b1c-72f6-11da-8c1d-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2005/dsa-924"
+				}
+			],
+			"published": "2005-12-22T00:00:00Z",
+			"modified": "2005-12-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-3534",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-3534"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nbd-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.2_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

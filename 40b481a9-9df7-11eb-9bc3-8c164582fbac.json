@@ -1,0 +1,66 @@
+{
+	"id": "40b481a9-9df7-11eb-9bc3-8c164582fbac",
+	"advisories": [
+		{
+			"id": "40b481a9-9df7-11eb-9bc3-8c164582fbac",
+			"title": "mdbook -- XSS in mdBook's search page",
+			"description": "\n\t<p>Rust Security Response Working Group reports:</p>\n\t<blockquote cite=\"https://github.com/rust-lang/mdBook/security/advisories/GHSA-gx5w-rrhp-f436\">\n\t  <p>\n\t    The search feature of mdBook (introduced in version 0.1.4) was\n\t    affected by a cross site scripting vulnerability that allowed an\n\t    attacker to execute arbitrary JavaScript code on an user's browser\n\t    by tricking the user into typing a malicious search query, or\n\t    tricking the user into clicking a link to the search page with the\n\t    malicious search query prefilled.\n\n\t    mdBook 0.4.5 fixes the vulnerability by properly escaping the search\n\t    query.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40b481a9-9df7-11eb-9bc3-8c164582fbac.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rust-lang/mdBook/blob/master/CHANGELOG.md#mdbook-045"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rust-lang/mdBook/commit/32abeef088e98327ca0dfccdad92e84afa9d2e9b"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rust-lang/mdBook/security/advisories/GHSA-gx5w-rrhp-f436"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/g/rustlang-security-announcements/c/3-sO6of29O0?pli=1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-26297"
+				}
+			],
+			"published": "2021-04-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-26297",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-26297"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mdbook"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

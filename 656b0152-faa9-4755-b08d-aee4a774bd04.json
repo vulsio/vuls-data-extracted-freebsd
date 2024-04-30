@@ -1,0 +1,39 @@
+{
+	"id": "656b0152-faa9-4755-b08d-aee4a774bd04",
+	"advisories": [
+		{
+			"id": "656b0152-faa9-4755-b08d-aee4a774bd04",
+			"title": "zeek -- potential DoS vulnerabilities",
+			"description": "\n\t<p>Tim Wojtulewicz of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v5.0.2\">\n\t<p> Fix a possible overflow and crash in the ICMP analyzer\n\twhen receiving a specially crafted packet. </p>\n\t<p> Fix a possible overflow and crash in the IRC analyzer\n\twhen receiving a specially crafted packet. </p>\n\t<p> Fix a possible overflow and crash in the SMB analyzer\n\twhen receiving a specially crafted packet. </p>\n\t<p> Fix two possible crashes when converting IP headers for\n\toutput via the raw_packet event. </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/656b0152-faa9-4755-b08d-aee4a774bd04.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/zeek/zeek/releases/tag/v5.0.2"
+				}
+			],
+			"published": "2022-09-19T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zeek"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,74 @@
+{
+	"id": "54f72962-c7ba-11dd-a721-0030843d3802",
+	"advisories": [
+		{
+			"id": "54f72962-c7ba-11dd-a721-0030843d3802",
+			"title": "phpmyadmin -- cross-site request forgery vulnerability",
+			"description": "\n\t<p>The phpMyAdmin Team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2008-10.php\">\n\t  <p>A logged-in user can be subject of SQL injection through cross\n\t    site request forgery.  Several scripts in phpMyAdmin are\n\t    vulnerable and the attack can be made through table parameter.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/54f72962-c7ba-11dd-a721-0030843d3802.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2008-10.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.milw0rm.com/exploits/7382"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/33076/"
+				}
+			],
+			"published": "2008-12-11T00:00:00Z",
+			"modified": "2010-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5621",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5621"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin211"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.11.9.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "d71831ef-e6f8-11e5-85be-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "d71831ef-e6f8-11e5-85be-14dae9d210b8",
+			"title": "ricochet -- information disclosure",
+			"description": "\n\t<p>special reports:</p>\n\t<blockquote cite=\"https://github.com/ricochet-im/ricochet/releases/tag/v1.1.2\">\n\t  <p>By sending a nickname with some HTML tags in a contact\n\t    request, an attacker could cause Ricochet to make network requests\n\t    without Tor after the request is accepted, which would reveal the user's\n\t    IP address.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d71831ef-e6f8-11e5-85be-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/ricochet-im/ricochet/releases/tag/v1.1.2"
+				}
+			],
+			"published": "2016-03-10T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ricochet"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

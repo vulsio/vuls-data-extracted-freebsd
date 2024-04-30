@@ -1,0 +1,55 @@
+{
+	"id": "b4af3ede-36e9-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "b4af3ede-36e9-11d9-a9e7-0001020eed82",
+			"title": "twiki -- arbitrary shell command execution",
+			"description": "\n\t<p>Hans Ulrich Niedermann reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=110037207516456\">\n\t  <p>The TWiki search function uses a user supplied search\n\t    string to compose a command line executed by the Perl\n\t    backtick (``) operator.</p>\n\t  <p>The search string is not checked properly for shell\n\t    metacharacters and is thus vulnerable to search string\n\t    containing quotes and shell commands.</p>\n\t  <p>IMPACT: An attacker is able to execute arbitrary shell\n\t    commands with the privileges of the TWiki process.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b4af3ede-36e9-11d9-a9e7-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://twiki.org/cgi-bin/view/Codev/SecurityAlertExecuteCommandsWithSearch"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110037207516456"
+				}
+			],
+			"published": "2004-11-15T00:00:00Z",
+			"modified": "2004-11-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1037",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1037"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "twiki"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "20040902"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

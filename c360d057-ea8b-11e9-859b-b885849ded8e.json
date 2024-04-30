@@ -1,0 +1,55 @@
+{
+	"id": "c360d057-ea8b-11e9-859b-b885849ded8e",
+	"advisories": [
+		{
+			"id": "c360d057-ea8b-11e9-859b-b885849ded8e",
+			"title": "mod_perl2 -- execute arbitrary Perl code",
+			"description": "\n\t<p>mod_perl2 2.0.11 fixes Arbitrary Perl code execution in the context\n\tof the user account via a user-owned .htaccess.</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2011-2767\">\n\t<p>mod_perl 2.0 through 2.0.10 allows attackers to execute arbitrary\n\t  Perl code by placing it in a user-owned .htaccess file, because\n\t  (contrary to the documentation) there is no configuration option\n\t  that permits Perl code for the administrator's control of HTTP\n\t  request processing without also permitting unprivileged users\n\t  to run Perl code in the context of the user account that runs\n\t  Apache HTTP Server processes.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c360d057-ea8b-11e9-859b-b885849ded8e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2767"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.securityfocus.com/bid/105195"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://access.redhat.com/errata/RHSA-2018:2826"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.debian.org/644169"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://usn.ubuntu.com/3825-2/"
+				}
+			],
+			"published": "2019-10-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ap24-mod_perl2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.11,3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

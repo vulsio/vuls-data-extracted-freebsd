@@ -1,0 +1,80 @@
+{
+	"id": "985bfcf0-e1d7-11d9-b875-0001020eed82",
+	"advisories": [
+		{
+			"id": "985bfcf0-e1d7-11d9-b875-0001020eed82",
+			"title": "opera -- redirection cross-site scripting vulnerability",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/15423/\">\n\t  <p>Secunia Research has discovered a vulnerability in Opera,\n\t    which can be exploited by malicious people to conduct\n\t    cross-site scripting attacks against users.</p>\n\t  <p>The vulnerability is caused due to input not being\n\t    sanitised, when Opera generates a temporary page for\n\t    displaying a redirection when \"Automatic redirection\" is\n\t    disabled (not default setting).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/985bfcf0-e1d7-11d9-b875-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/15423/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/secunia_research/2003-1/advisory/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/freebsd/changelogs/801/#security"
+				}
+			],
+			"published": "2005-06-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.01",
+						"gt": "8.*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.01",
+						"gt": "8.*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.01",
+						"gt": "8.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

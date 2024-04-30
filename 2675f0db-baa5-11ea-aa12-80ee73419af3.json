@@ -1,0 +1,54 @@
+{
+	"id": "2675f0db-baa5-11ea-aa12-80ee73419af3",
+	"advisories": [
+		{
+			"id": "2675f0db-baa5-11ea-aa12-80ee73419af3",
+			"title": "xrdp -- Local users can perform a buffer overflow attack against the xrdp-sesman service and then inpersonate it",
+			"description": "\n\t<p>Ashley Newson reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-4044\">\n\t  <p>The xrdp-sesman service can be crashed by connecting over port 3350 and supplying a malicious payload.  Once the xrdp-sesman process is dead, an unprivileged attacker on the server could then proceed to start their own imposter sesman service listening on port 3350.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2675f0db-baa5-11ea-aa12-80ee73419af3.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-j9fv-6fwf-p3g4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-4044"
+				}
+			],
+			"published": "2020-06-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-4044",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-4044"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xrdp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.13.1,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

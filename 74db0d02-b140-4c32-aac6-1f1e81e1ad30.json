@@ -1,0 +1,63 @@
+{
+	"id": "74db0d02-b140-4c32-aac6-1f1e81e1ad30",
+	"advisories": [
+		{
+			"id": "74db0d02-b140-4c32-aac6-1f1e81e1ad30",
+			"title": "dovecot -- multiple vulnerabilities",
+			"description": "\n\t<p>Aki Tuomi reports:</p>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2020-February/000431.html\">\n\t  <p>lib-smtp doesn't handle truncated command parameters properly, resulting\nin infinite loop taking 100% CPU for the process. This happens for LMTP\n(where it doesn't matter so much) and also for submission-login where\nunauthenticated users can trigger it. </p>\n\t</blockquote>\n\t<p>Aki also  reports:</p>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2020-February/000430.html\">\n\t  <p>Snippet generation crashes if:\n\n     message is large enough that message-parser returns multiple body\nblocks\n    The first block(s) don't contain the full snippet (e.g. full of\nwhitespace)\n    input ends with '&gt;'\n\t</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/74db0d02-b140-4c32-aac6-1f1e81e1ad30.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dovecot.org/pipermail/dovecot-news/2020-February/000430.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dovecot.org/pipermail/dovecot-news/2020-February/000431.html"
+				}
+			],
+			"published": "2020-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7046",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7046"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-7967",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7967"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dovecot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.9.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

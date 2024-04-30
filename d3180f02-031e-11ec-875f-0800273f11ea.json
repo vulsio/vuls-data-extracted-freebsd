@@ -1,0 +1,43 @@
+{
+	"id": "d3180f02-031e-11ec-875f-0800273f11ea",
+	"advisories": [
+		{
+			"id": "d3180f02-031e-11ec-875f-0800273f11ea",
+			"title": "gitea -- multiple vulnerabilities",
+			"description": "\n\t<p>The Gitea Team reports for release 1.15.0:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2021/08/gitea-1.15.0-is-released/\">\n\t  <ul>\n\t    <li>Encrypt LDAP bind password in db with SECRET_KEY (#15547)</li>\n\t    <li>Remove random password in Dockerfiles (#15362)</li>\n\t    <li>Upgrade to the latest version of golang-jwt and increase minimum go to 1.15 (#16590) (#16606)</li>\n\t    <li>Correctly create of git-daemon-export-ok files (#16508) (#16514)</li>\n\t    <li>Don't show private user's repo in explore view (#16550) (#16554)</li>\n\t    <li>Update node tar dependency to 6.1.6 (#16622) (#16623)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d3180f02-031e-11ec-875f-0800273f11ea.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.15.0"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=257994"
+				}
+			],
+			"published": "2021-08-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.15.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,97 @@
+{
+	"id": "57c1c2ee-7914-11ea-90bf-0800276545c1",
+	"advisories": [
+		{
+			"id": "57c1c2ee-7914-11ea-90bf-0800276545c1",
+			"title": "Squid -- multiple vulnerabilities",
+			"description": "\n\t<p>The Squid developers reports:</p>\n\t<blockquote cite=\"http://lists.squid-cache.org/pipermail/squid-announce/2020-February/000107.html\">\n\t  <p>Improper Input Validation issues in HTTP Request\n\t     processing (CVE-2020-8449, CVE-2020-8450).</p>\n\t  <p>Information Disclosure issue in FTP Gateway\n\t     (CVE-2019-12528).</p>\n\t  <p>Buffer Overflow issue in ext_lm_group_acl helper\n\t    (CVE-2020-8517).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/57c1c2ee-7914-11ea-90bf-0800276545c1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.squid-cache.org/pipermail/squid-announce/2020-February/000107.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8449"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8450"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12528"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8517"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=244026"
+				}
+			],
+			"published": "2020-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8449",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8449"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-8450",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8450"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-12528",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-12528"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-8517",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8517"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "squid"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

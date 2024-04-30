@@ -1,0 +1,115 @@
+{
+	"id": "4729c849-4897-11e6-b704-000c292e4fd8",
+	"advisories": [
+		{
+			"id": "4729c849-4897-11e6-b704-000c292e4fd8",
+			"title": "samba -- client side SMB2/3 required signing can be downgraded",
+			"description": "\n\t<p>Samba team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2016-2119.html\">\n\t  <p>A man in the middle attack can disable client signing over\n\t  SMB2/3, even if enforced by configuration parameters.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4729c849-4897-11e6-b704-000c292e4fd8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2016-2119.html"
+				}
+			],
+			"published": "2016-07-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2119",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2119"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.0.26",
+						"ge": "4.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba41"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.1.23",
+						"ge": "4.1.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba42"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.14",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba43"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.11",
+						"ge": "4.3.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba44"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.4.5",
+						"ge": "4.4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

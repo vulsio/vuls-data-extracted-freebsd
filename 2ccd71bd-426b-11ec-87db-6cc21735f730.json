@@ -1,0 +1,130 @@
+{
+	"id": "2ccd71bd-426b-11ec-87db-6cc21735f730",
+	"advisories": [
+		{
+			"id": "2ccd71bd-426b-11ec-87db-6cc21735f730",
+			"title": "PostgreSQL -- Possible man-in-the-middle attacks",
+			"description": "\n\t<p>The PostgreSQL Project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/about/news/postgresql-141-135-129-1114-1019-and-9624-released-2349/\">\n\t  <p> CVE-2021-23214: A man-in-the-middle with the ability to inject data into the TCP connection could stuff some cleartext data into the start of a supposedly encryption-protected database session. This could be abused to send faked SQL commands to the server, although that would only work if the server did not demand any authentication data. (However, a server relying on SSL certificate authentication might well not do so.) </p>\n\t  <p> CVE-2021-23222: A man-in-the-middle with the ability to inject data into the TCP connection could stuff some cleartext data into the start of a supposedly encryption-protected database session.  This could probably be abused to inject faked responses to the client's first few queries, although other details of libpq's behavior make that harder than it sounds.  A different line of attack is to exfiltrate the client's password, or other sensitive data that might be sent early in the session.  That has been shown to be possible with a server vulnerable to CVE-2021-23214. </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2ccd71bd-426b-11ec-87db-6cc21735f730.html"
+				}
+			],
+			"published": "2021-11-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-23214",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-23214"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-23222",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-23222"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql14-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "14.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql13-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql12-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql11-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.14"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql10-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.19"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql96-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.6.24"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

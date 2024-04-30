@@ -1,0 +1,63 @@
+{
+	"id": "86c3c66e-b2f5-11e5-863a-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "86c3c66e-b2f5-11e5-863a-b499baebfeaf",
+			"title": "unzip -- multiple vulnerabilities",
+			"description": "\n\t<p>Gustavo Grieco reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/09/07/4\">\n\t <p>Two issues were found in unzip 6.0:</p>\n\t <p> * A heap overflow triggered by unzipping a file with password\n\t    (e.g unzip -p -P x sigsegv.zip).</p>\n\t <p> * A denegation of service with a file that never finishes unzipping\n\t    (e.g. unzip sigxcpu.zip).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/86c3c66e-b2f5-11e5-863a-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/09/07/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=204413"
+				}
+			],
+			"published": "2016-01-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7696",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7696"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7697",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7697"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "unzip"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0_7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

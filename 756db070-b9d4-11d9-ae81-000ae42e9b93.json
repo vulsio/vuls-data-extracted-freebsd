@@ -1,0 +1,58 @@
+{
+	"id": "756db070-b9d4-11d9-ae81-000ae42e9b93",
+	"advisories": [
+		{
+			"id": "756db070-b9d4-11d9-ae81-000ae42e9b93",
+			"title": "coppermine -- IP spoofing and XSS vulnerability",
+			"description": "\n\t<p>GHC team reports about coppermine</p>\n\t<blockquote cite=\"http://www.securityfocus.com/archive/1/396080\">\n\t  <p>The lack of sanitizing of user defined variables may\n\t    result in undesirable consequences such as IP spoofing\n\t    or XSS attack.</p>\n\t  <p>Generally users of Coppermine Gallery can post comments.\n\t    Remote address &amp; x-forwarded-for variables are logged\n\t    for admin's eyes.  X-Forwarded-for variable does not pass\n\t    throu any filtration before logging into database. User\n\t    can define/redefine this variable.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/756db070-b9d4-11d9-ae81-000ae42e9b93.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://coppermine.sourceforge.net/board/index.php?topic=17134.0"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/396080"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/13218"
+				}
+			],
+			"published": "2005-05-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1172",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1172"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "coppermine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

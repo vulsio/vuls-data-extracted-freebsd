@@ -1,0 +1,98 @@
+{
+	"id": "72da8af6-7c75-11d9-8cc5-000854d03344",
+	"advisories": [
+		{
+			"id": "72da8af6-7c75-11d9-8cc5-000854d03344",
+			"title": "enscript -- multiple vulnerabilities",
+			"description": "\n\t<p>Erik Sjölund discovered several issues in enscript:\n\t  it suffers from several buffer overflows, quotes and shell\n\t  escape characters are insufficiently sanitized in filenames,\n\t  and it supported taking input from an arbitrary command\n\t  pipe, with unwanted side effects.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/72da8af6-7c75-11d9-8cc5-000854d03344.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200502-03.xml"
+				}
+			],
+			"published": "2005-02-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1184"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-1185",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1185"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-1186",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1186"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "enscript-a4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.4_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "enscript-letter"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.4_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "enscript-letterdj"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.4_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

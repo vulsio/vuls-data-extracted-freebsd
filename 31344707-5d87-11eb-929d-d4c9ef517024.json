@@ -1,0 +1,266 @@
+{
+	"id": "31344707-5d87-11eb-929d-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "31344707-5d87-11eb-929d-d4c9ef517024",
+			"title": "MySQL -- Multiple vulnerabilities",
+			"description": "\n\t<p>Oracle reports:</p>\n\t<blockquote cite=\"https://www.oracle.com/security-alerts/cpujan2021.html#AppendixMSQL\">\n\t  <p>This Critical Patch Update contains 34 new security patches for\n\t    Oracle MySQL Server and 4 for MySQL Client. </p>\n\t  <p>The highest CVSS v3.1 Base Score of vulnerabilities affecting Oracle\n\t    MySQL is 6.8.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/31344707-5d87-11eb-929d-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.oracle.com/security-alerts/cpujan2021.html#AppendixMSQL"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2046"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2020"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2024"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2011"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2006"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2048"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2028"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2122"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2058"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2001"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2016"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2021"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2030"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2031"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2036"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2055"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2060"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2070"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2076"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2065"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2014"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2002"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2012"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2009"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2072"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2081"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2022"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2038"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2061"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2056"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2087"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2088"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2032"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2010"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-1998"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2007"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2019"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2021-2042"
+				}
+			],
+			"published": "2021-01-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql56-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.51"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql57-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.33"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql80-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.23"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql56-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.51"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql57-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.33"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql80-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.23"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

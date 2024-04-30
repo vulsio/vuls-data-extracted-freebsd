@@ -1,0 +1,66 @@
+{
+	"id": "0ddb57a9-da20-4e99-b048-4366092f3d31",
+	"advisories": [
+		{
+			"id": "0ddb57a9-da20-4e99-b048-4366092f3d31",
+			"title": "bzip2 -- integer overflow vulnerability",
+			"description": "\n    <p>Secunia reports:</p>\n    <blockquote cite=\"http://secunia.com/advisories/41452\">\n      <p>A vulnerability has been reported in bzip2, which can be exploited by\n\tmalicious people to cause a DoS (Denial of Service) or potentially\n\tcompromise a vulnerable system.</p>\n      <p>The vulnerability is caused due to an integer overflow in the\n\t\"BZ2_decompress()\" function in decompress.c and can be exploited to\n\tcause a crash or potentially execute arbitrary code.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0ddb57a9-da20-4e99-b048-4366092f3d31.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/41452"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:08.bzip2.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=151364"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2010/09/21/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/43331"
+				}
+			],
+			"published": "2010-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-0405",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0405"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bzip2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

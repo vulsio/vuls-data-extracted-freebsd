@@ -1,0 +1,50 @@
+{
+	"id": "44989c29-67d1-11e6-8b1d-c86000169601",
+	"advisories": [
+		{
+			"id": "44989c29-67d1-11e6-8b1d-c86000169601",
+			"title": "fontconfig -- insufficiently cache file validation",
+			"description": "\n\t<p>Debian security team reports:</p>\n\t<blockquote cite=\"https://packetstormsecurity.com/files/138236/Debian-Security-Advisory-3644-1.html\">\n\t  <p>Tobias Stoeckmann discovered that cache files are insufficiently\n\t    validated in fontconfig, a generic font configuration library. An\n\t    attacker can trigger arbitrary free() calls, which in turn allows\n\t    double free attacks and therefore arbitrary code execution. In\n\t    combination with setuid binaries using crafted cache files, this\n\t    could allow privilege escalation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/44989c29-67d1-11e6-8b1d-c86000169601.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://packetstormsecurity.com/files/138236/Debian-Security-Advisory-3644-1.html"
+				}
+			],
+			"published": "2016-08-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5384",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5384"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fontconfig"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

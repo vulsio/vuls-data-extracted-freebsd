@@ -1,0 +1,120 @@
+{
+	"id": "c602c791-0cf4-11e8-a2ec-6cc21735f730",
+	"advisories": [
+		{
+			"id": "c602c791-0cf4-11e8-a2ec-6cc21735f730",
+			"title": "PostgreSQL vulnerabilities",
+			"description": "\n\t<p>The PostgreSQL project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/about/news/1829/\">\n\t  <ul>\n\t    <li>CVE-2018-1052: Fix the processing of partition keys containing multiple expressions (only for PostgreSQL-10.x)</li>\n\t    <li>CVE-2018-1053: Ensure that all temporary files made with \"pg_upgrade\" are non-world-readable</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c602c791-0cf4-11e8-a2ec-6cc21735f730.html"
+				}
+			],
+			"published": "2018-02-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1052",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1052"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-1053",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1053"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql93-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.3.21",
+						"ge": "9.3.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql94-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.16",
+						"ge": "9.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql95-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.5.11",
+						"ge": "9.5.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql96-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.6.7",
+						"ge": "9.6.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql10-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.2",
+						"ge": "10.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

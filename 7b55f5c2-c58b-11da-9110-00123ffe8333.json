@@ -1,0 +1,50 @@
+{
+	"id": "7b55f5c2-c58b-11da-9110-00123ffe8333",
+	"advisories": [
+		{
+			"id": "7b55f5c2-c58b-11da-9110-00123ffe8333",
+			"title": "phpmyadmin -- 'set_theme' Cross-Site Scripting",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/19277\">\n\t  <p>A vulnerability has been reported in phpMyAdmin, which can be\n\t    exploited by malicious people to conduct cross-site scripting\n\t    attacks.</p>\n\t  <p>Input passed to the \"set_theme\" parameter isn't properly\n\t    sanitised before being returned to the user. This can be exploited\n\t    to execute arbitrary HTML and script code in a user's browser\n\t    session in context of an affected site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7b55f5c2-c58b-11da-9110-00123ffe8333.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/19277"
+				}
+			],
+			"published": "2006-04-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1258",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1258"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

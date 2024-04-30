@@ -1,0 +1,52 @@
+{
+	"id": "8b27f1bc-c509-11e5-a95f-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "8b27f1bc-c509-11e5-a95f-b499baebfeaf",
+			"title": "curl -- Credentials not checked",
+			"description": "\n\t<p>The cURL project reports:</p>\n\t<blockquote cite=\"http://curl.haxx.se/docs/adv_20160127A.html\">\n\t  <p>libcurl will reuse NTLM-authenticated proxy connections\n\t    without properly making sure that the connection was\n\t    authenticated with the same credentials as set for this\n\t    transfer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8b27f1bc-c509-11e5-a95f-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://curl.haxx.se/docs/adv_20160127A.html"
+				}
+			],
+			"published": "2016-01-27T00:00:00Z",
+			"modified": "2017-02-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-0755",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0755"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "curl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.47.0",
+						"ge": "7.10.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

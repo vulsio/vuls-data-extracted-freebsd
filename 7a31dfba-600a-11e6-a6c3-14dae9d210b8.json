@@ -1,0 +1,59 @@
+{
+	"id": "7a31dfba-600a-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "7a31dfba-600a-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- Insecure default snmpd.config permissions",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The SNMP protocol supports an authentication model called\n\tUSM, which relies on a shared secret. The default permission\n\tof the snmpd configuration file, /etc/snmpd.config, is\n\tweak and does not provide adequate protection against local\n\tunprivileged users.</p>\n\t<h1>Impact:</h1>\n\t<p>A local user may be able to read the shared secret, if\n\tconfigured and used by the system administrator.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7a31dfba-600a-11e6-a6c3-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:06.bsnmpd.asc"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5677",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5677"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.2_9",
+						"ge": "10.2"
+					},
+					{
+						"lt": "10.1_26",
+						"ge": "10.1"
+					},
+					{
+						"lt": "9.3_33",
+						"ge": "9.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "e0b342a1-d2ae-11da-a672-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "e0b342a1-d2ae-11da-a672-000e0c2e438a",
+			"title": "wordpress -- full path disclosure",
+			"description": "\n\t<p>Dedi Dwianto reports:</p>\n\t<blockquote cite=\"http://echo.or.id/adv/adv24-theday-2005.txt\">\n\t  <p>A remote user can access the file directly to cause the\n\t    system to display an error message that indicates the\n\t    installation path.\tThe resulting error message will\n\t    disclose potentially sensitive installation path\n\t    information to the remote attacker.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e0b342a1-d2ae-11da-a672-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://echo.or.id/adv/adv24-theday-2005.txt"
+				}
+			],
+			"published": "2006-04-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-4463",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-4463"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

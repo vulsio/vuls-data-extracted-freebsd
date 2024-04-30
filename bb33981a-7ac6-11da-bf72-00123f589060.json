@@ -1,0 +1,110 @@
+{
+	"id": "bb33981a-7ac6-11da-bf72-00123f589060",
+	"advisories": [
+		{
+			"id": "bb33981a-7ac6-11da-bf72-00123f589060",
+			"title": "perl, webmin, usermin -- perl format string integer wrap vulnerability",
+			"description": "\n\t<p>The Perl Development page reports:</p>\n\t<blockquote cite=\"http://dev.perl.org/perl5/news/2005/perl_patches_fix_sprintf_buffer.html\">\n\t  <p>Dyad Security recently released a security advisory explaining how\n\t    in certain cases, a carefully crafted format string passed to\n\t    sprintf can cause a buffer overflow. This buffer overflow can then\n\t    be used by an attacker to execute code on the machine.  This was\n\t    discovered in the context of a design problem with the Webmin\n\t    administration package that allowed a malicious user to pass\n\t    unchecked data into sprintf.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bb33981a-7ac6-11da-bf72-00123f589060.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://dev.perl.org/perl5/news/2005/perl_patches_fix_sprintf_buffer.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.dyadsecurity.com/perl-0002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.dyadsecurity.com/webmin-0001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.webmin.com/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/15629"
+				}
+			],
+			"published": "2006-02-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-3912",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-3912"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-3962",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-3962"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "perl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.2",
+						"ge": "5.6.0"
+					},
+					{
+						"lt": "5.8.7_1",
+						"ge": "5.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "webmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.250"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "usermin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.180"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

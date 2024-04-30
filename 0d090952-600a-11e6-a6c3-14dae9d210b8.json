@@ -1,0 +1,51 @@
+{
+	"id": "0d090952-600a-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "0d090952-600a-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- shell injection vulnerability in patch(1)",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to insufficient sanitization of the input patch\n\tstream, it is possible for a patch file to cause patch(1)\n\tto pass certain ed(1) scripts to the ed(1) editor, which\n\twould run commands.</p>\n\t<h1>Impact:</h1>\n\t<p>This issue could be exploited to execute arbitrary\n\tcommands as the user invoking patch(1) against a specially\n\tcrafted patch file, which could be leveraged to obtain\n\televated privileges.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0d090952-600a-11e6-a6c3-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:18.bsdpatch.asc"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1418",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1418"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.1_17",
+						"ge": "10.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

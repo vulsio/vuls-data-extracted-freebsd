@@ -1,0 +1,58 @@
+{
+	"id": "c4d412c8-f4d1-11e2-b86c-000c295229d5",
+	"advisories": [
+		{
+			"id": "c4d412c8-f4d1-11e2-b86c-000c295229d5",
+			"title": "openafs -- single-DES cell-wide key brute force vulnerability",
+			"description": "\n\t<p>OpenAFS Project reports:</p>\n\t<blockquote cite=\"http://openafs.org/pages/security/OPENAFS-SA-2013-003.txt\">\n\t  <p>The small size of the DES key space permits an attacker to brute\n\t    force a cell's service key and then forge traffic from any user\n\t    within the cell.  The key space search can be performed in under 1\n\t    day at a cost of around $100 using publicly available services.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c4d412c8-f4d1-11e2-b86c-000c295229d5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openafs.org/pages/security/OPENAFS-SA-2013-003.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openafs.org/pages/security/how-to-rekey.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openafs.org/pages/security/install-rxkad-k5-1.6.txt"
+				}
+			],
+			"published": "2013-07-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4134",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4134"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openafs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

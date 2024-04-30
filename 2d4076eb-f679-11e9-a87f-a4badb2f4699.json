@@ -1,0 +1,39 @@
+{
+	"id": "2d4076eb-f679-11e9-a87f-a4badb2f4699",
+	"advisories": [
+		{
+			"id": "2d4076eb-f679-11e9-a87f-a4badb2f4699",
+			"title": "varnish -- Information Disclosure Vulnerability",
+			"description": "\n\t<p>Varnish Software reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00004.html#vsv00004\">\n\t  <p>A bug has been discovered in Varnish Cache where we fail to\n\t    clear a pointer between the handling of one client requests and the next\n\t    on the same connection. This can under specific circumstances lead to\n\t    information being leaked from the connection workspace.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2d4076eb-f679-11e9-a87f-a4badb2f4699.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://varnish-cache.org/security/VSV00004.html#vsv00004"
+				}
+			],
+			"published": "2019-10-24T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "varnish6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

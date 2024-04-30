@@ -1,0 +1,39 @@
+{
+	"id": "96fdbf5b-2cfd-11d8-9355-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "96fdbf5b-2cfd-11d8-9355-0020ed76ef5a",
+			"title": "Mathopd buffer overflow",
+			"description": "\n\t<p>Mathopd contains a buffer overflow in the prepare_reply()\n\t  function that may be remotely exploitable.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/96fdbf5b-2cfd-11d8-9355-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mail-archive.com/mathopd%40mathopd.org/msg00136.html"
+				}
+			],
+			"published": "2003-12-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mathopd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4p2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

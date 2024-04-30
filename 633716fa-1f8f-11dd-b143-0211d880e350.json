@@ -1,0 +1,50 @@
+{
+	"id": "633716fa-1f8f-11dd-b143-0211d880e350",
+	"advisories": [
+		{
+			"id": "633716fa-1f8f-11dd-b143-0211d880e350",
+			"title": "vorbis-tools -- Speex header processing vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/29882/\">\n\t  <p>A vulnerability has been reported in vorbis-tools,\n\t    which can potentially be exploited by malicious people\n\t    to compromise a user's system.</p>\n\t  <p>The vulnerability is caused due to an input validation\n\t    error when processing Speex headers, which can be\n\t    exploited via a specially crafted Speex stream containing\n\t    a negative \"modeID\" field in the header.</p>\n\t  <p>Successful exploitation may allow execution of arbitrary\n\t    code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/633716fa-1f8f-11dd-b143-0211d880e350.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/29882/"
+				}
+			],
+			"published": "2008-05-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1686"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vorbis-tools"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.0_2,3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

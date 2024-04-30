@@ -1,0 +1,99 @@
+{
+	"id": "998ca824-ef55-11e9-b81f-3085a9a95629",
+	"advisories": [
+		{
+			"id": "998ca824-ef55-11e9-b81f-3085a9a95629",
+			"title": "Pillow -- Allocation of resources without limits or throttling",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16865\">\n\t  <p>An issue was discovered in Pillow before 6.2.0. When reading specially\n\t    crafted invalid image files, the library can either allocate very large\n\t    amounts of memory or take an extremely long period of time to process\n\t    the image.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/998ca824-ef55-11e9-b81f-3085a9a95629.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/python-pillow/Pillow/issues/4123"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=241268"
+				}
+			],
+			"published": "2019-10-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-16865",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-16865"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-pillow"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py35-pillow"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py36-pillow"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-pillow"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

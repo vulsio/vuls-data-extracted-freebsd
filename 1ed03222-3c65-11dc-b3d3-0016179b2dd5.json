@@ -1,0 +1,125 @@
+{
+	"id": "1ed03222-3c65-11dc-b3d3-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "1ed03222-3c65-11dc-b3d3-0016179b2dd5",
+			"title": "vim -- Command Format String Vulnerability",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/25941/\">\n\t  <p>A format string error in the \"helptags_one()\" function in\n\t    src/ex_cmds.c when running the \"helptags\" command can be exploited\n\t    to execute arbitrary code via specially crafted help files.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1ed03222-3c65-11dc-b3d3-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/25941/"
+				}
+			],
+			"published": "2007-07-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-2953",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2953"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1.39"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-console"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1.39"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1.39"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1.39"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1.39"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim6-ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1.39"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

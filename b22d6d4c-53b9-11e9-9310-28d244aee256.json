@@ -1,0 +1,50 @@
+{
+	"id": "b22d6d4c-53b9-11e9-9310-28d244aee256",
+	"advisories": [
+		{
+			"id": "b22d6d4c-53b9-11e9-9310-28d244aee256",
+			"title": "znc -- Denial of Service",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9917\">\n\t  <p>ZNC before 1.7.3-rc1 allows an existing remote user to cause a Denial\n\t    of Service (crash) via invalid encoding.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b22d6d4c-53b9-11e9-9310-28d244aee256.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wiki.znc.in/ChangeLog/1.7.3"
+				}
+			],
+			"published": "2019-03-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-9917",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9917"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "znc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,86 @@
+{
+	"id": "71c71ce0-0805-11eb-a3a4-0019dbb15b3f",
+	"advisories": [
+		{
+			"id": "71c71ce0-0805-11eb-a3a4-0019dbb15b3f",
+			"title": "payara -- multiple vulnerabilities",
+			"description": "\n\t<p>Payara Releases reports:</p>\n\t<blockquote cite=\"https://docs.payara.fish/community/docs/5.191/security/security-fix-list.html\">\n\t  <p>The following is a list of tracked Common Vulnerabilities and Exposures that have been reported and analyzed, which can or have impacted Payara Server across releases:</p>\n\t  <ul>\n\t    <li>CVE-2018-14721 FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to conduct server-side request forgery (SSRF) attacks</li>\n\t    <li>CVE-2018-14720 FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to conduct external XML entity (XXE) attacks</li>\n\t    <li>CVE-2018-14719 FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to execute arbitrary code</li>\n\t    <li>CVE-2018-14718 FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to execute arbitrary code</li>\n\t    <li>CVE-2018-14371 Eclipse Mojarra before 2.3.7 is affected by Directory Traversal via the loc parameter</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/71c71ce0-0805-11eb-a3a4-0019dbb15b3f.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.payara.fish/community/docs/5.191/security/security-fix-list.html"
+				}
+			],
+			"published": "2020-10-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-14721",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14721"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-14720",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14720"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-14719",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14719"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-14718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14718"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-14371",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14371"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "payara"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.191"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

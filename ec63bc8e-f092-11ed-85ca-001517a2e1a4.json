@@ -1,0 +1,39 @@
+{
+	"id": "ec63bc8e-f092-11ed-85ca-001517a2e1a4",
+	"advisories": [
+		{
+			"id": "ec63bc8e-f092-11ed-85ca-001517a2e1a4",
+			"title": "piwigo -- SQL injection",
+			"description": "\n\t<p>Piwigo reports:</p>\n\t<blockquote cite=\"https://www.piwigo.org/release-13.7.0\">\n\t  <p>Piwigo is affected by multiple SQL injection issues.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ec63bc8e-f092-11ed-85ca-001517a2e1a4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.piwigo.org/release-13.7.0"
+				}
+			],
+			"published": "2023-05-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "piwigo"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,54 @@
+{
+	"id": "8b683bea-d49c-11da-a672-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "8b683bea-d49c-11da-a672-000e0c2e438a",
+			"title": "asterisk -- denial of service vulnerability, local system access",
+			"description": "\n\t<p>Emmanouel Kellenis reports a denial of service vulnerability\n\t  within asterisk.  The vulnerability is caused by a buffer\n\t  overflow in \"format_jpeg.c\".\tA large JPEG image could\n\t  trigger this bug, potentially allowing a local attacker to\n\t  execute arbitrary code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8b683bea-d49c-11da-a672-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cipher.org.uk/index.php?p=advisories/Asterisk_Codec_Integer_Overflow_07-04-2006.advisory"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/17561"
+				}
+			],
+			"published": "2006-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1827",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1827"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

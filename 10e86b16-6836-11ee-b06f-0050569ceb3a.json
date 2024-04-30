@@ -1,0 +1,50 @@
+{
+	"id": "10e86b16-6836-11ee-b06f-0050569ceb3a",
+	"advisories": [
+		{
+			"id": "10e86b16-6836-11ee-b06f-0050569ceb3a",
+			"title": "Unallowed PHP script execution in GLPI",
+			"description": "\n\t<p>From the GLPI 10.0.10 Changelog:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.10\">\n\t<p>You will find below security issues fixed in this bugfixes version:\n\t[SECURITY - Critical] Unallowed PHP script execution (CVE-2023-42802).</p>\n\t</blockquote>\n\t<p>The mentioned CVE is invalid</p>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/10e86b16-6836-11ee-b06f-0050569ceb3a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/releases/tag/10.0.10"
+				}
+			],
+			"published": "2023-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-42802",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-42802"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.10,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

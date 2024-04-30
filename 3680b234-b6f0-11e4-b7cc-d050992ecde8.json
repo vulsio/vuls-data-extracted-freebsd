@@ -1,0 +1,58 @@
+{
+	"id": "3680b234-b6f0-11e4-b7cc-d050992ecde8",
+	"advisories": [
+		{
+			"id": "3680b234-b6f0-11e4-b7cc-d050992ecde8",
+			"title": "unzip -- heap based buffer overflow in iconv patch",
+			"description": "\n\t<p>Ubuntu Security Notice USN-2502-1 reports:</p>\n\t<blockquote cite=\"http://www.ubuntu.com/usn/usn-2502-1/\">\n\t  <p>unzip could be made to run programs if it opened a specially crafted file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3680b234-b6f0-11e4-b7cc-d050992ecde8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://people.canonical.com/~ubuntu-security/cve/2015/CVE-2015-1315.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://security-tracker.debian.org/tracker/CVE-2015-1315"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ubuntu.com/usn/usn-2502-1/"
+				}
+			],
+			"published": "2015-02-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1315",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1315"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "unzip"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0_5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

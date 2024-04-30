@@ -1,0 +1,65 @@
+{
+	"id": "0bb7677d-52f3-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "0bb7677d-52f3-11d9-a9e7-0001020eed82",
+			"title": "krb5 -- heap buffer overflow vulnerability in libkadm5srv",
+			"description": "\n\t<p>A  MIT krb5 Security Advisory reports:</p>\n\t<blockquote cite=\"http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2004-004-pwhist.txt\">\n\t  <p>The MIT Kerberos 5 administration library (libkadm5srv)\n\t    contains a heap buffer overflow in password history\n\t    handling code which could be exploited to execute\n\t    arbitrary code on a Key Distribution Center (KDC)\n\t    host. The overflow occurs during a password change of a\n\t    principal with a certain password history state. An\n\t    administrator must have performed a certain password\n\t    policy change in order to create the vulnerable state.</p>\n\t  <p>An authenticated user, not necessarily one with\n\t    administrative privileges, could execute arbitrary code on\n\t    the KDC host, compromising an entire Kerberos realm.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0bb7677d-52f3-11d9-a9e7-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2004-004-pwhist.txt"
+				}
+			],
+			"published": "2004-12-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1189",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1189"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "krb5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "krb5-beta"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

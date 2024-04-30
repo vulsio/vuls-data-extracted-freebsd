@@ -1,0 +1,62 @@
+{
+	"id": "3df5a920-6edc-11e9-a44b-0050562a4d7b",
+	"advisories": [
+		{
+			"id": "3df5a920-6edc-11e9-a44b-0050562a4d7b",
+			"title": "comms/hylafax -- Malformed fax sender remote code execution in JPEG support",
+			"description": "\n\t<blockquote cite=\"ftp://ftp.hylafax.org/security/CVE-2018-17141.html\">\n\t  <p>A malicious sender that sets both JPEG and MH,MR,MMR or JBIG in\n\t     the same DCS signal or sends a large JPEG page could lead to remote code execution.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3df5a920-6edc-11e9-a44b-0050562a4d7b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "ftp://ftp.hylafax.org/security/CVE-2018-17141.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.x41-dsec.de/lab/advisories/x41-2018-008-hylafax/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.hylafax.org/show_bug.cgi?id=974"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://git.hylafax.org/HylaFAX?a=commit;h=c6cac8d8cd0dbe313689ba77023e12bc5b3027be"
+				}
+			],
+			"published": "2019-05-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-17141",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-17141"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "hylafax"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

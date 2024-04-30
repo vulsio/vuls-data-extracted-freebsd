@@ -1,0 +1,93 @@
+{
+	"id": "9fccad5a-7096-11d8-873f-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "9fccad5a-7096-11d8-873f-0020ed76ef5a",
+			"title": "mpg123 vulnerabilities",
+			"description": "\n\t<p>In 2003, two vulnerabilities were discovered in mpg123\n\t  that could result in remote code execution when using\n\t  untrusted input or streaming from an untrusted server.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9fccad5a-7096-11d8-873f-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/6629"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/8680"
+				}
+			],
+			"published": "2004-03-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-0577",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0577"
+				}
+			]
+		},
+		{
+			"id": "CVE-2003-0865",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0865"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mpg123"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.59r_12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mpg123-nas"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.59r_12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mpg123-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.59r_12"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

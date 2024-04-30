@@ -1,0 +1,493 @@
+{
+	"id": "cbfde1cd-87eb-11d9-aa18-0001020eed82",
+	"advisories": [
+		{
+			"id": "cbfde1cd-87eb-11d9-aa18-0001020eed82",
+			"title": "mozilla -- arbitrary code execution vulnerability",
+			"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-27.html\">\n\t  <p>Plugins (such as flash) can be used to load privileged\n\t    content into a frame. Once loaded various spoofs can be\n\t    applied to get the user to interact with the privileged\n\t    content. Michael Krax's \"Fireflashing\" example\n\t    demonstrates that an attacker can open about:config in a\n\t    frame, hide it with an opacity setting, and if the\n\t    attacker can get the victim to click at a particular spot\n\t    (design some kind of simple game) you could toggle boolean\n\t    preferences, some of which would make further attacks\n\t    easier.</p>\n\t  <p>The \"firescrolling\" example demonstrates arbitrary code\n\t    execution (in this case downloading a file) by convincing\n\t    the user to scroll twice.</p>\n\t</blockquote>\n\t<p><strong>Workaround:</strong> Disable JavaScript.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cbfde1cd-87eb-11d9-aa18-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mikx.de/fireflashing/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mikx.de/firescrolling/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/mfsa2005-27.html"
+				}
+			],
+			"published": "2005-02-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0527",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0527"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.6,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "netscape7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "de-linux-mozillafirebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "el-linux-mozillafirebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-linux-mozillafirebird-gtk1"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-mozillafirebird-gtk2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozillafirebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ru-linux-mozillafirebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zhCN-linux-mozillafirebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zhTW-linux-mozillafirebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "de-linux-netscape"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "de-netscape7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fr-linux-netscape"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fr-netscape7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-linux-netscape"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-netscape7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-netscape"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-phoenix"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla+ipv6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-embedded"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-firebird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-gtk1"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-gtk2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-gtk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phoenix"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pt_BR-netscape7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

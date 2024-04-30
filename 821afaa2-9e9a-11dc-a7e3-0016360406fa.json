@@ -1,0 +1,55 @@
+{
+	"id": "821afaa2-9e9a-11dc-a7e3-0016360406fa",
+	"advisories": [
+		{
+			"id": "821afaa2-9e9a-11dc-a7e3-0016360406fa",
+			"title": "liveMedia -- DoS vulnerability",
+			"description": "\n\t<p>The live555 development team reports:</p>\n\t<blockquote cite=\"http://www.live555.com/liveMedia/public/changelog.txt\">\n\t  <p>Fixed a bounds-checking error in \"parseRTSPRequestString()\"\n\t    caused by an int vs. unsigned problem.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://aluigi.altervista.org/adv/live555x-adv.txt\">\n\t  <p>The function which handles the incoming queries from the\n\t    clients is affected by a vulnerability which allows an attacker\n\t    to crash the server remotely using the smallest RTSP query\n\t    possible to use.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/821afaa2-9e9a-11dc-a7e3-0016360406fa.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://aluigi.altervista.org/adv/live555x-adv.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.live555.com/liveMedia/public/changelog.txt"
+				}
+			],
+			"published": "2007-12-08T00:00:00Z",
+			"modified": "2007-12-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-6036",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6036"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "liveMedia"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2007.11.18,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,270 @@
+{
+	"id": "a6cf65ad-37d2-11ea-a1c7-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "a6cf65ad-37d2-11ea-a1c7-b499baebfeaf",
+			"title": "MySQL -- Multiple vulerabilities",
+			"description": "\n\t<p>Oracle reports:</p>\n\t<blockquote cite=\"https://www.oracle.com/security-alerts/cpujan2020.html#AppendixMSQL\">\n\t  <p>This Critical Patch Update contains 17 new security fixes for\n\t    Oracle MySQL. 5 of these vulnerabilities may be remotely exploitable\n\t    without authentication, i.e., may be exploited over a network without\n\t    requiring user credentials.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a6cf65ad-37d2-11ea-a1c7-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+				}
+			],
+			"published": "2020-01-15T00:00:00Z",
+			"modified": "2020-02-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-1547",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-1547"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2579",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2579"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2686"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2627",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2627"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2570",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2570"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2573",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2573"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2574",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2574"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2577",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2577"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2589",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2589"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2580",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2580"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2588",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2588"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2660",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2660"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2679",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2679"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2584",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2584"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2694",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2694"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2572",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2572"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8457",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8457"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql56-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.47"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql57-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.29"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql80-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.19"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "percona55-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.67"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "percona56-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.47"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "percona57-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.29"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

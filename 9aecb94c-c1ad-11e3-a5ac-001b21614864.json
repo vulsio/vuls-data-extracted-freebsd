@@ -1,0 +1,68 @@
+{
+	"id": "9aecb94c-c1ad-11e3-a5ac-001b21614864",
+	"advisories": [
+		{
+			"id": "9aecb94c-c1ad-11e3-a5ac-001b21614864",
+			"title": "cURL -- inappropriate GSSAPI delegation",
+			"description": "\n\t<p>cURL reports:</p>\n\t<blockquote cite=\"http://curl.haxx.se/docs/adv_20110623.html\">\n\t  <p>When doing GSSAPI authentication, libcurl unconditionally performs\n\t    credential delegation. This hands the server a copy of the client's\n\t    security credentials, allowing the server to impersonate the client\n\t    to any other using the same GSSAPI mechanism.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9aecb94c-c1ad-11e3-a5ac-001b21614864.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://curl.haxx.se/docs/adv_20110623.html"
+				}
+			],
+			"published": "2014-04-11T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2192",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2192"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "curl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "7.21.6",
+						"ge": "7.10.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-curl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "7.21.6",
+						"ge": "7.10.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

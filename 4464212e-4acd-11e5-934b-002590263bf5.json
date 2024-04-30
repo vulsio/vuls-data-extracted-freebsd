@@ -1,0 +1,95 @@
+{
+	"id": "4464212e-4acd-11e5-934b-002590263bf5",
+	"advisories": [
+		{
+			"id": "4464212e-4acd-11e5-934b-002590263bf5",
+			"title": "go -- multiple vulnerabilities",
+			"description": "\n\t<p>Jason Buberel, Go Product Manager, reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/237\">\n\t  <p>CVE-2015-5739 - \"Content Length\" treated as valid header</p>\n\t  <p>CVE-2015-5740 - Double content-length headers does not return 400\n\t    error</p>\n\t  <p>CVE-2015-5741 - Additional hardening, not sending Content-Length\n\t    w/Transfer-Encoding, Closing connections</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4464212e-4acd-11e5-934b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/commit/117ddcb83d7f42d6aa72241240af99ded81118e9"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/commit/143822585e32449860e624cace9d2e521deee62e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/commit/300d9a21583e7cf0149a778a0611e76ff7c6680f"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2015/q3/237"
+				}
+			],
+			"published": "2015-08-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5739",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5739"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5740",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5740"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5741",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5741"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "go"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "go14"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

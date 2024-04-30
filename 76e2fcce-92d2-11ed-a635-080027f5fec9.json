@@ -1,0 +1,110 @@
+{
+	"id": "76e2fcce-92d2-11ed-a635-080027f5fec9",
+	"advisories": [
+		{
+			"id": "76e2fcce-92d2-11ed-a635-080027f5fec9",
+			"title": "emacs -- arbitary shell command execution vulnerability of ctags",
+			"description": "\n\t<p>lu4nx reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-45939\">\n\t  <p>\n\t    GNU Emacs through 28.2 allows attackers to execute\n\t    commands via shell metacharacters in the name of a\n\t    source-code file, because lib-src/etags.c uses the system\n\t    C library function in its implementation of the ctags\n\t    program. For example, a victim may use the \"ctags *\"\n\t    command (suggested in the ctags documentation) in a\n\t    situation where the current working directory has contents\n\t    that depend on untrusted input.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/76e2fcce-92d2-11ed-a635-080027f5fec9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-45939"
+				}
+			],
+			"published": "2023-01-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-45939",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-45939"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "28.2_2,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-canna"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "28.2_2,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-nox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "28.2_2,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "30.0.50.202211128,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-devel-nox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "30.0.50.202211128,2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

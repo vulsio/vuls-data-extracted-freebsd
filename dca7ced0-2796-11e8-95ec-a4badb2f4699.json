@@ -1,0 +1,59 @@
+{
+	"id": "dca7ced0-2796-11e8-95ec-a4badb2f4699",
+	"advisories": [
+		{
+			"id": "dca7ced0-2796-11e8-95ec-a4badb2f4699",
+			"title": "FreeBSD -- ipsec validation and use-after-free",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to a lack of strict checking, an attacker from a\n\ttrusted host can send a specially constructed IP packet\n\tthat may lead to a system crash.</p>\n\t<p>Additionally, a use-after-free vulnerability in the AH\n\thandling code could cause unpredictable results.</p>\n\t<h1>Impact:</h1>\n\t<p>Access to out of bounds or freed mbuf data can lead to\n\ta kernel panic or other unpredictable results.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dca7ced0-2796-11e8-95ec-a4badb2f4699.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-18:01.ipsec.asc"
+				}
+			],
+			"published": "2018-03-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-6916",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6916"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.1_7",
+						"ge": "11.1"
+					},
+					{
+						"lt": "10.4_7",
+						"ge": "10.4"
+					},
+					{
+						"lt": "10.3_28",
+						"ge": "10.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

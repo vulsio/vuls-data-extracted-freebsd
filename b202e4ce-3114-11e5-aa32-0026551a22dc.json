@@ -1,0 +1,80 @@
+{
+	"id": "b202e4ce-3114-11e5-aa32-0026551a22dc",
+	"advisories": [
+		{
+			"id": "b202e4ce-3114-11e5-aa32-0026551a22dc",
+			"title": "shibboleth-sp -- DoS vulnerability",
+			"description": "\n\t<p>Shibboleth consortium reports:</p>\n\t<blockquote cite=\"http://shibboleth.net/community/advisories/secadv_20150721.txt\">\n\t  <p>\n\t    Shibboleth SP software crashes on well-formed but invalid XML.\n\t  </p>\n\t  <p>\n\t    The Service Provider software contains a code path with an uncaught\n\t    exception that can be triggered by an unauthenticated attacker by\n\t    supplying well-formed but schema-invalid XML in the form of SAML\n\t    metadata or SAML protocol messages. The result is a crash and so\n\t    causes a denial of service.\n\t  </p>\n\t  <p>\n\t    You must rebuild opensaml and shibboleth with xmltooling-1.5.5 or\n\t    later. The easiest way to do so is to update the whole chain including\n\t    shibboleth-2.5.5 an opensaml2.5.5.\n\t  </p>\n\t</blockquote>\n     ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b202e4ce-3114-11e5-aa32-0026551a22dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://shibboleth.net/community/advisories/secadv_20150721.txt"
+				}
+			],
+			"published": "2015-07-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-2684",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-2684"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xmltooling"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opensaml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "shibboleth-sp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

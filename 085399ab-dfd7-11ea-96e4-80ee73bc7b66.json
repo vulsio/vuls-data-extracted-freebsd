@@ -1,0 +1,77 @@
+{
+	"id": "085399ab-dfd7-11ea-96e4-80ee73bc7b66",
+	"advisories": [
+		{
+			"id": "085399ab-dfd7-11ea-96e4-80ee73bc7b66",
+			"title": "net/rsync -- multiple zlib issues",
+			"description": "\n\t<p>rsync developers reports:</p>\n\t<blockquote cite=\"https://download.samba.org/pub/rsync/NEWS#3.2.0\">\n\t  <p>Various zlib fixes, including security fixes for CVE-2016-9843, CVE-2016-9842, CVE-2016-9841, and CVE-2016-9840</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/085399ab-dfd7-11ea-96e4-80ee73bc7b66.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://download.samba.org/pub/rsync/NEWS#3.2.0"
+				}
+			],
+			"published": "2020-08-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9843",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9843"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9842",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9842"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9841",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9841"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9840",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9840"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rsync"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

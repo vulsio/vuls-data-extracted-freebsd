@@ -1,0 +1,96 @@
+{
+	"id": "a7a4e96c-ba50-11e5-9728-002590263bf5",
+	"advisories": [
+		{
+			"id": "a7a4e96c-ba50-11e5-9728-002590263bf5",
+			"title": "kibana4 -- XSS vulnerability",
+			"description": "\n\t<p>Elastic reports:</p>\n\t<blockquote cite=\"https://www.elastic.co/blog/kibana-4-3-1-and-4-2-2-and-4-1-4\">\n\t  <p>Fixes XSS vulnerability (CVE pending) - Thanks to Vladimir Ivanov\n\t    for responsibly reporting.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a7a4e96c-ba50-11e5-9728-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/blog/kibana-4-3-1-and-4-2-2-and-4-1-4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=205961"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=205962"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=205963"
+				}
+			],
+			"published": "2016-01-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kibana4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kibana41"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kibana42"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kibana43"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

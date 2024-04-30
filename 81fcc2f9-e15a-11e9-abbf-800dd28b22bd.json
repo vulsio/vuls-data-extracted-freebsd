@@ -1,0 +1,104 @@
+{
+	"id": "81fcc2f9-e15a-11e9-abbf-800dd28b22bd",
+	"advisories": [
+		{
+			"id": "81fcc2f9-e15a-11e9-abbf-800dd28b22bd",
+			"title": "mantis -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mantis developers report:</p>\n\t<blockquote cite=\"https://mantisbt.org/bugs/changelog_page.php?project=mantisbt&amp;version=2.22.1\">\n\t  <p>CVE-2019-15715: [Admin Required - Post Authentication] Command Execution / Injection Vulnerability</p>\n\t  <p>CVE-2019-8331: In Bootstrap before 3.4.1, XSS is possible in the tooltip or popover data-template attribute</p>\n\t  <p>Missing integrity hashes for CSS resources from CDNs</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/81fcc2f9-e15a-11e9-abbf-800dd28b22bd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mantisbt.org/bugs/changelog_page.php?project=mantisbt&version=2.22.1"
+				}
+			],
+			"published": "2019-09-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-15715",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15715"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8331",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8331"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mantis-php71"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.22.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mantis-php72"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.22.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mantis-php73"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.22.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mantis-php74"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.22.1,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

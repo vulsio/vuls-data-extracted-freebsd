@@ -1,0 +1,39 @@
+{
+	"id": "1ae613c3-5728-11e2-9483-14dae938ec40",
+	"advisories": [
+		{
+			"id": "1ae613c3-5728-11e2-9483-14dae938ec40",
+			"title": "freetype -- Multiple vulnerabilities",
+			"description": "\n\t<p>The FreeType Project reports:</p>\n\t<blockquote cite=\"http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view\">\n\t  <p>Some vulnerabilities in the  BDF implementation have been fixed.\n\t    Users of this font format should upgrade.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1ae613c3-5728-11e2-9483-14dae938ec40.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view"
+				}
+			],
+			"published": "2013-01-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.11"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

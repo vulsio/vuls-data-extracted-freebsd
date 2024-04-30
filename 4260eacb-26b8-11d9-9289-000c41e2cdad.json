@@ -1,0 +1,118 @@
+{
+	"id": "4260eacb-26b8-11d9-9289-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "4260eacb-26b8-11d9-9289-000c41e2cdad",
+			"title": "gaim -- multiple buffer overflows",
+			"description": "\n\t<p>Sean <q>infamous42md</q> reports several situations in gaim\n\t  that may result in exploitable buffer overflows:</p>\n\t<ul>\n\t  <li>Rich Text Format (RTF) messages in Novell GroupWise\n\t    protocol</li>\n\t  <li>Unsafe use of gethostbyname in zephyr protocol</li>\n\t  <li>URLs which are over 2048 bytes long once decoded</li>\n\t</ul>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4260eacb-26b8-11d9-9289-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=5"
+				}
+			],
+			"published": "2004-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0785",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0785"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.82"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.82"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ko-gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.82"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ru-gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.82"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "20030000"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

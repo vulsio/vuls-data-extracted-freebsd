@@ -1,0 +1,80 @@
+{
+	"id": "d3324c55-3f11-11e4-ad16-001999f8d30b",
+	"advisories": [
+		{
+			"id": "d3324c55-3f11-11e4-ad16-001999f8d30b",
+			"title": "squid -- Buffer overflow in SNMP processing",
+			"description": "\n\t<p>The squid-cache project reports:</p>\n\t<blockquote cite=\"http://www.squid-cache.org/Advisories/SQUID-2014_3.txt\">\n\t  <p>Due to incorrect buffer management Squid can be caused\n\t  by an attacker to write outside its allocated SNMP buffer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d3324c55-3f11-11e4-ad16-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.squid-cache.org/Advisories/SQUID-2014_3.txt"
+				}
+			],
+			"published": "2014-09-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-6270",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6270"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "squid"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.4.8"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "squid32"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "squid33"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.3.13_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

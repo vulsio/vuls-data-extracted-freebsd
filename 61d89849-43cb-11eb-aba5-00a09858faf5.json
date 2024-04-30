@@ -1,0 +1,68 @@
+{
+	"id": "61d89849-43cb-11eb-aba5-00a09858faf5",
+	"advisories": [
+		{
+			"id": "61d89849-43cb-11eb-aba5-00a09858faf5",
+			"title": "powerdns -- Various issues in GSS-TSIG support",
+			"description": "\n\t<p>PowerDNS developers report:</p>\n\t<blockquote cite=\"https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2020-06.html\">\n\t  <p>A remote, unauthenticated attacker can trigger a race condition\n\t    leading to a crash, or possibly arbitrary code execution, by sending crafted queries with a GSS-TSIG signature.</p>\n\t  <p>A remote, unauthenticated attacker can cause a denial of service by\n\t    sending crafted queries with a GSS-TSIG signature.</p>\n\t  <p>A remote, unauthenticated attacker might be able to cause a double-free,\n\t    leading to a crash or possibly arbitrary code execution by sending crafted queries with a GSS-TSIG signature.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/61d89849-43cb-11eb-aba5-00a09858faf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2020-06.html"
+				}
+			],
+			"published": "2020-12-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-24696",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24696"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-24697",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24697"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-24698",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24698"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "powerdns"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

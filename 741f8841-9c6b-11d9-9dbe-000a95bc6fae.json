@@ -1,0 +1,65 @@
+{
+	"id": "741f8841-9c6b-11d9-9dbe-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "741f8841-9c6b-11d9-9dbe-000a95bc6fae",
+			"title": "firefox -- arbitrary code execution from sidebar panel",
+			"description": "\n\t<p>A Mozilla Foundation Security Advisory states:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-31.html\">\n\t  <p>If a user bookmarked a malicious page as a Firefox\n\t    sidebar panel that page could execute arbitrary programs\n\t    by opening a privileged page and injecting javascript into\n\t    it.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/741f8841-9c6b-11d9-9dbe-000a95bc6fae.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/mfsa2005-31.html"
+				}
+			],
+			"published": "2005-03-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0402",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0402"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.2,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

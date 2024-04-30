@@ -1,0 +1,59 @@
+{
+	"id": "0d3a5148-f512-11d8-9837-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "0d3a5148-f512-11d8-9837-000c41e2cdad",
+			"title": "SpamAssassin -- denial-of-service in tokenize_headers",
+			"description": "\n\t<p>According to the SpamAssassin 2.64 release announcement:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=spamassassin-announce&amp;m=109168121628767\">\n\t  <p>Security fix prevents a denial of service attack open\n\t    to certain malformed messages; this DoS affects all\n\t    SpamAssassin 2.5x and 2.6x versions to date.</p>\n\t</blockquote>\n\t<p>The issue appears to be triggered by overly long message\n\t  headers.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0d3a5148-f512-11d8-9837-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://search.cpan.org/src/JMASON/Mail-SpamAssassin-2.64/Changes"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=spamassassin-announce&m=109168121628767"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10957"
+				}
+			],
+			"published": "2004-08-23T00:00:00Z",
+			"modified": "2004-08-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0796",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0796"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p5-Mail-SpamAssassin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.64"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

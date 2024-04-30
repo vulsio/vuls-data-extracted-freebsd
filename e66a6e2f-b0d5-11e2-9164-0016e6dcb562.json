@@ -1,0 +1,56 @@
+{
+	"id": "e66a6e2f-b0d5-11e2-9164-0016e6dcb562",
+	"advisories": [
+		{
+			"id": "e66a6e2f-b0d5-11e2-9164-0016e6dcb562",
+			"title": "FreeBSD -- NFS remote denial of service",
+			"description": "\n\t<blockquote cite=\"http://www.freebsd.org/security/advisories/FreeBSD-SA-13:05.nfsserver.asc\">\n\t  <p>Insufficient input validation in the NFS server allows an\n\t   attacker to cause the underlying file system to treat a\n\t   regular file as a directory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e66a6e2f-b0d5-11e2-9164-0016e6dcb562.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-13:05.nfsserver.asc"
+				}
+			],
+			"published": "2013-04-29T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-3266",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3266"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.3_8",
+						"ge": "8.3"
+					},
+					{
+						"lt": "9.1_3",
+						"ge": "9.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

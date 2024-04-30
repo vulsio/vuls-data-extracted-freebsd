@@ -1,0 +1,64 @@
+{
+	"id": "d18f431d-d360-11eb-a32c-00a0989e4ec1",
+	"advisories": [
+		{
+			"id": "d18f431d-d360-11eb-a32c-00a0989e4ec1",
+			"title": "dovecot -- multiple vulnerabilities",
+			"description": "\n\t<p>Dovecot team reports:</p>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2021-June/000461.html\">\n\t    <p>CVE-2021-29157: Dovecot does not correctly escape kid and azp\n\t      fields in JWT tokens.\n\t      This may be used to supply attacker controlled keys to validate\n\t      tokens in some configurations. This requires attacker\n\t      to be able to write files to\n\t      local disk.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2021-June/000462.html\">\n\t    <p>CVE-2021-33515: On-path attacker could inject plaintext commands\n\t      before STARTTLS negotiation that would be executed after STARTTLS\n\t      finished with the client. Only the SMTP submission service is\n\t      affected.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d18f431d-d360-11eb-a32c-00a0989e4ec1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dovecot.org/pipermail/dovecot-news/2021-June/000461.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dovecot.org/pipermail/dovecot-news/2021-June/000462.html"
+				}
+			],
+			"published": "2021-06-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-29157",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29157"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-33515",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33515"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dovecot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.14.1",
+						"ge": "2.3.11"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

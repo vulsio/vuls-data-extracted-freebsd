@@ -1,0 +1,62 @@
+{
+	"id": "2689f4cb-ec4c-11d8-9440-000347a4fa7d",
+	"advisories": [
+		{
+			"id": "2689f4cb-ec4c-11d8-9440-000347a4fa7d",
+			"title": "rsync -- path sanitizing vulnerability",
+			"description": "\n\t<p>An rsync security advisory reports:</p>\n\t<blockquote cite=\"http://samba.org/rsync/#security_aug04\">\n\t  <p>There is a path-sanitizing bug that affects daemon mode in\n\t    all recent rsync versions (including 2.6.2) but only if\n\t    chroot is disabled.</p>\n\t</blockquote>\n\t<p>The bug may allow a remote user to access files outside\n\t  of an rsync module's configured path with the privileges\n\t  configured for that module.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2689f4cb-ec4c-11d8-9440-000347a4fa7d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://samba.org/rsync/#security_aug04"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/12294"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/8829"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.samba.org/archive/rsync-announce/2004/000017.html"
+				}
+			],
+			"published": "2004-08-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0792",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0792"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rsync"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.2_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

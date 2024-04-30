@@ -1,0 +1,68 @@
+{
+	"id": "4b79538b-a450-11e2-9898-001060e06fd4",
+	"advisories": [
+		{
+			"id": "4b79538b-a450-11e2-9898-001060e06fd4",
+			"title": "FreeBSD -- Multiple Denial of Service vulnerabilities with named(8)",
+			"description": "\n\t<p>Problem description:</p>\n\t<blockquote cite=\"http://www.freebsd.org/security/advisories/FreeBSD-SA-12:06.bind.asc\">\n\t  <p>The BIND daemon would crash when a query is made on a resource\n\t     record with RDATA that exceeds 65535 bytes.</p>\n\t  <p>The BIND daemon would lock up when a query is made on specific\n\t     combinations of RDATA.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4b79538b-a450-11e2-9898-001060e06fd4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-12:06.bind.asc"
+				}
+			],
+			"published": "2012-11-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4244",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4244"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5166",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5166"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.4_11",
+						"ge": "7.4"
+					},
+					{
+						"lt": "8.3_5",
+						"ge": "8.3"
+					},
+					{
+						"lt": "9.0_5",
+						"ge": "9.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

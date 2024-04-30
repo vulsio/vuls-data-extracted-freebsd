@@ -1,0 +1,73 @@
+{
+	"id": "b0c83e1a-8153-11ec-84f9-641c67a117d8",
+	"advisories": [
+		{
+			"id": "b0c83e1a-8153-11ec-84f9-641c67a117d8",
+			"title": "varnish -- Request Smuggling Vulnerability",
+			"description": "\n\t<p>Varnish Cache Project reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00008.html\">\n\t  <p>A request smuggling attack can be performed on HTTP/1 connections on\n\t    Varnish Cache servers. The smuggled request would be treated as an additional\n\t    request by the Varnish server, go through normal VCL processing, and injected\n\t    as a spurious response on the client connection.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b0c83e1a-8153-11ec-84f9-641c67a117d8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://varnish-cache.org/security/VSV00008.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.varnish-software.com/security/VSV00008/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23959"
+				}
+			],
+			"published": "2022-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23959",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23959"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "varnish6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.6.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "varnish4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.11r6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

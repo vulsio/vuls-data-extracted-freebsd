@@ -1,0 +1,39 @@
+{
+	"id": "968d1e74-1740-11e5-a643-40a8f0757fb4",
+	"advisories": [
+		{
+			"id": "968d1e74-1740-11e5-a643-40a8f0757fb4",
+			"title": "p5-Dancer -- possible to abuse session cookie values",
+			"description": "\n\t<p>Russell Jenkins reports:</p>\n\t<blockquote cite=\"INSERT URL HERE\">\n\t  <p>It was possible to abuse session cookie values so that\n\t    file-based session stores such as Dancer::Session::YAML or\n\t    Dancer2::Session::YAML would attempt to read/write from\n\t    any file on the filesystem with the same extension the\n\t    file-based store uses, such as '*.yml' for the YAML\n\t    stores.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/968d1e74-1740-11e5-a643-40a8f0757fb4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.preshweb.co.uk/pipermail/dancer-users/2015-June/004621.html"
+				}
+			],
+			"published": "2015-06-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p5-Dancer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3138"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

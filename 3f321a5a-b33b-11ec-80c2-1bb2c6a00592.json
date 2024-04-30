@@ -1,0 +1,65 @@
+{
+	"id": "3f321a5a-b33b-11ec-80c2-1bb2c6a00592",
+	"advisories": [
+		{
+			"id": "3f321a5a-b33b-11ec-80c2-1bb2c6a00592",
+			"title": "dnsmasq -- heap use-after-free in dhcp6_no_relay",
+			"description": "\n\t<p>Petr Menšík reports:</p>\n\t<blockquote cite=\"https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2022q1/016272.html\">\n\t  <p>Possible vulnerability [...] found in latest dnsmasq. It [was] found\n\t    with help of oss-fuzz Google project by me and short after that\n\t    independently also by Richard Johnson of Trellix Threat Labs.</p>\n\t  <p>It is affected only by DHCPv6 requests, which could be crafted to\n\t    modify already freed memory. [...] We think it might be triggered\n\t    remotely, but we do not think it could be used to execute remote\n\t    code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3f321a5a-b33b-11ec-80c2-1bb2c6a00592.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2022q1/016272.html"
+				}
+			],
+			"published": "2022-04-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-0934",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-0934"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dnsmasq"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.86_4,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dnsmasq-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.86_4,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

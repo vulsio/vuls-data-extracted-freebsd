@@ -1,0 +1,114 @@
+{
+	"id": "83b29e3f-886f-439f-b9a8-72e014479ff9",
+	"advisories": [
+		{
+			"id": "83b29e3f-886f-439f-b9a8-72e014479ff9",
+			"title": "py-dparse -- REDoS vulnerability",
+			"description": "\n    <p>yeisonvargasf reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/PYSEC-2022-301\">\n      <p>dparse is a parser for Python dependency files.</p>\n      <p>dparse in versions before 0.5.2 contain a regular expression that is vulnerable to a Regular Expression Denial of Service.</p>\n      <p>All the users parsing index server URLs with dparse are impacted by this vulnerability.</p>\n      <p>Users unable to upgrade should avoid passing index server URLs in the source file to be parsed.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/83b29e3f-886f-439f-b9a8-72e014479ff9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/PYSEC-2022-301"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-8fg9-p83m-x5pq"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-39280",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39280"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-dparse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py38-dparse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-dparse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py310-dparse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py311-dparse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

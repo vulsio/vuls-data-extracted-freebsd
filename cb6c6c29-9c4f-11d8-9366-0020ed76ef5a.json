@@ -1,0 +1,52 @@
+{
+	"id": "cb6c6c29-9c4f-11d8-9366-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "cb6c6c29-9c4f-11d8-9366-0020ed76ef5a",
+			"title": "proftpd IP address access control list breakage",
+			"description": "\n\t<p>Jindrich Makovicka reports a regression in proftpd's\n\t  handling of IP address access control lists (IP ACLs).  Due\n\t  to this regression, some IP ACLs are treated as ``allow\n\t  all''.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb6c6c29-9c4f-11d8-9366-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.proftpd.org/show_bug.cgi?id=2267"
+				}
+			],
+			"published": "2004-05-02T00:00:00Z",
+			"modified": "2004-05-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0432",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0432"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "proftpd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.10.r1",
+						"ge": "1.2.9"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

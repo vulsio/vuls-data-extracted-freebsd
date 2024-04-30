@@ -1,0 +1,51 @@
+{
+	"id": "6da7344b-128a-11db-b25f-00e00c69a70d",
+	"advisories": [
+		{
+			"id": "6da7344b-128a-11db-b25f-00e00c69a70d",
+			"title": "drupal -- multiple vulnerabilities",
+			"description": "\n\t<p>The Drupal team reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/66767\">\n\t  <p>Vulnerability: XSS Vulnerability in taxonomy module</p>\n\t  <p>It is possible for a malicious user to insert and execute\n\t    XSS into terms, due to lack of validation on output of the\n\t    page title. The fix wraps the display of terms in\n\t    check_plain().</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6da7344b-128a-11db-b25f-00e00c69a70d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://drupal.org/node/66767"
+				}
+			],
+			"published": "2006-07-13T00:00:00Z",
+			"modified": "2006-07-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-2833",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2833"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drupal"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.6.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

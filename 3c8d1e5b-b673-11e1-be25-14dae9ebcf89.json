@@ -1,0 +1,55 @@
+{
+	"id": "3c8d1e5b-b673-11e1-be25-14dae9ebcf89",
+	"advisories": [
+		{
+			"id": "3c8d1e5b-b673-11e1-be25-14dae9ebcf89",
+			"title": "asterisk -- remote crash vulnerability",
+			"description": "\n\t<p>Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/security\">\n\t  <p>Skinny Channel Driver Remote Crash Vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c8d1e5b-b673-11e1-be25-14dae9ebcf89.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.digium.com/pub/security/AST-2012-009.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.asterisk.org/security"
+				}
+			],
+			"published": "2012-06-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3553",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3553"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk10"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.5.1",
+						"gt": "10.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

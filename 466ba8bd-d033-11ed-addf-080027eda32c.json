@@ -1,0 +1,80 @@
+{
+	"id": "466ba8bd-d033-11ed-addf-080027eda32c",
+	"advisories": [
+		{
+			"id": "466ba8bd-d033-11ed-addf-080027eda32c",
+			"title": "mediawiki -- multiple vulnerabilities",
+			"description": "\n\t<p>Mediawikwi reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/6UQBHI5FWLATD7QO7DI4YS54U7XSSLAN/\">\n\t  <p>(T285159, CVE-2023-PENDING) SECURITY: X-Forwarded-For header allows\n\t    brute-forcing autoblocked IP addresses.</p>\n\t  <p>(T326946, CVE-2020-36649) SECURITY: Bundled PapaParse copy in\n\t    VisualEditor has known ReDos.</p>\n\t  <p>(T330086, CVE-2023-PENDING) SECURITY: OATHAuth allows replay attacks when\n\t    MediaWiki is configured without ObjectCache; Insecure Default Configuration.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/466ba8bd-d033-11ed-addf-080027eda32c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/6UQBHI5FWLATD7QO7DI4YS54U7XSSLAN/"
+				}
+			],
+			"published": "2023-04-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-36649",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-36649"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki135"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.35.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki138"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.38.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki139"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.39.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,55 @@
+{
+	"id": "ffba6ab0-90b5-11dc-9835-003048705d5a",
+	"advisories": [
+		{
+			"id": "ffba6ab0-90b5-11dc-9835-003048705d5a",
+			"title": "plone -- unsafe data interpreted as pickles",
+			"description": "\n\t<p>Plone projectreports:</p>\n\t<blockquote cite=\"http://plone.org/about/security/advisories/cve-2007-5741\">\n\t  <p>This hotfix corrects a vulnerability in the statusmessages\n\t    and linkintegrity modules, where unsafe network data was\n\t    interpreted as python pickles. This allows an attacker to\n\t    run arbitrary python code within the Zope/Plone process.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ffba6ab0-90b5-11dc-9835-003048705d5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/26354"
+				}
+			],
+			"published": "2007-11-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-5741",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5741"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "plone"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.5",
+						"ge": "2.5"
+					},
+					{
+						"lt": "3.0.3",
+						"ge": "3.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

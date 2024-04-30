@@ -1,0 +1,74 @@
+{
+	"id": "47e2e52c-975c-11e7-942d-5404a68a61a2",
+	"advisories": [
+		{
+			"id": "47e2e52c-975c-11e7-942d-5404a68a61a2",
+			"title": "emacs -- enriched text remote code execution vulnerability",
+			"description": "\n\t<p>Paul Eggert reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2017/q3/422\">\n\t  <p>Charles A. Roelli has found a security flaw in the enriched mode in GNU Emacs.</p>\n\t  <p>When Emacs renders MIME text/enriched data (Internet RFC 1896), it\n\t  is vulnerable to arbitrary code execution. Since Emacs-based mail\n\t  clients decode \"Content-Type: text/enriched\", this code is exploitable\n\t  remotely. This bug affects GNU Emacs versions 19.29 through 25.2.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/47e2e52c-975c-11e7-942d-5404a68a61a2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2017/q3/422"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.gnu.org/28350"
+				}
+			],
+			"published": "2017-09-12T00:00:00Z",
+			"modified": "2017-09-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs25"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "25.3,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-nox11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "25.3,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "26.0.50.20170912,2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

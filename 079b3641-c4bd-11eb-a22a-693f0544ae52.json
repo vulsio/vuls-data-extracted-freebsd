@@ -1,0 +1,89 @@
+{
+	"id": "079b3641-c4bd-11eb-a22a-693f0544ae52",
+	"advisories": [
+		{
+			"id": "079b3641-c4bd-11eb-a22a-693f0544ae52",
+			"title": "go -- multiple vulnerabilities",
+			"description": "\n\t<p>The Go project reports:</p>\n\t<blockquote cite=\"https://github.com/golang/go/issues/45910\">\n\t  <p>The SetString and UnmarshalText methods of math/big.Rat may cause a\n\t    panic or an unrecoverable fatal error if passed inputs with very\n\t    large exponents.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/golang/go/issues/46313\">\n\t  <p>ReverseProxy in net/http/httputil could be made to forward certain\n\t    hop-by-hop headers, including Connection. In case the target of the\n\t    ReverseProxy was itself a reverse proxy, this would let an attacker\n\t    drop arbitrary headers, including those set by the\n\t    ReverseProxy.Director.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/golang/go/issues/46241\">\n\t  <p>The LookupCNAME, LookupSRV, LookupMX, LookupNS, and LookupAddr\n\t    functions in net, and their respective methods on the Resolver type\n\t    may return arbitrary values retrieved from DNS which do not follow\n\t    the established RFC 1035 rules for domain names. If these names are\n\t    used without further sanitization, for instance unsafely included in\n\t    HTML, they may allow for injection of unexpected content. Note that\n\t    LookupTXT may still return arbitrary values that could require\n\t    sanitization before further use.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/golang/go/issues/46242\">\n\t  <p>The NewReader and OpenReader functions in archive/zip can cause a\n\t    panic or an unrecoverable fatal error when reading an archive that\n\t    claims to contain a large number of files, regardless of its actual\n\t    size.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/079b3641-c4bd-11eb-a22a-693f0544ae52.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/45910"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/46313"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/46241"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/46242"
+				}
+			],
+			"published": "2021-06-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-33198",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33198"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-33197",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33197"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-33195",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33195"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-33196",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33196"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "go"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.16.5,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

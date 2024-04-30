@@ -1,0 +1,80 @@
+{
+	"id": "fd64188d-a71d-11e0-89b4-001ec9578670",
+	"advisories": [
+		{
+			"id": "fd64188d-a71d-11e0-89b4-001ec9578670",
+			"title": "BIND -- Remote DoS against authoritative and recursive servers",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://www.isc.org/software/bind/advisories/cve-2011-2464\">\n\t  <p>A defect in the affected BIND 9 versions allows an attacker to\n\t    remotely cause the \"named\" process to exit using a specially\n\t    crafted packet.</p>\n\t  <p>This defect affects both recursive and authoritative servers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fd64188d-a71d-11e0-89b4-001ec9578670.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.isc.org/software/bind/advisories/cve-2011-2464"
+				}
+			],
+			"published": "2011-07-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2464",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2464"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind96"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.6.3.1.ESV.R4.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind97"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.7.3.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind98"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.8.0.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

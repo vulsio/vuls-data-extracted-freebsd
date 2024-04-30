@@ -1,0 +1,44 @@
+{
+	"id": "35e54755-54e4-11dd-ad8b-0030843d3802",
+	"advisories": [
+		{
+			"id": "35e54755-54e4-11dd-ad8b-0030843d3802",
+			"title": "phpmyadmin -- cross site request forgery vulnerabilities",
+			"description": "\n\t<p>A phpMyAdmin security announcement:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-5\">\n\t  <p>A logged-in user, if abused into clicking a crafted link or loading\n\t    an attack page, would create a database he did not intend to, or would\n\t    change his connection character set.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/35e54755-54e4-11dd-ad8b-0030843d3802.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31115/"
+				}
+			],
+			"published": "2008-07-18T00:00:00Z",
+			"modified": "2008-09-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.11.7.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

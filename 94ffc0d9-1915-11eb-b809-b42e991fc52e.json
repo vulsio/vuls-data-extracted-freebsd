@@ -1,0 +1,40 @@
+{
+	"id": "94ffc0d9-1915-11eb-b809-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "94ffc0d9-1915-11eb-b809-b42e991fc52e",
+			"title": "motion -- Denial of Service",
+			"description": "\n\t<p>cxsecurity.com reports:</p>\n\t<blockquote cite=\"https://cxsecurity.com/cveshow/CVE-2020-26566/\">\n\t  <p>A Denial of Service condition in Motion-Project Motion 3.2 through\n\t  4.3.1 allows remote unauthenticated users to cause a webu.c\n\t  segmentation fault and kill the main process via a crafted HTTP\n\t  request</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/94ffc0d9-1915-11eb-b809-b42e991fc52e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve-search.iicrai.org/cve/CVE-2020-26566"
+				}
+			],
+			"published": "2020-10-28T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "motion"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.1",
+						"ge": "3.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

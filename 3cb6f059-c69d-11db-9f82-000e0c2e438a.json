@@ -1,0 +1,84 @@
+{
+	"id": "3cb6f059-c69d-11db-9f82-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "3cb6f059-c69d-11db-9f82-000e0c2e438a",
+			"title": "bind -- Multiple Denial of Service vulnerabilities",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A type * (ANY) query response containing multiple RRsets can\n\t  trigger an assertion failure.</p>\n\t<p>Certain recursive queries can cause the nameserver to crash\n\t  by using memory which has already been freed.</p>\n\t<h1>Impact:</h1>\n\t<p>A remote attacker sending a type * (ANY) query to an\n\t  authoritative DNS server for a DNSSEC signed zone can cause\n\t  the named(8) daemon to exit, resulting in a Denial of\n\t  Service.</p>\n\t<p>A remote attacker sending recursive queries can cause the\n\t  nameserver to crash, resulting in a Denial of Service.</p>\n\t<h1>Workaround:</h1>\n\t<p>There is no workaround available, but systems which are not\n\t  authoritative servers for DNSSEC signed zones are not\n\t  affected by the first issue; and systems which do not permit\n\t  untrusted users to perform recursive DNS resolution are not\n\t  affected by the second issue.  Note that the default\n\t  configuration for named(8) in FreeBSD allows local access\n\t  only (which on many systems is equivalent to refusing access\n\t  to untrusted users).</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3cb6f059-c69d-11db-9f82-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-07:02.bind.asc"
+				}
+			],
+			"published": "2007-02-27T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-0493",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0493"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0494",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0494"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "named"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.3.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2_1",
+						"ge": "6.2"
+					},
+					{
+						"lt": "6.1_13",
+						"ge": "6.1"
+					},
+					{
+						"lt": "5.5_11",
+						"ge": "5.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

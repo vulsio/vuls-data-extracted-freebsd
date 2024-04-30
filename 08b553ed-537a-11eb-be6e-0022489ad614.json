@@ -1,0 +1,117 @@
+{
+	"id": "08b553ed-537a-11eb-be6e-0022489ad614",
+	"advisories": [
+		{
+			"id": "08b553ed-537a-11eb-be6e-0022489ad614",
+			"title": "Node.js -- January 2021 Security Releases",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/january-2021-security-releases/\">\n\t  <h1>use-after-free in TLSWrap (High) (CVE-2020-8265)</h1>\n\t  <p>Affected Node.js versions are vulnerable to a use-after-free bug in its TLS implementation. When writing to a TLS enabled socket, node::StreamBase::Write calls node::TLSWrap::DoWrite with a freshly allocated WriteWrap object as first argument. If the DoWrite method does not return an error, this object is passed back to the caller as part of a StreamWriteResult structure. This may be exploited to corrupt memory leading to a Denial of Service or potentially other exploits.</p>\n\t  <h1>HTTP Request Smuggling in nodejs (Low) (CVE-2020-8287)</h1>\n\t  <p>Affected versions of Node.js allow two copies of a header field in a http request. For example, two Transfer-Encoding header fields. In this case Node.js identifies the first header field and ignores the second. This can lead to HTTP Request Smuggling.</p>\n\t  <h1>OpenSSL - EDIPARTYNAME NULL pointer de-reference (CVE-2020-1971)</h1>\n\t  <p>iThis is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20201208.txt.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/08b553ed-537a-11eb-be6e-0022489ad614.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/january-2021-security-releases/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20201208.txt"
+				}
+			],
+			"published": "2021-01-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8265",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8265"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-8287",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8287"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-1971",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-1971"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node10"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.23.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node12"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.20.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node14"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "14.15.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.5.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

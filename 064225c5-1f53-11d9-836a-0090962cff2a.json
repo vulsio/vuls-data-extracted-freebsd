@@ -1,0 +1,50 @@
+{
+	"id": "064225c5-1f53-11d9-836a-0090962cff2a",
+	"advisories": [
+		{
+			"id": "064225c5-1f53-11d9-836a-0090962cff2a",
+			"title": "squid -- NTLM authentication denial-of-service vulnerability",
+			"description": "\n\t<p>A remote attacker is able to cause a denial-of-service\n\t  situation, when NTLM authentication is enabled in squid.\n\t  NTLM authentication uses two functions which lack correct\n\t  offset checking.</p>\n    ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/064225c5-1f53-11d9-836a-0090962cff2a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.squid-cache.org/bugs/show_bug.cgi?id=1045"
+				}
+			],
+			"published": "2004-10-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0832",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0832"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "squid"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

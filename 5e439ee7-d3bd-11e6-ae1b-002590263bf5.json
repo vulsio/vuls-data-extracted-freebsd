@@ -1,0 +1,39 @@
+{
+	"id": "5e439ee7-d3bd-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "5e439ee7-d3bd-11e6-ae1b-002590263bf5",
+			"title": "codeigniter -- multiple vulnerabilities",
+			"description": "\n\t<p>The CodeIgniter changelog reports:</p>\n\t<blockquote cite=\"https://www.codeigniter.com/user_guide/changelog.html\">\n\t  <p>Fixed an SQL injection in the ‘odbc’ database driver.</p>\n\t  <p>Updated set_realpath() Path Helper function to filter-out php://\n\t    wrapper inputs.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5e439ee7-d3bd-11e6-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.codeigniter.com/user_guide/changelog.html"
+				}
+			],
+			"published": "2017-01-06T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "codeigniter"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

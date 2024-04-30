@@ -1,0 +1,50 @@
+{
+	"id": "039d057e-544e-11e1-9fb7-003067b2972c",
+	"advisories": [
+		{
+			"id": "039d057e-544e-11e1-9fb7-003067b2972c",
+			"title": "surf -- private information disclosure",
+			"description": "\n\t<p>surf does not protect its cookie jar against access read access from\n\tother local users</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/039d057e-544e-11e1-9fb7-003067b2972c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=659296"
+				}
+			],
+			"published": "2012-02-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-0842",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0842"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "surf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

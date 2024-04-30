@@ -1,0 +1,50 @@
+{
+	"id": "79fa9f23-9725-11eb-b530-7085c2fb2c14",
+	"advisories": [
+		{
+			"id": "79fa9f23-9725-11eb-b530-7085c2fb2c14",
+			"title": "upnp -- stack overflow vulnerability",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28302\">\n\t  <p>\n\t      A stack overflow in pupnp 1.16.1 can cause the denial of service through the\n\t      Parser_parseDocument() function. ixmlNode_free() will release a child node\n\t      recursively, which will consume stack space and lead to a crash.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/79fa9f23-9725-11eb-b530-7085c2fb2c14.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/pupnp/pupnp/issues/249"
+				}
+			],
+			"published": "2021-04-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-28302",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-28302"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "upnp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.14.5,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

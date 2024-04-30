@@ -1,0 +1,50 @@
+{
+	"id": "3c2549b3-3bed-11e7-a9f0-a4badb296695",
+	"advisories": [
+		{
+			"id": "3c2549b3-3bed-11e7-a9f0-a4badb296695",
+			"title": "Joomla3 -- SQL Injection",
+			"description": "\n\t<p>JSST reports:</p>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/692-20170501-core-sql-injection.html\">\n\t  <p>Inadequate filtering of request data leads to a SQL Injection vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c2549b3-3bed-11e7-a9f0-a4badb296695.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/692-20170501-core-sql-injection.html"
+				}
+			],
+			"published": "2017-05-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-8917",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8917"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "joomla3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"eq": "3.7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

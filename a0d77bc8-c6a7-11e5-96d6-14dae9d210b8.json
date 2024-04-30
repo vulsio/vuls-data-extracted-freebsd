@@ -1,0 +1,78 @@
+{
+	"id": "a0d77bc8-c6a7-11e5-96d6-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "a0d77bc8-c6a7-11e5-96d6-14dae9d210b8",
+			"title": "typo3 -- multiple vulnerabilities",
+			"description": "\n\t<p>TYPO3 Security Team reports:</p>\n\t<blockquote cite=\"http://lists.typo3.org/pipermail/typo3-announce/2015/000351.html\">\n\t  <p>It has been discovered that TYPO3 CMS is susceptible to\n\t    Cross-Site Scripting and Cross-Site Flashing.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a0d77bc8-c6a7-11e5-96d6-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.typo3.org/pipermail/typo3-announce/2015/000351.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-010/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-011/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-012/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-013/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-014/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-015/"
+				}
+			],
+			"published": "2016-01-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "typo3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.6.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "typo3-lts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.16"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

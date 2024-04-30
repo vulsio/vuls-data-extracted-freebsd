@@ -1,0 +1,66 @@
+{
+	"id": "b6cad7f3-fb59-11d8-9837-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "b6cad7f3-fb59-11d8-9837-000c41e2cdad",
+			"title": "ImageMagick -- BMP decoder buffer overflow",
+			"description": "\n\t<p>Marcus Meissner discovered that ImageMagick's BMP decoder would\n\t  crash when loading the test BMP file created by Chris Evans\n\t  for testing the previous Qt vulnerability.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b6cad7f3-fb59-11d8-9837-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.imagemagick.org/www/Changelog.html"
+				}
+			],
+			"published": "2004-08-31T00:00:00Z",
+			"modified": "2004-09-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0827",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0827"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.6.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick-nox11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.6.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

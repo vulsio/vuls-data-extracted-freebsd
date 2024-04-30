@@ -1,0 +1,47 @@
+{
+	"id": "afa018d9-8557-11ea-a5e2-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "afa018d9-8557-11ea-a5e2-d4c9ef517024",
+			"title": "Nextcloud -- multiple vulnerabilities",
+			"description": "\n\t<p>Nextcloud reports:</p>\n\t<blockquote cite=\"https://nextcloud.com/security/advisories/\">\n\t  <p>XSS in Files PDF viewer (NC-SA-2020-019)</p>\n\t  <p>Missing ownership check on remote wipe endpoint (NC-SA-2020-018)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/afa018d9-8557-11ea-a5e2-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nextcloud.com/security/advisories/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nextcloud.com/security/advisory/?id=NC-SA-2020-018"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nextcloud.com/security/advisory/?id=NC-SA-2020-019"
+				}
+			],
+			"published": "2020-04-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nextcloud"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "18.0.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

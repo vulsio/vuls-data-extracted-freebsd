@@ -1,0 +1,63 @@
+{
+	"id": "ce109fd4-67f3-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "ce109fd4-67f3-11d9-a9e7-0001020eed82",
+			"title": "mysql-scripts -- mysqlaccess insecure temporary file creation",
+			"description": "\n\t<p>The Debian Security Team reports:</p>\n\t<blockquote>\n\t  <p>Javier Fernández-Sanguino Peña from the Debian Security\n\t    Audit Project discovered a temporary file vulnerability in\n\t    the mysqlaccess script of MySQL that could allow an\n\t    unprivileged user to let root overwrite arbitrary files\n\t    via a symlink attack and could also could unveil the\n\t    contents of a temporary file which might contain sensitive\n\t    information.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ce109fd4-67f3-11d9-a9e7-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.mysql.com/internals/20600"
+				}
+			],
+			"published": "2005-01-16T00:00:00Z",
+			"modified": "2005-01-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0004",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0004"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-scripts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.23.58_2"
+					},
+					{
+						"lt": "4.0.23a_1",
+						"gt": "4.*"
+					},
+					{
+						"lt": "4.1.9_1",
+						"gt": "4.1.*"
+					},
+					{
+						"lt": "5.0.2_1",
+						"gt": "5.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

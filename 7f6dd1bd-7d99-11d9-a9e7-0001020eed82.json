@@ -1,0 +1,54 @@
+{
+	"id": "7f6dd1bd-7d99-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "7f6dd1bd-7d99-11d9-a9e7-0001020eed82",
+			"title": "ngircd -- buffer overflow vulnerability",
+			"description": "\n\t<p>Florian Westphal discovered a buffer overflow in ngircd\n\t  which can be used remotely crash the server and possibly\n\t  execute arbitrary code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7f6dd1bd-7d99-11d9-a9e7-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://arthur.ath.cx/pipermail/ngircd-ml/2005-January/000228.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12397"
+				}
+			],
+			"published": "2005-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0199",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0199"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ngircd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

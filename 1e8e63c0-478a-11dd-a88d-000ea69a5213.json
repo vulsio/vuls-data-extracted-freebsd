@@ -1,0 +1,50 @@
+{
+	"id": "1e8e63c0-478a-11dd-a88d-000ea69a5213",
+	"advisories": [
+		{
+			"id": "1e8e63c0-478a-11dd-a88d-000ea69a5213",
+			"title": "fetchmail -- potential crash in -v -v verbose mode (revised patch)",
+			"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2008-01.txt\">\n\t  <p>2008-06-24 1.2  also fixed issue in report_complete (reported by\n\t    Petr Uzel)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1e8e63c0-478a-11dd-a88d-000ea69a5213.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.fetchmail.info/fetchmail-SA-2008-01.txt"
+				}
+			],
+			"published": "2008-07-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-2711",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2711"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fetchmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.8_7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

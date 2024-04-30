@@ -1,0 +1,74 @@
+{
+	"id": "934b1de4-00d7-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "934b1de4-00d7-11da-bc08-0001020eed82",
+			"title": "opera -- image dragging vulnerability",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/15756/\">\n\t  <p>Secunia Research has discovered a vulnerability in Opera,\n\t    which can be exploited by malicious people to conduct\n\t    cross-site scripting attacks and retrieve a user's\n\t    files.</p>\n\t  <p>The vulnerability is caused due to Opera allowing a user\n\t    to drag e.g. an image, which is actually a \"javascript:\"\n\t    URI, resulting in cross-site scripting if dropped over\n\t    another site. This may also be used to populate a file\n\t    upload form, resulting in uploading of arbitrary files to\n\t    a malicious web site.</p>\n\t  <p>Successful exploitation requires that the user is tricked\n\t    into dragging and dropping e.g. an image or a link.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/934b1de4-00d7-11da-bc08-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/15756/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/freebsd/changelogs/802/"
+				}
+			],
+			"published": "2005-07-30T00:00:00Z",
+			"modified": "2006-06-08T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.02"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.02"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.02"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,86 @@
+{
+	"id": "1cecd5e0-c372-11e5-96d6-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "1cecd5e0-c372-11e5-96d6-14dae9d210b8",
+			"title": "xymon-server -- multiple vulnerabilities",
+			"description": "\n\t<p>J.C. Cleaver reports:</p>\n\t<blockquote cite=\"http://lists.xymon.com/pipermail/xymon/2016-February/042986.html\">\n\t  <ul>\n\t  <li><p>CVE-2016-2054: Buffer overflow in xymond handling of\n\t    \"config\" command</p></li>\n\t  <li><p> CVE-2016-2055: Access to possibly confidential files\n\t    in the Xymon configuration directory</p></li>\n\t  <li><p>CVE-2016-2056: Shell command injection in the\n\t    \"useradm\" and \"chpasswd\" web applications</p></li>\n\t  <li><p>CVE-2016-2057: Incorrect permissions on IPC queues\n\t    used by the xymond daemon can bypass IP access filtering</p></li>\n\t  <li><p>CVE-2016-2058: Javascript injection in \"detailed status\n\t    webpage\" of monitoring items; XSS vulnerability via malformed\n\t    acknowledgment messages</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1cecd5e0-c372-11e5-96d6-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.xymon.com/pipermail/xymon/2016-February/042986.html"
+				}
+			],
+			"published": "2016-02-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2054"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2055",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2055"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2056",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2056"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2057",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2057"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2058",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2058"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xymon-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.25"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

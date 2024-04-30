@@ -1,0 +1,39 @@
+{
+	"id": "50d233d9-374b-46ce-922d-4e6b3f777bef",
+	"advisories": [
+		{
+			"id": "50d233d9-374b-46ce-922d-4e6b3f777bef",
+			"title": "poppler -- Poppler Multiple Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\" http://secunia.com/advisories/34746/\">\n\t  <p>Some vulnerabilities have been reported in Poppler which can be\n\t    exploited by malicious people to potentially compromise an\n\t    application using the library.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/50d233d9-374b-46ce-922d-4e6b3f777bef.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/34746/"
+				}
+			],
+			"published": "2009-04-18T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "poppler"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.10.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

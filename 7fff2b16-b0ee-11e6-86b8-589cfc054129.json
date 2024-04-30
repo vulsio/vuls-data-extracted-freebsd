@@ -1,0 +1,146 @@
+{
+	"id": "7fff2b16-b0ee-11e6-86b8-589cfc054129",
+	"advisories": [
+		{
+			"id": "7fff2b16-b0ee-11e6-86b8-589cfc054129",
+			"title": "wireshark -- multiple vulnerabilities",
+			"description": "\n\t<p>Wireshark project reports:</p>\n\t<blockquote cite=\"://www.wireshark.org/docs/relnotes/wireshark-2.2.2.html\">\n\t <p>Wireshark project is releasing Wireshark 2.2.2, which addresses:</p>\n\t <ul>\n\t   <li>wnpa-sec-2016-58: Profinet I/O long loop - CVE-2016-9372</li>\n\t   <li>wnpa-sec-2016-59: AllJoyn crash - CVE-2016-9374</li>\n\t   <li>wnpa-sec-2016-60: OpenFlow crash - CVE-2016-9376</li>\n\t   <li>wnpa-sec-2016-61: DCERPC crash - CVE-2016-9373</li>\n\t   <li>wnpa-sec-2016-62: DTN infinite loop - CVE-2016-9375</li>\n\t </ul>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7fff2b16-b0ee-11e6-86b8-589cfc054129.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/docs/relnotes/wireshark-2.2.2.html"
+				}
+			],
+			"published": "2016-12-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9372",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9372"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9373",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9373"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9374",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9374"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9375",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9375"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9376"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-qt5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

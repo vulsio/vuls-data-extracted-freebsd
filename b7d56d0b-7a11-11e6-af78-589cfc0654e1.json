@@ -1,0 +1,63 @@
+{
+	"id": "b7d56d0b-7a11-11e6-af78-589cfc0654e1",
+	"advisories": [
+		{
+			"id": "b7d56d0b-7a11-11e6-af78-589cfc0654e1",
+			"title": "openjpeg -- multiple vulnerabilities",
+			"description": "\n\t<p>Tencent's Xuanwu LAB reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/09/08/2\">\n\t  <p>A Heap Buffer Overflow (Out-of-Bounds Write) issue was found in\n\t    function opj_dwt_interleave_v of dwt.c. This vulnerability allows\n\t    remote attackers to execute arbitrary code on vulnerable installations\n\t    of OpenJPEG.</p>\n\t  <p>An integer overflow issue exists in function opj_pi_create_decode of\n\t    pi.c. It can lead to Out-Of-Bounds Read and Out-Of-Bounds Write in\n\t    function opj_pi_next_cprl of pi.c (function opj_pi_next_lrcp,\n\t    opj_pi_next_rlcp, opj_pi_next_rpcl, opj_pi_next_pcrl may also be\n\t    vulnerable). This vulnerability allows remote attackers to execute\n\t    arbitrary code on vulnerable installations of OpenJPEG.</p>\n      </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b7d56d0b-7a11-11e6-af78-589cfc0654e1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "\"http://www.openwall.com/lists/oss-security/2016/09/08/2\""
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "\"http://www.openwall.com/lists/oss-security/2016/09/08/3\""
+				}
+			],
+			"published": "2016-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5157",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5157"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7163",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7163"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openjpeg"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.1_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

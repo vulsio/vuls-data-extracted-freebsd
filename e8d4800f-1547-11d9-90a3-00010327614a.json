@@ -1,0 +1,50 @@
+{
+	"id": "e8d4800f-1547-11d9-90a3-00010327614a",
+	"advisories": [
+		{
+			"id": "e8d4800f-1547-11d9-90a3-00010327614a",
+			"title": "distcc -- incorrect parsing of IP access control rules",
+			"description": "\n\t<blockquote cite=\"http://distcc.samba.org/ftp/distcc/distcc-2.16.NEWS\">\n\t  <p>Fix bug that might cause IP-based access control rules not to\n\t    be interpreted correctly on 64-bit platforms.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e8d4800f-1547-11d9-90a3-00010327614a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://distcc.samba.org/ftp/distcc/distcc-2.16.NEWS"
+				}
+			],
+			"published": "2004-10-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0601",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0601"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "distcc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.16"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

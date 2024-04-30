@@ -1,0 +1,129 @@
+{
+	"id": "b2ff68b2-9f29-11db-a4e4-0211d87675b7",
+	"advisories": [
+		{
+			"id": "b2ff68b2-9f29-11db-a4e4-0211d87675b7",
+			"title": "mplayer -- buffer overflow in the code for RealMedia RTSP streams.",
+			"description": "\n\t<blockquote cite=\"http://www.mplayerhq.hu/design7/news.html\">\n\t<p>A potential buffer overflow was found in the code used to handle\n\tRealMedia RTSP streams. When checking for matching asm rules, the code\n\tstores the results in a fixed-size array, but no boundary checks are\n\tperformed. This may lead to a buffer overflow if the user is tricked\n\tinto connecting to a malicious server. Since the attacker cannot write\n\tarbitrary data into the buffer, creating an exploit is very hard; but a\n\tDoS attack is easily made.\n\tA fix for this problem was committed to SVN on Sun Dec 31 13:27:53 2006\n\tUTC as r21799. The fix involves three files: stream/realrtsp/asmrp.c,\n\tstream/realrtsp/asmrp.h and stream/realrtsp/real.c.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b2ff68b2-9f29-11db-a4e4-0211d87675b7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mplayerhq.hu/design7/news.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=107217"
+				}
+			],
+			"published": "2007-01-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-6172",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-6172"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.10_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.10_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.10_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.10_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.10_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mplayer-gtk2-esound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.10_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

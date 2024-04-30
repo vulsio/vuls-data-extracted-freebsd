@@ -1,0 +1,133 @@
+{
+	"id": "a2565962-1156-11eb-9c9c-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "a2565962-1156-11eb-9c9c-d4c9ef517024",
+			"title": "MariaDB -- Undisclosed vulnerability",
+			"description": "\n\t<p>The MariaDB project reports:</p>\n\t<blockquote cite=\"https://mariadb.com/kb/en/mariadb-1056-release-notes/\">\n\t  <p>Details of this vulnerability have not yet been disclosed</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a2565962-1156-11eb-9c9c-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb-1056-release-notes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb-10415-release-notes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb-10325-release-notes/"
+				}
+			],
+			"published": "2020-10-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15180",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-15180"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb103-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.3.25"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb103-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.3.25"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb104-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.4.15"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb104-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.4.15"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb105-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.5.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb105-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.5.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

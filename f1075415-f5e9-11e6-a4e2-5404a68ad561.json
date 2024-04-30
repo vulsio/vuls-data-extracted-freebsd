@@ -1,0 +1,81 @@
+{
+	"id": "f1075415-f5e9-11e6-a4e2-5404a68ad561",
+	"advisories": [
+		{
+			"id": "f1075415-f5e9-11e6-a4e2-5404a68ad561",
+			"title": "wavpack -- multiple invalid memory reads",
+			"description": "\n\t<p>David Bryant reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2017/01/23/4\">\n\t  <p>global buffer overread in read_code / read_words.c</p>\n\t  <p>heap out of bounds read in WriteCaffHeader / caff.c</p>\n\t  <p>heap out of bounds read in unreorder_channels / wvunpack.c</p>\n\t  <p>heap oob read in read_new_config_info / open_utils.c</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f1075415-f5e9-11e6-a4e2-5404a68ad561.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2017/01/23/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/dbry/WavPack/commit/4bc05fc490b66ef2d45b1de26abf1455b486b0dc"
+				}
+			],
+			"published": "2017-02-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10169",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10169"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-10170",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10170"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-10171",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10171"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-10172",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10172"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wavpack"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

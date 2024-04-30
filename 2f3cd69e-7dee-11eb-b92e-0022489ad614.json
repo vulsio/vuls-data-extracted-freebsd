@@ -1,0 +1,113 @@
+{
+	"id": "2f3cd69e-7dee-11eb-b92e-0022489ad614",
+	"advisories": [
+		{
+			"id": "2f3cd69e-7dee-11eb-b92e-0022489ad614",
+			"title": "Node.js -- February 2021 Security Releases",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/february-2021-security-releases/\">\n\t  <h1>HTTP2 'unknownProtocol' cause Denial of Service by resource exhaustion (Critical) (CVE-2021-22883)</h1>\n\t  <p>Affected Node.js versions are vulnerable to denial of service attacks when too many connection attempts with an 'unknownProtocol' are established. This leads to a leak of file descriptors. If a file descriptor limit is configured on the system, then the server is unable to accept new connections and prevent the process also from opening, e.g. a file. If no file descriptor limit is configured, then this lead to an excessive memory usage and cause the system to run out of memory.</p>\n\t  <h1>DNS rebinding in --inspect (CVE-2021-22884)</h1>\n\t  <p>Affected Node.js versions are vulnerable to a DNS rebinding attack when the whitelist includes \"localhost6\". When \"localhost6\" is not present in /etc/hosts, it is just an ordinary domain that is resolved via DNS, i.e., over network. If the attacker controls the victim's DNS server or can spoof its responses, the DNS rebinding protection can be bypassed by using the \"localhost6\" domain. As long as the attacker uses the \"localhost6\" domain, they can still apply the attack described in CVE-2018-7160.</p>\n\t  <h1>OpenSSL - Integer overflow in CipherUpdate (CVE-2021-23840)</h1>\n\t  <p>This is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20210216.txt</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2f3cd69e-7dee-11eb-b92e-0022489ad614.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/february-2021-security-releases/"
+				}
+			],
+			"published": "2021-03-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-22883",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22883"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-22884",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22884"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-23840",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-23840"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node10"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.24.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node12"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.21.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node14"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "14.16.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.10.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

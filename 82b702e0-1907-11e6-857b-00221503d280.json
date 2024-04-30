@@ -1,0 +1,86 @@
+{
+	"id": "82b702e0-1907-11e6-857b-00221503d280",
+	"advisories": [
+		{
+			"id": "82b702e0-1907-11e6-857b-00221503d280",
+			"title": "imagemagick -- buffer overflow",
+			"description": "\n\t<p>ImageMagick reports:</p>\n\t<blockquote cite=\"http://legacy.imagemagick.org/script/changelog.php\">\n\t  <p>Fix a buffer overflow in magick/drag.c/DrawStrokePolygon().</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/82b702e0-1907-11e6-857b-00221503d280.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://legacy.imagemagick.org/script/changelog.php"
+				}
+			],
+			"published": "2016-05-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.9.4.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick-nox11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.9.4.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.0.1.3",
+						"ge": "7.0.0.0.b20150715"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick7-nox11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.0.1.3",
+						"ge": "7.0.0.0.b20150715"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

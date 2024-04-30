@@ -1,0 +1,84 @@
+{
+	"id": "5789a92e-5d7f-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "5789a92e-5d7f-11d8-80e3-0020ed76ef5a",
+			"title": "pine remotely exploitable buffer overflow in newmail.c",
+			"description": "\n\t<p>Kris Kennaway reports a remotely exploitable buffer overflow\n\t  in newmail.c.  Mike Silbersack submitted the fix.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5789a92e-5d7f-11d8-80e3-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.freebsd.org/cgi/mid.cgi?200009290728.AAA69097"
+				}
+			],
+			"published": "2004-02-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-pine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.21"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "iw-pine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.21"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.21"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pine4-ssl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.21"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

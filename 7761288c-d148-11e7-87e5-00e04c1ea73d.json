@@ -1,0 +1,39 @@
+{
+	"id": "7761288c-d148-11e7-87e5-00e04c1ea73d",
+	"advisories": [
+		{
+			"id": "7761288c-d148-11e7-87e5-00e04c1ea73d",
+			"title": "mybb -- multiple vulnerabilities",
+			"description": "\n\t<p>myBB Team reports:</p>\n\t<blockquote cite=\"https://blog.mybb.com/2017/11/07/mybb-1-8-13-released-security-maintenance-release/\">\n\t  <p>High risk: Installer RCE on configuration file write</p>\n\t  <p>High risk: Language file headers RCE</p>\n\t  <p>Medium risk: Installer XSS</p>\n\t  <p>Medium risk: Mod CP Edit Profile XSS</p>\n\t  <p>Low risk: Insufficient moderator permission check in delayed moderation tools</p>\n\t  <p>Low risk: Announcements HTML filter bypass</p>\n\t  <p>Low risk: Language Pack Properties XSS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7761288c-d148-11e7-87e5-00e04c1ea73d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.mybb.com/2017/11/07/mybb-1-8-13-released-security-maintenance-release/"
+				}
+			],
+			"published": "2017-11-24T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mybb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.13"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

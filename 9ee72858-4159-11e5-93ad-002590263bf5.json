@@ -1,0 +1,58 @@
+{
+	"id": "9ee72858-4159-11e5-93ad-002590263bf5",
+	"advisories": [
+		{
+			"id": "9ee72858-4159-11e5-93ad-002590263bf5",
+			"title": "froxlor -- database password information leak",
+			"description": "\n\t<p>oss-security-list@demlak.de reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/238\">\n\t  <p>An unauthenticated remote attacker is able to get the database\n\t    password via webaccess due to wrong file permissions of the /logs/\n\t    folder in froxlor version 0.9.33.1 and earlier. The plain SQL\n\t    password and username may be stored in the /logs/sql-error.log file.\n\t    This directory is publicly reachable under the default\n\t    configuration/setup.</p>\n\t</blockquote>\n\t<p>Note that froxlor 0.9.33.2 prevents future logging of passwords but\n\t  does not retroactively remove passwords already logged.  Michael\n\t  Kaufmann, the Froxlor lead developer reports:</p>\n\t<blockquote cite=\"http://forum.froxlor.org/index.php/topic/13054-important-bugfix-release-09332/#entry30025\">\n\t  <p>Removing all .log files from the directory should do the job,\n\t    alternatively just use the class.ConfigIO.php from Github</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9ee72858-4159-11e5-93ad-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2015/q3/238"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://forum.froxlor.org/index.php/topic/13054-important-bugfix-release-09332/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=202262"
+				}
+			],
+			"published": "2015-08-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5959",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5959"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "froxlor"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.33.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

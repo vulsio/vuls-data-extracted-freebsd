@@ -1,0 +1,102 @@
+{
+	"id": "3546a833-03ea-11dc-a51d-0019b95d4f14",
+	"advisories": [
+		{
+			"id": "3546a833-03ea-11dc-a51d-0019b95d4f14",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"http://de5.samba.org/samba/security/CVE-2007-2444.html\">\n\t  <p>A bug in the local SID/Name translation routines may\n\t    potentially result in a user being able to issue SMB/CIFS\n\t    protocol operations as root.</p>\n\t  <p>When translating SIDs to/from names using Samba local\n\t    list of user and group accounts, a logic error in the smbd\n\t    daemon's internal security stack may result in a\n\t    transition to the root user id rather than the non-root\n\t    user.  The user is then able to temporarily issue SMB/CIFS\n\t    protocol operations as the root user.  This window of\n\t    opportunity may allow the attacker to establish additional\n\t    means of gaining root access to the server.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://de5.samba.org/samba/security/CVE-2007-2446.html\">\n\t  <p>Various bugs in Samba's NDR parsing can allow a user to\n\t    send specially crafted MS-RPC requests that will overwrite\n\t    the heap space with user defined data.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://de5.samba.org/samba/security/CVE-2007-2447.html\">\n\t  <p>Unescaped user input parameters are passed as arguments\n\t    to /bin/sh allowing for remote command execution.</p>\n\t  <p>This bug was originally reported against the anonymous\n\t    calls to the SamrChangePassword() MS-RPC function in\n\t    combination with the \"username map script\" smb.conf option\n\t    (which is not enabled by default).</p>\n\t  <p>After further investigation by Samba developers, it was\n\t    determined that the problem was much broader and impacts\n\t    remote printer and file share management as well.  The\n\t    root cause is passing unfiltered user input provided via\n\t    MS-RPC calls to /bin/sh when invoking externals scripts\n\t    defined in smb.conf.  However, unlike the \"username map\n\t    script\" vulnerability, the remote file and printer\n\t    management scripts require an authenticated user\n\t    session.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3546a833-03ea-11dc-a51d-0019b95d4f14.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://de5.samba.org/samba/security/CVE-2007-2444.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://de5.samba.org/samba/security/CVE-2007-2446.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://de5.samba.org/samba/security/CVE-2007-2447.html"
+				}
+			],
+			"published": "2007-05-16T00:00:00Z",
+			"modified": "2008-09-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-2444",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2444"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-2446",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2446"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-2447",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2447"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.25",
+						"gt": "3.*"
+					},
+					{
+						"lt": "3.0.25,1",
+						"gt": "3.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-samba"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.25",
+						"gt": "3.*"
+					},
+					{
+						"lt": "3.0.25,1",
+						"gt": "3.*,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

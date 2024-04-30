@@ -1,0 +1,55 @@
+{
+	"id": "3243e839-f489-11d8-9837-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "3243e839-f489-11d8-9837-000c41e2cdad",
+			"title": "fidogate -- write files as `news' user",
+			"description": "\n\t<p>Neils Heinen reports that the setuid `news' binaries\n\t  installed as part of fidogate may be used to create files or\n\t  append to file with the privileges of the `news' user by\n\t  setting the LOGFILE environmental variable.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3243e839-f489-11d8-9837-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cvs.sourceforge.net/viewcvs.py/fidogate/fidogate/ChangeLog?rev=4.320&view=markup"
+				}
+			],
+			"published": "2004-08-22T00:00:00Z",
+			"modified": "2004-08-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fidogate"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.4.9_3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fidogate-ds"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.1.1_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,55 @@
+{
+	"id": "6b90acba-6a0a-11ea-92ab-00163e433440",
+	"advisories": [
+		{
+			"id": "6b90acba-6a0a-11ea-92ab-00163e433440",
+			"title": "FreeBSD -- Kernel memory disclosure with nested jails",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A missing NUL-termination check for the jail_set(2) configration\n\toption \"osrelease\" may return more bytes when reading the jail\n\tconfiguration back with jail_get(2) than were originally set.</p>\n\t<h1>Impact:</h1>\n\t<p>For jails with a non-default setting of children.max &gt; 0 (\"nested\n\tjails\") a superuser inside a jail can create a jail and may be able to\n\tread and take advantage of exposed kernel memory.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6b90acba-6a0a-11ea-92ab-00163e433440.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:08.jail.asc"
+				}
+			],
+			"published": "2020-03-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7453",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7453"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.1_3",
+						"ge": "12.1"
+					},
+					{
+						"lt": "11.3_7",
+						"ge": "11.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

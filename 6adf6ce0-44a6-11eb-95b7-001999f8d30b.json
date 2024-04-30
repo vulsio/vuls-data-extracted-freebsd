@@ -1,0 +1,73 @@
+{
+	"id": "6adf6ce0-44a6-11eb-95b7-001999f8d30b",
+	"advisories": [
+		{
+			"id": "6adf6ce0-44a6-11eb-95b7-001999f8d30b",
+			"title": "asterisk -- Remote crash in res_pjsip_diversion",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>AST-2020-003: A crash can occur in Asterisk when a SIP\n\t  message is received that has a History-Info header, which\n\t  contains a tel-uri.</p>\n\t  <p>AST-2020-004: A crash can occur in Asterisk when a SIP\n\t  181 response is received that has a Diversion header,\n\t  which contains a tel-uri.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6adf6ce0-44a6-11eb-95b7-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2020-003.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2020-004.html"
+				}
+			],
+			"published": "2020-12-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk13"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.38.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.15.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk18"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "18.1.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

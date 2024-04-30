@@ -1,0 +1,139 @@
+{
+	"id": "a7706414-1be7-11e2-9aad-902b343deec9",
+	"advisories": [
+		{
+			"id": "a7706414-1be7-11e2-9aad-902b343deec9",
+			"title": "Wireshark -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Wireshark reports:</p>\n\t<blockquote cite=\"http://www.wireshark.org/docs/relnotes/wireshark-1.8.3.html\">\n\t  <p>The HSRP dissector could go into an infinite loop.</p>\n\t  <p>The PPP dissector could abort.</p>\n\t  <p>Martin Wilck discovered an infinite loop in the DRDA\n\t    dissector.</p>\n\t  <p>Laurent Butti discovered a buffer overflow in the LDP\n\t    dissector.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a7706414-1be7-11e2-9aad-902b343deec9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-26.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-27.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-28.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-29.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/docs/relnotes/wireshark-1.8.3.html"
+				}
+			],
+			"published": "2012-10-22T00:00:00Z",
+			"modified": "2013-06-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5237",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5237"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5238",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5238"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5239",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5239"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5240",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5240"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.8.2_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.8.2_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.8.2_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.8.2_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

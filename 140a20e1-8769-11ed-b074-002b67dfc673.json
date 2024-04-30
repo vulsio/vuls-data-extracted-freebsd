@@ -1,0 +1,39 @@
+{
+	"id": "140a20e1-8769-11ed-b074-002b67dfc673",
+	"advisories": [
+		{
+			"id": "140a20e1-8769-11ed-b074-002b67dfc673",
+			"title": "webtrees -- vulnerability",
+			"description": "\n\t<p>Webtrees reports:</p>\n\t<blockquote cite=\"https://webtrees.net/blog/2022/06/04/new-webtrees-release-1-7-20.html\">\n\t  <p>GEDCOM imports containing errors and HTML displayed unescaped.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/140a20e1-8769-11ed-b074-002b67dfc673.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://webtrees.net/blog/2022/06/04/new-webtrees-release-1-7-20.html"
+				}
+			],
+			"published": "2022-12-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "webtrees"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.20"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

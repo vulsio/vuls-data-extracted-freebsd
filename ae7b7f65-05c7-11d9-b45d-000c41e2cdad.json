@@ -1,0 +1,51 @@
+{
+	"id": "ae7b7f65-05c7-11d9-b45d-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "ae7b7f65-05c7-11d9-b45d-000c41e2cdad",
+			"title": "webmin -- insecure temporary file creation at installation time",
+			"description": "\n\t<p>The Webmin developers documented a security issue in the\n\t  release notes for version 1.160:</p>\n\t<blockquote cite=\"http://www.webmin.com/changes-1.160.html\">\n\t  <p>Fixed a security hole in the maketemp.pl script, used\n\t    to create the /tmp/.webmin directory at install time. If\n\t    an un-trusted user creates this directory before Webmin\n\t    is installed, he could create in it a symbolic link\n\t    pointing to a critical file on the system, which would be\n\t    overwritten when Webmin writes to the link filename.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ae7b7f65-05c7-11d9-b45d-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.webmin.com/changes-1.160.html"
+				}
+			],
+			"published": "2004-09-14T00:00:00Z",
+			"modified": "2004-09-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0559",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0559"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "webmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.150_5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

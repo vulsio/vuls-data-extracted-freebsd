@@ -1,0 +1,39 @@
+{
+	"id": "482bb980-99a3-11ee-b5f7-6bd56600d90c",
+	"advisories": [
+		{
+			"id": "482bb980-99a3-11ee-b5f7-6bd56600d90c",
+			"title": "gitea -- missing permission checks",
+			"description": "\n\t<p>The Gitea team reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/28406\">\n\t  <p>Fix missing check</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/28423\">\n\t  <p>Do some missing checks</p>\n\t</blockquote>\n\t<p>By crafting an API request, attackers can access the contents of\n\tissues even though the logged-in user does not have access rights to\n\tthese issues.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/482bb980-99a3-11ee-b5f7-6bd56600d90c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.21.2"
+				}
+			],
+			"published": "2023-09-10T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.21.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

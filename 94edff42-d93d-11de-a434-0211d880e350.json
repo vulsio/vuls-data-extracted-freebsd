@@ -1,0 +1,55 @@
+{
+	"id": "94edff42-d93d-11de-a434-0211d880e350",
+	"advisories": [
+		{
+			"id": "94edff42-d93d-11de-a434-0211d880e350",
+			"title": "libvorbis -- multiple vulnerabilities",
+			"description": "\n\t<p>The Ubuntu security team reports:</p>\n\t<blockquote cite=\"http://www.ubuntu.com/usn/usn-861-1\">\n\t  <p>It was discovered that libvorbis did not correctly\n\t    handle certain malformed vorbis files. If a user were\n\t    tricked into opening a specially crafted vorbis file\n\t    with an application that uses libvorbis, an attacker\n\t    could cause a denial of service or possibly execute\n\t    arbitrary code with the user's privileges.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/94edff42-d93d-11de-a434-0211d880e350.html"
+				}
+			],
+			"published": "2009-11-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1420",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1420"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3379"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libvorbis"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.3_1,3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "0f62be39-e8e0-11e1-bea0-002354ed89bc",
+	"advisories": [
+		{
+			"id": "0f62be39-e8e0-11e1-bea0-002354ed89bc",
+			"title": "OpenTTD -- Denial of Service",
+			"description": "\n\t<p>The OpenTTD Team reports:</p>\n\t<blockquote cite=\"http://security.openttd.org/en/CVE-2012-3436\">\n\t  <p>Denial of service (server) using ships on half tiles and\n\t    landscaping.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0f62be39-e8e0-11e1-bea0-002354ed89bc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.openttd.org/en/CVE-2012-3436"
+				}
+			],
+			"published": "2012-08-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3436",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3436"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openttd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

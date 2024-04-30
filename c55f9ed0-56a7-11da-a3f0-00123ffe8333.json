@@ -1,0 +1,47 @@
+{
+	"id": "c55f9ed0-56a7-11da-a3f0-00123ffe8333",
+	"advisories": [
+		{
+			"id": "c55f9ed0-56a7-11da-a3f0-00123ffe8333",
+			"title": "phpmyadmin -- HTTP Response Splitting vulnerability",
+			"description": "\n\t<p>A phpMyAdmin security advisory reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-6\">\n\t  <p>Some scripts in phpMyAdmin are vulnerable to an\n\t    HTTP Response Splitting attack.</p>\n\t  <p>Severity:</p>\n\t  <p>We consider these vulnerabilities to be serious.\n\t    However, they can only be triggered on systems running\n\t    with register_globals = on.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c55f9ed0-56a7-11da-a3f0-00123ffe8333.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17578/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.fitsec.com/advisories/FS-05-02.txt"
+				}
+			],
+			"published": "2005-11-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.4.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

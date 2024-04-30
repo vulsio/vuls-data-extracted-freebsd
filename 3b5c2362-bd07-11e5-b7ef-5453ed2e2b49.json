@@ -1,0 +1,132 @@
+{
+	"id": "3b5c2362-bd07-11e5-b7ef-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "3b5c2362-bd07-11e5-b7ef-5453ed2e2b49",
+			"title": "libproxy -- stack-based buffer overflow",
+			"description": "\n\t<p>Tomas Hoger reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=864417#c0\">\n\t  <p>A buffer overflow flaw was discovered in the libproxy's\n\t    url::get_pac() used to download proxy.pac proxy auto-configuration\n\t    file. A malicious host hosting proxy.pac, or a man in the middle\n\t    attacker, could use this flaw to trigger a stack-based buffer\n\t    overflow in an application using libproxy, if proxy configuration\n\t    instructed it to download proxy.pac file from a remote HTTP\n\t    server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3b5c2362-bd07-11e5-b7ef-5453ed2e2b49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-4504"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libproxy/libproxy/commit/c440553c12836664afd24a24fb3a4d10a2facd2c"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=864417"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2012/10/12/1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/forum/?fromgroups=#!topic/libproxy/VxZ8No7mT0E"
+				}
+			],
+			"published": "2016-01-17T00:00:00Z",
+			"modified": "2016-01-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4504",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4504"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libproxy"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.6_1",
+						"ge": "0.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libproxy-gnome"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.6_2",
+						"ge": "0.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libproxy-kde"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.6_6",
+						"ge": "0.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libproxy-perl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.6_3",
+						"ge": "0.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libproxy-webkit"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.4.6_4",
+						"ge": "0.4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

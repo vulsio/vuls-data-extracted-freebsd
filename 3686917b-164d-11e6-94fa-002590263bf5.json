@@ -1,0 +1,138 @@
+{
+	"id": "3686917b-164d-11e6-94fa-002590263bf5",
+	"advisories": [
+		{
+			"id": "3686917b-164d-11e6-94fa-002590263bf5",
+			"title": "wordpress -- multiple vulnerabilities",
+			"description": "\n\t<p>Helen Hou-Sandi reports:</p>\n\t<blockquote cite=\"https://wordpress.org/news/2016/05/wordpress-4-5-2/\">\n\t  <p>WordPress 4.5.2 is now available. This is a security release for\n\t    all previous versions and we strongly encourage you to update your\n\t    sites immediately.</p>\n\t  <p>WordPress versions 4.5.1 and earlier are affected by a SOME\n\t    vulnerability through Plupload, the third-party library WordPress\n\t    uses for uploading files. WordPress versions 4.2 through 4.5.1 are\n\t    vulnerable to reflected XSS using specially crafted URIs through\n\t    MediaElement.js, the third-party library used for media players.\n\t    MediaElement.js and Plupload have also released updates fixing\n\t    these issues.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3686917b-164d-11e6-94fa-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wordpress.org/news/2016/05/wordpress-4-5-2/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/05/07/7"
+				}
+			],
+			"published": "2016-05-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4566",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4566"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4567",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4567"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "de-wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ru-wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-wordpress-zh_CN"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-wordpress-zh_TW"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

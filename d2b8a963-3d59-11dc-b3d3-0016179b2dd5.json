@@ -1,0 +1,59 @@
+{
+	"id": "d2b8a963-3d59-11dc-b3d3-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "d2b8a963-3d59-11dc-b3d3-0016179b2dd5",
+			"title": "p5-Net-DNS -- multiple Vulnerabilities",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/25829/\">\n\t  <p>An error exists in the handling of DNS queries where IDs are\n\t    incremented with a fixed value and are additionally used for\n\t    child processes in a forking server. This can be exploited to\n\t    poison the DNS cache of an application using the module if a\n\t    valid ID is guessed.</p>\n\t  <p>An error in the PP implementation within the \"dn_expand()\"\n\t    function can be exploited to cause a stack overflow due to an\n\t    endless loop via a specially crafted DNS packet.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d2b8a963-3d59-11dc-b3d3-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/25829/"
+				}
+			],
+			"published": "2007-07-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3377"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3409",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3409"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p5-Net-DNS"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.60"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

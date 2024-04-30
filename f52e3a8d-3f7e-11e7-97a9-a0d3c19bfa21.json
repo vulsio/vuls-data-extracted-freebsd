@@ -1,0 +1,68 @@
+{
+	"id": "f52e3a8d-3f7e-11e7-97a9-a0d3c19bfa21",
+	"advisories": [
+		{
+			"id": "f52e3a8d-3f7e-11e7-97a9-a0d3c19bfa21",
+			"title": "NVIDIA UNIX driver -- multiple vulnerabilities in the kernel mode layer handler",
+			"description": "\n\t<p>NVIDIA Unix security team reports:</p>\n\t<blockquote cite=\"http://nvidia.custhelp.com/app/answers/detail/a_id/4462\">\n\t  <p>NVIDIA GPU Display Driver contains vulnerabilities in the\n\t    kernel mode layer handler where not correctly validated user\n\t    input, NULL pointer dereference, and incorrect access control\n\t    may lead to denial of service or potential escalation of\n\t    privileges.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f52e3a8d-3f7e-11e7-97a9-a0d3c19bfa21.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://nvidia.custhelp.com/app/answers/detail/a_id/4462"
+				}
+			],
+			"published": "2017-05-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-0350",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0350"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0351",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0351"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0352",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0352"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nvidia-driver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "375.66"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

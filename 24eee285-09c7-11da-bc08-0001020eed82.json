@@ -1,0 +1,104 @@
+{
+	"id": "24eee285-09c7-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "24eee285-09c7-11da-bc08-0001020eed82",
+			"title": "xpdf -- disk fill DoS vulnerability",
+			"description": "\n\t<p>xpdf is vulnerable to a denial of service vulnerability\n\t  which can cause xpdf to create an infinitely large file,\n\t  thereby filling up the /tmp partition, when opening a\n\t  specially crafted PDF file.</p>\n\t<p>Note that several applications contains an embedded version\n\t  of xpdf, therefor making them the vulnerable to the same\n\t  DoS.\tIn CUPS this vulnerability would cause the pdftops\n\t  filter to crash.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/24eee285-09c7-11da-bc08-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://rhn.redhat.com/errata/RHSA-2005-670.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kde.org/info/security/advisory-20050809-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14529"
+				}
+			],
+			"published": "2005-08-12T00:00:00Z",
+			"modified": "2005-09-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2097",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2097"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xpdf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.00_7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kdegraphics"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.4.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gpdf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.10.0_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-base"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.23.0_5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,94 @@
+{
+	"id": "3aa8b781-d2c4-11e5-b2bd-002590263bf5",
+	"advisories": [
+		{
+			"id": "3aa8b781-d2c4-11e5-b2bd-002590263bf5",
+			"title": "horde -- XSS vulnerabilities",
+			"description": "\n\t<p>The Horde Team reports:</p>\n\t<blockquote cite=\"http://lists.horde.org/archives/announce/2016/001149.html\">\n\t  <p>Fixed XSS vulnerabilities in menu bar and form renderer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3aa8b781-d2c4-11e5-b2bd-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/horde/horde/commit/11d74fa5a22fe626c5e5a010b703cd46a136f253"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.horde.org/ticket/14213"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/horde/horde/commit/f03301cf6edcca57121a15e80014c4d0f29d99a0"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/horde/horde/commit/ab07a1b447de34e13983b4d7ceb18b58c3a358d8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/02/06/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.horde.org/archives/announce/2016/001149.html"
+				}
+			],
+			"published": "2016-02-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8807",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8807"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2228",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2228"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pear-Horde_Core"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.22.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

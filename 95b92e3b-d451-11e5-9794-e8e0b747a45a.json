@@ -1,0 +1,50 @@
+{
+	"id": "95b92e3b-d451-11e5-9794-e8e0b747a45a",
+	"advisories": [
+		{
+			"id": "95b92e3b-d451-11e5-9794-e8e0b747a45a",
+			"title": "libgcrypt -- side-channel attack on ECDH",
+			"description": "\n\t<p>GnuPG reports:</p>\n\t<blockquote cite=\"https://lists.gnupg.org/pipermail/gnupg-announce/2016q1/000384.html\">\n\t  <p>Mitigate side-channel attack on ECDH with Weierstrass curves.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/95b92e3b-d451-11e5-9794-e8e0b747a45a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.gnupg.org/pipermail/gnupg-announce/2016q1/000384.html"
+				}
+			],
+			"published": "2016-02-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7511",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7511"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libgcrypt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,258 @@
+{
+	"id": "12b336c6-fe36-11dc-b09c-001c2514716c",
+	"advisories": [
+		{
+			"id": "12b336c6-fe36-11dc-b09c-001c2514716c",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Foundation reports of multiple security issues\n\t  in Firefox, Seamonkey, and Thunderbird.  Several of these\n\t  issues can probably be used to run arbitrary code with the\n\t  privilege of the user running the program.</p>\n\t<blockquote cite=\"http://www.mozilla.org/projects/security/known-vulnerabilities.html\">\n\t  <ul>\n\t    <li><a href=\"/security/announce/2008/mfsa2008-19.html\">MFSA 2008-19</a>\n\t      XUL popup spoofing variant (cross-tab popups)</li>\n\t    <li><a href=\"/security/announce/2008/mfsa2008-18.html\">MFSA 2008-18</a>\n\t      Java socket connection to any local port via LiveConnect</li>\n\t    <li><a href=\"/security/announce/2008/mfsa2008-17.html\">MFSA 2008-17</a>\n\t      Privacy issue with SSL Client Authentication</li>\n\t    <li><a href=\"/security/announce/2008/mfsa2008-16.html\">MFSA 2008-16</a>\n\t      HTTP Referrer spoofing with malformed URLs</li>\n\t    <li><a href=\"/security/announce/2008/mfsa2008-15.html\">MFSA 2008-15</a>\n\t      Crashes with evidence of memory corruption (rv:1.8.1.13)</li>\n\t    <li><a href=\"/security/announce/2008/mfsa2008-14.html\">MFSA 2008-14</a>\n\t      JavaScript privilege escalation and arbitrary code execution</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/12b336c6-fe36-11dc-b09c-001c2514716c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/28448"
+				}
+			],
+			"published": "2008-03-30T00:00:00Z",
+			"modified": "2009-12-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1241",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1241"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1240",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1240"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-4879",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-4879"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1238",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1238"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1236",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1236"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1237",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1237"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1233",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1233"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1234",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1234"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1235",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1235"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.13,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "flock"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-flock"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.14"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.0.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

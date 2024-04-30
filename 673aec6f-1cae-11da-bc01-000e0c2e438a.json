@@ -1,0 +1,55 @@
+{
+	"id": "673aec6f-1cae-11da-bc01-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "673aec6f-1cae-11da-bc01-000e0c2e438a",
+			"title": "htdig -- cross site scripting vulnerability",
+			"description": "\n\t<p>Michael Krax reports a vulnerability within htdig.  The\n\t  vulnerability lies within an unsanitized config parameter,\n\t  allowing a malicious attacker to execute arbitrary scripting\n\t  code on the target's browser.  This might allow the attacker\n\t  to obtain the user's cookies which are associated with the\n\t  site, including cookies used for authentication.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/673aec6f-1cae-11da-bc01-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securitytracker.com/alerts/2005/Feb/1013078.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12442"
+				}
+			],
+			"published": "2005-09-04T00:00:00Z",
+			"modified": "2005-09-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0085",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0085"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "htdig"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.0.b6_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

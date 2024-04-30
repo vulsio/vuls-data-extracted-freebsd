@@ -1,0 +1,39 @@
+{
+	"id": "584c506d-0e98-11e0-b59b-0050569b2d21",
+	"advisories": [
+		{
+			"id": "584c506d-0e98-11e0-b59b-0050569b2d21",
+			"title": "redmine -- multiple vulnerabilities",
+			"description": "\n\t<p>Jean-Philippe Lang reports:</p>\n\t<blockquote cite=\"http://www.redmine.org/news/49\">\n\t  <p>This release also fixes 3 security issues reported by\n\t    joernchen of Phenoelit:</p>\n\t  <ul>\n\t    <li>logged in users may be able to access private data\n\t     (affected versions: 1.0.x)</li>\n\t    <li>persistent XSS vulnerability in textile formatter\n\t     (affected versions: all previous releases)</li>\n\t    <li>remote command execution in bazaar repository adapter\n\t     (affected versions: 0.9.x, 1.0.x)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/584c506d-0e98-11e0-b59b-0050569b2d21.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.redmine.org/news/49"
+				}
+			],
+			"published": "2010-12-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redmine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

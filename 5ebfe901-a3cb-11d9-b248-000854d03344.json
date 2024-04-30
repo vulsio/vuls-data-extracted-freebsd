@@ -1,0 +1,51 @@
+{
+	"id": "5ebfe901-a3cb-11d9-b248-000854d03344",
+	"advisories": [
+		{
+			"id": "5ebfe901-a3cb-11d9-b248-000854d03344",
+			"title": "hashcash -- format string vulnerability",
+			"description": "\n\t<p>A Gentoo Linux Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.gentoo.org/security/en/glsa/glsa-200503-12.xml\">\n\t  <p>Tavis Ormandy of the Gentoo Linux Security Audit Team\n\t    identified a flaw in the Hashcash utility that an attacker\n\t    could expose by specifying a malformed reply address.</p>\n\t  <p>Successful exploitation would permit an attacker to disrupt\n\t    Hashcash users, and potentially execute arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5ebfe901-a3cb-11d9-b248-000854d03344.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200503-12.xml"
+				}
+			],
+			"published": "2005-04-02T00:00:00Z",
+			"modified": "2005-04-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0687",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0687"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "hashcash"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.17"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

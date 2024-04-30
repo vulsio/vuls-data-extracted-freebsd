@@ -1,0 +1,81 @@
+{
+	"id": "9c7177ff-1fe1-11e5-9a01-bcaec565249c",
+	"advisories": [
+		{
+			"id": "9c7177ff-1fe1-11e5-9a01-bcaec565249c",
+			"title": "libxml2 -- Enforce the reader to run in constant memory",
+			"description": "\n\t<p>Daniel Veilland reports:</p>\n\t<blockquote cite=\"https://git.gnome.org/browse/libxml2/commit/?id=213f1fe0d76d30eaed6e5853057defc43e6df2c9\">\n\t  <p>Enforce the reader to run in constant memory. One of the\n\t    operation on the reader could resolve entities leading to\n\t    the classic expansion issue. Make sure the buffer used for\n\t    xmlreader operation is bounded. Introduce a new allocation\n\t    type for the buffers for this effect.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9c7177ff-1fe1-11e5-9a01-bcaec565249c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://git.gnome.org/browse/libxml2/commit/?id=213f1fe0d76d30eaed6e5853057defc43e6df2c9"
+				}
+			],
+			"published": "2015-07-01T00:00:00Z",
+			"modified": "2016-01-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1819",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1819"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libxml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.9.2_3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c6-libxml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.6_5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-libxml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

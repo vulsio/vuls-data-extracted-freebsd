@@ -1,0 +1,86 @@
+{
+	"id": "4582948a-9716-11de-83a5-001999392805",
+	"advisories": [
+		{
+			"id": "4582948a-9716-11de-83a5-001999392805",
+			"title": "opera -- multiple vulnerabilities",
+			"description": "\n\t <p>Opera Team Reports:</p>\n\t <blockquote cite=\"http://www.opera.com/docs/changelogs/freebsd/1000/\">\n\t     <ul>\n\t       <li>Issue where sites using revoked intermediate certificates might be shown as secure</li>\n\t       <li>Issue where the collapsed address bar didn't show the current domain</li>\n\t       <li>Issue where pages could trick users into uploading files</li>\n\t       <li>Some IDNA characters not correctly displaying in the address bar</li>\n\t       <li>Issue where Opera accepts nulls and invalid wild-cards in certificates</li>\n\t     </ul>\n\t </blockquote>\n       ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4582948a-9716-11de-83a5-001999392805.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/929/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/930/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/931/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/932/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/934/"
+				}
+			],
+			"published": "2009-09-04T00:00:00Z",
+			"modified": "2009-10-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.00.20090830"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "10.00.b3_1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.00"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

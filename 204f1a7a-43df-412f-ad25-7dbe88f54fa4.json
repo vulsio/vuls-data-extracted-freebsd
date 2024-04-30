@@ -1,0 +1,39 @@
+{
+	"id": "204f1a7a-43df-412f-ad25-7dbe88f54fa4",
+	"advisories": [
+		{
+			"id": "204f1a7a-43df-412f-ad25-7dbe88f54fa4",
+			"title": "zeek -- potential DoS vulnerabilty",
+			"description": "\n\t<p>Tim Wojtulewicz of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v4.0.7\">\n\t  <p> Fix potential hang in the DNS analyzer when receiving\n\t  a specially-crafted packet. Due to the possibility of\n\t  this happening with packets received from the network,\n\t  this is a potential DoS vulnerability. </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/204f1a7a-43df-412f-ad25-7dbe88f54fa4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/zeek/zeek/releases/tag/v4.0.7"
+				}
+			],
+			"published": "2022-06-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zeek"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

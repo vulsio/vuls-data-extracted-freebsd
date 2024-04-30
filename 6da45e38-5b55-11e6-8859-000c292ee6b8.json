@@ -1,0 +1,50 @@
+{
+	"id": "6da45e38-5b55-11e6-8859-000c292ee6b8",
+	"advisories": [
+		{
+			"id": "6da45e38-5b55-11e6-8859-000c292ee6b8",
+			"title": "collectd -- Network plugin heap overflow",
+			"description": "\n\t<p>The collectd Project reports:</p>\n\t<blockquote cite=\"http://collectd.org/news.shtml#news98\">\n\t  <p>Emilien Gaspar has identified a heap overflow in collectd's\n\t    network plugin which can be triggered remotely and is potentially\n\t    exploitable.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6da45e38-5b55-11e6-8859-000c292ee6b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://collectd.org/news.shtml#news98"
+				}
+			],
+			"published": "2016-08-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6254",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6254"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "collectd5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

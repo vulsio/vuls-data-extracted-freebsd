@@ -1,0 +1,173 @@
+{
+	"id": "fb74eacc-ec8a-11e6-bc8a-0011d823eebd",
+	"advisories": [
+		{
+			"id": "fb74eacc-ec8a-11e6-bc8a-0011d823eebd",
+			"title": "tiff -- multiple vulnerabilities",
+			"description": "\n\t<p>libtiff project reports:</p>\n\t<blockquote cite=\"http://simplesystems.org/libtiff/v4.0.7.html\">\n\t  <p>Multiple flaws have been discovered in libtiff library and\n\t    utilities.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fb74eacc-ec8a-11e6-bc8a-0011d823eebd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://simplesystems.org/libtiff/v4.0.7.html"
+				}
+			],
+			"published": "2017-02-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9533",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9533"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9534",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9534"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9535",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9535"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-8870",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8870"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5652",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5652"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9540",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9540"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9537",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9537"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9536",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9536"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c6-libtiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.9.4_5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c6-tiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.9.4_5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c7-libtiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.3_3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c7-tiff"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.3_3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "bfd5d004-81d4-11e8-a29a-00e04c1ea73d",
+	"advisories": [
+		{
+			"id": "bfd5d004-81d4-11e8-a29a-00e04c1ea73d",
+			"title": "mybb -- vulnerabilities",
+			"description": "\n\t<p>mybb Team reports:</p>\n\t<blockquote cite=\"https://blog.mybb.com/2018/07/04/mybb-1-8-16-released-security-maintenance-release/\">\n\t  <p>High risk: Image and URL MyCode Persistent XSS</p>\n\t  <p>Medium risk: Multipage Reflected XSS</p>\n\t  <p>Low risk: ACP logs XSS</p>\n\t  <p>Low risk: Arbitrary file deletion via ACP’s Settings</p>\n\t  <p>Low risk: Login CSRF</p>\n\t  <p>Low risk: Non-video content embedding via Video MyCode</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bfd5d004-81d4-11e8-a29a-00e04c1ea73d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.mybb.com/2018/07/04/mybb-1-8-16-released-security-maintenance-release/"
+				}
+			],
+			"published": "2018-07-07T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mybb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.16"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,229 @@
+{
+	"id": "b1f7d52f-fc42-48e8-8403-87d4c9d26229",
+	"advisories": [
+		{
+			"id": "b1f7d52f-fc42-48e8-8403-87d4c9d26229",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2019-01/\">\n\t  <p>CVE-2018-18500: Use-after-free parsing HTML5 stream</p>\n\t  <p>CVE-2018-18503: Memory corruption with Audio Buffer</p>\n\t  <p>CVE-2018-18504: Memory corruption and out-of-bounds read of texture client buffer</p>\n\t  <p>CVE-2018-18505: Privilege escalation through IPC channel messages</p>\n\t  <p>CVE-2018-18506: Proxy Auto-Configuration file can define localhost access to be proxied</p>\n\t  <p>CVE-2018-18502: Memory safety bugs fixed in Firefox 65</p>\n\t  <p>CVE-2018-18501: Memory safety bugs fixed in Firefox 65 and Firefox ESR 60.5</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b1f7d52f-fc42-48e8-8403-87d4c9d26229.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2019-01/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2019-02/"
+				}
+			],
+			"published": "2019-01-29T00:00:00Z",
+			"modified": "2019-07-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-18500",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18500"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18501",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18501"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18502",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18502"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18503",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18503"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18504",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18504"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18505",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18505"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18506",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18506"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "65.0_1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "waterfox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "56.2.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.53.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.53.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-esr"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.5.0_1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.5.0,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libxul"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.5.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.5.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "60.5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

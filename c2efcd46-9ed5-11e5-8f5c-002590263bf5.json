@@ -1,0 +1,57 @@
+{
+	"id": "c2efcd46-9ed5-11e5-8f5c-002590263bf5",
+	"advisories": [
+		{
+			"id": "c2efcd46-9ed5-11e5-8f5c-002590263bf5",
+			"title": "redmine -- open redirect vulnerability",
+			"description": "\n\t<p>Redmine reports:</p>\n\t<blockquote cite=\"http://www.redmine.org/projects/redmine/wiki/Security_Advisories\">\n\t  <p>Open Redirect vulnerability</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c2efcd46-9ed5-11e5-8f5c-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jvn.jp/en/jp/JVN93004610/index.html"
+				}
+			],
+			"published": "2015-12-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-1985",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1985"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redmine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.5"
+					},
+					{
+						"eq": "2.5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

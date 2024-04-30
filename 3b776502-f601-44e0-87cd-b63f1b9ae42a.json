@@ -1,0 +1,88 @@
+{
+	"id": "3b776502-f601-44e0-87cd-b63f1b9ae42a",
+	"advisories": [
+		{
+			"id": "3b776502-f601-44e0-87cd-b63f1b9ae42a",
+			"title": "sugarcrm -- multiple vulnerabilities",
+			"description": "\n\t<p>sugarcrm developers report:</p>\n\t<blockquote cite=\"https://blog.ripstech.com/2017/sugarcrm-security-diet-multiple-vulnerabilities/\">\n\t  <p>An issue was discovered in SugarCRM before 7.7.2.3, 7.8.x before 7.8.2.2, and 7.9.x before 7.9.2.0 (and Sugar Community Edition 6.5.26). Several areas have been identified in the Documents and Emails module that could allow an authenticated user to perform SQL injection, as demonstrated by a backslash character at the end of a bean_id to modules/Emails/DetailView.php. An attacker could exploit these vulnerabilities by sending a crafted SQL request to the affected areas. An exploit could allow the attacker to modify the SQL database. Proper SQL escaping has been added to prevent such exploits.</p>\n\t  <p>An issue was discovered in SugarCRM before 7.7.2.3, 7.8.x before 7.8.2.2, and 7.9.x before 7.9.2.0 (and Sugar Community Edition 6.5.26). A remote file inclusion has been identified in the Connectors module allowing authenticated users to include remotely accessible system files via a query string. Proper input validation has been added to mitigate this issue.</p>\n\t  <p>An issue was discovered in SugarCRM before 7.7.2.3, 7.8.x before 7.8.2.2, and 7.9.x before 7.9.2.0 (and Sugar Community Edition 6.5.26). The WebToLeadCapture functionality is found vulnerable to unauthenticated cross-site scripting (XSS) attacks. This attack vector is mitigated by proper validating the redirect URL values being passed along.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3b776502-f601-44e0-87cd-b63f1b9ae42a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.ripstech.com/2017/sugarcrm-security-diet-multiple-vulnerabilities/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://support.sugarcrm.com/Resources/Security/sugarcrm-sa-2017-006/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.ripstech.com/2017/sugarcrm-security-diet-multiple-vulnerabilities/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://support.sugarcrm.com/Resources/Security/sugarcrm-sa-2017-007/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.ripstech.com/2017/sugarcrm-security-diet-multiple-vulnerabilities/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://support.sugarcrm.com/Resources/Security/sugarcrm-sa-2017-008/"
+				}
+			],
+			"published": "2017-09-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14508",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14508"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14509",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14509"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14510",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14510"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "sugarcrm"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "6.5.26"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

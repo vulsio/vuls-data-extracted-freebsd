@@ -1,0 +1,56 @@
+{
+	"id": "3bbbe3aa-fbeb-11e1-8bd8-0022156e8794",
+	"advisories": [
+		{
+			"id": "3bbbe3aa-fbeb-11e1-8bd8-0022156e8794",
+			"title": "freeradius -- arbitrary code execution for TLS-based authentication",
+			"description": "\n\t<p>freeRADIUS security team reports:</p>\n\t<blockquote cite=\"http://freeradius.org/security.html\">\n\t  <p>Overflow in EAP-TLS for 2.1.10, 2.1.11 and 2.1.12.</p>\n\t  <p>The issue was found by Timo Warns, and communicated to\n\t  security@freeradius.org.  A sample exploit for the issue was\n\t  included in the notification.</p>\n\t  <p>The vulnerability was created in commit a368a6f4f4aaf on\n\t  August 18, 2010.  Vulnerable versions include 2.1.10, 2.1.11,\n\t  and 2.1.12.  Also anyone running the git \"master\" branch\n\t  after August 18, 2010 is vulnerable.</p>\n\t  <p>All sites using TLS-based EAP methods and the above\n\t  versions are vulnerable.  The only configuration change which\n\t  can avoid the issue is to disable EAP-TLS, EAP-TTLS, and\n\t  PEAP.</p>\n\t  <p>An external attacker can use this vulnerability to\n\t  over-write the stack frame of the RADIUS server, and cause\n\t  it to crash.  In addition, more sophisticated attacks may\n\t  gain additional privileges on the system running the RADIUS\n\t  server.</p>\n\t  <p>This attack does not require local network access to the\n\t  RADIUS server.  It can be done by an attacker through a WiFi\n\t  Access Point, so long as the Access Point is configured to\n\t  use 802.1X authentication with the RADIUS server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3bbbe3aa-fbeb-11e1-8bd8-0022156e8794.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://freeradius.org/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pre-cert.de/advisories/PRE-SA-2012-06.txt"
+				}
+			],
+			"published": "2012-09-11T00:00:00Z",
+			"modified": "2012-09-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3547",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3547"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.12_2",
+						"ge": "2.1.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

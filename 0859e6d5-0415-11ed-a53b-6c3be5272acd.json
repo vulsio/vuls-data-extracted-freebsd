@@ -1,0 +1,117 @@
+{
+	"id": "0859e6d5-0415-11ed-a53b-6c3be5272acd",
+	"advisories": [
+		{
+			"id": "0859e6d5-0415-11ed-a53b-6c3be5272acd",
+			"title": "Grafana -- OAuth Account Takeover",
+			"description": "\n\t<p>Grafana Labs reports:</p>\n\t<blockquote cite=\"https://grafana.com/blog/2022/07/14/grafana-v9-0-3-8-5-9-8-4-10-and-8-3-10-released-with-high-severity-security-fix/\">\n\t  <p>It is possible for a malicious user who has authorization to log into a Grafana instance via a configured OAuth IdP to take over an existing Grafana account under some conditions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0859e6d5-0415-11ed-a53b-6c3be5272acd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/grafana/grafana/security/advisories/GHSA-mx47-6497-3fv2"
+				}
+			],
+			"published": "2022-07-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-31107",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-31107"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.3.10",
+						"ge": "5.3.0"
+					},
+					{
+						"lt": "8.4.10",
+						"ge": "8.4.0"
+					},
+					{
+						"lt": "8.5.9",
+						"ge": "8.5.0"
+					},
+					{
+						"lt": "9.0.3",
+						"ge": "9.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.3.10",
+						"ge": "8.3.0"
+					},
+					{
+						"lt": "8.4.10",
+						"ge": "8.4.0"
+					},
+					{
+						"lt": "8.5.9",
+						"ge": "8.5.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "grafana9"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.0.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

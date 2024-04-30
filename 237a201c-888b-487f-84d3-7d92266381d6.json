@@ -1,0 +1,93 @@
+{
+	"id": "237a201c-888b-487f-84d3-7d92266381d6",
+	"advisories": [
+		{
+			"id": "237a201c-888b-487f-84d3-7d92266381d6",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/\">\n\t  <p>MFSA 2015-95 Add-on notification bypass through data URLs</p>\n\t  <p>MFSA 2015-94 Use-after-free when resizing canvas element\n\t    during restyling</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/237a201c-888b-487f-84d3-7d92266381d6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2015-94/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2015-95/"
+				}
+			],
+			"published": "2015-08-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-4497",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4497"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-4498",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4498"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "40.0.3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "40.0.3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-esr"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "38.2.1,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "ab38d9f8-b787-11e8-8e7a-00e04c1ea73d",
+	"advisories": [
+		{
+			"id": "ab38d9f8-b787-11e8-8e7a-00e04c1ea73d",
+			"title": "mybb -- vulnerabilities",
+			"description": "\n\t<p>mybb Team reports:</p>\n\t<blockquote cite=\"https://blog.mybb.com/2018/09/11/mybb-1-8-19-released-security-maintenance-release/\">\n\t  <p>High risk: Email field SQL Injection.</p>\n\t  <p>Medium risk: Video MyCode Persistent XSS in Visual Editor.</p>\n\t  <p>Low risk: Insufficient permission check in User CP’s attachment management.</p>\n\t  <p>Low risk: Insufficient email address verification.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ab38d9f8-b787-11e8-8e7a-00e04c1ea73d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.mybb.com/2018/09/11/mybb-1-8-19-released-security-maintenance-release/"
+				}
+			],
+			"published": "2018-09-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mybb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.19"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

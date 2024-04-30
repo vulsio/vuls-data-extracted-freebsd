@@ -1,0 +1,54 @@
+{
+	"id": "0a0670a1-3e1a-11ed-b48b-e0d55e2a8bf9",
+	"advisories": [
+		{
+			"id": "0a0670a1-3e1a-11ed-b48b-e0d55e2a8bf9",
+			"title": "expat -- Heap use-after-free vulnerability",
+			"description": "\n\t<p>Debian Security Advisory reports:</p>\n\t<blockquote cite=\"https://www.debian.org/security/2022/dsa-5236\">\n\t  <p>Rhodri James discovered a heap use-after-free vulnerability in the doContent function in Expat, an XML parsing C library, which could result in denial of service or potentially the execution of arbitrary code, if a malformed XML file is processed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0a0670a1-3e1a-11ed-b48b-e0d55e2a8bf9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.debian.org/security/2022/dsa-5236"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40674"
+				}
+			],
+			"published": "2022-09-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-40674",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-40674"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "expat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.9"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

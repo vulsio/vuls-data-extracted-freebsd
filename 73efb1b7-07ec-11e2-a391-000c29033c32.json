@@ -1,0 +1,62 @@
+{
+	"id": "73efb1b7-07ec-11e2-a391-000c29033c32",
+	"advisories": [
+		{
+			"id": "73efb1b7-07ec-11e2-a391-000c29033c32",
+			"title": "eperl -- Remote code execution",
+			"description": "\n\t<p>David Madison reports:</p>\n\t<blockquote cite=\"http://www.shmoo.com/mail/bugtraq/jun01/msg00286.shtml\">\n\t  <p>ePerl is a multipurpose Perl filter and interpreter program\n\t    for Unix systems. The ePerl preprocessor contains an input\n\t    validation error. The preprocessor allows foreign data to be\n\t    \"safely\" included using the 'sinclude' directive.</p>\n\t  <p>The problem occurs when a file referenced by a 'sinclude'\n\t    directive contains a 'include' directive; the contents of\n\t    the file referred to by the second directive will be loaded\n\t    and executed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/73efb1b7-07ec-11e2-a391-000c29033c32.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.shmoo.com/mail/bugtraq/jun01/msg00286.shtml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/6743"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://osvdb.org/show/osvdb/1880"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/2912"
+				}
+			],
+			"published": "2012-09-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2001-0733",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2001-0733"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "eperl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.2.14_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

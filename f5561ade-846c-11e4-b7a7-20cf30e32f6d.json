@@ -1,0 +1,116 @@
+{
+	"id": "f5561ade-846c-11e4-b7a7-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "f5561ade-846c-11e4-b7a7-20cf30e32f6d",
+			"title": "subversion -- DoS vulnerabilities",
+			"description": "\n\t<p>Subversion Project reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/\">\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module will crash when it\n\t     receives a REPORT request for some invalid formatted special URIs.</p>\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module will crash when it\n\t     receives a request for some invalid formatted special URIs.</p>\n\t  <p>We consider this to be a medium risk vulnerability.  Repositories which\n\t     allow for anonymous reads will be vulnerable without authentication.\n\t     Unfortunately, no special configuration is required and all mod_dav_svn\n\t     servers are vulnerable.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f5561ade-846c-11e4-b7a7-20cf30e32f6d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://subversion.apache.org/security/CVE-2014-3580-advisory.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://subversion.apache.org/security/CVE-2014-8108-advisory.txt"
+				}
+			],
+			"published": "2014-12-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3580",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3580"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-8108",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8108"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_dav_svn"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.11",
+						"ge": "1.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.19",
+						"ge": "1.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion17"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.19",
+						"ge": "1.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.19",
+						"ge": "1.0.0"
+					},
+					{
+						"lt": "1.8.11",
+						"ge": "1.8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

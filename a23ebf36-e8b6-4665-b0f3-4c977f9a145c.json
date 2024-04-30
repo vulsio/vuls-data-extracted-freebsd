@@ -1,0 +1,74 @@
+{
+	"id": "a23ebf36-e8b6-4665-b0f3-4c977f9a145c",
+	"advisories": [
+		{
+			"id": "a23ebf36-e8b6-4665-b0f3-4c977f9a145c",
+			"title": "security/py-ecdsa -- multiple issues",
+			"description": "\n\t<p>py-ecdsa developers report:</p>\n\t<blockquote cite=\"https://github.com/warner/python-ecdsa/releases/tag/python-ecdsa-0.13.3\">\n\t  <p>Fix CVE-2019-14853 - possible DoS caused by malformed signature decoding.</p>\n\t  <p>Fix CVE-2019-14859 - signature malleability caused by insufficient checks of DER encoding</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a23ebf36-e8b6-4665-b0f3-4c977f9a145c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/warner/python-ecdsa/releases/tag/python-ecdsa-0.13.3"
+				}
+			],
+			"published": "2020-08-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-14853",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14853"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14859",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14859"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-ecdsa"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.13.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-ecdsa"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.13.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

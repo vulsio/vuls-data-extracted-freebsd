@@ -1,0 +1,130 @@
+{
+	"id": "17efbe19-4e72-426a-8016-2b4e001c1378",
+	"advisories": [
+		{
+			"id": "17efbe19-4e72-426a-8016-2b4e001c1378",
+			"title": "py-wagtail -- stored XSS vulnerability",
+			"description": "\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-5286-f2rf-35c2\">\n      <p>A stored cross-site scripting (XSS) vulnerability exists on ModelAdmin views within the Wagtail admin interface.</p>\n      <p>A user with a limited-permission editor account for the Wagtail admin could potentially craft pages and documents that, when viewed by a user with higher privileges, could perform actions with that user's credentials.</p>\n      <p>The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin, and only affects sites with ModelAdmin enabled.</p>\n      <p>For page, the vulnerability is in the \"Choose a parent page\" ModelAdmin view, available when managing pages via ModelAdmin.</p>\n      <p>For documents, the vulnerability is in the ModelAdmin Inspect view when displaying document fields.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/17efbe19-4e72-426a-8016-2b4e001c1378.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-5286-f2rf-35c2"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28836",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28836"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-wagtail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					},
+					{
+						"lt": "4.2.2",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py38-wagtail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					},
+					{
+						"lt": "4.2.2",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-wagtail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					},
+					{
+						"lt": "4.2.2",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py310-wagtail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					},
+					{
+						"lt": "4.2.2",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py311-wagtail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.4"
+					},
+					{
+						"lt": "4.2.2",
+						"ge": "4.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

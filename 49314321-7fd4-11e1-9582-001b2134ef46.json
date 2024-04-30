@@ -1,0 +1,50 @@
+{
+	"id": "49314321-7fd4-11e1-9582-001b2134ef46",
+	"advisories": [
+		{
+			"id": "49314321-7fd4-11e1-9582-001b2134ef46",
+			"title": "mutt-devel -- failure to check SMTP TLS server certificate",
+			"description": "\n\t<p>Dave B reports on Full Disclosure:</p>\n\t<blockquote cite=\"http://seclists.org/fulldisclosure/2011/Mar/87\">\n\t  <p>It seems that mutt fails to check the validity of a SMTP\n\t    servers certificate during a TLS connection. [...]\n\t    This means that an attacker could potentially MITM a\n\t    mutt user connecting to their SMTP server even when the\n\t    user has forced a TLS connection.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/49314321-7fd4-11e1-9582-001b2134ef46.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/fulldisclosure/2011/Mar/87"
+				}
+			],
+			"published": "2012-04-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-1429",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1429"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mutt-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.21_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

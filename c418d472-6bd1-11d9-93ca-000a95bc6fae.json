@@ -1,0 +1,80 @@
+{
+	"id": "c418d472-6bd1-11d9-93ca-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "c418d472-6bd1-11d9-93ca-000a95bc6fae",
+			"title": "perl -- File::Path insecure file/directory permissions",
+			"description": "\n\t<p>Jeroen van Wolffelaar reports that the Perl module File::Path\n\t  contains a race condition wherein traversed directories and files\n\t  are temporarily made world-readable/writable.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c418d472-6bd1-11d9-93ca-000a95bc6fae.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2004/dsa-620"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/18650"
+				}
+			],
+			"published": "2005-01-21T00:00:00Z",
+			"modified": "2007-11-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0452",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0452"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "perl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.2",
+						"ge": "0"
+					},
+					{
+						"lt": "5.8.6",
+						"ge": "5.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "perl-threaded"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.2",
+						"ge": "0"
+					},
+					{
+						"lt": "5.8.6",
+						"ge": "5.8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

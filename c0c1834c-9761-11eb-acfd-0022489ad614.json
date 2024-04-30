@@ -1,0 +1,121 @@
+{
+	"id": "c0c1834c-9761-11eb-acfd-0022489ad614",
+	"advisories": [
+		{
+			"id": "c0c1834c-9761-11eb-acfd-0022489ad614",
+			"title": "Node.js -- April 2021 Security Releases",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/\">\n\t  <h1>OpenSSL - CA certificate check bypass with X509_V_FLAG_X509_STRICT (High) (CVE-2021-3450)</h1>\n\t  <p>This is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20210325.txt</p>\n\t  <h1>OpenSSL - NULL pointer deref in signature_algorithms processing (High) (CVE-2021-3449)</h1>\n\t  <p>This is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20210325.txt</p>\n\t  <h1>npm upgrade - Update y18n to fix Prototype-Pollution (High) (CVE-2020-7774)</h1>\n\t  <p>This is a vulnerability in the y18n npm module which may be exploited by prototype pollution. You can read more about it in https://github.com/advisories/GHSA-c4w7-xm78-47vh</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c0c1834c-9761-11eb-acfd-0022489ad614.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20210325.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-c4w7-xm78-47vh"
+				}
+			],
+			"published": "2021-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-3450",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-3450"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-3449",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-3449"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-7774",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7774"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node10"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.24.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node12"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.22.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node14"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "14.16.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.14.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

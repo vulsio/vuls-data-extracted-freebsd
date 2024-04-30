@@ -1,0 +1,54 @@
+{
+	"id": "29194cb8-6e9f-11e1-8376-f0def16c5c1b",
+	"advisories": [
+		{
+			"id": "29194cb8-6e9f-11e1-8376-f0def16c5c1b",
+			"title": "nginx -- potential information leak",
+			"description": "\n\t<p>nginx development team reports:</p>\n\t<blockquote cite=\"http://nginx.net/CHANGES\">\n\t  <p>Matthew Daley recently discovered a security problem\n\t    which may lead to a disclosure of previously freed memory\n\t    on specially crafted response from an upstream server,\n\t    potentially resulting in sensitive information leak.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/29194cb8-6e9f-11e1-8376-f0def16c5c1b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://nginx.net/CHANGES"
+				}
+			],
+			"published": "2012-03-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.14,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.17"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

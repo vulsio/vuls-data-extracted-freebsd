@@ -1,0 +1,92 @@
+{
+	"id": "ab881a74-c016-4e6d-9f7d-68c8e7cedafb",
+	"advisories": [
+		{
+			"id": "ab881a74-c016-4e6d-9f7d-68c8e7cedafb",
+			"title": "xorg-server -- Multiple Issues",
+			"description": "\n\t<p>xorg-server developers reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/99546\">\n\t  <p>In the X.Org X server before 2017-06-19, a user authenticated to\n\t    an X Session could crash or execute code in the context of the X\n\t    Server by exploiting a stack overflow in the endianness conversion\n\t    of X Events.</p>\n\t  <p>Uninitialized data in endianness conversion in the XEvent handling\n\t    of the X.Org X Server before 2017-06-19 allowed authenticated\n\t    malicious users to access potentially privileged data from the X\n\t    server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ab881a74-c016-4e6d-9f7d-68c8e7cedafb.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/99546"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.suse.com/show_bug.cgi?id=1035283"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cgit.freedesktop.org/xorg/xserver/commit/?id=215f894965df5fb0bb45b107d84524e700d2073c"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cgit.freedesktop.org/xorg/xserver/commit/?id=8caed4df36b1f802b4992edcfd282cbeeec35d9d"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cgit.freedesktop.org/xorg/xserver/commit/?id=ba336b24052122b136486961c82deac76bbde455"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/99543"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.suse.com/show_bug.cgi?id=1035283"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cgit.freedesktop.org/xorg/xserver/commit/?id=05442de962d3dc624f79fc1a00eca3ffc5489ced"
+				}
+			],
+			"published": "2017-10-17T00:00:00Z",
+			"modified": "2018-05-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-10971",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-10971"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-10972",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-10972"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.18.4_6,1"
+					},
+					{
+						"le": "1.19.3,1",
+						"ge": "1.19.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

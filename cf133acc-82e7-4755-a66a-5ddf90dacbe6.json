@@ -1,0 +1,66 @@
+{
+	"id": "cf133acc-82e7-4755-a66a-5ddf90dacbe6",
+	"advisories": [
+		{
+			"id": "cf133acc-82e7-4755-a66a-5ddf90dacbe6",
+			"title": "graphite2 -- out-of-bounds write with malicious font",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2017-10/\">\n\t  <p>An out-of-bounds write in the Graphite 2 library\n\t    triggered with a maliciously crafted Graphite font. This\n\t    results in a potentially exploitable crash. This issue was\n\t    fixed in the Graphite 2 library as well as Mozilla\n\t    products.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cf133acc-82e7-4755-a66a-5ddf90dacbe6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/silnrsi/graphite/commit/1ce331d5548b"
+				}
+			],
+			"published": "2017-04-19T00:00:00Z",
+			"modified": "2017-04-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-5436",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5436"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "graphite2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.9_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c7-graphite2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

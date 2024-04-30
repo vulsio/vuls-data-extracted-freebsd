@@ -1,0 +1,54 @@
+{
+	"id": "8d4ae57d-d2ab-11da-a672-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "8d4ae57d-d2ab-11da-a672-000e0c2e438a",
+			"title": "xine -- multiple remote string vulnerabilities",
+			"description": "\n\t<p>c0ntexb reports:</p>\n\t<blockquote cite=\"http://www.open-security.org/advisories/16\">\n\t  <p>There are 2 format string bugs in the latest version of\n\t    Xine that could be exploited by a malicious person to\n\t    execute code on the system of a remote user running the\n\t    media player against a malicious playlist file.  By passing\n\t    a format specifier in the path of a file that is embedded\n\t    in a remote playlist, it is possible to trigger this bug.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8d4ae57d-d2ab-11da-a672-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.open-security.org/advisories/16"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/17579"
+				}
+			],
+			"published": "2006-04-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1905",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1905"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.4_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

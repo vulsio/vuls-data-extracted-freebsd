@@ -1,0 +1,50 @@
+{
+	"id": "e465159c-4817-11e1-89b4-001ec9578670",
+	"advisories": [
+		{
+			"id": "e465159c-4817-11e1-89b4-001ec9578670",
+			"title": "mpack -- Information disclosure",
+			"description": "\n\t<p>The oss-security list reports:</p>\n\t<blockquote cite=\"http://openwall.com/lists/oss-security/2011/12/31/1\">\n\t  <p>Incorrect permissions on temporary files can lead to\n\t    information disclosure.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e465159c-4817-11e1-89b4-001ec9578670.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2011/12/31/1"
+				}
+			],
+			"published": "2012-01-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4919",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4919"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mpack"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6_3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

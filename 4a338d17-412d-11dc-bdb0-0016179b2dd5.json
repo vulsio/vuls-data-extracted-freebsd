@@ -1,0 +1,59 @@
+{
+	"id": "4a338d17-412d-11dc-bdb0-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "4a338d17-412d-11dc-bdb0-0016179b2dd5",
+			"title": "fsplib -- multiple vulnerabilities",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/26184/\">\n\t  <p>fsplib can be exploited to compromise an application using\n\t    the library.</p>\n\t  <p>A boundary error exists in the processing of file names in\n\t    fsp_readdir_native, which can be exploited to cause a stack-based\n\t    buffer overflow if the defined MAXNAMLEN is bigger than 256.</p>\n\t  <p>A boundary error exists in the processing of directory entries in\n\t    fsp_readdir, which can be exploited to cause a stack-based buffer\n\t    overflow on systems with an insufficient size allocated for the\n\t    d_name field of directory entries.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4a338d17-412d-11dc-bdb0-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/26184/"
+				}
+			],
+			"published": "2007-08-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3961",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3961"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3962",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3962"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fsplib"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

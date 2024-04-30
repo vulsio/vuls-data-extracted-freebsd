@@ -1,0 +1,80 @@
+{
+	"id": "1c5f3fd7-54bf-11ed-8d1e-005056a311d1",
+	"advisories": [
+		{
+			"id": "1c5f3fd7-54bf-11ed-8d1e-005056a311d1",
+			"title": "samba -- buffer overflow in Heimdal unwrap_des3()",
+			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2022-3437.html\">\n\t  <p>The DES (for Samba 4.11 and earlier) and Triple-DES decryption\n\t  routines in the Heimdal GSSAPI library allow a length-limited write\n\t  buffer overflow on malloc() allocated memory when presented with a\n\t  maliciously small packet.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1c5f3fd7-54bf-11ed-8d1e-005056a311d1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2022-3437.html"
+				}
+			],
+			"published": "2022-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-3437",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3437"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba412"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.12.16"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba413"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.13.17_4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba416"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.16.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

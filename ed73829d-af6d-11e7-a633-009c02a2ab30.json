@@ -1,0 +1,189 @@
+{
+	"id": "ed73829d-af6d-11e7-a633-009c02a2ab30",
+	"advisories": [
+		{
+			"id": "ed73829d-af6d-11e7-a633-009c02a2ab30",
+			"title": "FFmpeg -- multiple vulnerabilities",
+			"description": "\n\t<p>FFmpeg security reports:</p>\n\t<blockquote cite=\"https://www.ffmpeg.org/security.html\">\n\t  <p>Multiple vulnerabilities have been fixed in FFmpeg 3.3.4. Please refer to the CVE list for details.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ed73829d-af6d-11e7-a633-009c02a2ab30.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.ffmpeg.org/security.html"
+				}
+			],
+			"published": "2017-10-12T00:00:00Z",
+			"modified": "2018-03-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14054"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14055",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14055"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14056",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14056"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14057",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14057"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14058",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14058"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14059",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14059"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14169",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14169"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14170",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14170"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14171",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14171"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14222",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14222"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14223",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14223"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14225",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14225"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14767",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14767"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ffmpeg"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.3.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mythtv"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "29.1,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mythtv-frontend"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "29.1,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

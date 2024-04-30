@@ -1,0 +1,69 @@
+{
+	"id": "29b7f0be-1fb7-11eb-b9d4-001999f8d30b",
+	"advisories": [
+		{
+			"id": "29b7f0be-1fb7-11eb-b9d4-001999f8d30b",
+			"title": "asterisk -- Outbound INVITE loop on challenge with different nonce",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>If Asterisk is challenged on an outbound INVITE and\n\t  the nonce is changed in each response, Asterisk will\n\t  continually send INVITEs in a loop. This causes Asterisk\n\t  to consume more and more memory since the transaction\n\t  will never terminate (even if the call is hung up),\n\t  ultimately leading to a restart or shutdown of Asterisk.\n\t  Outbound authentication must be configured on the endpoint\n\t  for this to occur.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/29b7f0be-1fb7-11eb-b9d4-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2020-002.html"
+				}
+			],
+			"published": "2020-11-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk13"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.37.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.14.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk18"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "18.0.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

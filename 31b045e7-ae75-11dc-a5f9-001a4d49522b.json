@@ -1,0 +1,112 @@
+{
+	"id": "31b045e7-ae75-11dc-a5f9-001a4d49522b",
+	"advisories": [
+		{
+			"id": "31b045e7-ae75-11dc-a5f9-001a4d49522b",
+			"title": "opera -- multiple vulnerabilities",
+			"description": "\n\t<p>Opera Software ASA reports about multiple security\n\t  fixes:</p>\n\t<blockquote cite=\"http://www.opera.com/docs/changelogs/freebsd/925/\">\n\t  <ul>\n\t    <li>Fixed an issue where plug-ins could be used to allow\n\t      cross domain scripting, as reported by David\n\t      Bloom. Details will be disclosed at a later date.</li>\n\t    <li>Fixed an issue with TLS certificates that could be\n\t      used to execute arbitrary code, as reported by Alexander\n\t      Klink (Cynops GmbH). Details will be disclosed at a\n\t      later date.</li>\n\t    <li>Rich text editing can no longer be used to allow cross\n\t      domain scripting, as reported by David Bloom. See our\n\t      advisory.</li>\n\t    <li>Prevented bitmaps from revealing random data from\n\t      memory, as reported by Gynvael Coldwind. Details will be\n\t      disclosed at a later date.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/31b045e7-ae75-11dc-a5f9-001a4d49522b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/docs/changelogs/freebsd/925/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/875/"
+				}
+			],
+			"published": "2007-12-19T00:00:00Z",
+			"modified": "2007-12-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-6520",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6520"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-6521",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6521"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-6522",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6522"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-6524",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6524"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.25"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.25"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.25"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

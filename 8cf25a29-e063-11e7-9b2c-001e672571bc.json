@@ -1,0 +1,51 @@
+{
+	"id": "8cf25a29-e063-11e7-9b2c-001e672571bc",
+	"advisories": [
+		{
+			"id": "8cf25a29-e063-11e7-9b2c-001e672571bc",
+			"title": "rubygem-passenger -- arbitrary file read vulnerability",
+			"description": "\n\t<p>Phusion reports:</p>\n\t<blockquote cite=\"https://blog.phusion.nl/2017/10/13/passenger-security-advisory-5-1-11/\">\n\t  <p>The cPanel Security Team discovered a vulnerability in Passenger\n\t    that allows users to list the contents of arbitrary files on the\n\t    system. CVE-2017-16355 has been assigned to this issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8cf25a29-e063-11e7-9b2c-001e672571bc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.phusion.nl/2017/10/13/passenger-security-advisory-5-1-11/"
+				}
+			],
+			"published": "2017-12-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-16355",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-16355"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-passenger"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.1.11",
+						"ge": "5.0.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,182 @@
+{
+	"id": "3ebb2dc8-4609-11e1-9f47-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "3ebb2dc8-4609-11e1-9f47-00e0815b8da8",
+			"title": "Wireshark -- Multiple vulnerabilities",
+			"description": "\n\t<p>Wireshark reports:</p>\n\t<blockquote cite=\"http://www.wireshark.org/docs/relnotes/wireshark-1.6.5.html\">\n\t  <p>Laurent Butti discovered that Wireshark failed to properly check\n\t    record sizes for many packet capture file formats</p>\n\t  <p>Wireshark could dereference a NULL pointer and crash.</p>\n\t  <p>The RLC dissector could overflow a buffer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3ebb2dc8-4609-11e1-9f47-00e0815b8da8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2012-03.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6663"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6666"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6667"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6668"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6669"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6670"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6634"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6391"
+				}
+			],
+			"published": "2012-01-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-0041",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0041"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0066",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0066"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0067",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0067"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0068",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0068"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.11",
+						"ge": "1.4"
+					},
+					{
+						"lt": "1.6.5",
+						"ge": "1.6.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.11",
+						"ge": "1.4"
+					},
+					{
+						"lt": "1.6.5",
+						"ge": "1.6.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.11",
+						"ge": "1.4"
+					},
+					{
+						"lt": "1.6.5",
+						"ge": "1.6.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.11",
+						"ge": "1.4"
+					},
+					{
+						"lt": "1.6.5",
+						"ge": "1.6.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

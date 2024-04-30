@@ -1,0 +1,100 @@
+{
+	"id": "ec49f6b5-ee39-11e8-b2f4-74d435b63d51",
+	"advisories": [
+		{
+			"id": "ec49f6b5-ee39-11e8-b2f4-74d435b63d51",
+			"title": "php-imap -- imap_open allows to run arbitrary shell commands via mailbox parameter",
+			"description": "\n\t<p>The PHP team reports:</p>\n\t<blockquote cite=\"https://bugs.php.net/bug.php?id=77153\">\n\t  <p>imap_open allows to run arbitrary shell commands via mailbox parameter.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ec49f6b5-ee39-11e8-b2f4-74d435b63d51.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.php.net/bug.php?id=77153"
+				}
+			],
+			"published": "2018-11-22T00:00:00Z",
+			"modified": "2018-11-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56-imap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.38_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php70-imap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php71-imap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php72-imap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php73-imap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

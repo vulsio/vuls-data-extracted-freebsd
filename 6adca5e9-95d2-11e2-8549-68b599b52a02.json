@@ -1,0 +1,67 @@
+{
+	"id": "6adca5e9-95d2-11e2-8549-68b599b52a02",
+	"advisories": [
+		{
+			"id": "6adca5e9-95d2-11e2-8549-68b599b52a02",
+			"title": "firebird -- Remote Stack Buffer Overflow",
+			"description": "\n\t<p>Firebird Project reports:</p>\n\t<blockquote cite=\"http://tracker.firebirdsql.org/browse/CORE-4058\">\n\t  <p>The FirebirdSQL server is vulnerable to a stack buffer overflow\n\t     that can be triggered when an unauthenticated user sends a\n\t     specially crafted packet. The  result can lead to remote code\n\t     execution as the user which runs the FirebirdSQL server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6adca5e9-95d2-11e2-8549-68b599b52a02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gist.github.com/zeroSteiner/85daef257831d904479c"
+				}
+			],
+			"published": "2013-03-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2492",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2492"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firebird25-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.5.2",
+						"ge": "2.5.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firebird21-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.1.5",
+						"ge": "2.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

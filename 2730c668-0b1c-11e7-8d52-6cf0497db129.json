@@ -1,0 +1,68 @@
+{
+	"id": "2730c668-0b1c-11e7-8d52-6cf0497db129",
+	"advisories": [
+		{
+			"id": "2730c668-0b1c-11e7-8d52-6cf0497db129",
+			"title": "drupal8 -- multiple vulnerabilities",
+			"description": "\n\t<p>Drupal Security Team reports:</p>\n\t<blockquote cite=\"https://www.drupal.org/SA-2017-001\">\n\t  <p>CVE-2017-6377: Editor module incorrectly checks access to inline private files</p>\n\t  <p>CVE-2017-6379: Some admin paths were not protected with a CSRF token</p>\n\t  <p>CVE-2017-6381: Remote code execution</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2730c668-0b1c-11e7-8d52-6cf0497db129.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.drupal.org/SA-2017-001"
+				}
+			],
+			"published": "2017-03-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-6377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6377"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6379"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6381",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6381"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drupal8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.2.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,43 @@
+{
+	"id": "36a37c92-44b1-11ee-b091-6162c1274384",
+	"advisories": [
+		{
+			"id": "36a37c92-44b1-11ee-b091-6162c1274384",
+			"title": "gitea -- information disclosure",
+			"description": "\n\t<p>The Gitea team reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/25097\">\n\t  <p>Fix API leaking Usermail if not logged in</p>\n\t  <p>The API should only return the real Mail of a User, if the\n\t    caller is logged in. The check do to this don't work. This PR\n\t    fixes this. This not really a security issue, but can lead to\n\t    Spam.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/36a37c92-44b1-11ee-b091-6162c1274384.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.gitea.com/release-of-1.20.3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.20.3"
+				}
+			],
+			"published": "2023-08-27T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

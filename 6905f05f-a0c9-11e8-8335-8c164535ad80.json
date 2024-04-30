@@ -1,0 +1,54 @@
+{
+	"id": "6905f05f-a0c9-11e8-8335-8c164535ad80",
+	"advisories": [
+		{
+			"id": "6905f05f-a0c9-11e8-8335-8c164535ad80",
+			"title": "jenkins -- multiple vulnerabilities",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://jenkins.io/security/advisory/2018-08-15/\">\n\t  <h1>Description</h1>\n\t  <h5>(Low) SECURITY-637</h5>\n\t  <p> Jenkins allowed deserialization of URL objects with host components</p>\n\t  <h5>(Medium) SECURITY-672</h5>\n\t  <p>Ephemeral user record was created on some invalid authentication attempts</p>\n\t  <h5>(Medium) SECURITY-790</h5>\n\t  <p>Cron expression form validation could enter infinite loop, potentially resulting in denial of service</p>\n\t  <h5>(Low) SECURITY-996</h5>\n\t  <p>\"Remember me\" cookie was evaluated even if that feature is disabled</p>\n\t  <h5>(Medium) SECURITY-1071</h5>\n\t  <p>Unauthorized users could access agent logs</p>\n\t  <h5>(Low) SECURITY-1076</h5>\n\t  <p>Unauthorized users could cancel scheduled restarts initiated from the update center</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6905f05f-a0c9-11e8-8335-8c164535ad80.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jenkins.io/security/advisory/2018-08-15/"
+				}
+			],
+			"published": "2018-08-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.138"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins-lts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.121.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

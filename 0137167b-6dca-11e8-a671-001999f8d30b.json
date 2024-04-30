@@ -1,0 +1,54 @@
+{
+	"id": "0137167b-6dca-11e8-a671-001999f8d30b",
+	"advisories": [
+		{
+			"id": "0137167b-6dca-11e8-a671-001999f8d30b",
+			"title": "asterisk -- PJSIP endpoint presence disclosure when using ACL",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p> When endpoint specific ACL rules block a SIP request\n\t  they respond with a 403 forbidden. However, if an endpoint\n\t  is not identified then a 401 unauthorized response is\n\t  sent. This vulnerability just discloses which requests\n\t  hit a defined endpoint. The ACL rules cannot be bypassed\n\t  to gain access to the disclosed endpoints.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0137167b-6dca-11e8-a671-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2018-008.html"
+				}
+			],
+			"published": "2018-06-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk13"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "13.21.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk15"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

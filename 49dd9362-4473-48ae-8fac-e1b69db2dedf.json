@@ -1,0 +1,65 @@
+{
+	"id": "49dd9362-4473-48ae-8fac-e1b69db2dedf",
+	"advisories": [
+		{
+			"id": "49dd9362-4473-48ae-8fac-e1b69db2dedf",
+			"title": "electron{27,28} -- Out of bounds memory access in V8",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v27.3.6\">\n\t  <p>This update fixes the following vulnerability:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2024-2173.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/49dd9362-4473-48ae-8fac-e1b69db2dedf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-6hhg-hj7x-7qv8"
+				}
+			],
+			"published": "2024-03-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-2173",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2173"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "electron27"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "27.3.6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "electron28"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "28.2.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

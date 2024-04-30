@@ -1,0 +1,66 @@
+{
+	"id": "3987c5d1-47a9-11df-a0d5-0016d32f24fb",
+	"advisories": [
+		{
+			"id": "3987c5d1-47a9-11df-a0d5-0016d32f24fb",
+			"title": "KDM -- local privilege escalation vulnerability",
+			"description": "\n\t<p>KDE Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.kde.org/info/security/advisory-20100413-1.txt\">\n\t  <p>KDM contains a race condition that allows local attackers\n\t    to make arbitrary files on the system world-writeable.\n\t    This can happen while KDM tries to create its control\n\t    socket during user login. A local attacker with a valid\n\t    local account can under certain circumstances make use of\n\t    this vulnerability to execute arbitrary code as root.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3987c5d1-47a9-11df-a0d5-0016d32f24fb.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kde.org/info/security/advisory-20100413-1.txt"
+				}
+			],
+			"published": "2010-04-14T00:00:00Z",
+			"modified": "2010-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-0436",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0436"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kdebase"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "3.5.10_6"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kdebase-workspace"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.3.5_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,84 @@
+{
+	"id": "87679fcb-be60-11e9-9051-4c72b94353b5",
+	"advisories": [
+		{
+			"id": "87679fcb-be60-11e9-9051-4c72b94353b5",
+			"title": "NGINX -- Multiple vulnerabilities",
+			"description": "\n\t<p>NGINX Team reports:</p>\n\t<blockquote cite=\"http://nginx.org/en/security_advisories.html\">\n\t  <p>Several security issues were identified in nginx HTTP/2\n\t    implementation which might cause excessive memory consumption\n\t    and CPU usage (CVE-2019-9511, CVE-2019-9513, CVE-2019-9516).\n\t    The issues affect nginx compiled with the ngx_http_v2_module (not\n\t    compiled by default) if the http2 option of the listen directive\n\t    is used in a configuration file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/87679fcb-be60-11e9-9051-4c72b94353b5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://nginx.org/en/security_advisories.html"
+				}
+			],
+			"published": "2019-08-14T00:00:00Z",
+			"modified": "2019-08-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-9511",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9511"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9513",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9513"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9516",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9516"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.16.1,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.17.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

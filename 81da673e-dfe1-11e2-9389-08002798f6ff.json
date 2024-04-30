@@ -1,0 +1,50 @@
+{
+	"id": "81da673e-dfe1-11e2-9389-08002798f6ff",
+	"advisories": [
+		{
+			"id": "81da673e-dfe1-11e2-9389-08002798f6ff",
+			"title": "apache-xml-security-c -- heap overflow during XPointer evaluation",
+			"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://santuario.apache.org/secadv.data/CVE-2013-2210.txt\">\n\t  <p>The attempted fix to address CVE-2013-2154 introduced the\n\t  possibility of a heap overflow, possibly leading to arbitrary code\n\t  execution, in the processing of malformed XPointer expressions in the\n\t  XML Signature Reference processing code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/81da673e-dfe1-11e2-9389-08002798f6ff.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://santuario.apache.org/secadv.data/CVE-2013-2210.txt"
+				}
+			],
+			"published": "2013-06-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2210",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2210"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache-xml-security-c"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

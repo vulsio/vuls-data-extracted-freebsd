@@ -1,0 +1,59 @@
+{
+	"id": "12b7286f-16a2-11dc-b803-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "12b7286f-16a2-11dc-b803-0016179b2dd5",
+			"title": "webmin -- cross site scripting vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/25580/\">\n\t  <p>Input passed to unspecified parameters in pam_login.cgi\n\t    is not properly sanitised before being returned to the\n\t    user. This can be exploited to execute arbitrary HTML and\n\t    script code in a user's browser session in context of an\n\t    affected site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/12b7286f-16a2-11dc-b803-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/25580/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.webmin.com/changes-1.350.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/24381"
+				}
+			],
+			"published": "2007-06-09T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3156",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3156"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "webmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.350"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

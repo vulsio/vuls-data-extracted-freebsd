@@ -1,0 +1,171 @@
+{
+	"id": "fa2f386f-4814-11e1-89b4-001ec9578670",
+	"advisories": [
+		{
+			"id": "fa2f386f-4814-11e1-89b4-001ec9578670",
+			"title": "acroread9 -- Multiple Vulnerabilities",
+			"description": "\n\t<p>The Adobe Security Team reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/advisories/apsa11-04.html\">\n\t  <p>An unspecified vulnerability in the U3D component allows\n\t    remote attackers to execute arbitrary code (or cause a denial\n\t    of service attack) via unknown vectors.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb11-24.html\">\n\t   <p>A heap-based buffer overflow allows attackers to execute\n\t     arbitrary code via unspecified vectors.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fa2f386f-4814-11e1-89b4-001ec9578670.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/security/bulletins/apsb11-24.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/security/advisories/apsa11-04.html"
+				}
+			],
+			"published": "2012-01-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2462",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2462"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-1353",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1353"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2431",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2431"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2432",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2432"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2433",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2433"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2434",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2434"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2435",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2435"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2436",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2436"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2437",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2437"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2438",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2438"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2439",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2439"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2440",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2440"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2441",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2441"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2442",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2442"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "acroread9"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

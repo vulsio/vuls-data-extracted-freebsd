@@ -1,0 +1,55 @@
+{
+	"id": "32d38cbb-2632-11dc-94da-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "32d38cbb-2632-11dc-94da-0016179b2dd5",
+			"title": "flac123 -- stack overflow in comment parsing",
+			"description": "\n\t<p>isecpartners reports:</p>\n\t<blockquote cite=\"http://www.isecpartners.com/advisories/2007-002-flactools.txt\">\n\t  <p>flac123, also known as flac-tools, is vulnerable\n\t    to a buffer overflow in vorbis comment parsing.\n\t    This allows for the execution of arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/32d38cbb-2632-11dc-94da-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/forum/forum.php?forum_id=710314"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.isecpartners.com/advisories/2007-002-flactools.txt"
+				}
+			],
+			"published": "2007-06-28T00:00:00Z",
+			"modified": "2007-08-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3507",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3507"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "flac123"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.0.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

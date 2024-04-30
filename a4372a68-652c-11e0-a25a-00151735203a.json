@@ -1,0 +1,51 @@
+{
+	"id": "a4372a68-652c-11e0-a25a-00151735203a",
+	"advisories": [
+		{
+			"id": "a4372a68-652c-11e0-a25a-00151735203a",
+			"title": "OTRS -- Several XSS attacks possible",
+			"description": "\n\t<p>OTRS Security Advisory reports:</p>\n\t<blockquote cite=\"http://otrs.org/advisory/OSA-2011-01-en/\">\n\t  <ul>\n\t    <li>Several XSS attacks possible:\n\t      An attacker could trick a logged in user to following a prepared\n\t      URL inside of the OTRS system which causes a page to be shown that\n\t      possibly includes malicious !JavaScript code because of incorrect\n\t      escaping during the generation of the HTML page.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a4372a68-652c-11e0-a25a-00151735203a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://otrs.org/advisory/OSA-2011-01-en/"
+				}
+			],
+			"published": "2011-04-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-1518",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1518"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "otrs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.7",
+						"gt": "2.3.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,100 @@
+{
+	"id": "3d1e9267-073f-11d9-b45d-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "3d1e9267-073f-11d9-b45d-000c41e2cdad",
+			"title": "gdk-pixbuf -- image decoding vulnerabilities",
+			"description": "\n\t<p>Chris Evans discovered several flaws in the gdk-pixbuf\n\t  XPM image decoder:</p>\n\t<ul>\n\t  <li>Heap-based overflow in pixbuf_create_from_xpm</li>\n\t  <li>Stack-based overflow in xpm_extract_color</li>\n\t  <li>Integer overflows in io-ico.c</li>\n\t</ul>\n\t<p>Some of these flaws are believed to be exploitable.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3d1e9267-073f-11d9-b45d-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://scary.beasts.org/security/CESA-2004-005.txt"
+				}
+			],
+			"published": "2004-09-15T00:00:00Z",
+			"modified": "2004-11-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0782",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0782"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0783",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0783"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0788",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0788"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-gdk-pixbuf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.22.0.11.3.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gtk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.9_1",
+						"ge": "2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gdk-pixbuf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.22.0_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,67 @@
+{
+	"id": "d4f45676-9d33-11e4-8275-000c292e4fd8",
+	"advisories": [
+		{
+			"id": "d4f45676-9d33-11e4-8275-000c292e4fd8",
+			"title": "samba -- Elevation of privilege to Active Directory Domain Controller",
+			"description": "\n\t<p>Samba team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2014-8143\">\n\t  <p>In Samba's AD DC we neglected to ensure that\n\t  attempted modifications of the userAccountControl attribute\n\t  did not allow the UF_SERVER_TRUST_ACCOUNT bit to be set.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d4f45676-9d33-11e4-8275-000c292e4fd8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2014-8143"
+				}
+			],
+			"published": "2015-01-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8143",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8143"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.23",
+						"ge": "4.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba41"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.15",
+						"ge": "4.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

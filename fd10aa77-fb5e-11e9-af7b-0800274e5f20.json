@@ -1,0 +1,43 @@
+{
+	"id": "fd10aa77-fb5e-11e9-af7b-0800274e5f20",
+	"advisories": [
+		{
+			"id": "fd10aa77-fb5e-11e9-af7b-0800274e5f20",
+			"title": "gitea -- information disclosure",
+			"description": "\n\t<p>The Gitea Team reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/issues/8303\">\n\t  <p>When a comment in an issue or PR mentions a user using\n\t  @username, the mentioned user receives a mail notification even if\n\t  they don't have permission to see the originating repository.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fd10aa77-fb5e-11e9-af7b-0800274e5f20.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.9.5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.gitea.io/2019/10/gitea-1.9.5-is-released/"
+				}
+			],
+			"published": "2019-10-30T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.9.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

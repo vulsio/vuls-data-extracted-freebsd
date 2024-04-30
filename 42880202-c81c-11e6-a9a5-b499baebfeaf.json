@@ -1,0 +1,51 @@
+{
+	"id": "42880202-c81c-11e6-a9a5-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "42880202-c81c-11e6-a9a5-b499baebfeaf",
+			"title": "cURL -- buffer overflow",
+			"description": "\n\t<p>The cURL project reports:</p>\n\t<blockquote cite=\"https://curl.haxx.se/docs/vuln-7.51.0.html\">\n\t  <h2>printf floating point buffer overflow</h2>\n\t  <p>libcurl's implementation of the printf() functions triggers a\n\t    buffer overflow when doing a large floating point output. The bug\n\t    occurs when the conversion outputs more than 255 bytes.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/42880202-c81c-11e6-a9a5-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://curl.haxx.se/docs/vuln-7.51.0.html"
+				}
+			],
+			"published": "2016-12-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9586",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9586"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "curl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.52",
+						"ge": "7.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

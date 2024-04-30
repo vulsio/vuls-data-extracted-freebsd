@@ -1,0 +1,157 @@
+{
+	"id": "da459dbc-5586-11e9-abd6-001b217b3468",
+	"advisories": [
+		{
+			"id": "da459dbc-5586-11e9-abd6-001b217b3468",
+			"title": "Gitlab -- Multiple vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2019/04/01/security-release-gitlab-11-dot-9-dot-4-released/\">\n\t  <p>DoS potential for regex in CI/CD refs</p>\n\t  <p>Related branches visible in issues for guests</p>\n\t  <p>Persistent XSS at merge request resolve conflicts</p>\n\t  <p>Improper authorization control \"move issue\"</p>\n\t  <p>Guest users of private projects have access to releases</p>\n\t  <p>DoS potential on project languages page</p>\n\t  <p>Recurity assessment: information exposure through timing discrepancy</p>\n\t  <p>Recurity assessment: loginState HMAC issues</p>\n\t  <p>Recurity assessment: open redirect</p>\n\t  <p>PDF.js vulnerable to CVE-2018-5158</p>\n\t  <p>IDOR labels of private projects/groups</p>\n\t  <p>EXIF geolocation data not stripped from uploaded images</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/da459dbc-5586-11e9-abd6-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/2019/04/01/security-release-gitlab-11-dot-9-dot-4-released/"
+				}
+			],
+			"published": "2019-04-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-10640",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10640"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10116",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10116"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10111",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10111"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10110",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10110"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10115",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10115"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10113",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10113"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10114",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10114"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10112",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10112"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10117",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10117"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-5158",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5158"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10108",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10108"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-10109",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10109"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab-ce"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.9.4",
+						"ge": "11.9.0"
+					},
+					{
+						"lt": "11.8.6",
+						"ge": "11.8.0"
+					},
+					{
+						"lt": "11.7.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

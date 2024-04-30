@@ -1,0 +1,93 @@
+{
+	"id": "43ac9d42-1b9a-11e5-b43d-002590263bf5",
+	"advisories": [
+		{
+			"id": "43ac9d42-1b9a-11e5-b43d-002590263bf5",
+			"title": "elasticsearch and logstash -- remote OS command execution via dynamic scripting",
+			"description": "\n\t<p>Elastic reports:</p>\n\t<blockquote cite=\"https://www.elastic.co/community/security\">\n\t  <p>Vulnerability Summary: In Elasticsearch versions 1.1.x and prior,\n\t    dynamic scripting is enabled by default. This could allow an\n\t    attacker to execute OS commands.</p>\n\t  <p>Remediation Summary: Disable dynamic scripting.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.elastic.co/blog/logstash-1-4-3-released\">\n\t  <p>Logstash 1.4.2 was bundled with Elasticsearch 1.1.1, which is\n\t    vulnerable to CVE-2014-3120. These binaries are used in\n\t    Elasticsearch output specifically when using the node protocol.\n\t    Since a node client joins the Elasticsearch cluster, the attackers\n\t    could use scripts to execute commands on the host OS using the node\n\t    client's URL endpoint. With 1.4.3 release, we are packaging Logstash\n\t    with Elasticsearch 1.5.2 binaries which by default disables the\n\t    ability to run scripts. This also affects users who are using the\n\t    configuration option embedded=&gt;true in the Elasticsearch output\n\t    which starts a local embedded Elasticsearch cluster. This is\n\t    typically used in development environment and proof of concept\n\t    deployments. Regardless of this vulnerability, we strongly recommend\n\t    not using embedded in production.</p>\n\t  <p>Note that users of transport and http protocol are not vulnerable\n\t    to this attack.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/43ac9d42-1b9a-11e5-b43d-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/community/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/blog/elasticsearch-1-2-0-released"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/blog/logstash-1-4-3-released"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.exploit-db.com/exploits/33370/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bouk.co/blog/elasticsearch-rce/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.rapid7.com/db/modules/exploit/multi/elasticsearch/script_mvel_rce"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.found.no/foundation/elasticsearch-security/#staying-safe-while-developing-with-elasticsearch"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/67731"
+				}
+			],
+			"published": "2015-06-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3120",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3120"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "elasticsearch"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "logstash"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

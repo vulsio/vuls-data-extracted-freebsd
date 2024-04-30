@@ -1,0 +1,44 @@
+{
+	"id": "e177c410-1943-11e0-9d1c-000c29ba66d2",
+	"advisories": [
+		{
+			"id": "e177c410-1943-11e0-9d1c-000c29ba66d2",
+			"title": "mediawiki -- Clickjacking vulnerabilities",
+			"description": "\n\t<p>Clickjacking vulnerabilities:</p>\n\t<blockquote cite=\"https://bugzilla.wikimedia.org/show_bug.cgi?id=26561\">\n\t  <p>Clickjacking is a type of vulnerability discovered in 2008, which\n\t    is similar to CSRF. The attack involves displaying the target webpage\n\t    in a iframe embedded in a malicious website. Using CSS, the submit button\n\t    of the form on the targeit webpage is made invisible, and then overlaid\n\t    with some button or link on the malicious website that encourages\n\t    the user to click on it.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e177c410-1943-11e0-9d1c-000c29ba66d2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.wikimedia.org/show_bug.cgi?id=26561"
+				}
+			],
+			"published": "2011-01-06T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.16.1",
+						"gt": "1.16"
+					},
+					{
+						"lt": "1.15.5_1",
+						"gt": "1.15"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

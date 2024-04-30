@@ -1,0 +1,172 @@
+{
+	"id": "7fadc049-2ba0-11dc-9377-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "7fadc049-2ba0-11dc-9377-0016179b2dd5",
+			"title": "wireshark -- Multiple problems",
+			"description": "\n\t<p>wireshark Team reports:</p>\n\t<blockquote cite=\"http://www.wireshark.org/security/wnpa-sec-2007-02.html\">\n\t  <p>It may be possible to make Wireshark or Ethereal crash or use up\n\t    available memory by injecting a purposefully malformed packet onto\n\t    the wire or by convincing someone to read a malformed packet trace\n\t    file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7fadc049-2ba0-11dc-9377-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/25833/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2007-02.html"
+				}
+			],
+			"published": "2007-07-06T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3389",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3389"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3390",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3390"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3391",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3391"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3392",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3392"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3393",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3393"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.6",
+						"ge": "0.8.20"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.6",
+						"ge": "0.8.20"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ethereal"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.6",
+						"ge": "0.8.20"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ethereal-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.6",
+						"ge": "0.8.20"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tethereal"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.6",
+						"ge": "0.8.20"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tethereal-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.6",
+						"ge": "0.8.20"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

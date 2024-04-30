@@ -1,0 +1,131 @@
+{
+	"id": "0dccaa28-7f3c-11dd-8de5-0030843d3802",
+	"advisories": [
+		{
+			"id": "0dccaa28-7f3c-11dd-8de5-0030843d3802",
+			"title": "python -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/31305\">\n\t  <p>Some vulnerabilities have been reported in Python, where some have\n\t    unknown impact and others can potentially be exploited by malicious\n\t    people to cause a DoS (Denial of Service) or to compromise a\n\t    vulnerable system.</p>\n\t  <p>Various integer overflow errors exist in core modules e.g.\n\t    stringobject, unicodeobject, bufferobject, longobject, tupleobject,\n\t    stropmodule, gcmodule, mmapmodule.</p>\n\t  <p>An integer overflow in the hashlib module can lead to an unreliable\n\t    cryptographic digest results.</p>\n\t  <p>Integer overflow errors in the processing of unicode strings can be\n\t    exploited to cause buffer overflows on 32-bit systems.</p>\n\t  <p>An integer overflow exists in the PyOS_vsnprintf() function on\n\t    architectures that do not have a \"vsnprintf()\" function.</p>\n\t  <p>An integer underflow error in the PyOS_vsnprintf() function when\n\t    passing zero-length strings can lead to memory corruption.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0dccaa28-7f3c-11dd-8de5-0030843d3802.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.python.org/issue2620"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.python.org/issue2588"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.python.org/issue2589"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31305"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail.python.org/pipermail/python-checkins/2008-July/072276.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail.python.org/pipermail/python-checkins/2008-July/072174.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail.python.org/pipermail/python-checkins/2008-June/070481.html"
+				}
+			],
+			"published": "2008-09-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-2315",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2315"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-2316",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2316"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-3142",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3142"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-3144",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3144"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.5_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python25"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.2_3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python23"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

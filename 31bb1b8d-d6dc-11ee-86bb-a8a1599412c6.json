@@ -1,0 +1,74 @@
+{
+	"id": "31bb1b8d-d6dc-11ee-86bb-a8a1599412c6",
+	"advisories": [
+		{
+			"id": "31bb1b8d-d6dc-11ee-86bb-a8a1599412c6",
+			"title": "chromium -- multiple security fixes",
+			"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_27.html\">\n\t <p>This update includes 4 security fixes:</p>\n\t <ul>\n\t    <li>[324596281] High CVE-2024-1938: Type Confusion in V8. Reported by 5f46f4ee2e17957ba7b39897fb376be8 on 2024-02-11</li>\n\t    <li>[323694592] High CVE-2024-1939: Type Confusion in V8. Reported by Bohan Liu (@P4nda20371774) of Tencent Security Xuanwu Lab on 2024-02-05</li>\n\t </ul>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/31bb1b8d-d6dc-11ee-86bb-a8a1599412c6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_27.html"
+				}
+			],
+			"published": "2024-02-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-1938",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1938"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-1939",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1939"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "122.0.6261.94"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ungoogled-chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "122.0.6261.94"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,186 @@
+{
+	"id": "a13500d0-0570-11e5-aab1-d050996490d0",
+	"advisories": [
+		{
+			"id": "a13500d0-0570-11e5-aab1-d050996490d0",
+			"title": "wireshark -- multiple vulnerabilities",
+			"description": "\n\t<p>Wireshark development team reports:</p>\n\t<blockquote cite=\"https://www.wireshark.org/docs/relnotes/wireshark-1.12.5.html\">\n\t  <p>The following vulnerabilities have been fixed.</p>\n\t  <ul>\n\t    <li><p>wnpa-sec-2015-12</p>\n\t      <p>The LBMR dissector could go into an infinite loop.\n\t\t(Bug 11036) CVE-2015-3808, CVE-2015-3809</p></li>\n\t    <li><p>wnpa-sec-2015-13</p>\n\t      <p>The WebSocket dissector could recurse excessively.\n\t\t(Bug 10989) CVE-2015-3810</p></li>\n\t    <li><p>wnpa-sec-2015-14</p>\n\t      <p>The WCP dissector could crash while decompressing data.\n\t\t(Bug 10978) CVE-2015-3811</p></li>\n\t    <li><p>wnpa-sec-2015-15</p>\n\t      <p>The X11 dissector could leak memory. (Bug 11088)\n\t\tCVE-2015-3812</p></li>\n\t    <li><p>wnpa-sec-2015-16</p>\n\t      <p>The packet reassembly code could leak memory.\n\t\t(Bug 11129) CVE-2015-3813</p></li>\n\t    <li><p>wnpa-sec-2015-17</p>\n\t      <p>The IEEE 802.11 dissector could go into an infinite loop.\n\t\t(Bug 11110) CVE-2015-3814</p></li>\n\t    <li><p>wnpa-sec-2015-18</p>\n\t      <p>The Android Logcat file parser could crash. Discovered by\n\t\tHanno Böck. (Bug 11188) CVE-2015-3815</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a13500d0-0570-11e5-aab1-d050996490d0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/docs/relnotes/wireshark-1.12.5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-12.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-13.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-14.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-15.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-16.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-17.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.wireshark.org/security/wnpa-sec-2015-18.html"
+				}
+			],
+			"published": "2015-05-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3808",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3808"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3809",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3809"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3810",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3810"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3811",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3811"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3812",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3812"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3813",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3813"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3814",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3814"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3815",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3815"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tshark-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,132 @@
+{
+	"id": "c4e9a427-9fc2-11e8-802a-000c29a1e3ec",
+	"advisories": [
+		{
+			"id": "c4e9a427-9fc2-11e8-802a-000c29a1e3ec",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>The samba project reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2018-1139.html\">\n\t  <p>Samba releases 4.7.0 to 4.8.3 (inclusive) contain an error which\n\t  allows authentication using NTLMv1 over an SMB1 transport (either\n\t  directory or via NETLOGON SamLogon calls from a member server), even\n\t  when NTLMv1 is explicitly disabled on the server.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2018-1140.html\">\n\t  <p>Missing input sanitization checks on some of the input parameters to\n\t  LDB database layer cause the LDAP server and DNS server to crash when\n\t  following a NULL pointer.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2018-10858.html\">\n\t  <p>Samba releases 3.2.0 to 4.8.3 (inclusive) contain an error in\n\t  libsmbclient that could allow a malicious server to overwrite\n\t  client heap memory by returning an extra long filename in a directory\n\t  listing.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2018-10918.html\">\n\t  <p>Missing database output checks on the returned directory attributes\n\t  from the LDB database layer cause the DsCrackNames call in the DRSUAPI\n\t  server to crash when following a NULL pointer.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2018-10919.html\">\n\t  <p>All versions of the Samba Active Directory LDAP server from 4.0.0\n\t  onwards are vulnerable to the disclosure of confidential attribute\n\t  values, both of attributes where the schema SEARCH_FLAG_CONFIDENTIAL\n\t  (0x80) searchFlags bit and where an explicit Access Control Entry has\n\t  been specified on the ntSecurityDescriptor.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c4e9a427-9fc2-11e8-802a-000c29a1e3ec.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2018-1139.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2018-1140.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2018-10858.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2018-10918.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2018-10919.html"
+				}
+			],
+			"published": "2018-08-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1139",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1139"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-1140",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1140"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-10858",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10858"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-10918",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10918"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-10919",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10919"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba46"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.6.16"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba47"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.7.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba48"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.8.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

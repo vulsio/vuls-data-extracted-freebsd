@@ -1,0 +1,39 @@
+{
+	"id": "d713d709-4cc9-11ed-a621-0800277bb8a8",
+	"advisories": [
+		{
+			"id": "d713d709-4cc9-11ed-a621-0800277bb8a8",
+			"title": "gitea -- multiple issues",
+			"description": "\n\t<p>The Gitea team reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/21463\">\n\t  <p>Sanitize and Escape refs in git backend</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/21412\">\n\t  <p>Bump golang.org/x/text</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/21281\">\n\t  <p>Update bluemonday</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d713d709-4cc9-11ed-a621-0800277bb8a8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.17.3"
+				}
+			],
+			"published": "2022-10-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.17.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

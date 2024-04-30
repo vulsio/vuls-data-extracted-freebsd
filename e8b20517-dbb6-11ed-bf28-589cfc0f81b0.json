@@ -1,0 +1,54 @@
+{
+	"id": "e8b20517-dbb6-11ed-bf28-589cfc0f81b0",
+	"advisories": [
+		{
+			"id": "e8b20517-dbb6-11ed-bf28-589cfc0f81b0",
+			"title": "mod_gnutls -- Infinite Loop on request read timeout",
+			"description": "\n\t<p>The mod_gnutls project reports:</p>\n\t<blockquote cite=\"https://lists.gnupg.org/pipermail/mod_gnutls-devel/2023-February/000221.html\">\n\t  <p>Mod_gnutls is a TLS module for Apache HTTPD based on GnuTLS.  Versions\n\t  from 0.9.0 to 0.12.0 (including) did not properly fail blocking\n\t  read operations on TLS connections when the transport hit timeouts.\n\t  Instead it entered an endless loop retrying the read operation,\n\t  consuming CPU resources.  This could be exploited for denial of\n\t  service attacks.  If trace level logging was enabled, it would also\n\t  produce an excessive amount of log output during the loop, consuming\n\t  disk space.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e8b20517-dbb6-11ed-bf28-589cfc0f81b0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25824"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mod.gnutls.org/browser/mod_gnutls/CHANGELOG?rev=17b2836dc3e27754159ffb098323a4cd4426192f"
+				}
+			],
+			"published": "2023-04-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-25824",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-25824"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ap24-mod_gnutls"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.12.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

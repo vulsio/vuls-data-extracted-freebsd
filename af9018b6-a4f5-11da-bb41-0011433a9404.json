@@ -1,0 +1,64 @@
+{
+	"id": "af9018b6-a4f5-11da-bb41-0011433a9404",
+	"advisories": [
+		{
+			"id": "af9018b6-a4f5-11da-bb41-0011433a9404",
+			"title": "squirrelmail -- multiple vulnerabilities",
+			"description": "\n\t<p>Multiple vulnerabilities has been discovered since 1.4.5,\n\t  including IMAP injection as well as some XSS issues.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/af9018b6-a4f5-11da-bb41-0011433a9404.html"
+				}
+			],
+			"published": "2006-02-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0377"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0195",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0195"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0188",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0188"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "squirrelmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

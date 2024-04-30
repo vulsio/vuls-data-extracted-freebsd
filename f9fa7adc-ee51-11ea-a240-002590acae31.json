@@ -1,0 +1,51 @@
+{
+	"id": "f9fa7adc-ee51-11ea-a240-002590acae31",
+	"advisories": [
+		{
+			"id": "f9fa7adc-ee51-11ea-a240-002590acae31",
+			"title": "gnupg -- AEAD key import overflow",
+			"description": "\n\t<p>Importing an OpenPGP key having a preference list for AEAD algorithms\n\twill lead to an array overflow and thus often to a crash or other\n\tundefined behaviour.</p>\n\n\t<p>Importing an arbitrary key can often easily be triggered by an attacker\n\tand thus triggering this bug.  Exploiting the bug aside from crashes is\n\tnot trivial but likely possible for a dedicated attacker.  The major\n\thurdle for an attacker is that only every second byte is under their\n\tcontrol with every first byte having a fixed value of 0x04.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f9fa7adc-ee51-11ea-a240-002590acae31.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dev.gnupg.org/T5050"
+				}
+			],
+			"published": "2020-09-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-25125",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-25125"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gnupg"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.23",
+						"ge": "2.2.21"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

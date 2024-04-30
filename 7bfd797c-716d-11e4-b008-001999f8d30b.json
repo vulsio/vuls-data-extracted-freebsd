@@ -1,0 +1,63 @@
+{
+	"id": "7bfd797c-716d-11e4-b008-001999f8d30b",
+	"advisories": [
+		{
+			"id": "7bfd797c-716d-11e4-b008-001999f8d30b",
+			"title": "asterisk -- Multiple vulnerabilities",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>AST-2014-014 - High call load may result in hung\n\t  channels in ConfBridge.</p>\n\t  <p>AST-2014-017 - Permission escalation through ConfBridge\n\t  actions/dialplan functions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7bfd797c-716d-11e4-b008-001999f8d30b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2014-014.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2014-017.html"
+				}
+			],
+			"published": "2014-11-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8414",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8414"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-8417",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8417"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.14.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,97 @@
+{
+	"id": "f7a9e415-bdca-11e4-970c-000c292ee6b8",
+	"advisories": [
+		{
+			"id": "f7a9e415-bdca-11e4-970c-000c292ee6b8",
+			"title": "php5 -- multiple vulnerabilities",
+			"description": "\n\t<p>The PHP Project reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php\">\n\t  <p>Use after free vulnerability in unserialize() with DateTimeZone.</p>\n\t  <p>Mitigation for CVE-2015-0235 -- GHOST: glibc gethostbyname buffer\n\t   overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f7a9e415-bdca-11e4-970c-000c292ee6b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.4.38"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.5.22"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.6.6"
+				}
+			],
+			"published": "2015-02-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0235",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0235"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0273",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0273"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.4.38"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php55"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.22"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php56"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

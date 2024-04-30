@@ -1,0 +1,52 @@
+{
+	"id": "36235c38-e0a8-11e1-9f4d-002354ed89bc",
+	"advisories": [
+		{
+			"id": "36235c38-e0a8-11e1-9f4d-002354ed89bc",
+			"title": "automake -- Insecure 'distcheck' recipe granted world-writable distdir",
+			"description": "\n\t<p>GNU reports:</p>\n\t<blockquote cite=\"https://lists.gnu.org/archive/html/automake/2012-07/msg00023.html\">\n\t  <p>The recipe of the 'distcheck' target granted temporary\n\t    world-write permissions on the extracted distdir.  This introduced\n\t    a locally exploitable race condition for those who run \"make\n\t    distcheck\" with a non-restrictive umask (e.g., 022) in a directory\n\t    that was accessible by others.  A successful exploit would result\n\t    in arbitrary code execution with the privileges of the user\n\t    running \"make distcheck\".</p>\n\t  <p>It is important to stress that this vulnerability impacts not only\n\t    the Automake package itself, but all packages with\n\t    Automake-generated makefiles.  For an effective fix it is necessary\n\t    to regenerate the Makefile.in files with a fixed Automake\n\t    version.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/36235c38-e0a8-11e1-9f4d-002354ed89bc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.gnu.org/archive/html/automake/2012-07/msg00023.html"
+				}
+			],
+			"published": "2012-08-06T00:00:00Z",
+			"modified": "2012-08-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3386",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3386"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "automake"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.12.2",
+						"ge": "1.5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

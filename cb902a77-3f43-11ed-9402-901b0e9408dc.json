@@ -1,0 +1,92 @@
+{
+	"id": "cb902a77-3f43-11ed-9402-901b0e9408dc",
+	"advisories": [
+		{
+			"id": "cb902a77-3f43-11ed-9402-901b0e9408dc",
+			"title": "Matrix clients -- several vulnerabilities",
+			"description": "\n\t<p>Matrix developers report:</p>\n\t<blockquote cite=\"https://matrix.org/blog/2022/09/28/upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients\">\n\t  <p>Two critical severity vulnerabilities in end-to-end encryption were\n\t  found in the SDKs which power Element, Beeper, Cinny, SchildiChat,\n\t  Circuli, Synod.im and any other clients based on matrix-js-sdk,\n\t  matrix-ios-sdk or matrix-android-sdk2.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb902a77-3f43-11ed-9402-901b0e9408dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://matrix.org/blog/2022/09/28/upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients"
+				}
+			],
+			"published": "2022-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-39249",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39249"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-39250",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39250"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-39251",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39251"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-39236",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39236"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cinny"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "element-web"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.11.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

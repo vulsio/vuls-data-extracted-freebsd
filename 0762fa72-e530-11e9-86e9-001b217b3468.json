@@ -1,0 +1,48 @@
+{
+	"id": "0762fa72-e530-11e9-86e9-001b217b3468",
+	"advisories": [
+		{
+			"id": "0762fa72-e530-11e9-86e9-001b217b3468",
+			"title": "Gitlab -- Disclosure Vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/\">\n\t  <p>Disclosure of Private Code, Merge Requests and Commits via Elasticsearch integration</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0762fa72-e530-11e9-86e9-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/"
+				}
+			],
+			"published": "2019-10-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab-ce"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.3.3",
+						"ge": "12.3.0"
+					},
+					{
+						"lt": "12.2.7",
+						"ge": "12.2.0"
+					},
+					{
+						"lt": "12.1.13",
+						"ge": "8.17.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

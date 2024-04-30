@@ -1,0 +1,58 @@
+{
+	"id": "b5ffaa2a-ee50-4498-af99-61bc1b163c00",
+	"advisories": [
+		{
+			"id": "b5ffaa2a-ee50-4498-af99-61bc1b163c00",
+			"title": "leafnode -- denial of service vulnerability",
+			"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://leafnode.sourceforge.net/leafnode-SA-2005-02.txt\">\n\t  <p>A vulnerability was found in the fetchnews program (the NNTP\n\t    client) that may under some circumstances cause a wait for input\n\t    that never arrives, fetchnews \"hangs\". [...]</p>\n\t  <p>As only one fetchnews program can run at a time, subsequently\n\t    started fetchnews and texpire programs will terminate. [...]</p>\n\t  <p>Upgrade your leafnode package to version 1.11.3.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b5ffaa2a-ee50-4498-af99-61bc1b163c00.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://leafnode.sourceforge.net/leafnode-SA-2005-02.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=82056"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=vulnwatch&m=111827180929063"
+				}
+			],
+			"published": "2005-06-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1911",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1911"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "leafnode"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.11.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

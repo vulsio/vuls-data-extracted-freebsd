@@ -1,0 +1,50 @@
+{
+	"id": "48894ca9-3e6f-11e8-92f0-f0def167eeea",
+	"advisories": [
+		{
+			"id": "48894ca9-3e6f-11e8-92f0-f0def167eeea",
+			"title": "roundcube -- IMAP command injection vulnerability",
+			"description": "\n\t<p>Upstream reports:</p>\n\t<blockquote cite=\"https://roundcube.net/news/2018/04/11/security-update-1.3.6\">\n\t  <p>This update primarily fixes a recently discovered IMAP-cmd-injection\n\t  vulnerability caused by insufficient input validation within\n\t  the archive plugin.\n\t  Details about the vulnerability are published under CVE-2018-9846.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/48894ca9-3e6f-11e8-92f0-f0def167eeea.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://roundcube.net/news/2018/04/11/security-update-1.3.6"
+				}
+			],
+			"published": "2018-04-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-9846",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-9846"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "roundcube"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.3.5,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

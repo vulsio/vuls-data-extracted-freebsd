@@ -1,0 +1,68 @@
+{
+	"id": "9ae2c00f-97d0-11eb-8cd6-080027f515ea",
+	"advisories": [
+		{
+			"id": "9ae2c00f-97d0-11eb-8cd6-080027f515ea",
+			"title": "clamav -- Multiple vulnerabilites",
+			"description": "\n\t<p>Micah Snyder reports:</p>\n\t<blockquote cite=\"https://blog.clamav.net/2021/04/clamav-01032-security-patch-release.html\">\n\t  <dl>\n\t    <dt>CVE-2021-1252</dt>\n\t    <dd>Excel XLM parser infinite loop</dd>\n\t    <dt>CVE-2021-1404</dt>\n\t    <dd>PDF parser buffer over-read; possible crash. </dd>\n\t    <dt>CVE-2021-1405</dt>\n\t    <dd>Mail parser NULL-dereference crash. </dd>\n\t  </dl>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9ae2c00f-97d0-11eb-8cd6-080027f515ea.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.clamav.net/2021/04/clamav-01032-security-patch-release.html"
+				}
+			],
+			"published": "2021-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-1252",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-1252"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-1404",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-1404"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-1405",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-1405"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "clamav"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.103.2,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

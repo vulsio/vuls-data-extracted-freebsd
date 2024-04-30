@@ -1,0 +1,48 @@
+{
+	"id": "f4b95430-51d8-11da-8e93-0010dc4afb40",
+	"advisories": [
+		{
+			"id": "f4b95430-51d8-11da-8e93-0010dc4afb40",
+			"title": "flyspray -- cross-site scripting vulnerabilities",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/17316/\">\n\t  <p>Lostmon has reported some vulnerabilities in Flyspray,\n\t    which can be exploited by malicious people to conduct\n\t    cross-site scripting attacks.</p>\n\t  <p>Some input isn't properly sanitised before being\n\t    returned to the user.  This can be exploited to execute\n\t    arbitrary HTML and script code in a user's browser\n\t    session in context of an affected site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f4b95430-51d8-11da-8e93-0010dc4afb40.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17316/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lostmon.blogspot.com/2005/10/flyspray-bug-killer-multiple-variable.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/15209"
+				}
+			],
+			"published": "2005-11-10T00:00:00Z",
+			"modified": "2005-11-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "flyspray"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

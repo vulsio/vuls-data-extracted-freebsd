@@ -1,0 +1,81 @@
+{
+	"id": "a3764767-f31e-11e7-95f2-005056925db4",
+	"advisories": [
+		{
+			"id": "a3764767-f31e-11e7-95f2-005056925db4",
+			"title": "irssi -- multiple vulnerabilities",
+			"description": "\n\t<p>Irssi reports:</p>\n\t<blockquote cite=\"https://irssi.org/security/irssi_sa_2018_01.txt\">\n\t  <p>When the channel topic is set without specifying a sender, Irssi\n\t    may dereference NULL pointer. Found by Joseph Bisch.</p>\n\t  <p>When using incomplete escape codes, Irssi may access data beyond\n\t    the end of the string. Found by Joseph Bisch.</p>\n\t  <p>A calculation error in the completion code could cause a heap\n\t    buffer overflow when completing certain strings.\n\t    Found by Joseph Bisch.</p>\n\t  <p>When using an incomplete variable argument, Irssi may access data\n\t    beyond the end of the string. Found by Joseph Bisch.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a3764767-f31e-11e7-95f2-005056925db4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://irssi.org/security/irssi_sa_2018_01.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=224954"
+				}
+			],
+			"published": "2018-01-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-5205",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5205"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-5206",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5206"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-5207",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5207"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-5208",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5208"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "irssi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.6,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

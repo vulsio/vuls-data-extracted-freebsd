@@ -1,0 +1,58 @@
+{
+	"id": "e1cb9dc9-daa9-44db-adde-e94d900e2f7f",
+	"advisories": [
+		{
+			"id": "e1cb9dc9-daa9-44db-adde-e94d900e2f7f",
+			"title": "cacti -- Cross Site Scripting issue",
+			"description": "\n\t<p>cacti developers report:</p>\n\t<blockquote cite=\" https://github.com/Cacti/cacti/commit/93f661d8adcfa6618b11522cdab30e97bada33fd\">\n\t  <p>The file include/global_session.php in Cacti 1.1.25 has XSS related to (1) the URI or (2) the refresh page.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e1cb9dc9-daa9-44db-adde-e94d900e2f7f.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securitytracker.com/id/1039569"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/Cacti/cacti/commit/93f661d8adcfa6618b11522cdab30e97bada33fd"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/Cacti/cacti/issues/1010"
+				}
+			],
+			"published": "2017-10-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-15194",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-15194"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cacti"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.26"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

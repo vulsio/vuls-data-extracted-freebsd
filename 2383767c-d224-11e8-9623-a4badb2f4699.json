@@ -1,0 +1,55 @@
+{
+	"id": "2383767c-d224-11e8-9623-a4badb2f4699",
+	"advisories": [
+		{
+			"id": "2383767c-d224-11e8-9623-a4badb2f4699",
+			"title": "libssh -- authentication bypass vulnerability",
+			"description": "\n\t<p>gladiac reports:</p>\n\t<blockquote cite=\"https://www.libssh.org/2018/10/16/libssh-0-8-4-and-0-7-6-security-and-bugfix-release/\">\n\t  <p>libssh versions 0.6 and above have an authentication bypass\n\t    vulnerability in the server code. By presenting the server an\n\t    SSH2_MSG_USERAUTH_SUCCESS message in place of the\n\t    SSH2_MSG_USERAUTH_REQUEST message which the server would expect to\n\t    initiate authentication, the attacker could successfully authentciate\n\t    without any credentials.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2383767c-d224-11e8-9623-a4badb2f4699.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.libssh.org/2018/10/16/libssh-0-8-4-and-0-7-6-security-and-bugfix-release/"
+				}
+			],
+			"published": "2018-10-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-10933",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10933"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libssh"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.7.6",
+						"ge": "0.6"
+					},
+					{
+						"lt": "0.8.4",
+						"ge": "0.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

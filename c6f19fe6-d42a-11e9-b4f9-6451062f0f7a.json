@@ -1,0 +1,59 @@
+{
+	"id": "c6f19fe6-d42a-11e9-b4f9-6451062f0f7a",
+	"advisories": [
+		{
+			"id": "c6f19fe6-d42a-11e9-b4f9-6451062f0f7a",
+			"title": "Flash Player -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb19-46.html\">\n\t  <ul>\n\t    <li>This update resolves a same origin method execution\n\t      vulnerability that could lead to arbitrary code execution\n\t      (CVE-2019-8069).</li>\n\t    <li>This update resolves a use-after-free vulnerability that\n\t      could lead to arbitrary code execution (CVE-2019-8070).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c6f19fe6-d42a-11e9-b4f9-6451062f0f7a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb19-46.html"
+				}
+			],
+			"published": "2019-09-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-8069",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8069"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8070",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8070"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-flashplayer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "32.0.0.255"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,54 @@
+{
+	"id": "4edbea45-cb0c-11ee-86bb-a8a1599412c6",
+	"advisories": [
+		{
+			"id": "4edbea45-cb0c-11ee-86bb-a8a1599412c6",
+			"title": "chromium -- security fix",
+			"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html\">\n\t <p>This update includes 1 security fix.</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4edbea45-cb0c-11ee-86bb-a8a1599412c6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html"
+				}
+			],
+			"published": "2024-02-14T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "121.0.6167.184"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ungoogled-chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "121.0.6167.184"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

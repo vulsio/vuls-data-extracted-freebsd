@@ -1,0 +1,63 @@
+{
+	"id": "7fc3e827-64a5-11e8-aedb-00224d821998",
+	"advisories": [
+		{
+			"id": "7fc3e827-64a5-11e8-aedb-00224d821998",
+			"title": "strongswan -- Fix Denial-of-Service Vulnerability strongSwan (CVE-2018-10811, CVE-2018-5388)",
+			"description": "\n\t<p>strongSwan security team reports:</p>\n\t<blockquote cite=\"https://www.strongswan.org/blog/2018/05/28/strongswan-5.6.3-released.html\">\n\t  <ul><li>A denial-of-service vulnerability in the IKEv2 key derivation was fixed\n\t     if the openssl plugin is used in FIPS mode and HMAC-MD5 is negotiated as\n\t     PRF (which is not FIPS-compliant). So this should only affect very specific setups,\n\t     but in such configurations all strongSwan versions since 5.0.1 may be affected.</li>\n\t     <li>A denial-of-service vulnerability in the stroke plugin was fixed.\n\t\t When reading a message from the socket the plugin did not check the received length.\n\t\t Unless a group is configured, root privileges are required to access that socket,\n\t\t so in the default configuration this shouldn't be an issue, but all strongSwan versions may be affected.\n\t     </li>\n\t </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7fc3e827-64a5-11e8-aedb-00224d821998.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.strongswan.org/blog/2018/05/28/strongswan-vulnerability-(cve-2018-10811).html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.strongswan.org/blog/2018/05/28/strongswan-vulnerability-(cve-2018-5388).html"
+				}
+			],
+			"published": "2018-05-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-10811",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10811"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-5388",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5388"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "strongswan"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.6.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

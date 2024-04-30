@@ -1,0 +1,58 @@
+{
+	"id": "13b0c8c8-bee0-11dd-a708-001fc66e7203",
+	"advisories": [
+		{
+			"id": "13b0c8c8-bee0-11dd-a708-001fc66e7203",
+			"title": "p5-File-Path -- rmtree allows creation of setuid files",
+			"description": "\n\t<p>Jan Lieskovsky reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2008/11/28/1\">\n\t  <p>perl-File-Path rmtree race condition (CVE-2005-0448 was assigned to\n\t    address this)</p>\n\t  <p>This vulnerability was fixed in 5.8.4-7 but re-introduced\n\t    in 5.8.8-1.  It's also present in File::Path 2.xx, up to and\n\t    including 2.07 which has only a partial fix.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/13b0c8c8-bee0-11dd-a708-001fc66e7203.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286905"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2008/11/28/1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gossamer-threads.com/lists/perl/porters/233699#233699"
+				}
+			],
+			"published": "2009-01-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0448",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0448"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p5-File-Path"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.07_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,187 @@
+{
+	"id": "16aed7b7-344a-11ea-9cdb-001b217b3468",
+	"advisories": [
+		{
+			"id": "16aed7b7-344a-11ea-9cdb-001b217b3468",
+			"title": "phpMyAdmin -- SQL injection",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"https://www.phpmyadmin.net/security/PMASA-2020-1/\">\n\t  <p>A SQL injection flaw has been discovered in the user accounts page</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/16aed7b7-344a-11ea-9cdb-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.phpmyadmin.net/security/PMASA-2020-1/"
+				}
+			],
+			"published": "2020-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-5504",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-5504"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin-php72"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin-php73"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin-php74"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin5-php72"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin5-php73"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin5-php74"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.4"
+					},
+					{
+						"lt": "5.0.1",
+						"ge": "5.0.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,77 @@
+{
+	"id": "e4bc70fc-5a2f-11e6-a1bc-589cfc0654e1",
+	"advisories": [
+		{
+			"id": "e4bc70fc-5a2f-11e6-a1bc-589cfc0654e1",
+			"title": "Vulnerabilities in Curl",
+			"description": "\n\t<p>Curl security team reports:</p>\n\t<blockquote cite=\"https://curl.haxx.se/docs/security.html\">\n\t  <p>CVE-2016-5419 - TLS session resumption client cert bypass</p>\n\t  <p>CVE-2016-5420 - Re-using connections with wrong client cert</p>\n\t  <p>CVE-2016-5421 - use of connection struct after free</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e4bc70fc-5a2f-11e6-a1bc-589cfc0654e1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://curl.haxx.se/docs/adv_20160803A.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://curl.haxx.se/docs/adv_20160803B.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://curl.haxx.se/docs/adv_20160803C.html"
+				}
+			],
+			"published": "2016-08-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5419",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5419"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5420",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5420"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5421",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5421"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "curl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.50.1",
+						"ge": "7.32.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

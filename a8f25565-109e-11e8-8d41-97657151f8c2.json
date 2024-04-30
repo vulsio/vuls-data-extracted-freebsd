@@ -1,0 +1,54 @@
+{
+	"id": "a8f25565-109e-11e8-8d41-97657151f8c2",
+	"advisories": [
+		{
+			"id": "a8f25565-109e-11e8-8d41-97657151f8c2",
+			"title": "uwsgi -- a stack-based buffer overflow",
+			"description": "\n\t<p>Uwsgi developers report:</p>\n\t<blockquote cite=\"http://lists.unbit.it/pipermail/uwsgi/2018-February/008835.html\">\n\t  <p>It was discovered that the uwsgi_expand_path function in utils.c in\n\t    Unbit uWSGI, an application container server, has a stack-based buffer\n\t    overflow via a large directory length that can cause a\n\t    denial-of-service (application crash) or stack corruption.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a8f25565-109e-11e8-8d41-97657151f8c2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.unbit.it/pipermail/uwsgi/2018-February/008835.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.debian.org/debian-lts-announce/2018/02/msg00010.html"
+				}
+			],
+			"published": "2018-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-6758",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6758"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "uwsgi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.16"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

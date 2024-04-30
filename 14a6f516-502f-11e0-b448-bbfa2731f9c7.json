@@ -1,0 +1,125 @@
+{
+	"id": "14a6f516-502f-11e0-b448-bbfa2731f9c7",
+	"advisories": [
+		{
+			"id": "14a6f516-502f-11e0-b448-bbfa2731f9c7",
+			"title": "postfix -- plaintext command injection with SMTP over TLS",
+			"description": "\n\t<p>Wietse Venema has discovered a software flaw that allows\n\t  an attacker to inject client commands into an SMTP session\n\t  during the unprotected plaintext SMTP protocol phase, such\n\t  that the server will execute those commands during the SMTP-\n\t  over-TLS protocol phase when all communication is supposed\n\t  to be protected.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/14a6f516-502f-11e0-b448-bbfa2731f9c7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.postfix.org/CVE-2011-0411.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/43646/"
+				}
+			],
+			"published": "2011-03-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-0411",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0411"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postfix"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.3,1",
+						"ge": "2.7.*,1"
+					},
+					{
+						"lt": "2.6.9,1",
+						"ge": "2.6.*,1"
+					},
+					{
+						"lt": "2.5.12,2",
+						"ge": "2.5.*,2"
+					},
+					{
+						"lt": "2.4.16,1",
+						"ge": "2.4.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postfix-base"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.3,1",
+						"ge": "2.7.*,1"
+					},
+					{
+						"lt": "2.6.9,1",
+						"ge": "2.6.*,1"
+					},
+					{
+						"lt": "2.5.12,2",
+						"ge": "2.5.*,2"
+					},
+					{
+						"lt": "2.4.16,1",
+						"ge": "2.4.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postfix-current"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.9.20100120,4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postfix-current-base"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.9.20100120,4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

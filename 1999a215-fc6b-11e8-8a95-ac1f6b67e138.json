@@ -1,0 +1,65 @@
+{
+	"id": "1999a215-fc6b-11e8-8a95-ac1f6b67e138",
+	"advisories": [
+		{
+			"id": "1999a215-fc6b-11e8-8a95-ac1f6b67e138",
+			"title": "couchdb -- administrator privilege escalation",
+			"description": "\n\t<p>Apache CouchDB PMC reports:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread.html/...\">\n\t  <p>Database Administrator could achieve privilege escalation to\n\t  the account that CouchDB runs under, by abusing insufficient validation\n\t  in the HTTP API, escaping security controls implemented in previous\n\t  releases.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1999a215-fc6b-11e8-8a95-ac1f6b67e138.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://docs.couchdb.org/en/stable/cve/2018-17188.html"
+				}
+			],
+			"published": "2018-12-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-17188",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-17188"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "couchdb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.0,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "couchdb2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

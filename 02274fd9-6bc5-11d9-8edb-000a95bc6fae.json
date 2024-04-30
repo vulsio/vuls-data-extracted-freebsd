@@ -1,0 +1,47 @@
+{
+	"id": "02274fd9-6bc5-11d9-8edb-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "02274fd9-6bc5-11d9-8edb-000a95bc6fae",
+			"title": "realplayer -- arbitrary file deletion and other vulnerabilities",
+			"description": "\n\t<p>An NGSSoftware Insight Security Research Advisory reports:</p>\n\t<blockquote cite=\"http://www.ngssoftware.com/advisories/real-03full.txt\">\n\t  <p>Two vulnerabilities have been discovered in RealPlayer\n\t    which may potentially be leveraged to allow remote code\n\t    execution, or may used in combination with the Real\n\t    Metadata Package File Deletion vulnerability to reliably\n\t    delete files from a users system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/02274fd9-6bc5-11d9-8edb-000a95bc6fae.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ngssoftware.com/advisories/real-02full.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ngssoftware.com/advisories/real-03full.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://service.real.com/help/faq/security/040928_player/EN/"
+				}
+			],
+			"published": "2005-01-21T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-realplayer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,95 @@
+{
+	"id": "8706e097-6db7-11ee-8744-080027f5fec9",
+	"advisories": [
+		{
+			"id": "8706e097-6db7-11ee-8744-080027f5fec9",
+			"title": "redis -- Possible bypassing Unix socket permissions",
+			"description": "\n\t<p>Redis core team  reports:</p>\n\t<blockquote cite=\"https://groups.google.com/g/redis-db/c/r81pHa-dcI8\">\n\t  <p>\n\t    The wrong order of listen(2) and chmod(2) calls creates a\n\t    race condition that can be used by another process to\n\t    bypass desired Unix socket permissions on startup.\n\t  </p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8706e097-6db7-11ee-8744-080027f5fec9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/g/redis-db/c/r81pHa-dcI8"
+				}
+			],
+			"published": "2023-10-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-45145",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-45145"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redis"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redis-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.2.2.20231018"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redis70"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.0.14"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redis62"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

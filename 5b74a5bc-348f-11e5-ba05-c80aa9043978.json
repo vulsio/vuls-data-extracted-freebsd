@@ -1,0 +1,79 @@
+{
+	"id": "5b74a5bc-348f-11e5-ba05-c80aa9043978",
+	"advisories": [
+		{
+			"id": "5b74a5bc-348f-11e5-ba05-c80aa9043978",
+			"title": "OpenSSH -- MaxAuthTries limit bypass via duplicates in KbdInteractiveDevices",
+			"description": "\n\t<blockquote cite=\"https://access.redhat.com/security/cve/CVE-2015-5600\">\n\t  <p>It was discovered that the OpenSSH sshd daemon did not check the\n\t    list of keyboard-interactive authentication methods for duplicates.\n\t    A remote attacker could use this flaw to bypass the MaxAuthTries\n\t    limit, making it easier to perform password guessing attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5b74a5bc-348f-11e5-ba05-c80aa9043978.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://access.redhat.com/security/cve/CVE-2015-5600"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:16.openssh.asc"
+				}
+			],
+			"published": "2015-07-27T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5600",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5600"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-portable"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.9.p1_2,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.1_16",
+						"ge": "10.1"
+					},
+					{
+						"lt": "9.3_21",
+						"ge": "9.3"
+					},
+					{
+						"lt": "8.4_36",
+						"ge": "8.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

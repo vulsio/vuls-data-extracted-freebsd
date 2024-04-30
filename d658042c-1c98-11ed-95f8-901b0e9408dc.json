@@ -1,0 +1,51 @@
+{
+	"id": "d658042c-1c98-11ed-95f8-901b0e9408dc",
+	"advisories": [
+		{
+			"id": "d658042c-1c98-11ed-95f8-901b0e9408dc",
+			"title": "dendrite -- Incorrect parsing of the event default power level in event auth",
+			"description": "\n\t<p>Dendrite team reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/gomatrixserverlib/security/advisories/GHSA-grvv-h2f9-7v9c\">\n\t  <p>The power level parsing within gomatrixserverlib was failing to parse the \"events_default\"\n\t  key of the m.room.power_levels event, defaulting the event default power level to zero in all cases.</p>\n\t  <p> In rooms where the \"events_default\" power level had been changed, this could result in\n\t  events either being incorrectly authorised or rejected by Dendrite servers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d658042c-1c98-11ed-95f8-901b0e9408dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/matrix-org/gomatrixserverlib/security/advisories/GHSA-grvv-h2f9-7v9c"
+				}
+			],
+			"published": "2022-08-15T00:00:00Z",
+			"modified": "2022-08-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-36009",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-36009"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dendrite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

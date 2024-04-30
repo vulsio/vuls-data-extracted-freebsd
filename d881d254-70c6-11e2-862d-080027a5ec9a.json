@@ -1,0 +1,113 @@
+{
+	"id": "d881d254-70c6-11e2-862d-080027a5ec9a",
+	"advisories": [
+		{
+			"id": "d881d254-70c6-11e2-862d-080027a5ec9a",
+			"title": "libexif -- multiple remote vulnerabilities",
+			"description": "\n\t<p>libexif project security advisory:</p>\n\t<blockquote cite=\"http://sourceforge.net/mailarchive/message.php?msg_id=29534027\">\n\t  <p>A number of remotely exploitable issues were discovered in libexif\n\t    and exif, with effects ranging from information leakage to potential\n\t    remote code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d881d254-70c6-11e2-862d-080027a5ec9a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/54437"
+				}
+			],
+			"published": "2013-03-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-2812",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2812"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2813",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2813"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2814",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2814"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2836",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2836"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2837",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2837"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2840",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2840"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2841",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2841"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2845",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2845"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libexif"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.6.21"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

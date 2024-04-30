@@ -1,0 +1,60 @@
+{
+	"id": "ca4d63fb-f15c-11e2-b183-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "ca4d63fb-f15c-11e2-b183-20cf30e32f6d",
+			"title": "apache24 -- several vulnerabilities",
+			"description": "\n\t<p>Apache HTTP SERVER PROJECT reports:</p>\n\t<blockquote cite=\"http://www.apache.org/dist/httpd/Announcement2.4.html\">\n\t  <p>mod_dav: Sending a MERGE request against a URI handled by mod_dav_svn\n\t    with the source href (sent as part of the request body as XML) pointing\n\t    to a URI that is not configured for DAV will trigger a segfault.</p>\n\t  <p>mod_session_dbd: Make sure that dirty flag is respected when saving\n\t    sessions, and ensure the session ID is changed each time the session\n\t    changes. This changes the format of the updatesession SQL statement.\n\t    Existing configurations must be changed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ca4d63fb-f15c-11e2-b183-20cf30e32f6d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.apache.org/dist/httpd/Announcement2.4.html"
+				}
+			],
+			"published": "2013-07-20T00:00:00Z",
+			"modified": "2013-07-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1896",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1896"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2249",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2249"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

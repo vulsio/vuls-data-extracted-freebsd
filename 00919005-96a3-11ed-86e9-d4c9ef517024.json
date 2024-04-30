@@ -1,0 +1,68 @@
+{
+	"id": "00919005-96a3-11ed-86e9-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "00919005-96a3-11ed-86e9-d4c9ef517024",
+			"title": "Apache httpd -- Multiple vulnerabilities",
+			"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"https://downloads.apache.org/httpd/CHANGES_2.4.55\">\n\t  <p>mod_dav out of bounds read, or write of zero byte (CVE-2006-20001)\n\t    (moderate)</p>\n\t  <p>mod_proxy_ajp Possible request smuggling (CVE-2022-36760) (moderate)</p>\n\t  <p>mod_proxy prior to 2.4.55 allows a backend to trigger HTTP response\n\t    splitting (CVE-2022-37436) (moderate)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/00919005-96a3-11ed-86e9-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.apache.org/httpd/CHANGES_2.4.55"
+				}
+			],
+			"published": "2023-01-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-37436",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-37436"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-36760",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-36760"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-20001",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-20001"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.55"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

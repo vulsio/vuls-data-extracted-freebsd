@@ -1,0 +1,55 @@
+{
+	"id": "64ee858e-e035-4bb4-9c77-2468963dddb8",
+	"advisories": [
+		{
+			"id": "64ee858e-e035-4bb4-9c77-2468963dddb8",
+			"title": "libvorbis -- multiple vulnerabilities",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2017-14632\">\n\t  <p>Xiph.Org libvorbis 1.3.5 allows Remote Code Execution\n\t    upon freeing uninitialized memory in the function\n\t    vorbis_analysis_headerout() in info.c when\n\t    vi-&gt;channels&lt;=0, a similar issue to Mozilla bug\n\t    550184.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2017-14633\">\n\t  <p>In Xiph.Org libvorbis 1.3.5, an out-of-bounds array read\n\t    vulnerability exists in the function mapping0_forward() in\n\t    mapping0.c, which may lead to DoS when operating on a\n\t    crafted audio file with vorbis_analysis().</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/64ee858e-e035-4bb4-9c77-2468963dddb8.html"
+				}
+			],
+			"published": "2018-03-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14632",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14632"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14633",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14633"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libvorbis"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.6,3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

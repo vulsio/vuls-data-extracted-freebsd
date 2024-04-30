@@ -1,0 +1,108 @@
+{
+	"id": "9575259a-92d5-11e4-bce6-d050992ecde8",
+	"advisories": [
+		{
+			"id": "9575259a-92d5-11e4-bce6-d050992ecde8",
+			"title": "file -- multiple vulnerabilities",
+			"description": "\n\t<p>RedHat reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2014/q4/1056\">\n\t  <p>Thomas Jarosch of Intra2net AG reported a number of\n\t    denial of service issues (resource consumption) in\n\t    the ELF parser used by file(1). These issues were\n\t    fixed in the 5.21 release of file(1), but by mistake\n\t    are missing from the changelog.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9575259a-92d5-11e4-bce6-d050992ecde8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2014/q4/1056"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:28.file.asc"
+				}
+			],
+			"published": "2015-01-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3710",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3710"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-8116",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8116"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-8117",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8117"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "file"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.21"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.4_20",
+						"ge": "8.4"
+					},
+					{
+						"lt": "9.1_23",
+						"ge": "9.1"
+					},
+					{
+						"lt": "9.2_16",
+						"ge": "9.2"
+					},
+					{
+						"lt": "9.3_6",
+						"ge": "9.3"
+					},
+					{
+						"lt": "10.0_13",
+						"ge": "10.0"
+					},
+					{
+						"lt": "10.1_1",
+						"ge": "10.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

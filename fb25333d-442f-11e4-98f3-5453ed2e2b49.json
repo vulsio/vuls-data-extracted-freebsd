@@ -1,0 +1,50 @@
+{
+	"id": "fb25333d-442f-11e4-98f3-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "fb25333d-442f-11e4-98f3-5453ed2e2b49",
+			"title": "krfb -- Multiple security issues in bundled libvncserver",
+			"description": "\n\t<p>Martin Sandsmark reports:</p>\n\t<blockquote cite=\"http://lists.kde.org/?l=kde-announce&amp;m=141153917319769&amp;w=2\">\n\t  <p>krfb 4.14 [and earlier] embeds libvncserver which has had\n\t    several security issues.</p>\n\t  <p>Several remotely exploitable security issues have been\n\t    uncovered in libvncserver, some of which might allow a\n\t    remote authenticated user code execution or application\n\t    crashes.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fb25333d-442f-11e4-98f3-5453ed2e2b49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.kde.org/?l=kde-announce&m=141153917319769&w=2"
+				}
+			],
+			"published": "2014-09-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-6055",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6055"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "krfb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.12.5_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,54 @@
+{
+	"id": "647ac600-cc70-11ec-9cfc-10c37b4ac2ea",
+	"advisories": [
+		{
+			"id": "647ac600-cc70-11ec-9cfc-10c37b4ac2ea",
+			"title": "gogs -- XSS in issue attachments",
+			"description": "\n\t<p>The gogs project reports:</p>\n\t<blockquote cite=\"https://github.com/gogs/gogs/issues/6919\">\n\t  <p>Repository issues page allows HTML attachments with arbitrary\n\t    JS code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/647ac600-cc70-11ec-9cfc-10c37b4ac2ea.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/gogs/gogs/issues/6919"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://huntr.dev/bounties/34a12146-3a5d-4efc-a0f8-7a3ae04b198d/"
+				}
+			],
+			"published": "2022-05-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-1464",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-1464"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gogs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.12.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

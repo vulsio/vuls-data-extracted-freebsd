@@ -1,0 +1,117 @@
+{
+	"id": "f645aa90-a3e8-11e3-a422-3c970e169bc2",
+	"advisories": [
+		{
+			"id": "f645aa90-a3e8-11e3-a422-3c970e169bc2",
+			"title": "gnutls -- multiple certificate verification issues",
+			"description": "\n\t<p>GnuTLS project reports:</p>\n\t<blockquote cite=\"http://www.gnutls.org/security.html#GNUTLS-SA-2014-2\">\n\t  <p>A vulnerability was discovered that affects the\n\t    certificate verification functions of all gnutls\n\t    versions. A specially crafted certificate could\n\t    bypass certificate validation checks.  The\n\t    vulnerability was discovered during an audit of\n\t    GnuTLS for Red Hat.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.gnutls.org/security.html#GNUTLS-SA-2014-1\">\n\t  <p>Suman Jana reported a vulnerability that affects\n\t    the certificate verification functions of\n\t    gnutls 2.11.5 and later versions. A version 1\n\t    intermediate certificate will be considered as\n\t    a CA certificate by default (something that\n\t    deviates from the documented behavior).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f645aa90-a3e8-11e3-a422-3c970e169bc2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2014-1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2014-2"
+				}
+			],
+			"published": "2014-03-04T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0092",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0092"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1959",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1959"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gnutls"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.12.23_4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-gnutls"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.12.23_4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gnutls-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.22"
+					},
+					{
+						"lt": "3.2.12",
+						"gt": "3.2.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gnutls3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.22"
+					},
+					{
+						"lt": "3.2.12",
+						"gt": "3.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

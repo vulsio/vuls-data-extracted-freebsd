@@ -1,0 +1,76 @@
+{
+	"id": "62c0dbbd-bfce-11e5-b5fe-002590263bf5",
+	"advisories": [
+		{
+			"id": "62c0dbbd-bfce-11e5-b5fe-002590263bf5",
+			"title": "cgit -- multiple vulnerabilities",
+			"description": "\n\t<p>Jason A. Donenfeld reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/01/14/6\">\n\t  <p>Reflected Cross Site Scripting and Header Injection in Mimetype\n\t    Query String.</p>\n\t  <p>Stored Cross Site Scripting and Header Injection in Filename\n\t    Parameter.</p>\n\t  <p>Integer Overflow resulting in Buffer Overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/62c0dbbd-bfce-11e5-b5fe-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.zx2c4.com/pipermail/cgit/2016-January/002817.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/01/14/6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206417"
+				}
+			],
+			"published": "2016-01-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1899",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1899"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1900",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1900"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1901",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1901"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cgit"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.12"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

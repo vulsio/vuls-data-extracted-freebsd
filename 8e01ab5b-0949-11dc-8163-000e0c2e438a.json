@@ -1,0 +1,75 @@
+{
+	"id": "8e01ab5b-0949-11dc-8163-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "8e01ab5b-0949-11dc-8163-000e0c2e438a",
+			"title": "FreeBSD -- heap overflow in file(1)",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When writing data into a buffer in the file_printf function,\n\t  the length of the unused portion of the buffer is not\n\t  correctly tracked, resulting in a buffer overflow when\n\t  processing certain files.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can cause file(1) to be run on a maliciously\n\t  constructed input can cause file(1) to crash.  It may be\n\t  possible for such an attacker to execute arbitrary code with\n\t  the privileges of the user running file(1).</p>\n\t<p>The above also applies to any other applications using the\n\t  libmagic(3) library.</p>\n\t<h1>Workaround:</h1>\n\t<p>No workaround is available, but systems where file(1) and\n\t  other libmagic(3)-using applications are never run on\n\t  untrusted input are not vulnerable.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8e01ab5b-0949-11dc-8163-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-07:04.file.asc"
+				}
+			],
+			"published": "2007-05-23T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-1536",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-1536"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "file"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.21"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2_5",
+						"ge": "6.2"
+					},
+					{
+						"lt": "6.1_17",
+						"ge": "6.1"
+					},
+					{
+						"lt": "5.5_13",
+						"ge": "5.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

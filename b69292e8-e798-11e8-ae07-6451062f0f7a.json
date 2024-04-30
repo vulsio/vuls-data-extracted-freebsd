@@ -1,0 +1,50 @@
+{
+	"id": "b69292e8-e798-11e8-ae07-6451062f0f7a",
+	"advisories": [
+		{
+			"id": "b69292e8-e798-11e8-ae07-6451062f0f7a",
+			"title": "Flash Player -- information disclosure",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb18-39.html\">\n\t  <ul>\n\t    <li>This update resolves a out-of-bounds vulnerability that\n\t      could lead to information disclosure (CVE-2018-15978).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b69292e8-e798-11e8-ae07-6451062f0f7a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb18-39.html"
+				}
+			],
+			"published": "2018-11-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-15978",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-15978"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-flashplayer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "31.0.0.148"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

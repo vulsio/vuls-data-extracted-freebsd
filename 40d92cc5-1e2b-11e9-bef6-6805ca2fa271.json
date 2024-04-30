@@ -1,0 +1,59 @@
+{
+	"id": "40d92cc5-1e2b-11e9-bef6-6805ca2fa271",
+	"advisories": [
+		{
+			"id": "40d92cc5-1e2b-11e9-bef6-6805ca2fa271",
+			"title": "powerdns-recursor -- multiple vulnerabilities",
+			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://doc.powerdns.com/recursor/changelog/4.1.html\">\n\t  <p>CVE-2019-3806: An issue has been found in PowerDNS Recursor where Lua hooks are\n\t   not properly applied to queries received over TCP in some specific combination of\n\t   settings, possibly bypassing security policies enforced using Lua.\n\n\t   When the recursor is configured to run with more than one thread (threads=X) and to\n\t   do the distribution of incoming queries to the worker threads itself\n\t   (pdns-distributes-queries=yes), the Lua script is not properly loaded in the thread\n\t   handling incoming TCP queries, causing the Lua hooks to not be properly applied.</p>\n\t  <p>CVE-2019-3807: An issue has been found in PowerDNS Recursor where records in the\n\t   answer section of responses received from authoritative servers with the AA flag not\n\t   set were not properly validated, allowing an attacker to bypass DNSSEC validation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40d92cc5-1e2b-11e9-bef6-6805ca2fa271.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://doc.powerdns.com/recursor/changelog/4.1.html"
+				}
+			],
+			"published": "2019-01-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-3806",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3806"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-3807",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3807"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "powerdns-recursor"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.9"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

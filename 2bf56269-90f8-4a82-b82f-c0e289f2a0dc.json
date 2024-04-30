@@ -1,0 +1,182 @@
+{
+	"id": "2bf56269-90f8-4a82-b82f-c0e289f2a0dc",
+	"advisories": [
+		{
+			"id": "2bf56269-90f8-4a82-b82f-c0e289f2a0dc",
+			"title": "jenkins -- multiple vulnerabilities",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://www.jenkins.io/security/advisory/2021-11-04/\">\n\t  <h1>Description</h1>\n\t  <h5>(Critical) SECURITY-2455 / CVE-2021-21685, CVE-2021-21686, CVE-2021-21687, CVE-2021-21688, CVE-2021-21689, CVE-2021-21690, CVE-2021-21691, CVE-2021-21692, CVE-2021-21693, CVE-2021-21694, CVE-2021-21695</h5>\n\t  <p>Multiple vulnerabilities allow bypassing path filtering of agent-to-controller access control</p>\n\t  <h5>(High) SECURITY-2423 / CVE-2021-21696</h5>\n\t  <p>Agent-to-controller access control allowed writing to sensitive directory used by Pipeline: Shared Groovy Libraries Plugin</p>\n\t  <h5>(High) SECURITY-2428 / CVE-2021-21697</h5>\n\t  <p>Agent-to-controller access control allows reading/writing most content of build directories</p>\n\t  <h5>(Medium) SECURITY-2506 / CVE-2021-21698</h5>\n\t  <p>Path traversal vulnerability in Subversion Plugin allows reading arbitrary files</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2bf56269-90f8-4a82-b82f-c0e289f2a0dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.jenkins.io/security/advisory/2021-11-04/"
+				}
+			],
+			"published": "2021-11-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-21685",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21685"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21686"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21687",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21687"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21688",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21688"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21689",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21689"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21690",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21690"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21691",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21691"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21692",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21692"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21693",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21693"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21694",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21694"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21695",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21695"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21696",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21696"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21697",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21697"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-21698",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-21698"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.319"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins-lts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.303.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

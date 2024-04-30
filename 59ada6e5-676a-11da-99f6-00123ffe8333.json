@@ -1,0 +1,54 @@
+{
+	"id": "59ada6e5-676a-11da-99f6-00123ffe8333",
+	"advisories": [
+		{
+			"id": "59ada6e5-676a-11da-99f6-00123ffe8333",
+			"title": "phpmyadmin -- XSS vulnerabilities",
+			"description": "\n\t<p>A phpMyAdmin security advisory reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-8\">\n\t  <p>It was possible to conduct an XSS attack via the\n\t    HTTP_HOST variable; also, some scripts in the libraries\n\t    directory that handle header generation were vulnerable\n\t    to XSS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/59ada6e5-676a-11da-99f6-00123ffe8333.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17895/"
+				}
+			],
+			"published": "2005-12-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-3665",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-3665"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

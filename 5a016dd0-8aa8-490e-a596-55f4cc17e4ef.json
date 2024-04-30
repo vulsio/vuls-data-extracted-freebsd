@@ -1,0 +1,127 @@
+{
+	"id": "5a016dd0-8aa8-490e-a596-55f4cc17e4ef",
+	"advisories": [
+		{
+			"id": "5a016dd0-8aa8-490e-a596-55f4cc17e4ef",
+			"title": "rails -- multiple vulnerabilities",
+			"description": "\n\t<p>Ruby on Rails blog:</p>\n\t<blockquote cite=\"http://weblog.rubyonrails.org/2016/2/29/Rails-4-2-5-2-4-1-14-2-3-2-22-2-have-been-released/\">\n\t  <p>Rails 4.2.5.2, 4.1.14.2, and 3.2.22.2 have been released! These\n\t    contain the following important security fixes, and it is\n\t\trecommended that users upgrade as soon as possible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5a016dd0-8aa8-490e-a596-55f4cc17e4ef.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/d/msg/rubyonrails-security/ddY6HgqB2z4/we0RasMZIAAJ"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/d/msg/rubyonrails-security/ly-IH-fxr_Q/WLoOhcMZIAAJ"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://weblog.rubyonrails.org/2016/2/29/Rails-4-2-5-2-4-1-14-2-3-2-22-2-have-been-released/"
+				}
+			],
+			"published": "2016-03-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2097",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2097"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2098",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2098"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-actionpack"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.22.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-actionpack4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-actionview"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.5.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-rails"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.22.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-rails4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

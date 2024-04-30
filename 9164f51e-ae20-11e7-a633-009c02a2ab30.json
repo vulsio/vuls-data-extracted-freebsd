@@ -1,0 +1,95 @@
+{
+	"id": "9164f51e-ae20-11e7-a633-009c02a2ab30",
+	"advisories": [
+		{
+			"id": "9164f51e-ae20-11e7-a633-009c02a2ab30",
+			"title": "Python 2.7 -- multiple vulnerabilities",
+			"description": "\n       <p>Python reports:</p>\n       <blockquote cite=\"https://raw.githubusercontent.com/python/cpython/84471935ed2f62b8c5758fd544c7d37076fe0fa5/Misc/NEWS\">\n\t<p>Multiple vulnerabilities have been fixed in Python 2.7.14. Please refer to the CVE list for details.</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9164f51e-ae20-11e7-a633-009c02a2ab30.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://raw.githubusercontent.com/python/cpython/84471935ed2f62b8c5758fd544c7d37076fe0fa5/Misc/NEWS"
+				}
+			],
+			"published": "2017-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-0876",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0876"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0718"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4472",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4472"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5300",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5300"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9063",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9063"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9233",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9233"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python27"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

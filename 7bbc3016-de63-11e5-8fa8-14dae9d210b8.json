@@ -1,0 +1,91 @@
+{
+	"id": "7bbc3016-de63-11e5-8fa8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "7bbc3016-de63-11e5-8fa8-14dae9d210b8",
+			"title": "tomcat -- multiple vulnerabilities",
+			"description": "\n\t<p>Mark Thomas reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF96.7070701@apache.org%3e\">\n\t  <ul>\n\t  <li><p>CVE-2015-5346 Apache Tomcat Session fixation</p></li>\n\t  <li><p>CVE-2015-5351 Apache Tomcat CSRF token leak</p></li>\n\t  <li><p>CVE-2016-0763 Apache Tomcat Security Manager Bypass</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7bbc3016-de63-11e5-8fa8-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF96.7070701@apache.org%3e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF7B.1010901@apache.org%3e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEFB2.9030605@apache.org%3e"
+				}
+			],
+			"published": "2016-02-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5346",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5346"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5351",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5351"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0763",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0763"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.0.68"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.30"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

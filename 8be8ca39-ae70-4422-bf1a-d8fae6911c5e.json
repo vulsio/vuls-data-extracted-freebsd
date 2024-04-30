@@ -1,0 +1,116 @@
+{
+	"id": "8be8ca39-ae70-4422-bf1a-d8fae6911c5e",
+	"advisories": [
+		{
+			"id": "8be8ca39-ae70-4422-bf1a-d8fae6911c5e",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.de/2016/03/stable-channel-update_24.html\">\n\t  <p>[594574] High CVE-2016-1646: Out-of-bounds read in V8.</p>\n\t  <p>[590284] High CVE-2016-1647: Use-after-free in Navigation.</p>\n\t  <p>[590455] High CVE-2016-1648: Use-after-free in Extensions.</p>\n\t  <p>[597518] CVE-2016-1650: Various fixes from internal audits,\n\t    fuzzing and other initiatives.</p>\n\t  <p>Multiple vulnerabilities in V8 fixed at the tip of the\n\t    4.9 branch</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8be8ca39-ae70-4422-bf1a-d8fae6911c5e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.de/2016/03/stable-channel-update_24.html"
+				}
+			],
+			"published": "2016-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1646",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1646"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1647",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1647"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1648",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1648"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1649",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1649"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1650",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1650"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "49.0.2623.108"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium-npapi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "49.0.2623.108"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium-pulse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "49.0.2623.108"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

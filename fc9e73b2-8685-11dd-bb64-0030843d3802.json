@@ -1,0 +1,59 @@
+{
+	"id": "fc9e73b2-8685-11dd-bb64-0030843d3802",
+	"advisories": [
+		{
+			"id": "fc9e73b2-8685-11dd-bb64-0030843d3802",
+			"title": "gallery -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/31912/\">\n\t  <p>An error in the handing of ZIP archives with symbolic links can be\n\t    exploited to disclose the contents of arbitrary files.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://secunia.com/advisories/31858/\">\n\t  <p>Input from uploaded Flash animations is not properly sanitised\n\t    before being used. This can be exploited to insert arbitrary HTML and\n\t    script code, which is executed in a user's browser session in context\n\t    of an affected site when the malicious data is viewed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc9e73b2-8685-11dd-bb64-0030843d3802.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31912/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31858/"
+				}
+			],
+			"published": "2008-09-19T00:00:00Z",
+			"modified": "2008-10-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gallery"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gallery2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

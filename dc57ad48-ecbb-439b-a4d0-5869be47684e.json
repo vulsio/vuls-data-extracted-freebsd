@@ -1,0 +1,81 @@
+{
+	"id": "dc57ad48-ecbb-439b-a4d0-5869be47684e",
+	"advisories": [
+		{
+			"id": "dc57ad48-ecbb-439b-a4d0-5869be47684e",
+			"title": "vlc -- Use after free vulnerability",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11529\">\n\t  <p>VideoLAN VLC media player 2.2.x is prone to a use after free\n\t    vulnerability which an attacker can leverage to execute arbitrary\n\t    code via crafted MKV files. Failed exploit attempts will likely\n\t    result in denial of service conditions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dc57ad48-ecbb-439b-a4d0-5869be47684e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11529"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/fulldisclosure/2018/Jul/28"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rapid7/metasploit-framework/pull/10335"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/videolan/vlc-3.0/commit/c472668ff873cfe29281822b4548715fb7bb0368"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/videolan/vlc-3.0/commit/d2dadb37e7acc25ae08df71e563855d6e17b5b42"
+				}
+			],
+			"published": "2018-07-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-11529",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-11529"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vlc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.2.8_6,4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vlc-qt4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.2.8_6,4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

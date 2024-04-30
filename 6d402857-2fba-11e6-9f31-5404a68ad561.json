@@ -1,0 +1,61 @@
+{
+	"id": "6d402857-2fba-11e6-9f31-5404a68ad561",
+	"advisories": [
+		{
+			"id": "6d402857-2fba-11e6-9f31-5404a68ad561",
+			"title": "VLC -- Possibly remote code execution via crafted file",
+			"description": "\n\t<p>The VLC project reports:</p>\n\t<blockquote cite=\"https://www.videolan.org/developers/vlc-branch/NEWS\">\n\t  <p>Fix out-of-bound write in adpcm QT IMA codec (CVE-2016-5108)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6d402857-2fba-11e6-9f31-5404a68ad561.html"
+				}
+			],
+			"published": "2016-06-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5108",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5108"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vlc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.4,4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vlc-qt4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.4,4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

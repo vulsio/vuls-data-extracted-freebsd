@@ -1,0 +1,50 @@
+{
+	"id": "5436f9a2-2190-11ec-a90b-0cc47a49470e",
+	"advisories": [
+		{
+			"id": "5436f9a2-2190-11ec-a90b-0cc47a49470e",
+			"title": "ha -- Directory traversals",
+			"description": "\n\t<p>Alexander Cherepanov reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/01/18/8\">\n\t  <p>Version 0.999b and older of ha archiver is susceptible to directory\n\t  traversal vulnerabilities via absolute and relative paths.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5436f9a2-2190-11ec-a90b-0cc47a49470e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/01/18/8"
+				}
+			],
+			"published": "2021-09-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1198",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1198"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ha"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.999b_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

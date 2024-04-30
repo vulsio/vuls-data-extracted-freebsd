@@ -1,0 +1,51 @@
+{
+	"id": "e44e5ace-6820-11ee-b06f-0050569ceb3a",
+	"advisories": [
+		{
+			"id": "e44e5ace-6820-11ee-b06f-0050569ceb3a",
+			"title": "GLPI vulnerable to SQL injection via inventory agent request",
+			"description": "\n\t<p>security-advisories@github.com reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.8\">\n\t  <p>GLPI is a free asset and IT management software package.  Starting\n\tin version 10.0.0 and prior to version 10.0.8, GLPI inventory\n\tendpoint can be used to drive a SQL injection attack.  By default,\n\tGLPI inventory endpoint requires no authentication.  Version 10.0.8\n\thas a patch for this issue.  As a workaround, one may disable native\n\tinventory.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e44e5ace-6820-11ee-b06f-0050569ceb3a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-35924"
+				}
+			],
+			"published": "2023-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-35924",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-35924"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.8,1",
+						"ge": "10.0.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

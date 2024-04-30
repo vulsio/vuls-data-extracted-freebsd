@@ -1,0 +1,51 @@
+{
+	"id": "cdeb34e6-d00d-11e0-987e-00215c6a37bb",
+	"advisories": [
+		{
+			"id": "cdeb34e6-d00d-11e0-987e-00215c6a37bb",
+			"title": "stunnel -- heap corruption vulnerability",
+			"description": "\n\t<p>Michal Trojnara reports:</p>\n\t<blockquote cite=\"http://www.stunnel.org/pipermail/stunnel-announce/2011-August/000059.html\">\n\t  <p>Version 4.42, 2011.08.18, urgency: HIGH:</p>\n\t  <p>Fixed a heap corruption vulnerability in versions 4.40 and 4.41.\n\t    It may possibly be leveraged to perform DoS or remote code\n\t    execution attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cdeb34e6-d00d-11e0-987e-00215c6a37bb.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/49254"
+				}
+			],
+			"published": "2011-08-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2940",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2940"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "stunnel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.42",
+						"ge": "4.40"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

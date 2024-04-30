@@ -1,0 +1,113 @@
+{
+	"id": "be1aada2-be6c-11e8-8fc6-000c29434208",
+	"advisories": [
+		{
+			"id": "be1aada2-be6c-11e8-8fc6-000c29434208",
+			"title": "mediawiki -- multiple vulnerabilities",
+			"description": "\n\t<p>Mediawiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/pipermail/mediawiki-announce/2018-September/000223.html\">\n\t  <p>Security fixes:</p>\n\t  <p>T169545: $wgRateLimits entry for 'user' overrides 'newbie'.</p>\n\t    <p>T194605: BotPasswords can bypass CentralAuth's account lock.</p>\n\t    <p>T187638: When a log event is (partially) hidden Special:Redirect/logid\n\t     can link to the incorrect log and reveal hidden</p>\n\t    <p>T193237: Special:BotPasswords should require reauthenticate.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/be1aada2-be6c-11e8-8fc6-000c29434208.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.wikimedia.org/pipermail/mediawiki-announce/2018-September/000223.html"
+				}
+			],
+			"published": "2018-09-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-0503",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-0503"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-0505",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-0505"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-0504",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-0504"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki127"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.27.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki129"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.29.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki130"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.30.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki131"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.31.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

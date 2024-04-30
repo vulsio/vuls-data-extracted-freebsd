@@ -1,0 +1,75 @@
+{
+	"id": "bb99f803-5fde-11d9-b721-00065be4b5b6",
+	"advisories": [
+		{
+			"id": "bb99f803-5fde-11d9-b721-00065be4b5b6",
+			"title": "helvis -- information leak vulnerabilities",
+			"description": "\n\t<p>Once a recovery file has been preserved by the setuid root elvprsv\n\tutility it is placed in a worldreadable directory with worldreadable\n\tpermissions.  This possibly allows sensitive information to leak.</p>\n\t<p>In addition to this information leak, it is possible for users\n\tto recover files that belong to other users by using elvrec, another\n\tsetuid root binary.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bb99f803-5fde-11d9-b721-00065be4b5b6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://people.freebsd.org/~niels/ports/korean/helvis/issues.txt"
+				}
+			],
+			"published": "2005-01-10T00:00:00Z",
+			"modified": "2005-01-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0118",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0118"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0119",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0119"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ko-helvis"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.8h2_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "helvis"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.8h2_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

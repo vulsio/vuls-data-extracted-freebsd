@@ -1,0 +1,43 @@
+{
+	"id": "13419364-1685-11e4-bf04-60a44c524f57",
+	"advisories": [
+		{
+			"id": "13419364-1685-11e4-bf04-60a44c524f57",
+			"title": "i2p -- Multiple Vulnerabilities",
+			"description": "\n\t<p>The i2p project reports:</p>\n\t<blockquote cite=\"http://geti2p.net/en/blog/post/2014/07/26/0.9.14-Release\">\n\t  <p>XSS and remote execution vulnerabilities reported by Exodus Intelligence.</p>\n\t</blockquote>\n\t<p>Exodus Intelligence reports:</p>\n\t<blockquote cite=\"http://blog.exodusintel.com/2014/07/23/silverbullets_and_fairytails/\">\n\t  <p>The vulnerability we have found is able to perform remote code\n\t     execution with a specially crafted payload. This payload can be\n\t     customized to unmask a user and show the public IP address in\n\t     which the user connected from within 'a couple of seconds.'</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/13419364-1685-11e4-bf04-60a44c524f57.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.exodusintel.com/2014/07/23/silverbullets_and_fairytails/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://geti2p.net/en/blog/post/2014/07/26/0.9.14-Release"
+				}
+			],
+			"published": "2014-07-28T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "i2p"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

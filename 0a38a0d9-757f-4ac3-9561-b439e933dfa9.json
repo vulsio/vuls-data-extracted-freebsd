@@ -1,0 +1,54 @@
+{
+	"id": "0a38a0d9-757f-4ac3-9561-b439e933dfa9",
+	"advisories": [
+		{
+			"id": "0a38a0d9-757f-4ac3-9561-b439e933dfa9",
+			"title": "py39-celery -- command injection vulnerability",
+			"description": "\n    <p>Snyk reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/PYSEC-2021-858\">\n      <p>This affects the package celery before 5.2.2.</p>\n      <p>It by default trusts the messages and metadata stored in backends (result stores).</p>\n      <p>When reading task metadata from the backend, the data is deserialized.</p>\n      <p>Given that an attacker can gain access to, or somehow manipulate the metadata within a celery backend, they could trigger a stored command injection vulnerability and potentially gain further access to the system.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0a38a0d9-757f-4ac3-9561-b439e933dfa9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/PYSEC-2021-858"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-q4xr-rc97-m4xx"
+				}
+			],
+			"published": "2023-04-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-23727",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-23727"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-celery"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

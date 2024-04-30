@@ -1,0 +1,129 @@
+{
+	"id": "68958e18-ed94-11ed-9688-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "68958e18-ed94-11ed-9688-b42e991fc52e",
+			"title": "glpi -- multiple vulnerabilities",
+			"description": "\n\t<p>glpi Project reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.7\">\n\t  <p>Multiple vulnerabilities found and fixed in this version:</p>\n\t  <ul>\n\t    <li>High CVE-2023-28849: SQL injection and Stored XSS via inventory agent request.</li>\n\t    <li>High CVE-2023-28632: Account takeover by authenticated user.</li>\n\t    <li>High CVE-2023-28838: SQL injection through dynamic reports.</li>\n\t    <li>Moderate CVE-2023-28852: Stored XSS through dashboard administration.</li>\n\t    <li>Moderate CVE-2023-28636: Stored XSS on external links.</li>\n\t    <li>Moderate CVE-2023-28639: Reflected XSS in search pages.</li>\n\t    <li>Moderate CVE-2023-28634: Privilege Escalation from technician to super-admin.</li>\n\t    <li>Low CVE-2023-28633: Blind Server-Side Request Forgery (SSRF) in RSS feeds.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/68958e18-ed94-11ed-9688-b42e991fc52e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28849"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28632"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28838"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28852"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28636"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28639"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28634"
+				}
+			],
+			"published": "2023-05-08T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28849",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28849"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28632",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28632"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28838",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28838"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28852",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28852"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28636",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28636"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28639",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28639"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28634",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28634"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.7,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

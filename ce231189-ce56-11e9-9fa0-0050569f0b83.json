@@ -1,0 +1,39 @@
+{
+	"id": "ce231189-ce56-11e9-9fa0-0050569f0b83",
+	"advisories": [
+		{
+			"id": "ce231189-ce56-11e9-9fa0-0050569f0b83",
+			"title": "www/varnish6 -- Denial of Service",
+			"description": "\n\t<p>The Varnish Team reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00003.html\">\n\t  <p>A failure in HTTP/1 parsing can allow a remote attacker to trigger\n\t    an assertion in varnish, restarting the daemon and clearing the cache.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ce231189-ce56-11e9-9fa0-0050569f0b83.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://varnish-cache.org/security/VSV00003.html"
+				}
+			],
+			"published": "2019-09-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "varnish6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

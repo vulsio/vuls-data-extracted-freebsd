@@ -1,0 +1,82 @@
+{
+	"id": "d7d1cc94-b971-11e7-af3a-f1035dd0da62",
+	"advisories": [
+		{
+			"id": "d7d1cc94-b971-11e7-af3a-f1035dd0da62",
+			"title": "Node.js -- remote DOS security vulnerability",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/oct-2017-dos/\">\n\t  <p>Node.js was susceptible to a remote DoS attack due to a change that came in as part of zlib v1.2.9. In zlib v1.2.9 8 became an invalid value for the windowBits parameter and Node's zlib module will crash or throw an exception (depending on the version)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d7d1cc94-b971-11e7-af3a-f1035dd0da62.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/oct-2017-dos/"
+				}
+			],
+			"published": "2017-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14919",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14919"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.11.5",
+						"ge": "6.10.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.8.5",
+						"ge": "4.8.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

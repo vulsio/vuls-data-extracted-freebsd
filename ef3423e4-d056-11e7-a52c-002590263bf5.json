@@ -1,0 +1,39 @@
+{
+	"id": "ef3423e4-d056-11e7-a52c-002590263bf5",
+	"advisories": [
+		{
+			"id": "ef3423e4-d056-11e7-a52c-002590263bf5",
+			"title": "codeigniter -- input validation bypass",
+			"description": "\n\t<p>The CodeIgniter changelog reports:</p>\n\t<blockquote cite=\"https://www.codeigniter.com/user_guide/changelog.html\">\n\t  <p>Security: Fixed a potential object injection in Cache Library 'apc'\n\t    driver when save() is used with $raw = TRUE.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ef3423e4-d056-11e7-a52c-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.codeigniter.com/user_guide/changelog.html"
+				}
+			],
+			"published": "2017-11-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "codeigniter"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

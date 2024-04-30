@@ -1,0 +1,50 @@
+{
+	"id": "baf74e0b-497a-11da-a4f4-0060084a00e5",
+	"advisories": [
+		{
+			"id": "baf74e0b-497a-11da-a4f4-0060084a00e5",
+			"title": "fetchmail -- fetchmailconf local password exposure",
+			"description": "\n\t<p>The fetchmail team reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2005-02.txt\">\n\t  <p>The fetchmailconf program before and excluding version\n\t    1.49 opened the run control file, wrote the configuration\n\t    to it, and only then changed the mode to 0600 (rw-------).\n\t    Writing the file, which usually contains passwords, before\n\t    making it unreadable to other users, can expose sensitive\n\t    password information.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/baf74e0b-497a-11da-a4f4-0060084a00e5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.fetchmail.info/fetchmail-SA-2005-02.txt"
+				}
+			],
+			"published": "2005-10-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-3088",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-3088"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fetchmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.5.2_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

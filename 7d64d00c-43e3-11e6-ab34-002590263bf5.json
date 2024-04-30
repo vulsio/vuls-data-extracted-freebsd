@@ -1,0 +1,62 @@
+{
+	"id": "7d64d00c-43e3-11e6-ab34-002590263bf5",
+	"advisories": [
+		{
+			"id": "7d64d00c-43e3-11e6-ab34-002590263bf5",
+			"title": "quassel -- remote denial of service",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4414\">\n\t  <p>The onReadyRead function in core/coreauthhandler.cpp in Quassel\n\t    before 0.12.4 allows remote attackers to cause a denial of service\n\t    (NULL pointer dereference and crash) via invalid handshake data.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7d64d00c-43e3-11e6-ab34-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://quassel-irc.org/node/129"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/quassel/quassel/commit/e678873"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/04/30/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/04/30/4"
+				}
+			],
+			"published": "2016-07-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4414",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4414"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "quassel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.12.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

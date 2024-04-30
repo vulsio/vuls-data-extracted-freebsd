@@ -1,0 +1,43 @@
+{
+	"id": "12b7b4cf-1d53-11d9-814e-0001020eed82",
+	"advisories": [
+		{
+			"id": "12b7b4cf-1d53-11d9-814e-0001020eed82",
+			"title": "wordpress -- XSS in administration panel",
+			"description": "\n\t<p>Pages in the administration panel of Wordpress are\n\t  vulnerable for XSS attacks.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/12b7b4cf-1d53-11d9-814e-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://wordpress.org/development/2004/10/wp-121/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109641484723194"
+				}
+			],
+			"published": "2004-10-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wordpress"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

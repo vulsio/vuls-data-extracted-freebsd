@@ -1,0 +1,67 @@
+{
+	"id": "035d17b2-484a-11d9-813c-00065be4b5b6",
+	"advisories": [
+		{
+			"id": "035d17b2-484a-11d9-813c-00065be4b5b6",
+			"title": "mysql -- erroneous access restrictions applied to table renames",
+			"description": "\n\t<p>A Red Hat advisory reports:</p>\n\t<blockquote cite=\"http://rhn.redhat.com/errata/RHSA-2004-611.html\">\n\t  <p>Oleksandr Byelkin discovered that \"ALTER TABLE ... RENAME\" checked\n\t    the CREATE/INSERT rights of the old table instead of the new\n\t    one.</p>\n\t</blockquote>\n\t<p>Table access restrictions, on the affected MySQL servers, may\n\t  accidently or intentially be bypassed due to this bug.</p>\n       ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/035d17b2-484a-11d9-813c-00065be4b5b6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.mysql.com/bug.php?id=3270"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://rhn.redhat.com/errata/RHSA-2004-611.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/17666"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11357"
+				}
+			],
+			"published": "2004-12-16T00:00:00Z",
+			"modified": "2005-03-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0835",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0835"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "3.23.58_3"
+					},
+					{
+						"lt": "4.0.21",
+						"ge": "4.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

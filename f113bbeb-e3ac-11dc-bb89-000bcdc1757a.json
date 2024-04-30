@@ -1,0 +1,122 @@
+{
+	"id": "f113bbeb-e3ac-11dc-bb89-000bcdc1757a",
+	"advisories": [
+		{
+			"id": "f113bbeb-e3ac-11dc-bb89-000bcdc1757a",
+			"title": "moinmoin -- multiple vulnerabilities",
+			"description": "\n\t<p>MoinMoin Security advisory</p>\n\t<blockquote cite=\"http://moinmo.in/SecurityFixes\">\n\t  <p>XSS issue in login action</p>\n\t  <p>XSS issue in AttachFile action</p>\n\t  <p>XSS issue in RenamePage/DeletePage action</p>\n\t  <p>XSS issue in gui editor</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f113bbeb-e3ac-11dc-bb89-000bcdc1757a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://moinmo.in/SecurityFixes"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/29010/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/27404"
+				}
+			],
+			"published": "2008-02-25T00:00:00Z",
+			"modified": "2008-02-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-0857",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0857"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0901",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0901"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0902",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0902"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-2423",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2423"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-2673",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2673"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-0780",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0780"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-0781",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0781"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-0782",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0782"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "moinmoin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

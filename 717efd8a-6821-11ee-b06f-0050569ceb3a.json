@@ -1,0 +1,51 @@
+{
+	"id": "717efd8a-6821-11ee-b06f-0050569ceb3a",
+	"advisories": [
+		{
+			"id": "717efd8a-6821-11ee-b06f-0050569ceb3a",
+			"title": "GLPI vulnerable to unauthorized access to Dashboard data",
+			"description": "\n\t<p>security-advisories@github.com reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.8\">\n\t  <p>GLPI is a free asset and IT management software package.  Starting\n\tin version 9.5.0 and prior to version 10.0.8, an incorrect rights\n\tcheck on a on a file accessible by an authenticated user (or not\n\tfor certain actions), allows a threat actor to interact, modify,\n\tor see Dashboard data.  Version 10.0.8 contains a patch for this\n\tissue.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/717efd8a-6821-11ee-b06f-0050569ceb3a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-35939"
+				}
+			],
+			"published": "2023-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-35939",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-35939"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0.8,1",
+						"ge": "9.5.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

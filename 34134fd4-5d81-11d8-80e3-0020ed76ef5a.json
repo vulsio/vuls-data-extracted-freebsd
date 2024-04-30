@@ -1,0 +1,69 @@
+{
+	"id": "34134fd4-5d81-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "34134fd4-5d81-11d8-80e3-0020ed76ef5a",
+			"title": "pine insecure URL handling",
+			"description": "\n\t<p>An attacker may send an email message containing a specially\n\t  constructed URL that will execute arbitrary commands when\n\t  viewed.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/34134fd4-5d81-11d8-80e3-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-02:05.pine.asc"
+				}
+			],
+			"published": "2004-02-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.44"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-pine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.44"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "iw-pine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.44"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

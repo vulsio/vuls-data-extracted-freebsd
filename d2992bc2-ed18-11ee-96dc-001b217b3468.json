@@ -1,0 +1,67 @@
+{
+	"id": "d2992bc2-ed18-11ee-96dc-001b217b3468",
+	"advisories": [
+		{
+			"id": "d2992bc2-ed18-11ee-96dc-001b217b3468",
+			"title": "Gitlab -- vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/03/27/security-release-gitlab-16-10-1-released/\">\n\t  <p>Stored-XSS injected in Wiki page via Banzai pipeline</p>\n\t  <p>DOS using crafted emojis</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d2992bc2-ed18-11ee-96dc-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2024/03/27/security-release-gitlab-16-10-1-released/"
+				}
+			],
+			"published": "2024-03-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-6371",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6371"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-2818",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2818"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab-ce"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.10.1",
+						"ge": "16.10.0"
+					},
+					{
+						"lt": "16.9.3",
+						"ge": "16.9.0"
+					},
+					{
+						"lt": "16.8.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

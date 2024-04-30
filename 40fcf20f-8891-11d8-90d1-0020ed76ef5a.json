@@ -1,0 +1,51 @@
+{
+	"id": "40fcf20f-8891-11d8-90d1-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "40fcf20f-8891-11d8-90d1-0020ed76ef5a",
+			"title": "racoon remote denial of service vulnerability (IKE Generic Payload Header)",
+			"description": "\n\t<p>When racoon receives an IKE message with an incorrectly\n\t  constructed Generic Payload Header, it may behave erratically,\n\t  going into a tight loop and dropping connections.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40fcf20f-8891-11d8-90d1-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://orange.kame.net/dev/query-pr.cgi?pr=555"
+				}
+			],
+			"published": "2004-04-07T00:00:00Z",
+			"modified": "2004-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0392",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0392"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "racoon"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "20040407b"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

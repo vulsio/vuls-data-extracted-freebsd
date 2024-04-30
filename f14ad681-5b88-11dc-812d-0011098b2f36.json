@@ -1,0 +1,54 @@
+{
+	"id": "f14ad681-5b88-11dc-812d-0011098b2f36",
+	"advisories": [
+		{
+			"id": "f14ad681-5b88-11dc-812d-0011098b2f36",
+			"title": "rkhunter -- insecure temporary file creation",
+			"description": "\n\t<p>Gentoo reports:</p>\n\t<blockquote cite=\"http://www.gentoo.org/security/en/glsa/glsa-200504-25.xml\">\n\t  <p>Sune Kloppenborg Jeppesen and Tavis Ormandy of the Gentoo Linux\n\t    Security Team have reported that the check_update.sh script and\n\t    the main rkhunter script insecurely creates several temporary\n\t    files with predictable filenames.</p>\n\t  <p>A local attacker could create symbolic links in the temporary\n\t    files directory, pointing to a valid file somewhere on the\n\t    filesystem.  When rkhunter or the check_update.sh script runs,\n\t    this would result in the file being overwritten with the rights of\n\t    the user running the utility, which could be the root user.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f14ad681-5b88-11dc-812d-0011098b2f36.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200504-25.xml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/13399"
+				}
+			],
+			"published": "2007-09-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1270",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1270"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rkhunter"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

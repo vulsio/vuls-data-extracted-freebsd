@@ -1,0 +1,58 @@
+{
+	"id": "f450587b-d7bd-11e4-b5a4-14dae9d5a9d2",
+	"advisories": [
+		{
+			"id": "f450587b-d7bd-11e4-b5a4-14dae9d5a9d2",
+			"title": "osc -- shell command injection via crafted _service files",
+			"description": "\n\t<p>SUSE Security Update reports:</p>\n\t<blockquote cite=\"https://www.suse.com/security/cve/CVE-2015-0778.html\">\n\t  <p>osc before 0.151.0 allows remote attackers to execute\n\t    arbitrary commands via shell metacharacters in a _service\n\t    file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f450587b-d7bd-11e4-b5a4-14dae9d5a9d2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.suse.com/security/cve/CVE-2015-0778.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.suse.com/show_bug.cgi?id=901643"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.opensuse.org/opensuse-security-announce/2015-03/msg00012.html"
+				}
+			],
+			"published": "2015-03-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0778",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0778"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "osc"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.151.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

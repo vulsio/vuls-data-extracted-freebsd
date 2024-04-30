@@ -1,0 +1,39 @@
+{
+	"id": "8a90dc87-89f9-11e5-a408-00248c0c745d",
+	"advisories": [
+		{
+			"id": "8a90dc87-89f9-11e5-a408-00248c0c745d",
+			"title": "PHPmailer -- SMTP injection vulnerability",
+			"description": "\n\t<p>PHPMailer changelog reports:</p>\n\t<blockquote cite=\"https://github.com/PHPMailer/PHPMailer/blob/v5.2.14/changelog.md\">\n\t  <p>Fix vulnerability that allowed email addresses with\n\t    line breaks (valid in RFC5322) to pass to SMTP, permitting\n\t    message injection at the SMTP level. Mitigated in both\n\t    the address validator and in the lower-level SMTP class.\n\t    Thanks to Takeshi Terada.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8a90dc87-89f9-11e5-a408-00248c0c745d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/PHPMailer/PHPMailer/blob/v5.2.14/changelog.md"
+				}
+			],
+			"published": "2015-12-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpmailer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

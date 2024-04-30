@@ -1,0 +1,169 @@
+{
+	"id": "e65ad1bf-0d8b-11da-90d0-00304823c0d3",
+	"advisories": [
+		{
+			"id": "e65ad1bf-0d8b-11da-90d0-00304823c0d3",
+			"title": "pear-XML_RPC -- remote PHP code injection vulnerability",
+			"description": "\n\t<p>A Hardened-PHP Project Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.hardened-php.net/advisory_142005.66.html\">\n\t  <p>When the library parses XMLRPC requests/responses, it constructs\n\t    a string of PHP code, that is later evaluated.  This means any\n\t    failure to properly handle the construction of this string can\n\t    result in arbitrary execution of PHP code.</p>\n\t  <p>This new injection vulnerability is cause by not properly\n\t    handling the situation, when certain XML tags are nested\n\t    in the parsed document, that were never meant to be nested\n\t    at all. This can be easily exploited in a way, that\n\t    user-input is placed outside of string delimiters within\n\t    the evaluation string, which obviously results in\n\t    arbitrary code execution.</p>\n\t</blockquote>\n\t<p>Note that several applications contains an embedded version\n\t  on XML_RPC, therefor making them the vulnerable to the same\n\t  code injection vulnerability.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e65ad1bf-0d8b-11da-90d0-00304823c0d3.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://b2evolution.net/news/2005/08/31/fix_for_xml_rpc_vulnerability_again_1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.phpgroupware.org/changelog"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://drupal.org/files/sa-2005-004/advisory.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://phpadsnew.com/two/nucleus/index.php?itemid=45"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=349626"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.hardened-php.net/advisory_142005.66.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.hardened-php.net/advisory_152005.67.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyfaq.de/advisory_2005-08-15.php"
+				}
+			],
+			"published": "2005-08-15T00:00:00Z",
+			"modified": "2005-09-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2498",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2498"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pear-XML_RPC"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpmyfaq"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.11"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drupal"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.6.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "eGroupWare"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.0.009"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpAdsNew"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpgroupware"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.16.007"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "b2evolution"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.0.12_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

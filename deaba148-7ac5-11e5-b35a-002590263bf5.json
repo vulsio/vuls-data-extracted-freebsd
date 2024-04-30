@@ -1,0 +1,55 @@
+{
+	"id": "deaba148-7ac5-11e5-b35a-002590263bf5",
+	"advisories": [
+		{
+			"id": "deaba148-7ac5-11e5-b35a-002590263bf5",
+			"title": "Joomla! -- Core - Open Redirect vulnerability",
+			"description": "\n\t<p>The JSST and the Joomla! Security Center report:</p>\n\t<blockquote cite=\"http://developer.joomla.org/security-centre/617-20150601-core-open-redirect.html\">\n\t  <h2>[20150601] - Core - Open Redirect</h2>\n\t  <p>Inadequate checking of the return value allowed to redirect to an\n\t    external page.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/deaba148-7ac5-11e5-b35a-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://developer.joomla.org/security-centre/617-20150601-core-open-redirect.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.joomla.org/announcements/release-news/5589-joomla-3-4-2-released.html"
+				}
+			],
+			"published": "2015-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5608",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5608"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "joomla3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.4.2",
+						"ge": "3.0.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

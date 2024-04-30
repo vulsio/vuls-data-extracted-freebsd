@@ -1,0 +1,55 @@
+{
+	"id": "c906e0a4-efa6-11e1-8fbf-001b77d09812",
+	"advisories": [
+		{
+			"id": "c906e0a4-efa6-11e1-8fbf-001b77d09812",
+			"title": "roundcube -- cross-site scripting in HTML email messages",
+			"description": "\n\t<p>RoundCube branch 0.8.x prior to the version 0.8.1 is prone\n\tto the cross-scripting attack (XSS) originating from incoming\n\tHTML e-mails: due to the lack of proper sanitization\n\tof JavaScript code inside the \"href\" attribute, sender\n\tcould launch XSS attack when recipient opens the message\n\tin RoundCube interface.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c906e0a4-efa6-11e1-8fbf-001b77d09812.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://trac.roundcube.net/wiki/Changelog"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://trac.roundcube.net/ticket/1488613"
+				}
+			],
+			"published": "2012-08-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3508",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3508"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "roundcube"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8.1,1",
+						"ge": "0.8.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

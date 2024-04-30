@@ -1,0 +1,43 @@
+{
+	"id": "f7809d9e-6af0-11e2-8e32-080027d768d3",
+	"advisories": [
+		{
+			"id": "f7809d9e-6af0-11e2-8e32-080027d768d3",
+			"title": "poweradmin -- multiple XSS vulnerabilities",
+			"description": "\n       <p>Multiple cross-site scripting (XSS) vulnerabilities</p>\n\t<blockquote cite=\"https://www.poweradmin.org/trac/ticket/468\">\n\t  <p>Multiple scripts are vulnerable to XSS attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f7809d9e-6af0-11e2-8e32-080027d768d3.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://packetstormsecurity.com/files/116698/Poweradmin-Cross-Site-Scripting.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/55619"
+				}
+			],
+			"published": "2013-02-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "poweradmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

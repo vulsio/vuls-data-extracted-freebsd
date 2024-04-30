@@ -1,0 +1,43 @@
+{
+	"id": "f38c87a5-4a3e-11da-8ba2-0004614cc33d",
+	"advisories": [
+		{
+			"id": "f38c87a5-4a3e-11da-8ba2-0004614cc33d",
+			"title": "base -- PHP SQL injection vulnerability",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/17314/\">\n\t  <p>Remco Verhoef has discovered a vulnerability in\n\t    Basic Analysis and Security Engine (BASE), which\n\t    can be exploited by malicious users to conduct SQL\n\t    injection attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f38c87a5-4a3e-11da-8ba2-0004614cc33d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17314/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/15199"
+				}
+			],
+			"published": "2005-10-31T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "base"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

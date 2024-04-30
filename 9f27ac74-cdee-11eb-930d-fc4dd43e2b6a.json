@@ -1,0 +1,50 @@
+{
+	"id": "9f27ac74-cdee-11eb-930d-fc4dd43e2b6a",
+	"advisories": [
+		{
+			"id": "9f27ac74-cdee-11eb-930d-fc4dd43e2b6a",
+			"title": "ircII -- denial of service",
+			"description": "\n\t<p>Michael Ortmann reports:</p>\n\t<blockquote cite=\"https://www.openwall.com/lists/oss-security/2021/03/24/2\">\n\t  <p>ircii has a bug in parsing CTCP UTC messages.</p>\n\t  <p>Its unknown if this could also be used for arbitrary code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9f27ac74-cdee-11eb-930d-fc4dd43e2b6a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29376"
+				}
+			],
+			"published": "2021-03-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-29376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29376"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ircii"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "20210314"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

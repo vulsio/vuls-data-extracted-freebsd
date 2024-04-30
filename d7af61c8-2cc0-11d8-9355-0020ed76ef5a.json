@@ -1,0 +1,50 @@
+{
+	"id": "d7af61c8-2cc0-11d8-9355-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "d7af61c8-2cc0-11d8-9355-0020ed76ef5a",
+			"title": "lftp HTML parsing vulnerability",
+			"description": "\n\t<p>A buffer overflow exists in lftp which may be triggered when\n\t  requesting a directory listing from a malicious server over\n\t  HTTP.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d7af61c8-2cc0-11d8-9355-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lftp.yar.ru/news.html#2.6.10"
+				}
+			],
+			"published": "2003-12-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-0963",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0963"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "lftp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.6.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

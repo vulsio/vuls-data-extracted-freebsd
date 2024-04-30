@@ -1,0 +1,39 @@
+{
+	"id": "a59e263a-45cd-11e5-adde-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "a59e263a-45cd-11e5-adde-14dae9d210b8",
+			"title": "freexl -- integer overflow",
+			"description": "\n\t<p>Stefan Cornelius reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/07/06/7\">\n\t  <p>There's an integer overflow in the allocate_cells() function\n\t    when trying to allocate the memory for worksheet with specially\n\t    crafted row/column dimensions. This can be exploited to cause a\n\t    heap memory corruption. The most likely outcome of this is a crash\n\t    when trying to initialize the cells later in the function.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a59e263a-45cd-11e5-adde-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/07/06/7"
+				}
+			],
+			"published": "2015-08-18T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freexl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

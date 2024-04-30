@@ -1,0 +1,50 @@
+{
+	"id": "6d87c2e9-c64d-11e2-9c22-50465d9ff992",
+	"advisories": [
+		{
+			"id": "6d87c2e9-c64d-11e2-9c22-50465d9ff992",
+			"title": "socat -- FD leak",
+			"description": "\n\t<p>Gerhard Rieger reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2013/q2/411\">\n\t  <p>Under certain circumstances an FD leak occurs and can be misused for\n\t    denial of service attacks against socat running in server mode.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6d87c2e9-c64d-11e2-9c22-50465d9ff992.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2013/q2/411"
+				}
+			],
+			"published": "2013-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-3571",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3571"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "socat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

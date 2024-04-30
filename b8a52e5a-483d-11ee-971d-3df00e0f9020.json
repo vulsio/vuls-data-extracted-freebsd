@@ -1,0 +1,125 @@
+{
+	"id": "b8a52e5a-483d-11ee-971d-3df00e0f9020",
+	"advisories": [
+		{
+			"id": "b8a52e5a-483d-11ee-971d-3df00e0f9020",
+			"title": "Borg (Backup) -- flaw in cryptographic authentication scheme in Borg allowed an attacker to fake archives and indirectly cause backup data loss.",
+			"description": "\n\t<p>Thomas Waldmann reports:</p>\n\t<blockquote cite=\"https://github.com/borgbackup/borg/blob/1.2.5-cvedocs/docs/changes.rst#pre-125-archives-spoofing-vulnerability-cve-2023-36811\">\n\t  <p>A flaw in the cryptographic authentication scheme in Borg allowed an attacker to fake archives and potentially indirectly cause backup data loss in the repository.</p>\n\t  <p>The attack requires an attacker to be able to</p>\n\t  <ul><li>insert files (with no additional headers) into backups</li>\n\t    <li>gain write access to the repository</li></ul>\n\t  <p>This vulnerability does not disclose plaintext to the attacker, nor does it affect the authenticity of existing archives.  Creating plausible fake archives may be feasible for empty or small archives, but is unlikely for large archives.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b8a52e5a-483d-11ee-971d-3df00e0f9020.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/borgbackup/borg/blob/1.2.5-cvedocs/docs/changes.rst#pre-125-archives-spoofing-vulnerability-cve-2023-36811"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-36811",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-36811"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-borgbackup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py38-borgbackup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-borgbackup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py310-borgbackup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py311-borgbackup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py312-borgbackup"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,119 @@
+{
+	"id": "264749ae-d565-11e4-b545-00269ee29e57",
+	"advisories": [
+		{
+			"id": "264749ae-d565-11e4-b545-00269ee29e57",
+			"title": "libzip -- integer overflow",
+			"description": "\n\t<p>libzip developers report:</p>\n\t<blockquote cite=\"http://hg.nih.at/libzip/rev/9f11d54f692e\">\n\t  <p>Avoid integer overflow. Fixed similarly to patch used in PHP copy of libzip.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/264749ae-d565-11e4-b545-00269ee29e57.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.php.net/bug.php?id=69253"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/php/php-src/commit/ef8fc4b53d92fbfcd8ef1abbd6f2f5fe2c4a11e5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://hg.nih.at/libzip/rev/9f11d54f692e"
+				}
+			],
+			"published": "2015-03-28T00:00:00Z",
+			"modified": "2015-09-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-2331",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-2331"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libzip"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.11.2_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ppsspp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.1_5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ppsspp-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.1.2668_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "radare2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.9.8_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openlierox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.58.r3_5,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

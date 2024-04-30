@@ -1,0 +1,50 @@
+{
+	"id": "61534682-b8f4-11da-8e62-000e0c33c2dc",
+	"advisories": [
+		{
+			"id": "61534682-b8f4-11da-8e62-000e0c33c2dc",
+			"title": "xorg-server -- privilege escalation",
+			"description": "\n\t<p>Daniel Stone of X.Org reports:</p>\n\t<blockquote cite=\"http://lists.freedesktop.org/archives/xorg/2006-March/013992.html\">\n\t  <p>During the analysis of results from the Coverity code review\n\t    of X.Org, we discovered a flaw in the server that allows local\n\t    users to execute arbitrary code with root privileges, or cause\n\t    a denial of service by overwriting files on the system, again\n\t    with root privileges.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/61534682-b8f4-11da-8e62-000e0c33c2dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freedesktop.org/show_bug.cgi?id=6213"
+				}
+			],
+			"published": "2006-03-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0745",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0745"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"eq": "6.9.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

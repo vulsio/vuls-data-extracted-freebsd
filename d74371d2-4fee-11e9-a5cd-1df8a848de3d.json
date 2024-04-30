@@ -1,0 +1,100 @@
+{
+	"id": "d74371d2-4fee-11e9-a5cd-1df8a848de3d",
+	"advisories": [
+		{
+			"id": "d74371d2-4fee-11e9-a5cd-1df8a848de3d",
+			"title": "Python -- NULL pointer dereference vulnerability",
+			"description": "\n\t<p>Python Changelog:</p>\n\t<blockquote cite=\"https://docs.python.org/3.7/whatsnew/changelog.html\">\n\t  <p>bpo-35746: [CVE-2019-5010] Fix a NULL pointer deref in ssl module. The\n\t    cert parser did not handle CRL distribution points with empty DP or URI\n\t    correctly. A malicious or buggy certificate can result into segfault.\n\t    Vulnerability (TALOS-2018-0758) reported by Colin Read and Nicolas Edet\n\t    of Cisco.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d74371d2-4fee-11e9-a5cd-1df8a848de3d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.python.org/3.7/whatsnew/changelog.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.python.org/issue35746"
+				}
+			],
+			"published": "2019-03-26T00:00:00Z",
+			"modified": "2019-03-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-5010",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5010"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python27"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.16"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python35"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python36"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.8_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python37"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.7.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

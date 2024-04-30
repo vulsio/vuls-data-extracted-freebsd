@@ -1,0 +1,43 @@
+{
+	"id": "5114cd11-6571-11e5-9909-002590263bf5",
+	"advisories": [
+		{
+			"id": "5114cd11-6571-11e5-9909-002590263bf5",
+			"title": "codeigniter -- SQL injection vulnerability",
+			"description": "\n\t<p>The CodeIgniter changelog reports:</p>\n\t<blockquote cite=\"https://codeigniter.com/userguide2/changelog.html\">\n\t  <p>Security: Fixed an SQL injection vulnerability in Active Record\n\t    method offset().</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5114cd11-6571-11e5-9909-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://codeigniter.com/userguide2/changelog.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=203401"
+				}
+			],
+			"published": "2015-09-28T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "codeigniter"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "3ba1ca94-a563-11ec-8be6-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "3ba1ca94-a563-11ec-8be6-d4c9ef517024",
+			"title": "Weechat -- Possible man-in-the-middle attack in TLS connection to servers",
+			"description": "\n\t<p>The Weechat project reports:</p>\n\t<blockquote cite=\"https://weechat.org/doc/security/WSA-2022-1/\">\n\t  <p>After changing the options weechat.network.gnutls_ca_system or\n\t    weechat.network.gnutls_ca_user, the TLS verification function is lost.\n\t    Consequently, any connection to a server with TLS is made without\n\t    verifying the certificate, which could lead to a man-in-the-middle\n\t    attack. Connection to IRC servers with TLS is affected, as well as any\n\t    connection a server made by a plugin or a script using the function\n\t    hook_connect.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3ba1ca94-a563-11ec-8be6-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://weechat.org/doc/security/WSA-2022-1/"
+				}
+			],
+			"published": "2022-03-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "weechat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,65 @@
+{
+	"id": "972837fc-c304-11e3-8758-00262d5ed8ee",
+	"advisories": [
+		{
+			"id": "972837fc-c304-11e3-8758-00262d5ed8ee",
+			"title": "ChaSen -- buffer overflow",
+			"description": "\n\t<p>JVN iPedia reports:</p>\n\t<blockquote cite=\"http://jvn.jp/en/jp/JVN16901583/index.html\">\n\t  <p>ChaSen provided by Nara Institute of Science and Technology is a\n\t    software for morphologically analyzing Japanese. ChaSen contains an\n\t    issue when reading in strings, which may lead to a buffer\n\t    overflow.</p>\n\t  <p>An arbitrary script may be executed by an attacker with access to\n\t    a system that is running a product listed in \"Products\n\t    Affected.\"</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/972837fc-c304-11e3-8758-00262d5ed8ee.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://jvn.jp/en/jp/JVN16901583/index.html"
+				}
+			],
+			"published": "2014-04-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4000",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4000"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chasen-base"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chasen"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

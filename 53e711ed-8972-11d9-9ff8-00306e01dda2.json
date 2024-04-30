@@ -1,0 +1,44 @@
+{
+	"id": "53e711ed-8972-11d9-9ff8-00306e01dda2",
+	"advisories": [
+		{
+			"id": "53e711ed-8972-11d9-9ff8-00306e01dda2",
+			"title": "phpbb -- privilege elevation and path disclosure",
+			"description": "\n\t<p>The phpbb developer group reports:</p>\n\t<blockquote cite=\"http://www.phpbb.com/phpBB/viewtopic.php?t=267563\">\n\t  <p>phpBB Group announces the release of phpBB 2.0.13, the\n\t    \"Beware of the furries\" edition. This release addresses two\n\t    recent security exploits, one of them critical. They were\n\t    reported a few days after .12 was released and no one is\n\t    more annoyed than us, having to release a new version ini\n\t    such a short period of time. Fortunately both fixes are\n\t    easy and in each case just one line needs to be edited.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/53e711ed-8972-11d9-9ff8-00306e01dda2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpbb.com/phpBB/viewtopic.php?t=267563"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12678"
+				}
+			],
+			"published": "2005-02-28T00:00:00Z",
+			"modified": "2005-03-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpbb"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.13"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,99 @@
+{
+	"id": "ec09baa3-a9f5-11d9-a788-0001020eed82",
+	"advisories": [
+		{
+			"id": "ec09baa3-a9f5-11d9-a788-0001020eed82",
+			"title": "gaim -- remote DoS on receiving certain messages over IRC",
+			"description": "\n\t<p>The GAIM team reports:</p>\n\t<blockquote cite=\"http://gaim.sourceforge.net/security/?id=14\">\n\t  <p>The IRC protocol plugin in Gaim 1.2.0, and possibly\n\t    earlier versions, allows (1) remote attackers to inject\n\t    arbitrary Gaim markup via irc_msg_kick, irc_msg_mode,\n\t    irc_msg_part, irc_msg_quit, (2) remote attackers to inject\n\t    arbitrary Pango markup and pop up empty dialog boxes via\n\t    irc_msg_invite, or (3) malicious IRC servers to cause a\n\t    denial of service (application crash) by injecting certain\n\t    Pango markup into irc_msg_badmode, irc_msg_banned,\n\t    irc_msg_unknown, irc_msg_nochan functions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ec09baa3-a9f5-11d9-a788-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=14"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/13003"
+				}
+			],
+			"published": "2005-04-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0966",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0966"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ko-gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ru-gaim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

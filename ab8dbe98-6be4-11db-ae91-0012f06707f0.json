@@ -1,0 +1,119 @@
+{
+	"id": "ab8dbe98-6be4-11db-ae91-0012f06707f0",
+	"advisories": [
+		{
+			"id": "ab8dbe98-6be4-11db-ae91-0012f06707f0",
+			"title": "ruby -- cgi.rb library Denial of Service",
+			"description": "\n\t<p>Official ruby site reports:</p>\n\t<blockquote cite=\"http://www.ruby-lang.org/en/news/2006/11/03/CVE-2006-5467/\">\n\t  <p>A vulnerability has been discovered in the CGI library (cgi.rb)\n\t    that ships with Ruby which could be used by a malicious user to\n\t    create a denial of service attack (DoS). The problem is triggered\n\t    by sending the library an HTTP request that uses multipart MIME\n\t    encoding and as an invalid boundary specifier that begins with\n\t    \"-\" instead of \"--\". Once triggered it will\n\t    exhaust all available memory resources effectively creating a DoS\n\t    condition.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ab8dbe98-6be4-11db-ae91-0012f06707f0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://rubyforge.org/pipermail/mongrel-users/2006-October/001946.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/20777"
+				}
+			],
+			"published": "2006-11-04T00:00:00Z",
+			"modified": "2006-12-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-5467",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-5467"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.5_4,1",
+						"ge": "1.8.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby+pthreads"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.5_4,1",
+						"ge": "1.8.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby+pthreads+oniguruma"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.5_4,1",
+						"ge": "1.8.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby+oniguruma"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.5_4,1",
+						"ge": "1.8.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ruby_static"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "1.8.*,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

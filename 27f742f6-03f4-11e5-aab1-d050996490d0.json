@@ -1,0 +1,50 @@
+{
+	"id": "27f742f6-03f4-11e5-aab1-d050996490d0",
+	"advisories": [
+		{
+			"id": "27f742f6-03f4-11e5-aab1-d050996490d0",
+			"title": "cURL -- sensitive HTTP server headers also sent to proxies",
+			"description": "\n\t<p>cURL reports:</p>\n\t<blockquote cite=\"http://curl.haxx.se/docs/adv_20150429.html\">\n\t  <p>libcurl provides applications a way to set custom HTTP\n\t    headers to be sent to the server by using CURLOPT_HTTPHEADER.\n\t    A similar option is available for the curl command-line\n\t    tool with the '--header' option.</p>\n\t  <p>When the connection passes through an HTTP proxy the\n\t    same set of headers is sent to the proxy as well by default.\n\t    While this is by design, it has not necessarily been clear\n\t    nor understood by application programmers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/27f742f6-03f4-11e5-aab1-d050996490d0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://curl.haxx.se/docs/adv_20150429.html"
+				}
+			],
+			"published": "2015-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3153",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3153"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "curl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.42.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,63 @@
+{
+	"id": "efe43d2b-8f35-11e8-b9e8-dcfe074bd614",
+	"advisories": [
+		{
+			"id": "efe43d2b-8f35-11e8-b9e8-dcfe074bd614",
+			"title": "Memory leak in different components",
+			"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2018-14072\">\n\t  <p>bsixel 1.8.1 has a memory leak in sixel_decoder_decode in\n\t  decoder.c, image_buffer_resize in fromsixel.c, sixel_decode_raw in\n\t  fromsixel.c and sixel_allocator_new in allocator.c</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/efe43d2b-8f35-11e8-b9e8-dcfe074bd614.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14072"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14073"
+				}
+			],
+			"published": "2018-07-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-14072",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14072"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-14073",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14073"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libsixel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.2,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,54 @@
+{
+	"id": "996bce94-d23d-11e4-9463-9cb654ea3e1c",
+	"advisories": [
+		{
+			"id": "996bce94-d23d-11e4-9463-9cb654ea3e1c",
+			"title": "libuv -- incorrect revocation order while relinquishing privileges",
+			"description": "\n\t<p>Nodejs releases reports:</p>\n\t<blockquote cite=\"http://blog.nodejs.org/2015/03/14/node-v0-10-37-stable\">\n\t  <h5>CVE-2015-0278</h5>\n\t  <p>This may potentially allow an attacker to gain elevated privileges.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/996bce94-d23d-11e4-9463-9cb654ea3e1c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.nodejs.org/2015/03/14/node-v0-10-37-stable"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=198861"
+				}
+			],
+			"published": "2015-03-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0278",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0278"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node010"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.10.36"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,97 @@
+{
+	"id": "c110eda2-e995-11db-a944-0012f06707f0",
+	"advisories": [
+		{
+			"id": "c110eda2-e995-11db-a944-0012f06707f0",
+			"title": "freeradius -- EAP-TTLS Tunnel Memory Leak Remote DOS Vulnerability",
+			"description": "\n\t<p>The freeradius development team reports:</p>\n\t<blockquote cite=\"http://www.freeradius.org/security.html\">\n\t  <p>A malicious 802.1x supplicant could send malformed Diameter format\n\t     attributes inside of an EAP-TTLS tunnel. The server would reject\n\t     the authentication request, but would leak one VALUE_PAIR data\n\t     structure, of approximately 300 bytes. If an attacker performed\n\t     the attack many times (e.g. thousands or more over a period of\n\t     minutes to hours), the server could leak megabytes of memory,\n\t     potentially leading to an \"out of memory\" condition, and early\n\t     process exit.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c110eda2-e995-11db-a944-0012f06707f0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.freeradius.org/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/23466"
+				}
+			],
+			"published": "2007-04-13T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1455",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1455"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1454",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1454"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-2028",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2028"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-4745",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-4745"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.1.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius-mysql"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.1.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

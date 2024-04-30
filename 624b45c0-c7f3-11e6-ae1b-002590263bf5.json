@@ -1,0 +1,81 @@
+{
+	"id": "624b45c0-c7f3-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "624b45c0-c7f3-11e6-ae1b-002590263bf5",
+			"title": "Joomla! -- multiple vulnerabilities",
+			"description": "\n\t<p>The JSST and the Joomla! Security Center report:</p>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/664-20161201-core-elevated-privileges.html\">\n\t  <h2>[20161201] - Core - Elevated Privileges</h2>\n\t  <p>Incorrect use of unfiltered data stored to the session on a form\n\t    validation failure allows for existing user accounts to be modified;\n\t    to include resetting their username, password, and user group\n\t    assignments.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/665-20161202-core-shell-upload.html\">\n\t  <h2>[20161202] - Core - Shell Upload</h2>\n\t  <p>Inadequate filesystem checks allowed files with alternative PHP\n\t    file extensions to be uploaded.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/666-20161203-core-information-disclosure.html\">\n\t  <h2>[20161203] - Core - Information Disclosure</h2>\n\t  <p>Inadequate ACL checks in the Beez3 com_content article layout\n\t    override enables a user to view restricted content.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/624b45c0-c7f3-11e6-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/664-20161201-core-elevated-privileges.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/665-20161202-core-shell-upload.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/666-20161203-core-information-disclosure.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.joomla.org/announcements/release-news/5693-joomla-3-6-5-released.html"
+				}
+			],
+			"published": "2016-12-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9836",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9836"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9837",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9837"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9838",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9838"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "joomla3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.5",
+						"ge": "1.6.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

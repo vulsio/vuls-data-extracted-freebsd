@@ -1,0 +1,51 @@
+{
+	"id": "9f14cb36-b6fc-11e0-a044-445c73746d79",
+	"advisories": [
+		{
+			"id": "9f14cb36-b6fc-11e0-a044-445c73746d79",
+			"title": "opensaml2 -- unauthenticated login",
+			"description": "\n\t<p>OpenSAML developer reports:</p>\n\t<blockquote cite=\"http://shibboleth.internet2.edu/secadv/secadv_20110725.txt\">\n\t  <p>The Shibboleth software relies on the OpenSAML libraries to\n\t    perform verification of signed XML messages such as attribute\n\t    queries or SAML assertions.  Both the Java and C++ versions are\n\t    vulnerable to a so-called \"wrapping attack\" that allows a remote,\n\t    unauthenticated attacker to craft specially formed messages that\n\t    can be successfully verified, but contain arbitrary content.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9f14cb36-b6fc-11e0-a044-445c73746d79.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/a/shibboleth.net/group/announce/browse_thread/thread/cf3e0d76afbb57d9"
+				}
+			],
+			"published": "2011-07-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-1411",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1411"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opensaml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.3",
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

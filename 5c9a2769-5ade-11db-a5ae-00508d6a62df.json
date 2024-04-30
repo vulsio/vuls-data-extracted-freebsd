@@ -1,0 +1,44 @@
+{
+	"id": "5c9a2769-5ade-11db-a5ae-00508d6a62df",
+	"advisories": [
+		{
+			"id": "5c9a2769-5ade-11db-a5ae-00508d6a62df",
+			"title": "google-earth -- heap overflow in the KML engine",
+			"description": "\n\t<p>JAAScois reports:</p>\n\t<p>While processing KML/KMZ data Google Earth fails to verify\n\t  its size prior to copying it into a fixed-sized buffer.\n\t  This can be exploited as a buffer-overflow vulnerability to\n\t  cause the application to crash and/or to execute arbitrary\n\t  code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5c9a2769-5ade-11db-a5ae-00508d6a62df.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.jaascois.com/exploits/18602024/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/20464"
+				}
+			],
+			"published": "2006-10-14T00:00:00Z",
+			"modified": "2007-04-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "google-earth"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.2414"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

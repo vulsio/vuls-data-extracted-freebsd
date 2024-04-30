@@ -1,0 +1,58 @@
+{
+	"id": "063399fc-f6d6-11dc-bcee-001c2514716c",
+	"advisories": [
+		{
+			"id": "063399fc-f6d6-11dc-bcee-001c2514716c",
+			"title": "bzip2 -- crash with certain malformed archive files",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/28286/\">\n\t  <p>The 'bzip2' application is prone to a remote file-handling\n\t    vulnerability because the application fails to properly\n\t    handle malformed files.</p>\n\t  <p>Exploit attempts likely result in application crashes.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/063399fc-f6d6-11dc-bcee-001c2514716c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cert.fi/haavoittuvuudet/joint-advisory-archive-formats.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ee.oulu.fi/research/ouspg/protos/testing/c10/archive/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/28286"
+				}
+			],
+			"published": "2008-03-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1372",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1372"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bzip2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

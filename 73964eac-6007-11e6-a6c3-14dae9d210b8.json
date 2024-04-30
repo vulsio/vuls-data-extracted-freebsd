@@ -1,0 +1,63 @@
+{
+	"id": "73964eac-6007-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "73964eac-6007-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- memory leak in sandboxed namei lookup",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The namei facility will leak a small amount of kernel\n\tmemory every time a sandboxed process looks up a nonexistent\n\tpath name.</p>\n\t<h1>Impact:</h1>\n\t<p>A remote attacker that can cause a sandboxed process\n\t(for instance, a web server) to look up a large number of\n\tnonexistent path names can cause memory exhaustion.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/73964eac-6007-11e6-a6c3-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:22.namei.asc"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3711",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3711"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.0_10",
+						"ge": "10.0"
+					},
+					{
+						"lt": "9.3_3",
+						"ge": "9.3"
+					},
+					{
+						"lt": "9.2_13",
+						"ge": "9.2"
+					},
+					{
+						"lt": "9.1_20",
+						"ge": "9.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "cf495fd4-fdcd-11dd-9a86-0050568452ac",
+	"advisories": [
+		{
+			"id": "cf495fd4-fdcd-11dd-9a86-0050568452ac",
+			"title": "Zend Framework -- Local File Inclusion vulnerability in Zend_View::render()",
+			"description": "\n\t<p>Matthew Weier O'Phinney reports:</p>\n\t<blockquote cite=\"http://weierophinney.net/matthew/archives/206-Zend-Framework-1.7.5-Released-Important-Note-Regarding-Zend_View.html\">\n\t  <p>A potential Local File Inclusion (LFI) vulnerability exists in\n\t    the Zend_View::render() method. If user input is used to\n\t    specify the script path, then it is possible to trigger the\n\t    LFI.</p>\n\t  <p>Note that Zend Framework applications that never call the\n\t    Zend_View::render() method with a user-supplied parameter are\n\t    not affected by this vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cf495fd4-fdcd-11dd-9a86-0050568452ac.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://framework.zend.com/issues/browse/ZF-5748"
+				}
+			],
+			"published": "2009-02-18T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ZendFramework"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,59 @@
+{
+	"id": "62b8f253-12d9-11dc-a35c-001485ab073e",
+	"advisories": [
+		{
+			"id": "62b8f253-12d9-11dc-a35c-001485ab073e",
+			"title": "typo3 -- email header injection",
+			"description": "\n\t<p>Olivier Dobberkau, Andreas Otto, and Thorsten Kahler report:</p>\n\t<blockquote cite=\"http://typo3.org/teams/security/security-bulletins/typo3-20070221-1/\">\n\t  <p>An unspecified error in the internal form engine can be used for\n\t    sending arbitrary mail headers, using it for purposes which it\n\t    is not meant for, e.g. sending spam messages.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/62b8f253-12d9-11dc-a35c-001485ab073e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/24207/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://typo3.org/teams/security/security-bulletins/typo3-20070221-1/"
+				}
+			],
+			"published": "2007-06-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-1081",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-1081"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "typo3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.5",
+						"gt": "3.0"
+					},
+					{
+						"lt": "4.1.1",
+						"gt": "4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

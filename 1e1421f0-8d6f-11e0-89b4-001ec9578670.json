@@ -1,0 +1,143 @@
+{
+	"id": "1e1421f0-8d6f-11e0-89b4-001ec9578670",
+	"advisories": [
+		{
+			"id": "1e1421f0-8d6f-11e0-89b4-001ec9578670",
+			"title": "BIND -- Large RRSIG RRsets and Negative Caching DoS",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"http://www.isc.org/software/bind/advisories/cve-2011-1910\">\n\t  <p>A BIND 9 DNS server set up to be a caching resolver is\n\t    vulnerable to a user querying a domain with very large resource\n\t    record sets (RRSets) when trying to negatively cache a response.\n\t    This can cause the BIND 9 DNS server (named process) to crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1e1421f0-8d6f-11e0-89b4-001ec9578670.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.isc.org/software/bind/advisories/cve-2011-1910"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-11:02.bind.asc"
+				}
+			],
+			"published": "2011-06-04T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-1910",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1910"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind9-sdb-ldap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.3.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind9-sdb-postgresql"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.3.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind96"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.6.3.1.ESV.R4.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind97"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.7.3.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bind98"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.8.0.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.3_6",
+						"ge": "7.3"
+					},
+					{
+						"lt": "7.4_2",
+						"ge": "7.4"
+					},
+					{
+						"lt": "8.1_4",
+						"ge": "8.1"
+					},
+					{
+						"lt": "8.2_2",
+						"ge": "8.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,56 @@
+{
+	"id": "a9c51caf-6603-11db-ab90-000e35fd8194",
+	"advisories": [
+		{
+			"id": "a9c51caf-6603-11db-ab90-000e35fd8194",
+			"title": "mysql -- database suid privilege escalation",
+			"description": "\n\t<p>Dmitri Lenev reports a privilege escalation in\n\t  MySQL.  MySQL evaluates arguments of suid routines in the\n\t  security context of the routine's definer instead of the\n\t  routine's caller, which allows remote and local\n\t  authenticated users to gain privileges through a routine\n\t  that has been made available using GRANT EXECUTE.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a9c51caf-6603-11db-ab90-000e35fd8194.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.mysql.com/bug.php?id=18630"
+				}
+			],
+			"published": "2006-10-29T00:00:00Z",
+			"modified": "2006-10-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-4227",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4227"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.1.12",
+						"ge": "5.1"
+					},
+					{
+						"lt": "5.0.25",
+						"ge": "5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

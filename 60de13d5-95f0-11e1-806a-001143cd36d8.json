@@ -1,0 +1,95 @@
+{
+	"id": "60de13d5-95f0-11e1-806a-001143cd36d8",
+	"advisories": [
+		{
+			"id": "60de13d5-95f0-11e1-806a-001143cd36d8",
+			"title": "php -- vulnerability in certain CGI-based setups",
+			"description": "\n\t<p>php development team reports:</p>\n\t<blockquote cite=\"http://www.php.net/archive/2012.php#id2012-05-03-1\">\n\t  <p>Security Enhancements and Fixes in PHP 5.3.12:</p>\n\t  <ul>\n\t    <li>Initial fix for cgi-bin ?-s cmdarg parse issue\n\t      (CVE-2012-1823)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/60de13d5-95f0-11e1-806a-001143cd36d8.html"
+				}
+			],
+			"published": "2012-05-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1823",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1823"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.4.2",
+						"gt": "5.4"
+					},
+					{
+						"lt": "5.3.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php53"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.4.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php52"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.17_8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

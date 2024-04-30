@@ -1,0 +1,68 @@
+{
+	"id": "045e46e8-abe6-11ea-99cb-10bf48e1088e",
+	"advisories": [
+		{
+			"id": "045e46e8-abe6-11ea-99cb-10bf48e1088e",
+			"title": "tcpreplay -- Multiple vulnerabilities",
+			"description": "\n\t<p>fklassen on Github reports:</p>\n\t<blockquote cite=\"https://github.com/appneta/tcpreplay/releases/tag/v4.3.2\">\n\t  <p>This release fixes the following security issues:</p>\n\t  <ul>\n\t    <li>memory access in do_checksum()</li>\n\t    <li>NULL pointer dereference get_layer4_v6()</li>\n\t    <li>NULL pointer dereference get_ipv6_l4proto()</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/045e46e8-abe6-11ea-99cb-10bf48e1088e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/appneta/tcpreplay/releases/tag/v4.3.2"
+				}
+			],
+			"published": "2020-06-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-8381",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8381"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8376"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8377"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tcpreplay"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

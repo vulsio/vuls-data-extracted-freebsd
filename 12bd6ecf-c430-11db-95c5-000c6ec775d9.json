@@ -1,0 +1,402 @@
+{
+	"id": "12bd6ecf-c430-11db-95c5-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "12bd6ecf-c430-11db-95c5-000c6ec775d9",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Foundation reports of multiple security issues\n\t  in Firefox, Seamonkey, and Thunderbird.  Several of these\n\t  issues can probably be used to run arbitrary code with the\n\t  privilege of the user running the program.</p>\n\t<blockquote cite=\"http://www.mozilla.org/projects/security/known-vulnerabilities.html#firefox2.0.0.2\">\n\t  <ul>\n\t    <li>MFSA 2007-08 onUnload + document.write() memory corruption</li>\n\t    <li>MFSA 2007-07 Embedded nulls in location.hostname confuse same-domain checks</li>\n\t    <li>MFSA 2007-06 Mozilla Network Security Services (NSS) SSLv2 buffer overflow</li>\n\t    <li>MFSA 2007-05 XSS and local file access by opening blocked popups</li>\n\t    <li>MFSA 2007-04 Spoofing using custom cursor and CSS3 hotspot</li>\n\t    <li>MFSA 2007-03 Information disclosure through cache collisions</li>\n\t    <li>MFSA 2007-02 Improvements to help protect against Cross-Site Scripting attacks</li>\n\t    <li>MFSA 2007-01 Crashes with evidence of memory corruption (rv:1.8.0.10/1.8.1.2)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/12bd6ecf-c430-11db-95c5-000c6ec775d9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=482"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=483"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-03.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-04.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-05.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-06.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-07.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2007/mfsa2007-08.html"
+				}
+			],
+			"published": "2007-02-24T00:00:00Z",
+			"modified": "2007-04-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-6077",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-6077"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0008",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0008"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0009",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0009"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0775",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0775"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0776",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0776"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0777",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0777"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0778",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0778"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0779",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0779"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0780",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0780"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0800",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0800"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0981",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0981"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0995",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0995"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-1092",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-1092"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.0.10,1"
+					},
+					{
+						"lt": "2.0.0.2,1",
+						"gt": "2.*,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.0.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "lightning"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.3.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.8"
+					},
+					{
+						"lt": "1.1.1",
+						"ge": "1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.8"
+					},
+					{
+						"lt": "1.1.1",
+						"ge": "1.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.0.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.0.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.0.10"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-firefox-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.a2007.04.18"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.a2007.04.18"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-ja"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

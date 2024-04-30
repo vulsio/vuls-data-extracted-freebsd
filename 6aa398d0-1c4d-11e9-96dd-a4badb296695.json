@@ -1,0 +1,89 @@
+{
+	"id": "6aa398d0-1c4d-11e9-96dd-a4badb296695",
+	"advisories": [
+		{
+			"id": "6aa398d0-1c4d-11e9-96dd-a4badb296695",
+			"title": "joomla3 -- vulnerabilitiesw",
+			"description": "\n\t<p>JSST reports:</p>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/760-00190101-core-stored-xss-in-mod-banners.html\">\n\t  <p>Inadequate escaping in mod_banners leads to a stored XSS vulnerability.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/761-20190102-core-stored-xss-in-com-contact.html\">\n\t  <p>Inadequate escaping in com_contact leads to a stored XSS vulnerability</p>\n\t</blockquote>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/762-20190103-core-stored-xss-issue-in-the-global-configuration-textfilter-settings.html\">\n\t  <p>Inadequate checks at the Global Configuration Text Filter settings allowed a stored XSS.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://developer.joomla.org/security-centre/763-20190104-core-stored-xss-issue-in-the-global-configuration-help-url.html\">\n\t  <p>Inadequate checks at the Global Configuration helpurl settings allowed a stored XSS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6aa398d0-1c4d-11e9-96dd-a4badb296695.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/760-00190101-core-stored-xss-in-mod-banners.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/761-20190102-core-stored-xss-in-com-contact.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/762-20190103-core-stored-xss-issue-in-the-global-configuration-textfilter-settings.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://developer.joomla.org/security-centre/763-20190104-core-stored-xss-issue-in-the-global-configuration-help-url.html"
+				}
+			],
+			"published": "2019-01-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-6264",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-6264"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-6261",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-6261"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-6263",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-6263"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-6262",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-6262"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "joomla3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.9.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

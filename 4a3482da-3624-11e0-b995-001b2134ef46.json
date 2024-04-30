@@ -1,0 +1,188 @@
+{
+	"id": "4a3482da-3624-11e0-b995-001b2134ef46",
+	"advisories": [
+		{
+			"id": "4a3482da-3624-11e0-b995-001b2134ef46",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe Product Security Incident Response Team reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb11-02.html\">\n\t  <p>Critical vulnerabilities have been identified in\n\t    Adobe Flash Player 10.1.102.64 and earlier versions for\n\t    Windows, Macintosh, Linux, and Solaris. These vulnerabilities\n\t    could cause the application to crash and could potentially\n\t    allow an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4a3482da-3624-11e0-b995-001b2134ef46.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/security/bulletins/apsb11-02.html"
+				}
+			],
+			"published": "2011-02-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-0558",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0558"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0559",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0559"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0560",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0560"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0561",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0561"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0571",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0571"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0572",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0572"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0573",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0573"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0574",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0574"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0575",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0575"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0577",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0577"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0578",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0578"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0607",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0607"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-0608",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0608"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-flashplugin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "9.0r289"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f8-flashplugin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.2r152"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-flashplugin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.2r152"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

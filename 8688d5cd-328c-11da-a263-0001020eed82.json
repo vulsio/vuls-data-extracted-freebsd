@@ -1,0 +1,74 @@
+{
+	"id": "8688d5cd-328c-11da-a263-0001020eed82",
+	"advisories": [
+		{
+			"id": "8688d5cd-328c-11da-a263-0001020eed82",
+			"title": "cfengine -- arbitrary file overwriting vulnerability",
+			"description": "\n\t<p>A Debian Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.debian.org/security/2005/dsa-835\">\n\t  <p>Javier Fernández-Sanguino Peña discovered several\n\t    insecure temporary file uses in cfengine, a tool for\n\t    configuring and maintaining networked machines, that can\n\t    be exploited by a symlink attack to overwrite arbitrary\n\t    files owned by the user executing cfengine, which is\n\t    probably root.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8688d5cd-328c-11da-a263-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2005/dsa-835"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2005/dsa-836"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14994"
+				}
+			],
+			"published": "2005-10-01T00:00:00Z",
+			"modified": "2005-10-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2960",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2960"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cfengine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.6_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cfengine2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

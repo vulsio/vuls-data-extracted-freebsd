@@ -1,0 +1,63 @@
+{
+	"id": "ff98087f-0a8f-11e4-b00b-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "ff98087f-0a8f-11e4-b00b-5453ed2e2b49",
+			"title": "postfixadmin -- SQL injection vulnerability",
+			"description": "\n\t<p>Thijs Kinkhorst reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2014/03/26/6\">\n\t  <p>Postfixadmin has an SQL injection vulnerability. This\n\t    vulnerability is only exploitable by authenticated users able to\n\t    create new aliases.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ff98087f-0a8f-11e4-b00b-5453ed2e2b49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.debian.org/security/2014/dsa-2889"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=189248"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2014/03/26/6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/66455"
+				}
+			],
+			"published": "2014-07-13T00:00:00Z",
+			"modified": "2015-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-2655",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-2655"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "postfixadmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

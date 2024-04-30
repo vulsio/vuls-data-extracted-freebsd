@@ -1,0 +1,111 @@
+{
+	"id": "238ae7de-dba2-11e8-b713-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "238ae7de-dba2-11e8-b713-b499baebfeaf",
+			"title": "OpenSSL -- Multiple vulnerabilities in 1.1 branch",
+			"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20181029.txt\">\n\t  <p>Timing vulnerability in ECDSA signature generation\n\t    (CVE-2018-0735): The OpenSSL ECDSA signature algorithm has been\n\t    shown to be vulnerable to a timing side channel attack. An\n\t    attacker could use variations in the signing algorithm to\n\t    recover the private key (Low).</p>\n\t  <p>Timing vulnerability in DSA signature generation (CVE-2018-0734):\n\t    Avoid a timing attack that leaks information via a side channel\n\t    that triggers when a BN is resized.  Increasing the size of the\n\t    BNs prior to doing anything with them suppresses the attack (Low).\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/238ae7de-dba2-11e8-b713-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20181029.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/openssl/openssl/commit/8abfe72e"
+				}
+			],
+			"published": "2018-10-29T00:00:00Z",
+			"modified": "2018-11-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-0735",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-0735"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-0734",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-0734"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.0i_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl111"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.1_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libressl"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.3",
+						"ge": "2.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libressl-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.3",
+						"ge": "2.8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

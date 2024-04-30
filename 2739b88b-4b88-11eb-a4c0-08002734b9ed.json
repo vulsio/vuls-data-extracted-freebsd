@@ -1,0 +1,43 @@
+{
+	"id": "2739b88b-4b88-11eb-a4c0-08002734b9ed",
+	"advisories": [
+		{
+			"id": "2739b88b-4b88-11eb-a4c0-08002734b9ed",
+			"title": "gitea -- multiple vulnerabilities",
+			"description": "\n\t<p>The Gitea Team reports for release 1.13.1:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2020/12/gitea-1.13.1-is-released/\">\n\t  <ul>\n\t    <li>Hide private participation in Orgs</li>\n\t    <li>Fix escaping issue in diff</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2739b88b-4b88-11eb-a4c0-08002734b9ed.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.13.1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=252310"
+				}
+			],
+			"published": "2020-12-31T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.13.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

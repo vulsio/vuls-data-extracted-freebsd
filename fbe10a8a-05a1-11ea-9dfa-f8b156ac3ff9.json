@@ -1,0 +1,113 @@
+{
+	"id": "fbe10a8a-05a1-11ea-9dfa-f8b156ac3ff9",
+	"advisories": [
+		{
+			"id": "fbe10a8a-05a1-11ea-9dfa-f8b156ac3ff9",
+			"title": "FreeBSD -- Intel CPU Microcode Update",
+			"description": "\n\t<p>Starting with version 1.26, the devcpu-data port/package includes\n\tupdates and mitigations for the following technical and security\n\tadvisories (depending on CPU model).</p>\n\t<p>Intel TSX Updates (TAA) CVE-2019-11135 Voltage Modulation\n\tVulnerability CVE-2019-11139 MD_CLEAR Operations\n\tCVE-2018-12126 CVE-2018-12127 CVE-2018-12130 CVE-2018-11091\n\tTA Indirect Sharing CVE-2017-5715 EGETKEY CVE-2018-12126\n\tCVE-2018-12127 CVE-2018-12130 CVE-2018-11091 JCC SKX102\n\t  Erratum </p>\n\t<p>Updated microcode includes mitigations for\n\tCPU issues, but may also cause a performance regression due\n\tto the JCC erratum mitigation.  Please visit\n\thttp://www.intel.com/benchmarks for further information.\n\t</p>\n\t<p>Please visit http://www.intel.com/security for\n\tdetailed information on these advisories as well as a list of\n\tCPUs that are affected.</p>\n\t<p>Operating a CPU without the latest microcode may result in erratic or\n\tunpredictable behavior, including system crashes and lock ups.\n\tCertain issues listed in this advisory may result in the leakage of\n\tprivileged system information to unprivileged users.  Please refer to\n\tthe security advisories listed above for detailed information.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fbe10a8a-05a1-11ea-9dfa-f8b156ac3ff9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:26.mcu.asc"
+				}
+			],
+			"published": "2019-11-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-11135",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11135"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11139",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11139"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12126",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12126"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12127",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12127"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12130",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12130"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-11091",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-11091"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5715",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5715"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.1_1",
+						"ge": "12.1"
+					},
+					{
+						"lt": "12.0_12",
+						"ge": "12.0"
+					},
+					{
+						"lt": "11.3_5",
+						"ge": "11.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

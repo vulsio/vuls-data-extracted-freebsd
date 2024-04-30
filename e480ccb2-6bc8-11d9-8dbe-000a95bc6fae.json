@@ -1,0 +1,77 @@
+{
+	"id": "e480ccb2-6bc8-11d9-8dbe-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "e480ccb2-6bc8-11d9-8dbe-000a95bc6fae",
+			"title": "fcron -- multiple vulnerabilities",
+			"description": "\n\t<p>An iDEFENSE Security Advisory states:</p>\n\t<blockquote cite=\"http://www.idefense.com/application/poi/display?id=157&amp;type=vulnerabilities&amp;flashstatus=false\">\n\t  <p>Multiple vulnerabilities have been found in Fcron.</p>\n\t  <ol>\n\t    <li>File contents disclosure</li>\n\t    <li>Configuration Bypass Vulnerability</li>\n\t    <li>File Removal and Empty File Creation Vulnerability</li>\n\t    <li>Information Disclosure Vulnerability</li>\n\t  </ol>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e480ccb2-6bc8-11d9-8dbe-000a95bc6fae.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.idefense.com/application/poi/display?id=157&type=vulnerabilities&flashstatus=false"
+				}
+			],
+			"published": "2005-01-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1030",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1030"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-1031",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1031"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-1032",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1032"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-1033",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1033"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fcron"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.9.5.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

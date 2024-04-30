@@ -1,0 +1,52 @@
+{
+	"id": "b162b218-c547-4ba2-ae31-6fdcb61bc763",
+	"advisories": [
+		{
+			"id": "b162b218-c547-4ba2-ae31-6fdcb61bc763",
+			"title": "puppet -- Unauthenticated Remote Code Execution Vulnerability",
+			"description": "\n\t<p>Puppet Developers report:</p>\n\t<blockquote cite=\"http://puppetlabs.com/security/cve/cve-2013-3567/\">\n\t  <p>When making REST api calls, the puppet master takes YAML from an\n\t      untrusted client, deserializes it, and then calls methods on the\n\t      resulting object. A YAML payload can be crafted to cause the\n\t      deserialization to construct an instance of any class available in\n\t      the ruby process, which allows an attacker to execute code\n\t      contained in the payload.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b162b218-c547-4ba2-ae31-6fdcb61bc763.html"
+				}
+			],
+			"published": "2013-06-22T00:00:00Z",
+			"modified": "2013-08-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-3567",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3567"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "puppet"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.22",
+						"ge": "2.7"
+					},
+					{
+						"lt": "3.2.2",
+						"ge": "3.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

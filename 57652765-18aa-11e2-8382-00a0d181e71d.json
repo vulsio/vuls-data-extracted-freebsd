@@ -1,0 +1,66 @@
+{
+	"id": "57652765-18aa-11e2-8382-00a0d181e71d",
+	"advisories": [
+		{
+			"id": "57652765-18aa-11e2-8382-00a0d181e71d",
+			"title": "xlockmore -- local exploit",
+			"description": "\n\t<p>Ignatios Souvatzis of NetBSD reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2012/10/17/10\">\n\t  <p>Due to an error in the dclock screensaver in xlockmore, users who\n\t    explicitly use this screensaver or a random mix of screensavers using\n\t    something like \"xlockmore -mode random\" may have their screen unlocked\n\t    unexpectedly at a random time.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/57652765-18aa-11e2-8382-00a0d181e71d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2012/10/17/10"
+				}
+			],
+			"published": "2012-10-17T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4524",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4524"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xlockmore"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.40_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-xlockmore"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.40_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

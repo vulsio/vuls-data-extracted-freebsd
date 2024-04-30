@@ -1,0 +1,59 @@
+{
+	"id": "7d7e05fb-64da-435a-84fb-4061493b89b9",
+	"advisories": [
+		{
+			"id": "7d7e05fb-64da-435a-84fb-4061493b89b9",
+			"title": "kanboard -- multiple privilege escalation vulnerabilities",
+			"description": "\n\t<p>chbi reports:</p>\n\t<blockquote cite=\"https://kanboard.net/news/version-1.0.46\">\n\t  <p>an authenticated standard user could reset the password of another\n\t  user (including admin) by altering form data.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7d7e05fb-64da-435a-84fb-4061493b89b9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://kanboard.net/news/version-1.0.46"
+				}
+			],
+			"published": "2017-08-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-12850",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12850"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12851",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12851"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "kanboard"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.46"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

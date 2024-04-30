@@ -1,0 +1,59 @@
+{
+	"id": "9dfe61c8-4d15-11e8-8f2f-d8cb8abf62dd",
+	"advisories": [
+		{
+			"id": "9dfe61c8-4d15-11e8-8f2f-d8cb8abf62dd",
+			"title": "Gitlab -- multiple vulnerabilities",
+			"description": "\n\t<p>GitLab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2018/04/30/security-release-gitlab-10-dot-7-dot-2-released\">\n\t  <p>Persistent XSS in Move Issue using project namespace</p>\n\t  <p>Download Archive allowing unauthorized private repo access</p>\n\t  <p>Mattermost Updates</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9dfe61c8-4d15-11e8-8f2f-d8cb8abf62dd.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/2018/04/30/security-release-gitlab-10-dot-7-dot-2-released"
+				}
+			],
+			"published": "2018-05-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-10379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10379"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.7.2",
+						"ge": "10.7.0"
+					},
+					{
+						"lt": "10.6.5",
+						"ge": "10.6.0"
+					},
+					{
+						"lt": "10.5.8",
+						"ge": "9.5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,46 @@
+{
+	"id": "4e23644c-cb93-4f83-9e20-5bc07ad9b39f",
+	"advisories": [
+		{
+			"id": "4e23644c-cb93-4f83-9e20-5bc07ad9b39f",
+			"title": "mod_pagespeed -- critical cross-site scripting (XSS) vulnerability",
+			"description": "\n\t<p>mod_pagespeed developers report:</p>\n\t<blockquote cite=\"https://groups.google.com/forum/#!msg/mod-pagespeed-announce/oo015UHRxMc/JcAuf1hE8L8J\">\n\t  <p>Various versions of mod_pagespeed are subject to critical\n\t    cross-site scripting (XSS) vulnerability, CVE-2013-6111. This\n\t    permits a hostile third party to execute JavaScript in users'\n\t    browsers in context of the domain running mod_pagespeed, which\n\t    could permit theft of users' cookies or data on the site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4e23644c-cb93-4f83-9e20-5bc07ad9b39f.html"
+				}
+			],
+			"published": "2013-10-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-6111",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6111"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_pagespeed"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.24.2,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

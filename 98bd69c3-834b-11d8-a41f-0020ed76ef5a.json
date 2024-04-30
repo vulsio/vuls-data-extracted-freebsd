@@ -1,0 +1,101 @@
+{
+	"id": "98bd69c3-834b-11d8-a41f-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "98bd69c3-834b-11d8-a41f-0020ed76ef5a",
+			"title": "Courier mail services: remotely exploitable buffer overflows",
+			"description": "\n\t<p>The Courier set of mail services use a common Unicode\n\t  library.  This library contains buffer overflows in the\n\t  converters for two popular Japanese character encodings.\n\t  These overflows may be remotely exploitable, triggered by\n\t  a maliciously formatted email message that is later processed\n\t  by one of the Courier mail services.\n\t  From the release notes for the corrected versions of the\n\t  Courier set of mail services:</p>\n\t<blockquote>\n\t  <p>iso2022jp.c: Converters became (upper-)compatible with\n\t    ISO-2022-JP (RFC1468 / JIS X 0208:1997 Annex 2) and\n\t    ISO-2022-JP-1 (RFC2237).  Buffer overflow vulnerability\n\t    (when Unicode character is out of BMP range) has been\n\t    closed.  Convert error handling was implemented.</p>\n\t  <p>shiftjis.c: Broken SHIFT_JIS converters has been fixed\n\t    and became (upper-)compatible with Shifted Encoding Method\n\t    (JIS X 0208:1997 Annex 1). Buffer overflow vulnerability\n\t    (when Unicode character is out of BMP range) has been\n\t    closed.  Convert error handling was implemented.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/98bd69c3-834b-11d8-a41f-0020ed76ef5a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cvs.sourceforge.net/viewcvs.py/courier/libs/unicode/iso2022jp.c?rev=1.10&view=markup"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cvs.sourceforge.net/viewcvs.py/courier/libs/unicode/shiftjis.c?rev=1.6&view=markup"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/11087"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/4194"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/6927"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9845"
+				}
+			],
+			"published": "2004-03-31T00:00:00Z",
+			"modified": "2004-07-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0224",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0224"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "courier"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.45"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "courier-imap"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "sqwebmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

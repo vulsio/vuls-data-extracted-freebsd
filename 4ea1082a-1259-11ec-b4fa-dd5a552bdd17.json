@@ -1,0 +1,50 @@
+{
+	"id": "4ea1082a-1259-11ec-b4fa-dd5a552bdd17",
+	"advisories": [
+		{
+			"id": "4ea1082a-1259-11ec-b4fa-dd5a552bdd17",
+			"title": "go -- archive/zip: overflow in preallocation check can cause OOM panic",
+			"description": "\n\t<p>The Go project reports:</p>\n\t<blockquote cite=\"https://github.com/golang/go/issues/47801\">\n\t  <p>An oversight in the previous fix still allows for an OOM\n\t  panic when the indicated directory size in the archive\n\t  header is so large that subtracting it from the archive\n\t  size overflows a uint64, effectively bypassing the check\n\t  that the number of files in the archive is reasonable.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4ea1082a-1259-11ec-b4fa-dd5a552bdd17.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/47801"
+				}
+			],
+			"published": "2021-09-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-39293",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39293"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "go"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.17.1,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

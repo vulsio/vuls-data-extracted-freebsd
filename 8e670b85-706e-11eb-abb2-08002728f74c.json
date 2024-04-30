@@ -1,0 +1,127 @@
+{
+	"id": "8e670b85-706e-11eb-abb2-08002728f74c",
+	"advisories": [
+		{
+			"id": "8e670b85-706e-11eb-abb2-08002728f74c",
+			"title": "Rails -- multiple vulnerabilities",
+			"description": "\n\t<p>Ruby on Rails blog:</p>\n\t<blockquote cite=\"https://weblog.rubyonrails.org/2021/2/10/Rails-5-2-4-5-6-0-3-5-and-6-1-2-1-have-been-released/\">\n\t  <p>Rails version 5.2.4.5, 6.0.3.5 and 6.1.2.1 have been released! Those\n\t    version are security releases and addresses two issues:</p>\n\t  <p>CVE-2021-22880: Possible DoS Vulnerability in Active Record PostgreSQL adapter.</p>\n\t  <p>CVE-2021-22881: Possible Open Redirect in Host Authorization Middleware.</p>\n\t  <p/>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8e670b85-706e-11eb-abb2-08002728f74c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://weblog.rubyonrails.org/2021/2/10/Rails-5-2-4-5-6-0-3-5-and-6-1-2-1-have-been-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://discuss.rubyonrails.org/t/cve-2021-22880-possible-dos-vulnerability-in-active-record-postgresql-adapter/77129"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://discuss.rubyonrails.org/t/cve-2021-22881-possible-open-redirect-in-host-authorization-middleware/77130"
+				}
+			],
+			"published": "2021-02-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-22880",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22880"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-22881",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22881"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-activerecord52"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.2.4.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-actionpack60"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.3.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-activerecord60"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.3.5"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-actionpack61"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.1.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rubygem-activerecord61"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.1.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

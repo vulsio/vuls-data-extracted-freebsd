@@ -1,0 +1,110 @@
+{
+	"id": "25be46f0-f25d-11ec-b62a-00e081b7aa2d",
+	"advisories": [
+		{
+			"id": "25be46f0-f25d-11ec-b62a-00e081b7aa2d",
+			"title": "jenkins -- multiple vulnerabilities",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://www.jenkins.io/security/advisory/2022-06-22/\">\n\t  <h1>Description</h1>\n\t  <h5>(High) SECURITY-2781 / CVE-2022-34170 (SECURITY-2779), CVE-2022-34171 (SECURITY-2761), CVE-2022-34172 (SECURITY-2776), CVE-2022-34173 (SECURITY-2780)</h5>\n\t  <p>Multiple XSS vulnerabilities</p>\n\t  <h5>(Medium) SECURITY-2566 / CVE-2022-34174</h5>\n\t  <p>Observable timing discrepancy allows determining username validity</p>\n\t  <h5>(Medium) Unauthorized view fragment access</h5>\n\t  <p>SECURITY-2777 / CVE-2022-34175</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/25be46f0-f25d-11ec-b62a-00e081b7aa2d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.jenkins.io/security/advisory/2022-06-22/"
+				}
+			],
+			"published": "2022-06-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-34170",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-34170"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-34171",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-34171"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-34172",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-34172"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-34173",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-34173"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-34174",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-34174"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-34175",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-34175"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.356"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins-lts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.346.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

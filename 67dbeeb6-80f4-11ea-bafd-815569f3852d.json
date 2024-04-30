@@ -1,0 +1,141 @@
+{
+	"id": "67dbeeb6-80f4-11ea-bafd-815569f3852d",
+	"advisories": [
+		{
+			"id": "67dbeeb6-80f4-11ea-bafd-815569f3852d",
+			"title": "ansible - subversion password leak from PID",
+			"description": "\n\t<p>Borja Tarraso reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-1739\">\n\t  <p>A flaw was found in Ansible 2.7.16 and prior, 2.8.8 and prior, and 2.9.5\n\t    and prior when a password is set with the argument \"password\" of svn module,\n\t    it is used on svn command line, disclosing to other users within the same\n\t    node. An attacker could take advantage by reading the cmdline file from that\n\t    particular PID on the procfs.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/67dbeeb6-80f4-11ea-bafd-815569f3852d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-1739"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/ansible/ansible/issues/67797"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FWDK3QUVBULS3Q3PQTGEKUQYPSNOU5M3/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QT27K5ZRGDPCH7GT3DRI3LO4IVDVQUB7/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U3IMV3XEIUXL6S4KPLYYM4TVJQ2VNEP2/"
+				}
+			],
+			"published": "2020-04-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-1739",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-1739"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.9"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible27"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible26"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible25"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible23"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.17"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

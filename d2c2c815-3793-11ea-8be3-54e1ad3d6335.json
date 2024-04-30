@@ -1,0 +1,95 @@
+{
+	"id": "d2c2c815-3793-11ea-8be3-54e1ad3d6335",
+	"advisories": [
+		{
+			"id": "d2c2c815-3793-11ea-8be3-54e1ad3d6335",
+			"title": "drm graphics drivers -- potential information disclusure via local access",
+			"description": "\n\t<p>Intel reports:</p>\n\t<blockquote cite=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00314.html\">\n\t  <p>.A potential security vulnerability in Intel(R) Processor Graphics\n\t    may allow information disclosure.  Intel is releasing software\n\t    updates to mitigate this potential vulnerability.</p>\n\t  <p>Description: Insufficient control flow in certain data\n\t    structures for some Intel(R) Processors with Intel(R) Processor\n\t    Graphics may allow an unauthenticated user to potentially enable\n\t    information disclosure via local access.</p>\n\t  <p>This patch provides mitigation for Gen9 hardware only.  Patches\n\t    for Gen7 and Gen7.5 will be provided later.  Note that Gen8 is not\n\t    impacted due to a previously implemented workaround.  The mitigation\n\t    involves using an existing hardware feature to forcibly clear down\n\t    all EU state at each context switch.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d2c2c815-3793-11ea-8be3-54e1ad3d6335.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00314.html"
+				}
+			],
+			"published": "2020-01-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-14615",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14615"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-fbsd11.2-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.11.g20200115"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-fbsd12.0-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.16.g20200115"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-current-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.16.g20200115"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-devel-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.g20200115"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

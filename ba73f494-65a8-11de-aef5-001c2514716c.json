@@ -1,0 +1,51 @@
+{
+	"id": "ba73f494-65a8-11de-aef5-001c2514716c",
+	"advisories": [
+		{
+			"id": "ba73f494-65a8-11de-aef5-001c2514716c",
+			"title": "phpmyadmin -- XSS vulnerability",
+			"description": "\n\t<p>The phpMyAdmin project reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2009-5.php\">\n\t  <p>It was possible to conduct an XSS attack via a crafted\n\t    SQL bookmark.</p>\n\t  <p>All 3.x releases on which the \"bookmarks\" feature is\n\t    active are affected, previous versions are not.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ba73f494-65a8-11de-aef5-001c2514716c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2009-5.php"
+				}
+			],
+			"published": "2009-06-30T00:00:00Z",
+			"modified": "2010-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-2284",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-2284"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.0.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

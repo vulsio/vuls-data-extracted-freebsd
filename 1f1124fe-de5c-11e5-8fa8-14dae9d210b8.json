@@ -1,0 +1,116 @@
+{
+	"id": "1f1124fe-de5c-11e5-8fa8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "1f1124fe-de5c-11e5-8fa8-14dae9d210b8",
+			"title": "tomcat -- multiple vulnerabilities",
+			"description": "\n\t<p>Mark Thomas reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF96.7070701@apache.org%3e\">\n\t  <ul>\n\t  <li><p>CVE-2015-5345 Apache Tomcat Directory disclosure</p></li>\n\t  <li><p>CVE-2016-0706 Apache Tomcat Security Manager bypass</p></li>\n\t  <li><p>CVE-2016-0714 Apache Tomcat Security Manager Bypass</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1f1124fe-de5c-11e5-8fa8-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF96.7070701@apache.org%3e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF6A.70703@apache.org%3e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/www-announce/201602.mbox/%3c56CAEF4F.5090003@apache.org%3e"
+				}
+			],
+			"published": "2016-02-28T00:00:00Z",
+			"modified": "2017-03-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5345",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5345"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5346",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5346"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0706",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0706"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0714",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0714"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.0.45"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.0.68"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat8"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.0.30"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

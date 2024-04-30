@@ -1,0 +1,43 @@
+{
+	"id": "53bde960-356b-11e0-8e81-0022190034c0",
+	"advisories": [
+		{
+			"id": "53bde960-356b-11e0-8e81-0022190034c0",
+			"title": "mupdf -- Remote System Access",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/43020/\">\n\t  <p>The vulnerability is caused due to an error within the\n\t    \"closedctd()\" function in fitz/filt_dctd.c when processing PDF\n\t    files containing certain malformed JPEG images. This can be\n\t    exploited to cause a stack corruption by e.g. tricking a user\n\t    into opening a specially crafted PDF file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/53bde960-356b-11e0-8e81-0022190034c0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/43020/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/46027"
+				}
+			],
+			"published": "2011-02-10T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mupdf"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

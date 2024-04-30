@@ -1,0 +1,48 @@
+{
+	"id": "19518d22-2d05-11d9-8943-0050fc56d258",
+	"advisories": [
+		{
+			"id": "19518d22-2d05-11d9-8943-0050fc56d258",
+			"title": "putty -- buffer overflow vulnerability in ssh2 support",
+			"description": "\n\t<p>There is a bug in SSH2 support that allows a server to execute\n\t  malicious code on a connecting PuTTY client.\n\t  This attack can be performed before host key verification happens,\n\t  so a different machine -- man in the middle attack -- could fake\n\t  the machine you are connecting to.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/19518d22-2d05-11d9-8943-0050fc56d258.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200410-29.xml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-ssh2-debug.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109890310929207"
+				}
+			],
+			"published": "2004-11-04T00:00:00Z",
+			"modified": "2005-01-19T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "putty"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.56"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,106 @@
+{
+	"id": "a851b305-1bc3-11e3-95b7-00e0814cab4e",
+	"advisories": [
+		{
+			"id": "a851b305-1bc3-11e3-95b7-00e0814cab4e",
+			"title": "django -- multiple vulnerabilities",
+			"description": "\n\t<p>The Django project reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2013/sep/10/security-releases-issued/\">\n\t  <p>These releases address a directory-traversal vulnerability in one\n\t    of Django's built-in template tags. While this issue requires some\n\t    fairly specific factors to be exploitable, we encourage all users\n\t    of Django to upgrade promptly.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a851b305-1bc3-11e3-95b7-00e0814cab4e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.djangoproject.com/weblog/2013/sep/10/security-releases-issued/"
+				}
+			],
+			"published": "2013-09-12T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4315",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4315"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py26-django"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.3",
+						"ge": "1.5"
+					},
+					{
+						"lt": "1.4.7",
+						"ge": "1.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-django"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.3",
+						"ge": "1.5"
+					},
+					{
+						"lt": "1.4.7",
+						"ge": "1.4"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py26-django-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "20130912,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-django-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "20130912,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

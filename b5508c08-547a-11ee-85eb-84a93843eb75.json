@@ -1,0 +1,39 @@
+{
+	"id": "b5508c08-547a-11ee-85eb-84a93843eb75",
+	"advisories": [
+		{
+			"id": "b5508c08-547a-11ee-85eb-84a93843eb75",
+			"title": "Roundcube -- XSS vulnerability",
+			"description": "\n\t<p>The Roundcube webmail project reports:</p>\n\t<blockquote cite=\"https://roundcube.net/news/2023/09/15/security-update-1.6.3-released\">\n\t  <p>cross-site scripting (XSS) vulnerability in handling of\n\t    linkrefs in plain text messages</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b5508c08-547a-11ee-85eb-84a93843eb75.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://roundcube.net/news/2023/09/15/security-update-1.6.3-released"
+				}
+			],
+			"published": "2023-09-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "roundcube"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.3,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

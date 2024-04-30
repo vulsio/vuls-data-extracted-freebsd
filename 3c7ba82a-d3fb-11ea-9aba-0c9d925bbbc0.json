@@ -1,0 +1,125 @@
+{
+	"id": "3c7ba82a-d3fb-11ea-9aba-0c9d925bbbc0",
+	"advisories": [
+		{
+			"id": "3c7ba82a-d3fb-11ea-9aba-0c9d925bbbc0",
+			"title": "xorg-server -- Pixel Data Uninitialized Memory Information Disclosure",
+			"description": "\n\t<p>The X.org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2020-July/003051.html\">\n\t  <p>Allocation for pixmap data in AllocatePixmap() does not initialize\n\t    the memory in xserver, it leads to leak uninitialize heap memory to\n\t    clients. When the X server runs with elevated privileges.</p>\n\t  <p>This flaw can lead to ASLR bypass, which when combined with other\n\t    flaws (known/unknown) could lead to lead to privilege elevation in\n\t    the client.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c7ba82a-d3fb-11ea-9aba-0c9d925bbbc0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.x.org/archives/xorg-announce/2020-July/003051.html"
+				}
+			],
+			"published": "2020-08-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-14347",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14347"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.8_3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xephyr"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.8_3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-vfbserver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.8_3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-nestserver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.8_3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xwayland"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.8_3,1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-dmx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.20.8_3,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

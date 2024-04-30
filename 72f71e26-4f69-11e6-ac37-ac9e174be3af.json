@@ -1,0 +1,65 @@
+{
+	"id": "72f71e26-4f69-11e6-ac37-ac9e174be3af",
+	"advisories": [
+		{
+			"id": "72f71e26-4f69-11e6-ac37-ac9e174be3af",
+			"title": "Apache OpenOffice 4.1.2 -- Memory Corruption Vulnerability (Impress Presentations)",
+			"description": "\n\t<p>The Apache OpenOffice Project reports:</p>\n\t<blockquote cite=\"http://www.openoffice.org/security/cves/CVE-2016-1513.html\">\n\t  <p>An OpenDocument Presentation .ODP or Presentation Template\n\t    .OTP file can contain invalid presentation elements that lead\n\t    to memory corruption when the document is loaded in Apache\n\t    OpenOffice Impress. The defect may cause the document to appear\n\t    as corrupted and OpenOffice may crash in a recovery-stuck mode\n\t    requiring manual intervention. A crafted exploitation of the\n\t    defect can allow an attacker to cause denial of service\n\t    (memory corruption and application crash) and possible\n\t    execution of arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/72f71e26-4f69-11e6-ac37-ac9e174be3af.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openoffice.org/security/cves/CVE-2015-4551.html"
+				}
+			],
+			"published": "2016-07-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1513",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1513"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache-openoffice"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.2_8"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache-openoffice-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.1753426,4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

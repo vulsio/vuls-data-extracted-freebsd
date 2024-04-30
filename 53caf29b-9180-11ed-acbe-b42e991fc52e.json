@@ -1,0 +1,115 @@
+{
+	"id": "53caf29b-9180-11ed-acbe-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "53caf29b-9180-11ed-acbe-b42e991fc52e",
+			"title": "cassandra3 -- multiple vulnerabilities",
+			"description": "\n\t<p>Cassandra tema reports:</p>\n\t<blockquote cite=\"https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=CHANGES.txt;hb=refs/tags/cassandra-3.11.14\">\n\t  <p>This release contains 6 security fixes including</p>\n\t  <ul>\n\t      <li>CVE-2022-24823: When Netty's multipart decoders are used local information disclosure can occur via the local system temporary directory</li>\n\t      <li>CVE-2020-7238: Netty 4.1.43.Final allows HTTP Request Smuggling because it mishandles Transfer-Encoding whitespace (such as a [space]Transfer-Encoding:chunked line) and a later Content-Length header.</li>\n\t      <li>CVE-2019-2684: Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Java SE</li>\n\t      <li>CVE-2022-25857: The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.</li>\n\t      <li>CVE-2022-42003: In FasterXML jackson-databind, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled.</li>\n\t      <li>CVE-2022-42004: In FasterXML jackson-databind, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/53caf29b-9180-11ed-acbe-b42e991fc52e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24823"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7238"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2684"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25857"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004"
+				}
+			],
+			"published": "2023-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24823",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24823"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-7238",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7238"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-2684",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-2684"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-25857",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-25857"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-42003",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42003"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-42004",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42004"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cassandra3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.11.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

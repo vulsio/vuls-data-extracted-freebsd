@@ -1,0 +1,68 @@
+{
+	"id": "f923205f-6e66-11ee-85eb-84a93843eb75",
+	"advisories": [
+		{
+			"id": "f923205f-6e66-11ee-85eb-84a93843eb75",
+			"title": "Apache httpd -- Multiple vulnerabilities",
+			"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"https://dlcdn.apache.org/httpd/CHANGES_2.4.58\">\n\t  <ul>\n\t    <li>CVE-2023-45802: Apache HTTP Server: HTTP/2 stream\n\t      memory not reclaimed right away on RST</li>\n\t    <li>CVE-2023-43622: Apache HTTP Server: DoS in HTTP/2 with\n\t      initial windows size 0</li>\n\t    <li>CVE-2023-31122: mod_macro buffer over-read</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f923205f-6e66-11ee-85eb-84a93843eb75.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dlcdn.apache.org/httpd/CHANGES_2.4.58"
+				}
+			],
+			"published": "2023-10-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-45802",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-45802"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-43622",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-43622"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-31122",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-31122"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.58"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

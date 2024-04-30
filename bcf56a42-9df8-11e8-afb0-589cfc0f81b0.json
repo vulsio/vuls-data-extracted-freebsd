@@ -1,0 +1,39 @@
+{
+	"id": "bcf56a42-9df8-11e8-afb0-589cfc0f81b0",
+	"advisories": [
+		{
+			"id": "bcf56a42-9df8-11e8-afb0-589cfc0f81b0",
+			"title": "gitea -- TOTP passcode reuse",
+			"description": "\n\t<p>The Gitea project reports:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2018/08/gitea-1.5.0-is-released/\">\n\t  <p>TOTP passcodes can be reused.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bcf56a42-9df8-11e8-afb0-589cfc0f81b0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/pull/3878"
+				}
+			],
+			"published": "2018-08-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

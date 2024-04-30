@@ -1,0 +1,51 @@
+{
+	"id": "e7002b26-caaa-11e6-a76a-9f7324e5534e",
+	"advisories": [
+		{
+			"id": "e7002b26-caaa-11e6-a76a-9f7324e5534e",
+			"title": "exim -- DKIM private key leak",
+			"description": "\n\t<p>The Exim project reports:</p>\n\t<blockquote cite=\"https://exim.org/static/doc/CVE-2016-9963.txt\">\n\t  <p>Exim leaks the private DKIM signing key to the log files.\n\t  Additionally, if the build option EXPERIMENTAL_DSN_INFO=yes is used,\n\t  the key material is included in the bounce message.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e7002b26-caaa-11e6-a76a-9f7324e5534e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://exim.org/static/doc/CVE-2016-9963.txt"
+				}
+			],
+			"published": "2016-12-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9963",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9963"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.87.1",
+						"gt": "4.69"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,99 @@
+{
+	"id": "5536ea5f-6814-11e9-a8f7-0050562a4d7b",
+	"advisories": [
+		{
+			"id": "5536ea5f-6814-11e9-a8f7-0050562a4d7b",
+			"title": "buildbot -- CRLF injection in Buildbot login and logout redirect code",
+			"description": "\n\t<blockquote cite=\"https://github.com/buildbot/buildbot/wiki/CRLF-injection-in-Buildbot-login-and-logout-redirect-code\">\n\t  <p>A CRLF can be injected in Location header of /auth/login and /auth/logout\n\t    This is due to lack of input validation in the buildbot redirection code.\n\t  </p>\n\t  <p>It was not found a way to impact Buildbot product own security through\n\t    this vulnerability, but it could be used to compromise other sites\n\t    hosted on the same domain as Buildbot.\n\n\t     - cookie injection a master domain (ie if your buildbot is on\n\t\tbuildbot.buildbot.net, one can inject a cookie on *.buildbot.net,\n\t\twhich could impact another website hosted in your domain)\n\n\t     - HTTP response splitting and cache poisoning (browser or proxy) are\n\t\talso typical impact of this vulnerability class, but might be impractical\n\t\tto exploit.\n\t   </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5536ea5f-6814-11e9-a8f7-0050562a4d7b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/buildbot/buildbot/wiki/CRLF-injection-in-Buildbot-login-and-logout-redirect-code"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-7313"
+				}
+			],
+			"published": "2019-04-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-7313",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-7313"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py35-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py36-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-buildbot"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

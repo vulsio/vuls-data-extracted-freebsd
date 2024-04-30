@@ -1,0 +1,56 @@
+{
+	"id": "2ae24334-f2e6-11e2-8346-001e8c75030d",
+	"advisories": [
+		{
+			"id": "2ae24334-f2e6-11e2-8346-001e8c75030d",
+			"title": "subversion -- remotely triggerable \"Assertion failed\" DoS vulnerability or read overflow.",
+			"description": "\n\t<p>Subversion Project reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2013-4131-advisory.txt\">\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module will trigger an assertion\n\t    on some requests made against a revision root.  This can lead to a DoS.\n\t    If assertions are disabled it will trigger a read overflow which may cause a\n\t    SEGFAULT (or equivalent) or undefined behavior.</p>\n\t  <p>Commit access is required to exploit this.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2ae24334-f2e6-11e2-8346-001e8c75030d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://subversion.apache.org/security/CVE-2013-4131-advisory.txt"
+				}
+			],
+			"published": "2013-07-24T00:00:00Z",
+			"modified": "2013-07-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4131",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4131"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.1",
+						"ge": "1.8.0"
+					},
+					{
+						"lt": "1.7.11",
+						"ge": "1.7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

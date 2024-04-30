@@ -1,0 +1,59 @@
+{
+	"id": "8fbd4187-0f18-11e5-b6a8-002590263bf5",
+	"advisories": [
+		{
+			"id": "8fbd4187-0f18-11e5-b6a8-002590263bf5",
+			"title": "pgbouncer -- remote denial of service",
+			"description": "\n\t<p>PgBouncer reports:</p>\n\t<blockquote cite=\"https://pgbouncer.github.io/2015/04/pgbouncer-1-5-5/\">\n\t  <p>Fix remote crash - invalid packet order causes lookup of NULL pointer. Not\n\t    exploitable, just DoS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8fbd4187-0f18-11e5-b6a8-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://pgbouncer.github.io/2015/04/pgbouncer-1-5-5/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200507"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/05/21/2"
+				}
+			],
+			"published": "2015-06-10T00:00:00Z",
+			"modified": "2015-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-4054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4054"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pgbouncer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

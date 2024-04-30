@@ -1,0 +1,54 @@
+{
+	"id": "3aa27226-f86f-11e8-a085-3497f683cb16",
+	"advisories": [
+		{
+			"id": "3aa27226-f86f-11e8-a085-3497f683cb16",
+			"title": "jenkins -- multiple vulnerabilities",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://jenkins.io/security/advisory/2018-12-05/\">\n\t  <h1>Description</h1>\n\t  <h5>(Critical) SECURITY-595</h5>\n\t  <p>Code execution through crafted URLs</p>\n\t  <h5>(Medium) SECURITY-904</h5>\n\t  <p>Forced migration of user records</p>\n\t  <h5>(Medium) SECURITY-1072</h5>\n\t  <p>Workspace browser allowed accessing files outside the workspace</p>\n\t  <h5>(Medium) SECURITY-1193</h5>\n\t  <p>Potential denial of service through cron expression form validation</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3aa27226-f86f-11e8-a085-3497f683cb16.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jenkins.io/security/advisory/2018-12-05/"
+				}
+			],
+			"published": "2018-12-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.154"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jenkins-lts"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.138.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

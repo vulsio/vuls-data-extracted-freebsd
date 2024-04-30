@@ -1,0 +1,61 @@
+{
+	"id": "eb29a575-3381-11da-8340-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "eb29a575-3381-11da-8340-000e0c2e438a",
+			"title": "qpopper -- multiple privilege escalation vulnerabilities",
+			"description": "\n\t<p>Jens Steube reports that qpopper is vulnerable to a privilege\n\t  escalation vulnerability.  qpopper does not properly drop root\n\t  privileges so that user supplied configuration and trace files\n\t  can be processed with root privileges.  This could allow a\n\t  local attacker to create or modify arbitrary files.</p>\n\t<p>qpopper is also affected by improper umask settings\n\t  which could allow users to create group or world-writeable\n\t  files, possibly allowing an attacker to overwrite arbitrary\n\t  files.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/eb29a575-3381-11da-8340-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/15475/"
+				}
+			],
+			"published": "2005-11-07T00:00:00Z",
+			"modified": "2005-11-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1151",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1151"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1152",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1152"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "qpopper"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.0.5",
+						"ge": "4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

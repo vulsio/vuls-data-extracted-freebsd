@@ -1,0 +1,153 @@
+{
+	"id": "3531141d-a708-477c-954a-2a0549e49ca9",
+	"advisories": [
+		{
+			"id": "3531141d-a708-477c-954a-2a0549e49ca9",
+			"title": "salt -- Maliciously crafted minion IDs can cause unwanted directory traversals on the Salt-master",
+			"description": "\n\t<p>SaltStack reports:</p>\n\t<blockquote cite=\"https://docs.saltstack.com/en/latest/topics/releases/2017.7.1.html\">\n\t  <p>Correct a flaw in minion id validation which could allow certain\n\t    minions to authenticate to a master despite not having the correct\n\t    credentials. To exploit the vulnerability, an attacker must create a\n\t    salt-minion with an ID containing characters that will cause a\n\t    directory traversal.\n\t    Credit for discovering the security flaw goes to: Vernhk@qq.com</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3531141d-a708-477c-954a-2a0549e49ca9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.saltstack.com/en/latest/topics/releases/2017.7.1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.saltstack.com/en/latest/topics/releases/2016.11.7.html"
+				}
+			],
+			"published": "2017-08-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-12791",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12791"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-salt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2016.11.7"
+					},
+					{
+						"lt": "2017.7.1",
+						"ge": "2017.7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py32-salt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2016.11.7"
+					},
+					{
+						"lt": "2017.7.1",
+						"ge": "2017.7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py33-salt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2016.11.7"
+					},
+					{
+						"lt": "2017.7.1",
+						"ge": "2017.7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py34-salt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2016.11.7"
+					},
+					{
+						"lt": "2017.7.1",
+						"ge": "2017.7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py35-salt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2016.11.7"
+					},
+					{
+						"lt": "2017.7.1",
+						"ge": "2017.7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py36-salt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2016.11.7"
+					},
+					{
+						"lt": "2017.7.1",
+						"ge": "2017.7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

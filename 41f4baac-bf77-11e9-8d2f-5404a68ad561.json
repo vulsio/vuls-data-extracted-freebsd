@@ -1,0 +1,59 @@
+{
+	"id": "41f4baac-bf77-11e9-8d2f-5404a68ad561",
+	"advisories": [
+		{
+			"id": "41f4baac-bf77-11e9-8d2f-5404a68ad561",
+			"title": "traefik -- Denial of service in HTTP/2",
+			"description": "\n\t<p>The traefik project reports:</p>\n\t<blockquote cite=\"https://github.com/containous/traefik/releases/tag/v1.7.14\">\n\t  <p>Update of dependency to go go1.12.8 resolves potential HTTP/2\n\t    denial of service in traefik.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/41f4baac-bf77-11e9-8d2f-5404a68ad561.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/containous/traefik/releases/tag/v1.7.14"
+				}
+			],
+			"published": "2019-08-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-9512",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9512"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9514",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9514"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "traefik"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.14"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

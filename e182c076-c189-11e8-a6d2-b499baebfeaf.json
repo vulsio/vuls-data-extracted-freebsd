@@ -1,0 +1,50 @@
+{
+	"id": "e182c076-c189-11e8-a6d2-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "e182c076-c189-11e8-a6d2-b499baebfeaf",
+			"title": "Apache -- Denial of service vulnerability in HTTP/2",
+			"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"http://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <p>low: DoS for HTTP/2 connections by continuous SETTINGS</p>\n\t  <p>By sending continous SETTINGS frames of maximum size an ongoing\n\t    HTTP/2 connection could be kept busy and would never time out. This\n\t    can be abused for a DoS on the server. This only affect a server\n\t    that has enabled the h2 protocol.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e182c076-c189-11e8-a6d2-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://httpd.apache.org/security/vulnerabilities_24.html"
+				}
+			],
+			"published": "2018-09-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-11763",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-11763"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.35"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

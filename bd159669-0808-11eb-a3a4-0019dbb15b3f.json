@@ -1,0 +1,50 @@
+{
+	"id": "bd159669-0808-11eb-a3a4-0019dbb15b3f",
+	"advisories": [
+		{
+			"id": "bd159669-0808-11eb-a3a4-0019dbb15b3f",
+			"title": "Payara -- A Polymorphic Typing issue in FasterXML jackson-databind",
+			"description": "\n\t<p>Payara Releases reports:</p>\n\t<blockquote cite=\"https://docs.payara.fish/community/docs/5.193/security/security-fix-list.html\">\n\t  <p>The following is a list of tracked Common Vulnerabilities and Exposures that have been reported and analyzed, which can or have impacted Payara Server across releases:</p>\n\t  <ul>\n\t    <li>CVE-2019-12086 A Polymorphic Typing issue was discovered in FasterXML jackson-databind 2.x before 2.9.9</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bd159669-0808-11eb-a3a4-0019dbb15b3f.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.payara.fish/community/docs/5.193/security/security-fix-list.html"
+				}
+			],
+			"published": "2020-10-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-12086",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-12086"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "payara"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.193"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

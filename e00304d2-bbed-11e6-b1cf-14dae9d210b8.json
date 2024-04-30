@@ -1,0 +1,67 @@
+{
+	"id": "e00304d2-bbed-11e6-b1cf-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "e00304d2-bbed-11e6-b1cf-14dae9d210b8",
+			"title": "FreeBSD -- Possible login(1) argument injection in telnetd(8)",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>An unexpected sequence of memory allocation failures\n\tcombined with insufficient error checking could result in\n\tthe construction and execution of an argument sequence that\n\twas not intended.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who controls the sequence of memory allocation\n\tfailures and success may cause login(1) to run without\n\tauthentication and may be able to cause misbehavior of\n\tlogin(1) replacements.</p>\n\t<p>No practical way of controlling these memory allocation\n\tfailures is known at this time.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e00304d2-bbed-11e6-b1cf-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:36.telnetd.asc"
+				}
+			],
+			"published": "2016-12-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1888",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1888"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.0_4",
+						"ge": "11.0"
+					},
+					{
+						"lt": "10.3_13",
+						"ge": "10.3"
+					},
+					{
+						"lt": "10.2_26",
+						"ge": "10.2"
+					},
+					{
+						"lt": "10.1_43",
+						"ge": "10.1"
+					},
+					{
+						"lt": "9.3_51",
+						"ge": "9.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

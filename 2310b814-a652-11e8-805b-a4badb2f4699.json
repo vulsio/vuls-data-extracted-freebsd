@@ -1,0 +1,64 @@
+{
+	"id": "2310b814-a652-11e8-805b-a4badb2f4699",
+	"advisories": [
+		{
+			"id": "2310b814-a652-11e8-805b-a4badb2f4699",
+			"title": "FreeBSD -- L1 Terminal Fault (L1TF) Kernel Information Disclosure",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>On certain Intel 64-bit x86 systems there is a period\n\tof time during terminal fault handling where the CPU may\n\tuse speculative execution to try to load data. The CPU may\n\tspeculatively access the level 1 data cache (L1D). Data\n\twhich would otherwise be protected may then be determined\n\tby using side channel methods.</p>\n\t<p>This issue affects bhyve on FreeBSD/amd64 systems.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker executing user code, or kernel code inside\n\tof a virtual machine, may be able to read secret data from\n\tthe kernel or from another virtual machine.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2310b814-a652-11e8-805b-a4badb2f4699.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-18:09.l1tf.asc"
+				}
+			],
+			"published": "2018-08-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-3620",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-3620"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-3646",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-3646"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD-kernel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.2_2",
+						"ge": "11.2"
+					},
+					{
+						"lt": "11.1_13",
+						"ge": "11.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

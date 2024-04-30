@@ -1,0 +1,63 @@
+{
+	"id": "e00d8b94-c88a-11e5-b5fe-002590263bf5",
+	"advisories": [
+		{
+			"id": "e00d8b94-c88a-11e5-b5fe-002590263bf5",
+			"title": "gdcm -- multiple vulnerabilities",
+			"description": "\n\t<p>CENSUS S.A. reports:</p>\n\t<blockquote cite=\"http://census-labs.com/news/2016/01/11/gdcm-buffer-overflow-imageregionreaderreadintobuffer/\">\n\t  <p>GDCM versions 2.6.0 and 2.6.1 (and possibly previous versions) are\n\t    prone to an integer overflow vulnerability which leads to a buffer\n\t    overflow and potentially to remote code execution.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://census-labs.com/news/2016/01/11/gdcm-out-bounds-read-jpeglscodec-decodeextent/\">\n\t  <p>GDCM versions 2.6.0 and 2.6.1 (and possibly previous versions) are\n\t    prone to an out-of-bounds read vulnerability due to missing checks.\n\t    </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e00d8b94-c88a-11e5-b5fe-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://census-labs.com/news/2016/01/11/gdcm-buffer-overflow-imageregionreaderreadintobuffer/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://census-labs.com/news/2016/01/11/gdcm-out-bounds-read-jpeglscodec-decodeextent/"
+				}
+			],
+			"published": "2016-02-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8396",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8396"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-8397",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8397"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gdcm"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,63 @@
+{
+	"id": "4175c811-f690-4898-87c5-755b3cf1bac6",
+	"advisories": [
+		{
+			"id": "4175c811-f690-4898-87c5-755b3cf1bac6",
+			"title": "ntp -- stack-based buffer overflow",
+			"description": "\n\t<p>US-CERT reports:</p>\n\t<blockquote cite=\"http://www.kb.cert.org/vuls/id/853097\">\n\t  <p>ntpd contains a stack buffer overflow which may allow a remote\n\t    unauthenticated attacker to execute arbitrary code on a vulnerable\n\t    system or create a denial of service.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4175c811-f690-4898-87c5-755b3cf1bac6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kb.cert.org/vuls/id/853097"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/35017"
+				}
+			],
+			"published": "2009-05-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0159",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0159"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1252",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1252"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.4p7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

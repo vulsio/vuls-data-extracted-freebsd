@@ -1,0 +1,51 @@
+{
+	"id": "113cd7e9-a4e2-11de-84af-001195e39404",
+	"advisories": [
+		{
+			"id": "113cd7e9-a4e2-11de-84af-001195e39404",
+			"title": "fwbuilder -- security issue in temporary file handling",
+			"description": "\n\t<p>Firewall Builder release notes reports:</p>\n\t<blockquote cite=\"http://www.fwbuilder.org/docs/firewall_builder_release_notes.html#3.0.7\">\n\t<p>Vadim Kurland (vadim.kurland@fwbuilder.org) reports:</p>\n\t    <p>Fwbuilder and libfwbuilder 3.0.4 through to 3.0.6 generate\n\t    iptables scripts with a security issue when also used to\n\t    generate static routing configurations.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/113cd7e9-a4e2-11de-84af-001195e39404.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.fwbuilder.org/docs/firewall_builder_release_notes.html#3.0.7"
+				}
+			],
+			"published": "2009-09-18T00:00:00Z",
+			"modified": "2010-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-4664",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-4664"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "fwbuilder"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

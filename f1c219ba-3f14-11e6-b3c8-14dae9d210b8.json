@@ -1,0 +1,51 @@
+{
+	"id": "f1c219ba-3f14-11e6-b3c8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "f1c219ba-3f14-11e6-b3c8-14dae9d210b8",
+			"title": "haproxy -- denial of service",
+			"description": "\n\t<p>HAproxy reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/06/09/5\">\n\t  <p>HAproxy 1.6.x before 1.6.6, when a deny comes from a\n\t    reqdeny rule, allows remote attackers to cause a denial of service\n\t    (uninitialized memory access and crash) or possibly have unspecified\n\t    other impact via unknown vectors.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f1c219ba-3f14-11e6-b3c8-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/06/09/5"
+				}
+			],
+			"published": "2016-06-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5360",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5360"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "haproxy"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.5_1",
+						"ge": "1.6.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

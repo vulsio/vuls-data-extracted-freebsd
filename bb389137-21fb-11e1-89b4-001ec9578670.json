@@ -1,0 +1,78 @@
+{
+	"id": "bb389137-21fb-11e1-89b4-001ec9578670",
+	"advisories": [
+		{
+			"id": "bb389137-21fb-11e1-89b4-001ec9578670",
+			"title": "asterisk -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Asterisk project reports:</p>\n\t<blockquote cite=\"http://downloads.asterisk.org/pub/security/AST-2011-013.html\">\n\t  <p>It is possible to enumerate SIP usernames when the general and\n\t    user/peer NAT settings differ in whether to respond to the port\n\t    a request is sent from or the port listed for responses in the\n\t    Via header.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://downloads.asterisk.org/pub/security/AST-2011-014.html\">\n\t  <p>When the \"automon\" feature is enabled in features.conf, it is\n\t    possible to send a sequence of SIP requests that cause Asterisk\n\t    to dereference a NULL pointer and crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bb389137-21fb-11e1-89b4-001ec9578670.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-013.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-014.html"
+				}
+			],
+			"published": "2011-12-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4597",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4597"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-4598",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4598"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk18"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.7.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "asterisk16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6.2.21"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,108 @@
+{
+	"id": "da690355-1159-11d9-bc4a-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "da690355-1159-11d9-bc4a-000c41e2cdad",
+			"title": "mozilla -- vCard stack buffer overflow",
+			"description": "\n\t<p>Georgi Guninski discovered a stack buffer overflow which\n\t  may be triggered when viewing email messages with vCard\n\t  attachments.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/da690355-1159-11d9-bc4a-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.mozilla.org/show_bug.cgi?id=257314"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/414240"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.uscert.gov/cas/techalerts/TA04-261A.html"
+				}
+			],
+			"published": "2004-09-28T00:00:00Z",
+			"modified": "2004-09-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0903",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0903"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.7.3_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2_2,2"
+					},
+					{
+						"lt": "1.8.a3_1,2",
+						"ge": "1.8.a,2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mozilla-gtk1"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2_3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-mozilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

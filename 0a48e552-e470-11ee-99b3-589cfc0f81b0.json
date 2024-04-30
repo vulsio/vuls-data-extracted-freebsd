@@ -1,0 +1,50 @@
+{
+	"id": "0a48e552-e470-11ee-99b3-589cfc0f81b0",
+	"advisories": [
+		{
+			"id": "0a48e552-e470-11ee-99b3-589cfc0f81b0",
+			"title": "amavisd-new -- multipart boundary confusion",
+			"description": "\n\t<p>The Amavis project reports:</p>\n\t<blockquote cite=\"https://gitlab.com/amavis/amavis/-/raw/v2.12.3/README_FILES/README.CVE-2024-28054\">\n\t  <p>Emails which consist of multiple parts (`Content-Type: multipart/*`)\n\t  incorporate boundary information stating at which point one part ends and the\n\t  next part begins.</p>\n\t  <p>A boundary is announced by an Content-Type header's `boundary` parameter. To\n\t  our current knowledge, RFC2046 and RFC2045 do not explicitly specify how a\n\t  parser should handle multiple boundary parameters that contain conflicting\n\t  values. As a result, there is no canonical choice which of the values should or\n\t  should not be used for mime part decomposition.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0a48e552-e470-11ee-99b3-589cfc0f81b0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.com/amavis/amavis/-/raw/v2.12.3/README_FILES/README.CVE-2024-28054"
+				}
+			],
+			"published": "2024-03-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-28054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-28054"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "amavisd-new"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.12.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

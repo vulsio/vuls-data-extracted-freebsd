@@ -1,0 +1,68 @@
+{
+	"id": "6d33b3e5-ea03-11e5-85be-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "6d33b3e5-ea03-11e5-85be-14dae9d210b8",
+			"title": "node -- multiple vulnerabilities",
+			"description": "\n\t<p>Jeremiah Senkpiel reports:</p>\n\t<blockquote cite=\"https://github.com/nodejs/node/commit/805f054cc7791c447dbb960fbf3b179ea05294ac\">\n\t  <ul>\n\t  <li><p>Fix a double-free defect in parsing malformed DSA keys\n\t    that may potentially be used for DoS or memory corruption attacks.</p></li>\n\t  <li><p>Fix a defect that can cause memory corruption in\n\t    certain very rare cases</p></li>\n\t  <li><p>Fix a defect that makes the CacheBleed Attack possible</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6d33b3e5-ea03-11e5-85be-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/nodejs/node/commit/805f054cc7791c447dbb960fbf3b179ea05294ac"
+				}
+			],
+			"published": "2016-03-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-0702",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0702"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0705",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0705"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0797",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0797"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "node"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

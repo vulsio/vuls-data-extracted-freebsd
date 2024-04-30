@@ -1,0 +1,50 @@
+{
+	"id": "7b35a77a-0151-11e7-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "7b35a77a-0151-11e7-ae1b-002590263bf5",
+			"title": "ikiwiki -- authentication bypass vulnerability",
+			"description": "\n\t<p>ikiwiki reports:</p>\n\t<blockquote cite=\"https://ikiwiki.info/security/#index48h2\">\n\t  <p>The ikiwiki maintainers discovered further flaws similar to\n\t    CVE-2016-9646 in the passwordauth plugin's use of\n\t    CGI::FormBuilder, with a more serious impact:</p>\n\t  <p>An attacker who can log in to a site with a password can log in as\n\t    a different and potentially more privileged user.</p>\n\t  <p>An attacker who can create a new account can set arbitrary fields\n\t    in the user database for that account</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7b35a77a-0151-11e7-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://ikiwiki.info/security/#index48h2"
+				}
+			],
+			"published": "2017-03-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-0356",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0356"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ikiwiki"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.20170111"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

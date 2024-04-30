@@ -1,0 +1,59 @@
+{
+	"id": "21bc4d71-9ed8-11e5-8f5c-002590263bf5",
+	"advisories": [
+		{
+			"id": "21bc4d71-9ed8-11e5-8f5c-002590263bf5",
+			"title": "redmine -- information leak vulnerability",
+			"description": "\n\t<p>Redmine reports:</p>\n\t<blockquote cite=\"http://www.redmine.org/projects/redmine/wiki/Security_Advisories\">\n\t  <p>Data disclosure in atom feed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/21bc4d71-9ed8-11e5-8f5c-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+				}
+			],
+			"published": "2015-12-10T00:00:00Z",
+			"modified": "2015-12-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8537",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8537"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "redmine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.9"
+					},
+					{
+						"lt": "3.0.7",
+						"ge": "3.0.0"
+					},
+					{
+						"lt": "3.1.3",
+						"ge": "3.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,111 @@
+{
+	"id": "7f829d44-7509-11ea-b47c-589cfc0f81b0",
+	"advisories": [
+		{
+			"id": "7f829d44-7509-11ea-b47c-589cfc0f81b0",
+			"title": "HAproxy -- serious vulnerability affecting the HPACK decoder used for HTTP/2",
+			"description": "\n\t<p>The HAproxy Project reports:</p>\n\t<blockquote cite=\"https://www.mail-archive.com/haproxy@formilux.org/msg36876.html\">\n\t  <p>The main driver for this release is that it contains a fix for a serious\n\t    vulnerability that was responsibly reported last week by Felix Wilhelm\n\t    from Google Project Zero, affecting the HPACK decoder used for HTTP/2.\n\t    CVE-2020-11100 was assigned to this issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7f829d44-7509-11ea-b47c-589cfc0f81b0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mail-archive.com/haproxy@formilux.org/msg36876.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mail-archive.com/haproxy@formilux.org/msg36877.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mail-archive.com/haproxy@formilux.org/msg36878.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mail-archive.com/haproxy@formilux.org/msg36879.html"
+				}
+			],
+			"published": "2020-04-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-11100",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-11100"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "haproxy"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.14",
+						"ge": "2.0.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "haproxy18"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.8.25",
+						"ge": "1.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "haproxy19"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.9.15",
+						"ge": "1.9.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "haproxy21"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.1.4",
+						"ge": "2.1.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

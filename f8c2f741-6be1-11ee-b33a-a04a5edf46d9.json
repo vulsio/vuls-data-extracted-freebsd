@@ -1,0 +1,76 @@
+{
+	"id": "f8c2f741-6be1-11ee-b33a-a04a5edf46d9",
+	"advisories": [
+		{
+			"id": "f8c2f741-6be1-11ee-b33a-a04a5edf46d9",
+			"title": "moonlight-embedded -- multiple vulnerabilities",
+			"description": "\n\t<p>The moonlight-embedded project reports:</p>\n\t<blockquote cite=\"https://github.com/moonlight-stream/moonlight-embedded/releases/tag/v2.6.1\">\n\t  <p>Moonlight Embedded v2.6.1 fixed CVE-2023-42799, CVE-2023-42800,\n\t    and CVE-2023-42801.\n\t  </p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f8c2f741-6be1-11ee-b33a-a04a5edf46d9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42799"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42800"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42801"
+				}
+			],
+			"published": "2023-10-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-42799",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42799"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-42800",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42800"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-42801",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42801"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "moonlight-embedded"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

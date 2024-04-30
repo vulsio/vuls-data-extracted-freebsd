@@ -1,0 +1,51 @@
+{
+	"id": "84065569-7fb4-11e2-9c5a-000d601460a4",
+	"advisories": [
+		{
+			"id": "84065569-7fb4-11e2-9c5a-000d601460a4",
+			"title": "otrs -- XSS vulnerability could lead to remote code execution",
+			"description": "\n\t<p>The OTRS Project reports:</p>\n\t<blockquote cite=\"http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2012-03\">\n\t  <p>This advisory covers vulnerabilities discovered in the OTRS core\n\t  system. This is a variance of the XSS vulnerability, where an attacker\n\t  could send a specially prepared HTML email to OTRS which would cause\n\t  JavaScript code to be executed in your browser while displaying the\n\t  email. In this case this is achieved by using javascript source\n\t  attributes with whitespaces.</p>\n\t  <p>Affected by this vulnerability are all releases of OTRS 2.4.x up to\n\t  and including 2.4.14, 3.0.x up to and including 3.0.16 and 3.1.x up to\n\t  and including 3.1.10.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/84065569-7fb4-11e2-9c5a-000d601460a4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2012-03"
+				}
+			],
+			"published": "2013-02-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4751",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4751"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "otrs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.1.11",
+						"ge": "3.1.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,112 @@
+{
+	"id": "32166082-53fa-41fa-b081-207e7a989a0a",
+	"advisories": [
+		{
+			"id": "32166082-53fa-41fa-b081-207e7a989a0a",
+			"title": "NSS -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2016-61/\">\n\t  <p>Mozilla has updated the version of Network Security\n\t    Services (NSS) library used in Firefox to NSS 3.23. This\n\t    addresses four moderate rated networking security issues\n\t    reported by Mozilla engineers Tyson Smith and Jed Davis.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/32166082-53fa-41fa-b081-207e7a989a0a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2016-61/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://hg.mozilla.org/projects/nss/rev/1ba7cd83c672"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://hg.mozilla.org/projects/nss/rev/8d78a5ae260a"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://hg.mozilla.org/projects/nss/rev/5fde729fdbff"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://hg.mozilla.org/projects/nss/rev/329932eb1700"
+				}
+			],
+			"published": "2016-06-07T00:00:00Z",
+			"modified": "2016-11-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2834",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2834"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nss"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.23"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c6-nss"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.21.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-c7-nss"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.21.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-seamonkey"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.44"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

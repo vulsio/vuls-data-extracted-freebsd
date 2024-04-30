@@ -1,0 +1,62 @@
+{
+	"id": "a60a2e95-acba-4b11-bc32-ffb47364e07d",
+	"advisories": [
+		{
+			"id": "a60a2e95-acba-4b11-bc32-ffb47364e07d",
+			"title": "libgd -- Denial of servica via double free",
+			"description": "\n\t<p>libgd developers report:</p>\n\t<blockquote cite=\"http://www.debian.org/security/2017/dsa-3961\">\n\t  <p>Double free vulnerability in the gdImagePngPtr function in libgd2 before 2.2.5 allows remote attackers to cause a denial of service via vectors related to a palette with no colors.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a60a2e95-acba-4b11-bc32-ffb47364e07d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2017/dsa-3961"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libgd/libgd/issues/381"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libgd/libgd/releases/tag/gd-2.2.5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N2BLXX7KNRE7ZVQAKGTHHWS33CUCXVUP/"
+				}
+			],
+			"published": "2017-09-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-6362",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6362"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libgd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

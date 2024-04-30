@@ -1,0 +1,99 @@
+{
+	"id": "863f95d3-3df1-11dc-b3d3-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "863f95d3-3df1-11dc-b3d3-0016179b2dd5",
+			"title": "mutt -- buffer overflow vulnerability",
+			"description": "\n\t<p>Securityfocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/24192/\">\n\t  <p>Mutt is prone to a local buffer-overflow vulnerability\n\t    because it fails to properly bounds-check user-supplied\n\t    input before using it in a memory copy operation.\n\t    An attacker can exploit this issue to execute arbitrary\n\t    code with the with the privileges of the victim.  Failed\n\t    exploit attempts will result in a denial of service.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/863f95d3-3df1-11dc-b3d3-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.redhat.com/support/errata/RHSA-2007-0386.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/24192"
+				}
+			],
+			"published": "2007-07-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-2683",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2683"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mutt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.2.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mutt-lite"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.2.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-mutt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.2.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-mutt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.2.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

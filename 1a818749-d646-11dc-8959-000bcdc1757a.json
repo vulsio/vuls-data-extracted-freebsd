@@ -1,0 +1,54 @@
+{
+	"id": "1a818749-d646-11dc-8959-000bcdc1757a",
+	"advisories": [
+		{
+			"id": "1a818749-d646-11dc-8959-000bcdc1757a",
+			"title": "zenphoto -- XSS vulnerability",
+			"description": "\n\t<p>zenphoto project reports:</p>\n\t<blockquote cite=\"http://www.zenphoto.org/2008/02/\">\n\t  <p>A new zenphoto version is now available.  This release contains\n\t    security fixes for HTML, XSS, and SQL injection vulnerabilities.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1a818749-d646-11dc-8959-000bcdc1757a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/27084"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/28281"
+				}
+			],
+			"published": "2008-02-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-6666",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6666"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zenphoto"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

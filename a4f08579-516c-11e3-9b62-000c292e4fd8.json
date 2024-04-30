@@ -1,0 +1,113 @@
+{
+	"id": "a4f08579-516c-11e3-9b62-000c292e4fd8",
+	"advisories": [
+		{
+			"id": "a4f08579-516c-11e3-9b62-000c292e4fd8",
+			"title": "samba -- ACLs are not checked on opening an alternate data stream on a file or directory",
+			"description": "\n\t<p>The Samba project reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2013-4475\">\n\t  <p>Samba versions 3.2.0 and above (all versions of 3.2.x, 3.3.x,\n\t    3.4.x, 3.5.x, 3.6.x, 4.0.x and 4.1.x) do not check the underlying\n\t    file or directory ACL when opening an alternate data stream.</p>\n\t    <p>According to the SMB1 and SMB2+ protocols the ACL on an underlying\n\t    file or directory should control what access is allowed to alternate\n\t    data streams that are associated with the file or directory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a4f08579-516c-11e3-9b62-000c292e4fd8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.samba.org/samba/security/CVE-2013-4475"
+				}
+			],
+			"published": "2013-11-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4475",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4475"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba34"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba35"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"gt": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba36"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.6.20",
+						"gt": "3.6.*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba4"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.11",
+						"gt": "4.0.*"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba41"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.1.1",
+						"gt": "4.1.*"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,119 @@
+{
+	"id": "fe93803c-883f-11e8-9f0c-001b216d295b",
+	"advisories": [
+		{
+			"id": "fe93803c-883f-11e8-9f0c-001b216d295b",
+			"title": "Several Security Defects in the Bouncy Castle Crypto APIs",
+			"description": "\n\t<p>The Legion of the Bouncy Castle reports:</p>\n\t<blockquote cite=\"https://www.bouncycastle.org/latest_releases.html\">\n\t  <p>Release 1.60 is now available for download.</p>\n\t  <p>CVE-2018-1000180: issue around primality tests for RSA key pair\n\t     generation if done using only the low-level API.</p>\n\t  <p>CVE-2018-1000613: lack of class checking in deserialization\n\t     of XMSS/XMSS^MT private keys with BDS state information.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fe93803c-883f-11e8-9f0c-001b216d295b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.bouncycastle.org/latest_releases.html"
+				}
+			],
+			"published": "2018-07-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1000180",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1000180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-1000613",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1000613"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bouncycastle"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.60"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bouncycastle15"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.60"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "puppetserver"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "puppetserver5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.8"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "puppetserver6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

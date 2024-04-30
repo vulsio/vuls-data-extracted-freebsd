@@ -1,0 +1,39 @@
+{
+	"id": "f1f163ce-9e09-11da-b410-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "f1f163ce-9e09-11da-b410-000e0c2e438a",
+			"title": "phpicalendar -- file disclosure vulnerability",
+			"description": "\n\t<p>The phpicalendar team reports that there is an\n\t  unspecified vulnerability within phpicalendar.  This\n\t  seems to be a file disclosure vulnerability caused by\n\t  improper checking of the template parsing function.\n\t  This would allow an attacker to disclose any file\n\t  readable by the user under which the webserver runs.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f1f163ce-9e09-11da-b410-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://phpicalendar.net/forums/viewtopic.php?t=396"
+				}
+			],
+			"published": "2006-02-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpicalendar"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.21"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,58 @@
+{
+	"id": "e1b5318c-aa4d-11e5-8f5c-002590263bf5",
+	"advisories": [
+		{
+			"id": "e1b5318c-aa4d-11e5-8f5c-002590263bf5",
+			"title": "mantis -- information disclosure vulnerability",
+			"description": "\n\t<p>Mantis reports:</p>\n\t<blockquote cite=\"https://mantisbt.org/bugs/view.php?id=19873\">\n\t  <p>CVE-2015-5059: documentation in private projects can be seen by\n\t    every user</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e1b5318c-aa4d-11e5-8f5c-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mantisbt.org/bugs/view.php?id=19873"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2015/06/25/3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=201106"
+				}
+			],
+			"published": "2015-12-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5059",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5059"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mantis"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.19_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

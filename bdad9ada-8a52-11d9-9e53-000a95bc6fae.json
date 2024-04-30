@@ -1,0 +1,62 @@
+{
+	"id": "bdad9ada-8a52-11d9-9e53-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "bdad9ada-8a52-11d9-9e53-000a95bc6fae",
+			"title": "lighttpd -- script source disclosure vulnerability",
+			"description": "\n\t<p>The lighttpd website reports:</p>\n\t<blockquote cite=\"http://article.gmane.org/gmane.comp.web.lighttpd/1171\">\n\t  <p>In lighttpd 1.3.7 and below it is possible to fetch the source\n\t    files which should be handled by CGI or FastCGI applications.</p>\n\t</blockquote>\n\t<p>The vulnerability is in the handling of urlencoded trailing\n\t  NUL bytes.  Installations that do not use CGI or FastCGI are\n\t  not affected.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bdad9ada-8a52-11d9-9e53-000a95bc6fae.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.lighttpd.net/news/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/19350"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.web.lighttpd/1171"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12567"
+				}
+			],
+			"published": "2005-03-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0453",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0453"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "lighttpd"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

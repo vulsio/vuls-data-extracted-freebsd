@@ -1,0 +1,51 @@
+{
+	"id": "61480a9a-22b2-11d9-814e-0001020eed82",
+	"advisories": [
+		{
+			"id": "61480a9a-22b2-11d9-814e-0001020eed82",
+			"title": "cabextract -- insecure directory handling",
+			"description": "\n\t<p>cabextract has insufficient checks for file names that\n\t  contain <q>../</q>.  This can cause files to be extracted to\n\t  the parent directory.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/61480a9a-22b2-11d9-814e-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kyz.uklinux.net/cabextract.php#changes"
+				}
+			],
+			"published": "2004-10-20T00:00:00Z",
+			"modified": "2004-10-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0916",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0916"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "cabextract"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,64 @@
+{
+	"id": "e69af246-0ae2-11e5-90e4-d050996490d0",
+	"advisories": [
+		{
+			"id": "e69af246-0ae2-11e5-90e4-d050996490d0",
+			"title": "pcre -- multiple vulnerabilities",
+			"description": "\n\t<p>Venustech ADLAB reports:</p>\n\t<blockquote cite=\"https://bugs.exim.org/show_bug.cgi?id=1636\">\n\t  <p>PCRE library is prone to a vulnerability which leads\n\t    to Heap Overflow. During the compilation of a malformed\n\t    regular expression, more data is written on the malloced\n\t    block than the expected size output by compile_regex.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://bugs.exim.org/show_bug.cgi?id=1638\">\n\t  <p>PCRE library is prone to a vulnerability which leads to\n\t    Stack Overflow. Without enough bound checking inside\n\t    match(), the stack memory could be overflowed via a\n\t    crafted regular expression.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e69af246-0ae2-11e5-90e4-d050996490d0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.exim.org/show_bug.cgi?id=1636"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.exim.org/show_bug.cgi?id=1638"
+				}
+			],
+			"published": "2015-06-04T00:00:00Z",
+			"modified": "2015-06-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3210",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3210"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3217",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3217"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "8.37_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

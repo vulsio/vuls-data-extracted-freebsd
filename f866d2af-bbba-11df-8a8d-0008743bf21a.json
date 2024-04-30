@@ -1,0 +1,67 @@
+{
+	"id": "f866d2af-bbba-11df-8a8d-0008743bf21a",
+	"advisories": [
+		{
+			"id": "f866d2af-bbba-11df-8a8d-0008743bf21a",
+			"title": "vim6 -- heap-based overflow while parsing shell metacharacters",
+			"description": "\n\t<p>Description for CVE-2008-3432 says:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3432\">\n\t  <p>Heap-based buffer overflow in the mch_expand_wildcards\n\t    function in os_unix.c in Vim 6.2 and 6.3 allows user-assisted\n\t    attackers to execute arbitrary code via shell metacharacters\n\t    in filenames, as demonstrated by the netrw.v3 test case.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f866d2af-bbba-11df-8a8d-0008743bf21a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2008/07/15/4"
+				}
+			],
+			"published": "2010-09-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3432",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3432"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.62",
+						"ge": "6.2.429"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "vim6+ruby"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.3.62",
+						"ge": "6.2.429"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

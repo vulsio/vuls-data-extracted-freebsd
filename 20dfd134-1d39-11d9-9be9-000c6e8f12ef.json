@@ -1,0 +1,78 @@
+{
+	"id": "20dfd134-1d39-11d9-9be9-000c6e8f12ef",
+	"advisories": [
+		{
+			"id": "20dfd134-1d39-11d9-9be9-000c6e8f12ef",
+			"title": "freeradius -- denial-of-service vulnerability",
+			"description": "\n\t<p>A remote attacker may be able to crash the freeRADIUS Server\n\t  due to three independant bugs in the function which does\n\t  improper checking values while processing RADIUS\n\t  attributes.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/20dfd134-1d39-11d9-9be9-000c6e8f12ef.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securitytracker.com/alerts/2004/Sep/1011364.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11222"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/541574"
+				}
+			],
+			"published": "2004-10-13T00:00:00Z",
+			"modified": "2004-10-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0938",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0938"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0960",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0960"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0961",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0961"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freeradius"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.0.1",
+						"ge": "0.8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

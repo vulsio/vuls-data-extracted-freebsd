@@ -1,0 +1,108 @@
+{
+	"id": "d2a892b9-2605-11e4-9da0-00a0986f28c4",
+	"advisories": [
+		{
+			"id": "d2a892b9-2605-11e4-9da0-00a0986f28c4",
+			"title": "PHP multiple vulnerabilities",
+			"description": "\n\t<p>The PHP Team reports:</p>\n\t<blockquote cite=\"http://php.net/ChangeLog-5.php#5.3.29\">\n\t  <p>insecure temporary file use in the configure script</p>\n\t  <p>unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion\n\t    </p>\n\t  <p>Heap buffer over-read in DateInterval</p>\n\t  <p>fileinfo: cdf_read_short_sector insufficient boundary check</p>\n\t  <p>fileinfo: CDF infinite loop in nelements DoS</p>\n\t  <p>fileinfo: fileinfo: numerous file_printf calls resulting in\n\t    performance degradation)</p>\n\t  <p>Fix potential segfault in dns_check_record()</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d2a892b9-2605-11e4-9da0-00a0986f28c4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.3.29"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.sektioneins.de/en/blog/14-07-04-phpinfo-infoleak.html"
+				}
+			],
+			"published": "2014-08-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-6712",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6712"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0207",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0207"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0237",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0237"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0238",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0238"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-3515",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3515"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-3981",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3981"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-4049",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4049"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php53"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.29"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

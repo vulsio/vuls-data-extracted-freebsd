@@ -1,0 +1,88 @@
+{
+	"id": "a2cb7c31-9c79-11ea-a9c2-d05099c0ae8c",
+	"advisories": [
+		{
+			"id": "a2cb7c31-9c79-11ea-a9c2-d05099c0ae8c",
+			"title": "unbound -- mutliple vulnerabilities",
+			"description": "\n\t<p>NLNetLabs reports:</p>\n\t<blockquote cite=\"https://lists.nlnetlabs.nl/pipermail/unbound-users/2020-May/006833.html\">\n\t  <p>This release fixes CVE-2020-12662 and CVE-2020-12663.</p>\n\t  <p>Bug Fixes:</p>\n\t  <ul>\n\t    <li>CVE-2020-12662 Unbound can be tricked into\n\t      amplifying an incoming query into a large\n\t      number of queries directed to a target.</li>\n\t    <li>CVE-2020-12663 Malformed answers from\n\t      upstream name servers can be used to make\n\t      Unbound unresponsive.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a2cb7c31-9c79-11ea-a9c2-d05099c0ae8c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.nlnetlabs.nl/pipermail/unbound-users/2020-May/006833.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:19.unbound.asc"
+				}
+			],
+			"published": "2020-05-22T00:00:00Z",
+			"modified": "2020-07-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-12662",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-12662"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-12663",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-12663"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.10.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "12.1_7",
+						"ge": "12.1"
+					},
+					{
+						"lt": "11.4_1",
+						"ge": "11.4"
+					},
+					{
+						"lt": "11.3_11",
+						"ge": "11.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

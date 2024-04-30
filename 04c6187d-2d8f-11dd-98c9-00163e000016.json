@@ -1,0 +1,54 @@
+{
+	"id": "04c6187d-2d8f-11dd-98c9-00163e000016",
+	"advisories": [
+		{
+			"id": "04c6187d-2d8f-11dd-98c9-00163e000016",
+			"title": "linux-flashplugin -- unspecified remote code execution vulnerability",
+			"description": "\n\t<p>Adobe Product Security Incident Response Team reports:</p>\n\t<blockquote cite=\"http://blogs.adobe.com/psirt/\">\n\t  <p>An exploit appears to be taking advantage of a known\n\t    vulnerability, reported by Mark Dowd of the ISS X-Force and wushi\n\t    of team509, that was resolved in Flash Player 9.0.124.0\n\t    (CVE-2007-0071). This exploit does NOT appear to include a new,\n\t    unpatched vulnerability as has been reported elsewhere - customers\n\t    with Flash Player 9.0.124.0 should not be vulnerable to this\n\t    exploit.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/04c6187d-2d8f-11dd-98c9-00163e000016.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blogs.adobe.com/psirt/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29386"
+				}
+			],
+			"published": "2008-05-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-0071",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0071"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-flashplugin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.0r124"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,113 @@
+{
+	"id": "ecb7fdec-0b82-11ea-874d-0c9d925bbbc0",
+	"advisories": [
+		{
+			"id": "ecb7fdec-0b82-11ea-874d-0c9d925bbbc0",
+			"title": "drm graphics drivers -- Local privilege escalation and denial of service",
+			"description": "\n\t<p>Intel reports:</p>\n\t<blockquote cite=\"https://blogs.intel.com/technology/2019/11/ipas-november-2019-intel-platform-update-ipu\">\n\t  <p>As part of IPU 2019.2, INTEL-SA-00242 advises that insufficient\n\t    access control may allow an authenticated user to potentially\n\t    enable escalation of privilege via local access.</p>\n\t  <p>INTEL-SA-00260 advises that insufficient access control may\n\t    allow an authenticated user to potentially enable denial of\n\t    service via local access.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ecb7fdec-0b82-11ea-874d-0c9d925bbbc0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blogs.intel.com/technology/2019/11/ipas-november-2019-intel-platform-update-ipu"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00242.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00260.html"
+				}
+			],
+			"published": "2019-11-20T00:00:00Z",
+			"modified": "2019-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-0154",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0154"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-11112",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11112"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-current-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.16.g20191120"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-devel-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.g20191120"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-fbsd12.0-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.16.g20191120"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "drm-fbsd11.2-kmod"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.11.g20191204"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

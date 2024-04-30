@@ -1,0 +1,50 @@
+{
+	"id": "0ff80f41-aefe-11ec-b4b6-d05099c0c059",
+	"advisories": [
+		{
+			"id": "0ff80f41-aefe-11ec-b4b6-d05099c0c059",
+			"title": "gitea -- Improper/incorrect authorization",
+			"description": "\n\t<p>Youssef Rebahi-Gilbert reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0905\">\n\t  <p>\n\t    When Gitea is built and configured for PAM authentication\n\t    it skips checking authorization completely. Therefore expired\n\t    accounts and accounts with expired passwords can still login.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0ff80f41-aefe-11ec-b4b6-d05099c0c059.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://huntr.dev/bounties/8d221f92-b2b1-4878-bc31-66ff272e5ceb"
+				}
+			],
+			"published": "2022-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-0905",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-0905"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.16.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

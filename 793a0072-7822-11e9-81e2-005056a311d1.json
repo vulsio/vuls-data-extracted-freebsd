@@ -1,0 +1,123 @@
+{
+	"id": "793a0072-7822-11e9-81e2-005056a311d1",
+	"advisories": [
+		{
+			"id": "793a0072-7822-11e9-81e2-005056a311d1",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>The samba project reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2018-16860.html\">\n\t  <p>The checksum validation in the S4U2Self handler in the embedded Heimdal KDC\n\t  did not first confirm that the checksum was keyed, allowing replacement of the\n\t  requested target (client) principal</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2019-3880.html\">\n\t  <p>Authenticated users with write permission can trigger a symlink traversal to write\n\t     or detect files outside the Samba share.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/793a0072-7822-11e9-81e2-005056a311d1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2018-16860.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2019-3880.html"
+				}
+			],
+			"published": "2019-05-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-16860",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-16860"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-3880",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3880"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba46"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.6.16"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba47"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "4.7.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba48"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.8.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba49"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.9.8"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba410"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.10.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

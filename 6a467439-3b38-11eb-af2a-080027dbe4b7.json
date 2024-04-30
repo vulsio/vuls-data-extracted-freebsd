@@ -1,0 +1,60 @@
+{
+	"id": "6a467439-3b38-11eb-af2a-080027dbe4b7",
+	"advisories": [
+		{
+			"id": "6a467439-3b38-11eb-af2a-080027dbe4b7",
+			"title": "glpi -- Any CalDAV calendars is read-only for every authenticated user",
+			"description": "\n\t<p>MITRE Corporation reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26212\">\n\t  <p>In GLPI before version 9.5.3, any authenticated user has read-only permissions to the planning of every other user, even admin ones. This issue is fixed in version 9.5.3. As a workaround, one can remove the caldav.php file to block access to CalDAV server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6a467439-3b38-11eb-af2a-080027dbe4b7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-qmw3-87hr-5wgx"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/commit/527280358ec78988ac57e9809d2eb21fcd74caf7"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/releases/tag/9.5.3"
+				}
+			],
+			"published": "2020-10-01T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-26212",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-26212"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.5.3,1",
+						"ge": "9.5.0,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

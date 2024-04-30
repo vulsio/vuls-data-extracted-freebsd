@@ -1,0 +1,111 @@
+{
+	"id": "c0f122e2-3897-11e3-a084-3c970e169bc2",
+	"advisories": [
+		{
+			"id": "c0f122e2-3897-11e3-a084-3c970e169bc2",
+			"title": "pycrypto -- PRNG reseed race condition",
+			"description": "\n\t<p>Dwayne Litzenberger reports:</p>\n\t<blockquote cite=\"http://lists.dlitz.net/pipermail/pycrypto/2013q4/000702.html\">\n\t  <p>In PyCrypto before v2.6.1, the Crypto.Random pseudo-random\n\t    number generator (PRNG) exhibits a race condition that may cause\n\t    it to generate the same 'random' output in multiple processes that\n\t    are forked from each other.  Depending on the application, this\n\t    could reveal sensitive information or cryptographic keys to remote\n\t    attackers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c0f122e2-3897-11e3-a084-3c970e169bc2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.dlitz.net/pipermail/pycrypto/2013q4/000702.html"
+				}
+			],
+			"published": "2013-10-19T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1445",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1445"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py26-pycrypto"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py27-pycrypto"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py31-pycrypto"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py32-pycrypto"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py33-pycrypto"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.6.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

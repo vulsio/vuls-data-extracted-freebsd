@@ -1,0 +1,66 @@
+{
+	"id": "ee26f513-826e-11ec-8be6-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "ee26f513-826e-11ec-8be6-d4c9ef517024",
+			"title": "Rust -- Race condition enabling symlink following",
+			"description": "\n\t<blockquote cite=\"https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html\">\n\t  <p>The Rust Security Response WG was notified that the\n\t    std::fs::remove_dir_all standard library function is vulnerable to a\n\t    race condition enabling symlink following (CWE-363). An attacker could\n\t    use this security issue to trick a privileged program into deleting\n\t    files and directories the attacker couldn't otherwise access or\n\t    delete.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ee26f513-826e-11ec-8be6-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html"
+				}
+			],
+			"published": "2022-01-31T00:00:00Z",
+			"modified": "2022-02-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-21658",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-21658"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rust"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.58.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-nightly"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.60.0.20220202"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

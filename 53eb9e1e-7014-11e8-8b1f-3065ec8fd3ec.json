@@ -1,0 +1,50 @@
+{
+	"id": "53eb9e1e-7014-11e8-8b1f-3065ec8fd3ec",
+	"advisories": [
+		{
+			"id": "53eb9e1e-7014-11e8-8b1f-3065ec8fd3ec",
+			"title": "password-store -- GPG parsing vulnerabilities",
+			"description": "\n\t<p>Jason A. Donenfeld reports:</p>\n\t<blockquote cite=\"https://lists.zx2c4.com/pipermail/password-store/2018-June/003308.html\">\n\t  <p>Markus Brinkmann discovered that [the] parsing of gpg command line\n\t    output with regexes isn't anchored to the beginning of the line,\n\t    which means an attacker can generate a malicious key that simply has\n\t    the verification string as part of its username.</p>\n\t  <p>This has a number of nasty consequences:</p>\n\t  <ul>\n\t    <li>an attacker who manages to write into your ~/.password-store\n\t      and also inject a malicious key into your keyring can replace\n\t      your .gpg-id key and have your passwords encrypted under\n\t      additional keys;</li>\n\t    <li>if you have extensions enabled (disabled by default), an\n\t      attacker who manages to write into your ~/.password-store and\n\t      also inject a malicious key into your keyring can replace your\n\t      extensions and hence execute code.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/53eb9e1e-7014-11e8-8b1f-3065ec8fd3ec.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.zx2c4.com/pipermail/password-store/2018-June/003308.html"
+				}
+			],
+			"published": "2018-06-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-12356",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12356"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "password-store"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

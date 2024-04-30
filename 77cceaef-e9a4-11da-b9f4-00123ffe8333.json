@@ -1,0 +1,63 @@
+{
+	"id": "77cceaef-e9a4-11da-b9f4-00123ffe8333",
+	"advisories": [
+		{
+			"id": "77cceaef-e9a4-11da-b9f4-00123ffe8333",
+			"title": "coppermine -- File Inclusion Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/18941/\">\n\t  <p>Coppermine Photo Gallery have a vulnerability, which can be\n\t    exploited by malicious people and by malicious users to compromise\n\t    a vulnerable system.</p>\n\t  <p>1) Input passed to the \"lang\" parameter in include/init.inc.php\n\t    isn't properly verified, before it is used to include files. This\n\t    can be exploited to include arbitrary files from local resources.\n\t    The vulnerability can be further exploited by users who are allowed\n\t    to upload image files to execute arbitrary PHP code.</p>\n\t  <p>2) Input passed to the \"f\" parameter in docs/showdoc.php isn't\n\t    properly verified, before it is used to include files. This can be\n\t    exploited to include arbitrary files from local resources on the\n\t    Windows platform, and remote files from Windows shared folders.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/77cceaef-e9a4-11da-b9f4-00123ffe8333.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://retrogod.altervista.org/cpg_143_adv.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/18941/"
+				}
+			],
+			"published": "2006-05-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0872",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0872"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0873",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0873"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "coppermine"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.4.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,81 @@
+{
+	"id": "1839f78c-9f2b-11e3-980f-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "1839f78c-9f2b-11e3-980f-20cf30e32f6d",
+			"title": "subversion -- mod_dav_svn vulnerability",
+			"description": "\n\t<p>Subversion Project reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/\">\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module will crash when it\n\t    receives an OPTIONS request against the server root and Subversion is\n\t    configured to handle the server root and SVNListParentPath is on.\n\t    This can lead to a DoS.  There are no known instances of this\n\t    problem being exploited in the wild, but the details of how to exploit\n\t    it have been disclosed on the Subversion development mailing list.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1839f78c-9f2b-11e3-980f-20cf30e32f6d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2014-0032"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://subversion.apache.org/security/CVE-2014-0032-advisory.txt"
+				}
+			],
+			"published": "2014-02-26T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.16",
+						"ge": "1.3.0"
+					},
+					{
+						"lt": "1.8.8",
+						"ge": "1.8.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion16"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.16",
+						"ge": "1.3.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "subversion17"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.16",
+						"ge": "1.3.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

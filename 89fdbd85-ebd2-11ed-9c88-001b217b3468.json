@@ -1,0 +1,59 @@
+{
+	"id": "89fdbd85-ebd2-11ed-9c88-001b217b3468",
+	"advisories": [
+		{
+			"id": "89fdbd85-ebd2-11ed-9c88-001b217b3468",
+			"title": "Gitlab -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2023/05/05/critical-security-release-gitlab-15-11-2-released/\">\n\t  <p>Malicious Runner Attachment via GraphQL</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/89fdbd85-ebd2-11ed-9c88-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2023/05/05/critical-security-release-gitlab-15-11-2-released/"
+				}
+			],
+			"published": "2023-05-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-2478",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-2478"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab-ce"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "15.11.2",
+						"ge": "15.11.0"
+					},
+					{
+						"lt": "15.10.6",
+						"ge": "15.10.0"
+					},
+					{
+						"lt": "15.9.7",
+						"ge": "9.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,54 @@
+{
+	"id": "8c33b299-163b-11d9-ac1b-000d614f7fad",
+	"advisories": [
+		{
+			"id": "8c33b299-163b-11d9-ac1b-000d614f7fad",
+			"title": "getmail -- symlink vulnerability during maildir delivery",
+			"description": "\n\t<p>David Watson reports a symlink vulnerability in getmail.\n\t  If run as root (not the recommended mode of operation), a\n\t  local user may be able to cause getmail to write files in\n\t  arbitrary directories via a symlink attack on subdirectories\n\t  of the maildir.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8c33b299-163b-11d9-ac1b-000d614f7fad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109571883130372"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11224"
+				}
+			],
+			"published": "2004-10-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0881",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0881"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "getmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,49 @@
+{
+	"id": "97f09f2f-ca3f-11df-aade-0050568f000c",
+	"advisories": [
+		{
+			"id": "97f09f2f-ca3f-11df-aade-0050568f000c",
+			"title": "FreeBSD -- ZFS ZIL playback with insecure permissions",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When replaying setattr transaction, the replay code would set the\n\t  attributes with certain insecure defaults, when the logged\n\t  transaction did not touch these attributes.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/97f09f2f-ca3f-11df-aade-0050568f000c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:03.zfs.asc"
+				}
+			],
+			"published": "2010-10-24T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.1_10",
+						"ge": "7.1"
+					},
+					{
+						"lt": "7.2_6",
+						"ge": "7.2"
+					},
+					{
+						"lt": "8.0_2",
+						"ge": "8.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

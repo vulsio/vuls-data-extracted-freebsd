@@ -1,0 +1,50 @@
+{
+	"id": "ed3bf433-5d92-11e7-aa14-e8e0b747a45a",
+	"advisories": [
+		{
+			"id": "ed3bf433-5d92-11e7-aa14-e8e0b747a45a",
+			"title": "libgcrypt -- side-channel attack on RSA secret keys",
+			"description": "\n\t<p>GnuPG reports:</p>\n\t<blockquote cite=\"https://lists.gnupg.org/pipermail/gnupg-announce/2017q2/000408.html\">\n\t  <p>Mitigate a flush+reload side-channel attack on RSA secret keys dubbed \"Sliding right into disaster\".</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ed3bf433-5d92-11e7-aa14-e8e0b747a45a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.gnupg.org/pipermail/gnupg-announce/2017q2/000408.html"
+				}
+			],
+			"published": "2017-06-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-7526",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7526"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libgcrypt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.7.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,44 @@
+{
+	"id": "229577a8-0936-11db-bf72-00046151137e",
+	"advisories": [
+		{
+			"id": "229577a8-0936-11db-bf72-00046151137e",
+			"title": "phpmyadmin -- cross site scripting vulnerability",
+			"description": "\n\t<p>phpmyadmin Site reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2006-4\">\n\t  <p>It was possible to craft a request that contains XSS by attacking\n\t    the \"table\" parameter.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/229577a8-0936-11db-bf72-00046151137e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2006-4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://securitynews.ir/advisories/phpmyadmin281.txt"
+				}
+			],
+			"published": "2006-07-03T00:00:00Z",
+			"modified": "2007-10-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

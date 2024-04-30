@@ -1,0 +1,96 @@
+{
+	"id": "16846d1e-f1de-11e1-8bd8-0022156e8794",
+	"advisories": [
+		{
+			"id": "16846d1e-f1de-11e1-8bd8-0022156e8794",
+			"title": "Java 1.7 -- security manager bypass",
+			"description": "\n\t<p>US-CERT reports:</p>\n\t<blockquote cite=\"http://www.kb.cert.org/vuls/id/636312\">\n\t  <p>Oracle Java Runtime Environment (JRE) 1.7 contains a\n\t  vulnerability that may allow an applet to call\n\t  setSecurityManager in a way that allows setting of arbitrary\n\t  permissions.</p>\n\t  <p>By leveraging the public, privileged getField() function,\n\t  an untrusted Java applet can escalate its privileges by\n\t  calling the setSecurityManager() function to allow full\n\t  privileges, without requiring code signing.</p>\n\t  <p>This vulnerability is being actively exploited in the\n\t  wild, and exploit code is publicly available.</p>\n\t</blockquote>\n\t<p>This exploit does not only affect Java applets, but every\n\tpiece of software that relies on the Java Security Manager for\n\tsandboxing executable code is affected: malicious code can\n\ttotally disable Security Manager.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/16846d1e-f1de-11e1-8bd8-0022156e8794.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.deependresearch.org/2012/08/java-7-vulnerability-analysis.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail.openjdk.java.net/pipermail/distro-pkg-dev/2012-August/020065.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.oracle.com/technetwork/topics/security/alert-cve-2012-4681-1835715.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/636312"
+				}
+			],
+			"published": "2012-08-30T00:00:00Z",
+			"modified": "2012-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4681",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4681"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "openjdk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.6.24_1",
+						"ge": "7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-sun-jdk"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.7",
+						"ge": "7.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-sun-jre"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.7",
+						"ge": "7.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

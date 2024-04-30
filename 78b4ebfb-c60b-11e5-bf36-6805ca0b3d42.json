@@ -1,0 +1,51 @@
+{
+	"id": "78b4ebfb-c60b-11e5-bf36-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "78b4ebfb-c60b-11e5-bf36-6805ca0b3d42",
+			"title": "phpmyadmin -- Full path disclosure vulnerability in SQL parser",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"https://www.phpmyadmin.net/security/PMASA-2016-8/\">\n\t  <p>By calling a particular script that is part of phpMyAdmin\n\t    in an unexpected way, it is possible to trigger phpMyAdmin\n\t    to display a PHP error message which contains the full path\n\t    of the directory where phpMyAdmin is installed.</p>\n\t  <p>We consider this vulnerability to be non-critical.</p>\n\t  <p>This path disclosure is possible on servers where the\n\t    recommended setting of the PHP configuration directive\n\t    display_errors is set to on, which is against the\n\t    recommendations given in the PHP manual for a production\n\t    server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/78b4ebfb-c60b-11e5-bf36-6805ca0b3d42.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.phpmyadmin.net/security/PMASA-2016-8/"
+				}
+			],
+			"published": "2016-01-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2044",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2044"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpmyadmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.5.4",
+						"ge": "4.5.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

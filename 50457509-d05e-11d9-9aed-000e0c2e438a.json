@@ -1,0 +1,64 @@
+{
+	"id": "50457509-d05e-11d9-9aed-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "50457509-d05e-11d9-9aed-000e0c2e438a",
+			"title": "phpSysInfo -- cross site scripting vulnerability",
+			"description": "\n\t<p>A Securityreason.com advisory reports that various cross\n\t  site scripting vulnerabilities have been found in phpSysInfo.\n\t  Input is not properly sanitised before it is returned to the\n\t  user.  A malicious person could exploit this to execute\n\t  arbitrary HTML and script code in a users browser session.\n\t  Also it is possible to view the full path of certain scripts\n\t  by accessing them directly.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/50457509-d05e-11d9-9aed-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111161017209422"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12887"
+				}
+			],
+			"published": "2005-07-09T00:00:00Z",
+			"modified": "2005-12-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0869",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0869"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0870",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0870"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpSysInfo"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

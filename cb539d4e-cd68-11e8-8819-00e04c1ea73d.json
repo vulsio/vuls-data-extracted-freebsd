@@ -1,0 +1,43 @@
+{
+	"id": "cb539d4e-cd68-11e8-8819-00e04c1ea73d",
+	"advisories": [
+		{
+			"id": "cb539d4e-cd68-11e8-8819-00e04c1ea73d",
+			"title": "gitea -- multiple vulnerabilities",
+			"description": "\n\t<p>Gitea project reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/issues/4357\">\n\t  <p>CSRF Vulnerability on API.</p>\n\t  <p>Enforce token on api routes.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb539d4e-cd68-11e8-8819-00e04c1ea73d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/issues/4357"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "ttps://github.com/go-gitea/gitea/pull/4840"
+				}
+			],
+			"published": "2018-10-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitea"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

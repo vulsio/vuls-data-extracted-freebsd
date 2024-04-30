@@ -1,0 +1,58 @@
+{
+	"id": "77e0b631-e6cf-11e5-85be-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "77e0b631-e6cf-11e5-85be-14dae9d210b8",
+			"title": "pidgin-otr -- use after free",
+			"description": "\n\t<p>Hanno Bock reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2016/q1/572\">\n\t  <p>The pidgin-otr plugin version 4.0.2 fixes a heap use after\n\t    free error.\n\t    The bug is triggered when a user tries to authenticate a buddy and\n\t    happens in the function create_smp_dialog.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/77e0b631-e6cf-11e5-85be-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2016/q1/572"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.otr.im/issues/88"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.otr.im/issues/128"
+				}
+			],
+			"published": "2016-03-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8833",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8833"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pidgin-otr"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.0.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

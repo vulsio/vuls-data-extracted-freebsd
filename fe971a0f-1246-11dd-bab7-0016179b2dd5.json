@@ -1,0 +1,55 @@
+{
+	"id": "fe971a0f-1246-11dd-bab7-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "fe971a0f-1246-11dd-bab7-0016179b2dd5",
+			"title": "phpmyadmin -- Shared Host Information Disclosure",
+			"description": "\n\t<p>A phpMyAdmin security announcement report:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-3\">\n\t  <p>It is possible to read the contents of any file that the web\n\t    server's user can access. The exact mechanism to achieve this won't\n\t    be disclosed.  If a user can upload on the same host where\n\t    phpMyAdmin is running a PHP script that can read files with the\n\t    rights of the web server's user, the current advisory does not\n\t    describe an additional threat.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fe971a0f-1246-11dd-bab7-0016179b2dd5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/29944/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-3"
+				}
+			],
+			"published": "2008-04-24T00:00:00Z",
+			"modified": "2008-09-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1924",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1924"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.11.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

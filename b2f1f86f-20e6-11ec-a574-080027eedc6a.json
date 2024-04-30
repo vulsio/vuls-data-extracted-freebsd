@@ -1,0 +1,50 @@
+{
+	"id": "b2f1f86f-20e6-11ec-a574-080027eedc6a",
+	"advisories": [
+		{
+			"id": "b2f1f86f-20e6-11ec-a574-080027eedc6a",
+			"title": "nexus2-oss -- NXRM2 Directory Traversal vulnerability",
+			"description": "\n\t<p>Sonatype reports:</p>\n\t<blockquote cite=\"https://help.sonatype.com/repomanager2/release-notes/2020-release-notes#id-2020ReleaseNotes-RepositoryManager2.14.20\">\n\t\t<ul><li>CVE-2020-15012: NXRM2 Directory Traversal vulnerability</li></ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b2f1f86f-20e6-11ec-a574-080027eedc6a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://help.sonatype.com/repomanager2/release-notes/2020-release-notes#id-2020ReleaseNotes-RepositoryManage"
+				}
+			],
+			"published": "2021-09-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15012",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-15012"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nexus2-oss"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.14.19"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

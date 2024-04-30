@@ -1,0 +1,152 @@
+{
+	"id": "298829e2-ccce-11e7-92e4-000c29649f92",
+	"advisories": [
+		{
+			"id": "298829e2-ccce-11e7-92e4-000c29649f92",
+			"title": "mediawiki -- multiple vulnerabilities",
+			"description": "\n\t<p>mediawiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/pipermail/mediawiki-announce/2017-November/000216.html\">\n\t  <p>security fixes:</p>\n\t    <p>T128209: Reflected File Download from api.php. Reported by Abdullah Hussam.</p>\n\t    <p>T165846: BotPasswords doesn't throttle login attempts.</p>\n\t    <p>T134100: On private wikis, login form shouldn't distinguish between login failure due to bad username and bad password.</p>\n\t    <p>T178451: XSS when $wgShowExceptionDetails = false and browser sends non-standard url escaping.</p>\n\t    <p>T176247: It's possible to mangle HTML via raw message parameter expansion.</p>\n\t    <p>T125163: id attribute on headlines allow raw.</p>\n\t    <p>T124404: language converter can be tricked into replacing text inside tags by adding a lot of junk after the rule definition.</p>\n\t    <p>T119158: Language converter: unsafe attribute injection via glossary rules.</p>\n\t    <p>T180488: api.log contains passwords in plaintext wasn't correctly fixed.</p>\n\t    <p>T180231: composer.json has require-dev versions of PHPUnit with known security issues. Reported by Tom Hutchison.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/298829e2-ccce-11e7-92e4-000c29649f92.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.wikimedia.org/pipermail/mediawiki-announce/2017-November/000216.html"
+				}
+			],
+			"published": "2017-11-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-8808",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8808"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8809",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8809"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8810",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8810"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8811",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8811"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8812",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8812"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8814",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8814"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8815",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-8815"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-0361",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0361"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9841",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9841"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki127"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.27.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki128"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.28.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mediawiki129"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.29.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

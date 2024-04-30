@@ -1,0 +1,47 @@
+{
+	"id": "0c5369fc-d671-11e6-a9a5-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "0c5369fc-d671-11e6-a9a5-b499baebfeaf",
+			"title": "GnuTLS -- Memory corruption vulnerabilities",
+			"description": "\n\t<p>The GnuTLS project reports:</p>\n\t<blockquote cite=\"http://www.gnutls.org/news.html#2017-01-09\">\n\t  <ul>\n\t    <li>It was found using the OSS-FUZZ fuzzer infrastructure that\n\t      decoding a specially crafted OpenPGP certificate could lead\n\t      to heap and stack overflows. (GNUTLS-SA-2017-2)</li>\n\t    <li>It was found using the OSS-FUZZ fuzzer infrastructure that\n\t      decoding a specially crafted X.509 certificate with Proxy\n\t      Certificate Information extension present could lead to a\n\t      double free. (GNUTLS-SA-2017-1)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0c5369fc-d671-11e6-a9a5-b499baebfeaf.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnutls.org/news.html#2017-01-09"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2017-2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2017-1"
+				}
+			],
+			"published": "2017-01-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gnutls"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.5.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

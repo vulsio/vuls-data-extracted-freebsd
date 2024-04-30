@@ -1,0 +1,50 @@
+{
+	"id": "e69ba632-326f-11d9-b5b7-000854d03344",
+	"advisories": [
+		{
+			"id": "e69ba632-326f-11d9-b5b7-000854d03344",
+			"title": "ez-ipupdate -- format string vulnerability",
+			"description": "\n\t<p>Data supplied by a remote server is used as the format string\n\t  instead of as parameters in a syslog() call.\tThis may lead\n\t  to crashes or potential running of arbitrary code.  It is\n\t  only a problem when running in daemon mode (very common) and\n\t  when using some service types.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e69ba632-326f-11d9-b5b7-000854d03344.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.netsys.com/pipermail/full-disclosure/2004-November/028590.html"
+				}
+			],
+			"published": "2004-11-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0980",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0980"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ez-ipupdate"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.11b8_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,54 @@
+{
+	"id": "5b8d8dee-6088-11ed-8c5e-641c67a117d8",
+	"advisories": [
+		{
+			"id": "5b8d8dee-6088-11ed-8c5e-641c67a117d8",
+			"title": "varnish -- HTTP/2 Request Forgery Vulnerability",
+			"description": "\n\t<p>Varnish Cache Project reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00011.html\">\n      <p>A request forgery attack can be performed on Varnish Cache servers that\n\t have the HTTP/2 protocol turned on. An attacker may introduce\n\t characters through the HTTP/2 pseudo-headers that are invalid in the\n\t context of an HTTP/1 request line, causing the Varnish server to\n\t produce invalid HTTP/1 requests to the backend. This may in turn be\n\t used to successfully exploit vulnerabilities in a server behind the\n\t Varnish server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5b8d8dee-6088-11ed-8c5e-641c67a117d8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://varnish-cache.org/security/VSV00011.html"
+				}
+			],
+			"published": "2022-11-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "varnish7"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.2.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "varnish6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "6.6.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

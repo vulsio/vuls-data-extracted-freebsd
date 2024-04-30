@@ -1,0 +1,50 @@
+{
+	"id": "4fce9635-28c0-11ec-9ba8-002324b2fba8",
+	"advisories": [
+		{
+			"id": "4fce9635-28c0-11ec-9ba8-002324b2fba8",
+			"title": "go -- misc/wasm, cmd/link: do not let command line arguments overwrite global data",
+			"description": "\n\t<p>The Go project reports:</p>\n\t<blockquote cite=\"https://github.com/golang/go/issues/48797\">\n\t  <p>When invoking functions from WASM modules, built using GOARCH=wasm\n\t  GOOS=js, passing very large arguments can cause portions of the module\n\t  to be overwritten with data from the arguments.</p>\n\t  <p>If using wasm_exec.js to execute WASM modules, users will need to\n\t  replace their copy after rebuilding any modules.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4fce9635-28c0-11ec-9ba8-002324b2fba8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/48797"
+				}
+			],
+			"published": "2021-10-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-38297",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-38297"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "go"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.17.2,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

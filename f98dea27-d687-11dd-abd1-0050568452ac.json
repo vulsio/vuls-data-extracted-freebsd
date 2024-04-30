@@ -1,0 +1,91 @@
+{
+	"id": "f98dea27-d687-11dd-abd1-0050568452ac",
+	"advisories": [
+		{
+			"id": "f98dea27-d687-11dd-abd1-0050568452ac",
+			"title": "twiki -- multiple vulnerabilities",
+			"description": "\n\t<p>Marc Schoenefeld and Steve Milner of RedHat SRT and Peter Allor of IBM ISS report:</p>\n\t<blockquote cite=\"http://twiki.org/cgi-bin/view/Codev/TWikiSecurityAlerts#Security_Alerts_of_TWiki_4_2_x_P\">\n\t  <p>XSS vulnerability with URLPARAM variable</p>\n\t  <p>SEARCH variable allows arbitrary shell command execution</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f98dea27-d687-11dd-abd1-0050568452ac.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/33040"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://twiki.org/cgi-bin/view/Codev/SecurityAlert-CVE-2008-5304"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://twiki.org/cgi-bin/view/Codev/SecurityAlert-CVE-2008-5305"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securitytracker.com/alerts/2008/Dec/1021351.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securitytracker.com/alerts/2008/Dec/1021352.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.it-isac.org/postings/cyber/alertdetail.php?id=4513"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/45293"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/32668"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/32669"
+				}
+			],
+			"published": "2008-12-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5304",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5304"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-5305",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5305"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "twiki"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.4,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

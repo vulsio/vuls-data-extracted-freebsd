@@ -1,0 +1,39 @@
+{
+	"id": "a183acb5-1414-11e8-9542-002590acae31",
+	"advisories": [
+		{
+			"id": "a183acb5-1414-11e8-9542-002590acae31",
+			"title": "p5-Mojolicious -- cookie-handling vulnerability",
+			"description": "\n\t<p>Upstream commit:</p>\n\t<blockquote cite=\"https://github.com/kraih/mojo/commit/c16a56a9d6575ddc53d15e76d58f0ebcb0eeb149\">\n\t  <p>Vulnerabilities existed in cookie handling.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a183acb5-1414-11e8-9542-002590acae31.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/kraih/mojo/issues/1185"
+				}
+			],
+			"published": "2018-02-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "p5-Mojolicious"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "7.66"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

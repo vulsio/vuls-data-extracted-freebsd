@@ -1,0 +1,60 @@
+{
+	"id": "b64edef7-3b10-11eb-af2a-080027dbe4b7",
+	"advisories": [
+		{
+			"id": "b64edef7-3b10-11eb-af2a-080027dbe4b7",
+			"title": "glpi -- weak csrf tokens",
+			"description": "\n\t<p>MITRE Corporation reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11035\">\n\t  <p>In GLPI after version 0.83.3 and before version 9.4.6, the CSRF tokens are generated using an insecure algorithm. The implementation uses rand and uniqid and MD5 which does not provide secure values. This is fixed in version 9.4.6.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b64edef7-3b10-11eb-af2a-080027dbe4b7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-w7q8-58qp-vmpf"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5WQMONZRWLWOXMHMYWR7A5Q5JJERPMVC/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Q4BG2UTINBVV7MTJRXKBQ26GV2UINA6L/"
+				}
+			],
+			"published": "2020-03-30T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-11035",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-11035"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.6,1",
+						"ge": "0.83.3,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

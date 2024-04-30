@@ -1,0 +1,110 @@
+{
+	"id": "5d1b1a0a-fd36-11ed-a0d1-84a93843eb75",
+	"advisories": [
+		{
+			"id": "5d1b1a0a-fd36-11ed-a0d1-84a93843eb75",
+			"title": "MariaDB -- Nullpointer dereference",
+			"description": "\n\t<p>The MariaDB project reports:</p>\n\t<blockquote cite=\"https://mariadb.com/kb/en/security/\">\n\t  <p>MariaDB Server is vulnerable to Denial of Service. It is possible for\n\t    function spider_db_mbase::print_warnings to dereference a null pointer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5d1b1a0a-fd36-11ed-a0d1-84a93843eb75.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/security/"
+				}
+			],
+			"published": "2023-05-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-47015",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-47015"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb1011-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.11.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb106-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.6.13"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb105-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.5.20"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb104-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.4.29"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mariadb103-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.3.39"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "77b7ffb7-e937-11e5-8bed-5404a68ad561",
+	"advisories": [
+		{
+			"id": "77b7ffb7-e937-11e5-8bed-5404a68ad561",
+			"title": "jpgraph2 -- XSS vulnerability",
+			"description": "\n\t<p>Martin Barbella reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/archive/1/archive/1/508586/100/0/threaded\">\n\t  <p>JpGraph is an object oriented library for PHP that can be used to create\n\t    various types of graphs which also contains support for client side\n\t    image maps.\n\n\t    The GetURLArguments function for the JpGraph's Graph class does not\n\t    properly sanitize the names of get and post variables, leading to a\n\t    cross site scripting vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/77b7ffb7-e937-11e5-8bed-5404a68ad561.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/archive/1/508586/100/0/threaded"
+				}
+			],
+			"published": "2016-03-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "jpgraph2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.0.7_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

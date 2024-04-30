@@ -1,0 +1,104 @@
+{
+	"id": "46f7b598-a781-11da-906a-fde5cdde365e",
+	"advisories": [
+		{
+			"id": "46f7b598-a781-11da-906a-fde5cdde365e",
+			"title": "bugzilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Some vulnerabilities have been reported in Bugzilla,\n\t  which can be exploited by malicious users to conduct SQL injection\n\t  attacks, and by malicious people to disclose sensitive information\n\t  and conduct script insertion attacks.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/46f7b598-a781-11da-906a-fde5cdde365e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.bugzilla.org/security/2.18.4/"
+				}
+			],
+			"published": "2006-02-27T00:00:00Z",
+			"modified": "2006-11-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-2420",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2420"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0916",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0916"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0915",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0915"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0914",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0914"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0913",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0913"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bugzilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.20.1",
+						"ge": "2.17.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ja-bugzilla"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.20.1",
+						"ge": "2.17.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,43 @@
+{
+	"id": "6d329b64-6bbb-11e1-9166-001e4f0fb9b1",
+	"advisories": [
+		{
+			"id": "6d329b64-6bbb-11e1-9166-001e4f0fb9b1",
+			"title": "portaudit -- auditfile remote code execution",
+			"description": "\n\t<p>Michael Gmelin and Jörg Scheinert has reported a remote\n\t  command execution vulnerability in portaudit.</p>\n\t<p>An attacker who can get the user to use a specially crafted\n\t  audit file will be able to run commands on the users system,\n\t  with the privileges of the user running running portaudit\n\t  (often root).</p>\n\t<p>The attack could e.g. happen through DNS hijacking or a man\n\t  in the middle attack.</p>\n\t<p>Note that if the user has set up portaudit to run from\n\t  periodic this attack could happen without direct user\n\t  interaction.</p>\n\t<p>In the FreeBSD Ports Collection (bsd.port.mk) the check for\n\t  vulnerable ports at install-time directly operates on the\n\t  auditfile and has the same vulnerability as portaudit.  As\n\t  the Ports Collection infrastructure does not have a version\n\t  number just be sure to have a Ports Collection new enough to\n\t  contain the fix for portaudit.  Note that this is <em>only</em>\n\t  a problem for users which has portaudit installed, as they will\n\t  not have the audit database installed or downloaded\n\t  otherwise.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6d329b64-6bbb-11e1-9166-001e4f0fb9b1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cvsweb.FreeBSD.org/ports/ports-mgmt/portaudit/Makefile#rev1.30"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cvsweb.FreeBSD.org/ports/Mk/bsd.port.mk#rev1.707"
+				}
+			],
+			"published": "2012-03-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "portaudit"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.6.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

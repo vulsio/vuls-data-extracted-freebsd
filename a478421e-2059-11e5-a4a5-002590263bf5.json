@@ -1,0 +1,58 @@
+{
+	"id": "a478421e-2059-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "a478421e-2059-11e5-a4a5-002590263bf5",
+			"title": "ansible -- enable host key checking in paramiko connection type",
+			"description": "\n\t<p>Ansible changelog reports:</p>\n\t<blockquote cite=\"https://raw.githubusercontent.com/ansible/ansible/devel/CHANGELOG.md\">\n\t  <p>Host key checking is on by default.  Disable it if you like by\n\t    adding host_key_checking=False in the [default] section of\n\t    /etc/ansible/ansible.cfg or ~/ansible.cfg or by exporting\n\t    ANSIBLE_HOST_KEY_CHECKING=False.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a478421e-2059-11e5-a4a5-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://raw.githubusercontent.com/ansible/ansible/devel/CHANGELOG.md"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ansible.com/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/ansible/ansible/issues/857"
+				}
+			],
+			"published": "2015-07-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2233",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2233"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

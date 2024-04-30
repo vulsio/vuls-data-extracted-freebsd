@@ -1,0 +1,62 @@
+{
+	"id": "8675efd5-e22c-11e1-a808-002354ed89bc",
+	"advisories": [
+		{
+			"id": "8675efd5-e22c-11e1-a808-002354ed89bc",
+			"title": "sudosh -- buffer overflow",
+			"description": "\n\t<p>ISS reports:</p>\n\t<blockquote cite=\"http://xforce.iss.net/xforce/xfdb/55903\">\n\t  <p>sudosh2 and sudosh3 are vulnerable to a stack-based buffer\n\t    overflow, caused by improper bounds checking by the replay()\n\t    function. By persuading a victim to replay a specially-crafted\n\t    recorded sudo session, a local attacker could overflow a buffer\n\t    and execute arbitrary code on the system with elevated privileges\n\t    or cause the application to crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8675efd5-e22c-11e1-a808-002354ed89bc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/55903"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/38349"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/38292"
+				}
+			],
+			"published": "2012-08-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "sudosh2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "1.0.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "sudosh3"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "3.2.0_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

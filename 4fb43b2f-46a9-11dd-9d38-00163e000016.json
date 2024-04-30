@@ -1,0 +1,88 @@
+{
+	"id": "4fb43b2f-46a9-11dd-9d38-00163e000016",
+	"advisories": [
+		{
+			"id": "4fb43b2f-46a9-11dd-9d38-00163e000016",
+			"title": "FreeType 2 -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/30600\">\n\t  <ul>\n\t    <li>An integer overflow error exists in the processing of PFB font\n\t    files. This can be exploited to cause a heap-based buffer overflow\n\t    via a PFB file containing a specially crafted \"Private\" dictionary\n\t    table.</li>\n\t    <li>An error in the processing of PFB font files can be exploited\n\t    to trigger the \"free()\" of memory areas that are not allocated on\n\t    the heap.</li>\n\t    <li>An off-by-one error exists in the processing of PFB font files.\n\t    This can be exploited to cause a one-byte heap-based buffer\n\t    overflow via a specially crafted PFB file.</li>\n\t    <li>An off-by-one error exists in the implementation of the \"SHC\"\n\t    instruction while processing TTF files. This can be exploited to\n\t    cause a one-byte heap-based buffer overflow via a specially crafted\n\t    TTF file.</li>\n\t  </ul>\n\t  <p>Successful exploitation of the vulnerabilities may allow execution\n\t  of arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4fb43b2f-46a9-11dd-9d38-00163e000016.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/30600"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=605780"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29637"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29639"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29640"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29641"
+				}
+			],
+			"published": "2008-07-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1806",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1806"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1807",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1807"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1808",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1808"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.3.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

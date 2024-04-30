@@ -1,0 +1,54 @@
+{
+	"id": "ed1d404d-2784-11d9-b954-000bdb1444a4",
+	"advisories": [
+		{
+			"id": "ed1d404d-2784-11d9-b954-000bdb1444a4",
+			"title": "horde -- cross-site scripting vulnerability in help window",
+			"description": "\n\t<p>A Horde Team announcement states that a potential cross-site\n\t  scripting vulnerability in the help window has been\n\t  corrected.  The vulnerability appears to involve the handling\n\t  of the <code>topic</code> and <code>module</code> parameters\n\t  of the help window template.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ed1d404d-2784-11d9-b954-000bdb1444a4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=horde-announce&m=109879164718625"
+				}
+			],
+			"published": "2004-10-27T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "horde-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.2.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

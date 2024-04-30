@@ -1,0 +1,72 @@
+{
+	"id": "152e4c7e-2a2e-11e2-99c7-00a0d181e71d",
+	"advisories": [
+		{
+			"id": "152e4c7e-2a2e-11e2-99c7-00a0d181e71d",
+			"title": "tomcat -- authentication weaknesses",
+			"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://tomcat.apache.org/security.html\">\n\t  <p>Three weaknesses in Tomcat's implementation of DIGEST\n\t    authentication were identified and resolved:</p>\n\t  <ul>\n\t    <li> Tomcat tracked client rather than server nonces and nonce count.</li>\n\t    <li> When a session ID was present, authentication was bypassed.</li>\n\t    <li> The user name and password were not checked before when indicating\n\t       that a nonce was stale.</li>\n\t  </ul>\n\t  <p>These issues reduced the security of DIGEST authentication making\n\t    replay attacks possible in some circumstances.</p>\n\t  <p>The first issue was identified by Tilmann Kuhn. The second and third\n\t    issues were identified by the Tomcat security team during the code\n\t    review resulting from the first issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/152e4c7e-2a2e-11e2-99c7-00a0d181e71d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-7.html"
+				}
+			],
+			"published": "2012-11-08T00:00:00Z",
+			"modified": "2012-11-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3439",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3439"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.5.36",
+						"gt": "5.5.0"
+					},
+					{
+						"lt": "6.0.36",
+						"gt": "6.0.0"
+					},
+					{
+						"lt": "7.0.30",
+						"gt": "7.0.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

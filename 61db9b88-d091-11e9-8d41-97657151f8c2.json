@@ -1,0 +1,39 @@
+{
+	"id": "61db9b88-d091-11e9-8d41-97657151f8c2",
+	"advisories": [
+		{
+			"id": "61db9b88-d091-11e9-8d41-97657151f8c2",
+			"title": "Exim -- RCE with root privileges in TLS SNI handler",
+			"description": "\n\t<p>Exim developers report:</p>\n\t<blockquote cite=\"https://git.exim.org/exim.git/blob/2600301ba6dbac5c9d640c87007a07ee6dcea1f4:/doc/doc-txt/cve-2019-15846/cve.txt\">\n\t  <p>If your Exim server accepts TLS connections, it is vulnerable. This does\n\t    not depend on the TLS libray, so both, GnuTLS and OpenSSL are affected.</p>\n\t  <p>The vulnerability is exploitable by sending a SNI ending in a\nbackslash-null sequence during the initial TLS handshake. The exploit\nexists as a POC. For more details see the document qualys.mbx</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/61db9b88-d091-11e9-8d41-97657151f8c2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://git.exim.org/exim.git/blob_plain/2600301ba6dbac5c9d640c87007a07ee6dcea1f4:/doc/doc-txt/cve-2019-15846/cve.txt"
+				}
+			],
+			"published": "2019-09-06T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "exim"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.92.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

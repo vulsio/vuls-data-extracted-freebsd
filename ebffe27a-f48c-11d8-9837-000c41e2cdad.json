@@ -1,0 +1,72 @@
+{
+	"id": "ebffe27a-f48c-11d8-9837-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "ebffe27a-f48c-11d8-9837-000c41e2cdad",
+			"title": "qt -- image loader vulnerabilities",
+			"description": "\n\t<p>Qt contains several vulnerabilities related to image\n\t  loading, including possible crashes when loading corrupt\n\t  GIF, BMP, or JPEG images.  Most seriously, Chris Evans\n\t  reports that the BMP crash is actually due to a heap\n\t  buffer overflow.  It is believed that an attacker may be\n\t  able to construct a BMP image that could cause a Qt-using\n\t  application to execute arbitrary code when it is loaded.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ebffe27a-f48c-11d8-9837-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.trolltech.com/developer/changes/changes-3.3.3.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://scary.beasts.org/security/CESA-2004-004.txt"
+				}
+			],
+			"published": "2004-08-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0691",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0691"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0692",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0692"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0693",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0693"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "qt"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.3.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,39 @@
+{
+	"id": "777d7b9e-ab02-11e3-841e-60a44c524f57",
+	"advisories": [
+		{
+			"id": "777d7b9e-ab02-11e3-841e-60a44c524f57",
+			"title": "wemux -- read-only can be bypassed",
+			"description": "\n\t<p>JonApps reports:</p>\n\t<blockquote cite=\"https://github.com/zolrath/wemux/issues/36\">\n\t  <p>The read-only mode can be bypassed and any command sent to bash session</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/777d7b9e-ab02-11e3-841e-60a44c524f57.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/zolrath/wemux/issues/36"
+				}
+			],
+			"published": "2014-03-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "wemux"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

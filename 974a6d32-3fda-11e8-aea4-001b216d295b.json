@@ -1,0 +1,50 @@
+{
+	"id": "974a6d32-3fda-11e8-aea4-001b216d295b",
+	"advisories": [
+		{
+			"id": "974a6d32-3fda-11e8-aea4-001b216d295b",
+			"title": "ipsec-tools -- remotely exploitable computational-complexity attack",
+			"description": "\n\t<p>Robert Foggia via NetBSD GNATS reports:</p>\n\t<blockquote cite=\"https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=51682\">\n\t  <p>The ipsec-tools racoon daemon contains a remotely exploitable computational\n\t  complexity attack when parsing and storing isakmp fragments. The implementation\n\t  permits a remote attacker to exhaust computational resources on the remote endpoint\n\t  by repeatedly sending isakmp fragment packets in a particular order such that\n\t  the worst-case computational complexity is realized in the algorithm utilized\n\t  to determine if reassembly of the fragments can take place.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/974a6d32-3fda-11e8-aea4-001b216d295b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=51682"
+				}
+			],
+			"published": "2018-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10396",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10396"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ipsec-tools"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.8.2_3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

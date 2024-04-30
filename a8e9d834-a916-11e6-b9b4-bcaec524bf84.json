@@ -1,0 +1,43 @@
+{
+	"id": "a8e9d834-a916-11e6-b9b4-bcaec524bf84",
+	"advisories": [
+		{
+			"id": "a8e9d834-a916-11e6-b9b4-bcaec524bf84",
+			"title": "lives -- insecure files permissions",
+			"description": "\n\t<p>Debian reports:</p>\n\t<blockquote cite=\"https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=756565\">\n\t  <p>smogrify script creates insecure temporary files.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=798043\">\n\t  <p>lives creates and uses world-writable directory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a8e9d834-a916-11e6-b9b4-bcaec524bf84.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=756565"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=798043"
+				}
+			],
+			"published": "2016-11-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "lives"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.8.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

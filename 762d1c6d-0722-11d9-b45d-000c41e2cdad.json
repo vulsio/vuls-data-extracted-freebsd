@@ -1,0 +1,51 @@
+{
+	"id": "762d1c6d-0722-11d9-b45d-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "762d1c6d-0722-11d9-b45d-000c41e2cdad",
+			"title": "apache -- apr_uri_parse IPv6 address handling vulnerability",
+			"description": "\n\t<p>The Apache Software Foundation Security Team discovered a\n\t  programming error in the apr-util library function apr_uri_parse.\n\t  When parsing IPv6 literal addresses, it is possible that a\n\t  length is incorrectly calculated to be negative, and this\n\t  value is passed to memcpy.  This may result in an exploitable\n\t  vulnerability on some platforms, including FreeBSD.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/762d1c6d-0722-11d9-b45d-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://httpd.apache.org"
+				}
+			],
+			"published": "2004-09-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0786",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0786"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.50_3",
+						"ge": "2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

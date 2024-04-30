@@ -1,0 +1,39 @@
+{
+	"id": "746d04dc-507e-4450-911f-4c41e48bb07a",
+	"advisories": [
+		{
+			"id": "746d04dc-507e-4450-911f-4c41e48bb07a",
+			"title": "bro -- out of bounds write allows remote DOS",
+			"description": "\n\t<p>Frank Meier:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000458\">\n\t  <p>Bro before Bro v2.5.2 is vulnerable to an out of bounds write in the ContentLine analyzer allowing remote attackers to cause a denial of service (crash) and possibly other exploitation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/746d04dc-507e-4450-911f-4c41e48bb07a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.bro.org/2017/10/bro-252-242-release-security-update.html"
+				}
+			],
+			"published": "2018-02-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "bro"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.5.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

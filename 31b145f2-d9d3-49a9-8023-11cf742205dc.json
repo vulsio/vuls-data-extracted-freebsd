@@ -1,0 +1,50 @@
+{
+	"id": "31b145f2-d9d3-49a9-8023-11cf742205dc",
+	"advisories": [
+		{
+			"id": "31b145f2-d9d3-49a9-8023-11cf742205dc",
+			"title": "PHP5 -- Heap corruption in XML parser",
+			"description": "\n\t<p>The PHP development team reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4113\">\n\t  <p>ext/xml/xml.c in PHP before 5.3.27 does not properly\n\t    consider parsing depth, which allows remote attackers to\n\t    cause a denial of service (heap memory corruption) or\n\t    possibly have unspecified other impact via a crafted\n\t    document that is processed by the xml_parse_into_struct\n\t    function.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/31b145f2-d9d3-49a9-8023-11cf742205dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.php.net/bug.php?id=65236"
+				}
+			],
+			"published": "2013-07-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4113",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4113"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "php53"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.3.27"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

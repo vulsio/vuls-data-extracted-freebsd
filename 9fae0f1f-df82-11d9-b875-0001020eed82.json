@@ -1,0 +1,110 @@
+{
+	"id": "9fae0f1f-df82-11d9-b875-0001020eed82",
+	"advisories": [
+		{
+			"id": "9fae0f1f-df82-11d9-b875-0001020eed82",
+			"title": "tcpdump -- infinite loops in protocol decoding",
+			"description": "\n\t<h1>Problem Description</h1>\n\t<p>Several tcpdump protocol decoders contain programming\n\t  errors which can cause them to go into infinite loops.</p>\n\t<h1>Impact</h1>\n\t<p>An attacker can inject specially crafted packets into the\n\t   network which, when processed by tcpdump, could lead to a\n\t   denial-of-service. After the attack, tcpdump would no\n\t   longer capture traffic, and would potentially use all\n\t   available processor time.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9fae0f1f-df82-11d9-b875-0001020eed82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-05:10.tcpdump.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111454406222040"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111454461300644"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111928309502304"
+				}
+			],
+			"published": "2005-06-18T00:00:00Z",
+			"modified": "2005-06-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1267",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1267"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1278",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1278"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1279",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1279"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1280",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1280"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.4_2",
+						"ge": "5.4"
+					},
+					{
+						"lt": "5.3_16",
+						"ge": "5.3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tcpdump"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.8.3_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,116 @@
+{
+	"id": "7cf058d8-158d-11e7-ba2c-e8e0b747a45a",
+	"advisories": [
+		{
+			"id": "7cf058d8-158d-11e7-ba2c-e8e0b747a45a",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"https://chromereleases.googleblog.com/2017/03/stable-channel-update-for-desktop_29.html\">\n\t  <p>5 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[698622] Critical CVE-2017-5055: Use after free in printing. Credit to\n\t      Wadih Matar</li>\n\t    <li>[699166] High CVE-2017-5054: Heap buffer overflow in V8. Credit to\n\t      Nicolas Trippar of Zimperium zLabs</li>\n\t    <li>[662767] High CVE-2017-5052: Bad cast in Blink. Credit to\n\t      JeongHoon Shin</li>\n\t    <li>[705445] High CVE-2017-5056: Use after free in Blink. Credit to\n\t      anonymous</li>\n\t    <li>[702058] High CVE-2017-5053: Out of bounds memory access in V8. Credit to\n\t      Team Sniper (Keen Lab and PC Mgr) reported through ZDI (ZDI-CAN-4587)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7cf058d8-158d-11e7-ba2c-e8e0b747a45a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2017/03/stable-channel-update-for-desktop_29.html"
+				}
+			],
+			"published": "2017-03-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-5055",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5055"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5054"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5052",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5052"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5056",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5056"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5053",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5053"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "57.0.2987.133"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium-npapi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "57.0.2987.133"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "chromium-pulse"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "57.0.2987.133"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,65 @@
+{
+	"id": "57f1a624-6197-11e1-b98c-bcaec565249c",
+	"advisories": [
+		{
+			"id": "57f1a624-6197-11e1-b98c-bcaec565249c",
+			"title": "libxml2 -- heap buffer overflow",
+			"description": "\n\t<p>Google chrome team reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.com/2012/01/stable-channel-update.html\">\n\t  <p>Heap-based buffer overflow in libxml2, allows remote attackers\n\t    to cause a denial of service or possibly have unspecified other\n\t    impact via unknown vectors.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/57f1a624-6197-11e1-b98c-bcaec565249c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.com/2012/01/stable-channel-update.html"
+				}
+			],
+			"published": "2012-02-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3919",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3919"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libxml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.8_2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux-f10-libxml2"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.7.8_2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,58 @@
+{
+	"id": "8a1d0e63-1e07-11e5-b43d-002590263bf5",
+	"advisories": [
+		{
+			"id": "8a1d0e63-1e07-11e5-b43d-002590263bf5",
+			"title": "pcre -- Heap Overflow Vulnerability in find_fixedlength()",
+			"description": "\n\t<p>Venustech ADLAB reports:</p>\n\t<blockquote cite=\"https://bugs.exim.org/show_bug.cgi?id=1651\">\n\t  <p>PCRE library is prone to a vulnerability which leads to Heap\n\t    Overflow. During subpattern calculation of a malformed regular\n\t    expression, an offset that is used as an array index is fully\n\t    controlled and can be large enough so that unexpected heap\n\t    memory regions are accessed.</p>\n\t  <p>One could at least exploit this issue to read objects nearby of\n\t    the affected application's memory.</p>\n\t  <p>Such information disclosure may also be used to bypass memory\n\t    protection method such as ASLR.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8a1d0e63-1e07-11e5-b43d-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.exim.org/show_bug.cgi?id=1651"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://vcs.pcre.org/pcre?view=revision&revision=1571"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/06/26/1"
+				}
+			],
+			"published": "2015-06-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5073",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5073"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "pcre"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "8.37_1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,58 @@
+{
+	"id": "2bc960c4-e665-11dd-afcd-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "2bc960c4-e665-11dd-afcd-00e0815b8da8",
+			"title": "optipng -- arbitrary code execution via crafted BMP image",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/32651\">\n\t  <p>A vulnerability has been reported in OptiPNG, which\n\t    potentially can be exploited by malicious people to compromise\n\t    a user's system.</p>\n\t  <p>The vulnerability is caused due to a boundary error in\n\t    the BMP reader and can be exploited to cause a buffer\n\t    overflow by tricking a user into processing a specially\n\t    crafted file.</p>\n\t  <p>Successful exploitation may allow execution of arbitrary\n\t    code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2bc960c4-e665-11dd-afcd-00e0815b8da8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/32651"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=505399"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://optipng.sourceforge.net/"
+				}
+			],
+			"published": "2009-01-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5101",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5101"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "optipng"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.6.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

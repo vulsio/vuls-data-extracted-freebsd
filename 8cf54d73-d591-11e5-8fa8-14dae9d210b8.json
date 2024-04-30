@@ -1,0 +1,43 @@
+{
+	"id": "8cf54d73-d591-11e5-8fa8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "8cf54d73-d591-11e5-8fa8-14dae9d210b8",
+			"title": "adminer -- XSS vulnerability",
+			"description": "\n\t<p>Jakub Vrana reports:</p>\n\t<blockquote cite=\"https://github.com/vrana/adminer/commit/c990de3b3ee1816afb130bd0e1570577bf54a8e5\">\n\t  <p>Fix XSS in login form</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8cf54d73-d591-11e5-8fa8-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vrana/adminer/commit/c990de3b3ee1816afb130bd0e1570577bf54a8e5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://sourceforge.net/p/adminer/bugs-and-features/436/"
+				}
+			],
+			"published": "2016-02-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "adminer"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

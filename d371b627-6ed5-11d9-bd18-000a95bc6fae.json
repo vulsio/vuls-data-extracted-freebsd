@@ -1,0 +1,61 @@
+{
+	"id": "d371b627-6ed5-11d9-bd18-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "d371b627-6ed5-11d9-bd18-000a95bc6fae",
+			"title": "zhcon -- unauthorized file access",
+			"description": "\n\t<p>Martin <q>Joey</q> Schulze reports:</p>\n\t<blockquote>\n\t  <p>Erik Sjöund discovered that zhcon, a fast console CJK\n\t    system using the Linux framebuffer, accesses a\n\t    user-controlled configuration file with elevated\n\t    privileges. Thus, it is possible to read arbitrary files.</p>\n\t</blockquote>\n\t<p>When installed from the FreeBSD Ports Collection, zhcon is\n\t  installed set-user-ID root.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d371b627-6ed5-11d9-bd18-000a95bc6fae.html"
+				}
+			],
+			"published": "2005-01-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0072",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0072"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zhcon"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.2.3_3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "zh-zhcon"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.2.3_3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

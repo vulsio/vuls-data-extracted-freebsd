@@ -1,0 +1,50 @@
+{
+	"id": "08664d42-7989-11e6-b7a8-74d02b9a84d5",
+	"advisories": [
+		{
+			"id": "08664d42-7989-11e6-b7a8-74d02b9a84d5",
+			"title": "h2o -- fix DoS attack vector",
+			"description": "\n\t<p>Frederik Deweerdt reported a denial-of-service attack vector\n\tdue to an unhandled error condition during socket connection.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/08664d42-7989-11e6-b7a8-74d02b9a84d5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/h2o/h2o/issues/1077"
+				}
+			],
+			"published": "2016-09-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4864",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4864"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "h2o"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.0.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

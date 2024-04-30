@@ -1,0 +1,58 @@
+{
+	"id": "cd286cc5-b762-11d9-bfb7-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "cd286cc5-b762-11d9-bfb7-000c6ec775d9",
+			"title": "ImageMagick -- ReadPNMImage() heap overflow vulnerability",
+			"description": "\n\t<p>Damian Put reports about ImageMagick:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=111445767107869\">\n\t  <p>Remote exploitation of a heap overflow vulnerability\n\t    could allow execution of arbitrary code or course denial\n\t    of service.</p>\n\t  <p>A heap overflow exists in ReadPNMImage() function, that\n\t    is used to decode a PNM image files.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cd286cc5-b762-11d9-bfb7-000c6ec775d9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111445767107869"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/13351"
+				}
+			],
+			"published": "2005-04-27T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.2"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ImageMagick-nox11"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.2.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

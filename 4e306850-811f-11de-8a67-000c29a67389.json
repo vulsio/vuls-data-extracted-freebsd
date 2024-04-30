@@ -1,0 +1,66 @@
+{
+	"id": "4e306850-811f-11de-8a67-000c29a67389",
+	"advisories": [
+		{
+			"id": "4e306850-811f-11de-8a67-000c29a67389",
+			"title": "silc-client -- Format string vulnerability",
+			"description": "\n\t<p>SILC changelog reports:</p>\n\t<blockquote cite=\"http://silcnet.org/docs/changelog/SILC%20Client%201.1.8\">\n\t  <p>An unspecified format string vulnerability exists in\n\t    silc-client.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4e306850-811f-11de-8a67-000c29a67389.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://silcnet.org/docs/changelog/SILC%20Client%201.1.8"
+				}
+			],
+			"published": "2009-08-04T00:00:00Z",
+			"modified": "2010-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-3051",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3051"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "silc-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.8"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "silc-irssi-client"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.1.8"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

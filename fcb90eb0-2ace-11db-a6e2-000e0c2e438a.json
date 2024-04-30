@@ -1,0 +1,63 @@
+{
+	"id": "fcb90eb0-2ace-11db-a6e2-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "fcb90eb0-2ace-11db-a6e2-000e0c2e438a",
+			"title": "mysql -- format string vulnerability",
+			"description": "\n\t<p>Jean-David Maillefer reports a Denial of Service vulnerability\n\t  within MySQL.  The vulnerability is caused by improper checking\n\t  of the data_format routine, which cause the MySQL server to\n\t  crash.  The crash is triggered by the following code:<br/>\n\t  <code>\"SELECT date_format('%d%s', 1);</code></p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fcb90eb0-2ace-11db-a6e2-000e0c2e438a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.mysql.com/bug.php?id=20729"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/19032"
+				}
+			],
+			"published": "2006-08-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-3469",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-3469"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-server"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.1.6",
+						"ge": "5.1"
+					},
+					{
+						"lt": "5.0.19",
+						"ge": "5.0"
+					},
+					{
+						"lt": "4.1.18",
+						"ge": "4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

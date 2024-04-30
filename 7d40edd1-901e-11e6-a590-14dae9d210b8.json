@@ -1,0 +1,81 @@
+{
+	"id": "7d40edd1-901e-11e6-a590-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "7d40edd1-901e-11e6-a590-14dae9d210b8",
+			"title": "VirtualBox -- undisclosed vulnerabilities",
+			"description": "\n\t<p>Oracle reports reports:</p>\n\t<blockquote cite=\"http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html\">\n\t  <p>Unspecified vulnerability in the Oracle VM VirtualBox\n\t    component in Oracle Virtualization VirtualBox prior to 4.0.34, 4.1.42,\n\t    4.2.34, 4.3.32, and 5.0.8, when using a Windows guest, allows local\n\t    users to affect availability via unknown vectors related to Core.</p>\n\t  <p>Unspecified vulnerability in the Oracle VM VirtualBox\n\t    component in Oracle Virtualization VirtualBox before 4.0.34, 4.1.42,\n\t    4.2.34, 4.3.32, and 5.0.8, when a VM has the Remote Display feature\n\t    (RDP) enabled, allows remote attackers to affect availability via\n\t    unknown vectors related to Core.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7d40edd1-901e-11e6-a590-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=204406"
+				}
+			],
+			"published": "2016-10-12T00:00:00Z",
+			"modified": "2016-10-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-4813",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4813"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-4896",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4896"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "virtualbox-ose"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.8",
+						"ge": "5.0"
+					},
+					{
+						"lt": "4.3.32",
+						"ge": "4.3"
+					},
+					{
+						"lt": "4.2.34",
+						"ge": "4.2"
+					},
+					{
+						"lt": "4.1.42",
+						"ge": "4.1"
+					},
+					{
+						"lt": "4.0.34",
+						"ge": "4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

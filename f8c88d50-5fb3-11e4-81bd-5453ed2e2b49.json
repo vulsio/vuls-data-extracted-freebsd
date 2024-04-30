@@ -1,0 +1,54 @@
+{
+	"id": "f8c88d50-5fb3-11e4-81bd-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "f8c88d50-5fb3-11e4-81bd-5453ed2e2b49",
+			"title": "libssh -- PRNG state reuse on forking servers",
+			"description": "\n\t<p>Aris Adamantiadis reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2014/03/05/1\">\n\t  <p>When accepting a new connection, the server forks and the\n\t    child process handles the request. The RAND_bytes() function\n\t    of openssl doesn't reset its state after the fork, but\n\t    simply adds the current process id (getpid) to the PRNG\n\t    state, which is not guaranteed to be unique.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f8c88d50-5fb3-11e4-81bd-5453ed2e2b49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/57407"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2014/03/05/1"
+				}
+			],
+			"published": "2014-10-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0017",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0017"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libssh"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.6.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

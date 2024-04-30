@@ -1,0 +1,51 @@
+{
+	"id": "74ded00e-6007-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "74ded00e-6007-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- Buffer overflow in stdio",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A programming error in the standard I/O library's\n\t__sflush() function could erroneously adjust the buffered\n\tstream's internal state even when no write actually occurred\n\tin the case when write(2) system call returns an error.</p>\n\t<h1>Impact:</h1>\n\t<p>The accounting mismatch would accumulate, if the caller\n\tdoes not check for stream status and will eventually lead\n\tto a heap buffer overflow.</p>\n\t<p>Such overflows may lead to data corruption or the execution\n\tof arbitrary code at the privilege level of the calling\n\tprogram.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/74ded00e-6007-11e6-a6c3-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:27.stdio.asc"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8611",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8611"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.1_1",
+						"ge": "10.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

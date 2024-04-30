@@ -1,0 +1,40 @@
+{
+	"id": "746ca1ac-21ec-11d9-9289-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "746ca1ac-21ec-11d9-9289-000c41e2cdad",
+			"title": "ifmail -- unsafe set-user-ID application",
+			"description": "\n\t<p>Niels Heinen reports that ifmail allows one to specify\n\t  a configuration file.  Since ifmail runs set-user-ID `news',\n\t  this may allow a local attacker to write to arbitrary files\n\t  or execute arbitrary commands as the `news' user.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/746ca1ac-21ec-11d9-9289-000c41e2cdad.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://svnweb.freebsd.org/changeset/ports/120295"
+				}
+			],
+			"published": "2004-10-19T00:00:00Z",
+			"modified": "2015-05-01T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "ifmail"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "2.15_4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

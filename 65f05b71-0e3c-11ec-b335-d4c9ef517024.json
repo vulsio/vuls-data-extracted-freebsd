@@ -1,0 +1,43 @@
+{
+	"id": "65f05b71-0e3c-11ec-b335-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "65f05b71-0e3c-11ec-b335-d4c9ef517024",
+			"title": "WeeChat -- Crash when decoding a malformed websocket frame in relay plugin.",
+			"description": "\n\t<p>The WeeChat project reports:</p>\n\t<blockquote cite=\"https://weechat.org/doc/security/\">\n\t  <p>Crash when decoding a malformed websocket frame in relay plugin.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/65f05b71-0e3c-11ec-b335-d4c9ef517024.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://weechat.org/doc/security/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/weechat/weechat/commit/8b1331f98de1714bae15a9ca2e2b393ba49d735b"
+				}
+			],
+			"published": "2021-09-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "weechat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.2.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,119 @@
+{
+	"id": "8579074c-839f-11ec-a3b2-005056a311d1",
+	"advisories": [
+		{
+			"id": "8579074c-839f-11ec-a3b2-005056a311d1",
+			"title": "samba -- Multiple Vulnerabilities",
+			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/history/security.html\">\n\t  <ul>\n\t  <li>CVE-2021-43566: Malicious client using an SMB1 or NFS race to allow\n\t      a directory to be created in an area of the server file system not\n\t      exported under the share definition.</li>\n\t  <li>CVE-2021-44141: Information leak via symlinks of existance of files\n\t      or directories outside of the exported share.</li>\n\t  <li>CVE-2021-44142: Out-of-bounds heap read/write vulnerability\n\t      in VFS module vfs_fruit allows code execution.</li>\n\t  <li>CVE-2022-0336: Samba AD users with permission to write to\n\t      an account can impersonate arbitrary services.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8579074c-839f-11ec-a3b2-005056a311d1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2021-43566.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2021-44141.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2021-44142.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2022-0336.html"
+				}
+			],
+			"published": "2022-02-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-43566",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-43566"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44141",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44141"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44142",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44142"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0336",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-0336"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba413"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.13.17"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba414"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.14.12"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "samba415"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.15.5"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

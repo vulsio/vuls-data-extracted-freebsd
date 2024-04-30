@@ -1,0 +1,93 @@
+{
+	"id": "541696ed-8d12-11ed-af80-ecf4bbc0bda0",
+	"advisories": [
+		{
+			"id": "541696ed-8d12-11ed-af80-ecf4bbc0bda0",
+			"title": "devel/viewvc-devel is vulnerable to cross-site scripting",
+			"description": "\n\t<p>C. Michael Pilato reports:</p>\n\t<blockquote cite=\"https://github.com/viewvc/viewvc/releases/tag/1.1.30\">\n\t  <p>security fix: escape revision view copy paths (#311) [CVE-2023-22464]</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/viewvc/viewvc/releases/tag/1.1.29\">\n\t  <p>security fix: escape revision view changed paths (#311) [CVE-2023-22456]</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/541696ed-8d12-11ed-af80-ecf4bbc0bda0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22464"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22456"
+				}
+			],
+			"published": "2023-01-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-22464",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22464"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-22456",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22456"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py37-viewvc-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.0.20230104"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py38-viewvc-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.0.20230104"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-viewvc-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.3.0.20230104"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

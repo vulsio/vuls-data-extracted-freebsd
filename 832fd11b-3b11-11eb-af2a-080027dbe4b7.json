@@ -1,0 +1,55 @@
+{
+	"id": "832fd11b-3b11-11eb-af2a-080027dbe4b7",
+	"advisories": [
+		{
+			"id": "832fd11b-3b11-11eb-af2a-080027dbe4b7",
+			"title": "glpi -- Remote Code Execution (RCE) via the backup functionality",
+			"description": "\n\t<p>MITRE Corporation reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11060\">\n\t  <p>In GLPI before 9.4.6, an attacker can execute system commands by abusing the backup functionality. Theoretically, this vulnerability can be exploited by an attacker without a valid account by using a CSRF. Due to the difficulty of the exploitation, the attack is only conceivable by an account having Maintenance privileges and the right to add WIFI networks. This is fixed in version 9.4.6.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/832fd11b-3b11-11eb-af2a-080027dbe4b7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-cvvq-3fww-5v6f"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/commit/ad748d59c94da177a3ed25111c453902396f320c"
+				}
+			],
+			"published": "2020-03-30T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-11060",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-11060"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "glpi"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "9.4.6,1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

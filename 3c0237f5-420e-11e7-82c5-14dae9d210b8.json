@@ -1,0 +1,82 @@
+{
+	"id": "3c0237f5-420e-11e7-82c5-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "3c0237f5-420e-11e7-82c5-14dae9d210b8",
+			"title": "FreeBSD -- Multiple vulnerabilities of ntp",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A vulnerability was discovered in the NTP server's parsing\n\tof configuration directives. [CVE-2017-6464]</p>\n\t<p>A vulnerability was found in NTP, in the parsing of\n\tpackets from the DPTS Clock. [CVE-2017-6462]</p>\n\t<p>A vulnerability was discovered in the NTP server's parsing\n\tof configuration directives. [CVE-2017-6463]</p>\n\t<p>A vulnerability was found in NTP, affecting the origin\n\ttimestamp check function. [CVE-2016-9042]</p>\n\t<h1>Impact:</h1>\n\t<p>A remote, authenticated attacker could cause ntpd to\n\tcrash by sending a crafted message. [CVE-2017-6463,\n\tCVE-2017-6464]</p>\n\t<p>A malicious device could send crafted messages, causing\n\tntpd to crash. [CVE-2017-6462]</p>\n\t<p>An attacker able to spoof messages from all of the\n\tconfigured peers could send crafted packets to ntpd, causing\n\tlater replies from those peers to be discarded, resulting\n\tin denial of service. [CVE-2016-9042]</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c0237f5-420e-11e7-82c5-14dae9d210b8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-17:03.ntp.asc"
+				}
+			],
+			"published": "2017-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9042",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9042"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6462",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6462"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6463",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6463"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6464",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6464"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "FreeBSD"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "11.0_9",
+						"ge": "11.0"
+					},
+					{
+						"lt": "10.3_18",
+						"ge": "10.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

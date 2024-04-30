@@ -1,0 +1,54 @@
+{
+	"id": "02bee9ae-c5d1-409b-8a79-983a88861509",
+	"advisories": [
+		{
+			"id": "02bee9ae-c5d1-409b-8a79-983a88861509",
+			"title": "libraw -- Out-of-bounds Read",
+			"description": "\n\t<p>libraw developers report:</p>\n\t<blockquote cite=\"https://github.com/LibRaw/LibRaw/commit/d13e8f6d1e987b7491182040a188c16a395f1d21\">\n\t  <p>In LibRaw through 0.18.4, an out of bounds read flaw related to kodak_65000_load_raw has been reported in dcraw/dcraw.c and internal/dcraw_common.cpp. An attacker could possibly exploit this flaw to disclose potentially sensitive memory or cause an application crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/02bee9ae-c5d1-409b-8a79-983a88861509.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/LibRaw/LibRaw/commit/d13e8f6d1e987b7491182040a188c16a395f1d21"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/LibRaw/LibRaw/issues/101"
+				}
+			],
+			"published": "2017-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14608",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14608"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libraw"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.18.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

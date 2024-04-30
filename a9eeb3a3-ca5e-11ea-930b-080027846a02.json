@@ -1,0 +1,50 @@
+{
+	"id": "a9eeb3a3-ca5e-11ea-930b-080027846a02",
+	"advisories": [
+		{
+			"id": "a9eeb3a3-ca5e-11ea-930b-080027846a02",
+			"title": "Python -- multiple vulnerabilities",
+			"description": "\n\t<p>Python reports:</p>\n\t<blockquote cite=\"https://docs.python.org/3/whatsnew/changelog.html#python-3-8-4-final\">\n\t  <p>bpo-41162:Audit hooks are now cleared later during finalization to avoid missing\n\t    events.</p>\n\t  <p>bpo-29778:Ensure python3.dll is loaded from correct locations when Python is\n\t    embedded.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a9eeb3a3-ca5e-11ea-930b-080027846a02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-8-4-final"
+				}
+			],
+			"published": "2020-07-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15523",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-15523"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "python38"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.8.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

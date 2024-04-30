@@ -1,0 +1,65 @@
+{
+	"id": "1e14d46f-af1f-11e1-b242-00215af774f0",
+	"advisories": [
+		{
+			"id": "1e14d46f-af1f-11e1-b242-00215af774f0",
+			"title": "quagga -- BGP OPEN denial of service vulnerability",
+			"description": "\n\t<p>CERT reports:</p>\n\t<blockquote cite=\"http://www.kb.cert.org/vuls/id/962587\">\n\t  <p>If a pre-configured BGP peer sends a specially-crafted OPEN\n\t    message with a malformed ORF capability TLV, Quagga bgpd process\n\t    will erroneously try to consume extra bytes from the input packet\n\t    buffer. The process will detect a buffer overrun attempt before\n\t    it happens and immediately terminate with an error message. All\n\t    BGP sessions established by the attacked router will be closed\n\t    and its BGP routing disrupted.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1e14d46f-af1f-11e1-b242-00215af774f0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kb.cert.org/vuls/id/962587"
+				}
+			],
+			"published": "2012-06-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1820",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1820"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "quagga"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"le": "0.99.20.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "quagga-re"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "0.99.17.10"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

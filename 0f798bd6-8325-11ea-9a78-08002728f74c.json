@@ -1,0 +1,54 @@
+{
+	"id": "0f798bd6-8325-11ea-9a78-08002728f74c",
+	"advisories": [
+		{
+			"id": "0f798bd6-8325-11ea-9a78-08002728f74c",
+			"title": "libntlm -- buffer overflow vulnerability",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2019-17455\">\n\t  <p>Libntlm through 1.5 relies on a fixed buffer size for\n\t    tSmbNtlmAuthRequest, tSmbNtlmAuthChallenge, and tSmbNtlmAuthResponse\n\t    read and write operations, as demonstrated by a stack-based buffer\n\t    over-read in buildSmbNtlmAuthRequest in smbutil.c for a crafted NTLM\n\t    request.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0f798bd6-8325-11ea-9a78-08002728f74c.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.com/jas/libntlm/-/issues/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17455"
+				}
+			],
+			"published": "2020-04-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-17455",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-17455"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "libntlm"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.6"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

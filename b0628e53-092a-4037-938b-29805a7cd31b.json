@@ -1,0 +1,79 @@
+{
+	"id": "b0628e53-092a-4037-938b-29805a7cd31b",
+	"advisories": [
+		{
+			"id": "b0628e53-092a-4037-938b-29805a7cd31b",
+			"title": "mercurial -- multiple issues",
+			"description": "\n\t<p>mercurial developers reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/100290\">\n\t  <p>Mercurial prior to version 4.3 is vulnerable to a missing symlink check that can malicious repositories to modify files outside the repository</p>\n\t  <p>Mercurial prior to 4.3 did not adequately sanitize hostnames passed to ssh, leading to possible shell-injection attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b0628e53-092a-4037-938b-29805a7cd31b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/100290"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://security.gentoo.org/glsa/201709-18"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mercurial-scm.org/wiki/WhatsNew#Mercurial_4.3_.2F_4.3.1_.282017-08-10.29"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/100290"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://security.gentoo.org/glsa/201709-18"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mercurial-scm.org/wiki/WhatsNew#Mercurial_4.3_.2F_4.3.1_.282017-08-10.29"
+				}
+			],
+			"published": "2017-10-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-1000115",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1000115"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-1000116",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1000116"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "mercurial"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

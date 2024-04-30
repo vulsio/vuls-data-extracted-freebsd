@@ -1,0 +1,96 @@
+{
+	"id": "2dd7e97e-d5e8-11e5-bcbd-bc5ff45d0f28",
+	"advisories": [
+		{
+			"id": "2dd7e97e-d5e8-11e5-bcbd-bc5ff45d0f28",
+			"title": "glibc -- getaddrinfo stack-based buffer overflow",
+			"description": "\n\t<p>Fabio Olive Leite reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2015-7547\">\n\t  <p>A stack-based buffer overflow was found in libresolv when invoked\n\t    from nss_dns, allowing specially crafted DNS responses to seize\n\t    control of EIP in the DNS client. The buffer overflow occurs in the\n\t    functions send_dg (send datagram) and send_vc (send TCP) for the\n\t    NSS module libnss_dns.so.2 when calling getaddrinfo with AF_UNSPEC\n\t    family, or in some cases AF_INET6 family. The use of AF_UNSPEC (or\n\t    AF_INET6 in some cases) triggers the low-level resolver code to\n\t    send out two parallel queries for A and AAAA. A mismanagement of\n\t    the buffers used for those queries could result in the response of\n\t    a query writing beyond the alloca allocated buffer created by\n\t    __res_nquery.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2dd7e97e-d5e8-11e5-bcbd-bc5ff45d0f28.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2015-7547"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.des.no/2016/02/freebsd-and-cve-2015-7547/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://googleonlinesecurity.blogspot.no/2016/02/cve-2015-7547-glibc-getaddrinfo-stack.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://sourceware.org/ml/libc-alpha/2016-02/msg00416.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=207272"
+				}
+			],
+			"published": "2016-02-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7547",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7547"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux_base-c6"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.7_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux_base-c6_64"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "6.7_1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "linux_base-f10"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"ge": "0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,58 @@
+{
+	"id": "5fa90ee6-bc9e-11eb-a287-e0d55e2a8bf9",
+	"advisories": [
+		{
+			"id": "5fa90ee6-bc9e-11eb-a287-e0d55e2a8bf9",
+			"title": "texproc/expat2 -- billion laugh attack",
+			"description": "\n\t<p>Kurt Seifried reports:</p>\n\t<blockquote cite=\"https://blog.hartwork.org/posts/cve-2013-0340-billion-laughs-fixed-in-expat-2-4-0/\">\n\t  <p>So here are the CVE's for the two big ones, libxml2 and expat.\n\t     Both are affected by the expansion of internal entities\n\t     (which can be used to consume resources) and external entities\n\t     (which can cause a denial of service against other services, be\n\t     used to port scan, etc.).</p>\n\t   <p>A billion laughs attack is a type of denial-of-service attack\n\t     which is aimed at parsers of XML documents.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5fa90ee6-bc9e-11eb-a287-e0d55e2a8bf9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openwall.com/lists/oss-security/2013/02/22/3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.hartwork.org/posts/cve-2013-0340-billion-laughs-fixed-in-expat-2-4-0/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2013-0340"
+				}
+			],
+			"published": "2021-05-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0340",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0340"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "expat"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

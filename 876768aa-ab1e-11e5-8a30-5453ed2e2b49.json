@@ -1,0 +1,60 @@
+{
+	"id": "876768aa-ab1e-11e5-8a30-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "876768aa-ab1e-11e5-8a30-5453ed2e2b49",
+			"title": "dpkg -- stack-based buffer overflow",
+			"description": "\n\t<p>Salvatore Bonaccorso reports:</p>\n\t<blockquote cite=\"https://lists.debian.org/debian-security-announce/2015/msg00312.html\">\n\t  <p>Hanno Boeck discovered a stack-based buffer overflow in the\n\t    dpkg-deb component of dpkg, the Debian package management system.\n\t    This flaw could potentially lead to arbitrary code execution if a\n\t    user or an automated system were tricked into processing a specially\n\t    crafted Debian binary package (.deb) in the old style Debian binary\n\t    package format.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/876768aa-ab1e-11e5-8a30-5453ed2e2b49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2015/11/26/3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://anonscm.debian.org/cgit/dpkg/dpkg.git/commit/?id=f1aac7d933819569bf6f347c3c0d5a64a90bbce0"
+				}
+			],
+			"published": "2015-12-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0860",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0860"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "dpkg"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.16.17"
+					},
+					{
+						"lt": "1.17.26"
+					},
+					{
+						"lt": "1.18.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

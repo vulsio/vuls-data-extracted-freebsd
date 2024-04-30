@@ -1,0 +1,47 @@
+{
+	"id": "71273c4d-a6ec-11df-8a8d-0008743bf21a",
+	"advisories": [
+		{
+			"id": "71273c4d-a6ec-11df-8a8d-0008743bf21a",
+			"title": "opera -- multiple vulnerabilities",
+			"description": "\n\t<p>The Opera Destkop Team reports:</p>\n\t<blockquote cite=\"http://www.opera.com/docs/changelogs/unix/1061/\">\n\t  <ul>\n\t    <li>Fixed an issue where heap buffer overflow in HTML5 canvas could\n\t      be used to execute arbitrary code, as reported by Kuzzcc.</li>\n\t    <li>Fixed an issue where unexpected changes in tab focus could be\n\t      used to run programs from the Internet, as reported by Jakob Balle\n\t      and Sven Krewitt of Secunia.</li>\n\t    <li>Fixed an issue where news feed preview could subscribe to feeds\n\t      without interaction, as reported by Alexios Fakos.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/71273c4d-a6ec-11df-8a8d-0008743bf21a.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/966/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/967/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/968/"
+				}
+			],
+			"published": "2010-08-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "opera"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "10.61"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

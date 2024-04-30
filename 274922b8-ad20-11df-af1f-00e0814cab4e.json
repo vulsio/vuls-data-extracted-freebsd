@@ -1,0 +1,65 @@
+{
+	"id": "274922b8-ad20-11df-af1f-00e0814cab4e",
+	"advisories": [
+		{
+			"id": "274922b8-ad20-11df-af1f-00e0814cab4e",
+			"title": "phpmyadmin -- Several XSS vulnerabilities",
+			"description": "\n\t<p>phpMyAdmin Team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2010-5.php\">\n\t  <p>It was possible to conduct a XSS attack using crafted URLs org\n\t    POST parameters on several pages.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/274922b8-ad20-11df-af1f-00e0814cab4e.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2010-5.php"
+				}
+			],
+			"published": "2010-08-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-3056",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3056"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "3.3.5.1"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "phpMyAdmin211"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.11.10.1"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

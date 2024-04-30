@@ -1,0 +1,50 @@
+{
+	"id": "08a2df48-6c6a-11e7-9b01-2047478f2f70",
+	"advisories": [
+		{
+			"id": "08a2df48-6c6a-11e7-9b01-2047478f2f70",
+			"title": "collectd5 -- Denial of service by sending a signed network packet to a server which is not set up to check signatures",
+			"description": "\n\t<p>marcinguy reports:</p>\n\t<blockquote cite=\"https://github.com/collectd/collectd/issues/2174\">\n\t  <p>After sending this payload, collectd seems to be entering endless while()\n\t     loop in packet_parse consuming high CPU resources, possibly crash/gets killed after a while.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/08a2df48-6c6a-11e7-9b01-2047478f2f70.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/collectd/collectd/issues/2174"
+				}
+			],
+			"published": "2017-07-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-7401",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7401"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "collectd5"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.7.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
