@@ -1,0 +1,50 @@
+{
+	"id": "4a1e2bad-0836-11ef-9fd2-1c697a616631",
+	"advisories": [
+		{
+			"id": "4a1e2bad-0836-11ef-9fd2-1c697a616631",
+			"title": "R -- arbitrary code execution vulnerability",
+			"description": "\n\t<p>HiddenLayer Research reports:</p>\n\t<blockquote cite=\"https://hiddenlayer.com/research/r-bitrary-code-execution/\">\n\t  <p>Deserialization of untrusted data can occur in the R statistical programming language, enabling a maliciously crafted RDS (R Data Serialization) formatted file or R package to run arbitrary code on an end user's system.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4a1e2bad-0836-11ef-9fd2-1c697a616631.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27322"
+				}
+			],
+			"published": "2024-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-27322",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27322"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "R"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.4.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
