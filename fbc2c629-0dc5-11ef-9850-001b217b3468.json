@@ -1,0 +1,173 @@
+{
+	"id": "fbc2c629-0dc5-11ef-9850-001b217b3468",
+	"advisories": [
+		{
+			"id": "fbc2c629-0dc5-11ef-9850-001b217b3468",
+			"title": "Gitlab -- vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/\">\n\t  <p>ReDoS in branch search when using wildcards</p>\n\t  <p>ReDoS in markdown render pipeline</p>\n\t  <p>Redos on Discord integrations</p>\n\t  <p>Redos on Google Chat Integration</p>\n\t  <p>Denial of Service Attack via Pin Menu</p>\n\t  <p>DoS by filtering tags and branches via the API</p>\n\t  <p>MR approval via CSRF in SAML SSO</p>\n\t  <p>Banned user from groups can read issues updates via the api</p>\n\t  <p>Require confirmation before linking JWT identity</p>\n\t  <p>View confidential issues title and description of any public project via export</p>\n\t  <p>SSRF via Github importer</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fbc2c629-0dc5-11ef-9850-001b217b3468.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/"
+				}
+			],
+			"published": "2024-05-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-2878",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2878"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-2651",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2651"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-6682",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6682"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-6688",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6688"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-2454",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2454"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4539",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4539"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4597",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4597"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-1539",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1539"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-1211",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1211"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-3976",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-3976"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-6195",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6195"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab-ce"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.11.2",
+						"ge": "16.11.0"
+					},
+					{
+						"lt": "16.10.5",
+						"ge": "16.10.0"
+					},
+					{
+						"lt": "16.9.7",
+						"ge": "10.6.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "gitlab-ee"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "16.11.2",
+						"ge": "16.11.0"
+					},
+					{
+						"lt": "16.10.5",
+						"ge": "16.10.0"
+					},
+					{
+						"lt": "16.9.7",
+						"ge": "10.6.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

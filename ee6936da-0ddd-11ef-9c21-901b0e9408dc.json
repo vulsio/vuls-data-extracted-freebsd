@@ -1,0 +1,39 @@
+{
+	"id": "ee6936da-0ddd-11ef-9c21-901b0e9408dc",
+	"advisories": [
+		{
+			"id": "ee6936da-0ddd-11ef-9c21-901b0e9408dc",
+			"title": "tailscale -- Insufficient inbound packet filtering in subnet routers and exit nodes",
+			"description": "\n\t<p>Tailscale team reports:</p>\n\t<blockquote cite=\"https://tailscale.com/security-bulletins#ts-2024-005\">\n\t  <p>In Tailscale versions earlier than 1.66.0, exit nodes,\n\t  subnet routers, and app connectors, could allow inbound\n\t  connections to other tailnet nodes from their local area\n\t  network (LAN). This vulnerability only affects Linux exit\n\t  nodes, subnet routers, and app connectors in tailnets where\n\t  ACLs allow \"src\": \"*\", such as with default ACLs.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ee6936da-0ddd-11ef-9c21-901b0e9408dc.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://tailscale.com/security-bulletins#ts-2024-005"
+				}
+			],
+			"published": "2024-05-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "tailscale"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.66.0"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
