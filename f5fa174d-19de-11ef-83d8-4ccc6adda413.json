@@ -3,7 +3,7 @@
 	"advisories": [
 		{
 			"id": "f5fa174d-19de-11ef-83d8-4ccc6adda413",
-			"title": "QtNetworkAuth -- predicatable seeding of PRNG in QAbstractOAuth",
+			"title": "QtNetworkAuth -- predictable seeding of PRNG in QAbstractOAuth",
 			"description": "\n\t<p>Andy Shaw reports:</p>\n\t<blockquote cite=\"https://www.qt.io/blog/security-advisory-qstringconverter-0\">\n\t  <p>The OAuth1 implementation in QtNetworkAuth created nonces using\n\t    a PRNG that was seeded with a predictable seed.</p>\n\t  <p>This means that an attacker that can somehow control the time of\n\t    the first OAuth1 flow of the process has a high chance of predicting\n\t    the nonce used in said OAuth flow.</p>\n\t</blockquote>\n\t",
 			"references": [
 				{

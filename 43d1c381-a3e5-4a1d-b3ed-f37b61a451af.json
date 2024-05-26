@@ -1,0 +1,102 @@
+{
+	"id": "43d1c381-a3e5-4a1d-b3ed-f37b61a451af",
+	"advisories": [
+		{
+			"id": "43d1c381-a3e5-4a1d-b3ed-f37b61a451af",
+			"title": "electron28 -- multiple vulnerabilities",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v28.3.2\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2024-4948.</li>\n\t    <li>Security: backported fix for CVE-2024-3914.</li>\n\t    <li>Security: backported fix for CVE-2024-4060.</li>\n\t    <li>Security: backported fix for CVE-2024-4058.</li>\n\t    <li>Security: backported fix for CVE-2024-4558.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/43d1c381-a3e5-4a1d-b3ed-f37b61a451af.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-xvp9-87cv-m4fv"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-jv87-hfr8-8j2r"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-4qw6-vwc8-mh38"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-23rw-79p3-xgcm"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-r4j8-j63p-24j8"
+				}
+			],
+			"published": "2024-05-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-4948",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4948"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-3914",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-3914"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4060",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4060"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4058",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4058"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4558",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4558"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "electron28"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "28.3.2"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
