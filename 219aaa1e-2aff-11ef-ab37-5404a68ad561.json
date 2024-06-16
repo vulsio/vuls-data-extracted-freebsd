@@ -1,0 +1,50 @@
+{
+	"id": "219aaa1e-2aff-11ef-ab37-5404a68ad561",
+	"advisories": [
+		{
+			"id": "219aaa1e-2aff-11ef-ab37-5404a68ad561",
+			"title": "traefik -- Unexpected behavior with IPv4-mapped IPv6 addresses",
+			"description": "\n\t<p>The traefik authors report:</p>\n\t<blockquote cite=\"https://github.com/traefik/traefik/security/advisories/GHSA-7jmw-8259-q9jx\">\n\t  <p>There is a vulnerability in Go managing various Is methods\n\t     (IsPrivate, IsLoopback, etc) for IPv4-mapped IPv6 addresses.\n\t     They didn't work as expected returning false for addresses\n\t     which would return true in their traditional IPv4 forms.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/219aaa1e-2aff-11ef-ab37-5404a68ad561.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/traefik/traefik/security/advisories/GHSA-7jmw-8259-q9jx"
+				}
+			],
+			"published": "2024-06-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-24790",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-24790"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "traefik"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.11.4"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
