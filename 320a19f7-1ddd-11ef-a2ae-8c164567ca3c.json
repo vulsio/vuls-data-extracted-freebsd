@@ -3,7 +3,7 @@
 	"advisories": [
 		{
 			"id": "320a19f7-1ddd-11ef-a2ae-8c164567ca3c",
-			"title": "nginx-devel -- Multiple Vulnerabilities in HTTP/3",
+			"title": "nginx -- Multiple Vulnerabilities in HTTP/3",
 			"description": "\n\t<p>The nginx development team reports:</p>\n\t<blockquote cite=\"http://nginx.org/en/security_advisories.html\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Stack overflow and use-after-free in HTTP/3</li>\n\t    <li>Buffer overwrite in HTTP/3</li>\n\t    <li>Memory disclosure in HTTP/3</li>\n\t    <li>NULL pointer dereference in HTTP/3</li>\n\t  </ul>\n\t</blockquote>\n\t",
 			"references": [
 				{
@@ -65,6 +65,22 @@
 					{
 						"lt": "1.27.0",
 						"ge": "1.25.0"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "1.26.1",
+						"ge": "1.26.0"
 					}
 				]
 			}
