@@ -1,0 +1,114 @@
+{
+	"id": "4f6c4c07-3179-11ef-9da5-1c697a616631",
+	"advisories": [
+		{
+			"id": "4f6c4c07-3179-11ef-9da5-1c697a616631",
+			"title": "emacs -- Arbitrary shell code evaluation vulnerability",
+			"description": "\n\t<p>GNU Emacs developers report:</p>\n\t<blockquote cite=\"https://lists.gnu.org/archive/html/info-gnu-emacs/2024-06/msg00000.html\">\n\t  <p>Emacs 29.4 is an emergency bugfix release intended to fix a security vulnerability.  Arbitrary shell commands are no longer run when turning on Org mode in order to avoid running malicious code.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4f6c4c07-3179-11ef-9da5-1c697a616631.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://seclists.org/oss-sec/2024/q2/296"
+				}
+			],
+			"published": "2024-06-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "29.3_3,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-canna"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "29.3_3,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-nox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "29.3_3,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-wayland"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "29.3_3,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-devel"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "30.0.50.20240615_1,3"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "emacs-devel-nox"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "30.0.50.20240615_1,3"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
