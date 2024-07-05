@@ -1,0 +1,51 @@
+{
+	"id": "5d921a8c-3a43-11ef-b611-84a93843eb75",
+	"advisories": [
+		{
+			"id": "5d921a8c-3a43-11ef-b611-84a93843eb75",
+			"title": "Apache httpd -- source code disclosure",
+			"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"https://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <p>isource code disclosure with handlers configured via AddType\n\t    (CVE-2024-39884) (Important). A regression in the core of Apache HTTP\n\t    Server 2.4.60 ignores some use of the legacy content-type based\n\t    configuration of handlers. \"AddType\" and similar configuration,\n\t    under some circumstances where files are requested indirectly, result\n\t    in source code disclosure of local content. For example, PHP scripts\n\t    may be served instead of interpreted.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5d921a8c-3a43-11ef-b611-84a93843eb75.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+				}
+			],
+			"published": "2024-07-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-39884",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-39884"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "apache24"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "2.4.61",
+						"ge": "2.4.60"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
