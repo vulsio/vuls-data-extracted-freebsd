@@ -1,0 +1,137 @@
+{
+	"id": "171afa61-3eba-11ef-a58f-080027836e8b",
+	"advisories": [
+		{
+			"id": "171afa61-3eba-11ef-a58f-080027836e8b",
+			"title": "Django -- multiple vulnerabilities",
+			"description": "\n\t<p>Django reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2024/jul/09/security-releases/\">\n\t  <p>CVE-2024-38875: Potential denial-of-service in django.utils.html.urlize().</p>\n\t  <p>CVE-2024-39329: Username enumeration through timing difference for users with unusable passwords.</p>\n\t  <p>CVE-2024-39330: Potential directory-traversal in django.core.files.storage.Storage.save().</p>\n\t  <p>CVE-2024-39614: Potential denial-of-service in django.utils.translation.get_supported_language_variant().</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/171afa61-3eba-11ef-a58f-080027836e8b.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/"
+				}
+			],
+			"published": "2024-07-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-38875",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-38875"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-39329",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-39329"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-39330",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-39330"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-39614",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-39614"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py39-django42"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.14"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py310-django42"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.14"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py311-django42"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "4.2.14"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py310-django50"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.7"
+					}
+				]
+			}
+		},
+		{
+			"ecosystem": "freebsd",
+			"vulnerable": true,
+			"package": {
+				"name": "py311-django50"
+			},
+			"affected": {
+				"type": "freebsd-pkg",
+				"range": [
+					{
+						"lt": "5.0.7"
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
