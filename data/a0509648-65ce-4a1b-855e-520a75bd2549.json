@@ -1,0 +1,133 @@
+{
+	"id": "a0509648-65ce-4a1b-855e-520a75bd2549",
+	"advisories": [
+		{
+			"id": "a0509648-65ce-4a1b-855e-520a75bd2549",
+			"title": "py-cinder -- unauthorized data access",
+			"description": "\n    <p>Utkarsh Gupta reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-7h75-hwxx-qpgc\">\n      <p>An issue was discovered in OpenStack Cinder before 19.1.2, 20.x before 20.0.2, and 21.0.0; Glance before 23.0.1, 24.x before 24.1.1, and 25.0.0; and Nova before 24.1.2, 25.x before 25.0.2, and 26.0.0.</p>\n      <p>By supplying a specially created VMDK flat image that references a specific backing file path, an authenticated user may convince systems to return a copy of that file's contents from the server, resulting in unauthorized access to potentially sensitive data.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-7h75-hwxx-qpgc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a0509648-65ce-4a1b-855e-520a75bd2549.html"
+				}
+			],
+			"published": "2023-04-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-47951",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-47951"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-cinder"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "19.1.2"
+								},
+								{
+									"lt": "20.0.2",
+									"ge": "20.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-cinder"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "19.1.2"
+								},
+								{
+									"lt": "20.0.2",
+									"ge": "20.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-cinder"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "19.1.2"
+								},
+								{
+									"lt": "20.0.2",
+									"ge": "20.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-cinder"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "19.1.2"
+								},
+								{
+									"lt": "20.0.2",
+									"ge": "20.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-cinder"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "19.1.2"
+								},
+								{
+									"lt": "20.0.2",
+									"ge": "20.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

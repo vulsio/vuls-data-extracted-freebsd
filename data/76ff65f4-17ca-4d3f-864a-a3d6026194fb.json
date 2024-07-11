@@ -1,0 +1,144 @@
+{
+	"id": "76ff65f4-17ca-4d3f-864a-a3d6026194fb",
+	"advisories": [
+		{
+			"id": "76ff65f4-17ca-4d3f-864a-a3d6026194fb",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/known-vulnerabilities/\">\n\t  <p>MFSA-2015-28 Privilege escalation through SVG navigation</p>\n\t  <p>MFSA-2015-29 Code execution through incorrect JavaScript\n\t    bounds checking elimination</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2015-28/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2015-29/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/76ff65f4-17ca-4d3f-864a-a3d6026194fb.html"
+				}
+			],
+			"published": "2015-03-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0817",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0817"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0818",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0818"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "36.0.4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-esr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "31.5.3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "36.0.4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.33.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.33.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxul"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "31.5.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

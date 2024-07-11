@@ -1,0 +1,57 @@
+{
+	"id": "a1a1f81c-7c13-11ee-bcf1-f8b156b6dcc8",
+	"advisories": [
+		{
+			"id": "a1a1f81c-7c13-11ee-bcf1-f8b156b6dcc8",
+			"title": "vorbistools -- heap buffer overflow in oggenc",
+			"description": "\n\t<p>Frank-Z7 reports:</p>\n\t<blockquote cite=\"https://github.com/xiph/vorbis-tools/issues/41\">\n\t  <p>Heap buffer overflow when vorbis-tools/oggenc converts\n\t    WAV files to Ogg files.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-43361"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a1a1f81c-7c13-11ee-bcf1-f8b156b6dcc8.html"
+				}
+			],
+			"published": "2023-11-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-43361",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-43361"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vorbis-tools"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.2_4,3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

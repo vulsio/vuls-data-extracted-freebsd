@@ -1,0 +1,61 @@
+{
+	"id": "68bda678-caab-11de-a97e-be89dfd1042e",
+	"advisories": [
+		{
+			"id": "68bda678-caab-11de-a97e-be89dfd1042e",
+			"title": "p5-HTML-Parser -- denial of service",
+			"description": "\n\t<p>CVE reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3627\">\n\t  <p>The decode_entities function in util.c in HTML-Parser before\n\t    3.63 allows context-dependent attackers to cause a denial of service\n\t    (infinite loop) via an incomplete SGML numeric character reference,\n\t    which triggers generation of an invalid UTF-8 character.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/37155"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/36807"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/68bda678-caab-11de-a97e-be89dfd1042e.html"
+				}
+			],
+			"published": "2009-11-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-3627",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3627"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-HTML-Parser"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.63"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

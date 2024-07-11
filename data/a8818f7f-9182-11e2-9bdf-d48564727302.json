@@ -1,0 +1,58 @@
+{
+	"id": "a8818f7f-9182-11e2-9bdf-d48564727302",
+	"advisories": [
+		{
+			"id": "a8818f7f-9182-11e2-9bdf-d48564727302",
+			"title": "optipng -- use-after-free vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"https://secunia.com/advisories/50654\">\n\t  <p>A vulnerability has been reported in OptiPNG, which can be\n\t     exploited by malicious people to potentially compromise a user's\n\t     system.</p>\n\t  <p>The vulnerability is caused due to a use-after-free error related\n\t     to the palette reduction functionality. No further information is\n\t     currently available.</p>\n\t  <p>Success exploitation may allow execution of arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://secunia.com/advisories/50654"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a8818f7f-9182-11e2-9bdf-d48564727302.html"
+				}
+			],
+			"published": "2013-03-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4432",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4432"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "optipng"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.7.4",
+									"ge": "0.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

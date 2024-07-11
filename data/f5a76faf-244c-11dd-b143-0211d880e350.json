@@ -1,0 +1,75 @@
+{
+	"id": "f5a76faf-244c-11dd-b143-0211d880e350",
+	"advisories": [
+		{
+			"id": "f5a76faf-244c-11dd-b143-0211d880e350",
+			"title": "libvorbis -- various security issues",
+			"description": "\n\t<p>Red Hat reports:</p>\n\t<blockquote cite=\"https://rhn.redhat.com/errata/RHSA-2008-0270.html\">\n\t  <p>Will Drewry of the Google Security Team reported several\n\t    flaws in the way libvorbis processed audio data. An\n\t    attacker could create a carefully crafted [Vorbis] audio file\n\t    in such a way that it could cause an application linked\n\t    with libvorbis to crash, or execute arbitrary code when\n\t    it was opened.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://rhn.redhat.com/errata/RHSA-2008-0270.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f5a76faf-244c-11dd-b143-0211d880e350.html"
+				}
+			],
+			"published": "2008-05-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1419",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1419"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1420",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1420"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-1423",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1423"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvorbis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.0_2,3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

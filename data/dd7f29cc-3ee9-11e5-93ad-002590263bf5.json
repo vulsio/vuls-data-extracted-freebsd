@@ -1,0 +1,57 @@
+{
+	"id": "dd7f29cc-3ee9-11e5-93ad-002590263bf5",
+	"advisories": [
+		{
+			"id": "dd7f29cc-3ee9-11e5-93ad-002590263bf5",
+			"title": "lighttpd -- Log injection vulnerability in mod_auth",
+			"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3200\">\n\t  <p>mod_auth in lighttpd before 1.4.36 allows remote attackers to\n\t    inject arbitrary log entries via a basic HTTP authentication string\n\t    without a colon character, as demonstrated by a string containing a\n\t    NULL and new line character.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://redmine.lighttpd.net/issues/2646"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dd7f29cc-3ee9-11e5-93ad-002590263bf5.html"
+				}
+			],
+			"published": "2015-08-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3200",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3200"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.36"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

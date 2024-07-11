@@ -1,0 +1,62 @@
+{
+	"id": "a93c3287-d8fd-11e6-be5c-001fbc0f280f",
+	"advisories": [
+		{
+			"id": "a93c3287-d8fd-11e6-be5c-001fbc0f280f",
+			"title": "Ansible -- Command execution on Ansible controller from host",
+			"description": "\n\t<p>Computest reports:</p>\n\t<blockquote cite=\"https://www.computest.nl/advisories/CT-2017-0109_Ansible.txt\">\n\t  <p>Computest found and exploited several issues\n\t    that allow a compromised host to execute commands\n\t    on the Ansible controller and thus gain access\n\t    to other hosts controlled by that controller.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lwn.net/Articles/711357/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.computest.nl/advisories/CT-2017-0109_Ansible.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a93c3287-d8fd-11e6-be5c-001fbc0f280f.html"
+				}
+			],
+			"published": "2017-01-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9587",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9587"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ansible"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.0.0_2",
+									"gt": "1.9.6_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

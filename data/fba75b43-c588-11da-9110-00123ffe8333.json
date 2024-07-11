@@ -1,0 +1,51 @@
+{
+	"id": "fba75b43-c588-11da-9110-00123ffe8333",
+	"advisories": [
+		{
+			"id": "fba75b43-c588-11da-9110-00123ffe8333",
+			"title": "phpmyadmin -- XSS vulnerabilities",
+			"description": "\n\t<p>phpMyAdmin security announcement:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2006-1\">\n\t  <p>It was possible to conduct an XSS attack with a direct call\n\t    to some scripts under the themes directory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/19556/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2006-1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fba75b43-c588-11da-9110-00123ffe8333.html"
+				}
+			],
+			"published": "2006-04-06T00:00:00Z",
+			"modified": "2006-04-07T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.0.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,138 @@
+{
+	"id": "10dee731-c069-11ee-9190-84a93843eb75",
+	"advisories": [
+		{
+			"id": "10dee731-c069-11ee-9190-84a93843eb75",
+			"title": "OpenSSL -- Multiple vulnerabilities",
+			"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20240125.txt\">\n\t  <p>Excessive time spent checking invalid RSA public keys (CVE-2023-6237)</p>\n\t  <p>PKCS12 Decoding crashes (CVE-2024-0727)</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/openssl-3.0-notes.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/openssl-3.1-notes.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/openssl-3.2-notes.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20240115.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20240125.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/10dee731-c069-11ee-9190-84a93843eb75.html"
+				}
+			],
+			"published": "2024-01-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-6237",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6237"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-0727",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-0727"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.13,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-quictls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.13"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl31"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl31-quictls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl32"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,140 @@
+{
+	"id": "b9210706-feb0-11ec-81fa-1c697a616631",
+	"advisories": [
+		{
+			"id": "b9210706-feb0-11ec-81fa-1c697a616631",
+			"title": "Node.js -- July 7th 2022 Security Releases",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/july-2022-security-releases/\">\n\t  <h1>HTTP Request Smuggling - Flawed Parsing of Transfer-Encoding\n\t  (Medium)(CVE-2022-32213)</h1>\n\t  <p>The llhttp parser in the http module does not correctly parse and\n\t  validate Transfer-Encoding headers. This can lead to HTTP Request\n\t  Smuggling (HRS).</p>\n\t  <h1>HTTP Request Smuggling - Improper Delimiting of Header Fields\n\t  (Medium)(CVE-2022-32214)</h1>\n\t  <p>The llhttp parser in the http module does not strictly use the CRLF\n\t  sequence to delimit HTTP requests. This can lead to HTTP Request\n\t  Smuggling (HRS).</p>\n\t  <h1>HTTP Request Smuggling - Incorrect Parsing of Multi-line\n\t  Transfer-Encoding (Medium)(CVE-2022-32215)</h1>\n\t  <p>The llhttp parser in the http module does not correctly handle\n\t  multi-line Transfer-Encoding headers. This can lead to HTTP Request\n\t  Smuggling (HRS).</p>\n\t  <h1>DNS rebinding in --inspect via invalid IP addresses\n\t  (High)(CVE-2022-32212)</h1>\n\t  <p>The IsAllowedHost check can easily be bypassed because IsIPAddress\n\t  does not properly check if an IP address is invalid or not. When an\n\t  invalid IPv4 address is provided (for instance 10.0.2.555 is\n\t  provided), browsers (such as Firefox) will make DNS requests to the\n\t  DNS server, providing a vector for an attacker-controlled DNS server\n\t  or a MITM who can spoof DNS responses to perform a rebinding attack\n\t  and hence connect to the WebSocket debugger, allowing for arbitrary\n\t  code execution. This is a bypass of CVE-2021-22884.</p>\n\t  <h1>Attempt to read openssl.cnf from /home/iojs/build/ upon startup\n\t  (Medium)(CVE-2022-32222)</h1>\n\t  <p>When Node.js starts on linux based systems, it attempts to read\n\t  /home/iojs/build/ws/out/Release/obj.target/deps/openssl/openssl.cnf,\n\t  which ordinarily doesn't exist. On some shared systems an attacker may\n\t  be able create this file and therefore affect the default OpenSSL\n\t  configuration for other users.</p>\n\t  <h1>OpenSSL - AES OCB fails to encrypt some bytes\n\t  (Medium)(CVE-2022-2097)</h1>\n\t  <p>AES OCB mode for 32-bit x86 platforms using the AES-NI assembly\n\t  optimised implementation will not encrypt the entirety of the data\n\t  under some circumstances. This could reveal sixteen bytes of data that\n\t  was preexisting in the memory that wasn't written. In the special case\n\t  of \"in place\" encryption, sixteen bytes of the plaintext would be\n\t  revealed.  Since OpenSSL does not support OCB based cipher suites for\n\t  TLS and DTLS, they are both unaffected.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/july-2022-security-releases/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b9210706-feb0-11ec-81fa-1c697a616631.html"
+				}
+			],
+			"published": "2022-07-08T00:00:00Z",
+			"modified": "2022-07-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2097",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-2097"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32212",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-32212"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32213",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-32213"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32214",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-32214"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32215",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-32215"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32222",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-32222"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.20.0",
+									"ge": "14.0.0"
+								},
+								{
+									"lt": "16.16.0",
+									"ge": "16.0.0"
+								},
+								{
+									"lt": "18.5.0",
+									"ge": "18.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.16.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node14"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.20.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

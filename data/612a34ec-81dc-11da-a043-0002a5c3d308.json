@@ -1,0 +1,84 @@
+{
+	"id": "612a34ec-81dc-11da-a043-0002a5c3d308",
+	"advisories": [
+		{
+			"id": "612a34ec-81dc-11da-a043-0002a5c3d308",
+			"title": "clamav -- possible heap overflow in the UPX code",
+			"description": "\n\t<p>The Zero Day Initiative reports:</p>\n\t<blockquote cite=\"http://www.zerodayinitiative.com/advisories/ZDI-06-001.html\">\n\t  <p>This vulnerability allows remote attackers to execute\n\t    arbitrary code on vulnerable Clam AntiVirus\n\t    installations. Authentication is not required to exploit\n\t    this vulnerability.</p>\n\t  <p>This specific flaw exists within libclamav/upx.c during\n\t    the unpacking of executable files compressed with UPX. Due\n\t    to an invalid size calculation during a data copy from the\n\t    user-controlled file to heap allocated memory, an\n\t    exploitable memory corruption condition is created.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lurker.clamav.net/message/20060109.213247.a16ae8db.en.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/18379/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/16191"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zerodayinitiative.com/advisories/ZDI-06-001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/612a34ec-81dc-11da-a043-0002a5c3d308.html"
+				}
+			],
+			"published": "2006-01-10T00:00:00Z",
+			"modified": "2006-01-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0162",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0162"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.88"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20060110"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

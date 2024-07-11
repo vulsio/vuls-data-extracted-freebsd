@@ -1,0 +1,100 @@
+{
+	"id": "8c93e997-30e0-11e0-b300-485d605f4717",
+	"advisories": [
+		{
+			"id": "8c93e997-30e0-11e0-b300-485d605f4717",
+			"title": "wordpress -- SQL injection vulnerability",
+			"description": "\n\t<p>Vendor reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4257\">\n\t  <p>SQL injection vulnerability in the do_trackbacks function in\n\t    wp-includes/comment.php in WordPress before 3.0.2 allows remote\n\t    authenticated users to execute arbitrary SQL commands via the Send\n\t    Trackbacks field.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cvedetails.com/cve/CVE-2010-4257/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8c93e997-30e0-11e0-b300-485d605f4717.html"
+				}
+			],
+			"published": "2011-02-05T00:00:00Z",
+			"modified": "2011-02-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-4257",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-4257"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.2,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "de-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-wordpress-zh_CN"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-wordpress-zh_TW"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

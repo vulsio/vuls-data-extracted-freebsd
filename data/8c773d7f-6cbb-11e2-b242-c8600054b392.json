@@ -1,0 +1,144 @@
+{
+	"id": "8c773d7f-6cbb-11e2-b242-c8600054b392",
+	"advisories": [
+		{
+			"id": "8c773d7f-6cbb-11e2-b242-c8600054b392",
+			"title": "mysql/mariadb/percona server -- multiple vulnerabilities",
+			"description": "\n\t<p>ORACLE reports:</p>\n\t<blockquote cite=\"http://www.oracle.com/technetwork/topics/security/cpujan2013-1515902.html\">\n\t  <p>Multiple SQL injection vulnerabilities in the replication code</p>\n\t  <p>Stack-based buffer overflow</p>\n\t  <p>Heap-based buffer overflow</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mysqlperformanceblog.com/2013/01/23/announcing-percona-server-5-5-29-29-4/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.atlassian.net/browse/MDEV-4029"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.atlassian.net/browse/MDEV-MDEV-729"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.atlassian.net/browse/MDEV-MDEV-729"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8c773d7f-6cbb-11e2-b242-c8600054b392.html"
+				}
+			],
+			"published": "2013-02-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4414",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4414"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5611",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5611"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5612",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5612"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5615",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5615"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5627",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5627"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.1.67",
+									"ge": "5.1"
+								},
+								{
+									"lt": "5.5.29",
+									"ge": "5.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.3.12",
+									"ge": "5.3"
+								},
+								{
+									"lt": "5.5.29",
+									"ge": "5.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "percona-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.29.29.4",
+									"ge": "5.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,111 @@
+{
+	"id": "08de38d2-e2d0-11ea-9538-0c9d925bbbc0",
+	"advisories": [
+		{
+			"id": "08de38d2-e2d0-11ea-9538-0c9d925bbbc0",
+			"title": "adns -- multiple vulnerabilities",
+			"description": "\n\t<p>Ian Jackson and the adns project reports:</p>\n\t<blockquote cite=\"https://www.chiark.greenend.org.uk/pipermail/adns-announce/2020/000004.html\">\n\t<p>Vulnerable applications: all adns callers.\n\t  Exploitable by: the local recursive resolver.\n\t  Likely worst case: Remote code execution.</p>\n\t<p>Vulnerable applications: those that make SOA queries.\n\t  Exploitable by: upstream DNS data sources.\n\t  Likely worst case: DoS (crash of the adns-using application)</p>\n\t<p>Vulnerable applications: those that use adns_qf_quoteok_query.\n\t  Exploitable by: sources of query domain names.\n\t  Likely worst case: DoS (crash of the adns-using application)</p>\n\t<p>Vulnerable applications: adnshost.\n\t  Exploitable by: code responsible for framing the input.\n\t  Likely worst case: DoS (adnshost crashes at EOF).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.chiark.greenend.org.uk/pipermail/adns-announce/2020/000004.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/08de38d2-e2d0-11ea-9538-0c9d925bbbc0.html"
+				}
+			],
+			"published": "2020-08-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-9103",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9103"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9104",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9104"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9105",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9105"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9106",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9106"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9107",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9107"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9108",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9108"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9109",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9109"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "adns"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

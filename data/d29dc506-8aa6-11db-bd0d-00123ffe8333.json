@@ -1,0 +1,65 @@
+{
+	"id": "d29dc506-8aa6-11db-bd0d-00123ffe8333",
+	"advisories": [
+		{
+			"id": "d29dc506-8aa6-11db-bd0d-00123ffe8333",
+			"title": "wv -- Multiple Integer Overflow Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/22595/\">\n\t  <p>Some vulnerabilities have been reported in wvWare, which can be\n\t    exploited by malicious people to cause a DoS (Denial of Service)\n\t    and potentially compromise an application using the library.</p>\n\t  <p>The vulnerabilities are caused due to integer overflows within\n\t    the \"wvGetLFO_records()\" and \"wvGetLFO_PLF()\" functions. These can\n\t    be exploited to cause heap-based buffer overflows by e.g. tricking\n\t    a user to open a specially crafted Microsoft Word document with an\n\t    application using the library.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=433"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=434"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/22595/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d29dc506-8aa6-11db-bd0d-00123ffe8333.html"
+				}
+			],
+			"published": "2006-12-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-4513",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4513"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wv"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,75 @@
+{
+	"id": "856a6f84-8b30-11de-8062-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "856a6f84-8b30-11de-8062-00e0815b8da8",
+			"title": "GnuTLS -- improper SSL certificate verification",
+			"description": "\n\t<p>GnuTLS reports:</p>\n\t<blockquote cite=\"http://article.gmane.org/gmane.network.gnutls.general/1733\">\n\t  <p>By using a NUL byte in CN/SAN fields, it was possible to fool\n\t    GnuTLS into 1) not printing the entire CN/SAN field value when\n\t    printing a certificate and 2) cause incorrect positive matches\n\t    when matching a hostname against a certificate.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.network.gnutls.general/1733"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/36266"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/856a6f84-8b30-11de-8062-00e0815b8da8.html"
+				}
+			],
+			"published": "2009-08-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-2730",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-2730"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.9.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

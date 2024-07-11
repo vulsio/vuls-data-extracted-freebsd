@@ -1,0 +1,265 @@
+{
+	"id": "5764c634-10d2-11e6-94fa-002590263bf5",
+	"advisories": [
+		{
+			"id": "5764c634-10d2-11e6-94fa-002590263bf5",
+			"title": "php -- multiple vulnerabilities",
+			"description": "\n\t<p>The PHP Group reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php#5.5.35\">\n\t  <ul><li>BCMath:\n\t  <ul>\n\t    <li>Fixed bug #72093 (bcpowmod accepts negative scale and corrupts\n\t      _one_ definition).</li>\n\t  </ul></li>\n\t  <li>Exif:\n\t  <ul>\n\t    <li>Fixed bug #72094 (Out of bounds heap read access in exif header\n\t      processing).</li>\n\t  </ul></li>\n\t  <li>GD:\n\t  <ul>\n\t    <li>Fixed bug #71912 (libgd: signedness vulnerability).\n\t      (CVE-2016-3074)</li>\n\t  </ul></li>\n\t  <li>Intl:\n\t  <ul>\n\t    <li>Fixed bug #72061 (Out-of-bounds reads in zif_grapheme_stripos\n\t      with negative offset).</li>\n\t  </ul></li>\n\t  <li>XML:\n\t  <ul>\n\t    <li>Fixed bug #72099 (xml_parse_into_struct segmentation fault).\n\t      </li>\n\t  </ul></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.5.35"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.6.21"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-7.php#7.0.6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209145"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5764c634-10d2-11e6-94fa-002590263bf5.html"
+				}
+			],
+			"published": "2016-05-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-3074",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3074"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php70"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php70-bcmath"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php70-exif"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php70-gd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php70-xml"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-bcmath"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-exif"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-gd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-xml"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.35"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-bcmath"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.35"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-exif"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.35"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-gd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.35"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-xml"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.35"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

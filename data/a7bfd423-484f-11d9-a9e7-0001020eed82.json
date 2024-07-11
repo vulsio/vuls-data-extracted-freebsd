@@ -1,0 +1,69 @@
+{
+	"id": "a7bfd423-484f-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "a7bfd423-484f-11d9-a9e7-0001020eed82",
+			"title": "cscope -- symlink attack vulnerability",
+			"description": "\n\t<p>cscope is vulnerable to a symlink attack which could lead\n\t  to an attacker overwriting arbitrary files with the\n\t  permissions of the user running cscope.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110072752707293"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110133485519690"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/tracker/index.php?func=detail&aid=1062807&group_id=4664&atid=104664"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11697"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a7bfd423-484f-11d9-a9e7-0001020eed82.html"
+				}
+			],
+			"published": "2004-12-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0996",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0996"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cscope"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "15.5_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

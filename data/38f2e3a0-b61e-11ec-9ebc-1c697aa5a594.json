@@ -1,0 +1,62 @@
+{
+	"id": "38f2e3a0-b61e-11ec-9ebc-1c697aa5a594",
+	"advisories": [
+		{
+			"id": "38f2e3a0-b61e-11ec-9ebc-1c697aa5a594",
+			"title": "FreeBSD -- zlib compression out-of-bounds write",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Certain inputs can cause zlib's compression routine to overwrite an\n\tinternal buffer with compressed data.  This issue may require the use\n\tof uncommon or non-default compression parameters.</p>\n\t<h1>Impact:</h1>\n\t<p>The out-of-bounds write may result in memory corruption and an\n\tapplication crash or kernel panic.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-22:08.zlib.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/38f2e3a0-b61e-11ec-9ebc-1c697aa5a594.html"
+				}
+			],
+			"published": "2022-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-25032",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-25032"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.0_11",
+									"ge": "13.0"
+								},
+								{
+									"lt": "12.3_5",
+									"ge": "12.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

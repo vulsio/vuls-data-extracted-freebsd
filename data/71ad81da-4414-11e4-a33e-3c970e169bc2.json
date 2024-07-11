@@ -1,0 +1,153 @@
+{
+	"id": "71ad81da-4414-11e4-a33e-3c970e169bc2",
+	"advisories": [
+		{
+			"id": "71ad81da-4414-11e4-a33e-3c970e169bc2",
+			"title": "bash -- remote code execution vulnerability",
+			"description": "\n\t<p>Chet Ramey reports:</p>\n\t<blockquote cite=\"https://lists.gnu.org/archive/html/bug-bash/2014-09/msg00081.html\">\n\t  <p>Under certain circumstances, bash will execute user code\n\t    while processing the environment for exported function\n\t    definitions.</p>\n\t</blockquote>\n\t<p>The original fix released for CVE-2014-6271 was not adequate. A\n\t  similar vulnerability was discovered and tagged as CVE-2014-7169.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2014/q3/690"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.gnu.org/archive/html/bug-bash/2014-09/msg00081.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://securityblog.redhat.com/2014/09/24/bash-specially-crafted-environment-variables-code-injection-attack/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/71ad81da-4414-11e4-a33e-3c970e169bc2.html"
+				}
+			],
+			"published": "2014-09-24T00:00:00Z",
+			"modified": "2014-09-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-6271",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6271"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-7169",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-7169"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bash"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "3.0.17",
+									"gt": "3.0"
+								},
+								{
+									"le": "3.1.18",
+									"gt": "3.1"
+								},
+								{
+									"le": "3.2.52",
+									"gt": "3.2"
+								},
+								{
+									"le": "4.0.39",
+									"gt": "4.0"
+								},
+								{
+									"le": "4.1.12",
+									"gt": "4.1"
+								},
+								{
+									"le": "4.2.48",
+									"gt": "4.2"
+								},
+								{
+									"lt": "4.3.25_1",
+									"gt": "4.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bash-static"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "3.0.17",
+									"gt": "3.0"
+								},
+								{
+									"le": "3.1.18",
+									"gt": "3.1"
+								},
+								{
+									"le": "3.2.52",
+									"gt": "3.2"
+								},
+								{
+									"le": "4.0.39",
+									"gt": "4.0"
+								},
+								{
+									"le": "4.1.12",
+									"gt": "4.1"
+								},
+								{
+									"le": "4.2.48",
+									"gt": "4.2"
+								},
+								{
+									"lt": "4.3.25_1",
+									"gt": "4.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux_base-c6"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.5_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

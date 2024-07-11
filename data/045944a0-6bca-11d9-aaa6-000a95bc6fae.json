@@ -1,0 +1,51 @@
+{
+	"id": "045944a0-6bca-11d9-aaa6-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "045944a0-6bca-11d9-aaa6-000a95bc6fae",
+			"title": "sudo -- environmental variable CDPATH is not cleared",
+			"description": "\n\t<p>A sudo bug report says:</p>\n\t<blockquote cite=\"http://www.sudo.ws/bugs/show_bug.cgi?id=155\">\n\t  <p>sudo doesn't unset the CDPATH variable, which leads to\n\t    possible security problems.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sudo.ws/bugs/show_bug.cgi?id=155"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sudo.ws/pipermail/sudo-announce/2004-November/000044.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/045944a0-6bca-11d9-aaa6-000a95bc6fae.html"
+				}
+			],
+			"published": "2005-01-21T00:00:00Z",
+			"modified": "2013-06-19T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sudo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.8.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

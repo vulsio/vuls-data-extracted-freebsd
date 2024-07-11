@@ -1,0 +1,66 @@
+{
+	"id": "7e3d3e9a-7d8f-11e7-a02b-d43d7ef03aa6",
+	"advisories": [
+		{
+			"id": "7e3d3e9a-7d8f-11e7-a02b-d43d7ef03aa6",
+			"title": "Flash Player -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb17-23.html\">\n\t  <ul>\n\t    <li>These updates resolve security bypass vulnerability that\n\t      could lead to information disclosure (CVE-2017-3085).</li>\n\t    <li>These updates resolve type confusion vulnerability that\n\t      could lead to remote code execution (CVE-2017-3106).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb17-23.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7e3d3e9a-7d8f-11e7-a02b-d43d7ef03aa6.html"
+				}
+			],
+			"published": "2017-08-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-3085",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3085"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3106",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3106"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "26.0.0.151"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

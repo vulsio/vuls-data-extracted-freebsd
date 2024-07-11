@@ -1,0 +1,90 @@
+{
+	"id": "ed8d5535-ca78-11e9-980b-999ff59c22ea",
+	"advisories": [
+		{
+			"id": "ed8d5535-ca78-11e9-980b-999ff59c22ea",
+			"title": "RDoc -- multiple jQuery vulnerabilities",
+			"description": "\n\t<p>Ruby news:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2019/08/28/multiple-jquery-vulnerabilities-in-rdoc/\">\n\t  <p>There are multiple vulnerabilities about Cross-Site Scripting (XSS) in\n\t    jQuery shipped with RDoc which bundled in Ruby. All Ruby users are\n\t    recommended to update Ruby to the latest release which includes the\n\t    fixed version of RDoc.</p>\n\t  <p>The following vulnerabilities have been reported.</p>\n\t  <p>CVE-2012-6708</p>\n\t  <p>CVE-2015-9251</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.ruby-lang.org/en/news/2019/08/28/multiple-jquery-vulnerabilities-in-rdoc/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ed8d5535-ca78-11e9-980b-999ff59c22ea.html"
+				}
+			],
+			"published": "2019-08-29T00:00:00Z",
+			"modified": "2019-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-6708",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-6708"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-9251",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-9251"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.7,1",
+									"ge": "2.4.0,1"
+								},
+								{
+									"lt": "2.5.6,1",
+									"ge": "2.5.0,1"
+								},
+								{
+									"lt": "2.6.3,1",
+									"ge": "2.6.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rdoc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.1.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

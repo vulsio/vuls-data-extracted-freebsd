@@ -1,0 +1,62 @@
+{
+	"id": "8aa6340d-e7c6-41e0-b2a3-3c9e9930312a",
+	"advisories": [
+		{
+			"id": "8aa6340d-e7c6-41e0-b2a3-3c9e9930312a",
+			"title": "py39-redis -- can send response data to the client of an unrelated request",
+			"description": "\n    <p>drago-balto reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-8fww-64cx-x8p5\">\n      <p>redis-py through 4.5.3 and 4.4.3 leaves a connection open after canceling an async Redis command at an inopportune time (in the case of a non-pipeline operation), and can send response data to the client of an unrelated request.</p>\n      <p>NOTE: this issue exists because of an incomplete fix for CVE-2023-28858.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-8fww-64cx-x8p5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8aa6340d-e7c6-41e0-b2a3-3c9e9930312a.html"
+				}
+			],
+			"published": "2023-04-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28859",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28859"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.4",
+									"ge": "4.4.0"
+								},
+								{
+									"lt": "4.5.4",
+									"ge": "4.5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

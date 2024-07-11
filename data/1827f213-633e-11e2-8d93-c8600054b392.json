@@ -1,0 +1,60 @@
+{
+	"id": "1827f213-633e-11e2-8d93-c8600054b392",
+	"advisories": [
+		{
+			"id": "1827f213-633e-11e2-8d93-c8600054b392",
+			"title": "drupal -- multiple vulnerabilities",
+			"description": "\n\t<p>Drupal Security Team reports:</p>\n\t<blockquote cite=\"https://drupal.org/SA-CORE-2013-001\">\n\t  <p>Cross-site scripting (Various core and contributed modules)</p>\n\t  <p>Access bypass (Book module printer friendly version)</p>\n\t  <p>Access bypass (Image module)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://drupal.org/SA-CORE-2013-001"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1827f213-633e-11e2-8d93-c8600054b392.html"
+				}
+			],
+			"published": "2013-01-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal6"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.19"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

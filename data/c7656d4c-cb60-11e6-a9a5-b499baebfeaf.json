@@ -1,0 +1,75 @@
+{
+	"id": "c7656d4c-cb60-11e6-a9a5-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "c7656d4c-cb60-11e6-a9a5-b499baebfeaf",
+			"title": "phpmailer -- Remote Code Execution",
+			"description": "\n\t<p>Legal Hackers reports:</p>\n\t<blockquote cite=\"http://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10033-Vuln.html\">\n\t  <p>An independent research uncovered a critical vulnerability in\n\t    PHPMailer that could potentially be used by (unauthenticated)\n\t    remote attackers to achieve remote arbitrary code execution in\n\t    the context of the web server user and remotely compromise the\n\t    target web application.</p>\n\t  <p>To exploit the vulnerability an attacker could target common\n\t    website components such as contact/feedback forms, registration\n\t    forms, password email resets and others that send out emails with\n\t    the help of a vulnerable version of the PHPMailer class.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10033-Vuln.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/PHPMailer/PHPMailer/blob/master/SECURITY.md"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c7656d4c-cb60-11e6-a9a5-b499baebfeaf.html"
+				}
+			],
+			"published": "2016-12-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10033",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10033"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpmailer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.18"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tt-rss"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "26.12.2016.07.29"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

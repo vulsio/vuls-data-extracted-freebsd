@@ -1,0 +1,61 @@
+{
+	"id": "28022228-5a0e-11df-942d-0015587e2cc1",
+	"advisories": [
+		{
+			"id": "28022228-5a0e-11df-942d-0015587e2cc1",
+			"title": "wireshark -- DOCSIS dissector denial of service",
+			"description": "\n\t<p>A vulnerability found in the DOCSIS dissector can cause\n\t  Wireshark to crash when a malformed packet trace file is\n\t  opened. This means that an attacker will have to trick a\n\t  victim into opening such a trace file before being able\n\t  to crash the application</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2010-03.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2010-04.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/28022228-5a0e-11df-942d-0015587e2cc1.html"
+				}
+			],
+			"published": "2010-05-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1455",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1455"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wireshark"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.2.6_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

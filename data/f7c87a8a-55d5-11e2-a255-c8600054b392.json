@@ -1,0 +1,105 @@
+{
+	"id": "f7c87a8a-55d5-11e2-a255-c8600054b392",
+	"advisories": [
+		{
+			"id": "f7c87a8a-55d5-11e2-a255-c8600054b392",
+			"title": "asterisk -- multiple vulnerabilities",
+			"description": "\n\t<p>Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/security\">\n\t  <p>Crashes due to large stack allocations when using TCP</p>\n\t  <p>Denial of Service Through Exploitation of Device State Caching</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.digium.com/pub/security/AST-2012-014.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.digium.com/pub/security/AST-2012-015.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.asterisk.org/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f7c87a8a-55d5-11e2-a255-c8600054b392.html"
+				}
+			],
+			"published": "2013-01-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5976",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5976"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5977",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5977"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.1.2",
+									"gt": "11.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk10"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.11.1",
+									"gt": "10.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.19.1",
+									"gt": "1.8.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

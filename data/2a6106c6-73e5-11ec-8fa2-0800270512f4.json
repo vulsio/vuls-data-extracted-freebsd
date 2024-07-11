@@ -1,0 +1,71 @@
+{
+	"id": "2a6106c6-73e5-11ec-8fa2-0800270512f4",
+	"advisories": [
+		{
+			"id": "2a6106c6-73e5-11ec-8fa2-0800270512f4",
+			"title": "clamav -- invalid pointer read that may cause a crash",
+			"description": "\n\t<p>Laurent Delosieres reports:</p>\n\t<blockquote cite=\"https://blog.clamav.net/2022/01/clamav-01035-and-01042-security-patch.html\">\n\t  <p>\n\t    Fix for invalid pointer read that may cause a crash. This issue affects\n\t    0.104.1, 0.103.4 and prior when ClamAV is compiled with libjson-c and the\n\t    <code>CL_SCAN_GENERAL_COLLECT_METADATA</code> scan option\n\t    (the <code>clamscan --gen-json</code> option) is enabled.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.clamav.net/2022/01/clamav-01035-and-01042-security-patch.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a6106c6-73e5-11ec-8fa2-0800270512f4.html"
+				}
+			],
+			"published": "2022-01-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-20698",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-20698"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.104.2,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav-lts"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.103.5,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

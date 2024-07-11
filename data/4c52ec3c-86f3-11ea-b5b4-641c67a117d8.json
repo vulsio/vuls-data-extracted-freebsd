@@ -1,0 +1,121 @@
+{
+	"id": "4c52ec3c-86f3-11ea-b5b4-641c67a117d8",
+	"advisories": [
+		{
+			"id": "4c52ec3c-86f3-11ea-b5b4-641c67a117d8",
+			"title": "py-bleach -- regular expression denial-of-service",
+			"description": "\n\t<p>Bleach developers reports:</p>\n\t<blockquote cite=\"https://github.com/mozilla/bleach/security/advisories/GHSA-vqhp-cxgc-6wmm\">\n\t  <p>bleach.clean behavior parsing style attributes could result in a\n\t    regular expression denial of service (ReDoS).</p>\n\t  <p>Calls to bleach.clean with an allowed tag with an allowed style\n\t    attribute are vulnerable to ReDoS. For example, bleach.clean(...,\n\t    attributes={'a': ['style']}).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=245943"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1623633"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/mozilla/bleach/security/advisories/GHSA-vqhp-cxgc-6wmm"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4c52ec3c-86f3-11ea-b5b4-641c67a117d8.html"
+				}
+			],
+			"published": "2020-04-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-6817",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-6817"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-bleach"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py35-bleach"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py36-bleach"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-bleach"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-bleach"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,81 @@
+{
+	"id": "aa7764af-0b5e-4ddc-bc65-38ad697a484f",
+	"advisories": [
+		{
+			"id": "aa7764af-0b5e-4ddc-bc65-38ad697a484f",
+			"title": "rubygem-dragonfly -- arbitrary code execution",
+			"description": "\n\t<p>Mark Evans reports:</p>\n\t<blockquote cite=\"https://groups.google.com/forum/?fromgroups=#!topic/dragonfly-users/3c3WIU3VQTo\">\n\t  <p>Unfortnately there is a security vulnerability in Dragonfly when\n\t      used with Rails which would potentially allow an attacker to run\n\t     arbitrary code on a host machine using carefully crafted\n\t     requests.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/aa7764af-0b5e-4ddc-bc65-38ad697a484f.html"
+				}
+			],
+			"published": "2013-02-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1756",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1756"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem18-dragonfly"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.14"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem19-dragonfly"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.14"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem20-dragonfly"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.14"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

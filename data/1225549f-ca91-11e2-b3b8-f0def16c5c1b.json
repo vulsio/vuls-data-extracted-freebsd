@@ -1,0 +1,57 @@
+{
+	"id": "1225549f-ca91-11e2-b3b8-f0def16c5c1b",
+	"advisories": [
+		{
+			"id": "1225549f-ca91-11e2-b3b8-f0def16c5c1b",
+			"title": "passenger -- security vulnerability",
+			"description": "\n\t<p>The Phusion reports:</p>\n\t<blockquote cite=\"http://blog.phusion.nl/2013/05/29/phusion-passenger-4-0-5-released/\">\n\t  <p>A denial of service and arbitrary code execution by hijacking temp files. [CVE-2013-2119]</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.phusion.nl/2013/05/29/phusion-passenger-4-0-5-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1225549f-ca91-11e2-b3b8-f0def16c5c1b.html"
+				}
+			],
+			"published": "2013-06-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2119",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2119"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-passenger"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

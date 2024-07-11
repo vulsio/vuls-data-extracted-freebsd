@@ -1,0 +1,66 @@
+{
+	"id": "508da89c-78b9-11ed-854f-5404a68ad561",
+	"advisories": [
+		{
+			"id": "508da89c-78b9-11ed-854f-5404a68ad561",
+			"title": "traefik -- multiple vulnerabilities",
+			"description": "\n\t<p>The Traefik project reports:</p>\n\t<blockquote cite=\"https://github.com/traefik/traefik/releases/tag/v2.9.6\">\n\t  <p>This update is recommended for all traefik users and provides following important security fixes:</p>\n\t  <ul>\n\t    <li>CVE-2022-23469: Authorization header displayed in the debug logs</li>\n\t    <li>CVE-2022-46153: Routes exposed with an empty TLSOption in traefik</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/traefik/traefik/releases/tag/v2.9.6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/508da89c-78b9-11ed-854f-5404a68ad561.html"
+				}
+			],
+			"published": "2022-12-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23469",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23469"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-46153",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-46153"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "traefik"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.9.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

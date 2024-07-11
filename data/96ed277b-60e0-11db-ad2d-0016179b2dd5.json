@@ -1,0 +1,50 @@
+{
+	"id": "96ed277b-60e0-11db-ad2d-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "96ed277b-60e0-11db-ad2d-0016179b2dd5",
+			"title": "Serendipity -- XSS Vulnerabilities",
+			"description": "\n\t<p>The Serendipity Team reports:</p>\n\t<blockquote cite=\"http://blog.s9y.org/archives/147-Serendipity-1.0.2-and-1.1-beta5-released.html\">\n\t  <p>Serendipity failed to correctly sanitize user input on the\n\t    media manager administration page. The content of GET variables\n\t    were written into JavaScript strings. By using standard string\n\t    evasion techniques it was possible to execute arbitrary\n\t    JavaScript.</p>\n\t  <p>Additionally Serendipity dynamically created a HTML form on\n\t    the media manager administration page that contained all\n\t    variables found in the URL as hidden fields. While the variable\n\t    values were correctly escaped it was possible to break out\n\t    by specifying strange variable names.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/22501/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.hardened-php.net/advisory_112006.136.htmlSerendipity"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/96ed277b-60e0-11db-ad2d-0016179b2dd5.html"
+				}
+			],
+			"published": "2006-10-21T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "serendipity"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

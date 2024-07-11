@@ -1,0 +1,540 @@
+{
+	"id": "7fcf1727-be71-11db-b2ec-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "7fcf1727-be71-11db-b2ec-000c6ec775d9",
+			"title": "php -- multiple vulnerabilities",
+			"description": "\n\t<p>Multiple vulnerabilities have been found in PHP, including:\n\t  buffer overflows, stack overflows, format string, and\n\t  information disclosure vulnerabilities.</p>\n\t<p>The session extension contained <code>safe_mode</code> and\n\t  <code>open_basedir</code> bypasses, but the FreeBSD Security\n\t  Officer does not consider these real security\n\t  vulnerabilities, since <code>safe_mode</code> and\n\t  <code>open_basedir</code> are insecure by design and should\n\t  not be relied upon.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/24089/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/releases/4_4_5.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/releases/5_2_1.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7fcf1727-be71-11db-b2ec-000c6ec775d9.html"
+				}
+			],
+			"published": "2007-02-17T00:00:00Z",
+			"modified": "2013-04-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-0905",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0905"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0906",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0906"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0907",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0907"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0908",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0908"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0909",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0909"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0910",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0910"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-0988",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0988"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-imap"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-odbc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-session"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-shmop"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-sqlite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-wddx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.1_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-odbc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-session"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-shmop"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-wddx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php4-twig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-cgi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-cli"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-dtc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-horde"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-nms"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-cgi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-cli"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-dtc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-horde"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-nms"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5",
+									"ge": "4"
+								},
+								{
+									"lt": "5.2.1_2",
+									"ge": "5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

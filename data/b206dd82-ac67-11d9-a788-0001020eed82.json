@@ -1,0 +1,678 @@
+{
+	"id": "b206dd82-ac67-11d9-a788-0001020eed82",
+	"advisories": [
+		{
+			"id": "b206dd82-ac67-11d9-a788-0001020eed82",
+			"title": "openoffice -- DOC document heap overflow vulnerability",
+			"description": "\n\t<p>AD-LAB reports that a heap-based buffer overflow\n\t  vulnerability exists in OpenOffice's handling of DOC\n\t  documents.  When reading a DOC document 16 bit from a 32 bit\n\t  integer is used for memory allocation, but the full 32 bit\n\t  is used for further processing of the document.  This can\n\t  allow an attacker to crash OpenOffice, or potentially\n\t  execute arbitrary code as the user running OpenOffice, by\n\t  tricking an user into opening a specially crafted DOC\n\t  document.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111325305109137"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openoffice.org/issues/show_bug.cgi?id=46388"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/13092"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b206dd82-ac67-11d9-a788-0001020eed82.html"
+				}
+			],
+			"published": "2005-04-13T00:00:00Z",
+			"modified": "2005-04-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0941",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0941"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ar-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ca-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cs-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "de-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dk-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "el-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "es-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "et-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fi-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fr-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gr-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "hu-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "it-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ko-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nl-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pl-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pt-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pt_BR-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "se-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sk-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sl-openoffice-SI"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tr-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-openoffice-CN"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-openoffice-TW"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jp-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kr-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sl-openoffice-SL"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh_TW-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.4_2"
+								},
+								{
+									"le": "2.0.20050406",
+									"gt": "2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "6.0.a638",
+									"ge": "6.0.a609"
+								},
+								{
+									"le": "645",
+									"ge": "641c"
+								},
+								{
+									"eq": "1.1RC4"
+								},
+								{
+									"eq": "1.1rc5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-openoffice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "6.0.a638",
+									"ge": "6.0.a609"
+								},
+								{
+									"le": "645",
+									"ge": "641c"
+								},
+								{
+									"eq": "1.1RC4"
+								},
+								{
+									"eq": "1.1rc5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

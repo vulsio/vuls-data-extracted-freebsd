@@ -1,0 +1,75 @@
+{
+	"id": "f5fa174d-19de-11ef-83d8-4ccc6adda413",
+	"advisories": [
+		{
+			"id": "f5fa174d-19de-11ef-83d8-4ccc6adda413",
+			"title": "QtNetworkAuth -- predictable seeding of PRNG in QAbstractOAuth",
+			"description": "\n\t<p>Andy Shaw reports:</p>\n\t<blockquote cite=\"https://www.qt.io/blog/security-advisory-qstringconverter-0\">\n\t  <p>The OAuth1 implementation in QtNetworkAuth created nonces using\n\t    a PRNG that was seeded with a predictable seed.</p>\n\t  <p>This means that an attacker that can somehow control the time of\n\t    the first OAuth1 flow of the process has a high chance of predicting\n\t    the nonce used in said OAuth flow.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://codereview.qt-project.org/c/qt/qtnetworkauth/+/560317"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.qt.io/blog/security-advisory-qstringconverter-0"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f5fa174d-19de-11ef-83d8-4ccc6adda413.html"
+				}
+			],
+			"published": "2024-05-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-36048",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-36048"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-networkauth"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.15.13_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt6-networkauth"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.7.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

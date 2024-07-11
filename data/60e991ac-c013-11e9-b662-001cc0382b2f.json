@@ -1,0 +1,66 @@
+{
+	"id": "60e991ac-c013-11e9-b662-001cc0382b2f",
+	"advisories": [
+		{
+			"id": "60e991ac-c013-11e9-b662-001cc0382b2f",
+			"title": "CUPS -- multiple vulnerabilities",
+			"description": "\n\t<p>Apple reports:</p>\n\t<blockquote cite=\"https://github.com/apple/cups/releases/tag/v2.2.12\">\n\t  <ul>\n\t    <li>CVE-2019-8696 and CVE-2019-8675: SNMP buffer overflows.</li>\n\t    <li>IPP buffer overflow.</li>\n\t    <li>Memory disclosure in the scheduler.</li>\n\t    <li>DoS issues in the scheduler.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/apple/cups/releases/tag/v2.2.12"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/60e991ac-c013-11e9-b662-001cc0382b2f.html"
+				}
+			],
+			"published": "2019-08-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-8675",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8675"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8696",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8696"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cups"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.12"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

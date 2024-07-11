@@ -1,0 +1,102 @@
+{
+	"id": "27c331d5-64c7-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "27c331d5-64c7-11d8-80e3-0020ed76ef5a",
+			"title": "Vulnerabilities in H.323 implementations",
+			"description": "\n\t<p>The <a href=\"http://www.niscc.gov.uk/\">NISCC</a> and the <a href=\"http://www.ee.oulu.fi/research/ouspg/\">OUSPG</a>\n\t  developed a test suite for the H.323 protocol.  This test\n\t  suite has uncovered vulnerabilities in several H.323\n\t  implementations with impacts ranging from denial-of-service\n\t  to arbitrary code execution.</p>\n\t<p>In the FreeBSD Ports Collection, `pwlib' is directly\n\t  affected.  Other applications such as `asterisk' and\n\t  `openh323' incorporate `pwlib' statically and so are also\n\t  independently affected.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cert.org/advisories/CA-2004-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ee.oulu.fi/research/ouspg/protos/testing/c07/h2250v4/index.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.southeren.com/blog/archives/000055.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.uniras.gov.uk/vuls/2004/006489/h323.htm"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/749342"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/27c331d5-64c7-11d8-80e3-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-02-22T00:00:00Z",
+			"modified": "2004-06-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0097",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0097"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pwlib"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.0_5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "0.7.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openh323"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.12.0_4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

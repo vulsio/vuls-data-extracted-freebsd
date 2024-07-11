@@ -1,0 +1,50 @@
+{
+	"id": "d0b12952-cb86-11e6-906f-0cc47a065786",
+	"advisories": [
+		{
+			"id": "d0b12952-cb86-11e6-906f-0cc47a065786",
+			"title": "h2o -- Use-after-free vulnerability",
+			"description": "\n\t<p>Kazuho Oku reports:</p>\n\t<blockquote cite=\"https://github.com/h2o/h2o/issues?q=label%3Avulnerability\">\n\t  <p>A use-after-free vulnerability exists in H2O up to and including\n\t    version 2.0.4 / 2.1.0-beta3 that can be used by a remote attacker to\n\t    mount DoS attacks and / or information theft.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/h2o/h2o/issues/1144"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/h2o/h2o/releases/tag/v2.0.5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d0b12952-cb86-11e6-906f-0cc47a065786.html"
+				}
+			],
+			"published": "2016-12-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "h2o"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.4_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

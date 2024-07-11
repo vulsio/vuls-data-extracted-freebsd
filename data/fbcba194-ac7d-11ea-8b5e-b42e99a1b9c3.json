@@ -1,0 +1,57 @@
+{
+	"id": "fbcba194-ac7d-11ea-8b5e-b42e99a1b9c3",
+	"advisories": [
+		{
+			"id": "fbcba194-ac7d-11ea-8b5e-b42e99a1b9c3",
+			"title": "Intel CPU issues",
+			"description": "\n\t<p>Intel reports:</p>\n\t<blockquote cite=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00320.html\">\n\t  <p>Intel CPUs suffer Special Register Buffer Data Sampling vulnerability</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://software.intel.com/security-software-guidance/insights/processors-affected-special-register-buffer-data-sampling"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fbcba194-ac7d-11ea-8b5e-b42e99a1b9c3.html"
+				}
+			],
+			"published": "2020-12-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-0543",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-0543"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "devcpu-data"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.31"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

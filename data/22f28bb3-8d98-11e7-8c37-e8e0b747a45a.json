@@ -1,0 +1,61 @@
+{
+	"id": "22f28bb3-8d98-11e7-8c37-e8e0b747a45a",
+	"advisories": [
+		{
+			"id": "22f28bb3-8d98-11e7-8c37-e8e0b747a45a",
+			"title": "libgcrypt -- side-channel attack vulnerability",
+			"description": "\n\t<p>GnuPG reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0379\">\n\t  <p>Mitigate a local side-channel attack on Curve25519 dubbed \"May the Fourth Be With You\".</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0379"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://eprint.iacr.org/2017/806"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/22f28bb3-8d98-11e7-8c37-e8e0b747a45a.html"
+				}
+			],
+			"published": "2017-08-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-0379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0379"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

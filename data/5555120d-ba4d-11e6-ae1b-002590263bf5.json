@@ -1,0 +1,62 @@
+{
+	"id": "5555120d-ba4d-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "5555120d-ba4d-11e6-ae1b-002590263bf5",
+			"title": "xen-kernel -- guest 32-bit ELF symbol table load leaking host data",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"https://xenbits.xen.org/xsa/advisory-194.html\">\n\t  <p>Along with their main kernel binary, unprivileged guests may\n\t    arrange to have their Xen environment load (kernel) symbol tables\n\t    for their use. The ELF image metadata created for this purpose has a\n\t    few unused bytes when the symbol table binary is in 32-bit ELF\n\t    format. These unused bytes were not properly cleared during symbol\n\t    table loading.</p>\n\t  <p>A malicious unprivileged guest may be able to obtain sensitive\n\t    information from the host.</p>\n\t  <p>The information leak is small and not under the control of the\n\t    guest, so effectively exploiting this vulnerability is probably\n\t    difficult.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=214936"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5555120d-ba4d-11e6-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://xenbits.xen.org/xsa/advisory-194.html"
+				}
+			],
+			"published": "2016-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9384",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9384"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xen-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.7.1",
+									"ge": "4.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

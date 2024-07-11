@@ -1,0 +1,94 @@
+{
+	"id": "5ab54ea0-fa94-11ec-996c-080027b24e86",
+	"advisories": [
+		{
+			"id": "5ab54ea0-fa94-11ec-996c-080027b24e86",
+			"title": "mediawiki -- multiple vulnerabilities",
+			"description": "\n\t<p>Mediawiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/PIPYDRSHXOYW5DB7X755QDNUV5EZWPWB/\">\n\t  <p>(T308471) Username is not escaped in the \"welcomeuser\" message.</p>\n\t  <p>(T308473) Username not escaped in the contributions-title message.</p>\n\t  <p>(T309377, CVE-2022-29248) Update \"guzzlehttp/guzzle\" to version 6.5.6.</p>\n\t  <p>(T311384, CVE-2022-27776) Update \"guzzlehttp/guzzle\" to 6.5.8/7.4.5.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/PIPYDRSHXOYW5DB7X755QDNUV5EZWPWB/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5ab54ea0-fa94-11ec-996c-080027b24e86.html"
+				}
+			],
+			"published": "2022-07-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-27776",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27776"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-29248",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-29248"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki135"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.35.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki137"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.37.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki138"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.38.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

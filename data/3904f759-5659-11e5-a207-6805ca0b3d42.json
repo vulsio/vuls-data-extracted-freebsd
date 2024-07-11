@@ -1,0 +1,58 @@
+{
+	"id": "3904f759-5659-11e5-a207-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "3904f759-5659-11e5-a207-6805ca0b3d42",
+			"title": "phpMyAdmin -- reCaptcha bypass",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"https://www.phpmyadmin.net/security/PMASA-2015-4/\">\n\t  <p>This vulnerability allows to complete the reCaptcha test\n\t    and subsequently perform a brute force attack to guess user\n\t    credentials without having to complete further reCaptcha\n\t    tests.</p>\n\n\t  <p>We consider this vulnerability to be non critical since\n\t    reCaptcha is an additional opt-in security measure.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.phpmyadmin.net/security/PMASA-2015-4/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3904f759-5659-11e5-a207-6805ca0b3d42.html"
+				}
+			],
+			"published": "2015-09-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-6830",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6830"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.14.1",
+									"ge": "4.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,57 @@
+{
+	"id": "af19ecd0-0f6a-11e7-970f-002590263bf5",
+	"advisories": [
+		{
+			"id": "af19ecd0-0f6a-11e7-970f-002590263bf5",
+			"title": "xen-tools -- Cirrus VGA Heap overflow via display refresh",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-211.html\">\n\t  <p>A privileged user within the guest VM can cause a heap overflow in\n\t    the device model process, potentially escalating their privileges to\n\t    that of the device model process.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xenbits.xen.org/xsa/advisory-211.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/af19ecd0-0f6a-11e7-970f-002590263bf5.html"
+				}
+			],
+			"published": "2017-03-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9603",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9603"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xen-tools"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.7.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,82 @@
+{
+	"id": "9b037a0d-ef2c-11e2-b4a0-8c705af55518",
+	"advisories": [
+		{
+			"id": "9b037a0d-ef2c-11e2-b4a0-8c705af55518",
+			"title": "gallery -- multiple vulnerabilities",
+			"description": "\n\t<p>Red Hat Security Response Team reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2013/07/04/7\">\n\t  <p>Gallery upstream has released 3.0.9 version, correcting two\n\t    security flaws:</p>\n\t  <p>Issue #1 - Improper stripping of URL fragments in flowplayer\n\t    SWF file might lead to reply attacks (a different flaw than\n\t    CVE-2013-2138).</p>\n\t  <p>Issue #2 - gallery3: Multiple information exposure flaws in\n\t    data rest core module.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://galleryproject.org/gallery_3_0_9"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/apps/trac/gallery/ticket/2073"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/apps/trac/gallery/ticket/2074"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=981197"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=981198"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9b037a0d-ef2c-11e2-b4a0-8c705af55518.html"
+				}
+			],
+			"published": "2013-07-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2240",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2240"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2241",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2241"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gallery3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

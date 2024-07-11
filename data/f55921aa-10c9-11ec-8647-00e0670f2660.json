@@ -1,0 +1,47 @@
+{
+	"id": "f55921aa-10c9-11ec-8647-00e0670f2660",
+	"advisories": [
+		{
+			"id": "f55921aa-10c9-11ec-8647-00e0670f2660",
+			"title": "MPD5 PPPoE Server remotely exploitable crash",
+			"description": "\n\t<p>Version 5.9_2 contains security fix for PPPoE servers.\n\tInsufficient validation of incoming PPPoE Discovery request\n\tspecially crafted by unauthenticated user might lead to unexpected\n\ttermination of the process. The problem affects mpd versions\n\tsince 5.0. Installations not using PPPoE server configuration\n\twere not affected.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mpd.sourceforge.net/doc5/mpd4.html#4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f55921aa-10c9-11ec-8647-00e0670f2660.html"
+				}
+			],
+			"published": "2021-09-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mpd5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9_2",
+									"ge": "5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

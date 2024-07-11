@@ -1,0 +1,113 @@
+{
+	"id": "1a15b928-5011-4953-8133-d49e24902fe1",
+	"advisories": [
+		{
+			"id": "1a15b928-5011-4953-8133-d49e24902fe1",
+			"title": "py-WsgiDAV -- XSS vulnerability",
+			"description": "\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-xx6g-jj35-pxjv\">\n      <p>Implementations using this library with directory browsing enabled may be susceptible to Cross Site Scripting (XSS) attacks.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-xx6g-jj35-pxjv"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1a15b928-5011-4953-8133-d49e24902fe1.html"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-41905",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-41905"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-WsgiDAV"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-WsgiDAV"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-WsgiDAV"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-WsgiDAV"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-WsgiDAV"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

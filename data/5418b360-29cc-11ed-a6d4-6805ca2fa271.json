@@ -1,0 +1,63 @@
+{
+	"id": "5418b360-29cc-11ed-a6d4-6805ca2fa271",
+	"advisories": [
+		{
+			"id": "5418b360-29cc-11ed-a6d4-6805ca2fa271",
+			"title": "powerdns-recursor -- denial of service",
+			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://www.powerdns.com/news.html#20220823\">\n\t  <p>PowerDNS Security Advisory 2022-02: incomplete exception handling related to protobuf message generation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2022-02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5418b360-29cc-11ed-a6d4-6805ca2fa271.html"
+				}
+			],
+			"published": "2022-09-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-37428",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-37428"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns-recursor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.7.2"
+								},
+								{
+									"lt": "4.6.3"
+								},
+								{
+									"lt": "4.5.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

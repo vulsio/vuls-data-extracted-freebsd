@@ -1,0 +1,59 @@
+{
+	"id": "91f1adc7-b3e9-11d9-a788-0001020eed82",
+	"advisories": [
+		{
+			"id": "91f1adc7-b3e9-11d9-a788-0001020eed82",
+			"title": "kdewebdev -- kommander untrusted code execution vulnerability",
+			"description": "\n\t<p>A KDE Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.kde.org/info/security/advisory-20050420-1.txt\">\n\t  <p>Kommander executes without user confirmation data files\n\t    from possibly untrusted locations. As they contain\n\t    scripts, the user might accidentally run arbitrary\n\t    code.</p>\n\t  <p><strong>Impact:</strong> Remotly supplied kommander files\n\t    from untrusted sources are executed without\n\t    confirmation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kde.org/info/security/advisory-20050420-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/91f1adc7-b3e9-11d9-a788-0001020eed82.html"
+				}
+			],
+			"published": "2005-04-23T00:00:00Z",
+			"modified": "2008-08-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0754",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0754"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kdewebdev"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.0_1,2",
+									"gt": "3.2,2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

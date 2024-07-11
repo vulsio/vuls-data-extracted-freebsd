@@ -1,0 +1,62 @@
+{
+	"id": "a6713190-dfea-11dd-a765-0030843d3802",
+	"advisories": [
+		{
+			"id": "a6713190-dfea-11dd-a765-0030843d3802",
+			"title": "imap-uw -- local buffer overflow vulnerabilities",
+			"description": "\n\t<p>SANS reports:</p>\n\t<blockquote cite=\"http://www.sans.org/newsletters/risk/display.php?v=7&amp;i=45#08.45.22\">\n\t  <p>University of Washington \"tmail\" and \"dmail\" are mail deliver\n\t    agents. \"tmail\" and \"dmail\" are exposed to local buffer overflow\n\t    issues because they fail to perform adequate boundary checks on\n\t    user-supplied data.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sans.org/newsletters/risk/display.php?v=7&i=45#08.45.22"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.washington.edu/imap/documentation/RELNOTES.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a6713190-dfea-11dd-a765-0030843d3802.html"
+				}
+			],
+			"published": "2009-01-11T00:00:00Z",
+			"modified": "2010-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5514",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5514"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "imap-uw"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2007d"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

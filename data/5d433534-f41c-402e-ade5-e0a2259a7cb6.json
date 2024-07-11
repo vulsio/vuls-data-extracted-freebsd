@@ -1,0 +1,58 @@
+{
+	"id": "5d433534-f41c-402e-ade5-e0a2259a7cb6",
+	"advisories": [
+		{
+			"id": "5d433534-f41c-402e-ade5-e0a2259a7cb6",
+			"title": "curl -- cURL/libcURL Location: Redirect URLs Security Bypass",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/34138/\">\n\t  <p>The security issue is caused due to cURL following HTTP Location:\n\t    redirects to e.g. scp:// or file:// URLs which can be exploited\n\t    by a malicious HTTP server to overwrite or disclose the content of\n\t    arbitrary local files and potentially execute arbitrary commands via\n\t    specially crafted redirect URLs.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/34138/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5d433534-f41c-402e-ade5-e0a2259a7cb6.html"
+				}
+			],
+			"published": "2009-03-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0037",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0037"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.19.4",
+									"ge": "5.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

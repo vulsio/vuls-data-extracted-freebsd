@@ -1,0 +1,65 @@
+{
+	"id": "2d8cf857-81ea-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "2d8cf857-81ea-11d9-a9e7-0001020eed82",
+			"title": "gftp -- directory traversal vulnerability",
+			"description": "\n\t<p>A Debian Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.debian.org/security/2005/dsa-686\">\n\t  <p>Albert Puigsech Galicia discovered a directory traversal\n\t    vulnerability in a proprietary FTP client (CAN-2004-1376)\n\t    which is also present in gftp, a GTK+ FTP client.  A\n\t    malicious server could provide a specially crafted\n\t    filename that could cause arbitrary files to be\n\t    overwritten or created by the client.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2005/dsa-686"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gftp.org/changelog.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12539"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2d8cf857-81ea-11d9-a9e7-0001020eed82.html"
+				}
+			],
+			"published": "2005-02-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0372",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0372"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gftp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.18"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

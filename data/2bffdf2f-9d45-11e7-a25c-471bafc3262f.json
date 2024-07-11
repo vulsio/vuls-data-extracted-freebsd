@@ -1,0 +1,67 @@
+{
+	"id": "2bffdf2f-9d45-11e7-a25c-471bafc3262f",
+	"advisories": [
+		{
+			"id": "2bffdf2f-9d45-11e7-a25c-471bafc3262f",
+			"title": "rubygem-geminabox -- XSS & CSRF vulnerabilities",
+			"description": "\n\t<p>Gem in a box XSS vulenrability - CVE-2017-14506:</p>\n\t<blockquote cite=\"https://baraktawily.blogspot.com/2017/09/gem-in-box-xss-vulenrability-cve-2017.html\">\n\t  <p>Malicious attacker create GEM file with crafted homepage value\n\t    (gem.homepage in .gemspec file) includes XSS payload.</p>\n\t  <p>The attacker access geminabox system and uploads the gem file\n\t    (or uses CSRF/SSRF attack to do so).</p>\n\t  <p>From now on, any user access Geminabox web server, executes the\n\t    malicious XSS payload, that will delete any gems on the server,\n\t    and won't let users use the geminabox anymore. (make victim's\n\t    browser crash or redirect them to other hosts).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://baraktawily.blogspot.com/2017/09/gem-in-box-xss-vulenrability-cve-2017.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2bffdf2f-9d45-11e7-a25c-471bafc3262f.html"
+				}
+			],
+			"published": "2017-09-19T00:00:00Z",
+			"modified": "2017-09-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14506",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14506"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14683",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14683"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-geminabox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.13.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

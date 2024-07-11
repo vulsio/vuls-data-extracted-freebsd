@@ -1,0 +1,102 @@
+{
+	"id": "44224e08-8306-11dc-9283-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "44224e08-8306-11dc-9283-0016179b2dd5",
+			"title": "opera -- multiple vulnerabilities",
+			"description": "\n\t<p>An advisory from Opera reports:</p>\n\t<blockquote cite=\"http://www.opera.com/support/search/view/866/\">\n\t  <p>If a user has configured Opera to use an external newsgroup\n\t    client or e-mail application, specially crafted Web pages can\n\t    cause Opera to run that application incorrectly. In some cases\n\t    this can lead to execution of arbitrary code.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.opera.com/support/search/view/867/\">\n\t  <p>When accesing frames from different Web sites, specially crafted\n\t    scripts can bypass the same-origin policy, and overwrite functions\n\t    from those frames. If scripts on the page then run those functions,\n\t    this can cause the script of the attacker's choice to run in the\n\t    context of the target Web site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/27277/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/866/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/867/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/44224e08-8306-11dc-9283-0016179b2dd5.html"
+				}
+			],
+			"published": "2007-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-5540",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5540"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-5541",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5541"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opera"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.24"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opera-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.24"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-opera"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.24"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

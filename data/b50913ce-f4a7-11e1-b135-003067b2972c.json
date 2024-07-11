@@ -1,0 +1,57 @@
+{
+	"id": "b50913ce-f4a7-11e1-b135-003067b2972c",
+	"advisories": [
+		{
+			"id": "b50913ce-f4a7-11e1-b135-003067b2972c",
+			"title": "bitcoin -- denial of service",
+			"description": "\n\t<blockquote cite=\"https://bitcointalk.org/?topic=88734\">\n\t  <p>A unspecified denial-of-service attack that could cause the\n\t  bitcoin process to become unresponsive was found.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bitcointalk.org/?topic=88734"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b50913ce-f4a7-11e1-b135-003067b2972c.html"
+				}
+			],
+			"published": "2012-09-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3789",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3789"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bitcoin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

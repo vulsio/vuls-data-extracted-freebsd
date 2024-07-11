@@ -1,0 +1,97 @@
+{
+	"id": "7e4e5c53-a56c-11e0-b180-00216aa06fc2",
+	"advisories": [
+		{
+			"id": "7e4e5c53-a56c-11e0-b180-00216aa06fc2",
+			"title": "phpmyadmin -- multiple vulnerabilities",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2011-5.php\">\n\t  <p>It was possible to manipulate the PHP session superglobal using\n\t    some of the Swekey authentication code.  This could open a path\n\t    for other attacks.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2011-6.php\">\n\t  <p>An unsanitized key from the Servers array is written in a comment\n\t    of the generated config.  An attacker can modify this key by\n\t    modifying the SESSION superglobal array.  This allows the attacker\n\t    to close the comment and inject code.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2011-7.php\">\n\t  <p>Through a possible bug in PHP running on Windows systems a NULL\n\t    byte can truncate the pattern string allowing an attacker to\n\t    inject the /e modifier causing the preg_replace function to\n\t    execute its second argument as PHP code.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2011-8.php\">\n\t  <p>Fixed filtering of a file path in the MIME-type transformation\n\t    code, which allowed for directory traversal.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-5.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-6.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-7.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-8.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7e4e5c53-a56c-11e0-b180-00216aa06fc2.html"
+				}
+			],
+			"published": "2011-07-03T00:00:00Z",
+			"modified": "2011-07-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2505",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2505"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2506",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2506"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2507",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2507"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2508",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2508"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.3.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

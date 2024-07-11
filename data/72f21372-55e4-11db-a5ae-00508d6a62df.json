@@ -1,0 +1,66 @@
+{
+	"id": "72f21372-55e4-11db-a5ae-00508d6a62df",
+	"advisories": [
+		{
+			"id": "72f21372-55e4-11db-a5ae-00508d6a62df",
+			"title": "torrentflux -- User-Agent XSS Vulnerability",
+			"description": "\n\t<blockquote cite=\"http://www.stevenroddis.com.au/2006/10/06/torrentflux-user-agent-xss-vulnerability/\">\n\t  <p>Steven Roddis reports that User-Agent string is not\n\t    properly escaped when handled by torrentflux. This allows\n\t    for arbitrary code insertion.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/22293/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/20371"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.stevenroddis.com.au/2006/10/06/torrentflux-user-agent-xss-vulnerability/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/72f21372-55e4-11db-a5ae-00508d6a62df.html"
+				}
+			],
+			"published": "2006-10-07T00:00:00Z",
+			"modified": "2006-10-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-5227",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-5227"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "torrentflux"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

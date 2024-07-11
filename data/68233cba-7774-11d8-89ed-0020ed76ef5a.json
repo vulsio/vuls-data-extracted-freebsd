@@ -1,0 +1,111 @@
+{
+	"id": "68233cba-7774-11d8-89ed-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "68233cba-7774-11d8-89ed-0020ed76ef5a",
+			"title": "OpenSSL ChangeCipherSpec denial-of-service vulnerability",
+			"description": "\n\t<p>A remote attacker could cause an application using OpenSSL to\n\t  crash by performing a specially crafted SSL/TLS handshake.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openssl.org/news/secadv_20040317.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9899"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:05.openssl.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/288574"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/68233cba-7774-11d8-89ed-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-03-17T00:00:00Z",
+			"modified": "2004-05-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0079",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0079"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.7d"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-beta"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.7d"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.8_17",
+									"ge": "4.0"
+								},
+								{
+									"lt": "4.9_4",
+									"ge": "4.9"
+								},
+								{
+									"lt": "5.1_16",
+									"ge": "5.0"
+								},
+								{
+									"lt": "5.2.1_3",
+									"ge": "5.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

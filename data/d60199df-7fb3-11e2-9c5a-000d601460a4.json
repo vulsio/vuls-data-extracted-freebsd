@@ -1,0 +1,58 @@
+{
+	"id": "d60199df-7fb3-11e2-9c5a-000d601460a4",
+	"advisories": [
+		{
+			"id": "d60199df-7fb3-11e2-9c5a-000d601460a4",
+			"title": "otrs -- XSS vulnerability in Firefox and Opera could lead to remote code execution",
+			"description": "\n\t<p>The OTRS Project reports:</p>\n\t<blockquote cite=\"http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2012-02/\">\n\t  <p>This advisory covers vulnerabilities discovered in the OTRS core\n\t  system. This is a variance of the XSS vulnerability, where an attacker\n\t  could send a specially prepared HTML email to OTRS which would cause\n\t  JavaScript code to be executed in your browser while displaying the\n\t  email in Firefox and Opera. In this case this is achieved with an\n\t  invalid HTML structure with nested tags.</p>\n\t  <p>Affected by this\n\t  vulnerability are all releases of OTRS 2.4.x up to and including\n\t  2.4.13, 3.0.x up to and including 3.0.15 and 3.1.x up to and including\n\t  3.1.9 in combination with Firefox and Opera.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2012-02"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d60199df-7fb3-11e2-9c5a-000d601460a4.html"
+				}
+			],
+			"published": "2013-02-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4600",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4600"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "otrs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.10",
+									"ge": "3.1.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

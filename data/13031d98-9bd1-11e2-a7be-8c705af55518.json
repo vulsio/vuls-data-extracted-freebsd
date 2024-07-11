@@ -1,0 +1,67 @@
+{
+	"id": "13031d98-9bd1-11e2-a7be-8c705af55518",
+	"advisories": [
+		{
+			"id": "13031d98-9bd1-11e2-a7be-8c705af55518",
+			"title": "FreeBSD -- BIND remote denial of service",
+			"description": "\n\t<blockquote cite=\"http://www.freebsd.org/security/advisories/FreeBSD-SA-13:04.bind.asc\">\n\t  <p>A flaw in a library used by BIND allows an\n\t    attacker to deliberately cause excessive memory\n\t    consumption by the named(8) process.  This\n\t    affects both recursive and authoritative\n\t    servers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://kb.isc.org/article/AA-00871"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-13:04.bind.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/13031d98-9bd1-11e2-a7be-8c705af55518.html"
+				}
+			],
+			"published": "2013-04-02T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2266",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2266"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.0_7",
+									"ge": "9.0"
+								},
+								{
+									"lt": "9.1_2",
+									"ge": "9.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

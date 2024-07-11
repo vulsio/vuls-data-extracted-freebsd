@@ -1,0 +1,79 @@
+{
+	"id": "753f8185-5ba9-42a4-be02-3f55ee580093",
+	"advisories": [
+		{
+			"id": "753f8185-5ba9-42a4-be02-3f55ee580093",
+			"title": "phpMyAdmin -- XSS attack in database search",
+			"description": "\n\t<p>phpMyAdmin team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2010-8.php\">\n\t  <p>It was possible to conduct a XSS attack using spoofed request on the\n\t    db search script.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2010-8.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=152685"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=152686"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/753f8185-5ba9-42a4-be02-3f55ee580093.html"
+				}
+			],
+			"published": "2010-11-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-4329",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-4329"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.3.8.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin211"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.11.11.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

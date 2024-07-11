@@ -1,0 +1,57 @@
+{
+	"id": "e8bcac84-2d5c-11e9-9a74-e0d55e2a8bf9",
+	"advisories": [
+		{
+			"id": "e8bcac84-2d5c-11e9-9a74-e0d55e2a8bf9",
+			"title": "kf5-kauth -- Insecure handling of arguments in helpers",
+			"description": "\n\t<p>Albert Astals Cid  reports:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20190209-1.txt\">\n\t<p>KAuth allows to pass parameters with arbitrary types to helpers running as root over DBus.</p>\n\t<p>Certain types can cause crashes and trigger decoding arbitrary images with dynamically loaded plugin</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kde.org/info/security/advisory-20190209-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e8bcac84-2d5c-11e9-9a74-e0d55e2a8bf9.html"
+				}
+			],
+			"published": "2019-02-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-7443",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-7443"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kf5-kauth"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.54.0_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

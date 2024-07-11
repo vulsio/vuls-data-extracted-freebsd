@@ -1,0 +1,61 @@
+{
+	"id": "fc1bcbca-c88b-11eb-9120-f02f74d0e4bd",
+	"advisories": [
+		{
+			"id": "fc1bcbca-c88b-11eb-9120-f02f74d0e4bd",
+			"title": "dino -- Path traversal in Dino file transfers",
+			"description": "\n\t<p>Dino team reports:</p>\n\t<blockquote cite=\"https://dino.im/security/cve-2021-33896/\">\n\t  <p>It was discovered that when a user receives and downloads\n\t  a file in Dino, URI-encoded path separators in the file name\n\t  will be decoded, allowing an attacker to traverse\n\t  directories and create arbitrary files in the context of the\n\t  user.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dino.im/security/cve-2021-33896/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://marc.info/?l=oss-security&m=162308719412719"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc1bcbca-c88b-11eb-9120-f02f74d0e4bd.html"
+				}
+			],
+			"published": "2021-06-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-33896",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33896"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dino"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

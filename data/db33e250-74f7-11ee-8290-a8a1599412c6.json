@@ -1,0 +1,71 @@
+{
+	"id": "db33e250-74f7-11ee-8290-a8a1599412c6",
+	"advisories": [
+		{
+			"id": "db33e250-74f7-11ee-8290-a8a1599412c6",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_24.html\">\n\t <p>This update includes 2 security fixes:</p>\n\t <ul>\n\t    <li>[1491296] High CVE-2023-5472: Use after free in Profiles. Reported by @18楼梦想改造家 on 2023-10-10</li>\n\t </ul>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_24.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/db33e250-74f7-11ee-8290-a8a1599412c6.html"
+				}
+			],
+			"published": "2023-10-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-5472",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-5472"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "118.0.5993.117"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ungoogled-chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "118.0.5993.117"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

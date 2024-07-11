@@ -1,0 +1,89 @@
+{
+	"id": "b092bd4f-1b16-11ec-9d9d-0022489ad614",
+	"advisories": [
+		{
+			"id": "b092bd4f-1b16-11ec-9d9d-0022489ad614",
+			"title": "Node.js -- August 2021 Security Releases",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/aug-2021-security-releases/\">\n\t  <h1>cares upgrade - Improper handling of untypical characters in domain names (High) (CVE-2021-22931)</h1>\n\t  <p>Node.js was vulnerable to Remote Code Execution, XSS, application crashes due to missing input validation of host names returned by Domain Name Servers in the Node.js DNS library which can lead to output of wrong hostnames (leading to Domain Hijacking) and injection vulnerabilities in applications using the library.</p>\n\t  <h1>Use after free on close http2 on stream canceling (High) (CVE-2021-22940)</h1>\n\t  <p>Node.js was vulnerable to a use after free attack where an attacker might be able to exploit memory corruption to change process behavior. The issue is a follow on to CVE-2021-22930 as the issue was not completely resolved in the fix for CVE-2021-22930.</p>\n\t  <h1>Incomplete validation of rejectUnauthorized parameter (Low) (CVE-2021-22939)</h1>\n\t  <p>If the Node.js https API was used incorrectly and \"undefined\" was in passed for the \"rejectUnauthorized\" parameter, no error was returned and connections to servers with an expired certificate would have been accepted.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/aug-2021-security-releases/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b092bd4f-1b16-11ec-9d9d-0022489ad614.html"
+				}
+			],
+			"published": "2021-09-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-22931",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22931"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-22939",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22939"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-22940",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22940"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node14"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.17.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.6.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,123 @@
+{
+	"id": "e8b6605b-d29f-11e5-8458-6cc21735f730",
+	"advisories": [
+		{
+			"id": "e8b6605b-d29f-11e5-8458-6cc21735f730",
+			"title": "PostgreSQL -- Security Fixes for Regular Expressions, PL/Java.",
+			"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1644/\">\n\t  <p>\n\t  Security Fixes for Regular Expressions, PL/Java\n\t  </p>\n\t  <ul>\n\t    <li>CVE-2016-0773: This release closes security hole CVE-2016-0773,\n\t     an issue with regular expression (regex) parsing. Prior code allowed\n\t     users to pass in expressions which included out-of-range Unicode\n\t     characters, triggering a backend crash.  This issue is critical for\n\t     PostgreSQL systems with untrusted users or which generate regexes\n\t     based on user input.\n\t    </li>\n\t    <li>CVE-2016-0766: The update also fixes CVE-2016-0766, a privilege\n\t     escalation issue for users of PL/Java.  Certain custom configuration\n\t     settings (GUCS) for PL/Java will now be modifiable only by the\n\t     database superuser\n\t    </li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e8b6605b-d29f-11e5-8458-6cc21735f730.html"
+				}
+			],
+			"published": "2016-02-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-0766",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0766"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-0773",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0773"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql91-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.1.20",
+									"ge": "9.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql92-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.2.15",
+									"ge": "9.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql93-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.3.11",
+									"ge": "9.3.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql94-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.4.6",
+									"ge": "9.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql95-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.5.1",
+									"ge": "9.5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

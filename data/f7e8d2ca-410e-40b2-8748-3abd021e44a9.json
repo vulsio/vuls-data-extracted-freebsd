@@ -1,0 +1,65 @@
+{
+	"id": "f7e8d2ca-410e-40b2-8748-3abd021e44a9",
+	"advisories": [
+		{
+			"id": "f7e8d2ca-410e-40b2-8748-3abd021e44a9",
+			"title": "xtrlock -- X display locking bypass",
+			"description": "\n\t<p>The X display locking program <code>xtrlock</code> contains\n\t  an integer overflow bug.  It is possible for an attacker with\n\t  physical access to the system to bypass the display lock.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=278191"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2005/dsa-649"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/18991"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f7e8d2ca-410e-40b2-8748-3abd021e44a9.html"
+				}
+			],
+			"published": "2005-06-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0079",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0079"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xtrlock"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

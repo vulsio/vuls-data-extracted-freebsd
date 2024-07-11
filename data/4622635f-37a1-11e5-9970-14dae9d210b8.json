@@ -1,0 +1,78 @@
+{
+	"id": "4622635f-37a1-11e5-9970-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "4622635f-37a1-11e5-9970-14dae9d210b8",
+			"title": "net-snmp -- snmptrapd crash",
+			"description": "\n\t<p>Murray McAllister reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2014/q3/473\">\n\t  <p>A remote denial-of-service flaw was found in the way\n\t    snmptrapd handled certain SNMP traps when started with the\n\t    \"-OQ\" option. If an attacker sent an SNMP trap containing a\n\t    variable with a NULL type where an integer variable type was\n\t    expected, it would cause snmptrapd to crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2014/q3/473"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/p/net-snmp/code/ci/7f4a7b891332899cea26e95be0337aae01648742/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://sourceforge.net/p/net-snmp/official-patches/48/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4622635f-37a1-11e5-9970-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-07-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3565",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3565"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "5.7.2.1",
+									"ge": "5.7.0"
+								},
+								{
+									"le": "5.6.2.1",
+									"ge": "5.6.0"
+								},
+								{
+									"le": "5.5.2.1",
+									"ge": "5.5.0"
+								},
+								{
+									"le": "5.4.4",
+									"ge": "5.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

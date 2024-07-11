@@ -1,0 +1,46 @@
+{
+	"id": "f2596f27-db4c-11eb-8bc6-c556d71493c9",
+	"advisories": [
+		{
+			"id": "f2596f27-db4c-11eb-8bc6-c556d71493c9",
+			"title": "openexr v3.0.5 -- fixes miscellaneous security issues",
+			"description": "\n\t<p>Cary Phillips reports:</p>\n\t<blockquote cite=\"https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.0.5\">\n\t  <ul>\n\t    <li>1038 fix/extend part number validation in MultiPart methods</li>\n\t    <li>1037 verify data size in deepscanlines with NO_COMPRESSION</li>\n\t    <li>1036 detect buffer overflows in RleUncompress</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.0.5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f2596f27-db4c-11eb-8bc6-c556d71493c9.html"
+				}
+			],
+			"published": "2021-07-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openexr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

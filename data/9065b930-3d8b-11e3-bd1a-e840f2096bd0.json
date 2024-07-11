@@ -1,0 +1,58 @@
+{
+	"id": "9065b930-3d8b-11e3-bd1a-e840f2096bd0",
+	"advisories": [
+		{
+			"id": "9065b930-3d8b-11e3-bd1a-e840f2096bd0",
+			"title": "gnutls -- denial of service",
+			"description": "\n\t<p>Salvatore Bonaccorso reports:</p>\n\t<blockquote cite=\"http://www.gnutls.org/security.html#GNUTLS-SA-2013-3\">\n\t  <p>This vulnerability affects the DANE library of gnutls 3.1.x and\n\t    gnutls 3.2.x. A server that returns more 4 DANE entries could\n\t    corrupt the memory of a requesting client.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2013-3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9065b930-3d8b-11e3-bd1a-e840f2096bd0.html"
+				}
+			],
+			"published": "2013-10-25T00:00:00Z",
+			"modified": "2013-11-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4466",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4466"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.16"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

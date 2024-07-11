@@ -1,0 +1,58 @@
+{
+	"id": "f1a00122-3797-11ef-b611-84a93843eb75",
+	"advisories": [
+		{
+			"id": "f1a00122-3797-11ef-b611-84a93843eb75",
+			"title": "OpenSSH -- Race condition resulting in potential remote code execution",
+			"description": "\n\t<p>The OpenSSH project reports:</p>\n\t<blockquote cite=\"https://www.openssh.com/security.html\">\n\t  <p>A race condition in sshd(8) could allow remote code execution as root on non-OpenBSD systems.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssh.com/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f1a00122-3797-11ef-b611-84a93843eb75.html"
+				}
+			],
+			"published": "2024-07-01T00:00:00Z",
+			"modified": "2024-07-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-6387",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-6387"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-portable"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.7.p1_2,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

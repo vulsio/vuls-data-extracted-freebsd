@@ -1,0 +1,232 @@
+{
+	"id": "cdff0af2-1492-11e5-a1cf-002590263bf5",
+	"advisories": [
+		{
+			"id": "cdff0af2-1492-11e5-a1cf-002590263bf5",
+			"title": "php5 -- multiple vulnerabilities",
+			"description": "\n\t<p>The PHP project reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php\">\n\t  <p>DOM and GD:</p>\n\t  <ul>\n\t    <li>Fixed bug #69719 (Incorrect handling of paths with NULs).</li>\n\t  </ul>\n\t  <p>FTP:</p>\n\t  <ul>\n\t    <li>Improved fix for bug #69545 (Integer overflow in ftp_genlist()\n\t       resulting in heap overflow). (CVE-2015-4643)</li>\n\t  </ul>\n\t  <p>Postgres:</p>\n\t  <ul>\n\t    <li>Fixed bug #69667 (segfault in php_pgsql_meta_data).\n\t      (CVE-2015-4644)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2015/06/18/3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.4.42"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.5.26"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.6.10"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cdff0af2-1492-11e5-a1cf-002590263bf5.html"
+				}
+			],
+			"published": "2015-06-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-4643",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4643"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-4644",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4644"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-dom"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.42"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-ftp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.42"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-gd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.42"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-pgsql"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.42"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-dom"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.26"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-ftp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.26"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-gd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.26"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-pgsql"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.26"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-dom"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-ftp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-gd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-psql"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

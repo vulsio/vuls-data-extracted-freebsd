@@ -1,0 +1,58 @@
+{
+	"id": "d68df01b-564e-11e5-9ad8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "d68df01b-564e-11e5-9ad8-14dae9d210b8",
+			"title": "ganglia-webfrontend -- auth bypass",
+			"description": "\n\t<p>Ivan Novikov reports:</p>\n\t<blockquote cite=\"https://github.com/ganglia/ganglia-web/issues/267\">\n\t  <p>It's easy to bypass auth by using boolean serialization...</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/ganglia/ganglia-web/issues/267"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d68df01b-564e-11e5-9ad8-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-09-08T00:00:00Z",
+			"modified": "2015-09-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-6816",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6816"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ganglia-webfrontend"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.7.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,164 @@
+{
+	"id": "9db93f3d-c725-11ec-9618-000d3ac47524",
+	"advisories": [
+		{
+			"id": "9db93f3d-c725-11ec-9618-000d3ac47524",
+			"title": "Rails -- XSS vulnerabilities",
+			"description": "\n\t<p>Ruby on Rails blog:</p>\n\t<blockquote cite=\"https://rubyonrails.org/2022/4/26/Rails-7-0-2-4-6-1-5-1-6-0-4-8-and-5-2-7-1-have-been-released\">\n\t  <p>This is an announcement to let you know that Rails 7.0.2.4, 6.1.5.1,\n\t    6.0.4.8, and 5.2.7.1 have been released!</p>\n\t  <p>These are security releases so please update as soon as you can. Once\n\t    again we've made these releases based on the last release tag, so\n\t    hopefully upgrading will go smoothly.</p>\n\t  <p>The releases address two vulnerabilities, CVE-2022-22577, and\n\t    CVS-2022-27777. They are both XSS vulnerabilities, so please take a look\n\t    at the forum posts to see how (or if) they might possibly impact your\n\t    application.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://rubyonrails.org/2022/4/26/Rails-7-0-2-4-6-1-5-1-6-0-4-8-and-5-2-7-1-have-been-released"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9db93f3d-c725-11ec-9618-000d3ac47524.html"
+				}
+			],
+			"published": "2022-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-22577",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-22577"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27777",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27777"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionpack52"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.7.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionpack60"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.4.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionpack61"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.1.5.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionpack70"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.2.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionview52"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.7.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionview60"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.4.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionview61"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.1.5.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionview70"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.2.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

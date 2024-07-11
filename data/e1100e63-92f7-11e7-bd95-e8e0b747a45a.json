@@ -1,0 +1,138 @@
+{
+	"id": "e1100e63-92f7-11e7-bd95-e8e0b747a45a",
+	"advisories": [
+		{
+			"id": "e1100e63-92f7-11e7-bd95-e8e0b747a45a",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome releases reports:</p>\n\t<blockquote cite=\"https://chromereleases.googleblog.com/2017/09/stable-channel-update-for-desktop.html\">\n\t  <p>22 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[737023] High CVE-2017-5111: Use after free in PDFium. Reported by\n\t      Luat Nguyen on KeenLab, Tencent on 2017-06-27</li>\n\t    <li>[740603] High CVE-2017-5112: Heap buffer overflow in WebGL. Reported by\n\t      Tobias Klein on 2017-07-10</li>\n\t    <li>[747043] High CVE-2017-5113: Heap buffer overflow in Skia. Reported by\n\t      Anonymous on 2017-07-20</li>\n\t    <li>[752829] High CVE-2017-5114: Memory lifecycle issue in PDFium. Reported by\n\t      Ke Liu of Tencent's Xuanwu LAB on 2017-08-07</li>\n\t    <li>[744584] High CVE-2017-5115: Type confusion in V8. Reported by\n\t      Marco Giovannini on 2017-07-17</li>\n\t    <li>[759624] High CVE-2017-5116: Type confusion in V8. Reported by\n\t      Anonymous on 2017-08-28</li>\n\t    <li>[739190] Medium CVE-2017-5117: Use of uninitialized value in Skia. Reported by\n\t      Tobias Klein on 2017-07-04</li>\n\t    <li>[747847] Medium CVE-2017-5118: Bypass of Content Security Policy in Blink. Reported by\n\t      WenXu Wu of Tencent's Xuanwu Lab on 2017-07-24</li>\n\t    <li>[725127] Medium CVE-2017-5119: Use of uninitialized value in Skia. Reported by\n\t      Anonymous on 2017-05-22</li>\n\t    <li>[718676] Low CVE-2017-5120: Potential HTTPS downgrade during redirect navigation. Reported by\n\t      Xiaoyin Liu on 2017-05-05</li>\n\t    <li>[762099] Various fixes from internal audits, fuzzing and other initiatives</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2017/09/stable-channel-update-for-desktop.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e1100e63-92f7-11e7-bd95-e8e0b747a45a.html"
+				}
+			],
+			"published": "2017-09-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-5111",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5111"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5112",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5112"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5113",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5113"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5114",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5114"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5115",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5115"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5116",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5116"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5117",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5117"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5118",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5118"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5119",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5119"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5120",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5120"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "61.0.3163.79"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

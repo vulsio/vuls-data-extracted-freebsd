@@ -1,0 +1,62 @@
+{
+	"id": "b13414c9-50ba-11e0-975a-000c29cc39d3",
+	"advisories": [
+		{
+			"id": "b13414c9-50ba-11e0-975a-000c29cc39d3",
+			"title": "hiawatha -- integer overflow in Content-Length header parsing",
+			"description": "\n\t<p>Hugo Leisink reports:</p>\n\t<blockquote cite=\"http://www.hiawatha-webserver.org/weblog/16\">\n\t  <p>A bug has been found in version 7.4 of the Hiawatha webserver,\n\t    which could lead to a server crash. This is caused by an integer\n\t    overflow in the routine that reads the HTTP request. A too large\n\t    value of the Content-Length HTTP header results in an overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://packetstormsecurity.org/files/99021/Hiawatha-WebServer-7.4-Denial-Of-Service.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/bugtraq/2011/Mar/65"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/43660/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://securityvulns.com/Zdocument902.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.hiawatha-webserver.org/weblog/16"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b13414c9-50ba-11e0-975a-000c29cc39d3.html"
+				}
+			],
+			"published": "2011-03-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "hiawatha"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.4_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

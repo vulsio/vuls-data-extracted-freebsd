@@ -1,0 +1,61 @@
+{
+	"id": "eb426e82-ab68-11e3-9d09-000c2980a9f3",
+	"advisories": [
+		{
+			"id": "eb426e82-ab68-11e3-9d09-000c2980a9f3",
+			"title": "mutt -- denial of service, potential remote code execution",
+			"description": "\n\t<p>Beatrice Torracca and Evgeni Golov report:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/archive/1/531431\">\n\t  <p>A buffer overflow has been discovered that could result in\n\t    denial of service or potential execution of arbitrary code.</p>\n\t  <p>This condition can be triggered by malformed RFC2047 header\n\t    lines</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://packetstormsecurity.com/files/cve/CVE-2014-0467"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0467"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/eb426e82-ab68-11e3-9d09-000c2980a9f3.html"
+				}
+			],
+			"published": "2014-03-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0467",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0467"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mutt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.23"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

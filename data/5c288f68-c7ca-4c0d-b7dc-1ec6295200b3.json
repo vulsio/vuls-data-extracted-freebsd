@@ -1,0 +1,103 @@
+{
+	"id": "5c288f68-c7ca-4c0d-b7dc-1ec6295200b3",
+	"advisories": [
+		{
+			"id": "5c288f68-c7ca-4c0d-b7dc-1ec6295200b3",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.de/2016/03/stable-channel-update_8.html\">\n\t  <p>[589838] High CVE-2016-1643: Type confusion in Blink.</p>\n\t  <p>[590620] High CVE-2016-1644: Use-after-free in Blink.</p>\n\t  <p>[587227] High CVE-2016-1645: Out-of-bounds write in PDFium.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.de/2016/03/stable-channel-update_8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5c288f68-c7ca-4c0d-b7dc-1ec6295200b3.html"
+				}
+			],
+			"published": "2016-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1643",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1643"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1644",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1644"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1645",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1645"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "49.0.2623.87"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-npapi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "49.0.2623.87"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-pulse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "49.0.2623.87"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

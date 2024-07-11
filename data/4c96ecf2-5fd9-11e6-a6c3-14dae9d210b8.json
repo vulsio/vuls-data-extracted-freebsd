@@ -1,0 +1,70 @@
+{
+	"id": "4c96ecf2-5fd9-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "4c96ecf2-5fd9-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- bsnmpd remote denial of service vulnerability",
+			"description": "\n\t<p>Problem Description:</p>\n\t<p>The bsnmpd(8) daemon is prone to a stack-based\n\t  buffer-overflow when it has received a specifically crafted\n\t  GETBULK PDU request.</p>\n\t<p>Impact:</p>\n\t<p>This issue could be exploited to execute arbitrary code in\n\t  the context of the service daemon, or crash the service daemon, causing\n\t  a denial-of-service.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:01.bsnmpd.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4c96ecf2-5fd9-11e6-a6c3-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-1452",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1452"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.2_3",
+									"ge": "9.2"
+								},
+								{
+									"lt": "9.1_10",
+									"ge": "9.1"
+								},
+								{
+									"lt": "8.4_7",
+									"ge": "8.4"
+								},
+								{
+									"lt": "8.3_14",
+									"ge": "8.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

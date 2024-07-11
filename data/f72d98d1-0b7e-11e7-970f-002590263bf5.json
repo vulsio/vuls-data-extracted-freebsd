@@ -1,0 +1,118 @@
+{
+	"id": "f72d98d1-0b7e-11e7-970f-002590263bf5",
+	"advisories": [
+		{
+			"id": "f72d98d1-0b7e-11e7-970f-002590263bf5",
+			"title": "moodle -- multiple vulnerabilities",
+			"description": "\n\t<p>Marina Glancy reports:</p>\n\t<blockquote cite=\"https://moodle.org/security/\">\n\t  <ul>\n\t    <li><p>MSA-17-0001: System file inclusion when adding own preset\n\t    file in Boost theme</p></li>\n\t    <li><p>MSA-17-0002: Incorrect sanitation of attributes in forums\n\t    </p></li>\n\t    <li><p>MSA-17-0003: PHPMailer vulnerability in no-reply address\n\t    </p></li>\n\t    <li><p>MSA-17-0004: XSS in assignment submission page</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://moodle.org/security/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f72d98d1-0b7e-11e7-970f-002590263bf5.html"
+				}
+			],
+			"published": "2017-03-18T00:00:00Z",
+			"modified": "2020-06-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10045",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10045"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2576",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2576"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2578",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2578"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "moodle29"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.9.9"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "moodle30"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "moodle31"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "moodle32"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

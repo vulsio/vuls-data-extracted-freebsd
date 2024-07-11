@@ -1,0 +1,51 @@
+{
+	"id": "150e4548-8950-11dd-a6fe-0030843d3802",
+	"advisories": [
+		{
+			"id": "150e4548-8950-11dd-a6fe-0030843d3802",
+			"title": "phpmyadmin -- Cross-Site Scripting Vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/Advisories/31974/\">\n\t  <p>An error exists in the \"PMA_escapeJsString()\" function in\n\t    libraries/js_escape.lib.php, which can be exploited to bypass\n\t    certain filters and execute arbitrary HTML and script code in a\n\t    user's browser session in context of an affected site when e.g.\n\t    Microsoft Internet Explorer is used.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/Advisories/31974/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/150e4548-8950-11dd-a6fe-0030843d3802.html"
+				}
+			],
+			"published": "2008-09-23T00:00:00Z",
+			"modified": "2008-10-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.11.9.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

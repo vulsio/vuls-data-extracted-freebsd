@@ -1,0 +1,103 @@
+{
+	"id": "69815a1d-c31d-11eb-9633-b42e99a1b9c3",
+	"advisories": [
+		{
+			"id": "69815a1d-c31d-11eb-9633-b42e99a1b9c3",
+			"title": "SOGo -- SAML user authentication impersonation",
+			"description": "\n\t<p>sogo.nu reports:</p>\n\t<blockquote cite=\"https://www.sogo.nu/news/2021/saml-vulnerability.html\">\n\t  <p>SOGo was not validating the signatures of any SAML assertions it received.</p>\n\t  <p>This means any actor with network access to the deployment could impersonate</p>\n\t  <p>users when SAML was the authentication method.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blogs.akamai.com/2021/06/sogo-and-packetfence-impacted-by-saml-implementation-vulnerabilities.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.sogo.nu/news/2021/saml-vulnerability.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/69815a1d-c31d-11eb-9633-b42e99a1b9c3.html"
+				}
+			],
+			"published": "2021-06-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-33054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33054"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sogo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.1.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sogo-activesync"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.1.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sogo2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sogo2-activesync"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

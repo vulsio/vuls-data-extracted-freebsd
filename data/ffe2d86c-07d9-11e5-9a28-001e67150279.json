@@ -1,0 +1,66 @@
+{
+	"id": "ffe2d86c-07d9-11e5-9a28-001e67150279",
+	"advisories": [
+		{
+			"id": "ffe2d86c-07d9-11e5-9a28-001e67150279",
+			"title": "rest-client -- plaintext password disclosure",
+			"description": "\n\t<p>The open sourced vulnerability database reports:</p>\n\t<blockquote cite=\"http://osvdb.org/show/osvdb/117461\">\n\t  <p>REST Client for Ruby contains a flaw that is due to the application\n\t    logging password information in plaintext. This may allow a local\n\t    attacker to gain access to password information.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://osvdb.org/show/osvdb/117461"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200504"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rest-client/rest-client/issues/349"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ffe2d86c-07d9-11e5-9a28-001e67150279.html"
+				}
+			],
+			"published": "2015-05-31T00:00:00Z",
+			"modified": "2015-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3448",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3448"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rest-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.7_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

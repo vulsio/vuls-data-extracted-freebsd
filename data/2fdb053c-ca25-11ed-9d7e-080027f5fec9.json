@@ -1,0 +1,85 @@
+{
+	"id": "2fdb053c-ca25-11ed-9d7e-080027f5fec9",
+	"advisories": [
+		{
+			"id": "2fdb053c-ca25-11ed-9d7e-080027f5fec9",
+			"title": "rack -- possible denial of service vulnerability in header parsing",
+			"description": "\n\t<p>ooooooo_q reports:</p>\n\t<blockquote cite=\"https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466\">\n\t  <p>\n\t    Carefully crafted input can cause header parsing in Rack\n\t    to take an unexpected amount of time, possibly resulting\n\t    in a denial of service attack vector. Any applications\n\t    that parse headers using Rack (virtually all Rails\n\t    applications) are impacted.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2fdb053c-ca25-11ed-9d7e-080027f5fec9.html"
+				}
+			],
+			"published": "2023-03-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-27539",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-27539"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rack"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.6.1,3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rack22"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.6.6,3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rack16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.14"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

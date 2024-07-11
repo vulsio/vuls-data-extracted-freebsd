@@ -1,0 +1,79 @@
+{
+	"id": "689c2bf7-0701-11e3-9a25-002590860428",
+	"advisories": [
+		{
+			"id": "689c2bf7-0701-11e3-9a25-002590860428",
+			"title": "GnuPG and Libgcrypt -- side-channel attack vulnerability",
+			"description": "\n\t<p>Werner Koch of the GNU project reports:</p>\n\t<blockquote cite=\"http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000329.html\">\n\t  <p>Noteworthy changes in version 1.5.3:</p>\n\t  <p>Mitigate the Yarom/Falkner flush+reload side-channel attack on RSA secret keys...</p>\n\t  <p>Note that Libgcrypt is used by GnuPG 2.x and thus this release fixes the above\n\t    problem. The fix for GnuPG less than 2.0 can be found in the just released GnuPG\n\t    1.4.14.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://eprint.iacr.org/2013/448"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000329.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000330.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/689c2bf7-0701-11e3-9a25-002590860428.html"
+				}
+			],
+			"published": "2013-08-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4242",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4242"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-libgcrypt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,104 @@
+{
+	"id": "e309a2c7-598b-4fa6-a398-bc72fbd1d167",
+	"advisories": [
+		{
+			"id": "e309a2c7-598b-4fa6-a398-bc72fbd1d167",
+			"title": "rubygem-doorkeeper -- token revocation vulnerability",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2018-1000211\">\n\t  <p>Doorkeeper version 4.2.0 and later contains a Incorrect Access Control\n\t    vulnerability in Token revocation API's authorized method that can\n\t    result in Access tokens are not revoked for public OAuth apps, leaking\n\t    access until expiry.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/doorkeeper-gem/doorkeeper/pull/1120"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000211"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e309a2c7-598b-4fa6-a398-bc72fbd1d167.html"
+				}
+			],
+			"published": "2018-07-31T00:00:00Z",
+			"modified": "2018-08-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1000211",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1000211"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-doorkeeper"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-doorkeeper43"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-doorkeeper-rails5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-doorkeeper-rails50"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

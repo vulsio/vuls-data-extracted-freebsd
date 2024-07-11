@@ -1,0 +1,89 @@
+{
+	"id": "e9200f8e-fd34-11eb-afb1-c85b76ce9b5a",
+	"advisories": [
+		{
+			"id": "e9200f8e-fd34-11eb-afb1-c85b76ce9b5a",
+			"title": "lynx -- SSL certificate validation error",
+			"description": "\n\t<p>Axel Beckert reports:</p>\n\t<blockquote cite=\"https://lists.nongnu.org/archive/html/lynx-dev/2021-08/msg00002.html\">\n\t  <p>[...] I was able to capture the password given on the commandline in traffic\nof an TLS handshake using tcpdump and analysing it with Wireshark: [...]</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.nongnu.org/archive/html/lynx-dev/2021-08/msg00002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e9200f8e-fd34-11eb-afb1-c85b76ce9b5a.html"
+				}
+			],
+			"published": "2021-08-14T00:00:00Z",
+			"modified": "2021-08-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-lynx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-lynx-current"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.9.0d9"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lynx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lynx-current"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.9.0d9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

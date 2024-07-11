@@ -1,0 +1,180 @@
+{
+	"id": "2c12ae0c-c38d-11e0-8eb7-001b2134ef46",
+	"advisories": [
+		{
+			"id": "2c12ae0c-c38d-11e0-8eb7-001b2134ef46",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe Product Security Incident Response Team reports:</p>\n\t<blockquote cite=\"https://www.adobe.com/support/security/bulletins/apsb11-21.html\">\n\t  <p>Critical vulnerabilities have been identified in Adobe Flash\n\t    Player 10.3.181.36 and earlier versions for Windows, Macintosh,\n\t    Linux and Solaris, and Adobe Flash Player 10.3.185.25 and\n\t    earlier versions for Android.  These vulnerabilities could\n\t    cause a crash and potentially allow an attacker to take control\n\t    of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.adobe.com/support/security/bulletins/apsb11-21.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2c12ae0c-c38d-11e0-8eb7-001b2134ef46.html"
+				}
+			],
+			"published": "2011-08-10T00:00:00Z",
+			"modified": "2012-11-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2130",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2130"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2134",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2134"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2135",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2135"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2136",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2136"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2137",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2137"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2138",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2138"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2139",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2139"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2140",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2140"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2414",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2414"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2415",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2415"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2416",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2416"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2417",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2417"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2425",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2425"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.0r289"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.3r183.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,88 @@
+{
+	"id": "fb911e31-8ceb-11dd-bb29-000c6e274733",
+	"advisories": [
+		{
+			"id": "fb911e31-8ceb-11dd-bb29-000c6e274733",
+			"title": "lighttpd -- multiple vulnerabilities",
+			"description": "\n\t<p>Lighttpd seurity annoucement:</p>\n\t<blockquote cite=\"http://www.lighttpd.net/security/lighttpd_sa_2008_05.txt\">\n\t  <p>lighttpd 1.4.19, and possibly other versions before 1.5.0, does\n\t    not decode the url before matching against rewrite and redirect\n\t    patterns, which allows attackers to bypass rewrites rules. this\n\t    can be a security problem in certain configurations if these rules\n\t    are used to hide certain urls.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.lighttpd.net/security/lighttpd_sa_2008_06.txt\">\n\t  <p>lighttpd 1.4.19, and possibly other versions before 1.5.0, does\n\t    not lowercase the filename after generating it from the url in\n\t    mod_userdir on case insensitive (file)systems.</p>\n\t  <p>As other modules are case sensitive, this may lead to information\n\t    disclosure; for example if one configured php to handle files\n\t    ending on \".php\", an attacker will get the php source with\n\t    http://example.com/~user/file.PHP</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.lighttpd.net/security/lighttpd_sa_2008_07.txt\">\n\t  <p>lighttpd 1.4.19 does not always release a header if it triggered\n\t    a 400 (Bad Request) due to a duplicate header.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.lighttpd.net/security/lighttpd_sa_2008_05.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.lighttpd.net/security/lighttpd_sa_2008_06.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.lighttpd.net/security/lighttpd_sa_2008_07.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/31434"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fb911e31-8ceb-11dd-bb29-000c6e274733.html"
+				}
+			],
+			"published": "2008-09-27T00:00:00Z",
+			"modified": "2009-02-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-4298",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-4298"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-4359",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-4359"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-4360",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-4360"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.19_3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

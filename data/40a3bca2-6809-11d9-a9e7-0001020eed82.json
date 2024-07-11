@@ -1,0 +1,79 @@
+{
+	"id": "40a3bca2-6809-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "40a3bca2-6809-11d9-a9e7-0001020eed82",
+			"title": "cups-base -- HPGL buffer overflow vulnerability",
+			"description": "\n\t<p>Ariel Berkman has discovered a buffer overflow\n\t  vulnerability in CUPS's HPGL input driver.  This\n\t  vulnerability could be exploited to execute arbitrary code\n\t  with the permission of the CUPS server by printing a\n\t  specially crated HPGL file.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tigger.uic.edu/~jlongs2/holes/cups.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cups.org/str.php?L1024"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11968"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40a3bca2-6809-11d9-a9e7-0001020eed82.html"
+				}
+			],
+			"published": "2005-01-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1267",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1267"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cups-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.22.0_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fr-cups-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.22.0_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

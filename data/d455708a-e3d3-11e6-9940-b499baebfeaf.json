@@ -1,0 +1,150 @@
+{
+	"id": "d455708a-e3d3-11e6-9940-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "d455708a-e3d3-11e6-9940-b499baebfeaf",
+			"title": "OpenSSL -- multiple vulnerabilities",
+			"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20170126.txt\">\n\t  <ul>\n\t    <li>Truncated packet could crash via OOB read (CVE-2017-3731)</li>\n\t    <li>Bad (EC)DHE parameters cause a client crash (CVE-2017-3730)</li>\n\t    <li>BN_mod_exp may produce incorrect results on x86_64 (CVE-2017-3732)</li>\n\t    <li>Montgomery multiplication may produce incorrect results (CVE-2016-7055)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-17:02.openssl.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20170126.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d455708a-e3d3-11e6-9940-b499baebfeaf.html"
+				}
+			],
+			"published": "2017-01-26T00:00:00Z",
+			"modified": "2017-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-7055",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7055"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3730",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3730"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3731",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3731"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3732",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3732"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.2k,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.0d"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.1e_13"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c7-openssl-libs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.1e_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.0_8",
+									"ge": "11.0"
+								},
+								{
+									"lt": "10.3_17",
+									"ge": "10.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

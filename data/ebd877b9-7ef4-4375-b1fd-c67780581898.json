@@ -1,0 +1,72 @@
+{
+	"id": "ebd877b9-7ef4-4375-b1fd-c67780581898",
+	"advisories": [
+		{
+			"id": "ebd877b9-7ef4-4375-b1fd-c67780581898",
+			"title": "ruby -- Hostname check bypassing vulnerability in SSL client",
+			"description": "\n\t<p>Ruby Developers report:</p>\n\t<blockquote cite=\"http://www.ruby-lang.org/en/news/2013/06/27/hostname-check-bypassing-vulnerability-in-openssl-client-cve-2013-4073/\">\n\t  <p>Ruby's SSL client implements hostname identity check but it does\n\t     not properly handle hostnames in the certificate that contain null\n\t     bytes.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ruby-lang.org/en/news/2013/06/27/hostname-check-bypassing-vulnerability-in-openssl-client-cve-2013-4073/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ebd877b9-7ef4-4375-b1fd-c67780581898.html"
+				}
+			],
+			"published": "2013-07-11T00:00:00Z",
+			"modified": "2013-09-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4073",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4073"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby19"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.3.448,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.7.374,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

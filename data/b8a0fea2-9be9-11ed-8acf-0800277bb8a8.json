@@ -1,0 +1,46 @@
+{
+	"id": "b8a0fea2-9be9-11ed-8acf-0800277bb8a8",
+	"advisories": [
+		{
+			"id": "b8a0fea2-9be9-11ed-8acf-0800277bb8a8",
+			"title": "gitea -- information disclosure",
+			"description": "\n\t<p>The Gitea team reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/22566\">\n\t  <p>Prevent multiple To recipients: Change the mailer interface to\n\t    prevent leaking of possible hidden email addresses when sending\n\t    to multiple recipients.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.gitea.io/2023/01/gitea-1.18.3-is-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b8a0fea2-9be9-11ed-8acf-0800277bb8a8.html"
+				}
+			],
+			"published": "2023-01-24T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.18.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

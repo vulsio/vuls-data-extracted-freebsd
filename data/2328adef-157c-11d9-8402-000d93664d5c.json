@@ -1,0 +1,50 @@
+{
+	"id": "2328adef-157c-11d9-8402-000d93664d5c",
+	"advisories": [
+		{
+			"id": "2328adef-157c-11d9-8402-000d93664d5c",
+			"title": "racoon -- improper certificate handling",
+			"description": "\n\t<p>Thomas Walpuski noted when OpenSSL would detect an error\n\t  condition for a peer certificate, racoon mistakenly ignored\n\t  the error. This could allow five invalid certificate states\n\t  to properly be used for authentication.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108726102304507"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kame.net/racoon/racoon-ml/msg00517.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2328adef-157c-11d9-8402-000d93664d5c.html"
+				}
+			],
+			"published": "2004-10-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "racoon"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20040818a"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

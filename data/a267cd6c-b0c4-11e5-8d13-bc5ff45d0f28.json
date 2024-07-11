@@ -1,0 +1,107 @@
+{
+	"id": "a267cd6c-b0c4-11e5-8d13-bc5ff45d0f28",
+	"advisories": [
+		{
+			"id": "a267cd6c-b0c4-11e5-8d13-bc5ff45d0f28",
+			"title": "qemu -- stack buffer overflow while parsing SCSI commands",
+			"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://openwall.com/lists/oss-security/2015/07/23/6\">\n\t  <p>Qemu emulator built with the SCSI device emulation support is\n\t    vulnerable to a stack buffer overflow issue. It could occur while\n\t    parsing SCSI command descriptor block with an invalid operation\n\t    code.</p>\n\t  <p>A privileged(CAP_SYS_RAWIO) user inside guest could use this flaw\n\t    to crash the Qemu instance resulting in DoS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=c170aad8b057223b1139d72e5ce7acceafab4fa9"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2015/07/23/6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/seanbruno/qemu-bsd-user/commit/c170aad8b057223b1139d72e5ce7acceafab4fa9"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a267cd6c-b0c4-11e5-8d13-bc5ff45d0f28.html"
+				}
+			],
+			"published": "2016-01-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5158",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5158"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-sbruno"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.50.g20150814"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-user-static"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.50.g20150814"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

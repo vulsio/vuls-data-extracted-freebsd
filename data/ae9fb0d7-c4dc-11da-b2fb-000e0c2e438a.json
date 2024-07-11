@@ -1,0 +1,61 @@
+{
+	"id": "ae9fb0d7-c4dc-11da-b2fb-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "ae9fb0d7-c4dc-11da-b2fb-000e0c2e438a",
+			"title": "netpbm -- buffer overflow in pnmtopng",
+			"description": "\n\t<p>Ubuntu reports:</p>\n\t<blockquote cite=\"http://www.ubuntulinux.org/support/documentation/usn/usn-210-1\">\n\t  <p>A buffer overflow was found in the \"pnmtopng\" conversion\n\t    program.  By tricking an user (or automated system) to\n\t    process a specially crafted PNM image with pnmtopng, this\n\t    could be exploited to execute arbitrary code with the\n\t    privileges of the user running pnmtopng.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/15128"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ubuntulinux.org/support/documentation/usn/usn-210-1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ae9fb0d7-c4dc-11da-b2fb-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-04-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CAN-2005-2978",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CAN-2005-2978"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "netpbm"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.26"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

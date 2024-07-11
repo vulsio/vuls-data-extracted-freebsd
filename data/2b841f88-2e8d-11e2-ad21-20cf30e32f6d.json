@@ -1,0 +1,141 @@
+{
+	"id": "2b841f88-2e8d-11e2-ad21-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "2b841f88-2e8d-11e2-ad21-20cf30e32f6d",
+			"title": "bugzilla -- multiple vulnerabilities",
+			"description": "\n\t<h1>A Bugzilla Security Advisory reports:</h1>\n\t<blockquote cite=\"http://www.bugzilla.org/security/3.6.11/\">\n\t  <p>The following security issues have been discovered in\n\t     Bugzilla:</p>\n\t  <h1>Information Leak</h1>\n\t  <p>If the visibility of a custom field is controlled by a product\n\t    or a component of a product you cannot see, their names are\n\t    disclosed in the JavaScript code generated for this custom field\n\t    despite they should remain confidential.</p>\n\t  <p>Calling the User.get method with a 'groups' argument leaks the\n\t    existence of the groups depending on whether an error is thrown\n\t    or not. This method now also throws an error if the user calling\n\t    this method does not belong to these groups (independently of\n\t    whether the groups exist or not).</p>\n\t  <p>Trying to mark an attachment in a bug you cannot see as obsolete\n\t    discloses its description in the error message. The description\n\t    of the attachment is now removed from the error message.</p>\n\t  <h1>Cross-Site Scripting</h1>\n\t  <p>Due to incorrectly filtered field values in tabular reports,\n\t    it is possible to inject code leading to XSS.</p>\n\t  <p>A vulnerability in swfstore.swf from YUI2 allows JavaScript\n\t    injection exploits to be created against domains that host this\n\t    affected YUI .swf file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://yuilibrary.com/support/20121030-vulnerability/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=731178"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=781850"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=790296"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=802204"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=808845"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2b841f88-2e8d-11e2-ad21-20cf30e32f6d.html"
+				}
+			],
+			"published": "2012-11-14T00:00:00Z",
+			"modified": "2012-11-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4189",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4189"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-4197",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4197"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-4198",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4198"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-4199",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4199"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5881",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5881"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5882",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5882"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5883",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5883"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bugzilla"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.12",
+									"ge": "3.6.0"
+								},
+								{
+									"lt": "4.0.9",
+									"ge": "4.0.0"
+								},
+								{
+									"lt": "4.2.4",
+									"ge": "4.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

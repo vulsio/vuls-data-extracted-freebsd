@@ -1,0 +1,51 @@
+{
+	"id": "7927165a-0126-11e5-9d98-080027ef73ec",
+	"advisories": [
+		{
+			"id": "7927165a-0126-11e5-9d98-080027ef73ec",
+			"title": "dnsmasq -- remotely exploitable buffer overflow in release candidate",
+			"description": "\n\t<p>Simon Kelley reports:</p>\n\t<blockquote cite=\"http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009529.html\">\n\t  <p>Anyone running 2.[73]rc6 or 2.[73]rc7 should be aware that there's a\n\t    remotely exploitable buffer overflow in those trees. I just tagged\n\t    2.[73]rc8, which includes the fix.\n\t  </p>\n\t</blockquote>\n\t<p>(Corrections from second URL.)</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009529.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009535.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7927165a-0126-11e5-9d98-080027ef73ec.html"
+				}
+			],
+			"published": "2015-05-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dnsmasq-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.73rc8",
+									"ge": "2.73rc6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

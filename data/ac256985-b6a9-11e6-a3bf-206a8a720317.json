@@ -1,0 +1,71 @@
+{
+	"id": "ac256985-b6a9-11e6-a3bf-206a8a720317",
+	"advisories": [
+		{
+			"id": "ac256985-b6a9-11e6-a3bf-206a8a720317",
+			"title": "subversion -- Unrestricted XML entity expansion in mod_dontdothat and Subversionclients using http(s)",
+			"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2016-8734-advisory.txt\">\n\t  <p>The mod_dontdothat module of subversion and subversion clients using\n\t  http(s):// are vulnerable to a denial-of-service attack, caused by\n\t  exponential XML entity expansion. The attack targets XML parsers\n\t  causing targeted process to consume excessive amounts of resources.\n\t  The attack is also known as the \"billions of laughs attack.\"</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://subversion.apache.org/security/CVE-2016-8734-advisory.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ac256985-b6a9-11e6-a3bf-206a8a720317.html"
+				}
+			],
+			"published": "2016-11-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-8734",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8734"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.17"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

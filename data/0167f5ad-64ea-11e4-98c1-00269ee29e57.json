@@ -1,0 +1,57 @@
+{
+	"id": "0167f5ad-64ea-11e4-98c1-00269ee29e57",
+	"advisories": [
+		{
+			"id": "0167f5ad-64ea-11e4-98c1-00269ee29e57",
+			"title": "Konversation -- out-of-bounds read on a heap-allocated array",
+			"description": "\n\t<p>Konversation developers report:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20141104-1.txt\">\n\t  <p>Konversation's Blowfish ECB encryption support assumes incoming blocks\n\t  to be the expected 12 bytes. The lack of a sanity-check for the actual\n\t  size can cause a denial of service and an information leak to the local\n\t  user.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kde.org/info/security/advisory-20141104-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0167f5ad-64ea-11e4-98c1-00269ee29e57.html"
+				}
+			],
+			"published": "2014-11-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8483",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8483"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "konversation"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

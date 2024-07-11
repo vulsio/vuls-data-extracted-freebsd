@@ -1,0 +1,71 @@
+{
+	"id": "4bb56d2f-a5b0-11ea-a860-08002728f74c",
+	"advisories": [
+		{
+			"id": "4bb56d2f-a5b0-11ea-a860-08002728f74c",
+			"title": "nghttp2 -- DoS vulnerability",
+			"description": "\n\t<p>nghttp2 security advisories:</p>\n\t<blockquote cite=\"https://github.com/nghttp2/nghttp2/security/advisories/GHSA-q5wr-xfw9-q7xr\">\n\t  <p>The overly large HTTP/2 SETTINGS frame payload causes denial of service.</p>\n\t  <p>The proof of concept attack involves a malicious client constructing a\n\t    SETTINGS frame with a length of 14,400 bytes (2400 individual settings\n\t    entries) over and over again. The attack causes the CPU to spike at 100%.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/nghttp2/nghttp2/security/advisories/GHSA-q5wr-xfw9-q7xr"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4bb56d2f-a5b0-11ea-a860-08002728f74c.html"
+				}
+			],
+			"published": "2020-06-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-11080",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-11080"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nghttp2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.41.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libnghttp2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.41.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

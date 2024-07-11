@@ -1,0 +1,121 @@
+{
+	"id": "4dfafa16-24ba-11e6-bd31-3065ec8fd3ec",
+	"advisories": [
+		{
+			"id": "4dfafa16-24ba-11e6-bd31-3065ec8fd3ec",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.nl/2016/05/stable-channel-update.html\">\n\t  <p>5 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[605766] High CVE-2016-1667: Same origin bypass in DOM. Credit\n\t      to Mariusz Mlynski.</li>\n\t    <li>[605910] High CVE-2016-1668: Same origin bypass in Blink V8\n\t      bindings. Credit to Mariusz Mlynski.</li>\n\t    <li>[606115] High CVE-2016-1669: Buffer overflow in V8. Credit to\n\t      Choongwoo Han.</li>\n\t    <li>[578882] Medium CVE-2016-1670: Race condition in loader. Credit\n\t      to anonymous.</li>\n\t    <li>[586657] Medium CVE-2016-1671: Directory traversal using the\n\t      file scheme on Android. Credit to Jann Horn.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.nl/2016/05/stable-channel-update.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4dfafa16-24ba-11e6-bd31-3065ec8fd3ec.html"
+				}
+			],
+			"published": "2016-05-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1667",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1667"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1668",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1668"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1669",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1669"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1670",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1670"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1671",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1671"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "50.0.2661.102"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-npapi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "50.0.2661.102"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-pulse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "50.0.2661.102"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

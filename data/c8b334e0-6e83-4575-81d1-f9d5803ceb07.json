@@ -1,0 +1,125 @@
+{
+	"id": "c8b334e0-6e83-4575-81d1-f9d5803ceb07",
+	"advisories": [
+		{
+			"id": "c8b334e0-6e83-4575-81d1-f9d5803ceb07",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop_21.html\">\n\t <p>This update includes 8 security fixes:</p>\n\t <ul>\n\t   <li>[1421773] High CVE-2023-1528: Use after free in Passwords. Reported by Wan Choi of Seoul National University on 2023-03-07</li>\n\t   <li>[1419718] High CVE-2023-1529: Out of bounds memory access in WebHID. Reported by anonymous on 2023-02-27</li>\n\t   <li>[1419831] High CVE-2023-1530: Use after free in PDF. Reported by The UK's National Cyber Security Centre (NCSC) on 2023-02-27</li>\n\t   <li>[1415330] High CVE-2023-1531: Use after free in ANGLE. Reported by Piotr Bania of Cisco Talos on 2023-02-13</li>\n\t   <li>[1421268] High CVE-2023-1532: Out of bounds read in GPU Video. Reported by Mark Brand of Google Project Zero on 2023-03-03</li>\n\t   <li>[1422183] High CVE-2023-1533: Use after free in WebProtect. Reported by Weipeng Jiang (@Krace) of VRI on 2023-03-07</li>\n\t   <li>[1422594] High CVE-2023-1534: Out of bounds read in ANGLE. Reported by Jann Horn and Mark Brand of Google Project Zero on 2023-03-08</li>\n\t </ul>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop_21.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c8b334e0-6e83-4575-81d1-f9d5803ceb07.html"
+				}
+			],
+			"published": "2023-03-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-1528",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1528"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1529",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1529"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1530",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1530"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1531",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1531"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1532",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1532"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1533",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1533"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1534",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1534"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "111.0.5563.110"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ungoogled-chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "111.0.5563.110"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

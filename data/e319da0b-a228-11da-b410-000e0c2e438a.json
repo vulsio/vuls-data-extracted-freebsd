@@ -1,0 +1,57 @@
+{
+	"id": "e319da0b-a228-11da-b410-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "e319da0b-a228-11da-b410-000e0c2e438a",
+			"title": "gedit -- format string vulnerability",
+			"description": "\n\t<p>Yan Feng reports a format string vulnerability in gedit.\n\t  This vulnerability could cause a denial of service with a\n\t  binary file that contains format string characters within\n\t  the filename.  It had been reported that web browsers\n\t  and email clients can be configured to provide a filename as\n\t  an argument to gedit.:</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": ":http://marc.theaimsgroup.com/?l=bugtraq&m=111661117701398"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e319da0b-a228-11da-b410-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-02-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CAN-2005-1686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CAN-2005-1686"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gedit"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.10.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,75 @@
+{
+	"id": "e50a7476-bb2d-11da-b2fb-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "e50a7476-bb2d-11da-b2fb-000e0c2e438a",
+			"title": "ipsec -- reply attack vulnerability",
+			"description": "\n\t<h1>Problem Description</h1>\n\t<p>IPsec provides an anti-replay service which when enabled\n\t  prevents an attacker from successfully executing a replay\n\t  attack.  This is done through the verification of sequence\n\t  numbers.  A programming error in the fast_ipsec(4)\n\t  implementation results in the sequence number associated with\n\t  a Security Association not being updated, allowing packets to\n\t  unconditionally pass sequence number verification checks.</p>\n\t<h1>Impact</h1>\n\t<p>An attacker able to intercept IPSec packets can replay\n\t  them.  If higher level protocols which do not provide any\n\t  protection against packet replays (e.g., UDP) are used, this\n\t  may have a variety of effects.</p>\n\t<h1>Workaround</h1>\n\t<p>No workaround is available.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:11.ipsec.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e50a7476-bb2d-11da-b2fb-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-03-24T00:00:00Z",
+			"modified": "2006-06-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0905",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0905"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0_6",
+									"ge": "6.0"
+								},
+								{
+									"lt": "5.4_13",
+									"ge": "5.4"
+								},
+								{
+									"lt": "5.3_28",
+									"ge": "5.3"
+								},
+								{
+									"lt": "4.11_16",
+									"ge": "4.11"
+								},
+								{
+									"lt": "4.10_22",
+									"ge": "4.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

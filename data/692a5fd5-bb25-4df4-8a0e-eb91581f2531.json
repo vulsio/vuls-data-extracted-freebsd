@@ -1,0 +1,117 @@
+{
+	"id": "692a5fd5-bb25-4df4-8a0e-eb91581f2531",
+	"advisories": [
+		{
+			"id": "692a5fd5-bb25-4df4-8a0e-eb91581f2531",
+			"title": "py-flask-caching -- remote code execution or local privilege escalation vulnerabilities",
+			"description": "\n    <p>subnix reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/PYSEC-2021-13\">\n      <p>The Flask-Caching extension through 2.0.2 for Flask relies on Pickle for serialization, which may lead to remote code execution or local privilege escalation.</p>\n      <p>If an attacker gains access to cache storage (e.g., filesystem, Memcached, Redis, etc.), they can construct a crafted payload, poison the cache, and execute Python code.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-656c-6cxf-hvcv"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/PYSEC-2021-13"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/692a5fd5-bb25-4df4-8a0e-eb91581f2531.html"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-33026",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33026"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-flask-caching"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-flask-caching"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-flask-caching"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-flask-caching"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-flask-caching"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

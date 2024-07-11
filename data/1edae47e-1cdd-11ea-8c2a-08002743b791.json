@@ -1,0 +1,94 @@
+{
+	"id": "1edae47e-1cdd-11ea-8c2a-08002743b791",
+	"advisories": [
+		{
+			"id": "1edae47e-1cdd-11ea-8c2a-08002743b791",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/history/samba-4.10.11.html\">\n\t  <p>CVE-2019-14861:</p>\n\t  <p>An authenticated user can crash the DCE/RPC DNS management server by creating records with matching the zone name.</p>\n\t  <p>CVE-2019-14870:</p>\n\t  <p>The DelegationNotAllowed Kerberos feature restriction was not being applied when processing protocol transition requests (S4U2Self), in the AD DC KDC.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/history/samba-4.10.11.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1edae47e-1cdd-11ea-8c2a-08002743b791.html"
+				}
+			],
+			"published": "2019-12-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-14861",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14861"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14870",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14870"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba48"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "4.8.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba410"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.10.11"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba411"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.11.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

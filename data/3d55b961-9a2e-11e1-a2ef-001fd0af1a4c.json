@@ -1,0 +1,66 @@
+{
+	"id": "3d55b961-9a2e-11e1-a2ef-001fd0af1a4c",
+	"advisories": [
+		{
+			"id": "3d55b961-9a2e-11e1-a2ef-001fd0af1a4c",
+			"title": "rubygem-mail -- multiple vulnerabilities",
+			"description": "\n\t   <p>rubygem-mail -- multiple vulnerabilities</p>\n\t   <blockquote cite=\"http://seclists.org/oss-sec/2012/q2/190\">\n\t      <p>Two issues were fixed. They are a file system traversal in file_delivery method and arbitrary command execution when using exim or sendmail from the command line.</p>\n\t   </blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2012/q2/190"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3d55b961-9a2e-11e1-a2ef-001fd0af1a4c.html"
+				}
+			],
+			"published": "2012-05-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-2139",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2139"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2140",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2140"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-mail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

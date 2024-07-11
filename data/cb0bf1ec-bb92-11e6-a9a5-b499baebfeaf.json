@@ -1,0 +1,76 @@
+{
+	"id": "cb0bf1ec-bb92-11e6-a9a5-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "cb0bf1ec-bb92-11e6-a9a5-b499baebfeaf",
+			"title": "Apache httpd -- denial of service in HTTP/2",
+			"description": "\n\t<p>mod_http2 reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/httpd-announce/201612.mbox/%3C1A097A43-7CCB-4BA1-861F-E0C7EEE83A4B%40apache.org%3E\">\n\t  <p>The Apache HTTPD web server (from 2.4.17-2.4.23) did not apply\n\t    limitations on request headers correctly when experimental module\n\t    for the HTTP/2 protocol is used to access a resource.</p>\n\t  <p>The net result is that a the server allocates too much memory\n\t    instead of denying the request. This can lead to memory exhaustion\n\t    of the server by a properly crafted request.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/httpd-announce/201612.mbox/%3C1A097A43-7CCB-4BA1-861F-E0C7EEE83A4B%40apache.org%3E"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/icing/mod_h2/releases/tag/v1.8.3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb0bf1ec-bb92-11e6-a9a5-b499baebfeaf.html"
+				}
+			],
+			"published": "2016-12-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-8740",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8740"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache24"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.4.23_1",
+									"ge": "2.4.17"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_http2-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

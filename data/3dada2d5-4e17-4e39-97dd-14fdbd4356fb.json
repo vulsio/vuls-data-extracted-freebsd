@@ -1,0 +1,57 @@
+{
+	"id": "3dada2d5-4e17-4e39-97dd-14fdbd4356fb",
+	"advisories": [
+		{
+			"id": "3dada2d5-4e17-4e39-97dd-14fdbd4356fb",
+			"title": "null -- Routinator terminates when RTR connection is reset too quickly after opening",
+			"description": "\n       <p>sep@nlnetlabs.nl reports:</p>\n       <blockquote cite=\"https://www.nlnetlabs.nl/downloads/routinator/CVE-2024-1622.txt\">\n       <p>Due to a mistake in error checking, Routinator will terminate when\n       an incoming RTR connection is reset by the peer too quickly after\n       opening.</p>\n       </blockquote>\n       ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1622"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3dada2d5-4e17-4e39-97dd-14fdbd4356fb.html"
+				}
+			],
+			"published": "2024-02-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-1622",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1622"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "null"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "null"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

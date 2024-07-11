@@ -1,0 +1,111 @@
+{
+	"id": "676ca486-9c1e-11ea-8b5e-b42e99a1b9c3",
+	"advisories": [
+		{
+			"id": "676ca486-9c1e-11ea-8b5e-b42e99a1b9c3",
+			"title": "Apache Tomcat Remote Code Execution via session persistence",
+			"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t  <p>Under certain circumstances an attacker will be able to trigger remote code execution via deserialization of the file under their control</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-10.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/676ca486-9c1e-11ea-8b5e-b42e99a1b9c3.html"
+				}
+			],
+			"published": "2020-05-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-9484",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-9484"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.104"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat85"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.5.55"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat9"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.0.35"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.0.M5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

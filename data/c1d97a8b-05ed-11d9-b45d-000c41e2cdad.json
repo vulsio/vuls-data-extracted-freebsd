@@ -1,0 +1,103 @@
+{
+	"id": "c1d97a8b-05ed-11d9-b45d-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "c1d97a8b-05ed-11d9-b45d-000c41e2cdad",
+			"title": "mozilla -- POP client heap overflow",
+			"description": "\n\t<p>zen-parse discovered a heap buffer overflow in Mozilla's\n\t  POP client implementation.  A malicious POP server\n\t  could exploit this vulnerability to cause Mozilla to execute\n\t  arbitrary code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.mozilla.org/show_bug.cgi?id=157644"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.mozilla.org/show_bug.cgi?id=229374"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c1d97a8b-05ed-11d9-b45d-000c41e2cdad.html"
+				}
+			],
+			"published": "2004-09-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0757",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0757"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mozilla"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7,2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-mozilla"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "netscape7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

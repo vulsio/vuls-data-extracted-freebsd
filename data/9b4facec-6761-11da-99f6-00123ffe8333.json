@@ -1,0 +1,71 @@
+{
+	"id": "9b4facec-6761-11da-99f6-00123ffe8333",
+	"advisories": [
+		{
+			"id": "9b4facec-6761-11da-99f6-00123ffe8333",
+			"title": "curl -- URL buffer overflow vulnerability",
+			"description": "\n\t<p>A Project cURL Security Advisory reports:</p>\n\t<blockquote cite=\"http://curl.haxx.se/docs/adv_20051207.html\">\n\t  <p>libcurl's URL parser function can overflow a malloced\n\t    buffer in two ways, if given a too long URL.</p>\n\t  <p>1 - pass in a URL with no protocol (like \"http://\")\n\t    prefix, using no slash and the string is 256 bytes or\n\t    longer. This leads to a single zero byte overflow of the\n\t    malloced buffer.</p>\n\t  <p>2 - pass in a URL with only a question mark as separator\n\t    (no slash) between the host and the query part of the URL.\n\t    This leads to a single zero byte overflow of the malloced\n\t    buffer.</p>\n\t  <p>Both overflows can be made with the same input string,\n\t    leading to two single zero byte overwrites.</p>\n\t  <p>The affected flaw cannot be triggered by a redirect, but\n\t    the long URL must be passed in \"directly\" to libcurl. It\n\t    makes this a \"local\" problem. Of course, lots of programs\n\t    may still pass in user-provided URLs to libcurl without doing\n\t    much syntax checking of their own, allowing a user to exploit\n\t    this vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://curl.haxx.se/docs/adv_20051207.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17907/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.hardened-php.net/advisory_242005.109.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/15756"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9b4facec-6761-11da-99f6-00123ffe8333.html"
+				}
+			],
+			"published": "2005-12-09T00:00:00Z",
+			"modified": "2006-01-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-4077",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-4077"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.15.1",
+									"ge": "7.11.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

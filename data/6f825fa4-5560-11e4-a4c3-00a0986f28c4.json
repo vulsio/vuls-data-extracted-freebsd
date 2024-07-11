@@ -1,0 +1,61 @@
+{
+	"id": "6f825fa4-5560-11e4-a4c3-00a0986f28c4",
+	"advisories": [
+		{
+			"id": "6f825fa4-5560-11e4-a4c3-00a0986f28c4",
+			"title": "drupal7 -- SQL injection",
+			"description": "\n\t<p>Drupal Security Team reports:</p>\n\t<blockquote cite=\"https://drupal.org/SA-CORE-2013-003\">\n\t  <p>Drupal 7 includes a database abstraction API to ensure that\n\t    queries executed against the database are sanitized to prevent\n\t    SQL injection attacks.\n\t    A vulnerability in this API allows an attacker to send\n\t    specially crafted requests resulting in arbitrary SQL execution.\n\t    Depending on the content of the requests this can lead to\n\t    privilege escalation, arbitrary PHP execution, or other attacks.\n\t    This vulnerability can be exploited by anonymous users.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.drupal.org/SA-CORE-2014-005"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.sektioneins.de/en/blog/14-10-15-drupal-sql-injection-vulnerability.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6f825fa4-5560-11e4-a4c3-00a0986f28c4.html"
+				}
+			],
+			"published": "2014-10-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3704",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3704"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.32"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

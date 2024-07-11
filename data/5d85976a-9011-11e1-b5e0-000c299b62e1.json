@@ -1,0 +1,61 @@
+{
+	"id": "5d85976a-9011-11e1-b5e0-000c299b62e1",
+	"advisories": [
+		{
+			"id": "5d85976a-9011-11e1-b5e0-000c299b62e1",
+			"title": "net-snmp -- Remote DoS",
+			"description": "\n\t<p>The Red Hat Security Response Team reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=815813\">\n\t  <p>An array index error, leading to out-of heap-based buffer read flaw was\n\t     found in the way the net-snmp agent performed lookups in the\n\t     extension table.  When certain MIB subtrees were handled by the\n\t     extend directive, a remote attacker (having read privileges to the\n\t     subntree) could use this flaw to cause a denial of service condition\n\t     via an SNMP GET request involving a non-existent extension table\n\t     entry.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2012/04/26/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=815813"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5d85976a-9011-11e1-b5e0-000c299b62e1.html"
+				}
+			],
+			"published": "2012-04-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-2141",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2141"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.7.1_7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

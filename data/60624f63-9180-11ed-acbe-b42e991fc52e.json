@@ -1,0 +1,57 @@
+{
+	"id": "60624f63-9180-11ed-acbe-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "60624f63-9180-11ed-acbe-b42e991fc52e",
+			"title": "cassandra3 -- arbitrary code execution",
+			"description": "\n\t<p>Marcus Eriksson reports:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread/y4nb9s4co34j8hdfmrshyl09lokm7356\">\n\t  <p>\n\t  When running Apache Cassandra with\n\t  the following configuration:\n\t  enable_user_defined_functions: true\n\t  enable_scripted_user_defined_functions: true\n\t  enable_user_defined_functions_threads: false\n\t  it is possible for an attacker to execute arbitrary code on\n\t  the host. The attacker would need to have enough permissions\n\t  to create user defined functions in the cluster to be able\n\t  to exploit this.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cvedetails.com/cve/CVE-2021-44521"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/60624f63-9180-11ed-acbe-b42e991fc52e.html"
+				}
+			],
+			"published": "2023-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44521",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44521"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cassandra3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.11.13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

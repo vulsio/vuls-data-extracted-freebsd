@@ -1,0 +1,103 @@
+{
+	"id": "5713bfda-e27d-11e4-b2ce-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "5713bfda-e27d-11e4-b2ce-5453ed2e2b49",
+			"title": "qt4-imageformats, qt4-gui, qt5-gui -- Multiple Vulnerabilities in Qt Image Format Handling",
+			"description": "\n\t<p>Richard J. Moore reports:</p>\n\t<blockquote cite=\"http://lists.qt-project.org/pipermail/announce/2015-April/000067.html\">\n\t  <p>Due to two recent vulnerabilities identified in the built-in image\n\t  format handling code, it was decided that this area required further\n\t  testing to determine if further issues remained. Fuzzing using\n\t  afl-fuzz located a number of issues in the handling of BMP, ICO and\n\t  GIF files. The issues exposed included denial of service and buffer\n\t  overflows leading to heap corruption. It is possible the latter could\n\t  be used to perform remote code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.qt-project.org/pipermail/announce/2015-April/000067.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5713bfda-e27d-11e4-b2ce-5453ed2e2b49.html"
+				}
+			],
+			"published": "2015-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1858",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1858"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1859",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1859"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1860",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1860"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt4-imageformats"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.8.6_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt4-gui"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.8.6_5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-gui"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.1_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

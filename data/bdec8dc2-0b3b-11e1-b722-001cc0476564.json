@@ -1,0 +1,57 @@
+{
+	"id": "bdec8dc2-0b3b-11e1-b722-001cc0476564",
+	"advisories": [
+		{
+			"id": "bdec8dc2-0b3b-11e1-b722-001cc0476564",
+			"title": "gnutls -- client session resumption vulnerability",
+			"description": "\n\t<p>The GnuTLS team reports:</p>\n\t<blockquote cite=\"http://www.gnu.org/software/gnutls/security.html\">\n\t  <p>GNUTLS-SA-2011-2 Possible buffer overflow/Denial of service.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/5596"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bdec8dc2-0b3b-11e1-b722-001cc0476564.html"
+				}
+			],
+			"published": "2011-11-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4128",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4128"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.12.14"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

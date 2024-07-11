@@ -1,0 +1,57 @@
+{
+	"id": "2fe4b57f-d110-11e1-ac76-10bf48230856",
+	"advisories": [
+		{
+			"id": "2fe4b57f-d110-11e1-ac76-10bf48230856",
+			"title": "Dokuwiki -- cross site scripting vulnerability",
+			"description": "\n\t<p>Secunia Research reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/49196/\">\n\t  <p>Secunia Research has discovered a vulnerability in DokuWiki, which can\n\t    be exploited by malicious people to conduct cross-site scripting\n\t    attacks.</p>\n\t  <p>Input passed to the \"ns\" POST parameter in lib/exe/ajax.php (when \"call\"\n\t    is set to \"medialist\" and \"do\" is set to \"media\") is not properly\n\t    sanitised within the \"tpl_mediaFileList()\" function in inc/template.php\n\t    before being returned to the user. This can be exploited to execute\n\t    arbitrary HTML and script code in a user's browser session in context\n\t    of an affected site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/49196/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2fe4b57f-d110-11e1-ac76-10bf48230856.html"
+				}
+			],
+			"published": "2012-07-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-0283",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0283"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dokuwiki"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20120125_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,65 @@
+{
+	"id": "1cae628c-3569-11e0-8e81-0022190034c0",
+	"advisories": [
+		{
+			"id": "1cae628c-3569-11e0-8e81-0022190034c0",
+			"title": "rubygem-mail -- Remote Arbitrary Shell Command Injection Vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/43077/\">\n\t  <p>Input passed via an email from address is not properly sanitised\n\t    in the \"deliver()\" function (lib/mail/network/delivery_methods/sendmail.rb)\n\t    before being used as a command line argument. This can be exploited\n\t    to inject arbitrary shell commands.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://groups.google.com/group/mail-ruby/browse_thread/thread/e93bbd05706478dd?pli=1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/43077/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/46021"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1cae628c-3569-11e0-8e81-0022190034c0.html"
+				}
+			],
+			"published": "2011-02-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-0739",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0739"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-mail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.15"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

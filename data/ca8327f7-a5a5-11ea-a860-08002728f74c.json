@@ -1,0 +1,61 @@
+{
+	"id": "ca8327f7-a5a5-11ea-a860-08002728f74c",
+	"advisories": [
+		{
+			"id": "ca8327f7-a5a5-11ea-a860-08002728f74c",
+			"title": "websocket-extensions -- ReDoS vulnerability",
+			"description": "\n\t<p>Changelog:</p>\n\t<blockquote cite=\"https://github.com/faye/websocket-extensions-ruby/blob/master/CHANGELOG.md#015--2020-06-02\">\n\t  <p>Remove a ReDoS vulnerability in the header parser (CVE-2020-7663)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/faye/websocket-extensions-ruby/blob/master/CHANGELOG.md"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/faye/websocket-extensions-ruby/commit/aa156a439da681361ed6f53f1a8131892418838b"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ca8327f7-a5a5-11ea-a860-08002728f74c.html"
+				}
+			],
+			"published": "2020-06-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7663",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7663"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-websocket-extensions"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.1.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

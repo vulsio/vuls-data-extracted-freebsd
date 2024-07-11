@@ -1,0 +1,62 @@
+{
+	"id": "dc3c66e8-6a18-11e7-93af-005056925db4",
+	"advisories": [
+		{
+			"id": "dc3c66e8-6a18-11e7-93af-005056925db4",
+			"title": "Cacti -- Cross-site scripting (XSS) vulnerability in link.php",
+			"description": "\n\t<p>kimiizhang reports:</p>\n\t<blockquote cite=\"https://github.com/Cacti/cacti/issues/838\">\n\t  <p>Cross-site scripting (XSS) vulnerability in link.php in Cacti<br/>\n\t    1.1.12 allows remote anonymous users to inject arbitrary web<br/>\n\t    script or HTML via the id parameter.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/Cacti/cacti/issues/838"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cacti.net/release_notes.php?version=1.1.13"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dc3c66e8-6a18-11e7-93af-005056925db4.html"
+				}
+			],
+			"published": "2017-07-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-10970",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-10970"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cacti"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.13",
+									"ge": "1.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

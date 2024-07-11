@@ -1,0 +1,151 @@
+{
+	"id": "333f655a-b93a-11e5-9efa-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "333f655a-b93a-11e5-9efa-5453ed2e2b49",
+			"title": "p5-PathTools -- File::Spec::canonpath loses taint",
+			"description": "\n\t<p>Ricardo Signes reports:</p>\n\t<blockquote>\n\t  <p>Beginning in PathTools 3.47 and/or perl 5.20.0, the\n\t    File::Spec::canonpath() routine returned untained strings even if\n\t    passed tainted input. This defect undermines the guarantee of taint\n\t    propagation, which is sometimes used to ensure that unvalidated\n\t    user input does not reach sensitive code.</p>\n\t  <p>This defect was found and reported by David Golden of MongoDB.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://rt.perl.org/Public/Bug/Display.html?id=126862"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/333f655a-b93a-11e5-9efa-5453ed2e2b49.html"
+				}
+			],
+			"published": "2016-01-12T00:00:00Z",
+			"modified": "2016-08-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8607",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8607"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-PathTools"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6200",
+									"gt": "3.4000"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.20.2",
+									"ge": "5.19.9"
+								},
+								{
+									"lt": "5.22.2",
+									"ge": "5.21.0"
+								},
+								{
+									"lt": "5.23.7",
+									"ge": "5.23.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl5.20"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.20.2",
+									"ge": "5.19.9"
+								},
+								{
+									"lt": "5.22.2",
+									"ge": "5.21.0"
+								},
+								{
+									"lt": "5.23.7",
+									"ge": "5.23.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl5.22"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.20.2",
+									"ge": "5.19.9"
+								},
+								{
+									"lt": "5.22.2",
+									"ge": "5.21.0"
+								},
+								{
+									"lt": "5.23.7",
+									"ge": "5.23.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl5-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.20.2",
+									"ge": "5.19.9"
+								},
+								{
+									"lt": "5.22.2",
+									"ge": "5.21.0"
+								},
+								{
+									"lt": "5.23.7",
+									"ge": "5.23.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

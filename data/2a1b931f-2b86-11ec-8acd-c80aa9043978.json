@@ -1,0 +1,88 @@
+{
+	"id": "2a1b931f-2b86-11ec-8acd-c80aa9043978",
+	"advisories": [
+		{
+			"id": "2a1b931f-2b86-11ec-8acd-c80aa9043978",
+			"title": "OpenSSH -- OpenSSH 6.2 through 8.7 failed to correctly initialise supplemental groups when executing an AuthorizedKeysCommand or AuthorizedPrincipalsCommand",
+			"description": "\n\t<p>OpenBSD Project reports:</p>\n\t<blockquote cite=\"https://www.openssh.com/txt/release-8.8\">\n\t    <p>\n\t\tsshd(8) from OpenSSH 6.2 through 8.7 failed to correctly initialise\n\t\tsupplemental groups when executing an AuthorizedKeysCommand or\n\t\tAuthorizedPrincipalsCommand, where a AuthorizedKeysCommandUser or\n\t\tAuthorizedPrincipalsCommandUser directive has been set to run the\n\t\tcommand as a different user. Instead these commands would inherit\n\t\tthe groups that sshd(8) was started with.\n\t    </p>\n\t    <p>\n\t\tDepending on system configuration, inherited groups may allow\n\t\tAuthorizedKeysCommand/AuthorizedPrincipalsCommand helper programs to\n\t\tgain unintended privilege.\n\t    </p>\n\t    <p>\n\t\tNeither AuthorizedKeysCommand nor AuthorizedPrincipalsCommand are\n\t\tenabled by default in sshd_config(5).\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssh.com/txt/release-8.8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a1b931f-2b86-11ec-8acd-c80aa9043978.html"
+				}
+			],
+			"published": "2021-10-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-41617",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41617"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-portable"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.7.p1_2,1",
+									"ge": "6.2.p1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-portable-hpn"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.7.p1_2,1",
+									"ge": "6.2.p1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-portable-gssapi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.7.p1_2,1",
+									"ge": "6.2.p1,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

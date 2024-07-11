@@ -1,0 +1,82 @@
+{
+	"id": "cbfc1591-c8c0-11ee-b45a-589cfc0f81b0",
+	"advisories": [
+		{
+			"id": "cbfc1591-c8c0-11ee-b45a-589cfc0f81b0",
+			"title": "phpmyfaq -- multiple vulnerabilities",
+			"description": "\n\t<p>phpMyFAQ team reports:</p>\n\t<blockquote cite=\"https://www.phpmyfaq.de/security/advisory-2024-02-05\">\n\t  <p>phpMyFAQ doesn't implement sufficient checks to avoid XSS when\n\t    storing on attachments filenames. The 'sharing FAQ' functionality\n\t    allows any unauthenticated actor to misuse the phpMyFAQ application\n\t    to send arbitrary emails to a large range of targets. phpMyFAQ's\n\t    user removal page allows an attacker to spoof another user's\n\t    detail, and in turn make a compelling phishing case for removing\n\t    another user's account.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-6648-6g96-mg35"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-7m8g-fprr-47fx"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9hhf-xmcw-r3xg"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cbfc1591-c8c0-11ee-b45a-589cfc0f81b0.html"
+				}
+			],
+			"published": "2024-02-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpmyfaq-php81"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpmyfaq-php82"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpmyfaq-php83"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

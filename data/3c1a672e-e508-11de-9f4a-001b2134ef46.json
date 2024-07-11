@@ -1,0 +1,147 @@
+{
+	"id": "3c1a672e-e508-11de-9f4a-001b2134ef46",
+	"advisories": [
+		{
+			"id": "3c1a672e-e508-11de-9f4a-001b2134ef46",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe Product Security Incident Response Team reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb09-19.html\">\n\t  <p>Critical vulnerabilities have been identified in Adobe\n\t    Flash Player version 10.0.32.18 and earlier.  These\n\t    vulnerabilities could cause the application to crash and\n\t    could potentially allow an attacker to take control of the\n\t    affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/security/bulletins/apsb09-19.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zerodayinitiative.com/advisories/ZDI-09-092/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zerodayinitiative.com/advisories/ZDI-09-093/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c1a672e-e508-11de-9f4a-001b2134ef46.html"
+				}
+			],
+			"published": "2009-12-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-3794",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3794"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3796",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3796"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3797",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3797"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3798",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3798"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3799",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3799"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3800",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3800"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3951",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3951"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.0r260"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f8-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0r42"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0r42"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

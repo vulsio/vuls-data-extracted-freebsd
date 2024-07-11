@@ -1,0 +1,75 @@
+{
+	"id": "f59af308-07f3-11ea-8c56-f8b156b6dcc8",
+	"advisories": [
+		{
+			"id": "f59af308-07f3-11ea-8c56-f8b156b6dcc8",
+			"title": "GNU cpio -- multiple vulnerabilities",
+			"description": "\n\t<p>Sergey Poznyakoff reports:</p>\n\t<blockquote cite=\"https://lists.gnu.org/archive/html/bug-cpio/2019-11/msg00000.html\">\n\t  <p>This stable release fixes several potential vulnerabilities</p>\n\t  <p>CVE-2015-1197: cpio, when using the --no-absolute-filenames\n\t    option, allows local users to write to arbitrary files\n\t    via a symlink attack on a file in an archive.</p>\n\t  <p>CVE-2016-2037: The cpio_safer_name_suffix function in\n\t    util.c allows remote attackers to cause a denial of service\n\t    (out-of-bounds write) via a crafted cpio file.</p>\n\t  <p>CVE-2019-14866: Improper input validation when writing\n\t    tar header fields leads to unexpected tar generation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.gnu.org/archive/html/bug-cpio/2019-11/msg00000.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f59af308-07f3-11ea-8c56-f8b156b6dcc8.html"
+				}
+			],
+			"published": "2019-11-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1197",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1197"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2037",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2037"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14866",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14866"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gcpio"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

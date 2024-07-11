@@ -1,0 +1,66 @@
+{
+	"id": "30ce591c-947b-11ea-92ab-00163e433440",
+	"advisories": [
+		{
+			"id": "30ce591c-947b-11ea-92ab-00163e433440",
+			"title": "FreeBSD -- Insufficient packet length validation in libalias",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>libalias(3) packet handlers do not properly validate the packet length before\n\taccessing the protocol headers.  As a result, if a libalias(3) module does\n\tnot properly validate the packet length before accessing the protocol header,\n\tit is possible for an out of bound read or write condition to occur.</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious attacker could send specially constructed packets that exploit\n\tthe lack of validation allowing the attacker to read or write memory either\n\tfrom the kernel (for the in-kernel NAT implementation) or from the process\n\tspace for natd (for the userspace implementation).</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:12.libalias.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/30ce591c-947b-11ea-92ab-00163e433440.html"
+				}
+			],
+			"published": "2020-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7454",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7454"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "12.1_5",
+									"ge": "12.1"
+								},
+								{
+									"lt": "11.4_1",
+									"ge": "11.4"
+								},
+								{
+									"lt": "11.3_9",
+									"ge": "11.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,200 @@
+{
+	"id": "3b4a6982-0b24-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "3b4a6982-0b24-11da-bc08-0001020eed82",
+			"title": "libgadu -- multiple vulnerabilities",
+			"description": "\n\t<p>Wojtek Kaniewski reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=112198499417250\">\n\t  <p>Multiple vulnerabilities have been found in libgadu, a\n\t    library for handling Gadu-Gadu instant messaging\n\t    protocol. It is a part of ekg, a Gadu-Gadu client, but is\n\t    widely used in other clients. Also some of the user\n\t    contributed scripts were found to behave in an insecure\n\t    manner.</p>\n\t  <ul>\n\t    <li>integer overflow in libgadu (CVE-2005-1852) that could\n\t      be triggered by an incomming message and lead to\n\t      application crash and/or remote code execution</li>\n\t    <li>insecure file creation (CVE-2005-1850) and shell\n\t      command injection (CVE-2005-1851) in other user\n\t      contributed scripts (discovered by Marcin Owsiany and\n\t      Wojtek Kaniewski)</li>\n\t    <li>several signedness errors in libgadu that could be\n\t      triggered by an incomming network data or an application\n\t      passing invalid user input to the library</li>\n\t    <li>memory alignment errors in libgadu that could be\n\t      triggered by an incomming message and lead to bus errors\n\t      on architectures like SPARC</li>\n\t    <li>endianness errors in libgadu that could cause invalid\n\t      behaviour of applications on big-endian\n\t      architectures</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=20"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=112198499417250"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kde.org/info/security/advisory-20050721-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14345"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3b4a6982-0b24-11da-bc08-0001020eed82.html"
+				}
+			],
+			"published": "2005-08-12T00:00:00Z",
+			"modified": "2005-10-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1850",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1850"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1851",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1851"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-1852",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1852"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-2369",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2369"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-2370",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2370"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-2448",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2448"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ko-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kdenetwork"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.2",
+									"gt": "3.2.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pl-ekg"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6r3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "centericq"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.21.0_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

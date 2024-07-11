@@ -1,0 +1,57 @@
+{
+	"id": "436d7f93-9cf0-11ea-82b8-4c72b94353b5",
+	"advisories": [
+		{
+			"id": "436d7f93-9cf0-11ea-82b8-4c72b94353b5",
+			"title": "piwigo -- Multible Vulnerabilities",
+			"description": "\n\t<p>Piwigo reports:</p>\n\t<blockquote cite=\"https://www.piwigo.org/release-2.10.2\">\n\t  <p>Piwigo 2.10.1 is affected by stored XSS\n\t    via the Group Name Field to the group_list page.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-8089"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/436d7f93-9cf0-11ea-82b8-4c72b94353b5.html"
+				}
+			],
+			"published": "2020-05-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8089",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8089"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "piwigo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.10.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

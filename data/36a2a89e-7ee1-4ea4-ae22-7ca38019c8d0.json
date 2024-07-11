@@ -1,0 +1,61 @@
+{
+	"id": "36a2a89e-7ee1-4ea4-ae22-7ca38019c8d0",
+	"advisories": [
+		{
+			"id": "36a2a89e-7ee1-4ea4-ae22-7ca38019c8d0",
+			"title": "Loofah -- XSS vulnerability",
+			"description": "\n\t<p>GitHub issue:</p>\n\t<blockquote cite=\"https://github.com/flavorjones/loofah/issues/154\">\n\t  <p>This issue has been created for public disclosure of an XSS\n\t    vulnerability that was responsibly reported (independently) by Shubham\n\t    Pathak and @yasinS (Yasin Soliman).</p>\n\t  <p>In the Loofah gem, through v2.2.2, unsanitized JavaScript may occur in\n\t    sanitized output when a crafted SVG element is republished.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/flavorjones/loofah/issues/154"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/flavorjones/loofah/releases"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/36a2a89e-7ee1-4ea4-ae22-7ca38019c8d0.html"
+				}
+			],
+			"published": "2018-11-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-16468",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-16468"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-loofah"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

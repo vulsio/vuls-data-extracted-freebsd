@@ -1,0 +1,85 @@
+{
+	"id": "f0b9049f-88c4-11e5-aed7-00262d5ed8ee",
+	"advisories": [
+		{
+			"id": "f0b9049f-88c4-11e5-aed7-00262d5ed8ee",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.nl/2015/11/stable-channel-update.html\">\n\t  <p>[520422] High CVE-2015-1302: Information leak in PDF viewer.\n\t    Credit to Rob Wu.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.nl/2015/11/stable-channel-update.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f0b9049f-88c4-11e5-aed7-00262d5ed8ee.html"
+				}
+			],
+			"published": "2015-11-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1302",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1302"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "46.0.2490.86"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-npapi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "46.0.2490.86"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-pulse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "46.0.2490.86"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

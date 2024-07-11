@@ -1,0 +1,57 @@
+{
+	"id": "8f128c72-ecf9-11e8-aa00-6451062f0f7a",
+	"advisories": [
+		{
+			"id": "8f128c72-ecf9-11e8-aa00-6451062f0f7a",
+			"title": "Flash Player -- arbitrary code execution",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb18-44.html\">\n\t  <ul>\n\t    <li>This update resolves a type confusion vulnerability that\n\t      could lead to arbitrary code execution (CVE-2018-15981).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb18-44.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8f128c72-ecf9-11e8-aa00-6451062f0f7a.html"
+				}
+			],
+			"published": "2018-11-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-15981",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-15981"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "31.0.0.153"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

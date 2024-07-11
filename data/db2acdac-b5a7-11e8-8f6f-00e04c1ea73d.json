@@ -1,0 +1,46 @@
+{
+	"id": "db2acdac-b5a7-11e8-8f6f-00e04c1ea73d",
+	"advisories": [
+		{
+			"id": "db2acdac-b5a7-11e8-8f6f-00e04c1ea73d",
+			"title": "mybb -- vulnerabilities",
+			"description": "\n\t<p>mybb Team reports:</p>\n\t<blockquote cite=\"https://blog.mybb.com/2018/08/22/mybb-1-8-18-released-security-maintenance-release/\">\n\t  <p>High risk: Image MyCode “alt” attribute persistent XSS.</p>\n\t  <p>Medium risk: RSS Atom 1.0 item title persistent XSS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.mybb.com/2018/08/22/mybb-1-8-18-released-security-maintenance-release/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/db2acdac-b5a7-11e8-8f6f-00e04c1ea73d.html"
+				}
+			],
+			"published": "2018-09-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mybb"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.18"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,81 @@
+{
+	"id": "65d16342-3ec8-11e0-9df7-001c42d23634",
+	"advisories": [
+		{
+			"id": "65d16342-3ec8-11e0-9df7-001c42d23634",
+			"title": "asterisk -- Exploitable Stack and Heap Array Overflows",
+			"description": "\n\t<p>The Asterisk Development Team reports:</p>\n\t<blockquote cite=\"http://lists.digium.com/pipermail/asterisk-announce/2011-February/000302.html\">\n\t  <p>The releases of Asterisk 1.4.39.2, 1.6.1.22, 1.6.2.16.2, and\n\t    1.8.2.4 resolve an issue that when decoding UDPTL packets, multiple\n\t    heap based arrays can be made to overflow by specially\n\t    crafted packets. Systems configured for T.38 pass through or\n\t    termination are vulnerable. The issue and resolution are described\n\t    in the AST-2011-002 security advisory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2011-002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/43429/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/65d16342-3ec8-11e0-9df7-001c42d23634.html"
+				}
+			],
+			"published": "2011-02-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk14"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.39.2",
+									"gt": "1.4.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.2.16.2",
+									"gt": "1.6.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.2.4",
+									"gt": "1.8.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

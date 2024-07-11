@@ -1,0 +1,62 @@
+{
+	"id": "b6c18956-5fa3-11db-ad2d-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "b6c18956-5fa3-11db-ad2d-0016179b2dd5",
+			"title": "plone -- unprotected MembershipTool methods",
+			"description": "\n\t<p>The Plone Team reports:</p>\n\t<blockquote cite=\"http://dev.plone.org/plone/ticket/5432\">\n\t  <p>Plone 2.0.5, 2.1.2, and 2.5-beta1 does not restrict\n\t    access to the:</p>\n\t  <ul>\n\t    <li>changeMemberPortrait</li>\n\t    <li>deletePersonalPortrait</li>\n\t    <li>testCurrentPassword</li>\n\t  </ul>\n\t  <p>methods, which allows remote attackers to modify portraits.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://plone.org/products/plone/releases/2.1.4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://svn.plone.org/svn/plone/PloneHotfix20060410/trunk/README.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b6c18956-5fa3-11db-ad2d-0016179b2dd5.html"
+				}
+			],
+			"published": "2006-10-19T00:00:00Z",
+			"modified": "2006-10-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1711",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1711"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "plone"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

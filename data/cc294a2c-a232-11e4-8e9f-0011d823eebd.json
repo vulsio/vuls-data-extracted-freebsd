@@ -1,0 +1,143 @@
+{
+	"id": "cc294a2c-a232-11e4-8e9f-0011d823eebd",
+	"advisories": [
+		{
+			"id": "cc294a2c-a232-11e4-8e9f-0011d823eebd",
+			"title": "Adobe Flash Player -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"http://helpx.adobe.com/security/products/flash-player/apsb15-01.html\">\n\t  <p>These updates address vulnerabilities that could potentially allow\n\t    an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://helpx.adobe.com/security/products/flash-player/apsb15-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cc294a2c-a232-11e4-8e9f-0011d823eebd.html"
+				}
+			],
+			"published": "2015-01-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0301",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0301"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0302",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0302"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0303",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0303"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0304",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0304"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0305",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0305"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0306",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0306"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0307",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0307"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0308",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0308"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0309",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0309"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.429"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.429"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

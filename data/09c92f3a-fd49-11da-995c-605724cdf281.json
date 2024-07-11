@@ -1,0 +1,66 @@
+{
+	"id": "09c92f3a-fd49-11da-995c-605724cdf281",
+	"advisories": [
+		{
+			"id": "09c92f3a-fd49-11da-995c-605724cdf281",
+			"title": "WebCalendar -- information disclosure vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/20367/\">\n\t  <p>socsam has discovered a vulnerability in WebCalendar,\n\t    which can be exploited by malicious people to bypass\n\t    certain security restrictions and disclose sensitive\n\t    information.</p>\n\t  <p>Input passed to the \"includedir\" parameter isn't properly\n\t    verified, before it is used in an \"fopen()\" call. This can\n\t    be exploited to load an arbitrary setting file from an\n\t    external web site.</p>\n\t  <p>This can further be exploited to disclose the content of\n\t    arbitrary files by defining the \"user_inc\" variable in a\n\t    malicious setting file.</p>\n\t  <p>Successful exploitation requires that \"register_globals\"\n\t    is enabled.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/435379"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/436263"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/18175"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/09c92f3a-fd49-11da-995c-605724cdf281.html"
+				}
+			],
+			"published": "2006-06-16T00:00:00Z",
+			"modified": "2006-06-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-2762",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2762"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "WebCalendar"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,46 @@
+{
+	"id": "5486669e-ea9f-11de-bd9c-00215c6a37bb",
+	"advisories": [
+		{
+			"id": "5486669e-ea9f-11de-bd9c-00215c6a37bb",
+			"title": "tptest -- pwd Remote Stack Buffer Overflow",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/33785\">\n\t  <p>TPTEST is prone to a remote stack-based buffer-overflow\n\t    vulnerability.  An attacker can exploit this issue to\n\t    execute arbitrary code within the context of the affected\n\t    application. Failed exploit attempts will result in a\n\t    denial-of-service condition.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/33785"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5486669e-ea9f-11de-bd9c-00215c6a37bb.html"
+				}
+			],
+			"published": "2009-12-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tptest"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"gt": "0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

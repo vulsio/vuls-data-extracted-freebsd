@@ -1,0 +1,107 @@
+{
+	"id": "47157c14-9013-11e6-a590-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "47157c14-9013-11e6-a590-14dae9d210b8",
+			"title": "mupdf -- multiple vulnerabilities",
+			"description": "\n\t<p>Tobias Kortkamp reports:</p>\n\t<blockquote cite=\"http://openbsd-archive.7691.n7.nabble.com/mupdf-CVE-2016-6525-amp-CVE-2016-6265-td302904.html\">\n\t  <p>Heap-based buffer overflow in the pdf_load_mesh_params\n\t    function in pdf/pdf-shade.c in MuPDF allows remote attackers to cause a\n\t    denial of service (crash) or execute arbitrary code via a large decode\n\t    array.</p>\n\t<p>Use-after-free vulnerability in the pdf_load_xref function in\n\t    pdf/pdf-xref.c in MuPDF allows remote attackers to cause a denial of\n\t    service (crash) via a crafted PDF file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.ghostscript.com/show_bug.cgi?id=696941"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.ghostscript.com/show_bug.cgi?id=696954"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openbsd-archive.7691.n7.nabble.com/mupdf-CVE-2016-6525-amp-CVE-2016-6265-td302904.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=212207"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/47157c14-9013-11e6-a590-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-10-12T00:00:00Z",
+			"modified": "2016-10-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6265",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6265"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6525",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6525"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mupdf"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9a_1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "llpp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "22_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zathura-pdf-mupdf"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.3.0_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

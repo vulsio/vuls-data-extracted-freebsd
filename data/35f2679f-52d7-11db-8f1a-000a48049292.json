@@ -1,0 +1,70 @@
+{
+	"id": "35f2679f-52d7-11db-8f1a-000a48049292",
+	"advisories": [
+		{
+			"id": "35f2679f-52d7-11db-8f1a-000a48049292",
+			"title": "postnuke -- admin section SQL injection",
+			"description": "\n\t<p>ISS X-Force reports:</p>\n\t<blockquote cite=\"http://xforce.iss.net/xforce/xfdb/29271\">\n\t  <p>PostNuke is vulnerable to SQL injection. A remote attacker\n\t    could send specially-crafted SQL statements to the admin\n\t    section using the hits parameter, which could allow the\n\t    attacker to view, add, modify or delete information in the\n\t    back-end database.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/22197/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/archive/1/447361/100/0/threaded"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/20317"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/29271"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/35f2679f-52d7-11db-8f1a-000a48049292.html"
+				}
+			],
+			"published": "2006-10-03T00:00:00Z",
+			"modified": "2007-11-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-5121",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-5121"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postnuke"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.763"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

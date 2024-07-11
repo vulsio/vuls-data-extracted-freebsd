@@ -1,0 +1,47 @@
+{
+	"id": "66ba5931-9ed5-11e5-8f5c-002590263bf5",
+	"advisories": [
+		{
+			"id": "66ba5931-9ed5-11e5-8f5c-002590263bf5",
+			"title": "redmine -- XSS vulnerability",
+			"description": "\n\t<p>Redmine reports:</p>\n\t<blockquote cite=\"http://www.redmine.org/projects/redmine/wiki/Security_Advisories\">\n\t  <p>XSS vulnerability</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/66ba5931-9ed5-11e5-8f5c-002590263bf5.html"
+				}
+			],
+			"published": "2015-12-10T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redmine"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.2",
+									"ge": "2.1.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,85 @@
+{
+	"id": "93a1c9a7-5bef-11ec-a47a-001517a2e1a4",
+	"advisories": [
+		{
+			"id": "93a1c9a7-5bef-11ec-a47a-001517a2e1a4",
+			"title": "openhab -- log4j remote code injection",
+			"description": "\n\t<p>Openhab reports:</p>\n\t<blockquote cite=\"https://github.com/openhab/openhab-distro/security/advisories/GHSA-j99j-qp89-pcfq\">\n\t  <p>Any openHAB instance that is publicly available or which consumes untrusted content from remote servers is potentially a target of this attack.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-jfh8-c2jp-5v3q"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/openhab/openhab-distro/security/advisories/GHSA-j99j-qp89-pcfq"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/ops4j/org.ops4j.pax.logging/security/advisories/GHSA-xxfh-x98p-j8fr"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/93a1c9a7-5bef-11ec-a47a-001517a2e1a4.html"
+				}
+			],
+			"published": "2021-12-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44228",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44228"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openhab2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.5.12"
+								},
+								{
+									"lt": "3.1.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openhab"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.5.12"
+								},
+								{
+									"lt": "3.1.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

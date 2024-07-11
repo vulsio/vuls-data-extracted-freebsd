@@ -1,0 +1,206 @@
+{
+	"id": "589de937-343f-11ef-8a7b-001b217b3468",
+	"advisories": [
+		{
+			"id": "589de937-343f-11ef-8a7b-001b217b3468",
+			"title": "Gitlab -- Vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/06/26/patch-release-gitlab-17-1-1-released/\">\n\t  <p>Run pipelines as any user</p>\n\t  <p>Stored XSS injected in imported project's commit notes</p>\n\t  <p>CSRF on GraphQL API IntrospectionQuery</p>\n\t  <p>Remove search results from public projects with unauthorized repos</p>\n\t  <p>Cross window forgery in user application OAuth flow</p>\n\t  <p>Project maintainers can bypass group's merge request approval policy</p>\n\t  <p>ReDoS via custom built markdown page</p>\n\t  <p>Private job artifacts can be accessed by any user</p>\n\t  <p>Security fixes for banzai pipeline</p>\n\t  <p>ReDoS in dependency linker</p>\n\t  <p>Denial of service using a crafted OpenAPI file</p>\n\t  <p>Merge request title disclosure</p>\n\t  <p>Access issues and epics without having an SSO session</p>\n\t  <p>Non project member can promote key results to objectives</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2024/06/26/patch-release-gitlab-17-1-1-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/589de937-343f-11ef-8a7b-001b217b3468.html"
+				}
+			],
+			"published": "2024-06-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-1493",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1493"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-1816",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-1816"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-2177",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2177"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-2191",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-2191"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-3115",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-3115"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-3959",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-3959"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4011",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4011"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4025",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4025"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4557",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4557"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4901",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4901"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4994",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4994"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5430",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-5430"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5655",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-5655"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-6323",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-6323"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.1.1",
+									"ge": "17.1.0"
+								},
+								{
+									"lt": "17.0.3",
+									"ge": "17.0.0"
+								},
+								{
+									"lt": "16.11.5",
+									"ge": "1.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ee"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.1.1",
+									"ge": "17.1.0"
+								},
+								{
+									"lt": "17.0.3",
+									"ge": "17.0.0"
+								},
+								{
+									"lt": "16.11.5",
+									"ge": "1.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

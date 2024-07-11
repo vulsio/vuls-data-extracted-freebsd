@@ -1,0 +1,50 @@
+{
+	"id": "40a8d798-4615-11e7-8080-a4badb2f4699",
+	"advisories": [
+		{
+			"id": "40a8d798-4615-11e7-8080-a4badb2f4699",
+			"title": "heimdal -- bypass of capath policy",
+			"description": "\n\t<p>Viktor Dukhovni reports:</p>\n\t<blockquote cite=\"https://www.h5l.org/advisories.html?show=2017-04-13\">\n\t  <p>Commit f469fc6 (2010-10-02) inadvertently caused the\n\t    previous hop realm to not be added to the transit path of issued\n\t    tickets. This may, in some cases, enable bypass of capath policy in\n\t    Heimdal versions 1.5 through 7.2. Note, this may break sites that rely\n\t    on the bug. With the bug some incomplete [capaths] worked, that should\n\t    not have. These may now break authentication in some cross-realm\n\t    configurations. (CVE-2017-6594)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2017-6594"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=219657"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40a8d798-4615-11e7-8080-a4badb2f4699.html"
+				}
+			],
+			"published": "2017-05-31T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "heimdal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.1.0_3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,82 @@
+{
+	"id": "66a770b4-e008-11dd-a765-0030843d3802",
+	"advisories": [
+		{
+			"id": "66a770b4-e008-11dd-a765-0030843d3802",
+			"title": "mysql -- empty bit-string literal denial of service",
+			"description": "\n\t<p>MySQL reports:</p>\n\t<blockquote cite=\"http://bugs.mysql.com/bug.php?id=35658\">\n\t  <p>The vulnerability is caused due to an error when processing an\n\t    empty bit-string literal and can be exploited to crash the server via\n\t    a specially crafted SQL statement.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.mysql.com/bug.php?id=35658"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://dev.mysql.com/doc/refman/5.0/en/releasenotes-es-5-0-66.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-26.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://dev.mysql.com/doc/refman/6.0/en/news-6-0-6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31769"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/66a770b4-e008-11dd-a765-0030843d3802.html"
+				}
+			],
+			"published": "2009-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3963",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3963"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.0.66",
+									"ge": "5.0"
+								},
+								{
+									"lt": "5.1.26",
+									"ge": "5.1"
+								},
+								{
+									"lt": "6.0.6",
+									"ge": "6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

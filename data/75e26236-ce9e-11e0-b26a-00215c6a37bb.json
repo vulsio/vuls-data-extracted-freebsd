@@ -1,0 +1,53 @@
+{
+	"id": "75e26236-ce9e-11e0-b26a-00215c6a37bb",
+	"advisories": [
+		{
+			"id": "75e26236-ce9e-11e0-b26a-00215c6a37bb",
+			"title": "phpMyAdmin -- multiple XSS vulnerabilities",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2011-13.php\">\n\t  <p>Multiple XSS in the Tracking feature.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/75e26236-ce9e-11e0-b26a-00215c6a37bb.html"
+				}
+			],
+			"published": "2011-08-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3181",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3181"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

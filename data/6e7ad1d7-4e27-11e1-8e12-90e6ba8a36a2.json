@@ -1,0 +1,50 @@
+{
+	"id": "6e7ad1d7-4e27-11e1-8e12-90e6ba8a36a2",
+	"advisories": [
+		{
+			"id": "6e7ad1d7-4e27-11e1-8e12-90e6ba8a36a2",
+			"title": "mathopd -- directory traversal vulnerability",
+			"description": "\n\t<p>Michiel Boland reports:</p>\n\t<blockquote cite=\"http://www.mathopd.org/security.html\">\n\t  <p>The software has a vulnerability that could lead to directory\n\t    traversal if the '*' construct for mass virtual hosting is\n\t    used.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mail-archive.com/mathopd%40mathopd.org/msg00392.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mathopd.org/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6e7ad1d7-4e27-11e1-8e12-90e6ba8a36a2.html"
+				}
+			],
+			"published": "2012-02-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mathopd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5p7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

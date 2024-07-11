@@ -1,0 +1,57 @@
+{
+	"id": "9dde9dac-08f4-11e1-af36-003067b2972c",
+	"advisories": [
+		{
+			"id": "9dde9dac-08f4-11e1-af36-003067b2972c",
+			"title": "caml-light -- insecure use of temporary files",
+			"description": "\n\t<p>caml-light uses mktemp() insecurely, and also does\n\t  unsafe things in /tmp during make install.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2011/q4/249"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9dde9dac-08f4-11e1-af36-003067b2972c.html"
+				}
+			],
+			"published": "2011-11-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4119",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4119"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "caml-light"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "0.75"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

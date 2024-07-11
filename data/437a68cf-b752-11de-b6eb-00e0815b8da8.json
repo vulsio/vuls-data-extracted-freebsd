@@ -1,0 +1,75 @@
+{
+	"id": "437a68cf-b752-11de-b6eb-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "437a68cf-b752-11de-b6eb-00e0815b8da8",
+			"title": "php5 -- Multiple security issues",
+			"description": "\n\t<p>Vendor reports</p>\n\t<blockquote cite=\"http://www.php.net/releases/5_2_11.php\">\n\t  <p>Security Enhancements and Fixes in PHP 5.2.11:\n\t    Fixed certificate validation inside\n\t    php_openssl_apply_verification_policy.\n\t    Fixed sanity check for the color index in imagecolortransparent.\n\t    Added missing sanity checks around exif processing.\n\t    Fixed bug 44683 popen crashes when an invalid mode is passed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/releases/5_2_11.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/437a68cf-b752-11de-b6eb-00e0815b8da8.html"
+				}
+			],
+			"published": "2009-10-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-3291",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3291"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3292",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3292"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3293",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3293"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

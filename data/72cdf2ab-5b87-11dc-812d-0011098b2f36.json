@@ -1,0 +1,67 @@
+{
+	"id": "72cdf2ab-5b87-11dc-812d-0011098b2f36",
+	"advisories": [
+		{
+			"id": "72cdf2ab-5b87-11dc-812d-0011098b2f36",
+			"title": "lsh -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/14609\">\n\t  <p>A vulnerability has been reported in LSH, which potentially\n\t    can be exploited by malicious people to cause a DoS (Denial\n\t    of Service).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/14609"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/72cdf2ab-5b87-11dc-812d-0011098b2f36.html"
+				}
+			],
+			"published": "2007-09-05T00:00:00Z",
+			"modified": "2008-01-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-0826",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0826"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0814",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0814"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lsh"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

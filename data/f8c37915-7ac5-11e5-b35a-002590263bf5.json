@@ -1,0 +1,62 @@
+{
+	"id": "f8c37915-7ac5-11e5-b35a-002590263bf5",
+	"advisories": [
+		{
+			"id": "f8c37915-7ac5-11e5-b35a-002590263bf5",
+			"title": "Joomla! -- Core - XSS Vulnerability",
+			"description": "\n\t<p>The JSST and the Joomla! Security Center report:</p>\n\t<blockquote cite=\"http://developer.joomla.org/security-centre/626-20150908-core-xss-vulnerability.html\">\n\t  <h2>[20150908] - Core - XSS Vulnerability</h2>\n\t  <p>Inadequate escaping leads to XSS vulnerability in login module.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://developer.joomla.org/security-centre/626-20150908-core-xss-vulnerability.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.joomla.org/announcements/release-news/5628-joomla-3-4-4-released.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f8c37915-7ac5-11e5-b35a-002590263bf5.html"
+				}
+			],
+			"published": "2015-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-6939",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6939"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "joomla3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.4",
+									"ge": "3.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

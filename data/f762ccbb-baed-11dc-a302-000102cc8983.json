@@ -1,0 +1,109 @@
+{
+	"id": "f762ccbb-baed-11dc-a302-000102cc8983",
+	"advisories": [
+		{
+			"id": "f762ccbb-baed-11dc-a302-000102cc8983",
+			"title": "linux-realplayer -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/27361\">\n\t  <p>Multiple vulnerabilities have been reported in\n\t    RealPlayer/RealOne/HelixPlayer, which can be exploited by malicious\n\t    people to compromise a user's system.</p>\n\t  <p>An input validation error when processing .RA/.RAM files can be\n\t    exploited to cause a heap corruption via a specially crafted\n\t    .RA/.RAM file with an overly large size field in the header.</p>\n\t  <p>An error in the processing of .PLS files can be exploited to cause\n\t    a memory corruption and execute arbitrary code via a specially\n\t    crafted .PLS file.</p>\n\t  <p>An input validation error when parsing .SWF files can be exploited\n\t    to cause a buffer overflow via a specially crafted .SWF file with\n\t    malformed record headers.</p>\n\t  <p>A boundary error when processing rm files can be exploited to\n\t    cause a buffer overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/25819/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/27361"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://service.real.com/realplayer/security/10252007_player/en/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zerodayinitiative.com/advisories/ZDI-07-061.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zerodayinitiative.com/advisories/ZDI-07-062.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zerodayinitiative.com/advisories/ZDI-07-063.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/759385"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f762ccbb-baed-11dc-a302-000102cc8983.html"
+				}
+			],
+			"published": "2008-01-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-2263",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2263"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-2264",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2264"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3410",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3410"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-5081",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5081"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-realplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.9.809.20070726",
+									"ge": "10.0.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

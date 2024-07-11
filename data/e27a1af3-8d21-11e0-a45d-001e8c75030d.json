@@ -1,0 +1,85 @@
+{
+	"id": "e27a1af3-8d21-11e0-a45d-001e8c75030d",
+	"advisories": [
+		{
+			"id": "e27a1af3-8d21-11e0-a45d-001e8c75030d",
+			"title": "Subversion -- multiple vulnerabilities",
+			"description": "\n\t<p>Subversion team reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2011-1752-advisory.txt\">\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module will\n\t    dereference a NULL pointer if asked to deliver baselined WebDAV\n\t    resources.</p>\n\t  <p>This can lead to a DoS.  An exploit has been tested, and tools\n\t    or users have been observed triggering this problem in the\n\t    wild.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2011-1783-advisory.txt\">\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module may in\n\t    certain scenarios enter a logic loop which does not exit and\n\t    which allocates memory in each iteration, ultimately exhausting\n\t    all the available memory on the server.</p>\n\t  <p>This can lead to a DoS.  There are no known instances of this\n\t    problem being observed in the wild, but an exploit has been\n\t    tested.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2011-1921-advisory.txt\">\n\t  <p>Subversion's mod_dav_svn Apache HTTPD server module may leak to\n\t    remote users the file contents of files configured to be\n\t    unreadable by those users.</p>\n\t  <p>There are no known instances of this problem being observed in\n\t    the wild, but an exploit has been tested.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e27a1af3-8d21-11e0-a45d-001e8c75030d.html"
+				}
+			],
+			"published": "2011-06-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-1752",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1752"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-1783",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1783"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-1921",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1921"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.17"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-freebsd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.17"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,86 @@
+{
+	"id": "56f4b3a6-c82c-11e0-a498-00215c6a37bb",
+	"advisories": [
+		{
+			"id": "56f4b3a6-c82c-11e0-a498-00215c6a37bb",
+			"title": "Samba -- cross site scripting and request forgery vulnerabilities",
+			"description": "\n\t<p>Samba security advisory reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2011-2522\">\n\t  <p>All current released versions of Samba are vulnerable to a\n\t    cross-site request forgery in the Samba Web Administration Tool\n\t    (SWAT).  By tricking a user who is authenticated with SWAT into\n\t    clicking a manipulated URL on a different web page, it is\n\t    possible to manipulate SWAT.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2011-2694\">\n\t  <p>All current released versions of Samba are vulnerable to a\n\t    cross-site scripting issue in the Samba Web Administration Tool\n\t    (SWAT). On the \"Change Password\" field, it is possible to insert\n\t    arbitrary content into the \"user\" field.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/48899"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/48901"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/56f4b3a6-c82c-11e0-a498-00215c6a37bb.html"
+				}
+			],
+			"published": "2011-08-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2522",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2522"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-2694",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2694"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba34"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.14",
+									"gt": "3.4.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba35"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.5.10",
+									"gt": "3.5.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

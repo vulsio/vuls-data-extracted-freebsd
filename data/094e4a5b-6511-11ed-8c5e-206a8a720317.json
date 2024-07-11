@@ -1,0 +1,103 @@
+{
+	"id": "094e4a5b-6511-11ed-8c5e-206a8a720317",
+	"advisories": [
+		{
+			"id": "094e4a5b-6511-11ed-8c5e-206a8a720317",
+			"title": "krb5 -- Integer overflow vulnerabilities in PAC parsing",
+			"description": "\n\t<p>MITKRB5-SA-2022-001 Vulnerabilities in PAC parsing:</p>\n\t<blockquote cite=\"https://web.mit.edu/kerberos/advisories/MITKRB5-SA-2022-001.txt\">\n\t  <p>Due to an integer overflow vulnerabilities in PAC parsing\n\t     An authenticated attacker may be able to cause a KDC or kadmind\n\t     process to crash by reading beyond the bounds of allocated memory,\n\t     creating a denial of service.</p>\n\t  <p>On 32-bit platforms an authenticated attacker may be able to\n\t     cause heap corruption resulting in an RCE.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42898"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/094e4a5b-6511-11ed-8c5e-206a8a720317.html"
+				}
+			],
+			"published": "2022-11-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-42898",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42898"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "krb5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.19.3_1"
+								},
+								{
+									"lt": "1.20_1",
+									"gt": "1.20"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "krb5-120"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "krb5-119"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.19.3_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "krb5-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.2022.11.03"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

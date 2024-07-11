@@ -1,0 +1,71 @@
+{
+	"id": "012b495c-9d51-11de-8d20-001bd3385381",
+	"advisories": [
+		{
+			"id": "012b495c-9d51-11de-8d20-001bd3385381",
+			"title": "cyrus-imapd -- Potential buffer overflow in Sieve",
+			"description": "\n\t<p>The Cyrus IMAP Server ChangeLog states:</p>\n\t<blockquote cite=\"http://cyrusimap.web.cmu.edu/imapd/changes.html\">\n\t  <p>Fixed CERT VU#336053 - Potential buffer overflow in Sieve.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.debian.org/security/2009/dsa-1881"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.kb.cert.org/vuls/id/336053"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/36296"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/012b495c-9d51-11de-8d20-001bd3385381.html"
+				}
+			],
+			"published": "2009-09-09T00:00:00Z",
+			"modified": "2009-09-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-2632",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-2632"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cyrus-imapd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.13_6",
+									"gt": "2.2.0"
+								},
+								{
+									"lt": "2.3.14_2",
+									"gt": "2.3.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

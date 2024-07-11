@@ -1,0 +1,97 @@
+{
+	"id": "5e7f58c3-b3f8-4258-aeb8-795e5e940ff8",
+	"advisories": [
+		{
+			"id": "5e7f58c3-b3f8-4258-aeb8-795e5e940ff8",
+			"title": "mplayer heap overflow in http requests",
+			"description": "\n\t<p>A remotely exploitable heap buffer overflow vulnerability was\n\t  found in MPlayer's URL decoding code.  If an attacker can\n\t  cause MPlayer to visit a specially crafted URL, arbitrary code\n\t  execution with the privileges of the user running MPlayer may\n\t  occur.  A `visit' might be caused by social engineering, or a\n\t  malicious web server could use HTTP redirects which MPlayer\n\t  would then process.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108066964709058"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mplayerhq.hu/homepage/design6/news.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=64974"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5e7f58c3-b3f8-4258-aeb8-795e5e940ff8.html"
+				}
+			],
+			"published": "2004-03-31T00:00:00Z",
+			"modified": "2004-06-27T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.92.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mplayer-gtk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.92.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mplayer-esound"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.92.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mplayer-gtk-esound"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.92.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

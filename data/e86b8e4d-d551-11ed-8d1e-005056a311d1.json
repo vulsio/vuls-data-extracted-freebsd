@@ -1,0 +1,111 @@
+{
+	"id": "e86b8e4d-d551-11ed-8d1e-005056a311d1",
+	"advisories": [
+		{
+			"id": "e86b8e4d-d551-11ed-8d1e-005056a311d1",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2023-0225.html\">\n\t  <p>An incomplete access check on dnsHostName allows\n\t  authenticated but otherwise unprivileged users to\n\t  delete this attribute from any object in the directory.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2023-0922.html\">\n\t  <p>The Samba AD DC administration tool, when operating\n\t  against a remote LDAP server, will by default send\n\t  new or reset passwords over a signed-only connection. </p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2023-0614.html\">\n\t  <p>The fix in 4.6.16, 4.7.9, 4.8.4 and 4.9.7 for\n\t  CVE-2018-10919 Confidential attribute disclosure via\n\t  LDAP filters was insufficient and an attacker may be\n\t  able to obtain confidential BitLocker recovery keys\n\t  from a Samba AD DC.</p>\n\t  <p>Installations with such secrets in their Samba AD\n\t  should assume they have been obtained and need replacing.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2023-0225.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2023-0614.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2023-0922.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e86b8e4d-d551-11ed-8d1e-005056a311d1.html"
+				}
+			],
+			"published": "2023-04-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-0225",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-0225"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-0614",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-0614"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-0922",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-0922"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba416"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.16.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba417"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.17.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba418"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.18.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

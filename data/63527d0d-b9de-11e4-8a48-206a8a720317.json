@@ -1,0 +1,46 @@
+{
+	"id": "63527d0d-b9de-11e4-8a48-206a8a720317",
+	"advisories": [
+		{
+			"id": "63527d0d-b9de-11e4-8a48-206a8a720317",
+			"title": "krb5 1.12 -- New release/fix multiple vulnerabilities",
+			"description": "\n\t<p>The MIT Kerberos team announces the availability of MIT Kerberos 5 Release 1.12.3:</p>\n\t<blockquote cite=\"http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2015-001.txt\">\n\t  <p>Fix multiple vulnerabilities in the LDAP KDC back end.\n\t     [CVE-2014-5354] [CVE-2014-5353]</p>\n\t  <p>Fix multiple kadmind vulnerabilities, some of which are based\n\t     in the gssrpc library. [CVE-2014-5352 CVE-2014-5352\n\t     CVE-2014-9421 CVE-2014-9422 CVE-2014-9423]</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://web.mit.edu/kerberos/krb5-1.12/README-1.12.3.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/63527d0d-b9de-11e4-8a48-206a8a720317.html"
+				}
+			],
+			"published": "2015-02-21T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "krb5-112"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.12.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

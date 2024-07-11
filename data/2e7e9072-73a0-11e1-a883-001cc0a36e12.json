@@ -1,0 +1,83 @@
+{
+	"id": "2e7e9072-73a0-11e1-a883-001cc0a36e12",
+	"advisories": [
+		{
+			"id": "2e7e9072-73a0-11e1-a883-001cc0a36e12",
+			"title": "libtasn1 -- ASN.1 length decoding vulnerability",
+			"description": "\n\t<p>Mu Dynamics, Inc. reports:</p>\n\t<blockquote cite=\"http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/5959\">\n\t  <p>Various functions using the ASN.1 length decoding logic in\n\t    Libtasn1 were incorrectly assuming that the return value from\n\t    asn1_get_length_der is always less than the length of the\n\t    enclosing ASN.1 structure, which is only true for valid\n\t    structures and not for intentionally corrupt or otherwise\n\t    buggy structures.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2e7e9072-73a0-11e1-a883-001cc0a36e12.html"
+				}
+			],
+			"published": "2012-03-21T00:00:00Z",
+			"modified": "2012-03-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1569",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1569"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtasn1"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.12"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.12.18"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.16",
+									"gt": "2.99"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

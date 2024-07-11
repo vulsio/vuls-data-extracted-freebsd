@@ -1,0 +1,57 @@
+{
+	"id": "b2cfb400-1df0-11d9-a859-0050fc56d258",
+	"advisories": [
+		{
+			"id": "b2cfb400-1df0-11d9-a859-0050fc56d258",
+			"title": "icecast -- Cross-Site Scripting Vulnerability",
+			"description": "\n\t<p>Caused by improper filtering of HTML code in the\n\t  status display, it is possible for a remote user\n\t  to execute scripting code in the target user's\n\t  browser.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securitytracker.com/alerts/2004/Aug/1011047.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b2cfb400-1df0-11d9-a859-0050fc56d258.html"
+				}
+			],
+			"published": "2004-10-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0781",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0781"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "icecast"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.3.12_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

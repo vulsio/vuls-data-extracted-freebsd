@@ -1,0 +1,85 @@
+{
+	"id": "b471130b-fb86-11eb-87db-6cc21735f730",
+	"advisories": [
+		{
+			"id": "b471130b-fb86-11eb-87db-6cc21735f730",
+			"title": "PostgreSQL server -- Memory disclosure in certain queries",
+			"description": "\n\t<p>The PostgreSQL Project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2021-3677/\">\n\t  <p>\n\t   A purpose-crafted query can read arbitrary bytes of\n\t   server memory. In the default configuration, any\n\t   authenticated database user can complete this attack at\n\t   will. The attack does not require the ability to create\n\t   objects. If server settings include\n\t   max_worker_processes=0, the known versions of this\n\t   attack are infeasible. However, undiscovered variants of\n\t   the attack may be independent of that setting.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.postgresql.org/support/security/CVE-2021-3677/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b471130b-fb86-11eb-87db-6cc21735f730.html"
+				}
+			],
+			"published": "2021-08-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-3677",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-3677"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql13-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql12-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "12.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql11-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

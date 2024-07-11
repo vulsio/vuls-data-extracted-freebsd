@@ -1,0 +1,50 @@
+{
+	"id": "543b5939-2067-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "543b5939-2067-11e5-a4a5-002590263bf5",
+			"title": "turnserver -- SQL injection vulnerability",
+			"description": "\n\t<p>Oleg Moskalenko reports:</p>\n\t<blockquote cite=\"http://turnserver.open-sys.org/downloads/v4.4.5.3/ChangeLog\">\n\t  <p>SQL injection security hole fixed.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://turnserver.open-sys.org/downloads/v4.4.5.3/ChangeLog"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/d/msg/turn-server-project-rfc5766-turn-server/Dj3MmgyZX1o/ZaFo3zvxIw0J"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/543b5939-2067-11e5-a4a5-002590263bf5.html"
+				}
+			],
+			"published": "2015-07-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "turnserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.5.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

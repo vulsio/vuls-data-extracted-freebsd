@@ -1,0 +1,50 @@
+{
+	"id": "7289187b-66a5-11da-99f6-00123ffe8333",
+	"advisories": [
+		{
+			"id": "7289187b-66a5-11da-99f6-00123ffe8333",
+			"title": "trac -- search module SQL injection vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/17894/\">\n\t  <p>A vulnerability has been reported in Trac, which\n\t    can be exploited by malicious people to conduct SQL\n\t    injection attacks.</p>\n\t  <p>Some unspecified input passed in the search module\n\t    isn't properly sanitised before being used in a SQL\n\t    query. This can be exploited to manipulate SQL\n\t    queries by injecting arbitrary SQL code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://projects.edgewall.com/trac/wiki/ChangeLog#a0.9.2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/17894/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7289187b-66a5-11da-99f6-00123ffe8333.html"
+				}
+			],
+			"published": "2005-12-07T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "trac"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

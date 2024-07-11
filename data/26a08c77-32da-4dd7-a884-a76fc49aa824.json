@@ -1,0 +1,56 @@
+{
+	"id": "26a08c77-32da-4dd7-a884-a76fc49aa824",
+	"advisories": [
+		{
+			"id": "26a08c77-32da-4dd7-a884-a76fc49aa824",
+			"title": "tomcat -- Tomcat Manager cross-site scripting",
+			"description": "\n\t<p>Oliver Karow discovered cross-site scripting issues in\n\t  the Apache Jakarta Tomcat manager.  The developers refer to\n\t  the issues as <q>minor</q>.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mail-archive.com/tomcat-dev@jakarta.apache.org/msg66978.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.oliverkarow.de/research/jakarta556_xss.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/26a08c77-32da-4dd7-a884-a76fc49aa824.html"
+				}
+			],
+			"published": "2005-06-01T00:00:00Z",
+			"modified": "2006-09-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jakarta-tomcat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.0.30_5",
+									"ge": "5.0.*"
+								},
+								{
+									"lt": "5.5.7",
+									"ge": "5.5.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,85 @@
+{
+	"id": "fd2e0ca8-e3ae-11e9-8af7-08002720423d",
+	"advisories": [
+		{
+			"id": "fd2e0ca8-e3ae-11e9-8af7-08002720423d",
+			"title": "mongodb -- Bump Windows package dependencies",
+			"description": "\n\t<p>Rich Mirch reports:</p>\n\t<blockquote cite=\"https://jira.mongodb.org/browse/SERVER-42233\">\n\t  <p>An unprivileged user or program on Microsoft Windows which can create OpenSSL configuration files in a fixed location may cause utility programs shipped with MongoDB server versions less than 4.0.11, 3.6.14, and 3.4.22 to run attacker defined code as the user running the utility.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jira.mongodb.org/browse/SERVER-42233"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fd2e0ca8-e3ae-11e9-8af7-08002720423d.html"
+				}
+			],
+			"published": "2019-09-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-2390",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-2390"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mongodb34"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.22"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mongodb36"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.14"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mongodb40"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

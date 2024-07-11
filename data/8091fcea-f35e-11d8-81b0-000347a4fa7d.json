@@ -1,0 +1,98 @@
+{
+	"id": "8091fcea-f35e-11d8-81b0-000347a4fa7d",
+	"advisories": [
+		{
+			"id": "8091fcea-f35e-11d8-81b0-000347a4fa7d",
+			"title": "a2ps -- insecure command line argument handling",
+			"description": "\n\t<p>Rudolf Polzer reports:</p>\n\t<blockquote>\n\t  <p>a2ps builds a command line for file() containing an\n\t    unescaped version of the file name, thus might call\n\t    external programs described by the file name.  Running a\n\t    cronjob over a public writable directory a2ps-ing all\n\t    files in it - or simply typing \"a2ps *.txt\" in /tmp - is\n\t    therefore dangerous.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=109334851517137"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/9176"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11025"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=70618"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8091fcea-f35e-11d8-81b0-000347a4fa7d.html"
+				}
+			],
+			"published": "2004-10-20T00:00:00Z",
+			"modified": "2004-12-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-1170",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1170"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "a2ps-a4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.13b_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "a2ps-letter"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.13b_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "a2ps-letterdj"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.13b_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

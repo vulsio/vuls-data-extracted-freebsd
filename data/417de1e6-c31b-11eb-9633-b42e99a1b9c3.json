@@ -1,0 +1,57 @@
+{
+	"id": "417de1e6-c31b-11eb-9633-b42e99a1b9c3",
+	"advisories": [
+		{
+			"id": "417de1e6-c31b-11eb-9633-b42e99a1b9c3",
+			"title": "lasso -- signature checking failure",
+			"description": "\n    <p>entrouvert reports:</p>\n    <blockquote cite=\"https://git.entrouvert.org/lasso.git/tree/NEWS?id=v2.7.0\">\n      <p>When AuthnResponse messages are not signed (which is\n  permitted by the specifiation), all assertion's signatures should be\n  checked, but currently after the first signed assertion is checked all\n  following assertions are accepted without checking their signature, and\n  the last one is considered the main assertion.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://git.entrouvert.org/lasso.git/tree/NEWS?id=v2.7.0"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/417de1e6-c31b-11eb-9633-b42e99a1b9c3.html"
+				}
+			],
+			"published": "2021-06-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-28091",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-28091"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lasso"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

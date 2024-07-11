@@ -1,0 +1,47 @@
+{
+	"id": "e4403051-a667-11eb-b9c9-6cc21735f730",
+	"advisories": [
+		{
+			"id": "e4403051-a667-11eb-b9c9-6cc21735f730",
+			"title": "sbibboleth-sp -- denial of service vulnerability",
+			"description": "\n      <p>Shibboleth project reports:</p>\n      <blockquote cite=\"https://shibboleth.net/community/advisories/secadv_20210426.txt\">\n\t<p>Session recovery feature contains a null pointer deference.</p>\n\t<p>\n\t  The cookie-based session recovery feature added in V3.0 contains a\n\t  flaw that is exploitable on systems *not* using the feature if a\n\t  specially crafted cookie is supplied.\n\t</p>\n\t<p>\n\t  This manifests as a crash in the shibd daemon/service process.\n\t</p>\n\t<p>\n\t  Because it is very simple to trigger this condition remotely, it\n\t  results in a potential denial of service condition exploitable by\n\t  a remote, unauthenticated attacker.\n\t</p>\n      </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://shibboleth.net/community/advisories/secadv_20210426.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e4403051-a667-11eb-b9c9-6cc21735f730.html"
+				}
+			],
+			"published": "2021-04-26T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "shibboleth-sp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.1_1",
+									"ge": "3.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

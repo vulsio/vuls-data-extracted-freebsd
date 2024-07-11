@@ -1,0 +1,544 @@
+{
+	"id": "a522d6ac-4aed-11e6-97ea-002590263bf5",
+	"advisories": [
+		{
+			"id": "a522d6ac-4aed-11e6-97ea-002590263bf5",
+			"title": "flash -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb16-25.htmL\">\n\t  <p>These updates resolve a race condition vulnerability that could\n\t    lead to information disclosure (CVE-2016-4247).</p>\n\t  <p>These updates resolve type confusion vulnerabilities that could\n\t    lead to code execution (CVE-2016-4223, CVE-2016-4224,\n\t    CVE-2016-4225).</p>\n\t  <p>These updates resolve use-after-free vulnerabilities that could\n\t    lead to code execution (CVE-2016-4173, CVE-2016-4174, CVE-2016-4222,\n\t    CVE-2016-4226, CVE-2016-4227, CVE-2016-4228, CVE-2016-4229,\n\t    CVE-2016-4230, CVE-2016-4231, CVE-2016-4248).</p>\n\t  <p>These updates resolve a heap buffer overflow vulnerability that\n\t    could lead to code execution (CVE-2016-4249).</p>\n\t  <p>These updates resolve memory corruption vulnerabilities that could\n\t    lead to code execution (CVE-2016-4172, CVE-2016-4175, CVE-2016-4179,\n\t    CVE-2016-4180, CVE-2016-4181, CVE-2016-4182, CVE-2016-4183,\n\t    CVE-2016-4184, CVE-2016-4185, CVE-2016-4186, CVE-2016-4187,\n\t    CVE-2016-4188, CVE-2016-4189, CVE-2016-4190, CVE-2016-4217,\n\t    CVE-2016-4218, CVE-2016-4219, CVE-2016-4220, CVE-2016-4221,\n\t    CVE-2016-4233, CVE-2016-4234, CVE-2016-4235, CVE-2016-4236,\n\t    CVE-2016-4237, CVE-2016-4238, CVE-2016-4239, CVE-2016-4240,\n\t    CVE-2016-4241, CVE-2016-4242, CVE-2016-4243, CVE-2016-4244,\n\t    CVE-2016-4245, CVE-2016-4246).</p>\n\t  <p>These updates resolve a memory leak vulnerability (CVE-2016-4232).\n\t    </p>\n\t  <p>These updates resolve stack corruption vulnerabilities that could\n\t    lead to code execution (CVE-2016-4176, CVE-2016-4177).</p>\n\t  <p>These updates resolve a security bypass vulnerability that could\n\t    lead to information disclosure (CVE-2016-4178).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb16-25.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a522d6ac-4aed-11e6-97ea-002590263bf5.html"
+				}
+			],
+			"published": "2016-07-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4172",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4172"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4173",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4173"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4174",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4174"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4175",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4175"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4176",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4176"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4177",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4177"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4178",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4178"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4179",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4179"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4180",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4181",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4181"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4182",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4182"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4183",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4183"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4184"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4185",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4185"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4186",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4186"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4187",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4187"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4188",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4188"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4189",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4189"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4190",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4190"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4217",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4217"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4218",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4218"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4219",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4219"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4220",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4220"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4221",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4221"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4222",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4222"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4223",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4223"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4224",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4224"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4225",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4225"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4226",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4226"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4227",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4227"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4228",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4228"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4229",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4229"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4230",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4230"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4231",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4231"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4232",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4232"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4233",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4233"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4234",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4234"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4235",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4235"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4236",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4236"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4237",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4237"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4238",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4238"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4239",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4239"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4240",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4240"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4241",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4241"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4242",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4242"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4243",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4243"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4244",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4244"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4245",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4245"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4246",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4246"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4247",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4247"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4248",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4248"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4249",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4249"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.632"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6_64-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.632"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.632"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,88 @@
+{
+	"id": "d34bef0b-f312-11eb-b12b-fc4dd43e2b6a",
+	"advisories": [
+		{
+			"id": "d34bef0b-f312-11eb-b12b-fc4dd43e2b6a",
+			"title": "tomcat -- HTTP request smuggling in multiple versions",
+			"description": "\n\t<p>Bahruz Jabiyev, Steven Sprecher and Kaan Onarlioglu of NEU seclab reports:</p>\n\t<blockquote cite=\"https://tomcat.apache.org/security.html\">\n\t  <p>Apache Tomcat did not correctly parse the HTTP transfer-encoding request header in some circumstances leading to the possibility to request smuggling when used with a reverse proxy. Specifically: Tomcat incorrectly ignored the transfer-encoding header if the client declared it would only accept an HTTP/1.0 response; Tomcat honoured the identify encoding; and Tomcat did not ensure that, if present, the chunked encoding was the final encoding.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33037"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d34bef0b-f312-11eb-b12b-fc4dd43e2b6a.html"
+				}
+			],
+			"published": "2021-08-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-33037",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-33037"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat85"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "8.5.66",
+									"ge": "8.5.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat9"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.0.46",
+									"ge": "9.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat10"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "10.0.6",
+									"ge": "10.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

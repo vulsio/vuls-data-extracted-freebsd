@@ -1,0 +1,58 @@
+{
+	"id": "75770425-67a2-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "75770425-67a2-11d8-80e3-0020ed76ef5a",
+			"title": "SQL injection vulnerability in phpnuke",
+			"description": "\n\t<p>Multiple researchers have discovered multiple SQL injection\n\t  vulnerabilities in some versions of Php-Nuke.  These\n\t  vulnerabilities may lead to information disclosure, compromise\n\t  of the Php-Nuke site, or compromise of the back-end\n\t  database.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.nnov.ru/search/document.asp?docid=5748"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.security-corporation.com/advisories-027.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/348375"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/353201"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/75770425-67a2-11d8-80e3-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-02-25T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpnuke"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "6.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

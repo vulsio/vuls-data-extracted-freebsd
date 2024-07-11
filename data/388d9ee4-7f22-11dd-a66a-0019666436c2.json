@@ -1,0 +1,71 @@
+{
+	"id": "388d9ee4-7f22-11dd-a66a-0019666436c2",
+	"advisories": [
+		{
+			"id": "388d9ee4-7f22-11dd-a66a-0019666436c2",
+			"title": "mysql -- MyISAM table privileges security bypass vulnerability",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/29106/discuss\">\n\t  <p>MySQL is prone to a security-bypass vulnerability.\n\t    An attacker can exploit this issue to overwrite existing\n\t    table files in the MySQL data directory, bypassing certain\n\t    security restrictions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29106"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/388d9ee4-7f22-11dd-a66a-0019666436c2.html"
+				}
+			],
+			"published": "2008-09-10T00:00:00Z",
+			"modified": "2008-10-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-2079",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2079"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.5",
+									"ge": "6.0"
+								},
+								{
+									"lt": "5.1.24",
+									"ge": "5.1"
+								},
+								{
+									"lt": "5.0.67",
+									"ge": "5.0"
+								},
+								{
+									"lt": "4.1.22_1",
+									"ge": "4.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

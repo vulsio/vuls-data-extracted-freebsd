@@ -1,0 +1,93 @@
+{
+	"id": "903654bd-1927-11dc-b8a0-02e0185f8d72",
+	"advisories": [
+		{
+			"id": "903654bd-1927-11dc-b8a0-02e0185f8d72",
+			"title": "clamav -- multiple vulnerabilities",
+			"description": "\n\t<p>Clamav had been found vulnerable to multiple vulnerabilities:</p>\n\t<ul>\n\t  <li>Improper checking for the end of an buffer causing an\n\t    unspecified attack vector.</li>\n\t  <li>Insecure temporary file handling, which could be exploited\n\t    to read sensitive information.</li>\n\t  <li>A flaw in the parser engine which could allow a remote\n\t    attacker to bypass the scanning of RAR files.</li>\n\t  <li>A flaw in libclamav/unrar.c which could cause a remote\n\t    Denial of Service (DoS) by sending a specially crafted\n\t    RAR file with a modified vm_codesize.</li>\n\t  <li>A flaw in the OLE2 parser which could cause a remote\n\t    Denial of Service (DoS).</li>\n\t</ul>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://news.gmane.org/gmane.comp.security.virus.clamav.devel/cutoff=2853"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/903654bd-1927-11dc-b8a0-02e0185f8d72.html"
+				}
+			],
+			"published": "2007-06-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-2650",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2650"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3023",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3023"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3024",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3024"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3122",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3122"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3123",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3123"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.90.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,57 @@
+{
+	"id": "4fb45a1c-c5d0-11e2-8400-001b216147b0",
+	"advisories": [
+		{
+			"id": "4fb45a1c-c5d0-11e2-8400-001b216147b0",
+			"title": "couchdb -- DOM based Cross-Site Scripting via Futon UI",
+			"description": "\n\t<p>Jan Lehnardt reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/couchdb-user/201301.mbox/%3C2FFF2FD7-8EAF-4EBF-AFDA-5AEB6EAC853F@apache.org%3E\">\n\t  <p>Query parameters passed into the browser-based test suite\n\t    are not sanitised, and can be used to load external resources.\n\t    An attacker may execute JavaScript code in the browser, using\n\t    the context of the remote user.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/couchdb-user/201301.mbox/%3C2FFF2FD7-8EAF-4EBF-AFDA-5AEB6EAC853F@apache.org%3E"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4fb45a1c-c5d0-11e2-8400-001b216147b0.html"
+				}
+			],
+			"published": "2013-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5650",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5650"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "couchdb"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.1,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

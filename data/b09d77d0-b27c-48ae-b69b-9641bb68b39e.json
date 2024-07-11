@@ -1,0 +1,71 @@
+{
+	"id": "b09d77d0-b27c-48ae-b69b-9641bb68b39e",
+	"advisories": [
+		{
+			"id": "b09d77d0-b27c-48ae-b69b-9641bb68b39e",
+			"title": "electron -- vulnerability",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v22.3.10\">\n\t  <p>This update fixes the following vulnerability:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2023-29469</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-7jv7-hr35-fwjr"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b09d77d0-b27c-48ae-b69b-9641bb68b39e.html"
+				}
+			],
+			"published": "2023-05-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-29469",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-29469"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "electron22"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "22.3.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "electron23"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "23.3.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

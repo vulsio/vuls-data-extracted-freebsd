@@ -1,0 +1,71 @@
+{
+	"id": "262b92fe-81c8-11e1-8899-001ec9578670",
+	"advisories": [
+		{
+			"id": "262b92fe-81c8-11e1-8899-001ec9578670",
+			"title": "png -- memory corruption/possible remote code execution",
+			"description": "\n\t<p>The PNG project reports:</p>\n\t<blockquote cite=\"http://www.libpng.org/pub/png/libpng.html\">\n\t  <p>libpng fails to correctly handle malloc() failures for text\n\t    chunks (in png_set_text_2()), which can lead to memory\n\t    corruption and the possibility of remote code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.libpng.org/pub/png/libpng.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/262b92fe-81c8-11e1-8899-001ec9578670.html"
+				}
+			],
+			"published": "2012-04-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3048",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3048"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "png"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.11"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-png"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

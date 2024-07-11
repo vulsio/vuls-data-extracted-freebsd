@@ -1,0 +1,71 @@
+{
+	"id": "1a448eb7-6988-11d8-873f-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "1a448eb7-6988-11d8-873f-0020ed76ef5a",
+			"title": "mod_python denial-of-service vulnerability in parse_qs",
+			"description": "\n\t<p>An attacker may cause Apache with mod_python to crash\n\t  by using a specially constructed query string.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.modpython.org/pipermail/mod_python/2003-November/014532.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.modpython.org/pipermail/mod_python/2004-January/014879.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9129"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1a448eb7-6988-11d8-873f-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-03-03T00:00:00Z",
+			"modified": "2004-03-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-0973",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0973"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_python"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.10",
+									"ge": "2.7"
+								},
+								{
+									"lt": "3.0.4",
+									"ge": "3.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

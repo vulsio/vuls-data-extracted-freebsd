@@ -1,0 +1,81 @@
+{
+	"id": "8d2d6bbd-2a02-11e5-a0af-bcaec565249c",
+	"advisories": [
+		{
+			"id": "8d2d6bbd-2a02-11e5-a0af-bcaec565249c",
+			"title": "Adobe Flash Player -- critical vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb15-18.html\">\n\t  <p>Critical vulnerabilities (CVE-2015-5122, CVE-2015-5123) have\n\t    been identified. Successful exploitation could cause a crash\n\t    and potentially allow an attacker to take control of the\n\t    affected system. Adobe is aware of reports that exploits\n\t    targeting these vulnerabilities have been published publicly.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb15-18.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8d2d6bbd-2a02-11e5-a0af-bcaec565249c.html"
+				}
+			],
+			"published": "2015-07-14T00:00:00Z",
+			"modified": "2015-07-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5122",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5122"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5123",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5123"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.491"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.491"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

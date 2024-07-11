@@ -1,0 +1,54 @@
+{
+	"id": "8514b6e7-6f0f-11dd-b3db-001c2514716c",
+	"advisories": [
+		{
+			"id": "8514b6e7-6f0f-11dd-b3db-001c2514716c",
+			"title": "joomla -- flaw in the reset token validation",
+			"description": "\n\t<p>Joomla project reports:</p>\n\t<blockquote cite=\"http://developer.joomla.org/security/news/241-20080801-core-password-remind-functionality.html\">\n\t  <p>A flaw in the reset token validation mechanism allows\n\t    for non-validating tokens to be forged. This will allow\n\t    an unauthenticated, unauthorized user to reset the password\n\t    of the first enabled user (lowest id). Typically, this is\n\t    an administrator user. Note, that changing the first users\n\t    username may lessen the impact of this exploit (since the\n\t    person who changed the password does not know the login\n\t    associated with the new password).  However, the only way\n\t    to completely rectify the issue is to upgrade to 1.5.6\n\t    (or patch the /components/com_user/models/reset.php file).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8514b6e7-6f0f-11dd-b3db-001c2514716c.html"
+				}
+			],
+			"published": "2008-08-20T00:00:00Z",
+			"modified": "2008-08-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3681",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3681"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "joomla15"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

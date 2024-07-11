@@ -1,0 +1,58 @@
+{
+	"id": "10a24ce0-ab68-11ea-b9b8-641c67a117d8",
+	"advisories": [
+		{
+			"id": "10a24ce0-ab68-11ea-b9b8-641c67a117d8",
+			"title": "znc -- Authenticated users can trigger an application crash",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13775\">\n\t  <p>ZNC 1.8.0 up to 1.8.1-rc1 allows attackers to trigger an application\n\t    crash (with a NULL pointer dereference) if echo-message is not enabled\n\t    and there is no network.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wiki.znc.in/ChangeLog/1.8.1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/10a24ce0-ab68-11ea-b9b8-641c67a117d8.html"
+				}
+			],
+			"published": "2020-06-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-13775",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-13775"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "znc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.1",
+									"ge": "1.8.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

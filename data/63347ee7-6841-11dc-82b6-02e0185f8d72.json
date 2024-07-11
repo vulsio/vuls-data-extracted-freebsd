@@ -1,0 +1,99 @@
+{
+	"id": "63347ee7-6841-11dc-82b6-02e0185f8d72",
+	"advisories": [
+		{
+			"id": "63347ee7-6841-11dc-82b6-02e0185f8d72",
+			"title": "wordpress -- remote sql injection vulnerability",
+			"description": "\n\t<p>Alexander Concha reports:</p>\n\t<blockquote cite=\"http://www.buayacorp.com/files/wordpress/wordpress-sql-injection-advisory.html\">\n\t  <p>While testing WordPress, it has been discovered a SQL\n\t    Injection vulnerability that allows an attacker to retrieve\n\t    remotely any user credentials from a vulnerable site, this\n\t    bug is caused because of early database escaping and the\n\t    lack of validation in query string like parameters.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.buayacorp.com/files/wordpress/wordpress-sql-injection-advisory.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/63347ee7-6841-11dc-82b6-02e0185f8d72.html"
+				}
+			],
+			"published": "2007-09-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-4894",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-4894"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "de-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wordpress-mu"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.4,2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

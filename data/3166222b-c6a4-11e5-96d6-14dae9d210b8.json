@@ -1,0 +1,87 @@
+{
+	"id": "3166222b-c6a4-11e5-96d6-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "3166222b-c6a4-11e5-96d6-14dae9d210b8",
+			"title": "owncloud -- multiple vulnerabilities",
+			"description": "\n\t<p>Owncloud reports:</p>\n\t<blockquote cite=\"https://owncloud.org/blog/owncloud-8-2-2-8-1-5-8-0-10-and-7-0-12-here-with-sharing-ldap-fixes/\">\n\t  <ul>\n\t  <li><p>Reflected XSS in OCS provider discovery\n\t    (oC-SA-2016-001)</p></li>\n\t  <li><p>Information Exposure Through Directory Listing in the\n\t    file scanner (oC-SA-2016-002)</p></li>\n\t  <li><p>Disclosure of files that begin with \".v\" due to\n\t    unchecked return value (oC-SA-2016-003)</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://owncloud.org/blog/owncloud-8-2-2-8-1-5-8-0-10-and-7-0-12-here-with-sharing-ldap-fixes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://owncloud.org/security/advisory/?id=oc-sa-2016-001"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://owncloud.org/security/advisory/?id=oc-sa-2016-002"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://owncloud.org/security/advisory/?id=oc-sa-2016-003"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3166222b-c6a4-11e5-96d6-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1498",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1498"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1499",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1499"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1500",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1500"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "owncloud"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.2.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

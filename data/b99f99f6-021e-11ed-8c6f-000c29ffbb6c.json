@@ -1,0 +1,57 @@
+{
+	"id": "b99f99f6-021e-11ed-8c6f-000c29ffbb6c",
+	"advisories": [
+		{
+			"id": "b99f99f6-021e-11ed-8c6f-000c29ffbb6c",
+			"title": "git -- privilege escalation",
+			"description": "\n\t<p>The git project reports:</p>\n\t<blockquote cite=\"https://lkml.org/lkml/2022/7/12/1137\">\n\t  <p>Git is vulnerable to privilege escalation in all platforms.\n\t    An unsuspecting user could still be affected by the issue\n\t    reported in CVE-2022-24765, for example when navigating as\n\t    root into a shared tmp directory that is owned by them, but\n\t    where an attacker could create a git repository.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29187"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b99f99f6-021e-11ed-8c6f-000c29ffbb6c.html"
+				}
+			],
+			"published": "2022-07-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-29187",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-29187"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.37.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

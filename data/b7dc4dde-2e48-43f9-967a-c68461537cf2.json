@@ -1,0 +1,58 @@
+{
+	"id": "b7dc4dde-2e48-43f9-967a-c68461537cf2",
+	"advisories": [
+		{
+			"id": "b7dc4dde-2e48-43f9-967a-c68461537cf2",
+			"title": "dovecot -- null pointer deref in notify with empty headers",
+			"description": "\n\t<p>Aki Tuomi reports</p>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot/2019-December/117894.html\">\n\t  <p>Mail with group address as sender will cause a signal 11 crash in push\n notification drivers. Group address as recipient can cause crash in some\n drivers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dovecot.org/pipermail/dovecot/2019-December/117894.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b7dc4dde-2e48-43f9-967a-c68461537cf2.html"
+				}
+			],
+			"published": "2019-12-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-19722",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19722"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dovecot"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3.9.2",
+									"ge": "2.3.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

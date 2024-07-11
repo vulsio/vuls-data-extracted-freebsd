@@ -1,0 +1,58 @@
+{
+	"id": "75d72e03-b137-11ea-8659-901b0ef719ab",
+	"advisories": [
+		{
+			"id": "75d72e03-b137-11ea-8659-901b0ef719ab",
+			"title": "BIND -- Remote Denial of Service vulnerability",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/docs/cve-2020-8618\">\n\t  <p>An assertion check in BIND (that is meant to prevent going beyond\n\t    the end of a buffer when processing incoming data) can be\n\t    incorrectly triggered by a large response during zone transfer.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://kb.isc.org/docs/cve-2020-8618"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/75d72e03-b137-11ea-8659-901b0ef719ab.html"
+				}
+			],
+			"published": "2020-06-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8618",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8618"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind916"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.16.4",
+									"ge": "9.16.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

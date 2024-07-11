@@ -1,0 +1,117 @@
+{
+	"id": "0523fb7e-8444-4e86-812d-8de05f6f0dce",
+	"advisories": [
+		{
+			"id": "0523fb7e-8444-4e86-812d-8de05f6f0dce",
+			"title": "libutp -- remote denial of service or arbitrary code execution",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-6129\">\n\t  <p>Stack-based buffer overflow in utp.cpp in libutp, as used\n\t    in Transmission before 2.74 and possibly other products,\n\t    allows remote attackers to cause a denial of service (crash)\n\t    and possibly execute arbitrary code via crafted \"micro\n\t    transport protocol packets.\"</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/bittorrent/libutp/issues/38"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://trac.transmissionbt.com/ticket/5002"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0523fb7e-8444-4e86-812d-8de05f6f0dce.html"
+				}
+			],
+			"published": "2014-12-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-6129",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-6129"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bittorrent-libutp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.20130514_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "transmission-cli"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.74"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "transmission-deamon"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.74"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "transmission-gtk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.74"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "transmission-qt4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.74"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

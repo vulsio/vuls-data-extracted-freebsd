@@ -1,0 +1,134 @@
+{
+	"id": "0e1e3789-d87f-11dd-8ecd-00163e000016",
+	"advisories": [
+		{
+			"id": "0e1e3789-d87f-11dd-8ecd-00163e000016",
+			"title": "vim -- multiple vulnerabilities in the netrw module",
+			"description": "\n\t<p>Jan Minar reports:</p>\n\t<blockquote cite=\"http://www.rdancer.org/vulnerablevim-netrw.v2.html\">\n\t  <p>Applying the ``D'' to a file with a crafted file name,\n\t   or inside a directory with a crafted directory name, can\n\t   lead to arbitrary code execution.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.rdancer.org/vulnerablevim-netrw.v5.html\">\n\t  <p>Lack of sanitization throughout Netrw can lead to arbitrary\n\t    code execution upon opening a directory with a crafted\n\t    name.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.rdancer.org/vulnerablevim-netrw-credentials-dis.html\">\n\t  <p>The Vim Netrw Plugin shares the FTP user name and password\n\t    across all FTP sessions.  Every time Vim makes a new FTP\n\t    connection, it sends the user name and password of the\n\t    previous FTP session to the FTP server.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2008/10/16/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.rdancer.org/vulnerablevim-netrw-credentials-dis.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.rdancer.org/vulnerablevim-netrw.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.rdancer.org/vulnerablevim-netrw.v2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.rdancer.org/vulnerablevim-netrw.v5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0e1e3789-d87f-11dd-8ecd-00163e000016.html"
+				}
+			],
+			"published": "2009-01-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3076",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3076"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2",
+									"ge": "7.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-console"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2",
+									"ge": "7.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2",
+									"ge": "7.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-gtk2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2",
+									"ge": "7.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-gnome"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2",
+									"ge": "7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

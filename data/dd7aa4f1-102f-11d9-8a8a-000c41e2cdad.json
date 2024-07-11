@@ -1,0 +1,220 @@
+{
+	"id": "dd7aa4f1-102f-11d9-8a8a-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "dd7aa4f1-102f-11d9-8a8a-000c41e2cdad",
+			"title": "php -- memory_limit related vulnerability",
+			"description": "\n\t<p>Stefan Esser of e-matters discovered a condition within PHP\n\t  that may lead to remote execution of arbitrary code.\tThe\n\t  memory_limit facility is used to notify functions when memory\n\t  contraints have been met. Under certain conditions, the entry\n\t  into this facility is able to interrupt functions such as\n\t  zend_hash_init() at locations not suitable for interruption.\n\t  The result would leave these functions in a vulnerable state.</p>\n\t<blockquote cite=\"http://security.e-matters.de/advisories/112004.html\">\n\t  <p>An attacker that is able to trigger the memory_limit abort\n\t    within zend_hash_init() and is additionally able to control\n\t    the heap before the HashTable itself is allocated, is able to\n\t    supply his own HashTable destructor pointer. [...]</p>\n\t  <p>All mentioned places outside of the extensions are quite easy\n\t    to exploit, because the memory allocation up to those places\n\t    is deterministic and quite static throughout different PHP\n\t    versions. [...]</p>\n\t  <p>Because the exploit itself consist of supplying an arbitrary\n\t    destructor pointer this bug is exploitable on any platform.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108981780109154"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.e-matters.de/advisories/112004.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10725"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dd7aa4f1-102f-11d9-8a8a-000c41e2cdad.html"
+				}
+			],
+			"published": "2004-09-27T00:00:00Z",
+			"modified": "2004-10-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0594",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0594"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php4-twig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-cgi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-cli"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-dtc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-horde"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php4-nms"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.3.7_3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "5.0.0.r3_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-cgi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "5.0.0.r3_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-cli"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "5.0.0.r3_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "5.0.0.r3_2,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

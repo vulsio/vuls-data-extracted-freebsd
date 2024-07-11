@@ -1,0 +1,97 @@
+{
+	"id": "7884d56f-f7a1-11d8-9837-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "7884d56f-f7a1-11d8-9837-000c41e2cdad",
+			"title": "gnomevfs -- unsafe URI handling",
+			"description": "\n\t<p>Alexander Larsson reports that some versions of gnome-vfs and\n\t  MidnightCommander contain a number of `extfs' scripts that do not\n\t  properly validate user input.  If an attacker can cause her\n\t  victim to process a specially-crafted URI, arbitrary commands\n\t  can be executed with the privileges of the victim.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ciac.org/ciac/bulletins/o-194.shtml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10864"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/16897"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=127263"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7884d56f-f7a1-11d8-9837-000c41e2cdad.html"
+				}
+			],
+			"published": "2004-08-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0494",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0494"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnomevfs2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.2_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnomevfs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.5_6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.6.0_12"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

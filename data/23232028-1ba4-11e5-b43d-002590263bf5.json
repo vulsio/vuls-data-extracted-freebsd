@@ -1,0 +1,66 @@
+{
+	"id": "23232028-1ba4-11e5-b43d-002590263bf5",
+	"advisories": [
+		{
+			"id": "23232028-1ba4-11e5-b43d-002590263bf5",
+			"title": "elasticsearch -- security fix for shared file-system repositories",
+			"description": "\n\t<p>Elastic reports:</p>\n\t<blockquote cite=\"https://www.elastic.co/community/security\">\n\t  <p>Vulnerability Summary: All Elasticsearch versions from 1.0.0 to\n\t    1.5.2 are vulnerable to an attack that uses Elasticsearch to modify\n\t    files read and executed by certain other applications.</p>\n\t  <p>Remediation Summary: Users should upgrade to 1.6.0. Alternately,\n\t    ensure that other applications are not present on the system, or\n\t    that Elasticsearch cannot write into areas where these applications\n\t    would read.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=201008"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/blog/elasticsearch-1-6-0-released"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/community/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/23232028-1ba4-11e5-b43d-002590263bf5.html"
+				}
+			],
+			"published": "2015-06-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-4165",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4165"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "elasticsearch"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.0",
+									"ge": "1.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

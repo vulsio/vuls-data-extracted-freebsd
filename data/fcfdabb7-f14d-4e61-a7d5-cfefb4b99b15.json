@@ -1,0 +1,76 @@
+{
+	"id": "fcfdabb7-f14d-4e61-a7d5-cfefb4b99b15",
+	"advisories": [
+		{
+			"id": "fcfdabb7-f14d-4e61-a7d5-cfefb4b99b15",
+			"title": "Ruby Rack Gem -- Multiple Issues",
+			"description": "\n\t<p>Rack developers report:</p>\n\t<blockquote cite=\"http://www.ruby-forum.com/topic/4410659\">\n\t  <p>Today we are proud to announce the release of Rack 1.4.5.</p>\n\t  <p>Fix CVE-2013-0263, timing attack against Rack::Session::Cookie</p>\n\t  <p>Fix CVE-2013-0262, symlink path traversal in Rack::File</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fcfdabb7-f14d-4e61-a7d5-cfefb4b99b15.html"
+				}
+			],
+			"published": "2013-02-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0262",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0262"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-0263",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0263"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem18-rack"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem19-rack"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

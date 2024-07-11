@@ -1,0 +1,50 @@
+{
+	"id": "1650cee2-a320-11ea-a090-08002734b9ed",
+	"advisories": [
+		{
+			"id": "1650cee2-a320-11ea-a090-08002734b9ed",
+			"title": "gitea -- multiple vulnerabilities",
+			"description": "\n\t<p>The Gitea Team reports for release 1.11.6:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/releases/tag/v1.11.6\">\n\t  <ul>\n\t    <li>Fix missing authorization check on pull for public repos of private/limited org (#11656) (#11683)</li>\n\t    <li>Use session for retrieving org teams (#11438) (#11439)</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=246892"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.11.6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1650cee2-a320-11ea-a090-08002734b9ed.html"
+				}
+			],
+			"published": "2020-05-31T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.11.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,83 @@
+{
+	"id": "3ec8f43b-e8ef-11d9-b875-0001020eed82",
+	"advisories": [
+		{
+			"id": "3ec8f43b-e8ef-11d9-b875-0001020eed82",
+			"title": "kernel -- TCP connection stall denial of service",
+			"description": "\n\t<h1>Problem Description</h1>\n\t<p>Two problems have been discovered in the FreeBSD TCP stack.</p>\n\t<p>First, when a TCP packets containing a timestamp is\n\t  received, inadequate checking of sequence numbers is\n\t  performed, allowing an attacker to artificially increase the\n\t  internal \"recent\" timestamp for a connection.</p>\n\t<p>Second, a TCP packet with the SYN flag set is accepted for\n\t  established connections, allowing an attacker to overwrite\n\t  certain TCP options.</p>\n\t<h1>Impact</h1>\n\t<p>Using either of the two problems an attacker with knowledge\n\t  of the local and remote IP and port numbers associated with\n\t  a connection can cause a denial of service situation by\n\t  stalling the TCP connection. The stalled TCP connection my\n\t  be closed after some time by the other host.</p>\n\t<h1>Workaround</h1>\n\t<p>In some cases it may be possible to defend against these\n\t  attacks by blocking the attack packets using a firewall.\n\t  Packets used to effect either of these attacks would have\n\t  spoofed source IP addresses.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-05:15.tcp.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/637934"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3ec8f43b-e8ef-11d9-b875-0001020eed82.html"
+				}
+			],
+			"published": "2005-06-29T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0356",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0356"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-2068",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2068"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4_3",
+									"ge": "5.4"
+								},
+								{
+									"lt": "5.3_17",
+									"ge": "5.0"
+								},
+								{
+									"lt": "4.11_11",
+									"ge": "4.11"
+								},
+								{
+									"lt": "4.10_16"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

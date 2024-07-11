@@ -1,0 +1,70 @@
+{
+	"id": "240ac24c-dff3-11dd-a765-0030843d3802",
+	"advisories": [
+		{
+			"id": "240ac24c-dff3-11dd-a765-0030843d3802",
+			"title": "mysql -- remote dos via malformed password packet",
+			"description": "\n\t<p>MySQL reports:</p>\n\t<blockquote cite=\"http://dev.mysql.com/doc/refman/4.1/en/news-4-1-24.html\">\n\t  <p>A malformed password packet in the connection protocol\n\t    could cause the server to crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.mysql.com/bug.php?id=28984"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/25017"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/240ac24c-dff3-11dd-a765-0030843d3802.html"
+				}
+			],
+			"published": "2009-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3780",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3780"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.24",
+									"ge": "4.1"
+								},
+								{
+									"lt": "5.0.44",
+									"ge": "5.0"
+								},
+								{
+									"lt": "5.1.20",
+									"ge": "5.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

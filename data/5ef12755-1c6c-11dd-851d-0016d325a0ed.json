@@ -1,0 +1,57 @@
+{
+	"id": "5ef12755-1c6c-11dd-851d-0016d325a0ed",
+	"advisories": [
+		{
+			"id": "5ef12755-1c6c-11dd-851d-0016d325a0ed",
+			"title": "swfdec -- exposure of sensitive information",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/29915\">\n\t  <p>A vulnerability has been reported in swfdec, which can be\n\t    exploited by malicious people to disclose sensitive\n\t    information.</p>\n\t  <p>The vulnerability is caused due to swfdec not properly\n\t    restricting untrusted sandboxes from reading local files,\n\t    which can be exploited to disclose the content of arbitrary\n\t    local files by e.g. tricking a user into visiting a malicious\n\t    website.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/29915"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5ef12755-1c6c-11dd-851d-0016d325a0ed.html"
+				}
+			],
+			"published": "2008-05-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-1834",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1834"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "swfdec"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

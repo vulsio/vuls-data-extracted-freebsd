@@ -1,0 +1,57 @@
+{
+	"id": "c7cad0f0-671a-11d8-bdeb-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "c7cad0f0-671a-11d8-bdeb-000a95bc6fae",
+			"title": "Darwin Streaming Server denial-of-service vulnerability",
+			"description": "\n\t<p>An attacker can cause an assertion to trigger by sending\n\t  a long User-Agent field in a request.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.idefense.com/application/poi/display?id=75"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c7cad0f0-671a-11d8-bdeb-000a95bc6fae.html"
+				}
+			],
+			"published": "2004-02-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0169",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0169"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "DarwinStreamingServer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.1.3g"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

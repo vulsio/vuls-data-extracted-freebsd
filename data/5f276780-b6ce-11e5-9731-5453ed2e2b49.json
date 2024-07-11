@@ -1,0 +1,117 @@
+{
+	"id": "5f276780-b6ce-11e5-9731-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "5f276780-b6ce-11e5-9731-5453ed2e2b49",
+			"title": "pygments -- shell injection vulnerability",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8557\">\n\t  <p>The FontManager._get_nix_font_path function in formatters/img.py\n\t    in Pygments 1.2.2 through 2.0.2 allows remote attackers to execute\n\t    arbitrary commands via shell metacharacters in a font name.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/fulldisclosure/2015/Oct/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bitbucket.org/birkenfeld/pygments-main/commits/0036ab1c99e256298094505e5e92fdacdfc5b0a8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5f276780-b6ce-11e5-9731-5453ed2e2b49.html"
+				}
+			],
+			"published": "2016-01-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8557",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8557"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-pygments"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.2_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py32-pygments"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.2_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py33-pygments"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.2_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py34-pygments"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.2_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py35-pygments"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.2_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

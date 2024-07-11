@@ -1,0 +1,130 @@
+{
+	"id": "72f35727-ce83-11e2-be04-005056a37f68",
+	"advisories": [
+		{
+			"id": "72f35727-ce83-11e2-be04-005056a37f68",
+			"title": "dns/bind9* -- A recursive resolver can be crashed by a query for a malformed zone",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-00967\">\n\t  <p>A bug has been discovered in the most recent releases of\n\t  BIND 9 which has the potential for deliberate exploitation\n\t  as a denial-of-service attack. By sending a recursive\n\t  resolver a query for a record in a specially malformed zone,\n\t  an attacker can cause BIND 9 to exit with a fatal\n\t  \"RUNTIME_CHECK\" error in resolver.c.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/72f35727-ce83-11e2-be04-005056a37f68.html"
+				}
+			],
+			"published": "2013-06-06T00:00:00Z",
+			"modified": "2013-06-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-3919",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3919"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.3.1",
+									"gt": "9.9.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.3.1",
+									"gt": "9.9.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind98"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.8.5.1",
+									"gt": "9.8.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind98-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.8.5.1",
+									"gt": "9.8.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind96"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.6.3.2.ESV.R9",
+									"gt": "9.6.3.1.ESV.R9"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind96-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.6.3.2.ESV.R9",
+									"gt": "9.6.3.1.ESV.R9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

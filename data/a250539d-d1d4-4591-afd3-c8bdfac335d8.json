@@ -1,0 +1,152 @@
+{
+	"id": "a250539d-d1d4-4591-afd3-c8bdfac335d8",
+	"advisories": [
+		{
+			"id": "a250539d-d1d4-4591-afd3-c8bdfac335d8",
+			"title": "jenkins -- multiple vulnerabilities",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://jenkins.io/security/advisory/2020-01-29/\">\n\t  <h1>Description</h1>\n\t  <h5>(High) SECURITY-1682 / CVE-2020-2099</h5>\n\t  <p>Inbound TCP Agent Protocol/3 authentication bypass</p>\n\t  <h5>(Medium) SECURITY-1641 / CVE-2020-2100</h5>\n\t  <p>Jenkins vulnerable to UDP amplification reflection attack</p>\n\t  <h5>(Medium) SECURITY-1659 / CVE-2020-2101</h5>\n\t  <p>Non-constant time comparison of inbound TCP agent connection secret</p>\n\t  <h5>(Medium) SECURITY-1660 / CVE-2020-2102</h5>\n\t  <p>Non-constant time HMAC comparison</p>\n\t  <h5>(Medium) SECURITY-1695 / CVE-2020-2103</h5>\n\t  <p>Diagnostic page exposed session cookies</p>\n\t  <h5>(Medium) SECURITY-1650 / CVE-2020-2104</h5>\n\t  <p>Memory usage graphs accessible to anyone with Overall/Read</p>\n\t  <h5>(Low) SECURITY-1704 / CVE-2020-2105</h5>\n\t  <p>Jenkins REST APIs vulnerable to clickjacking</p>\n\t  <h5>(Medium) SECURITY-1680 / CVE-2020-2106</h5>\n\t  <p>Stored XSS vulnerability in Code Coverage API Plugin</p>\n\t  <h5>(Medium) SECURITY-1565 / CVE-2020-2107</h5>\n\t  <p>Fortify Plugin stored credentials in plain text</p>\n\t  <h5>(High) SECURITY-1719 / CVE-2020-2108</h5>\n\t  <p>XXE vulnerability in WebSphere Deployer Plugin</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jenkins.io/security/advisory/2020-01-29/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a250539d-d1d4-4591-afd3-c8bdfac335d8.html"
+				}
+			],
+			"published": "2020-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-2099",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2099"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2100",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2100"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2101",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2101"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2102",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2102"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2103",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2103"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2104",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2104"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2105",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2105"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2106",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2106"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2107",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2107"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-2108",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-2108"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.219"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins-lts"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.204.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

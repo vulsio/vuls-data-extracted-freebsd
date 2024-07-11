@@ -1,0 +1,57 @@
+{
+	"id": "b22b016b-b633-11e5-83ef-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "b22b016b-b633-11e5-83ef-14dae9d210b8",
+			"title": "librsync -- collision vulnerability",
+			"description": "\n\t<p>Michael Samuel reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2014/07/28/1\">\n\t  <p>librsync before 1.0.0 uses a truncated MD4 checksum to\n\t    match blocks, which makes it easier for remote attackers to modify\n\t    transmitted data via a birthday attack.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2014/07/28/1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b22b016b-b633-11e5-83ef-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-01-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8242",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8242"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "librsync"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

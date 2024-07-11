@@ -1,0 +1,57 @@
+{
+	"id": "1d6410e8-06c1-11ec-a35d-03ca114d16d6",
+	"advisories": [
+		{
+			"id": "1d6410e8-06c1-11ec-a35d-03ca114d16d6",
+			"title": "fetchmail -- STARTTLS bypass vulnerabilities",
+			"description": "\n\t<p>Problem:</p>\n\t<blockquote cite=\"https://www.fetchmail.info/fetchmail-SA-2021-02.txt\">\n\t  <p>In certain circumstances, fetchmail 6.4.21 and older would\n\t    not encrypt the session using STARTTLS/STLS, and might not have\n\t    cleared session state across the TLS negotiation.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.fetchmail.info/fetchmail-SA-2021-02.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1d6410e8-06c1-11ec-a35d-03ca114d16d6.html"
+				}
+			],
+			"published": "2021-08-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-39272",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39272"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fetchmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.4.22.r1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

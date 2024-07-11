@@ -1,0 +1,71 @@
+{
+	"id": "59e7163c-cf84-11e2-907b-0025905a4770",
+	"advisories": [
+		{
+			"id": "59e7163c-cf84-11e2-907b-0025905a4770",
+			"title": "php5 -- Heap based buffer overflow in quoted_printable_encode",
+			"description": "\n\t<p>The PHP development team reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php\">\n\t  <p>A Heap-based buffer overflow flaw was found in the php\n\t    quoted_printable_encode() function. A remote attacker could use\n\t    this flaw to cause php to crash or execute arbirary code with the\n\t    permission of the user running php</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=964969"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/59e7163c-cf84-11e2-907b-0025905a4770.html"
+				}
+			],
+			"published": "2013-06-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2110",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2110"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php53"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.3.26"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

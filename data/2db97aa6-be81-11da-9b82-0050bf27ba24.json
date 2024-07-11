@@ -1,0 +1,76 @@
+{
+	"id": "2db97aa6-be81-11da-9b82-0050bf27ba24",
+	"advisories": [
+		{
+			"id": "2db97aa6-be81-11da-9b82-0050bf27ba24",
+			"title": "horde -- remote code execution vulnerability in the help viewer",
+			"description": "\n\t<p>Horde 3.1.1 release announcement:</p>\n\t<blockquote cite=\"http://lists.horde.org/archives/announce/2006/000271.html\">\n\t  <p>Major changes compared to Horde 3.1 are:</p>\n\t  <ul>\n\t    <li>Fix for remote code execution vulnerability in the\n\t      help viewer, discovered by Jan Schneider from the Horde\n\t      team.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.horde.org/archives/announce/2006/000271.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/17292"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2db97aa6-be81-11da-9b82-0050bf27ba24.html"
+				}
+			],
+			"published": "2006-03-28T00:00:00Z",
+			"modified": "2006-03-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1491",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1491"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "horde"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "horde-php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

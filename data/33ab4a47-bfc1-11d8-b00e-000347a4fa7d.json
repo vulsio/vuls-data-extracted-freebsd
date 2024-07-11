@@ -1,0 +1,89 @@
+{
+	"id": "33ab4a47-bfc1-11d8-b00e-000347a4fa7d",
+	"advisories": [
+		{
+			"id": "33ab4a47-bfc1-11d8-b00e-000347a4fa7d",
+			"title": "Several vulnerabilities found in PHPNuke",
+			"description": "\n\t<p>Janek Vind \"waraxe\" reports that several issues in the\n\t  PHPNuke software may be exploited via carefully crafted\n\t  URL requests.  These URLs will permit the injection of\n\t  SQL code, cookie theft, and the readability of the\n\t  PHPNuke administrator account.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/11920"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.waraxe.us/index.php?modname=sa&id=27"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/33ab4a47-bfc1-11d8-b00e-000347a4fa7d.html"
+				}
+			],
+			"published": "2004-07-03T00:00:00Z",
+			"modified": "2004-09-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-0279",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0279"
+				}
+			]
+		},
+		{
+			"id": "CVE-2003-0318",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-0318"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0266",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0266"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0269",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0269"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpnuke"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

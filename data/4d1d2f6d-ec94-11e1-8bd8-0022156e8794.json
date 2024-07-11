@@ -1,0 +1,57 @@
+{
+	"id": "4d1d2f6d-ec94-11e1-8bd8-0022156e8794",
+	"advisories": [
+		{
+			"id": "4d1d2f6d-ec94-11e1-8bd8-0022156e8794",
+			"title": "jabberd -- domain spoofing in server dialback protocol",
+			"description": "\n\t<p>XMPP Standards Foundation reports:</p>\n\t<blockquote cite=\"http://xmpp.org/resources/security-notices/server-dialback/\">\n\t  <p>Some implementations of the XMPP Server Dialback protocol\n\t  (RFC 3920/XEP-0220) have not been checking dialback\n\t  responses to ensure that validated results are correlated\n\t  with requests.</p>\n\t  <p>An attacking server could spoof one or more domains in\n\t  communicating with a vulnerable server implementation,\n\t  thereby avoiding the protections built into the Server\n\t  Dialback protocol.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xmpp.org/resources/security-notices/server-dialback/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4d1d2f6d-ec94-11e1-8bd8-0022156e8794.html"
+				}
+			],
+			"published": "2012-08-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3525",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3525"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jabberd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.16_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,69 @@
+{
+	"id": "00dadbf0-6f61-11e5-a2a1-002590263bf5",
+	"advisories": [
+		{
+			"id": "00dadbf0-6f61-11e5-a2a1-002590263bf5",
+			"title": "p5-UI-Dialog -- shell command execution vulnerability",
+			"description": "\n\t<p>Matthijs Kooijman reports:</p>\n\t<blockquote cite=\"https://rt.cpan.org/Public/Bug/Display.html?id=107364\">\n\t  <p>It seems that the whiptail, cdialog and kdialog backends apply\n\t    some improper escaping in their shell commands, causing special\n\t    characters present in menu item titles to be interpreted by the\n\t    shell. This includes the backtick evaluation operator, so this\n\t    constitutes a security issue, allowing execution of arbitrary\n\t    commands if an attacker has control over the text displayed in\n\t    a menu.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.debian.org/496448"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=203667"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/kckrinke/UI-Dialog/commit/6adc44cc636c615d76297d86835e1a997681eb61"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://rt.cpan.org/Public/Bug/Display.html?id=107364"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/00dadbf0-6f61-11e5-a2a1-002590263bf5.html"
+				}
+			],
+			"published": "2015-10-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-7315",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-7315"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-UI-Dialog"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.09_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

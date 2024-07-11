@@ -1,0 +1,57 @@
+{
+	"id": "27c822a0-addc-11ed-a9ee-dca632b19f10",
+	"advisories": [
+		{
+			"id": "27c822a0-addc-11ed-a9ee-dca632b19f10",
+			"title": "Rundeck3 -- Log4J RCE vulnerability",
+			"description": "\n\t<p>The Rundeck project reports:</p>\n\t<blockquote cite=\"https://docs.rundeck.com/docs/history/3_4_x/version-3.4.10.html\">\n\t  <p>This release updates both Community and Enterprise with the latest Log4J\n\t    to address CVE-2021-44832 by updating it to 2.17.1.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44832"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/27c822a0-addc-11ed-a9ee-dca632b19f10.html"
+				}
+			],
+			"published": "2023-02-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44832",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44832"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rundeck3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

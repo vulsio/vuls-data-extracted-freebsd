@@ -1,0 +1,46 @@
+{
+	"id": "4a67450a-e044-11e7-accc-001999f8d30b",
+	"advisories": [
+		{
+			"id": "4a67450a-e044-11e7-accc-001999f8d30b",
+			"title": "asterisk -- Remote Crash Vulnerability in RTCP Stack",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>If a compound RTCP packet is received containing more\n\t  than one report (for example a Receiver Report and a\n\t  Sender Report) the RTCP stack will incorrectly store\n\t  report information outside of allocated memory potentially\n\t  causing a crash.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2017-012.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4a67450a-e044-11e7-accc-001999f8d30b.html"
+				}
+			],
+			"published": "2017-12-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk13"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.18.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

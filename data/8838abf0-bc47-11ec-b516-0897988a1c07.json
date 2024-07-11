@@ -1,0 +1,85 @@
+{
+	"id": "8838abf0-bc47-11ec-b516-0897988a1c07",
+	"advisories": [
+		{
+			"id": "8838abf0-bc47-11ec-b516-0897988a1c07",
+			"title": "Asterisk -- multiple vulnerabilities",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories/\">\n\t  <p>AST-2022-001 - When using STIR/SHAKEN, its possible\n\t  to download files that are not certificates. These files\n\t  could be much larger than what you would expect to\n\t  download.</p>\n\t  <p>AST-2022-002 - When using STIR/SHAKEN, its possible\n\t  to send arbitrary requests like GET to interfaces such\n\t  as localhost using the Identity header.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2022-001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2022-002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8838abf0-bc47-11ec-b516-0897988a1c07.html"
+				}
+			],
+			"published": "2022-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-26498",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-26498"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-26499",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-26499"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.25.2",
+									"gt": "16.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "18.11.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

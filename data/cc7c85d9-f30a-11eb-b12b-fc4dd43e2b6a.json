@@ -1,0 +1,86 @@
+{
+	"id": "cc7c85d9-f30a-11eb-b12b-fc4dd43e2b6a",
+	"advisories": [
+		{
+			"id": "cc7c85d9-f30a-11eb-b12b-fc4dd43e2b6a",
+			"title": "tomcat -- Remote Denial of Service in multiple versions",
+			"description": "\n\t<p>rbeaudry reports:</p>\n\t<blockquote cite=\"https://tomcat.apache.org/security.html\">\n\t  <p>A vulnerability in Apache Tomcat allows an attacker to remotely trigger a denial of service. An error introduced as part of a change to improve error handling during non-blocking I/O meant that the error flag associated with the Request object was not reset between requests. This meant that once a non-blocking I/O error occurred, all future requests handled by that request object would fail. Users were able to trigger non-blocking I/O errors, e.g. by dropping a connection, thereby creating the possibility of triggering a DoS.</p>\n\t  <p>Applications that do not use non-blocking I/O are not exposed to this vulnerability. This issue affects Apache Tomcat 10.0.3 to 10.0.4; 9.0.44; 8.5.64.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30639"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cc7c85d9-f30a-11eb-b12b-fc4dd43e2b6a.html"
+				}
+			],
+			"published": "2021-08-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-30639",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-30639"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat85"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"eq": "8.5.64"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat9"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"eq": "9.0.44"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat10"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "10.0.4",
+									"ge": "10.0.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

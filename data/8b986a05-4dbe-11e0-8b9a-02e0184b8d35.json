@@ -1,0 +1,168 @@
+{
+	"id": "8b986a05-4dbe-11e0-8b9a-02e0184b8d35",
+	"advisories": [
+		{
+			"id": "8b986a05-4dbe-11e0-8b9a-02e0184b8d35",
+			"title": "avahi -- denial of service",
+			"description": "\n\t<p>Avahi developers reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/43361/\">\n\t  <p>A vulnerability has been reported in Avahi, which can be exploited\n\t    by malicious people to cause a DoS (Denial of Service).\n\t    The vulnerability is caused due to an error when processing certain\n\t    UDP packets, which can be exploited to trigger an infinite loop by\n\t    e.g. sending an empty packet to port 5353/UDP.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/43361/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=667187"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8b986a05-4dbe-11e0-8b9a-02e0184b8d35.html"
+				}
+			],
+			"published": "2011-03-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-2244",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2244"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-1002",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1002"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-app"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-autoipd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-gtk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-libdns"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-qt3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-qt4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "avahi-sharp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.29"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

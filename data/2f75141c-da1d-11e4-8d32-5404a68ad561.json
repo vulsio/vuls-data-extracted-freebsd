@@ -1,0 +1,66 @@
+{
+	"id": "2f75141c-da1d-11e4-8d32-5404a68ad561",
+	"advisories": [
+		{
+			"id": "2f75141c-da1d-11e4-8d32-5404a68ad561",
+			"title": "Several vulnerabilities in libav",
+			"description": "\n\t<p>The libav project reports:</p>\n\t<blockquote cite=\"https://git.libav.org/?p=libav.git;a=blob;f=Changelog;hb=refs/tags/v11.3\">\n\t  <p>utvideodec: Handle slice_height being zero (CVE-2014-9604)</p>\n\t  <p>tiff: Check that there is no aliasing in pixel format selection (CVE-2014-8544)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://git.libav.org/?p=libav.git;a=blob;f=Changelog;hb=refs/tags/v11.3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2f75141c-da1d-11e4-8d32-5404a68ad561.html"
+				}
+			],
+			"published": "2015-04-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8544",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8544"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-9604",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-9604"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

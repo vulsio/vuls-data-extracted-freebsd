@@ -1,0 +1,96 @@
+{
+	"id": "0d530174-6eef-11e1-afd6-14dae9ebcf89",
+	"advisories": [
+		{
+			"id": "0d530174-6eef-11e1-afd6-14dae9ebcf89",
+			"title": "asterisk -- multiple vulnerabilities",
+			"description": "\n\t<p>Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/security\">\n\t  <p>Stack Buffer Overflow in HTTP Manager</p>\n\t  <p>Remote Crash Vulnerability in Milliwatt Application</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2012-002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2012-003.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0d530174-6eef-11e1-afd6-14dae9ebcf89.html"
+				}
+			],
+			"published": "2012-03-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk14"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.44",
+									"gt": "1.4.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.2.23",
+									"gt": "1.6.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.10.1",
+									"gt": "1.8.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk10"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.2.1",
+									"gt": "10.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

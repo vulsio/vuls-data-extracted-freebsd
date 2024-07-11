@@ -1,0 +1,71 @@
+{
+	"id": "5a1589ad-68f9-11e8-83f5-d8cb8abf62dd",
+	"advisories": [
+		{
+			"id": "5a1589ad-68f9-11e8-83f5-d8cb8abf62dd",
+			"title": "Libgit2 -- Fixing insufficient validation of submodule names",
+			"description": "\n\t<p>The Git community reports:</p>\n\t<blockquote cite=\"https://github.com/libgit2/libgit2/releases/tag/v0.27.1\">\n\t  <p>Insufficient validation of submodule names</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libgit2/libgit2/releases/tag/v0.27.1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5a1589ad-68f9-11e8-83f5-d8cb8abf62dd.html"
+				}
+			],
+			"published": "2018-06-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-11235",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-11235"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgit2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.27.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py-pygit2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.27.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

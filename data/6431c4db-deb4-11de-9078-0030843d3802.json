@@ -1,0 +1,85 @@
+{
+	"id": "6431c4db-deb4-11de-9078-0030843d3802",
+	"advisories": [
+		{
+			"id": "6431c4db-deb4-11de-9078-0030843d3802",
+			"title": "opera -- multiple vulnerabilities",
+			"description": "\n\t<p>Opera Team reports:</p>\n\t<blockquote cite=\"http://www.opera.com/docs/changelogs/unix/1010/\">\n\t  <ul>\n\t    <li>Fixed a heap buffer overflow in string to number conversion</li>\n\t    <li>Fixed an issue where error messages could leak onto unrelated\n\t      sites</li>\n\t    <li>Fixed a moderately severe issue, as reported by Chris Evans of\n\t      the Google Security Team; details will be disclosed at a later\n\t      date.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/kb/view/941/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/kb/view/942/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6431c4db-deb4-11de-9078-0030843d3802.html"
+				}
+			],
+			"published": "2009-12-01T00:00:00Z",
+			"modified": "2010-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0689",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0689"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-4071",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-4071"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opera"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.10.20091120"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-opera"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

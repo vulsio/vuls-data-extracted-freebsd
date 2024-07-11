@@ -1,0 +1,82 @@
+{
+	"id": "be63533c-9ed7-11e5-8f5c-002590263bf5",
+	"advisories": [
+		{
+			"id": "be63533c-9ed7-11e5-8f5c-002590263bf5",
+			"title": "redmine -- multiple vulnerabilities",
+			"description": "\n\t<p>Redmine reports:</p>\n\t<blockquote cite=\"http://www.redmine.org/projects/redmine/wiki/Security_Advisories\">\n\t  <p>Potential changeset message disclosure in issues API.</p>\n\t  <p>Data disclosure on the time logging form</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/11/25/12"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/12/03/7"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/be63533c-9ed7-11e5-8f5c-002590263bf5.html"
+				}
+			],
+			"published": "2015-12-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8346",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8346"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-8473",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8473"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redmine"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.8"
+								},
+								{
+									"lt": "3.0.6",
+									"ge": "3.0.0"
+								},
+								{
+									"lt": "3.1.2",
+									"ge": "3.1.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

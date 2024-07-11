@@ -1,0 +1,108 @@
+{
+	"id": "9bc14850-a070-11e6-a881-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "9bc14850-a070-11e6-a881-b499baebfeaf",
+			"title": "MySQL -- multiple vulnerabilities",
+			"description": "\n\t<p>The MariaDB project reports:</p>\n\t<blockquote cite=\"https://mariadb.com/kb/en/mariadb/mariadb-5553-release-notes/\">\n\t  <p>Fixes for the following security vulnerabilities:</p>\n\t  <ul>\n\t    <li>CVE-2016-7440</li>\n\t    <li>CVE-2016-5584</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb/mariadb-5553-release-notes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9bc14850-a070-11e6-a881-b499baebfeaf.html"
+				}
+			],
+			"published": "2016-11-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5584",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5584"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7440",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7440"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb55-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.53"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql55-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.53"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql56-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.34"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql57-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.7.15"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

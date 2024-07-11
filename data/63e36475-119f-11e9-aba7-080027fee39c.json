@@ -1,0 +1,46 @@
+{
+	"id": "63e36475-119f-11e9-aba7-080027fee39c",
+	"advisories": [
+		{
+			"id": "63e36475-119f-11e9-aba7-080027fee39c",
+			"title": "gitea -- insufficient privilege check",
+			"description": "\n\t<p>The Gitea project reports:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2019/01/release-of-1.6.3/\">\n\t  <p>Security</p>\n\t  <ul>\n\t    <li>Prevent DeleteFilePost doing arbitrary deletion</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/issues/5631"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/63e36475-119f-11e9-aba7-080027fee39c.html"
+				}
+			],
+			"published": "2019-01-06T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

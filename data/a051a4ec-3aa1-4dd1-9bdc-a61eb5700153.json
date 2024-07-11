@@ -1,0 +1,74 @@
+{
+	"id": "a051a4ec-3aa1-4dd1-9bdc-a61eb5700153",
+	"advisories": [
+		{
+			"id": "a051a4ec-3aa1-4dd1-9bdc-a61eb5700153",
+			"title": "leafnode fetchnews denial-of-service triggered by truncated transmission",
+			"description": "\n\t<p>When a downloaded news article ends prematurely, i. e. when the\n\t  server sends [CR]LF.[CR]LF before sending a blank line, fetchnews may\n\t  wait indefinitely for data that never arrives. Workaround: configure\n\t  \"minlines=1\" (or use a bigger value) in the configuration file. Found\n\t  by Toni Viemerö.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.network.leafnode.announce/32"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://leafnode.sourceforge.net/leafnode-SA-2004-01.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/mailarchive/message.php?msg_id=6922570"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/tracker/index.php?func=detail&aid=873149&group_id=57767&atid=485349"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=61105"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a051a4ec-3aa1-4dd1-9bdc-a61eb5700153.html"
+				}
+			],
+			"published": "2004-05-21T00:00:00Z",
+			"modified": "2005-05-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-2068",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-2068"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "leafnode"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.9.47"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

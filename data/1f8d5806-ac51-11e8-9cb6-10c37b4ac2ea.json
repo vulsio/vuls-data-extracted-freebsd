@@ -1,0 +1,101 @@
+{
+	"id": "1f8d5806-ac51-11e8-9cb6-10c37b4ac2ea",
+	"advisories": [
+		{
+			"id": "1f8d5806-ac51-11e8-9cb6-10c37b4ac2ea",
+			"title": "grafana -- LDAP and OAuth login vulnerability",
+			"description": "\n\t<p>Grafana Labs reports:</p>\n\t<blockquote cite=\"https://community.grafana.com/t/grafana-5-2-3-and-4-6-4-security-update/10050\">\n\t  <p>On the 20th of August at 1800 CEST we were contacted about a\n\t    potential security issue with the “remember me” cookie Grafana\n\t    sets upon login. The issue targeted users without a local Grafana\n\t    password (LDAP &amp; OAuth users) and enabled a potential attacker\n\t    to generate a valid cookie knowing only a username.</p>\n\t  <p>All installations which use the Grafana LDAP or OAuth\n\t    authentication features must be upgraded as soon as possible. If\n\t    you cannot upgrade, you should switch authentication mechanisms\n\t    or put additional protections in front of Grafana such as a\n\t    reverse proxy.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://community.grafana.com/t/grafana-5-2-3-and-4-6-4-security-update/10050"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1f8d5806-ac51-11e8-9cb6-10c37b4ac2ea.html"
+				}
+			],
+			"published": "2018-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-558213",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-558213"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.3",
+									"ge": "5.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.6.4",
+									"ge": "4.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "3.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "2.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

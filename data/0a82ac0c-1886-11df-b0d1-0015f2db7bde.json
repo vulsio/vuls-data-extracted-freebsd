@@ -1,0 +1,70 @@
+{
+	"id": "0a82ac0c-1886-11df-b0d1-0015f2db7bde",
+	"advisories": [
+		{
+			"id": "0a82ac0c-1886-11df-b0d1-0015f2db7bde",
+			"title": "gnome-screensaver -- Multiple monitor hotplug issues",
+			"description": "\n\t<p>Ray Strode reports:</p>\n\t<blockquote cite=\"https://bugzilla.gnome.org/show_bug.cgi?id=609337\">\n\t  <p>Under certain circumstances it is possible to circumvent the security of screen\n\t   locking functionality of gnome-screensaver by changing the systems physical\n\t   monitor configuration.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://bugzilla.gnome.org/show_bug.cgi?id=609789\">\n\t  <p>gnome-screensaver can lose its keyboard grab when locked, exposing the system\n\t   to intrusion by adding and removing monitors.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.gnome.org/show_bug.cgi?id=609337"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.gnome.org/show_bug.cgi?id=609789"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0a82ac0c-1886-11df-b0d1-0015f2db7bde.html"
+				}
+			],
+			"published": "2010-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-0414",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0414"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-0422",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0422"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnome-screensaver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.28.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

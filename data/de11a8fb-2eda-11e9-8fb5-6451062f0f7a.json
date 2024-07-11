@@ -1,0 +1,57 @@
+{
+	"id": "de11a8fb-2eda-11e9-8fb5-6451062f0f7a",
+	"advisories": [
+		{
+			"id": "de11a8fb-2eda-11e9-8fb5-6451062f0f7a",
+			"title": "Flash Player -- information disclosure",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb19-06.html\">\n\t  <ul>\n\t    <li>This update resolves an out-of-bounds vulnerability that\n\t      could lead to information disclosure (CVE-2019-7090).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb19-06.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/de11a8fb-2eda-11e9-8fb5-6451062f0f7a.html"
+				}
+			],
+			"published": "2019-02-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-7090",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-7090"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "32.0.0.142"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

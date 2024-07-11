@@ -1,0 +1,57 @@
+{
+	"id": "13bf0602-c08a-11e2-bb21-083e8ed0f47b",
+	"advisories": [
+		{
+			"id": "13bf0602-c08a-11e2-bb21-083e8ed0f47b",
+			"title": "plib -- buffer overflow",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"https://secunia.com/advisories/47297\">\n\t  <p>A vulnerability has been discovered in PLIB, which can be\n\t  exploited by malicious people to compromise an application\n\t  using the library. The vulnerability is caused due to a\n\t  boundary error within the \"ulSetError()\" function\n\t  (src/util/ulError.cxx) when creating the error message,\n\t  which can be exploited to overflow a static buffer.</p>\n\t  <p>Successful exploitation allows the execution of arbitrary\n\t  code but requires that the attacker can e.g. control the\n\t  content of an overly long error message passed to the\n\t  \"ulSetError()\" function.</p>\n\t  <p>The vulnerability is confirmed in version 1.8.5. Other\n\t  versions may also be affected.</p>\n\t  <p>Originally reported in TORCS by Andres Gomez.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2011/12/21/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/13bf0602-c08a-11e2-bb21-083e8ed0f47b.html"
+				}
+			],
+			"published": "2013-05-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4620",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4620"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "plib"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.5_4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

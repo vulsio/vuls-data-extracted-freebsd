@@ -1,0 +1,75 @@
+{
+	"id": "e1085b15-f609-11e5-a230-0014a5a57822",
+	"advisories": [
+		{
+			"id": "e1085b15-f609-11e5-a230-0014a5a57822",
+			"title": "mercurial -- multiple vulnerabilities",
+			"description": "\n\t<p>Mercurial reports:</p>\n\t<blockquote cite=\"https://www.mercurial-scm.org/pipermail/mercurial/2016-March/049452.html\">\n\t  <p>CVE-2016-3630: Remote code execution in binary delta decoding</p>\n\t  <p>CVE-2016-3068: Arbitrary code execution with Git subrepos</p>\n\t  <p>CVE-2016-3069: Arbitrary code execution when converting\n\t    Git repos</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mercurial-scm.org/pipermail/mercurial/2016-March/049452.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e1085b15-f609-11e5-a230-0014a5a57822.html"
+				}
+			],
+			"published": "2016-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-3068",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3068"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3069",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3069"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3630",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3630"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mercurial"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,89 @@
+{
+	"id": "bf7912f5-c1a8-11e3-a5ac-001b21614864",
+	"advisories": [
+		{
+			"id": "bf7912f5-c1a8-11e3-a5ac-001b21614864",
+			"title": "nas -- multiple vulnerabilities",
+			"description": "\n\t<p>Hamid Zamani reports:</p>\n\t<blockquote cite=\"http://radscan.com/pipermail/nas/2013-August/001270.html\">\n\t  <p>multiple security problems (buffer overflows, format string\n\t    vulnerabilities and missing input sanitising), which could lead to\n\t    the execution of arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://radscan.com/pipermail/nas/2013-August/001270.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bf7912f5-c1a8-11e3-a5ac-001b21614864.html"
+				}
+			],
+			"published": "2014-04-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4256",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4256"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-4257",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4257"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-4258",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4258"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nas"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-nas-libs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

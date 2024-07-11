@@ -1,0 +1,131 @@
+{
+	"id": "a8118db0-cac2-11ec-9288-0800270512f4",
+	"advisories": [
+		{
+			"id": "a8118db0-cac2-11ec-9288-0800270512f4",
+			"title": "rainloop -- cross-site-scripting (XSS) vulnerability",
+			"description": "\n\t<p>Simon Scannell reports:</p>\n\t<blockquote cite=\"https://blog.sonarsource.com/rainloop-emails-at-risk-due-to-code-flaw\">\n\t  <p>\n\t    The code vulnerability can be easily exploited by an\n\t    attacker by sending a malicious email to a victim that\n\t    uses RainLoop as a mail client. When the email is viewed\n\t    by the victim, the attacker gains full control over the\n\t    session of the victim and can steal any of their emails,\n\t    including those that contain highly sensitive information\n\t    such as passwords, documents, and password reset links.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.sonarsource.com/rainloop-emails-at-risk-due-to-code-flaw"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/RainLoop/rainloop-webmail/issues/2142"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a8118db0-cac2-11ec-9288-0800270512f4.html"
+				}
+			],
+			"published": "2022-05-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-29360",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-29360"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rainloop-php74"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.0_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rainloop-php80"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.0_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rainloop-php81"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.0_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rainloop-community-php74"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.0_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rainloop-community-php80"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.0_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rainloop-community-php81"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.0_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

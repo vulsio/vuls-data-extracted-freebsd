@@ -1,0 +1,62 @@
+{
+	"id": "74bf1594-8493-11dd-bb64-0030843d3802",
+	"advisories": [
+		{
+			"id": "74bf1594-8493-11dd-bb64-0030843d3802",
+			"title": "phpmyadmin -- Code execution vulnerability",
+			"description": "\n\t<p>A phpMyAdmin security announcement:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-7\">\n\t  <p>The server_databases.php script was vulnerable to an attack coming\n\t  from a user who is already logged-on to phpMyAdmin, where he can\n\t  execute shell code (if the PHP configuration permits commands like\n\t  exec).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/Advisories/31884/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-7"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/74bf1594-8493-11dd-bb64-0030843d3802.html"
+				}
+			],
+			"published": "2008-09-17T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-4096",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-4096"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.11.9.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

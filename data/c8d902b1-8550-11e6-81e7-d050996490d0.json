@@ -1,0 +1,119 @@
+{
+	"id": "c8d902b1-8550-11e6-81e7-d050996490d0",
+	"advisories": [
+		{
+			"id": "c8d902b1-8550-11e6-81e7-d050996490d0",
+			"title": "BIND -- Remote Denial of Service vulnerability",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01419\">\n\t  <p>Testing by ISC has uncovered a critical error condition\n\t    which can occur when a nameserver is constructing a\n\t    response.  A defect in the rendering of messages into\n\t    packets can cause named to exit with an assertion\n\t    failure in buffer.c while constructing a response\n\t    to a query that meets certain criteria.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://kb.isc.org/article/AA-01419"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:28.bind.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c8d902b1-8550-11e6-81e7-d050996490d0.html"
+				}
+			],
+			"published": "2016-09-28T00:00:00Z",
+			"modified": "2016-10-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2776",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2776"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.9P3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind910"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.10.4P3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind911"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.11.0.rc3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind9-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.12.0.a.2016.09.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.3_48",
+									"ge": "9.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

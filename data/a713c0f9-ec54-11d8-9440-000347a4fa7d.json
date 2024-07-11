@@ -1,0 +1,73 @@
+{
+	"id": "a713c0f9-ec54-11d8-9440-000347a4fa7d",
+	"advisories": [
+		{
+			"id": "a713c0f9-ec54-11d8-9440-000347a4fa7d",
+			"title": "ImageMagick png vulnerability fix",
+			"description": "\n\t<p>Glenn Randers-Pehrson has contributed a fix for the png\n\t  vulnerabilities discovered by Chris Evans.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://freshmeat.net/releases/169228"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/12236"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://studio.imagemagick.org/pipermail/magick-users/2004-August/013218.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.freebsd.org/ports/portaudit/f9e3e60b-e650-11d8-9b0a-000347a4fa7d.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a713c0f9-ec54-11d8-9440-000347a4fa7d.html"
+				}
+			],
+			"published": "2004-08-04T00:00:00Z",
+			"modified": "2004-08-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.4.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-nox11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.4.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

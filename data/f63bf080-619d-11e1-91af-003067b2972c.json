@@ -1,0 +1,111 @@
+{
+	"id": "f63bf080-619d-11e1-91af-003067b2972c",
+	"advisories": [
+		{
+			"id": "f63bf080-619d-11e1-91af-003067b2972c",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<blockquote cite=\"https://www.adobe.com/support/security/bulletins/apsb12-03.html\">\n\t  <p>These vulnerabilities could cause a crash and potentially allow\n\t    an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.adobe.com/support/security/bulletins/apsb12-03.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f63bf080-619d-11e1-91af-003067b2972c.html"
+				}
+			],
+			"published": "2012-02-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-0751",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0751"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0752",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0752"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0753",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0753"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0754",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0754"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0755",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0755"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0756",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0756"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-0767",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0767"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.1r102.62"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

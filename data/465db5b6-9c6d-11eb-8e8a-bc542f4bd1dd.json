@@ -1,0 +1,74 @@
+{
+	"id": "465db5b6-9c6d-11eb-8e8a-bc542f4bd1dd",
+	"advisories": [
+		{
+			"id": "465db5b6-9c6d-11eb-8e8a-bc542f4bd1dd",
+			"title": "xorg-server -- Input validation failures in X server XInput extension",
+			"description": "\n\t<p>X.Org server security reports for release 1.20.11:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg/2021-April/060678.html\">\n\t  <ul>\n\t    <li>Fix XChangeFeedbackControl() request underflow</li>\n\t  </ul>\n\t  <p>.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.freedesktop.org/xorg/xserver/-/tags/xorg-server-1.20.11"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/465db5b6-9c6d-11eb-8e8a-bc542f4bd1dd.html"
+				}
+			],
+			"published": "2021-04-13T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.11,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xwayland"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.11,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xwayland-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.20.0.877"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

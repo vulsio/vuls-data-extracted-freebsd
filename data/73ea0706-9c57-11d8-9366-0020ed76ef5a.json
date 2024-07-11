@@ -1,0 +1,57 @@
+{
+	"id": "73ea0706-9c57-11d8-9366-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "73ea0706-9c57-11d8-9366-0020ed76ef5a",
+			"title": "rsync path traversal issue",
+			"description": "\n\t<p>When running rsync in daemon mode, no checks were made\n\t  to prevent clients from writing outside of a module's\n\t`path' setting.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://rsync.samba.org/#security_apr04"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/73ea0706-9c57-11d8-9366-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-05-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0426",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0426"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rsync"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

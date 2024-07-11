@@ -1,0 +1,46 @@
+{
+	"id": "2b4d5288-447e-11d9-9ebb-000854d03344",
+	"advisories": [
+		{
+			"id": "2b4d5288-447e-11d9-9ebb-000854d03344",
+			"title": "rockdodger -- buffer overflows",
+			"description": "\n\t<p>The environment variable HOME is copied without regard\n\t  to buffer size, which can be used to gain elevated privilege\n\t  if the binary is installed setgid games, and a string is\n\t  read from the high score file without bounds check.</p>\n\t<p>The port installs the binary without setgid, but with a\n\t  world-writable high score file.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=278878"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2b4d5288-447e-11d9-9ebb-000854d03344.html"
+				}
+			],
+			"published": "2004-12-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rockdodger"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6_3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

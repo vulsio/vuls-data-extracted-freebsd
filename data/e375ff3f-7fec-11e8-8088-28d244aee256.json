@@ -1,0 +1,88 @@
+{
+	"id": "e375ff3f-7fec-11e8-8088-28d244aee256",
+	"advisories": [
+		{
+			"id": "e375ff3f-7fec-11e8-8088-28d244aee256",
+			"title": "expat -- multiple vulnerabilities",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9063\">\n\t  <p>An integer overflow during the parsing of XML using the Expat library.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9233\">\n\t  <p>XML External Entity vulnerability in libexpat 2.2.0 and earlier (Expat\n\t    XML Parser Library) allows attackers to put the parser in an infinite\n\t    loop using a malformed external entity definition from an external DTD.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9063"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9233"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://libexpat.github.io/doc/cve-2017-9233/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e375ff3f-7fec-11e8-8088-28d244aee256.html"
+				}
+			],
+			"published": "2018-07-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9063",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9063"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9233",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9233"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libwww"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

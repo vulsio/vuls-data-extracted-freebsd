@@ -1,0 +1,85 @@
+{
+	"id": "cecbc674-8b83-11ec-b369-6c3be5272acd",
+	"advisories": [
+		{
+			"id": "cecbc674-8b83-11ec-b369-6c3be5272acd",
+			"title": "Grafana -- XSS",
+			"description": "\n\t<p>Grafana Labs reports:</p>\n\t<blockquote cite=\"https://grafana.com/blog/2022/02/08/grafana-7.5.15-and-8.3.5-released-with-moderate-severity-security-fixes/\">\n\t  <p>On Jan. 16, an external security researcher, Jasu Viding contacted Grafana to disclose an XSS vulnerability in the way that Grafana handles data sources. Should an existing data source connected to Grafana be compromised, it could be used to inappropriately gain access to other data sources connected to the same Grafana org. We believe that this vulnerability is rated at CVSS 6.8 (CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://grafana.com/blog/2022/02/08/grafana-7.5.15-and-8.3.5-released-with-moderate-severity-security-fixes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cecbc674-8b83-11ec-b369-6c3be5272acd.html"
+				}
+			],
+			"published": "2022-02-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-21702",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-21702"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana6"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "6.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.5.15"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana8"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.3.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

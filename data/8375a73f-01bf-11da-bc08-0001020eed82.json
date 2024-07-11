@@ -1,0 +1,98 @@
+{
+	"id": "8375a73f-01bf-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "8375a73f-01bf-11da-bc08-0001020eed82",
+			"title": "gnupg -- OpenPGP symmetric encryption vulnerability",
+			"description": "\n\t<p>Serge Mister and Robert Zuccherato reports that the OpenPGP\n\t  protocol is vulnerable to a cryptographic attack when using\n\t  symmetric encryption in an automated way.</p>\n\t<p>David Shaw reports about the impact:</p>\n\t<blockquote cite=\"http://lists.gnupg.org/pipermail/gnupg-announce/2005q1/000191.html\">\n\t  <p>This attack, while very significant from a cryptographic\n\t    point of view, is not generally effective in the real\n\t    world.  To be specific, unless you have your OpenPGP\n\t    program set up as part of an automated system to accept\n\t    encrypted messages, decrypt them, and then provide a\n\t    response to the submitter, then this does not affect you\n\t    at all.</p>\n\t</blockquote>\n\t<p>Note that the <q>fix</q> in GnuPG does note completely\n\t  eliminate the potential problem:</p>\n\t<blockquote cite=\"http://lists.gnupg.org/pipermail/gnupg-announce/2005q1/000191.html\">\n\t  <p>These patches disable a portion of the OpenPGP protocol\n\t    that the attack is exploiting.  This change should not be\n\t    user visible.  With the patch in place, this attack will\n\t    not work using a public-key encrypted message.  It will\n\t    still work using a passphrase-encrypted message.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://eprint.iacr.org/2005/033"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.gnupg.org/pipermail/gnupg-announce/2005q1/000191.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pgp.com/newsroom/ctocorner/openpgp.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/303094"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8375a73f-01bf-11da-bc08-0001020eed82.html"
+				}
+			],
+			"published": "2005-07-31T00:00:00Z",
+			"modified": "2007-04-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0366",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0366"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnupg"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-Crypt-OpenPGP"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.03"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pgp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "3.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

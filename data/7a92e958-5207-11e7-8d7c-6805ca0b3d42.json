@@ -1,0 +1,124 @@
+{
+	"id": "7a92e958-5207-11e7-8d7c-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "7a92e958-5207-11e7-8d7c-6805ca0b3d42",
+			"title": "rt and dependent modules -- multiple security vulnerabilities",
+			"description": "\n\t<p>BestPractical reports:</p>\n\t<blockquote cite=\"http://lists.bestpractical.com/pipermail/rt-announce/2017-June/000297.html\">\n\t  <p>Please reference CVE/URL list for details</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.bestpractical.com/pipermail/rt-announce/2017-June/000297.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7a92e958-5207-11e7-8d7c-6805ca0b3d42.html"
+				}
+			],
+			"published": "2017-06-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7686"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6127",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6127"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5361",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5361"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5943",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5943"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5944",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5944"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rt42"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.13_1",
+									"ge": "4.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rt44"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.1_1",
+									"ge": "4.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-RT-Authen-ExternalAuth"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.27",
+									"ge": "0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

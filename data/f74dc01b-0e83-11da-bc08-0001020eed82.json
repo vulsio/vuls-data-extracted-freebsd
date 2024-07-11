@@ -1,0 +1,103 @@
+{
+	"id": "f74dc01b-0e83-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "f74dc01b-0e83-11da-bc08-0001020eed82",
+			"title": "acroread -- plug-in buffer overflow vulnerability",
+			"description": "\n\t<p>A Adobe Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/techdocs/321644.html\">\n\t  <p>The identified vulnerability is a buffer overflow within\n\t    a core application plug-in, which is part of Adobe Acrobat\n\t    and Adobe Reader. If a malicious file were opened it could\n\t    trigger a buffer overflow as the file is being loaded into\n\t    Adobe Acrobat and Adobe Reader. A buffer overflow can\n\t    cause the application to crash and increase the risk of\n\t    malicious code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/techdocs/321644.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f74dc01b-0e83-11da-bc08-0001020eed82.html"
+				}
+			],
+			"published": "2005-08-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2470",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2470"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "acroread"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.1"
+								},
+								{
+									"lt": "7.0.1,1",
+									"gt": "5.*,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "acroread4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "acroread5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "acroread7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,109 @@
+{
+	"id": "27d01223-c457-11dd-a721-0030843d3802",
+	"advisories": [
+		{
+			"id": "27d01223-c457-11dd-a721-0030843d3802",
+			"title": "php -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/32964/\">\n\t  <p>Some vulnerabilities have been reported in PHP, where some have an\n\t    unknown impact and others can potentially be exploited by malicious\n\t    people to cause a DoS (Denial of Service) or compromise a vulnerable\n\t    system.</p>\n\t  <p>An input validation error exists within the\n\t    \"ZipArchive::extractTo()\" function when extracting ZIP archives.\n\t    This can be exploited to extract files to arbitrary locations\n\t    outside the specified directory via directory traversal sequences in\n\t    a specially crafted ZIP archive.</p>\n\t  <p>An error in the included PCRE library can be exploited to cause a\n\t    buffer overflow.</p>\n\t  <p>The problem is that the \"BG(page_uid)\" and \"BG(page_gid)\" variables\n\t    are not initialized. No further information is currently\n\t    available.</p>\n\t  <p>The problem is that the \"php_value\" order is incorrect for Apache\n\t    configurations. No further information is currently available.</p>\n\t  <p>An error in the GD library can be exploited to cause a crash via a\n\t    specially crafted font file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/30916/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31409/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/32964/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/ChangeLog-5.php#5.2.7"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sektioneins.de/advisories/SE-2008-06.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/27d01223-c457-11dd-a721-0030843d3802.html"
+				}
+			],
+			"published": "2008-12-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-2371",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2371"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-2829",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2829"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-3658",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3658"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-3659",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3659"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-3660",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3660"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

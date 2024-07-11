@@ -1,0 +1,66 @@
+{
+	"id": "4faac805-6be0-11e9-a685-001b217b3468",
+	"advisories": [
+		{
+			"id": "4faac805-6be0-11e9-a685-001b217b3468",
+			"title": "Gitlab -- Information Disclosure",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2019/04/30/security-release-gitlab-11-dot-10-dot-3-released/\">\n\t  <p>Information Disclosure with Limited Scope Token</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/2019/04/30/security-release-gitlab-11-dot-10-dot-3-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4faac805-6be0-11e9-a685-001b217b3468.html"
+				}
+			],
+			"published": "2019-05-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-11605",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11605"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.10.3",
+									"ge": "11.10.0"
+								},
+								{
+									"lt": "11.9.11",
+									"ge": "11.9.0"
+								},
+								{
+									"lt": "11.8.10",
+									"ge": "11.8.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

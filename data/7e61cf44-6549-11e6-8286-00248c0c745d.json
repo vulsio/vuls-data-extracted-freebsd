@@ -1,0 +1,58 @@
+{
+	"id": "7e61cf44-6549-11e6-8286-00248c0c745d",
+	"advisories": [
+		{
+			"id": "7e61cf44-6549-11e6-8286-00248c0c745d",
+			"title": "Rails 4 -- Unsafe Query Generation Risk in Active Record",
+			"description": "\n\t<p>Ruby Security team reports:</p>\n\t<blockquote cite=\"https://groups.google.com/forum/#!topic/ruby-security-ann/WccgKSKiPZA\">\n\t  <p>There is a vulnerability when Active Record is used in conjunction with JSON\nparameter parsing. This vulnerability has been assigned the CVE identifier\nCVE-2016-6317.  This vulnerability is similar to CVE-2012-2660, CVE-2012-2694\nand CVE-2013-0155.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/forum/#!topic/ruby-security-ann/WccgKSKiPZA"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7e61cf44-6549-11e6-8286-00248c0c745d.html"
+				}
+			],
+			"published": "2016-08-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6317",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6317"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-activerecord4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.7.1",
+									"gt": "4.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

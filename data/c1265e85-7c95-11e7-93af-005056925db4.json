@@ -1,0 +1,65 @@
+{
+	"id": "c1265e85-7c95-11e7-93af-005056925db4",
+	"advisories": [
+		{
+			"id": "c1265e85-7c95-11e7-93af-005056925db4",
+			"title": "Axis2 -- Security vulnerability on dependency Apache Commons FileUpload",
+			"description": "\n\t<p>Apache Axis2 reports:</p>\n\t<blockquote cite=\"http://axis.apache.org/axis2/java/core/release-notes/1.7.6.html\">\n\t  <p>The commons-fileupload dependency has been updated to a version that fixes\n\t   CVE-2016-1000031 (AXIS2-5853).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://axis.apache.org/axis2/java/core/release-notes/1.7.6.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://issues.apache.org/jira/browse/AXIS2-5853"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://issues.apache.org/jira/browse/FILEUPLOAD-279"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c1265e85-7c95-11e7-93af-005056925db4.html"
+				}
+			],
+			"published": "2017-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1000031",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1000031"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "axis2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

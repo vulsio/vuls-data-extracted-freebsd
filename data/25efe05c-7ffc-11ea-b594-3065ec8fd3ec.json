@@ -1,0 +1,57 @@
+{
+	"id": "25efe05c-7ffc-11ea-b594-3065ec8fd3ec",
+	"advisories": [
+		{
+			"id": "25efe05c-7ffc-11ea-b594-3065ec8fd3ec",
+			"title": "chromium -- use after free",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"https://chromereleases.googleblog.com/2020/04/stable-channel-update-for-desktop_15.html\">\n\t  <p>[1067851] Critical CVE-2020-6457: Use after free in speech\n\t  recognizer. Reported by Leecraso and Guang Gong of Alpha Lab, Qihoo\n\t  360 on 2020-04-04</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2020/04/stable-channel-update-for-desktop_15.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/25efe05c-7ffc-11ea-b594-3065ec8fd3ec.html"
+				}
+			],
+			"published": "2020-04-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-6457",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-6457"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "81.0.4044.113"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

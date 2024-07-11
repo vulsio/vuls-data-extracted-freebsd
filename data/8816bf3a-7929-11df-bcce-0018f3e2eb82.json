@@ -1,0 +1,89 @@
+{
+	"id": "8816bf3a-7929-11df-bcce-0018f3e2eb82",
+	"advisories": [
+		{
+			"id": "8816bf3a-7929-11df-bcce-0018f3e2eb82",
+			"title": "tiff -- Multiple integer overflows",
+			"description": "\n\t<p>Tielei Wang:</p>\n\t<blockquote cite=\"http://www.ocert.org/advisories/ocert-2009-012.html\">\n\t  <p>Multiple integer overflows in inter-color spaces conversion\n\t    tools in libtiff 3.8 through 3.8.2, 3.9, and 4.0 allow\n\t    context-dependent attackers to execute arbitrary code via a\n\t    TIFF image with large (1) width and (2) height values, which\n\t    triggers a heap-based buffer overflow in the (a) cvt_whole_image\n\t    function in tiff2rgba and (b) tiffcvt function in rgb2ycbcr.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ocert.org/advisories/ocert-2009-012.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.remotesensing.org/libtiff/v3.9.4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8816bf3a-7929-11df-bcce-0018f3e2eb82.html"
+				}
+			],
+			"published": "2010-06-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-2347",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-2347"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.9.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.9.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.9.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

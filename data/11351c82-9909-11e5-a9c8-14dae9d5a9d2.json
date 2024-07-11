@@ -1,0 +1,66 @@
+{
+	"id": "11351c82-9909-11e5-a9c8-14dae9d5a9d2",
+	"advisories": [
+		{
+			"id": "11351c82-9909-11e5-a9c8-14dae9d5a9d2",
+			"title": "piwik -- multiple vulnerabilities",
+			"description": "\n\t<p>Piwik changelog reports:</p>\n\t<blockquote cite=\"http://piwik.org/changelog/piwik-2-15-0/\">\n\t  <p>This release is rated critical.\n\n\t   We are grateful for Security researchers who disclosed\n\t   security issues privately to the Piwik Security Response\n\t   team: Elamaran Venkatraman, Egidio Romano and Dmitriy\n\t   Shcherbatov. The following vulnerabilities were fixed:\n\t   XSS, CSRF, possible file inclusion in older PHP versions\n\t   (low impact), possible Object Injection Vulnerability\n\t   (low impact).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://piwik.org/changelog/piwik-2-15-0/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/11351c82-9909-11e5-a9c8-14dae9d5a9d2.html"
+				}
+			],
+			"published": "2015-12-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7815",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7815"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7816",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7816"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "piwik"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

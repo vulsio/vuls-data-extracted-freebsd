@@ -1,0 +1,65 @@
+{
+	"id": "143f6932-fedb-11e1-ad4a-003067b2972c",
+	"advisories": [
+		{
+			"id": "143f6932-fedb-11e1-ad4a-003067b2972c",
+			"title": "bacula -- Console ACL Bypass",
+			"description": "\n\t<blockquote cite=\"https://secunia.com/advisories/50535/\">\n\t  <p>A security issue has been reported in Bacula, which can be\n\t  exploited by malicious users to bypass certain security\n\t  restrictions.</p>\n\t  <p>The security issue is caused due to an error within the implementation\n\t  of console ACLs, which can be exploited to gain access to certain\n\t  restricted functionality and e.g. dump resources.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/projects/bacula/files/bacula/5.2.11/ReleaseNotes/view"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.bacula.org/git/cgit.cgi/bacula/commit/?id=67debcecd3d530c429e817e1d778e79dcd1db905"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://secunia.com/advisories/50535/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/143f6932-fedb-11e1-ad4a-003067b2972c.html"
+				}
+			],
+			"published": "2012-09-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-4430",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-4430"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bacula"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

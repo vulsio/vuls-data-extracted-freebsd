@@ -1,0 +1,46 @@
+{
+	"id": "d0da046a-81e6-11ed-96ca-0800277bb8a8",
+	"advisories": [
+		{
+			"id": "d0da046a-81e6-11ed-96ca-0800277bb8a8",
+			"title": "gitea -- multiple issues",
+			"description": "\n\t<p>The Gitea team reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/21849\">\n\t  <p>Do not allow Ghost access to limited visible user/org</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/pull/21580\">\n\t  <p>Fix package access for admins and inactive users</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.17.4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d0da046a-81e6-11ed-96ca-0800277bb8a8.html"
+				}
+			],
+			"published": "2022-12-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.17.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

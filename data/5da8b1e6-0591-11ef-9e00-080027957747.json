@@ -1,0 +1,66 @@
+{
+	"id": "5da8b1e6-0591-11ef-9e00-080027957747",
+	"advisories": [
+		{
+			"id": "5da8b1e6-0591-11ef-9e00-080027957747",
+			"title": "GLPI -- multiple vulnerabilities",
+			"description": "\n\t<p>GLPI team reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.15\">\n\t  <p>GLPI 10.0.15 Changelog</p>\n\t  <ul>\n\t    <li>[SECURITY - high] Authenticated SQL injection from map search (CVE-2024-31456)</li>\n\t    <li>[SECURITY - high] Account takeover via SQL Injection in saved searches feature (CVE-2024-29889)</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/releases/tag/10.0.15"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5da8b1e6-0591-11ef-9e00-080027957747.html"
+				}
+			],
+			"published": "2024-04-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-29889",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-29889"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-31456",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-31456"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "glpi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.15,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

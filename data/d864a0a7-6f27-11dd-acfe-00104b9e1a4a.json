@@ -1,0 +1,62 @@
+{
+	"id": "d864a0a7-6f27-11dd-acfe-00104b9e1a4a",
+	"advisories": [
+		{
+			"id": "d864a0a7-6f27-11dd-acfe-00104b9e1a4a",
+			"title": "gnutls -- \"gnutls_handshake()\" Denial of Service",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/31505/\">\n\t  <p>A vulnerability has been reported in GnuTLS, which can\n\t    potentially be exploited by malicious people to cause a DoS\n\t    (Denial of Service).</p>\n\t  <p>The vulnerability is caused due to a use-after-free error when an\n\t    application calls \"gnutls_handshake()\" for an already valid session\n\t    and can potentially be exploited, e.g. during re-handshakes.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/2947"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/31505/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d864a0a7-6f27-11dd-acfe-00104b9e1a4a.html"
+				}
+			],
+			"published": "2008-08-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-2377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2377"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.1",
+									"ge": "2.3.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

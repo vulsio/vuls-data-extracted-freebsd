@@ -1,0 +1,165 @@
+{
+	"id": "2a7bdc56-d7a3-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "2a7bdc56-d7a3-11e6-ae1b-002590263bf5",
+			"title": "flash -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb17-02.html\">\n\t  <p>These updates resolve a security bypass vulnerability that could\n\t    lead to information disclosure (CVE-2017-2938).</p>\n\t  <p>These updates resolve use-after-free vulnerabilities that could\n\t    lead to code execution (CVE-2017-2932, CVE-2017-2936,\n\t    CVE-2017-2937).</p>\n\t  <p>These updates resolve heap buffer overflow vulnerabilities that\n\t    could lead to code execution (CVE-2017-2927, CVE-2017-2933,\n\t    CVE-2017-2934, CVE-2017-2935).</p>\n\t  <p>These updates resolve memory corruption vulnerabilities that could\n\t    lead to code execution (CVE-2017-2925, CVE-2017-2926, CVE-2017-2928,\n\t    CVE-2017-2930, CVE-2017-2931).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb17-02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a7bdc56-d7a3-11e6-ae1b-002590263bf5.html"
+				}
+			],
+			"published": "2017-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-2925",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2925"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2926",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2926"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2927",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2927"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2928",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2928"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2930",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2930"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2931",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2931"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2932",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2932"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2933",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2933"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2934",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2934"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2935",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2935"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2936",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2936"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2937",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2937"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-2938",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-2938"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.0.0.194"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

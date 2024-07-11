@@ -1,0 +1,66 @@
+{
+	"id": "e3e788aa-e9fd-11e2-a96e-60a44c524f57",
+	"advisories": [
+		{
+			"id": "e3e788aa-e9fd-11e2-a96e-60a44c524f57",
+			"title": "otrs -- Sql Injection + Xss Issue",
+			"description": "\n\t<p>The OTRS Project reports:</p>\n\t<blockquote cite=\"http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-05/\">\n\t  <p>An attacker with a valid agent login could manipulate URLs leading to SQL injection. An attacker with a valid agent login could manipulate URLs in the ITSM ConfigItem search, leading to a JavaScript code injection (XSS) problem.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-05/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e3e788aa-e9fd-11e2-a96e-60a44c524f57.html"
+				}
+			],
+			"published": "2013-07-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4717",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4717"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-4718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4718"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "otrs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

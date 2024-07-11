@@ -1,0 +1,50 @@
+{
+	"id": "e92d8f6b-a1c0-11db-9ddc-0011098b2f36",
+	"advisories": [
+		{
+			"id": "e92d8f6b-a1c0-11db-9ddc-0011098b2f36",
+			"title": "sircd -- remote operator privilege escalation vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/10274/\">\n\t <p>A vulnerability has been reported in sircd, which can be\n\t   exploited by malicious users to gain operator privileges.\n\t   The problem is that any user reportedly can set their usermode\n\t   to operator.  The vulnerability has been reported in\n\t   versions 0.5.2 and 0.5.3. Other versions may also be affected.</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/10274/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9097"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e92d8f6b-a1c0-11db-9ddc-0011098b2f36.html"
+				}
+			],
+			"published": "2007-01-15T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sircd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

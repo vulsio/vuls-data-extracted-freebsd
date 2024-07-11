@@ -1,0 +1,50 @@
+{
+	"id": "98dd7788-3d13-11dc-b3d3-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "98dd7788-3d13-11dc-b3d3-0016179b2dd5",
+			"title": "drupal -- Cross site request forgeries",
+			"description": "\n\t<p>The Drupal Project reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/162360\">\n\t  <p>Several parts in Drupal core are not protected against cross\n\t    site request forgeries due to inproper use of the Forms API,\n\t    or by taking action solely on GET requests. Malicious users are\n\t    able to delete comments and content revisions and disable menu\n\t    items by enticing a privileged users to visit certain URLs while\n\t    the victim is logged-in to the targeted site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://drupal.org/node/162360"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/26224/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/98dd7788-3d13-11dc-b3d3-0016179b2dd5.html"
+				}
+			],
+			"published": "2007-07-28T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

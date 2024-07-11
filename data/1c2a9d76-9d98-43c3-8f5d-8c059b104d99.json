@@ -1,0 +1,60 @@
+{
+	"id": "1c2a9d76-9d98-43c3-8f5d-8c059b104d99",
+	"advisories": [
+		{
+			"id": "1c2a9d76-9d98-43c3-8f5d-8c059b104d99",
+			"title": "jenkins -- multiple issues",
+			"description": "\n\t<p>Jenkins developers report:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/99574\">\n\t  <p>Jenkins stores metadata related to people, which encompasses actual user accounts, as well as users appearing in SCM, in directories corresponding to the user ID on disk. These directories used the user ID for their name without additional escaping. This potentially resulted in a number of problems.</p>\n\t  <p>Autocompletion suggestions for text fields were not escaped, resulting in a persisted cross-site scripting vulnerability if the source for the suggestions allowed specifying text that includes HTML metacharacters like less-than and greater-than characters.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://jenkins.io/security/advisory/2017-11-08/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1c2a9d76-9d98-43c3-8f5d-8c059b104d99.html"
+				}
+			],
+			"published": "2017-11-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.89"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins-lts"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.73.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

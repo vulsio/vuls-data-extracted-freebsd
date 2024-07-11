@@ -1,0 +1,50 @@
+{
+	"id": "c67069dc-0986-11e5-bb90-002590263bf5",
+	"advisories": [
+		{
+			"id": "c67069dc-0986-11e5-bb90-002590263bf5",
+			"title": "testdisk -- buffer overflow with malicious disk image",
+			"description": "\n\t<p>CGSecurity TestDisk Changelog reports:</p>\n\t<blockquote cite=\"http://www.cgsecurity.org/wiki/TestDisk_7.0_Release\">\n\t  <p>Various fix including security fix, thanks to:</p>\n\t  <ul>\n\t    <li><p>Coverity scan (Static Analysis of source code)</p></li>\n\t    <li><p>afl-fuzz (security-oriented fuzzer).</p></li>\n\t    <li><p>Denis Andzakovic from Security Assessment for reporting an\n\t       exploitable Stack Buffer Overflow.</p></li>\n\t  </ul>\n\t</blockquote>\n\t<p>Denis Andzakovic reports:</p>\n\t<blockquote cite=\"http://www.security-assessment.com/files/documents/advisory/Testdisk%20Check_OS2MB%20Stack%20Buffer%20Overflow%20-%20Release.pdf\">\n\t  <p>A buffer overflow is triggered within the software when a malicious\n\t    disk image is attempted to be recovered. This may be leveraged by an\n\t    attacker to crash TestDisk and gain control of program execution. An\n\t    attacker would have to coerce the victim to run TestDisk against\n\t    their malicious image.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cgsecurity.org/wiki/TestDisk_7.0_Release"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.security-assessment.com/files/documents/advisory/Testdisk%20Check_OS2MB%20Stack%20Buffer%20Overflow%20-%20Release.pdf"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c67069dc-0986-11e5-bb90-002590263bf5.html"
+				}
+			],
+			"published": "2015-06-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "testdisk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

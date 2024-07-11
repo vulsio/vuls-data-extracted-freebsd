@@ -1,0 +1,61 @@
+{
+	"id": "b2571f88-a867-11dc-a6f0-00a0cce0781e",
+	"advisories": [
+		{
+			"id": "b2571f88-a867-11dc-a6f0-00a0cce0781e",
+			"title": "smbftpd -- format string vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/27014/\">\n\t  <p>Format string vulnerability in the SMBDirList function in dirlist.c\n\t    in SmbFTPD 0.96 allows remote attackers to execute arbitrary code\n\t    via format string specifiers in a directory name.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/27014/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=543077"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b2571f88-a867-11dc-a6f0-00a0cce0781e.html"
+				}
+			],
+			"published": "2007-12-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-5184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5184"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "smbftpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.96"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,61 @@
+{
+	"id": "bfbbd505-3bd6-409c-8c67-445d3635cf4b",
+	"advisories": [
+		{
+			"id": "bfbbd505-3bd6-409c-8c67-445d3635cf4b",
+			"title": "xli -- integer overflows in image size calculations",
+			"description": "\n\t<p>Tavis Ormandy discovered several integer overflows in xli's\n\t  image size handling.\tA maliciously crafted image may be able\n\t  to cause a heap buffer overflow and execute arbitrary code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.gentoo.org/show_bug.cgi?id=79762"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://pantransit.reptiles.org/prog/xli/CHANGES"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bfbbd505-3bd6-409c-8c67-445d3635cf4b.html"
+				}
+			],
+			"published": "2005-06-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0639",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0639"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xli"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.17.0_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

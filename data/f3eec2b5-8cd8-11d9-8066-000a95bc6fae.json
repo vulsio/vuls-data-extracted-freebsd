@@ -1,0 +1,74 @@
+{
+	"id": "f3eec2b5-8cd8-11d9-8066-000a95bc6fae",
+	"advisories": [
+		{
+			"id": "f3eec2b5-8cd8-11d9-8066-000a95bc6fae",
+			"title": "postnuke -- SQL injection vulnerabilities",
+			"description": "\n\t<p>Two separate SQL injection vulnerabilities have been\n\t   identified in the PostNuke PHP content management\n\t   system. An attacker can use this vulnerability to\n\t   potentially insert executable PHP code into the content\n\t   management system (to view all files within the PHP scope,\n\t   for instance). Various other SQL injection vulnerabilities\n\t   exist, which give attackers the ability to run SQL queries\n\t   on any tables within the database.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110962710805864"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110962819232255"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://news.postnuke.com/Article2669.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f3eec2b5-8cd8-11d9-8066-000a95bc6fae.html"
+				}
+			],
+			"published": "2005-03-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0615",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0615"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0617",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0617"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postnuke"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.760"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

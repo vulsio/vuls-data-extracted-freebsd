@@ -1,0 +1,122 @@
+{
+	"id": "b692a49c-9ae7-4958-af21-cbf8f5b819ea",
+	"advisories": [
+		{
+			"id": "b692a49c-9ae7-4958-af21-cbf8f5b819ea",
+			"title": "py-impacket -- multiple path traversal vulnerabilities",
+			"description": "\n    <p>asolino reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/PYSEC-2021-17\">\n      <p>Multiple path traversal vulnerabilities exist in smbserver.py in Impacket through 0.9.22. An attacker that connects to a running smbserver instance can list and write to arbitrary files via ../ directory traversal. This could potentially be abused to achieve arbitrary code execution by replacing /etc/shadow or an SSH authorized key.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/GHSA-mj63-64x7-57xf"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://osv.dev/vulnerability/PYSEC-2021-17"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b692a49c-9ae7-4958-af21-cbf8f5b819ea.html"
+				}
+			],
+			"published": "2023-04-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-31800",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-31800"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-impacket"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.23",
+									"ge": "0.9.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-impacket"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.23",
+									"ge": "0.9.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-impacket"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.23",
+									"ge": "0.9.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-impacket"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.23",
+									"ge": "0.9.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-impacket"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.23",
+									"ge": "0.9.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

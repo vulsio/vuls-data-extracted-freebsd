@@ -1,0 +1,117 @@
+{
+	"id": "27aa2253-4c72-11ec-b6b9-e86a64caca56",
+	"advisories": [
+		{
+			"id": "27aa2253-4c72-11ec-b6b9-e86a64caca56",
+			"title": "py-matrix-synapse -- several vulnerabilities",
+			"description": "\n\t<p>Matrix developers report:</p>\n\t<blockquote cite=\"https://matrix.org/blog/2021/11/23/synapse-1-47-1-released\">\n\t    <p>This release patches one high severity issue affecting\n    Synapse installations 1.47.0 and earlier using the media repository.\n    An attacker could cause these Synapses to download a remote file\n    and store it in a directory outside the media repository.</p>\n      <p>Note that:</p>\n    <ul>\n      <li>This only affects homeservers using Synapse's built-in media\n      repository, as opposed to synapse-s3-storage-provider or\n      matrix-media-repo.</li>\n      <li>Attackers cannot control the exact name or destination of the\n      stored file.</li>\n    </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259994"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://matrix.org/blog/2021/11/23/synapse-1-47-1-released"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/27aa2253-4c72-11ec-b6b9-e86a64caca56.html"
+				}
+			],
+			"published": "2021-11-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-41281",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41281"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py36-matrix-synapse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.47.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-matrix-synapse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.47.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-matrix-synapse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.47.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-matrix-synapse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.47.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-matrix-synapse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.47.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

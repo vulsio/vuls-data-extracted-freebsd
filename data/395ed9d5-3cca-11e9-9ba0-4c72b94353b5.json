@@ -1,0 +1,47 @@
+{
+	"id": "395ed9d5-3cca-11e9-9ba0-4c72b94353b5",
+	"advisories": [
+		{
+			"id": "395ed9d5-3cca-11e9-9ba0-4c72b94353b5",
+			"title": "mybb -- vulnerabilities",
+			"description": "\n\t<p>mybb Team reports:</p>\n\t<blockquote cite=\"https://blog.mybb.com/2019/02/27/mybb-1-8-20-released-security-maintenance-release/\">\n\t    <p>Medium risk: Reset Password reflected XSS</p>\n\t    <p>Medium risk: ModCP Profile Editor username reflected XSS</p>\n\t    <p>Low risk: Predictable CSRF token for guest users</p>\n\t    <p>Low risk: ACP Stylesheet Properties XSS</p>\n\t    <p>Low risk: Reset Password username enumeration via email</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.mybb.com/2019/02/27/mybb-1-8-20-released-security-maintenance-release/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/395ed9d5-3cca-11e9-9ba0-4c72b94353b5.html"
+				}
+			],
+			"published": "2019-03-02T00:00:00Z",
+			"modified": "2019-03-04T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mybb"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.20_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

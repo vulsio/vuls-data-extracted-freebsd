@@ -1,0 +1,82 @@
+{
+	"id": "cff0b2e2-0716-11eb-9e5d-08002728f74c",
+	"advisories": [
+		{
+			"id": "cff0b2e2-0716-11eb-9e5d-08002728f74c",
+			"title": "libexif -- multiple vulnerabilities",
+			"description": "\n\t<p>Release notes:</p>\n\t<blockquote cite=\"https://github.com/libexif/libexif/blob/master/NEWS\">\n\t  <p>Lots of fixes exposed by fuzzers like AFL, ClusterFuzz, OSSFuzz and others:</p>\n\t  <p>CVE-2016-6328: fixed integer overflow when parsing maker notes</p>\n\t  <p>CVE-2017-7544: fixed buffer overread</p>\n\t  <p>CVE-2018-20030: Fix for recursion DoS</p>\n\t  <p>CVE-2019-9278: replaced integer overflow checks the compiler could optimize away by safer constructs</p>\n\t  <p>CVE-2020-0093: read overflow</p>\n\t  <p>CVE-2020-12767: fixed division by zero </p>\n\t  <p>CVE-2020-13112: Various buffer overread fixes due to integer overflows in maker notes</p>\n\t  <p>CVE-2020-13113: Potential use of uninitialized memory </p>\n\t  <p>CVE-2020-13114: Time consumption DoS when parsing canon array markers</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2016-6328"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2017-7544"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2018-20030"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2019-9278"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2020-0093"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2020-12767"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2020-13112"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2020-13113"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "CVE-2020-13114"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libexif/libexif/blob/master/NEWS"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cff0b2e2-0716-11eb-9e5d-08002728f74c.html"
+				}
+			],
+			"published": "2020-10-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libexif"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.22"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

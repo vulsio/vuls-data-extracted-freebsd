@@ -1,0 +1,226 @@
+{
+	"id": "7274e0cc-575f-41bc-8619-14a41b3c2ad0",
+	"advisories": [
+		{
+			"id": "7274e0cc-575f-41bc-8619-14a41b3c2ad0",
+			"title": "xorg-server -- multiple vulnerabilities",
+			"description": "\n\t<p>Adam Jackson reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2017-October/002814.html\">\n\t  <p>One regression fix since 1.19.4 (mea culpa), and fixes for\n\t    CVEs 2017-12176 through 2017-12187.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.x.org/archives/xorg-announce/2017-October/002814.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7274e0cc-575f-41bc-8619-14a41b3c2ad0.html"
+				}
+			],
+			"published": "2017-10-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-12176",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12176"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12177",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12177"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12178",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12178"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12179",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12179"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12180",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12181",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12181"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12182",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12182"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12183",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12183"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12184"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12185",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12185"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12186",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12186"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12187",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12187"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xephyr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.18.4_5,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-dmx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.18.4_5,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-nestserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.19.1_2,2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.18.4_5,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-vfbserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.19.1_2,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xwayland"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.19.1_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

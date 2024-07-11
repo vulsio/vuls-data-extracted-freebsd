@@ -1,0 +1,71 @@
+{
+	"id": "79c68ef7-c8ae-4ade-91b4-4b8221b7c72a",
+	"advisories": [
+		{
+			"id": "79c68ef7-c8ae-4ade-91b4-4b8221b7c72a",
+			"title": "firefox -- Cross-origin restriction bypass using Fetch",
+			"description": "\n\t<p>Firefox Developers report:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2015-115/\">\n\t  <p>Security researcher Abdulrahman Alqabandi reported that the fetch()\n\t    API did not correctly implement the Cross-Origin Resource Sharing\n\t    (CORS) specification, allowing a malicious page to access private\n\t    data from other origins. Mozilla developer Ben Kelly independently reported the\n\t    same issue.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2015-115/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/79c68ef7-c8ae-4ade-91b4-4b8221b7c72a.html"
+				}
+			],
+			"published": "2015-10-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7184"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "41.0.2,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "41.0.2,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

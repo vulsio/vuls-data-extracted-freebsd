@@ -1,0 +1,220 @@
+{
+	"id": "6a806960-3016-44ed-8575-8614a7cb57c7",
+	"advisories": [
+		{
+			"id": "6a806960-3016-44ed-8575-8614a7cb57c7",
+			"title": "rails -- multiple vulnerabilities",
+			"description": "\n\t<p>Rails weblog:</p>\n\t<blockquote cite=\"http://weblog.rubyonrails.org/2013/12/3/Rails_3_2_16_and_4_0_2_have_been_released/\">\n\t  <p>Rails 3.2.16 and 4.0.2 have been released! These two\n\t    releases contain important security fixes, so please upgrade\n\t    as soon as possible! In order to make upgrading as smooth as\n\t    possible, we've only included commits directly related to\n\t    each security issue.</p>\n\t  <p>The security fixes in 3.2.16 are:</p>\n\t  <ul>\n\t    <li>CVE-2013-4491</li>\n\t    <li>CVE-2013-6414</li>\n\t    <li>CVE-2013-6415</li>\n\t    <li>CVE-2013-6417</li>\n\t  </ul>\n\t  <p>The security fixes in 4.0.2 are:</p>\n\t  <ul>\n\t    <li>CVE-2013-4491</li>\n\t    <li>CVE-2013-6414</li>\n\t    <li>CVE-2013-6415</li>\n\t    <li>CVE-2013-6416</li>\n\t    <li>CVE-2013-6417</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://weblog.rubyonrails.org/2013/12/3/Rails_3_2_16_and_4_0_2_have_been_released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6a806960-3016-44ed-8575-8614a7cb57c7.html"
+				}
+			],
+			"published": "2013-12-08T00:00:00Z",
+			"modified": "2014-04-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4491",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4491"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-6414",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6414"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-6415",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6415"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-6416",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6416"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-6417",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6417"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionmailer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionpack"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-activemodel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-activerecord"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-activeresource"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-activesupport"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rails"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-railties"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-actionpack4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-activesupport4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

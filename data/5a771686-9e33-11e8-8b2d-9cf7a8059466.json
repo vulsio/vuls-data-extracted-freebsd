@@ -1,0 +1,75 @@
+{
+	"id": "5a771686-9e33-11e8-8b2d-9cf7a8059466",
+	"advisories": [
+		{
+			"id": "5a771686-9e33-11e8-8b2d-9cf7a8059466",
+			"title": "chicken -- multiple vulnerabilities",
+			"description": "\n\t<p>CHICKEN reports:</p>\n\t<blockquote cite=\"https://code.call-cc.org/releases/4.13.0/NEWS\">\n\t  <ul>\n\t    <li>CVE-2017-6949: Unchecked malloc() call in SRFI-4\n\t    constructors when allocating in non-GC memory, resulting\n\t    in potential 1-word buffer overrun and/or segfault</li>\n\t    <li>CVE-2017-9334: \"length\" crashes on improper lists</li>\n\t    <li>CVE-2017-11343: The randomization factor of the symbol\n\t    table was set before the random seed was set, causing it\n\t    to have a fixed value on many platforms</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://code.call-cc.org/releases/4.13.0/NEWS"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5a771686-9e33-11e8-8b2d-9cf7a8059466.html"
+				}
+			],
+			"published": "2018-08-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-11343",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-11343"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6949",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-6949"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-9334",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9334"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chicken"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.13.0,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

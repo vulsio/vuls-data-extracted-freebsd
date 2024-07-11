@@ -1,0 +1,103 @@
+{
+	"id": "3fa2b372-a9f5-11d9-a788-0001020eed82",
+	"advisories": [
+		{
+			"id": "3fa2b372-a9f5-11d9-a788-0001020eed82",
+			"title": "gaim -- remote DoS on receiving malformed HTML",
+			"description": "\n\t<p>The GAIM team reports:</p>\n\t<blockquote cite=\"http://gaim.sourceforge.net/security/?id=13\">\n\t  <p>The gaim_markup_strip_html function in Gaim 1.2.0, and\n\t    possibly earlier versions, allows remote attackers to\n\t    cause a denial of service (application crash) via a string\n\t    that contains malformed HTML, which causes an\n\t    out-of-bounds read.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=13"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12999"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3fa2b372-a9f5-11d9-a788-0001020eed82.html"
+				}
+			],
+			"published": "2005-04-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0965",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0965"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ko-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

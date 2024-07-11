@@ -1,0 +1,101 @@
+{
+	"id": "b31a1088-460f-11de-a11a-0022156e8794",
+	"advisories": [
+		{
+			"id": "b31a1088-460f-11de-a11a-0022156e8794",
+			"title": "GnuTLS -- multiple vulnerabilities",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/34783/discuss\">\n\t  <p>GnuTLS is prone to multiple remote vulnerabilities:</p>\n\t    <ul>\n\t    <li>A remote code-execution vulnerability.</li>\n\t    <li>A denial-of-service vulnerability.</li>\n\t    <li>A signature-generation vulnerability.</li>\n\t    <li>A signature-verification vulnerability.</li>\n\t    </ul>\n\t  <p>An attacker can exploit these issues to potentially execute\n\t    arbitrary code, trigger denial-of-service conditions, carry\n\t    out attacks against data signed with weak signatures, and\n\t    cause clients to accept expired or invalid certificates from\n\t    servers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/3515"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/3516"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/3517"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/34783"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b31a1088-460f-11de-a11a-0022156e8794.html"
+				}
+			],
+			"published": "2009-08-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-1415",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1415"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1416",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1416"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1417",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1417"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,58 @@
+{
+	"id": "cc4ce06b-e01c-11d9-a8bd-000cf18bbe54",
+	"advisories": [
+		{
+			"id": "cc4ce06b-e01c-11d9-a8bd-000cf18bbe54",
+			"title": "p5-Mail-SpamAssassin -- denial of service vulnerability",
+			"description": "\n\t<p>Apache SpamAssassin Security Team reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/spamassassin-announce/200506.mbox/%3c17072.35054.586017.822288@proton.pathname.com%3e\">\n\t  <p>Apache SpamAssassin 3.0.4 was recently released, and\n\t    fixes a denial of service vulnerability in versions 3.0.1, 3.0.2,\n\t    and 3.0.3.\tThe vulnerability allows certain misformatted\n\t    long message headers to cause spam checking to\n\t    take a very long time.</p>\n\t  <p>While the exploit has yet to be seen in the wild,\n\t    we are concerned that there may be attempts to abuse\n\t    the vulnerability in the future.  Therefore, we strongly\n\t    recommend all users of these versions upgrade to\n\t    Apache SpamAssassin 3.0.4 as soon as possible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mail-archives.apache.org/mod_mbox/spamassassin-announce/200506.mbox/%3c17072.35054.586017.822288@proton.pathname.com%3e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cc4ce06b-e01c-11d9-a8bd-000cf18bbe54.html"
+				}
+			],
+			"published": "2005-06-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1266",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1266"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-Mail-SpamAssassin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.4",
+									"ge": "3.0.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

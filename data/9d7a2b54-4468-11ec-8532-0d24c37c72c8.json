@@ -1,0 +1,144 @@
+{
+	"id": "9d7a2b54-4468-11ec-8532-0d24c37c72c8",
+	"advisories": [
+		{
+			"id": "9d7a2b54-4468-11ec-8532-0d24c37c72c8",
+			"title": "mailman -- 2.1.37 fixes XSS via user options, and moderator offline brute-force vuln against list admin password",
+			"description": "\n\t<p>Mark Sapiro reports:</p>\n\t<blockquote cite=\"https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1879/NEWS#L8\">\n\t  <p>A potential XSS attack via the user options page has been reported by\n\t    Harsh Jaiswal.  This is fixed.  CVE-2021-43331 (LP: #1949401).</p>\n\t  <p>A potential for for a list moderator to carry out an off-line brute force\n\t    attack to obtain the list admin password has been reported by Andre\n\t    Protas, Richard Cloke and Andy Nuttall of Apple.  This is fixed.\n\t    CVE-2021-43332 (LP: #1949403)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1879/NEWS#L8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.launchpad.net/mailman/+bug/1949401"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.launchpad.net/mailman/+bug/1949403"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9d7a2b54-4468-11ec-8532-0d24c37c72c8.html"
+				}
+			],
+			"published": "2021-11-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-43331",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-43331"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-43332",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-43332"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.37"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-exim4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.37"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-exim4-with-htdig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.37"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-postfix"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.37"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-postfix-with-htdig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.37"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-with-htdig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.37"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

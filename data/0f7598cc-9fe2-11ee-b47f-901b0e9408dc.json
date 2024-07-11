@@ -1,0 +1,65 @@
+{
+	"id": "0f7598cc-9fe2-11ee-b47f-901b0e9408dc",
+	"advisories": [
+		{
+			"id": "0f7598cc-9fe2-11ee-b47f-901b0e9408dc",
+			"title": "nebula -- security fix for terrapin vulnerability",
+			"description": "\n\t<p>Upstream reports:</p>\n\t<blockquote cite=\"https://github.com/slackhq/nebula/releases/tag/v1.8.1\">\n\t  <p>Security fix:</p>\n\t  <ul>\n\t    <li>Update golang.org/x/crypto, which includes a fix for CVE-2023-48795.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/crypto/commit/9d2ee975ef9fe627bf0a6f01c1f69e8ef1d4f05d"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://terrapin-attack.com/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssh.com/txt/release-9.6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0f7598cc-9fe2-11ee-b47f-901b0e9408dc.html"
+				}
+			],
+			"published": "2023-12-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-48795",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-48795"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nebula"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

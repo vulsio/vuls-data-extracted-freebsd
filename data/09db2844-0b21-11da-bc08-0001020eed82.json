@@ -1,0 +1,99 @@
+{
+	"id": "09db2844-0b21-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "09db2844-0b21-11da-bc08-0001020eed82",
+			"title": "gaim -- AIM/ICQ non-UTF-8 filename crash",
+			"description": "\n\t<p>The GAIM team reports:</p>\n\t<blockquote cite=\"http://gaim.sourceforge.net/security/?id=21\">\n\t  <p>A remote user could cause Gaim to crash on some systems\n\t    by sending the Gaim user a file whose filename contains\n\t    certain invalid characters. It is unknown what combination\n\t    of systems are affected, but it is suspected that Windows\n\t    users and systems with older versions of GTK+ are\n\t    especially susceptible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gaim.sourceforge.net/security/?id=21"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/09db2844-0b21-11da-bc08-0001020eed82.html"
+				}
+			],
+			"published": "2005-08-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2102",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2102"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ko-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-gaim"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

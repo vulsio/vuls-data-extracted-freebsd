@@ -1,0 +1,62 @@
+{
+	"id": "60f8fe7b-3cfb-11da-baa2-0004614cc33d",
+	"advisories": [
+		{
+			"id": "60f8fe7b-3cfb-11da-baa2-0004614cc33d",
+			"title": "WebCalendar -- remote file inclusion vulnerability",
+			"description": "\n\t<p>WebCalendar is proven vulnerable to a remote file inclusion\n\t  vulnerability.  The send_reminders.php does not properly\n\t  verify the \"includedir\" parameter, giving remote attackers\n\t  the possibility to include local and remote files.  These\n\t  files can be used by the attacker to gain access to the\n\t  system.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/forum/forum.php?thread_id=1342085&forum_id=11587"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14651"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/60f8fe7b-3cfb-11da-baa2-0004614cc33d.html"
+				}
+			],
+			"published": "2005-10-15T00:00:00Z",
+			"modified": "2005-11-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2717",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2717"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "WebCalendar"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,111 @@
+{
+	"id": "b464f61b-84c7-4e1c-8ad4-6cf9efffd025",
+	"advisories": [
+		{
+			"id": "b464f61b-84c7-4e1c-8ad4-6cf9efffd025",
+			"title": "clamav -- multiple vulnerabilities",
+			"description": "\n\t<p>ClamAV project reports:</p>\n\t<blockquote cite=\"http://blog.clamav.net/2018/01/clamav-0993-has-been-released.html\">\n\t  <p>Join us as we welcome ClamAV 0.99.3 to the family!.</p>\n\t  <p>This release is a security release and is recommended for\n\t    all ClamAV users.</p>\n\t  <p>CVE-2017-12374 ClamAV UAF (use-after-free) Vulnerabilities</p>\n\t  <p>CVE-2017-12375 ClamAV Buffer Overflow Vulnerability</p>\n\t  <p>CVE-2017-12376 ClamAV Buffer Overflow in handle_pdfname\n\t    Vulnerability</p>\n\t  <p>CVE-2017-12377 ClamAV Mew Packet Heap Overflow Vulnerability</p>\n\t  <p>CVE-2017-12378 ClamAV Buffer Over Read Vulnerability</p>\n\t  <p>CVE-2017-12379 ClamAV Buffer Overflow in messageAddArgument\n\t    Vulnerability</p>\n\t  <p>CVE-2017-12380 ClamAV Null Dereference Vulnerability</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.clamav.net/2018/01/clamav-0993-has-been-released.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b464f61b-84c7-4e1c-8ad4-6cf9efffd025.html"
+				}
+			],
+			"published": "2018-01-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-12374",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12374"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12375",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12375"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12376"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12377"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12378",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12378"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12379"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12380",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12380"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

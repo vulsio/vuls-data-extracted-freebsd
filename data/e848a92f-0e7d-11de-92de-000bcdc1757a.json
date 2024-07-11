@@ -1,0 +1,62 @@
+{
+	"id": "e848a92f-0e7d-11de-92de-000bcdc1757a",
+	"advisories": [
+		{
+			"id": "e848a92f-0e7d-11de-92de-000bcdc1757a",
+			"title": "epiphany -- untrusted search path vulnerability",
+			"description": "\n\t<p>CVE Mitre reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5985\">\n\t  <p>Untrusted search path vulnerability in the Python interface in\n\t    Epiphany 2.22.3, and possibly other versions, allows local users to\n\t    execute arbitrary code via a Trojan horse Python file in the current\n\t    working directory, related to a vulnerability in the PySys_SetArgv\n\t    function (CVE-2008-5983).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e848a92f-0e7d-11de-92de-000bcdc1757a.html"
+				}
+			],
+			"published": "2009-03-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5983",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5983"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-5985",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5985"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "epiphany"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.24.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

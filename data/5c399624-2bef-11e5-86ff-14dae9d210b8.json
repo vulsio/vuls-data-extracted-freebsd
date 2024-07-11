@@ -1,0 +1,102 @@
+{
+	"id": "5c399624-2bef-11e5-86ff-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "5c399624-2bef-11e5-86ff-14dae9d210b8",
+			"title": "zenphoto -- multiple vulnerabilities",
+			"description": "\n\t<p>zenphoto reports:</p>\n\t<blockquote cite=\"http://www.zenphoto.org/news/zenphoto-1.4.9\">\n\t  <p>Fixes several SQL Injection, XSS and path traversal\n\t    security issues</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2015/q3/123"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.zenphoto.org/news/zenphoto-1.4.9"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/zenphoto/zenphoto/pull/935"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5c399624-2bef-11e5-86ff-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-07-16T00:00:00Z",
+			"modified": "2015-07-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5591",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5591"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5592",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5592"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5593",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5593"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5594",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5594"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-5595",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5595"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zenphoto"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

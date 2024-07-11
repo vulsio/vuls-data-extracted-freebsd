@@ -1,0 +1,50 @@
+{
+	"id": "92a6efd0-e40d-11e8-ada4-408d5cf35399",
+	"advisories": [
+		{
+			"id": "92a6efd0-e40d-11e8-ada4-408d5cf35399",
+			"title": "lighttpd - use-after-free vulnerabilities",
+			"description": "\n\t<p>Lighttpd Project reports:</p>\n\t<blockquote cite=\"https://www.lighttpd.net/2018/10/14/1.4.51/\">\n\t  <p>Security fixes for Lighttpd:</p>\n\t  <ul>\n\t    <li><p>security: process headers after combining folded headers</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=232278"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.lighttpd.net/2018/10/14/1.4.51/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/92a6efd0-e40d-11e8-ada4-408d5cf35399.html"
+				}
+			],
+			"published": "2018-11-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.51"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

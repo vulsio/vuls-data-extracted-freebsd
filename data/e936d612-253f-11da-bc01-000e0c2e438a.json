@@ -1,0 +1,58 @@
+{
+	"id": "e936d612-253f-11da-bc01-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "e936d612-253f-11da-bc01-000e0c2e438a",
+			"title": "apache -- Certificate Revocation List (CRL) off-by-one vulnerability",
+			"description": "\n\t<p>Marc Stern reports an off-by-one vulnerability in within\n\t  mod_ssl.  The vulnerability lies in mod_ssl's Certificate\n\t  Revocation List (CRL).  If Apache is configured to use a\n\t  CRL this could allow an attacker to crash a child process\n\t  causing a Denial of Service.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14366"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e936d612-253f-11da-bc01-000e0c2e438a.html"
+				}
+			],
+			"published": "2005-09-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-1268",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1268"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.54_1",
+									"gt": "2.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

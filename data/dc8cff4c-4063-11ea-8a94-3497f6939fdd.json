@@ -1,0 +1,75 @@
+{
+	"id": "dc8cff4c-4063-11ea-8a94-3497f6939fdd",
+	"advisories": [
+		{
+			"id": "dc8cff4c-4063-11ea-8a94-3497f6939fdd",
+			"title": "webkit-gtk3 -- Multiple vulnerabilities",
+			"description": "\n\t<p>The WebKitGTK project reports multiple vulnerabilities.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://webkitgtk.org/security/WSA-2020-0001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dc8cff4c-4063-11ea-8a94-3497f6939fdd.html"
+				}
+			],
+			"published": "2020-01-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-8835",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8835"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8844",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8844"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-8846",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-8846"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkit2-gtk3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.26.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

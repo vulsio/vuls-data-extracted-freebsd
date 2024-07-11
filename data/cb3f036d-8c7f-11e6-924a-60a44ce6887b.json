@@ -1,0 +1,98 @@
+{
+	"id": "cb3f036d-8c7f-11e6-924a-60a44ce6887b",
+	"advisories": [
+		{
+			"id": "cb3f036d-8c7f-11e6-924a-60a44ce6887b",
+			"title": "libvncserver -- multiple security vulnerabilities",
+			"description": "\n       <p>Nicolas Ruff reports:</p>\n       <blockquote cite=\"http://seclists.org/oss-sec/2014/q3/639\">\n\t <p>Integer overflow in MallocFrameBuffer() on client side.</p>\n\t <p>Lack of malloc() return value checking on client side.</p>\n\t <p>Server crash on a very large ClientCutText message.</p>\n\t <p>Server crash when scaling factor is set to zero.</p>\n\t <p>Multiple stack overflows in File Transfer feature.</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2014/q3/639"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=212380"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb3f036d-8c7f-11e6-924a-60a44ce6887b.html"
+				}
+			],
+			"published": "2016-10-11T00:00:00Z",
+			"modified": "2016-10-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-6051",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6051"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-6052",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6052"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-6053",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6053"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-6054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6054"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-6055",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6055"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvncserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

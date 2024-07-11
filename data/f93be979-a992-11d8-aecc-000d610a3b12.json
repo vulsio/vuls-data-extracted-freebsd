@@ -1,0 +1,78 @@
+{
+	"id": "f93be979-a992-11d8-aecc-000d610a3b12",
+	"advisories": [
+		{
+			"id": "f93be979-a992-11d8-aecc-000d610a3b12",
+			"title": "cvs pserver remote heap buffer overflow",
+			"description": "\n\t<p>Due to a programming error in code used to parse data\n\t  received from the client, malformed data can cause a heap\n\t  buffer to overflow, allowing the client to overwrite\n\t  arbitrary portions of the server's memory.</p>\n\t<p>A malicious CVS client can exploit this to run arbitrary\n\t  code on the server at the privilege level of the CVS server\n\t  software.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:10.cvs.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f93be979-a992-11d8-aecc-000d610a3b12.html"
+				}
+			],
+			"published": "2004-05-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0396",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0396"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2_7",
+									"ge": "5.2"
+								},
+								{
+									"lt": "5.1_17",
+									"ge": "5.1"
+								},
+								{
+									"lt": "5.0_21",
+									"ge": "5.0"
+								},
+								{
+									"lt": "4.9_8",
+									"ge": "4.9"
+								},
+								{
+									"lt": "4.8_21",
+									"ge": "4.8"
+								},
+								{
+									"lt": "4.7_27",
+									"ge": "4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

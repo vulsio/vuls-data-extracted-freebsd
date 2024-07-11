@@ -1,0 +1,55 @@
+{
+	"id": "c551ae17-7f00-11d8-868e-000347dd607f",
+	"advisories": [
+		{
+			"id": "c551ae17-7f00-11d8-868e-000347dd607f",
+			"title": "multiple vulnerabilities in phpBB",
+			"description": "\n\t<p>Users with admin rights can severly damage an phpBB installation,\n\t  potentially triggered by viewing a page with a malicious link sent\n\t  by an attacker.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gulftech.org/03202004.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpbb.com/phpBB/viewtopic.php?t=183982"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9942"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c551ae17-7f00-11d8-868e-000347dd607f.html"
+				}
+			],
+			"published": "2004-03-26T00:00:00Z",
+			"modified": "2004-03-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpbb"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

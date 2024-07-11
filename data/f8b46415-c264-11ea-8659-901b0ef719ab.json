@@ -1,0 +1,58 @@
+{
+	"id": "f8b46415-c264-11ea-8659-901b0ef719ab",
+	"advisories": [
+		{
+			"id": "f8b46415-c264-11ea-8659-901b0ef719ab",
+			"title": "FreeBSD -- posix_spawnp(3) buffer overflow",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>posix_spawnp spawns a new thread with a limited stack allocated on the heap\n\tbefore delegating to execvp for the final execution within that thread.</p>\n\t<p>execvp would previously make unbounded allocations on the stack, directly\n\tproportional to the length of the user-controlled PATH environment variable.</p>\n\t<h1>Impact:</h1>\n\t<p>Long values in the user-controlled PATH environment variable cause\n\tposix_spawnp to write beyond the end of stack that was allocated, ultimately\n\toverflowing the heap-allocated stack with a direct copy of the value stored\n\tin PATH.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:18.posix_spawnp.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f8b46415-c264-11ea-8659-901b0ef719ab.html"
+				}
+			],
+			"published": "2020-07-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7458",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7458"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.4_1",
+									"ge": "11.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,85 @@
+{
+	"id": "e24fb8f8-c39a-11eb-9370-b42e99a1b9c3",
+	"advisories": [
+		{
+			"id": "e24fb8f8-c39a-11eb-9370-b42e99a1b9c3",
+			"title": "isc-dhcp -- remotely exploitable vulnerability",
+			"description": "\n\t<p>Michael McNally reports:</p>\n\t<blockquote cite=\"https://seclists.org/oss-sec/2021/q2/170\">\n\t  <p>Program code used by the ISC DHCP package to read and parse stored leases</p>\n\t  <p>has a defect that can be exploited by an attacker to cause one of several\n\t     undesirable outcomes</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://kb.isc.org/docs/cve-2021-25217"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e24fb8f8-c39a-11eb-9370-b42e99a1b9c3.html"
+				}
+			],
+			"published": "2021-06-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-25217",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-25217"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "isc-dhcp44-relay"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.2-P1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "isc-dhcp44-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.2-P1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "isc-dhcp44-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.2-P1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

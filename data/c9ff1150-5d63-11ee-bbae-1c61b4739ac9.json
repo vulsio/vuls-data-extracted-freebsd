@@ -1,0 +1,61 @@
+{
+	"id": "c9ff1150-5d63-11ee-bbae-1c61b4739ac9",
+	"advisories": [
+		{
+			"id": "c9ff1150-5d63-11ee-bbae-1c61b4739ac9",
+			"title": "xrdp -- Improper handling of session establishment errors allows bypassing OS-level session restrictions",
+			"description": "\n\t<p>xrdp team reports:</p>\n\t<blockquote cite=\"https://www.cve.org/CVERecord?id=CVE-2023-40184\">\n\t<p>In versions prior to 0.9.23 improper handling of session establishment\n\terrors allows bypassing OS-level session restrictions. The `auth_start_session`\n\tfunction can return non-zero (1) value on, e.g., PAM error which may result\n\tin session restrictions such as max concurrent sessions per user by PAM\n\t(ex ./etc/security/limits.conf) to be bypassed. Users (administrators) don't\n\tuse restrictions by PAM are not affected. This issue has been addressed in\n\trelease version 0.9.23. Users are advised to upgrade. There are no known\n\tworkarounds for this issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-f489-557v-47jq"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-40184"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c9ff1150-5d63-11ee-bbae-1c61b4739ac9.html"
+				}
+			],
+			"published": "2023-09-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-40184",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-40184"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xrdp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.23"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

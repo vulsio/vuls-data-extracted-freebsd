@@ -1,0 +1,93 @@
+{
+	"id": "a4eb38ea-cc06-11e8-ada4-408d5cf35399",
+	"advisories": [
+		{
+			"id": "a4eb38ea-cc06-11e8-ada4-408d5cf35399",
+			"title": "tinc -- Buffer overflow",
+			"description": "\n\t<p>tinc-vpn.org reports:</p>\n\t<blockquote cite=\"http://www.tinc-vpn.org/news/\">\n\t  <p>The authentication protocol allows an oracle attack that could\npotentially be exploited.</p>\n\t  <p>If a man-in-the-middle has intercepted the TCP connection it\nmight be able to force plaintext UDP packets between two nodes for up to\na PingInterval period.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.tinc-vpn.org/git/browse?p=tinc;a=commit;h=d3297fbd3b8c8c8a4661f5bbf89aca5cacba8b5a"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.tinc-vpn.org/git/browse?p=tinc;a=commit;h=e97943b7cc9c851ae36f5a41e2b6102faa74193f"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a4eb38ea-cc06-11e8-ada4-408d5cf35399.html"
+				}
+			],
+			"published": "2018-10-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-16737",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-16737"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-16738",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-16738"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-16758",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-16758"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tinc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.35"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tinc-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1pre17"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

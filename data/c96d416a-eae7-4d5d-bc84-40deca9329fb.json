@@ -1,0 +1,246 @@
+{
+	"id": "c96d416a-eae7-4d5d-bc84-40deca9329fb",
+	"advisories": [
+		{
+			"id": "c96d416a-eae7-4d5d-bc84-40deca9329fb",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2018-20/\">\n\t  <p>CVE-2018-12377: Use-after-free in refresh driver timers</p>\n\t  <p>CVE-2018-12378: Use-after-free in IndexedDB</p>\n\t  <p>CVE-2018-12379: Out-of-bounds write with malicious MAR file</p>\n\t  <p>CVE-2017-16541: Proxy bypass using automount and autofs</p>\n\t  <p>CVE-2018-12381: Dragging and dropping Outlook email message results in page navigation</p>\n\t  <p>CVE-2018-12382: Addressbar spoofing with javascript URI on Firefox for Android</p>\n\t  <p>CVE-2018-12383: Setting a master password post-Firefox 58 does not delete unencrypted previously stored passwords</p>\n\t  <p>CVE-2018-12375: Memory safety bugs fixed in Firefox 62</p>\n\t  <p>CVE-2018-12376: Memory safety bugs fixed in Firefox 62 and Firefox ESR 60.2</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-20/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-21/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c96d416a-eae7-4d5d-bc84-40deca9329fb.html"
+				}
+			],
+			"published": "2018-09-05T00:00:00Z",
+			"modified": "2018-09-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-16541",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-16541"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12375",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12375"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12376"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12377"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12378",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12378"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12379"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12381",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12381"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12382",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12382"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12383",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12383"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "62.0_1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "waterfox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "56.2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.49.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.49.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-esr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.2.0_1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.2.0,2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxul"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

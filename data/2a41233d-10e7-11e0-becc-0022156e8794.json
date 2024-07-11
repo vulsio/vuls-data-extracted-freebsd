@@ -1,0 +1,79 @@
+{
+	"id": "2a41233d-10e7-11e0-becc-0022156e8794",
+	"advisories": [
+		{
+			"id": "2a41233d-10e7-11e0-becc-0022156e8794",
+			"title": "php-zip -- multiple Denial of Service vulnerabilities",
+			"description": "\n\t<p>The following DoS conditions in Zip extension\n\t  were fixed in PHP 5.3.4 and PHP 5.2.15:</p>\n\t<ul>\n\t  <li>\n\t    <blockquote cite=\"http://www.php.net/releases/5_3_4.php\">\n\t      <p>Fixed crash in zip extract method (possible\n\t\tCWE-170).</p>\n\t    </blockquote>\n\t  </li>\n\t  <li>\n\t    <blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3709\">\n\t      <p>The ZipArchive::getArchiveComment function\n\t\tin PHP 5.2.x through 5.2.14 and 5.3.x through 5.3.3\n\t\tallows context-dependent attackers to cause a denial\n\t\tof service (NULL pointer dereference and application\n\t\tcrash) via a crafted ZIP archive.</p>\n\t    </blockquote>\n\t  </li>\n\t</ul>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://securityreason.com/achievement_securityalert/90"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/releases/5_2_15.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.php.net/releases/5_3_4.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a41233d-10e7-11e0-becc-0022156e8794.html"
+				}
+			],
+			"published": "2011-01-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-3709",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3709"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-zip"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.3.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php52-zip"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2.15"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

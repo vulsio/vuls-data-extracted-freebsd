@@ -1,0 +1,58 @@
+{
+	"id": "94268da0-8118-11e4-a180-001999f8d30b",
+	"advisories": [
+		{
+			"id": "94268da0-8118-11e4-a180-001999f8d30b",
+			"title": "asterisk -- Remote Crash Vulnerability in WebSocket Server",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>When handling a WebSocket frame the res_http_websocket\n\t  module dynamically changes the size of the memory used\n\t  to allow the provided payload to fit. If a payload length\n\t  of zero was received the code would incorrectly attempt\n\t  to resize to zero. This operation would succeed and end\n\t  up freeing the memory but be treated as a failure. When\n\t  the session was subsequently torn down this memory would\n\t  get freed yet again causing a crash.</p>\n\t  <p>Users of the WebSocket functionality also did not take\n\t  into account that provided text frames are not guaranteed\n\t  to be NULL terminated. This has been fixed in chan_sip\n\t  and chan_pjsip in the applicable versions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2014-019.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/94268da0-8118-11e4-a180-001999f8d30b.html"
+				}
+			],
+			"published": "2014-12-11T00:00:00Z",
+			"modified": "2015-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-9374",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-9374"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.14.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

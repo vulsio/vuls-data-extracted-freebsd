@@ -1,0 +1,76 @@
+{
+	"id": "70b62f5e-9e2e-11d9-a256-0001020eed82",
+	"advisories": [
+		{
+			"id": "70b62f5e-9e2e-11d9-a256-0001020eed82",
+			"title": "clamav -- zip handling DoS vulnerability",
+			"description": "\n\t<p>The clamav daemon is vulnerable to a DoS vulnerability due\n\t  to insufficient handling of malformed zip files which can\n\t  crash the clamav daemon.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=300116"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12408"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/70b62f5e-9e2e-11d9-a256-0001020eed82.html"
+				}
+			],
+			"published": "2005-03-26T00:00:00Z",
+			"modified": "2005-04-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0133",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0133"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.81"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20050408"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

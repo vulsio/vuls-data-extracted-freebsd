@@ -1,0 +1,69 @@
+{
+	"id": "b6ef8a53-8062-11ec-9af3-fb232efe4d2e",
+	"advisories": [
+		{
+			"id": "b6ef8a53-8062-11ec-9af3-fb232efe4d2e",
+			"title": "OpenEXR -- Heap-buffer-overflow in Imf_3_1::LineCompositeTask::execute",
+			"description": "\n\t<p>Cary Phillips reports:</p>\n\t<blockquote cite=\"https://github.com/AcademySoftwareFoundation/openexr/blob/v3.1.4/CHANGES.md#version-314-january-26-2022\">\n\t  <p>[OpenEXR Version 3.1.4 is a] patch release that [...]\n\t    addresses one public security vulnerability:\n\t    CVE-2021-45942 Heap-buffer-overflow in\n\t    Imf_3_1::LineCompositeTask::execute [and several]\n\t    specific OSS-fuzz issues [...].</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=41416"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=41999"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/AcademySoftwareFoundation/openexr/blob/v3.1.4/CHANGES.md#version-314-january-26-2022"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/AcademySoftwareFoundation/openexr/pull/1209"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b6ef8a53-8062-11ec-9af3-fb232efe4d2e.html"
+				}
+			],
+			"published": "2022-01-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-45942",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-45942"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openexr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

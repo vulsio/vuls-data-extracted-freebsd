@@ -1,0 +1,61 @@
+{
+	"id": "a6cd01fa-11bd-11e6-bb3c-9cb654ea3e1c",
+	"advisories": [
+		{
+			"id": "a6cd01fa-11bd-11e6-bb3c-9cb654ea3e1c",
+			"title": "jansson -- local denial of service vulnerabilities",
+			"description": "\n\t<p>QuickFuzz reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/05/01/5\">\n\t  <p>A crash caused by stack exhaustion parsing a JSON was found.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/05/01/5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/05/02/1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a6cd01fa-11bd-11e6-bb3c-9cb654ea3e1c.html"
+				}
+			],
+			"published": "2016-05-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4425",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4425"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jansson"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

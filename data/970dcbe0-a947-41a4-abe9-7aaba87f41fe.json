@@ -1,0 +1,109 @@
+{
+	"id": "970dcbe0-a947-41a4-abe9-7aaba87f41fe",
+	"advisories": [
+		{
+			"id": "970dcbe0-a947-41a4-abe9-7aaba87f41fe",
+			"title": "electron25 -- multiple vulnerabilities",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v25.8.0\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2023-4427.</li>\n\t    <li>Security: backported fix for CVE-2023-4428.</li>\n\t    <li>Security: backported fix for CVE-2023-4429.</li>\n\t    <li>Security: backported fix for CVE-2023-4430.</li>\n\t    <li>Security: backported fix for CVE-2023-4572.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-6994-5wq3-gpjv"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-h295-rcc5-87jh"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-m56x-9vph-h345"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-qqwc-fhxf-4mf3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-r43m-48vw-xgp3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/970dcbe0-a947-41a4-abe9-7aaba87f41fe.html"
+				}
+			],
+			"published": "2023-08-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-4427",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4427"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4428",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4428"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4429",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4429"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4430",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4430"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4572",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4572"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "electron25"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "25.8.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

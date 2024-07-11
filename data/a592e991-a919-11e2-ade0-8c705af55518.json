@@ -1,0 +1,57 @@
+{
+	"id": "a592e991-a919-11e2-ade0-8c705af55518",
+	"advisories": [
+		{
+			"id": "a592e991-a919-11e2-ade0-8c705af55518",
+			"title": "roundcube -- arbitrary file disclosure vulnerability",
+			"description": "\n\t<p>RoundCube development team reports:</p>\n\t<blockquote cite=\"http://lists.roundcube.net/pipermail/dev/2013-March/022337.html\">\n\t  <p>After getting reports about a possible vulnerability\n\t    of Roundcube which allows an attacker to modify its\n\t    users preferences in a way that he/she can then read\n\t    files from the server, we now published updated packages\n\t    as well as patches that fix this security issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://secunia.com/advisories/52806/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a592e991-a919-11e2-ade0-8c705af55518.html"
+				}
+			],
+			"published": "2013-04-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1904",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1904"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "roundcube"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.8.6,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

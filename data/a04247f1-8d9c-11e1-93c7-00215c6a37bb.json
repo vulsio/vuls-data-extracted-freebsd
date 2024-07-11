@@ -1,0 +1,62 @@
+{
+	"id": "a04247f1-8d9c-11e1-93c7-00215c6a37bb",
+	"advisories": [
+		{
+			"id": "a04247f1-8d9c-11e1-93c7-00215c6a37bb",
+			"title": "Dokuwiki -- cross site scripting vulnerability",
+			"description": "\n\t<p>Andy Webber reports:</p>\n\t<blockquote cite=\"http://bugs.dokuwiki.org/index.php?do=details&amp;task_id=2487\">\n\t  <p>Add User appears to be vulnerable to Cross Site Request Forgery (CSRF/XSRF).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a04247f1-8d9c-11e1-93c7-00215c6a37bb.html"
+				}
+			],
+			"published": "2012-04-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-2128",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2128"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-2129",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2129"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dokuwiki"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20120125_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

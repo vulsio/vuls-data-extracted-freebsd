@@ -1,0 +1,69 @@
+{
+	"id": "fbb5a260-f00f-11ed-bbae-6cc21735f730",
+	"advisories": [
+		{
+			"id": "fbb5a260-f00f-11ed-bbae-6cc21735f730",
+			"title": "postgresql-server -- CREATE SCHEMA ... schema elements defeats protective search_path changes",
+			"description": "\n\t<p>PostgreSQL Project reports</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2023-2454/\">\n\t  <p>\n\t    This enabled an attacker having database-level CREATE\n\t    privilege to execute arbitrary code as the bootstrap\n\t    superuser. Database owners have that right by default,\n\t    and explicit grants may extend it to other users.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.postgresql.org/support/security/CVE-2023-2454/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fbb5a260-f00f-11ed-bbae-6cc21735f730.html"
+				}
+			],
+			"published": "2023-05-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-2454",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-2454"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "15.3"
+								},
+								{
+									"lt": "14.8"
+								},
+								{
+									"lt": "13.11"
+								},
+								{
+									"lt": "12.15"
+								},
+								{
+									"lt": "11.20"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

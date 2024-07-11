@@ -1,0 +1,91 @@
+{
+	"id": "88760f4d-8ef7-11ea-a66d-4b2ef158be83",
+	"advisories": [
+		{
+			"id": "88760f4d-8ef7-11ea-a66d-4b2ef158be83",
+			"title": "mailman -- arbitrary content injection vulnerability via options or private archive login pages",
+			"description": "\n\t<p>Mark Sapiro reports:</p>\n\t<blockquote cite=\"https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1845/NEWS#L8\">\n\t  <p>A content injection vulnerability via the options login page has\n\t    been discovered and reported by Vishal Singh.\n\t  </p>\n\t</blockquote>\n\t<blockquote cite=\"https://bugs.launchpad.net/mailman/+bug/1873722\">\n\t  <p>\n\t    An issue similar to CVE-2018-13796 exists at different endpoint &amp; param. It can lead to a phishing attack.\n\t  </p>\n\t</blockquote>\n\t<blockquote cite=\"https://bugs.launchpad.net/mailman/+bug/1877379\">\n\t  <p>\n\t    (added 2020-05-07) This is essentially the same as\n\t    https://bugs.launchpad.net/mailman/+bug/1873722 except the vector is\n\t    the private archive login page and the attack only succeeds if the\n\t    list's roster visibility (private_roster) setting is 'Anyone'.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1845/NEWS#L8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.launchpad.net/mailman/+bug/1873722"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.launchpad.net/mailman/+bug/1877379"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mail.python.org/archives/list/mailman-developers@python.org/thread/SYBIZ3MNSQZLKN6PVKO7ZKR7QMOBMS45/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/88760f4d-8ef7-11ea-a66d-4b2ef158be83.html"
+				}
+			],
+			"published": "2020-05-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-13796",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-13796"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.30_4"
+								},
+								{
+									"lt": "2.1.33",
+									"ge": "2.1.31"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-with-htdig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.30_4"
+								},
+								{
+									"lt": "2.1.33",
+									"ge": "2.1.31"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

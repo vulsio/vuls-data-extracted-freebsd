@@ -1,0 +1,57 @@
+{
+	"id": "2a314635-be46-11ec-a06f-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "2a314635-be46-11ec-a06f-d4c9ef517024",
+			"title": "Nextcloud Calendar -- SMTP Command Injection",
+			"description": "\n\t<p> reports:</p>\n\t<blockquote cite=\"https://github.com/nextcloud/security-advisories/security/advisories/GHSA-8xv5-4855-24qf\">\n\t  <p>SMTP Command Injection in Appointment Emails via Newlines: as newlines\n\t    and special characters are not sanitized in the email value in the JSON\n\t    request, a malicious attacker can inject newlines to break out of the\n\t    `RCPT TO:&lt;BOOKING USER'S EMAIL&gt;` SMTP command and begin injecting\n\t    arbitrary SMTP commands.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-8xv5-4855-24qf"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a314635-be46-11ec-a06f-d4c9ef517024.html"
+				}
+			],
+			"published": "2022-04-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24838",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24838"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nextcloud-calendar"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

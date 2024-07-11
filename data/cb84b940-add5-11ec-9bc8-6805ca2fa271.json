@@ -1,0 +1,57 @@
+{
+	"id": "cb84b940-add5-11ec-9bc8-6805ca2fa271",
+	"advisories": [
+		{
+			"id": "cb84b940-add5-11ec-9bc8-6805ca2fa271",
+			"title": "powerdns-recursor -- denial of service",
+			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://www.powerdns.com/news.html#20220325\">\n\t  <p>PowerDNS Security Advisory 2022-01: incomplete validation of incoming IXFR transfer in Authoritative Server and Recursor.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2022-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb84b940-add5-11ec-9bc8-6805ca2fa271.html"
+				}
+			],
+			"published": "2022-03-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-27227",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27227"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns-recursor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"eq": "4.6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,46 @@
+{
+	"id": "ffa8ca79-4afb-11e6-97ea-002590263bf5",
+	"advisories": [
+		{
+			"id": "ffa8ca79-4afb-11e6-97ea-002590263bf5",
+			"title": "atutor -- multiple vulnerabilities",
+			"description": "\n\t<p>ATutor reports:</p>\n\t<blockquote cite=\"https://github.com/atutor/ATutor/releases/tag/atutor_2_2_1\">\n\t  <p>Security Fixes: A number of minor XSS vulnerabilities discovered in\n\t    the previous version of ATutor have been corrected.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/atutor/ATutor/releases/tag/atutor_2_2_1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ffa8ca79-4afb-11e6-97ea-002590263bf5.html"
+				}
+			],
+			"published": "2016-07-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "atutor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

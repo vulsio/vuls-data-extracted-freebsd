@@ -1,0 +1,48 @@
+{
+	"id": "515b4327-cf8a-11e5-96d6-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "515b4327-cf8a-11e5-96d6-14dae9d210b8",
+			"title": "dnscrypt-proxy -- code execution",
+			"description": "\n\t<p>Frank Denis reports:</p>\n\t<blockquote cite=\"https://github.com/jedisct1/dnscrypt-proxy/blob/1d129f7d5f0d469308967cbe4eacb4a6919f1fa1/NEWS#L2-L8\">\n\t  <p>Malformed packets could lead to denial of service or code\n\t    execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/jedisct1/dnscrypt-proxy/blob/1d129f7d5f0d469308967cbe4eacb4a6919f1fa1/NEWS#L2-L8"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/515b4327-cf8a-11e5-96d6-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-02-10T00:00:00Z",
+			"modified": "2016-02-14T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dnscrypt-proxy"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.1",
+									"ge": "1.1.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

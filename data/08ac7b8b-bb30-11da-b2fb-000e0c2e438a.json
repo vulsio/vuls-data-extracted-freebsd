@@ -1,0 +1,90 @@
+{
+	"id": "08ac7b8b-bb30-11da-b2fb-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "08ac7b8b-bb30-11da-b2fb-000e0c2e438a",
+			"title": "sendmail -- race condition vulnerability",
+			"description": "\n\t<h1>Problem Description</h1>\n\t<p>A race condition has been reported to exist in the handling\n\t  by sendmail of asynchronous signals.</p>\n\t<h1>Impact</h1>\n\t<p>A remote attacker may be able to execute arbitrary code with\n\t  the privileges of the user running sendmail, typically\n\t  root.</p>\n\t<h1>Workaround</h1>\n\t<p>There is no known workaround other than disabling\n\t  sendmail.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:13.sendmail.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/08ac7b8b-bb30-11da-b2fb-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-03-24T00:00:00Z",
+			"modified": "2006-06-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0058",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0058"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sendmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.13.6",
+									"gt": "8.13"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0_6",
+									"ge": "6.0"
+								},
+								{
+									"lt": "5.4_13",
+									"ge": "5.4"
+								},
+								{
+									"lt": "5.3_28",
+									"ge": "5.3"
+								},
+								{
+									"lt": "4.11_16",
+									"ge": "4.11"
+								},
+								{
+									"lt": "4.10_22",
+									"ge": "4.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

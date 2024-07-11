@@ -1,0 +1,70 @@
+{
+	"id": "4b6cb45d-881e-447a-a4e0-c97a954ea758",
+	"advisories": [
+		{
+			"id": "4b6cb45d-881e-447a-a4e0-c97a954ea758",
+			"title": "bzip2 -- multiple issues",
+			"description": "\n\t<p>bzip2 developers reports:</p>\n\t<blockquote cite=\"https://gitlab.com/federicomenaquintero/bzip2/blob/master/NEWS\">\n\t  <p>CVE-2016-3189 - Fix use-after-free in bzip2recover (Jakub Martisko)</p>\n\t  <p>CVE-2019-12900 - Detect out-of-range nSelectors in corrupted files (Albert Astals Cid).  Found through fuzzing karchive.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1319648"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gitlab.com/federicomenaquintero/bzip2/blob/master/NEWS"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4b6cb45d-881e-447a-a4e0-c97a954ea758.html"
+				}
+			],
+			"published": "2019-06-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-3189",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3189"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-12900",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-12900"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bzip2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,107 @@
+{
+	"id": "18211552-f650-4d86-ba4f-e6d5cbfcdbeb",
+	"advisories": [
+		{
+			"id": "18211552-f650-4d86-ba4f-e6d5cbfcdbeb",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2019-04/\">\n\t  <p>CVE-2018-18356: Use-after-free in Skia</p>\n\t  <p>CVE-2019-5785: Integer overflow in Skia</p>\n\t  <p>CVE-2018-18511: Cross-origin theft of images with ImageBitmapRenderingContext</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2019-04/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2019-05/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/18211552-f650-4d86-ba4f-e6d5cbfcdbeb.html"
+				}
+			],
+			"published": "2019-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-18356",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18356"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18511",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-18511"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-5785",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5785"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "65.0.1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-esr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.5.1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.5.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

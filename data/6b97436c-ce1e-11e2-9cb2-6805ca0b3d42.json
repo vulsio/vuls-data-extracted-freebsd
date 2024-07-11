@@ -1,0 +1,58 @@
+{
+	"id": "6b97436c-ce1e-11e2-9cb2-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "6b97436c-ce1e-11e2-9cb2-6805ca0b3d42",
+			"title": "phpMyAdmin -- XSS due to unescaped HTML output in Create View page",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2013-6.php\">\n\t  <p>When creating a view with a crafted name and an incorrect\n\t  CREATE statement, it is possible to trigger an XSS.</p>\n\t  <p>This vulnerability can be triggered only by someone who\n\t  logged in to phpMyAdmin, as the usual token protection\n\t  prevents non-logged-in users from accessing the required\n\t  form.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2013-6.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6b97436c-ce1e-11e2-9cb2-6805ca0b3d42.html"
+				}
+			],
+			"published": "2013-06-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-3742",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3742"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.3",
+									"ge": "4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

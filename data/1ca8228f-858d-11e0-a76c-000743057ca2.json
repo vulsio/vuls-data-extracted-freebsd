@@ -1,0 +1,47 @@
+{
+	"id": "1ca8228f-858d-11e0-a76c-000743057ca2",
+	"advisories": [
+		{
+			"id": "1ca8228f-858d-11e0-a76c-000743057ca2",
+			"title": "mod_pubcookie -- Empty Authentication Security Advisory",
+			"description": "\n\t<p>Nathan Dors, Pubcookie Project reports:</p>\n\t<blockquote cite=\"http://pubcookie.org/news/20061106-empty-auth-secadv.html\">\n\t  <p>An Abuse of Functionality vulnerability in the Pubcookie\n\t    authentication process was found. This vulnerability allows an\n\t    attacker to appear as if he or she were authenticated using an\n\t    empty userid when such a userid isn't expected.  Unauthorized\n\t    access to web content and applications may result where access\n\t    is restricted to users who can authenticate successfully but\n\t    where no additional authorization is performed after\n\t    authentication.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://pubcookie.org/news/20061106-empty-auth-secadv.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1ca8228f-858d-11e0-a76c-000743057ca2.html"
+				}
+			],
+			"published": "2011-05-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ap20-mod_pubcookie"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.3.2b",
+									"ge": "3.1.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

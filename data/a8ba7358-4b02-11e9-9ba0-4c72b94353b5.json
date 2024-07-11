@@ -1,0 +1,46 @@
+{
+	"id": "a8ba7358-4b02-11e9-9ba0-4c72b94353b5",
+	"advisories": [
+		{
+			"id": "a8ba7358-4b02-11e9-9ba0-4c72b94353b5",
+			"title": "gitea -- XSS vulnerability",
+			"description": "\n\t<p>Gitea Team reports:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2019/03/gitea-1.7.4-is-released/\">\n\t  <p>Fix potential XSS vulnerability in repository description.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.gitea.io/2019/03/gitea-1.7.4-is-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a8ba7358-4b02-11e9-9ba0-4c72b94353b5.html"
+				}
+			],
+			"published": "2019-03-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

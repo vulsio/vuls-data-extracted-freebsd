@@ -1,0 +1,77 @@
+{
+	"id": "75aae50b-9e3c-11eb-9bc3-8c164582fbac",
+	"advisories": [
+		{
+			"id": "75aae50b-9e3c-11eb-9bc3-8c164582fbac",
+			"title": "AccountsService -- Insufficient path check in user_change_icon_file_authorized_cb()",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2018-14036\">\n\t  <p>\n\t    Directory Traversal with ../ sequences occurs in AccountsService\n\t    before 0.6.50 because of an insufficient path check in\n\t    user_change_icon_file_authorized_cb() in user.c.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2018/07/02/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freedesktop.org/show_bug.cgi?id=107085"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.suse.com/show_bug.cgi?id=1099699"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cgit.freedesktop.org/accountsservice/commit/?id=f9abd359f71a5bce421b9ae23432f539a067847a"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2018-14036"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.securityfocus.com/bid/104757"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/75aae50b-9e3c-11eb-9bc3-8c164582fbac.html"
+				}
+			],
+			"published": "2021-04-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-14036",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-14036"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "accountsservice"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.50"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

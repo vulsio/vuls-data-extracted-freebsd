@@ -1,0 +1,83 @@
+{
+	"id": "89d4ed09-c3d7-11e5-b5fe-002590263bf5",
+	"advisories": [
+		{
+			"id": "89d4ed09-c3d7-11e5-b5fe-002590263bf5",
+			"title": "privoxy -- multiple vulnerabilities",
+			"description": "\n\t<p>Privoxy Developers reports:</p>\n\t<blockquote cite=\"http://www.privoxy.org/3.0.22/user-manual/whatsnew.html\">\n\t  <p>Fixed a memory leak when rejecting client connections due to the\n\t    socket limit being reached (CID 66382). This affected Privoxy 3.0.21\n\t    when compiled with IPv6 support (on most platforms this is the\n\t    default).</p>\n\t  <p>Fixed an immediate-use-after-free bug (CID 66394) and two\n\t    additional unconfirmed use-after-free complaints made by Coverity\n\t    scan (CID 66391, CID 66376).</p>\n\t</blockquote>\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1201\">\n\t  <p>Privoxy before 3.0.22 allows remote attackers to cause a denial\n\t    of service (file descriptor consumption) via unspecified vectors.\n\t    </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/01/11/1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.privoxy.org/3.0.22/user-manual/whatsnew.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=195468"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/89d4ed09-c3d7-11e5-b5fe-002590263bf5.html"
+				}
+			],
+			"published": "2016-01-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1030",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1030"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1031",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1031"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1201",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1201"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "privoxy"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.22"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

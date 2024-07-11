@@ -1,0 +1,80 @@
+{
+	"id": "15236023-a21b-11e2-a460-208984377b34",
+	"advisories": [
+		{
+			"id": "15236023-a21b-11e2-a460-208984377b34",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb13-12.html\">\n\t  <p>These updates address vulnerabilities that could cause a crash\n\t    and potentially allow an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/15236023-a21b-11e2-a460-208984377b34.html"
+				}
+			],
+			"published": "2013-04-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1383",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1383"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1384",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1384"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1385",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1385"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1386",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1386"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.280"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

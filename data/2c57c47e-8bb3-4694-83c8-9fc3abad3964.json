@@ -1,0 +1,317 @@
+{
+	"id": "2c57c47e-8bb3-4694-83c8-9fc3abad3964",
+	"advisories": [
+		{
+			"id": "2c57c47e-8bb3-4694-83c8-9fc3abad3964",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2016-85/\">\n\t  <p>CVE-2016-2827 - Out-of-bounds read in mozilla::net::IsValidReferrerPolicy [low]</p>\n\t  <p>CVE-2016-5256 - Memory safety bugs fixed in Firefox 49 [critical]</p>\n\t  <p>CVE-2016-5257 - Memory safety bugs fixed in Firefox 49 and Firefox ESR 45.4 [critical]</p>\n\t  <p>CVE-2016-5270 - Heap-buffer-overflow in nsCaseTransformTextRunFactory::TransformString [high]</p>\n\t  <p>CVE-2016-5271 - Out-of-bounds read in PropertyProvider::GetSpacingInternal [low]</p>\n\t  <p>CVE-2016-5272 - Bad cast in nsImageGeometryMixin [high]</p>\n\t  <p>CVE-2016-5273 - crash in mozilla::a11y::HyperTextAccessible::GetChildOffset [high]</p>\n\t  <p>CVE-2016-5274 - use-after-free in nsFrameManager::CaptureFrameState [high]</p>\n\t  <p>CVE-2016-5275 - global-buffer-overflow in mozilla::gfx::FilterSupport::ComputeSourceNeededRegions [critical]</p>\n\t  <p>CVE-2016-5276 - Heap-use-after-free in mozilla::a11y::DocAccessible::ProcessInvalidationList [high]</p>\n\t  <p>CVE-2016-5277 - Heap-use-after-free in nsRefreshDriver::Tick [high]</p>\n\t  <p>CVE-2016-5278 - Heap-buffer-overflow in nsBMPEncoder::AddImageFrame [critical]</p>\n\t  <p>CVE-2016-5279 - Full local path of files is available to web pages after drag and drop [moderate]</p>\n\t  <p>CVE-2016-5280 - Use-after-free in mozilla::nsTextNodeDirectionalityMap::RemoveElementFromMap [high]</p>\n\t  <p>CVE-2016-5281 - use-after-free in DOMSVGLength [high]</p>\n\t  <p>CVE-2016-5282 - Don't allow content to request favicons from non-whitelisted schemes [moderate]</p>\n\t  <p>CVE-2016-5283 - &lt;iframe src&gt; fragment timing attack can reveal cross-origin data [high]</p>\n\t  <p>CVE-2016-5284 - Add-on update site certificate pin expiration [high]</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2016-85/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2016-86/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/advisories/mfsa2016-88/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2c57c47e-8bb3-4694-83c8-9fc3abad3964.html"
+				}
+			],
+			"published": "2016-09-20T00:00:00Z",
+			"modified": "2016-10-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2827",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2827"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5256",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5256"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5257",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5257"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5270",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5270"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5271",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5271"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5272",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5272"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5273",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5273"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5274",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5274"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5275",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5275"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5276",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5276"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5277",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5277"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5278",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5278"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5279",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5279"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5280",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5280"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5281",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5281"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5282",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5282"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5283",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5283"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5284",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5284"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "49.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.46"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.46"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-esr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "45.4.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "45.4.0,2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxul"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "45.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "45.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "45.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

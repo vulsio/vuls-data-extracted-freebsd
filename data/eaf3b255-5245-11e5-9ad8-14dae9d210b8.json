@@ -1,0 +1,120 @@
+{
+	"id": "eaf3b255-5245-11e5-9ad8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "eaf3b255-5245-11e5-9ad8-14dae9d210b8",
+			"title": "bind -- denial of service vulnerability",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://www.isc.org/blogs/cve-2015-5722-parsing-malformed-keys-may-cause-bind-to-exit-due-to-a-failed-assertion-in-buffer-c/\">\n\t  <p>Parsing a malformed DNSSEC key can cause a validating\n\t    resolver to exit due to a failed assertion in buffer.c.  It is possible\n\t    for a remote attacker to deliberately trigger this condition, for\n\t    example by using a query which requires a response from a zone\n\t    containing a deliberately malformed key.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:23.bind.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.isc.org/blogs/cve-2015-5722-parsing-malformed-keys-may-cause-bind-to-exit-due-to-a-failed-assertion-in-buffer-c/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/eaf3b255-5245-11e5-9ad8-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-09-03T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5722",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5722"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.7P3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind910"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.10.2P4",
+									"ge": "9.10.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind910-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"gt": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"gt": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.3_25",
+									"ge": "9.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

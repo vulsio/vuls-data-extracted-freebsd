@@ -1,0 +1,111 @@
+{
+	"id": "50a1bbc9-fb80-11e9-9e70-005056a311d1",
+	"advisories": [
+		{
+			"id": "50a1bbc9-fb80-11e9-9e70-005056a311d1",
+			"title": "samba -- multiple vulnerabilities",
+			"description": "\n\t<p>The samba project reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2019-10218.html\">\n\t  <p>Malicious servers can cause Samba client code to return filenames containing\n\t  path separators to calling code.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2019-14833.html\">\n\t  <p>When the password contains multi-byte (non-ASCII) characters, the check\n\t  password script does not receive the full password string.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.samba.org/samba/security/CVE-2019-14847.html\">\n\t  <p>Users with the \"get changes\" extended access right can crash the AD DC LDAP\n\t  server by requesting an attribute using the range= syntax.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2019-10218.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2019-14833.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.samba.org/samba/security/CVE-2019-14847.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/50a1bbc9-fb80-11e9-9e70-005056a311d1.html"
+				}
+			],
+			"published": "2019-10-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-10218",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-10218"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14833",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14833"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-14847",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-14847"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba48"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.8.12"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba410"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.10.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba411"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.11.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

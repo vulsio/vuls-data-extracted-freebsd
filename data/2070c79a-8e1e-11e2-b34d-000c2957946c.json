@@ -1,0 +1,66 @@
+{
+	"id": "2070c79a-8e1e-11e2-b34d-000c2957946c",
+	"advisories": [
+		{
+			"id": "2070c79a-8e1e-11e2-b34d-000c2957946c",
+			"title": "ModSecurity -- XML External Entity Processing Vulnerability",
+			"description": "\n\t<p>Positive Technologies has reported a vulnerability in ModSecurity,\n\t  which can be exploited by malicious people to disclose potentially\n\t  sensitive information or cause a DoS (Denial Of Serice).</p>\n\t<p>The vulnerability is caused due to an error when parsing external\n\t  XML entities and can be exploited to e.g. disclose local files or\n\t  cause excessive memory and CPU consumption.</p>\n\t<blockquote cite=\"https://secunia.com/advisories/52847/\">\n\t  <p>.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.gentoo.org/show_bug.cgi?id=464188"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-1915"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://secunia.com/advisories/52847/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2070c79a-8e1e-11e2-b34d-000c2957946c.html"
+				}
+			],
+			"published": "2013-04-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1915",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1915"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_security"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.3",
+									"gt": "2.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

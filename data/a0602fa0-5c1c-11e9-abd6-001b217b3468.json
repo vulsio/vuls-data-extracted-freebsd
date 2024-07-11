@@ -1,0 +1,66 @@
+{
+	"id": "a0602fa0-5c1c-11e9-abd6-001b217b3468",
+	"advisories": [
+		{
+			"id": "a0602fa0-5c1c-11e9-abd6-001b217b3468",
+			"title": "Gitlab -- Group Runner Registration Token Exposure",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2019/04/10/critical-security-release-gitlab-11-dot-9-dot-7-released/\">\n\t  <p>Group Runner Registration Token Exposure</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/2019/04/10/critical-security-release-gitlab-11-dot-9-dot-7-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a0602fa0-5c1c-11e9-abd6-001b217b3468.html"
+				}
+			],
+			"published": "2019-04-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-11000",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11000"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.9.7",
+									"ge": "11.9.0"
+								},
+								{
+									"lt": "11.8.7",
+									"ge": "11.8.0"
+								},
+								{
+									"lt": "11.7.11",
+									"ge": "10.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

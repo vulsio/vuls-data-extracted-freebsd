@@ -1,0 +1,69 @@
+{
+	"id": "a95092a6-f8f1-11e0-a7ea-00215c6a37bb",
+	"advisories": [
+		{
+			"id": "a95092a6-f8f1-11e0-a7ea-00215c6a37bb",
+			"title": "asterisk -- remote crash vulnerability in SIP channel driver",
+			"description": "\n\t<p>Asterisk project reports:</p>\n\t<blockquote cite=\"http://downloads.asterisk.org/pub/security/AST-2011-012.html\">\n\t  <p>A remote authenticated user can cause a crash with a malformed\n\t    request due to an unitialized variable.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a95092a6-f8f1-11e0-a7ea-00215c6a37bb.html"
+				}
+			],
+			"published": "2011-10-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4063",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4063"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.7.1",
+									"gt": "1.8.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.0.r1",
+									"gt": "10.0.0.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

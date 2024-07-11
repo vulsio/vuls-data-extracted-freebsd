@@ -1,0 +1,219 @@
+{
+	"id": "6c8ad3e8-0a30-11e1-9580-4061862b8c22",
+	"advisories": [
+		{
+			"id": "6c8ad3e8-0a30-11e1-9580-4061862b8c22",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2011-46 loadSubScript unwraps XPCNativeWrapper scope\n\t    parameter (1.9.2 branch)</p>\n\t  <p>MFSA 2011-47 Potential XSS against sites using Shift-JIS</p>\n\t  <p>MFSA 2011-48 Miscellaneous memory safety hazards (rv:8.0)</p>\n\t  <p>MFSA 2011-49 Memory corruption while profiling using Firebug</p>\n\t  <p>MFSA 2011-50 Cross-origin data theft using canvas and Windows\n\t    D2D</p>\n\t  <p>MFSA 2011-51 Cross-origin image theft on Mac with integrated\n\t    Intel GPU</p>\n\t  <p>MFSA 2011-52 Code execution via NoWaiverWrapper</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-46.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-47.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-48.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-50.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-51.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2011/mfsa2011-52.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6c8ad3e8-0a30-11e1-9580-4061862b8c22.html"
+				}
+			],
+			"published": "2011-11-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3647",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3647"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3648",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3648"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3649",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3649"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3650",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3650"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3651",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3651"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3652",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3652"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3653",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3653"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3654",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3654"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3655",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3655"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.0,1",
+									"gt": "4.0,1"
+								},
+								{
+									"lt": "3.6.24,1",
+									"gt": "3.6.*,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxul"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.2.24",
+									"gt": "1.9.2.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.0",
+									"gt": "4.0"
+								},
+								{
+									"lt": "3.1.16"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

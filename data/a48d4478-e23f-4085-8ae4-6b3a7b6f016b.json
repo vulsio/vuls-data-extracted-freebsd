@@ -1,0 +1,155 @@
+{
+	"id": "a48d4478-e23f-4085-8ae4-6b3a7b6f016b",
+	"advisories": [
+		{
+			"id": "a48d4478-e23f-4085-8ae4-6b3a7b6f016b",
+			"title": "wordpress -- multiple issues",
+			"description": "\n\t<p>wordpress developers report:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/100912\">\n\t  <p>Before version 4.8.2, WordPress was susceptible to a Cross-Site Scripting attack in the link modal via a javascript: or data: URL.</p>\n\t  <p>Before version 4.8.2, WordPress allowed a Cross-Site scripting attack in the template list view via a crafted template name.</p>\n\t  <p>Before version 4.8.2, WordPress was vulnerable to a directory traversal attack during unzip operations in the ZipArchive and PclZip components.</p>\n\t  <p>Before version 4.8.2, WordPress allowed Cross-Site scripting in the plugin editor via a crafted plugin name.</p>\n\t  <p>Before version 4.8.2, WordPress allowed a Directory Traversal attack in the Customizer component via a crafted theme filename.</p>\n\t  <p>Before version 4.8.2, WordPress was vulnerable to cross-site scripting in oEmbed discovery.</p>\n\t  <p>Before version 4.8.2, WordPress was vulnerable to a cross-site scripting attack via shortcodes in the TinyMCE visual editor.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/100912"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://core.trac.wordpress.org/changeset/41393"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://core.trac.wordpress.org/changeset/41395"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://core.trac.wordpress.org/changeset/41397"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://core.trac.wordpress.org/changeset/41412"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://core.trac.wordpress.org/changeset/41448"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://core.trac.wordpress.org/changeset/41457"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wpvulndb.com/vulnerabilities/8911"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wpvulndb.com/vulnerabilities/8912"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wpvulndb.com/vulnerabilities/8913"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wpvulndb.com/vulnerabilities/8914"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a48d4478-e23f-4085-8ae4-6b3a7b6f016b.html"
+				}
+			],
+			"published": "2017-09-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-14718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14718"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14719",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14719"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14720",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14720"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14721",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14721"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14722",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14722"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14724",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14724"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-14726",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14726"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.8.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,111 @@
+{
+	"id": "2ce1a2f1-0177-11ef-a45e-08002784c58d",
+	"advisories": [
+		{
+			"id": "2ce1a2f1-0177-11ef-a45e-08002784c58d",
+			"title": "ruby -- Arbitrary memory address read vulnerability with Regex search",
+			"description": "\n\t<p>sp2ip reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/\">\n\t  <p>\n\t    If attacker-supplied data is provided to the Ruby regex\n\t    compiler, it is possible to extract arbitrary heap data\n\t    relative to the start of the text, including pointers and\n\t    sensitive strings.\n\t  </p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2ce1a2f1-0177-11ef-a45e-08002784c58d.html"
+				}
+			],
+			"published": "2024-04-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-27282",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27282"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.5,1",
+									"ge": "3.1.0,1"
+								},
+								{
+									"lt": "3.2.4,1",
+									"ge": "3.2.0,1"
+								},
+								{
+									"lt": "3.3.1,1",
+									"ge": "3.3.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby31"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.5,1",
+									"ge": "3.1.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby32"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.4,1",
+									"ge": "3.2.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby33"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.3.1,1",
+									"ge": "3.3.0,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,98 @@
+{
+	"id": "a6eb239f-adbe-11e4-9fce-080027593b9a",
+	"advisories": [
+		{
+			"id": "a6eb239f-adbe-11e4-9fce-080027593b9a",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n\t<p>Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.nl\">\n\t  <p>11 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[447906] High CVE-2015-1209: Use-after-free in DOM. Credit to\n\t      Maksymillian.</li>\n\t    <li>[453979] High CVE-2015-1210: Cross-origin-bypass in V8\n\t      bindings. Credit to anonymous.</li>\n\t    <li>[453982] High CVE-2015-1211: Privilege escalation using service\n\t      workers. Credit to anonymous.</li>\n\t    <li>[455225] CVE-2015-1212: Various fixes from internal audits,\n\t      fuzzing and other initiatives.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://googlechromereleases.blogspot.nl"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a6eb239f-adbe-11e4-9fce-080027593b9a.html"
+				}
+			],
+			"published": "2015-02-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1209",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1209"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1210",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1210"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1211",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1211"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-1212",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1212"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "40.0.2214.111"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium-pulse"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "40.0.2214.111"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

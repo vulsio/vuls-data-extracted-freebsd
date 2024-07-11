@@ -1,0 +1,57 @@
+{
+	"id": "279e5f4b-d823-11e2-928e-08002798f6ff",
+	"advisories": [
+		{
+			"id": "279e5f4b-d823-11e2-928e-08002798f6ff",
+			"title": "apache-xml-security-c -- heap overflow",
+			"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://santuario.apache.org/secadv.data/CVE-2013-2156.txt\">\n\t  <p>A heap overflow exists in the processing of the PrefixList\n\t  attribute optionally used in conjunction with Exclusive\n\t  Canonicalization, potentially allowing arbitary code execution.\n\t  If verification of the signature occurs prior to actual evaluation of a\n\t  signing key, this could be exploited by an unauthenticated attacker.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://santuario.apache.org/secadv.data/CVE-2013-2156.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/279e5f4b-d823-11e2-928e-08002798f6ff.html"
+				}
+			],
+			"published": "2013-06-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2156",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2156"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache-xml-security-c"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

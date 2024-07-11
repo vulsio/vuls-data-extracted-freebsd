@@ -1,0 +1,61 @@
+{
+	"id": "a955cdb7-d089-11ea-8c6f-080027eedc6a",
+	"advisories": [
+		{
+			"id": "a955cdb7-d089-11ea-8c6f-080027eedc6a",
+			"title": "FreeRDP -- Integer overflow in RDPEGFX channel",
+			"description": "\n\t<p>Bernhard Miklautz reports:</p>\n\t<blockquote cite=\"https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-4r38-6hq7-j3j9\">\n      <ul>\n\t    <li>\n\t  Integer overflow due to missing input sanitation in rdpegfx channel\n\t</li>\n\t<li>All FreeRDP clients are affected</li>\n\t<li>\n\t  The input rectangles from the server are not checked against local\n\t  surface coordinates and blindly accepted. A malicious server can send\n\t  data that will crash the client later on (invalid length arguments to\n\t  a memcpy)\n\t</li>\n      </ul>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15103"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freerdp.com/2020/07/20/2_2_0-released"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a955cdb7-d089-11ea-8c6f-080027eedc6a.html"
+				}
+			],
+			"published": "2020-07-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15103",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-15103"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freerdp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

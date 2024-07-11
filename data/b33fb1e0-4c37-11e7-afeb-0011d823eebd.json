@@ -1,0 +1,46 @@
+{
+	"id": "b33fb1e0-4c37-11e7-afeb-0011d823eebd",
+	"advisories": [
+		{
+			"id": "b33fb1e0-4c37-11e7-afeb-0011d823eebd",
+			"title": "GnuTLS -- Denial of service vulnerability",
+			"description": "\n\t<p>The GnuTLS project reports:</p>\n\t<blockquote cite=\"https://gnutls.org/security.html#GNUTLS-SA-2017-4\">\n\t  <p>It was found using the TLS fuzzer tools that decoding a status\n\t    response TLS extension with valid contents could lead to a crash\n\t    due to a null pointer dereference. The issue affects GnuTLS server\n\t    applications.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gnutls.org/security.html#GNUTLS-SA-2017-4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b33fb1e0-4c37-11e7-afeb-0011d823eebd.html"
+				}
+			],
+			"published": "2017-06-08T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.5.13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

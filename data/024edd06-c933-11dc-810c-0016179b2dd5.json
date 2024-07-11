@@ -1,0 +1,85 @@
+{
+	"id": "024edd06-c933-11dc-810c-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "024edd06-c933-11dc-810c-0016179b2dd5",
+			"title": "xfce -- multiple vulnerabilities",
+			"description": "\n\t<p>Gentoo reports:</p>\n\t<blockquote cite=\"http://www.gentoo.org/security/en/glsa/glsa-200801-06.xml\">\n\t  <p>A remote attacker could entice a user to install a specially\n\t    crafted \"rc\" file to execute arbitrary code via long strings\n\t    in the \"Name\" and \"Comment\" fields or via unspecified vectors\n\t    involving the second vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200801-06.xml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.xfce.org/documentation/changelogs/4.4.2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/024edd06-c933-11dc-810c-0016179b2dd5.html"
+				}
+			],
+			"published": "2008-01-22T00:00:00Z",
+			"modified": "2008-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-6531",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6531"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-6532",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6532"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xfce4-panel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxfce4gui"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

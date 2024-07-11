@@ -1,0 +1,134 @@
+{
+	"id": "e9ccdb28-9802-11e4-9d9c-bcaec565249c",
+	"advisories": [
+		{
+			"id": "e9ccdb28-9802-11e4-9d9c-bcaec565249c",
+			"title": "WebKit-gtk -- Multiple vulnerabilities",
+			"description": "\n\t<p>Webkit release team reports:</p>\n\t<blockquote cite=\"http://webkitgtk.org/2015/01/07/webkitgtk2.4.8-released.html\">\n\t  <p>This release fixes the following security issues:\n\t    CVE-2014-1344, CVE-2014-1384, CVE-2014-1385, CVE-2014-1386,\n\t    CVE-2014-1387, CVE-2014-1388, CVE-2014-1389, CVE-2014-1390.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://webkitgtk.org/2015/01/07/webkitgtk2.4.8-released.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e9ccdb28-9802-11e4-9d9c-bcaec565249c.html"
+				}
+			],
+			"published": "2015-01-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-1344",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1344"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1384",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1384"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1385",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1385"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1386",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1386"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1387",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1387"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1388",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1388"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1389",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1389"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1390",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1390"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkit-gtk2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkit-gtk3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

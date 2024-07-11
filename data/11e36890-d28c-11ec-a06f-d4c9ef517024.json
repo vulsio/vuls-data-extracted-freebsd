@@ -1,0 +1,102 @@
+{
+	"id": "11e36890-d28c-11ec-a06f-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "11e36890-d28c-11ec-a06f-d4c9ef517024",
+			"title": "curl -- Multiple vulnerabilities",
+			"description": "\n\t<p>The curl project reports:</p>\n\t<blockquote cite=\"https://curl.se/docs/security.html\">\n\t  <p>CVE-2022-27778: curl removes wrong file on error</p>\n\t  <p>CVE-2022-27779: cookie for trailing dot TLD</p>\n\t  <p>CVE-2022-27780: percent-encoded path separator in URL host</p>\n\t  <p>CVE-2022-27781: CERTINFO never-ending busy-loop</p>\n\t  <p>CVE-2022-27782: TLS and SSH connection too eager reuse</p>\n\t  <p>CVE-2022-30115: HSTS bypass via trailing dot</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://curl.se/docs/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/11e36890-d28c-11ec-a06f-d4c9ef517024.html"
+				}
+			],
+			"published": "2022-05-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-27778",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27778"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27779",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27779"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27780",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27780"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27781",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27781"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27782",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-27782"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-30115",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-30115"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.83.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

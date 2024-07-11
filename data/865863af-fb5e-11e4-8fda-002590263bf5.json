@@ -1,0 +1,46 @@
+{
+	"id": "865863af-fb5e-11e4-8fda-002590263bf5",
+	"advisories": [
+		{
+			"id": "865863af-fb5e-11e4-8fda-002590263bf5",
+			"title": "py-salt -- potential shell injection vulnerabilities",
+			"description": "\n\t<p>Colton Myers reports:</p>\n\t<blockquote cite=\"http://docs.saltstack.com/en/latest/topics/releases/2015.5.0.html\">\n\t  <p>In order to fix potential shell injection vulnerabilities in salt\n\t     modules, a change has been made to the various cmd module functions.\n\t     These functions now default to python_shell=False, which means that\n\t     the commands will not be sent to an actual shell.</p>\n\t  <p>The largest side effect of this change is that \"shellisms\", such as\n\t     pipes, will not work by default. The modules shipped with salt have\n\t     been audited to fix any issues that might have arisen from this\n\t     change. Additionally, the cmd state module has been unaffected, and\n\t     use of cmd.run in jinja is also unaffected. cmd.run calls on the\n\t     CLI will also allow shellisms.</p>\n\t  <p>However, custom execution modules which use shellisms in cmd calls\n\t     will break, unless you pass python_shell=True to these calls.</p>\n\t  <p>As a temporary workaround, you can set cmd_safe: False in your\n\t     minion and master configs. This will revert the default, but is\n\t     also less secure, as it will allow shell injection vulnerabilities\n\t     to be written in custom code. We recommend you only set this\n\t     setting for as long as it takes to resolve these issues in your\n\t     custom code, then remove the override.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://docs.saltstack.com/en/latest/topics/releases/2015.5.0.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/865863af-fb5e-11e4-8fda-002590263bf5.html"
+				}
+			],
+			"published": "2015-05-24T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-salt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2015.5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

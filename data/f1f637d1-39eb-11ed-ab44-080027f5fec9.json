@@ -1,0 +1,58 @@
+{
+	"id": "f1f637d1-39eb-11ed-ab44-080027f5fec9",
+	"advisories": [
+		{
+			"id": "f1f637d1-39eb-11ed-ab44-080027f5fec9",
+			"title": "redis -- Potential remote code execution vulnerability",
+			"description": "\n\t<p>The Redis core team reports:</p>\n\t<blockquote cite=\"https://github.com/redis/redis/releases/tag/7.0.5\">\n\t  <p>\n\t    Executing a XAUTOCLAIM command on a stream key in a\n\t    specific state, with a specially crafted COUNT argument,\n\t    may cause an integer overflow, a subsequent heap overflow,\n\t    and potentially lead to remote code execution. The problem\n\t    affects Redis versions 7.0.0 or newer.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/redis/redis/releases/tag/7.0.5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f1f637d1-39eb-11ed-ab44-080027f5fec9.html"
+				}
+			],
+			"published": "2022-09-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-35951",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-35951"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.5",
+									"ge": "7.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

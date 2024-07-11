@@ -1,0 +1,66 @@
+{
+	"id": "af747389-42ba-11d9-bd37-00065be4b5b6",
+	"advisories": [
+		{
+			"id": "af747389-42ba-11d9-bd37-00065be4b5b6",
+			"title": "mod_access_referer -- null pointer dereference vulnerability",
+			"description": "\n\t<p>A malformed <q>Referer</q> header field causes the Apache\n\t  ap_parse_uri_components function to discard it with the\n\t  result that a pointer is not initialized.  The\n\t  mod_access_referer module does not take this into account\n\t  with the result that it may use such a pointer.</p>\n\t<p>The null pointer vulnerability may possibly be used in a\n\t  remote denial of service attack against affected Apache\n\t  servers.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=105053485515811"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/8612/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/7375"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/af747389-42ba-11d9-bd37-00065be4b5b6.html"
+				}
+			],
+			"published": "2004-12-11T00:00:00Z",
+			"modified": "2005-01-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2003-1054",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2003-1054"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_access_referer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.2_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,57 @@
+{
+	"id": "ce79167f-ee1c-11eb-9785-b42e99a1b9c3",
+	"advisories": [
+		{
+			"id": "ce79167f-ee1c-11eb-9785-b42e99a1b9c3",
+			"title": "powerdns -- remotely triggered crash",
+			"description": "\n\t<p>powerdns reports:</p>\n\t<blockquote cite=\"https://www.powerdns.com/news.html#20210726\">\n\t  <p>PowerDNS Security Advisory 2021-01: Specific query crashes Authoritative Server</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.powerdns.com/2021/07/26/security-advisory-2021-01-for-powerdns-authoritative-server-4-5-0/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ce79167f-ee1c-11eb-9785-b42e99a1b9c3.html"
+				}
+			],
+			"published": "2021-07-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-36754",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-36754"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"eq": "4.5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

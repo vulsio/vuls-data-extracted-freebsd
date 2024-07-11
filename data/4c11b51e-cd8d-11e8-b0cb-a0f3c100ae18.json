@@ -1,0 +1,46 @@
+{
+	"id": "4c11b51e-cd8d-11e8-b0cb-a0f3c100ae18",
+	"advisories": [
+		{
+			"id": "4c11b51e-cd8d-11e8-b0cb-a0f3c100ae18",
+			"title": "Memory leak bug in Toxcore",
+			"description": "\n\t<p>The Tox project blog reports:</p>\n\t<blockquote cite=\"https://blog.tox.chat/2018/10/memory-leak-bug-and-new-toxcore-release-fixing-it/\">\n\t  <p>A memory leak bug was discovered in Toxcore that can be triggered remotely to\nexhaust one’s system memory, resulting in a denial of service attack.\nThe bug is present in the TCP Server module of Toxcore and therefore it\naffects mostly bootstrap nodes. Regular Tox clients generally have the\nTCP Server functionality disabled by default, leaving them unaffected.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.tox.chat/2018/10/memory-leak-bug-and-new-toxcore-release-fixing-it/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4c11b51e-cd8d-11e8-b0cb-a0f3c100ae18.html"
+				}
+			],
+			"published": "2018-10-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "toxcore"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.2.8,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

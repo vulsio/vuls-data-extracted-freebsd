@@ -1,0 +1,57 @@
+{
+	"id": "6c808811-bb9a-11e5-a65c-485d605f4717",
+	"advisories": [
+		{
+			"id": "6c808811-bb9a-11e5-a65c-485d605f4717",
+			"title": "h2o -- directory traversal vulnerability",
+			"description": "\n\t<p>Yakuzo OKU reports:</p>\n\t<blockquote cite=\"http://h2o.examp1e.net/vulnerabilities.html\">\n\t  <p>When redirect directive is used, this flaw allows a remote\n\t     attacker to inject response headers into an HTTP redirect response.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://h2o.examp1e.net/vulnerabilities.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6c808811-bb9a-11e5-a65c-485d605f4717.html"
+				}
+			],
+			"published": "2016-01-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1133",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1133"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "h2o"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

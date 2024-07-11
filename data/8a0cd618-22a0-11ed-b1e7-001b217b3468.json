@@ -1,0 +1,66 @@
+{
+	"id": "8a0cd618-22a0-11ed-b1e7-001b217b3468",
+	"advisories": [
+		{
+			"id": "8a0cd618-22a0-11ed-b1e7-001b217b3468",
+			"title": "Gitlab -- Remote Code Execution",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2022/08/22/critical-security-release-gitlab-15-3-1-released/\">\n\t  <p>Remote Command Execution via Github import</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2022/08/22/critical-security-release-gitlab-15-3-1-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8a0cd618-22a0-11ed-b1e7-001b217b3468.html"
+				}
+			],
+			"published": "2022-08-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2884",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-2884"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "15.3.1",
+									"ge": "15.3.0"
+								},
+								{
+									"lt": "15.2.3",
+									"ge": "15.2.0"
+								},
+								{
+									"lt": "15.1.5",
+									"ge": "11.3.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

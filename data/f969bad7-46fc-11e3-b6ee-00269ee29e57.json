@@ -1,0 +1,53 @@
+{
+	"id": "f969bad7-46fc-11e3-b6ee-00269ee29e57",
+	"advisories": [
+		{
+			"id": "f969bad7-46fc-11e3-b6ee-00269ee29e57",
+			"title": "Quassel IRC -- SQL injection vulnerability",
+			"description": "\n\t<p>Quassel IRC developers report:</p>\n\t<blockquote cite=\"http://www.quassel-irc.org/node/120\">\n\t  <p>SQL injection vulnerability in Quassel IRC before 0.9.1,\n\t    when Qt 4.8.5 or later and PostgreSQL 8.2 or later are used,\n\t    allows remote attackers to execute arbitrary SQL commands via\n\t    a \\ (backslash) in a message.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f969bad7-46fc-11e3-b6ee-00269ee29e57.html"
+				}
+			],
+			"published": "2013-11-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4422",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4422"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "quassel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

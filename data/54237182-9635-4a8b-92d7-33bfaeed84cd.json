@@ -1,0 +1,67 @@
+{
+	"id": "54237182-9635-4a8b-92d7-33bfaeed84cd",
+	"advisories": [
+		{
+			"id": "54237182-9635-4a8b-92d7-33bfaeed84cd",
+			"title": "ruby-gems -- Algorithmic Complexity Vulnerability",
+			"description": "\n\t<p>Ruby Gem developers report:</p>\n\t<blockquote cite=\"http://blog.rubygems.org/2013/09/09/CVE-2013-4287.html\">\n\t  <p>RubyGems validates versions with a regular expression that is\n\t    vulnerable to denial of service due to backtracking. For specially\n\t    crafted RubyGems versions attackers can cause denial of service\n\t    through CPU consumption.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/54237182-9635-4a8b-92d7-33bfaeed84cd.html"
+				}
+			],
+			"published": "2013-11-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4287",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4287"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby19-gems"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.26"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby20-gems"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.26"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

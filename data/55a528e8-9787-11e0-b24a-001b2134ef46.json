@@ -1,0 +1,71 @@
+{
+	"id": "55a528e8-9787-11e0-b24a-001b2134ef46",
+	"advisories": [
+		{
+			"id": "55a528e8-9787-11e0-b24a-001b2134ef46",
+			"title": "linux-flashplugin -- remote code execution vulnerability",
+			"description": "\n\t<p>Adobe Product Security Incident Response Team reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb11-18.html\">\n\t  <p>A critical vulnerability has been identified in Adobe Flash\n\t    Player 10.3.181.23 and earlier versions for Windows, Macintosh,\n\t    Linux and Solaris, and Adobe Flash Player 10.3.185.23 and\n\t    earlier versions for Android.  This memory corruption\n\t    vulnerability (CVE-2011-2110) could cause a crash and\n\t    potentially allow an attacker to take control of the affected\n\t    system.  There are reports that this vulnerability is being\n\t    exploited in the wild in targeted attacks via malicious Web\n\t    pages.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/security/bulletins/apsb11-18.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/55a528e8-9787-11e0-b24a-001b2134ef46.html"
+				}
+			],
+			"published": "2011-06-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2110",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2110"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.0r289"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.3r181.26"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "ef0033ad-5823-11e6-80cc-001517f335e2",
+	"advisories": [
+		{
+			"id": "ef0033ad-5823-11e6-80cc-001517f335e2",
+			"title": "lighttpd - multiple vulnerabilities",
+			"description": "\n\t<p>Lighttpd Project reports:</p>\n\t<blockquote cite=\"http://www.lighttpd.net/2016/7/31/1.4.41/\">\n\t  <p>Security fixes for Lighttpd:</p>\n\t  <ul>\n\t    <li><p>security: encode quoting chars in HTML and XML</p></li>\n\t    <li><p>security: ensure gid != 0 if server.username is set, but not server.groupname</p></li>\n\t    <li><p>security: disable stat_cache if server.follow-symlink = “disable”</p></li>\n\t    <li><p>security: httpoxy defense: do not emit HTTP_PROXY to CGI env</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.lighttpd.net/2016/7/31/1.4.41/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=211495"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ef0033ad-5823-11e6-80cc-001517f335e2.html"
+				}
+			],
+			"published": "2016-08-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.41"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

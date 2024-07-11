@@ -1,0 +1,61 @@
+{
+	"id": "4d7cf654-ba4d-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "4d7cf654-ba4d-11e6-ae1b-002590263bf5",
+			"title": "xen-kernel -- CR0.TS and CR0.EM not always honored for x86 HVM guests",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"https://xenbits.xen.org/xsa/advisory-190.html\">\n\t  <p>Instructions touching FPU, MMX, or XMM registers are required to\n\t    raise a Device Not Available Exception (#NM) when either CR0.EM or\n\t    CR0.TS are set. (Their AVX or AVX-512 extensions would consider only\n\t    CR0.TS.) While during normal operation this is ensured by the\n\t    hardware, if a guest modifies instructions while the hypervisor is\n\t    preparing to emulate them, the #NM delivery could be missed.</p>\n\t  <p>Guest code in one task may thus (unintentionally or maliciously)\n\t    read or modify register state belonging to another task in the same\n\t    VM.</p>\n\t  <p>A malicious unprivileged guest user may be able to obtain or\n\t    corrupt sensitive information (including cryptographic material) in\n\t    other programs in the same guest.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=214936"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4d7cf654-ba4d-11e6-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://xenbits.xen.org/xsa/advisory-190.html"
+				}
+			],
+			"published": "2016-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-7777",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7777"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xen-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.7.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,60 @@
+{
+	"id": "01356ccc-6a87-11da-b96e-000fb586ba73",
+	"advisories": [
+		{
+			"id": "01356ccc-6a87-11da-b96e-000fb586ba73",
+			"title": "horde -- Cross site scripting vulnerabilities in several of Horde's templates",
+			"description": "\n\t<p>Announce of Horde H3 3.0.8 (final):</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=horde-announce&amp;m=113433346726097&amp;w=2\">\n\t  <p>This [3.0.8] is a security release that fixes cross site\n\t    scripting vulnerabilities in several of Horde's templates.\n\t    None of the vulnerabilities can be exploited by\n\t    unauthenticated users; however, we strongly recommend that\n\t    all users of Horde 3.0.7 upgrade to 3.0.8 as soon as\n\t    possible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=horde-announce&m=113433346726097&w=2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/01356ccc-6a87-11da-b96e-000fb586ba73.html"
+				}
+			],
+			"published": "2005-12-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "horde"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "horde-php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

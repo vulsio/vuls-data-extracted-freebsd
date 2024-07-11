@@ -1,0 +1,85 @@
+{
+	"id": "36858e78-3963-11e4-ad84-000c29f6ae42",
+	"advisories": [
+		{
+			"id": "36858e78-3963-11e4-ad84-000c29f6ae42",
+			"title": "security/ossec-hids-* -- root escalation via temp files",
+			"description": "\n\t<p>OSSEC reports:</p>\n\t<blockquote cite=\"http://www.ossec.net/?p=1135\">\n\t  <p>This correction will create the temp file for the hosts deny file\n\t    in /var/ossec and will use mktemp where available to create\n\t    NON-predictable temp file name. In cases where mktemp is not\n\t    available we have written a BAD version of mktemp, but should be a\n\t    little better then just process id.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ossec.net/?p=1135"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/36858e78-3963-11e4-ad84-000c29f6ae42.html"
+				}
+			],
+			"published": "2014-09-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-5284",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-5284"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ossec-hids-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ossec-hids-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ossec-hids-local"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

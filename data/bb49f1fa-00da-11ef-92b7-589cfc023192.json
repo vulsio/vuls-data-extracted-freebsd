@@ -1,0 +1,102 @@
+{
+	"id": "bb49f1fa-00da-11ef-92b7-589cfc023192",
+	"advisories": [
+		{
+			"id": "bb49f1fa-00da-11ef-92b7-589cfc023192",
+			"title": "GLPI -- multiple vulnerabilities",
+			"description": "\n\t<p>GLPI team reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.13\">\n\t  <p>GLPI 10.0.13 Changelog</p>\n\t  <ul>\n\t    <li>[SECURITY - high] SQL Injection in through the search engine (CVE-2024-27096)</li>\n\t    <li>[SECURITY - moderate] Blind SSRF using Arbitrary Object Instantiation (CVE-2024-27098)</li>\n\t    <li>[SECURITY - moderate] Stored XSS in dashboards (CVE-2024-27104)</li>\n\t    <li>[SECURITY - moderate] Reflected XSS in debug mode (CVE-2024-27914)</li>\n\t    <li>[SECURITY - moderate] Sensitive fields access through dropdowns (CVE-2024-27930)</li>\n\t    <li>[SECURITY - moderate] Users emails enumeration (CVE-2024-27937)</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/releases/tag/10.0.13"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bb49f1fa-00da-11ef-92b7-589cfc023192.html"
+				}
+			],
+			"published": "2024-04-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-27096",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27096"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-27098",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27098"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-27104",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27104"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-27914",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27914"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-27930",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27930"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-27937",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-27937"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "glpi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.13,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

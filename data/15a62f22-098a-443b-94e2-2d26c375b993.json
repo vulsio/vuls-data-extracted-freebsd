@@ -1,0 +1,61 @@
+{
+	"id": "15a62f22-098a-443b-94e2-2d26c375b993",
+	"advisories": [
+		{
+			"id": "15a62f22-098a-443b-94e2-2d26c375b993",
+			"title": "osip -- Improper Restriction of Operations within the Bounds of a Memory Buffer",
+			"description": "\n\t<p>osip developers reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/97644\">\n\t  <p>In libosip2 in GNU oSIP 4.1.0 and 5.0.0, a malformed SIP message can lead to a heap buffer overflow in the msg_osip_body_parse() function defined in osipparser2/osip_message_parse.c, resulting in a remote DoS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/97644"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://savannah.gnu.org/support/index.php?109265"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/15a62f22-098a-443b-94e2-2d26c375b993.html"
+				}
+			],
+			"published": "2017-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-7853",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7853"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libosip2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "5.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

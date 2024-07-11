@@ -1,0 +1,57 @@
+{
+	"id": "03bb8373-2026-11ed-9d70-080027240888",
+	"advisories": [
+		{
+			"id": "03bb8373-2026-11ed-9d70-080027240888",
+			"title": "drupal9 -- multiple vulnerabilities",
+			"description": "\n\t<p>Drupal reports:</p>\n\t<blockquote cite=\"https://www.drupal.org/project/drupal/releases/9.4.5\">\n\t  <p>CVE-2022-31175: Cross-site scripting (XSS) caused by the editor\n\t     instance destroying process.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.drupal.org/project/drupal/releases/9.4.5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/03bb8373-2026-11ed-9d70-080027240888.html"
+				}
+			],
+			"published": "2022-08-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-31175",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-31175"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal9"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.4.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

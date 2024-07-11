@@ -1,0 +1,72 @@
+{
+	"id": "c2eac2b5-9a7d-11df-8e32-000f20797ede",
+	"advisories": [
+		{
+			"id": "c2eac2b5-9a7d-11df-8e32-000f20797ede",
+			"title": "firefox -- Dangling pointer crash regression from plugin parameter array fix",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2010-48 Dangling pointer crash regression from plugin parameter array fix</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2010/mfsa2010-48.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c2eac2b5-9a7d-11df-8e32-000f20797ede.html"
+				}
+			],
+			"published": "2010-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-2755",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2755"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.8,1",
+									"gt": "3.6.*,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.8,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

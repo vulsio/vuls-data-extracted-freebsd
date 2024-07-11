@@ -1,0 +1,99 @@
+{
+	"id": "b3edc7d9-9af5-4daf-88f1-61f68f4308c2",
+	"advisories": [
+		{
+			"id": "b3edc7d9-9af5-4daf-88f1-61f68f4308c2",
+			"title": "Jupyter Notebook -- vulnerability",
+			"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8768\">\n\t  <p>In Jupyter Notebook before 5.4.1, a maliciously forged notebook file\n\t    can bypass sanitization to execute JavaScript in the notebook context.\n\t    Specifically, invalid HTML is 'fixed' by jQuery after sanitization,\n\t\tmaking it dangerous.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8768"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b3edc7d9-9af5-4daf-88f1-61f68f4308c2.html"
+				}
+			],
+			"published": "2018-03-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-8768",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-8768"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-notebook"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py34-notebook"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py35-notebook"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py36-notebook"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

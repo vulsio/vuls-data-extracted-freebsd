@@ -1,0 +1,67 @@
+{
+	"id": "aa4f86af-3172-11e2-ad21-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "aa4f86af-3172-11e2-ad21-20cf30e32f6d",
+			"title": "YUI JavaScript library -- JavaScript injection exploits in Flash components",
+			"description": "\n\t<p>The YUI team reports:</p>\n\t<blockquote cite=\"http://yuilibrary.com/support/20121030-vulnerability/\">\n\t  <h1>Vulnerability in YUI 2.4.0 through YUI 2.9.0</h1>\n\t  <p>A XSS vulnerability has been discovered in some YUI 2 .swf files\n\t    from versions 2.4.0 through 2.9.0. This defect allows JavaScript\n\t    injection exploits to be created against domains that host affected\n\t    YUI .swf files.</p>\n\t  <p>If your site loads YUI 2 from a CDN (yui.yahooapis.com,\n\t     ajax.googleapis.com, etc.) and not from your own domain, you\n\t     are not affected. YUI 3 is not affected by this issue.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://yuilibrary.com/support/20121030-vulnerability/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/aa4f86af-3172-11e2-ad21-20cf30e32f6d.html"
+				}
+			],
+			"published": "2012-11-27T00:00:00Z",
+			"modified": "2012-11-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5881",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5881"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5882",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5882"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "yahoo-ui"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.8.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

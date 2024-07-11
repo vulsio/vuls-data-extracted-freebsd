@@ -1,0 +1,97 @@
+{
+	"id": "d1681df3-421e-4a63-95b4-a3d6e29d395d",
+	"advisories": [
+		{
+			"id": "d1681df3-421e-4a63-95b4-a3d6e29d395d",
+			"title": "electron{23,24} -- multiple vulnerabilities",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v23.3.10\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2023-3422.</li>\n\t    <li>Security: backported fix for CVE-2023-3421.</li>\n\t    <li>Security: backported fix for CVE-2023-3420.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-4297-fx5c-x987"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-943x-93ff-jr62"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-gqjh-f545-vcx3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d1681df3-421e-4a63-95b4-a3d6e29d395d.html"
+				}
+			],
+			"published": "2023-07-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-3420",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3420"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-3421",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3421"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-3422",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3422"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "electron23"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "23.3.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "electron24"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.6.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

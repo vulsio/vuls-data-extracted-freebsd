@@ -1,0 +1,71 @@
+{
+	"id": "7329938b-a4e6-11e5-b864-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "7329938b-a4e6-11e5-b864-14dae9d210b8",
+			"title": "cups-filters -- code execution",
+			"description": "\n\t<p>Till Kamppeter reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/12/14/13\">\n\t  <p>Cups Filters/Foomatic Filters does not consider semicolon\n\t    as an illegal escape character.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/12/14/13"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7329938b-a4e6-11e5-b864-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-12-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8560",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8560"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cups-filters"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "foomatic-filters"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.17_4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

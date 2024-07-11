@@ -1,0 +1,46 @@
+{
+	"id": "b747783f-5fb6-11e9-b2ac-08002705f877",
+	"advisories": [
+		{
+			"id": "b747783f-5fb6-11e9-b2ac-08002705f877",
+			"title": "gitea -- remote code execution",
+			"description": "\n\t<p>The Gitea team reports:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2019/04/gitea-1.7.6-is-released/\">\n\t  <p>Prevent remote code execution vulnerability with mirror repo URL settings.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.gitea.io/2019/04/gitea-1.7.6-is-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b747783f-5fb6-11e9-b2ac-08002705f877.html"
+				}
+			],
+			"published": "2019-04-17T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

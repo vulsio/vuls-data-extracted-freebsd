@@ -1,0 +1,76 @@
+{
+	"id": "f0fa19dd-c060-11dc-982e-001372fd0af2",
+	"advisories": [
+		{
+			"id": "f0fa19dd-c060-11dc-982e-001372fd0af2",
+			"title": "drupal -- cross site scripting (register_globals)",
+			"description": "\n\t<p>The Drupal Project reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/208565\">\n\t  <p>When theme .tpl.php files are accessible via the web and the PHP\n\t    setting register_globals is set to enabled, anonymous users are\n\t    able to execute cross site scripting attacks via specially\n\t    crafted links.</p>\n\t  <p>Drupal's .htaccess attempts to set register_globals to disabled\n\t    and also prevents access to .tpl.php files. Only when both these\n\t    measures are not effective and your PHP interpreter is\n\t    configured with register_globals set to enabled, will this issue\n\t    affect you.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://drupal.org/node/208565"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/28422/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f0fa19dd-c060-11dc-982e-001372fd0af2.html"
+				}
+			],
+			"published": "2008-01-11T00:00:00Z",
+			"modified": "2010-05-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-0274",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0274"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal4"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.7.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

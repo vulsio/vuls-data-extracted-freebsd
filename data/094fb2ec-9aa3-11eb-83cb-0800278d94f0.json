@@ -1,0 +1,50 @@
+{
+	"id": "094fb2ec-9aa3-11eb-83cb-0800278d94f0",
+	"advisories": [
+		{
+			"id": "094fb2ec-9aa3-11eb-83cb-0800278d94f0",
+			"title": "gitea -- multiple vulnerabilities",
+			"description": "\n\t<p>The Gitea Team reports for release 1.14.0:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2021/04/gitea-1.14.0-is-released/\">\n\t  <ul>\n\t    <li>Validate email in external authenticator registration form</li>\n\t    <li>Ensure validation occurs on clone addresses too</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=254976"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/releases/tag/v1.14.0"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/094fb2ec-9aa3-11eb-83cb-0800278d94f0.html"
+				}
+			],
+			"published": "2021-04-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.14.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

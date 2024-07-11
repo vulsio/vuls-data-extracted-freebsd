@@ -1,0 +1,61 @@
+{
+	"id": "fc99c736-3499-11d9-98a7-0090962cff2a",
+	"advisories": [
+		{
+			"id": "fc99c736-3499-11d9-98a7-0090962cff2a",
+			"title": "gnats -- format string vulnerability",
+			"description": "\n\t<p>Gnats suffers from a format string bug, which may enable an\n\t  attacker to execute arbitary code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108820000823191"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc99c736-3499-11d9-98a7-0090962cff2a.html"
+				}
+			],
+			"published": "2004-11-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0623",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0623"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnats"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.0_2",
+									"ge": "4.*"
+								},
+								{
+									"le": "3.113.1_9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

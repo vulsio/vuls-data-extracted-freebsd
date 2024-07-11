@@ -1,0 +1,69 @@
+{
+	"id": "96df5fd0-8900-11d9-aa18-0001020eed82",
+	"advisories": [
+		{
+			"id": "96df5fd0-8900-11d9-aa18-0001020eed82",
+			"title": "curl -- authentication buffer overflow vulnerability",
+			"description": "\n\t<p>Two iDEFENSE Security Advisories reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=110902601221592\">\n\t  <p>An exploitable stack-based buffer overflow condition\n\t    exists when using NT Lan Manager (NTLM)\n\t    authentication. The problem specifically exists within\n\t    <code>Curl_input_ntlm()</code> defined in\n\t    lib/http_ntlm.c.</p>\n\t  <p>Successful exploitation allows remote attackers to\n\t    execute arbitrary code under the privileges of the target\n\t    user. Exploitation requires that an attacker either coerce\n\t    or force a target to connect to a malicious server using\n\t    NTLM authentication.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=110902850731457\">\n\t  <p>An exploitable stack-based buffer overflow condition\n\t    exists when using Kerberos authentication. The problem\n\t    specifically exists within the functions\n\t    <code>Curl_krb_kauth()</code> and <code>krb4_auth()</code>\n\t    defined in lib/krb4.c.</p>\n\t  <p>Successful exploitation allows remote attackers to\n\t    execute arbitrary code under the privileges of the target\n\t    user. Exploitation requires that an attacker either coerce\n\t    or force a target to connect to a malicious server using\n\t    Kerberos authentication.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110902601221592"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110902850731457"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12615"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12616"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/96df5fd0-8900-11d9-aa18-0001020eed82.html"
+				}
+			],
+			"published": "2005-02-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0490",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0490"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.13.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

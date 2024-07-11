@@ -1,0 +1,57 @@
+{
+	"id": "576aa394-1d85-11ec-8b7d-4f5b624574e2",
+	"advisories": [
+		{
+			"id": "576aa394-1d85-11ec-8b7d-4f5b624574e2",
+			"title": "webkit2-gtk3 -- multiple vulnerabilities",
+			"description": "\n\t<p>The WebKitGTK project reports vulnerabilities:</p>\n\t<blockquote cite=\"https://webkitgtk.org/security/WSA-2021-0005.html\">\n\t\t<ul><li>CVE-2021-30858: Processing maliciously crafted web content may lead to arbitrary code execution.</li></ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://webkitgtk.org/security/WSA-2021-0005.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/576aa394-1d85-11ec-8b7d-4f5b624574e2.html"
+				}
+			],
+			"published": "2021-09-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-30858",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-30858"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkit2-gtk3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.32.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

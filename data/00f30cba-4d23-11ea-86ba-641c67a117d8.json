@@ -1,0 +1,69 @@
+{
+	"id": "00f30cba-4d23-11ea-86ba-641c67a117d8",
+	"advisories": [
+		{
+			"id": "00f30cba-4d23-11ea-86ba-641c67a117d8",
+			"title": "libexif -- privilege escalation",
+			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9278\">\n\t  <p>In libexif, there is a possible out of bounds write due to an integer overflow.\n      This could lead to remote escalation of privilege in the media content provider\n      with no additional execution privileges needed. User interaction is needed for\n      exploitation.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9278"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/libexif/libexif/issues/26"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://seclists.org/bugtraq/2020/Feb/9"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://security-tracker.debian.org/tracker/CVE-2019-9278"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/00f30cba-4d23-11ea-86ba-641c67a117d8.html"
+				}
+			],
+			"published": "2020-02-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-9278",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9278"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libexif"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.21_5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

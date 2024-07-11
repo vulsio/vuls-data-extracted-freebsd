@@ -1,0 +1,121 @@
+{
+	"id": "49adfbe5-e7d1-11ec-8fbd-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "49adfbe5-e7d1-11ec-8fbd-d4c9ef517024",
+			"title": "Apache httpd -- Multiple vulnerabilities",
+			"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"http://downloads.apache.org/httpd/CHANGES_2.4.54\">\n\t  <ul>\n\t    <li>CVE-2022-31813: mod_proxy X-Forwarded-For dropped by hop-by-hop\n\t      mechanism. Apache HTTP Server 2.4.53 and earlier may not send the\n\t      X-Forwarded-* headers to the origin server based on client side\n\t      Connection header hop-by-hop mechanism. This may be used to bypass\n\t      IP based authentication on the origin server/application.</li>\n\t    <li>CVE-2022-30556: Information Disclosure in mod_lua with websockets.\n\t      Apache HTTP Server 2.4.53 and earlier may return lengths to\n\t      applications calling r:wsread() that point past the end of the\n\t      storage allocated for the buffer.</li>\n\t    <li>CVE-2022-30522: mod_sed denial of service. If Apache HTTP Server\n\t      2.4.53 is configured to do transformations with mod_sed in contexts\n\t      where the input to mod_sed may be very large, mod_sed may make\n\t      excessively large memory allocations and trigger an abort.</li>\n\t    <li>CVE-2022-29404: Denial of service in mod_lua r:parsebody. In Apache\n\t      HTTP Server 2.4.53 and earlier, a malicious request to a lua script\n\t      that calls r:parsebody(0) may cause a denial of service due to no\n\t      default limit on possible input size.</li>\n\t    <li>CVE-2022-28615: Read beyond bounds in ap_strcmp_match(). Apache\n\t      HTTP Server 2.4.53 and earlier may crash or disclose information due\n\t      to a read beyond bounds in ap_strcmp_match() when provided with an\n\t      extremely large input buffer.  While no code distributed with the\n\t      server can be coerced into such a call, third-party modules or lua\n\t      scripts that use ap_strcmp_match() may hypothetically be affected.\n\t    </li>\n\t    <li>CVE-2022-28614: read beyond bounds via ap_rwrite(). The ap_rwrite()\n\t      function in Apache HTTP Server 2.4.53 and earlier may read unintended\n\t      memory if an attacker can cause the server to reflect very large\n\t      input using ap_rwrite() or ap_rputs(), such as with mod_luas r:puts()\n\t      function.</li>\n\t    <li>CVE-2022-28330: read beyond bounds in mod_isapi. Apache HTTP Server\n\t      2.4.53 and earlier on Windows may read beyond bounds when configured\n\t      to process requests with the mod_isapi module.</li>\n\t    <li>CVE-2022-26377: mod_proxy_ajp: Possible request smuggling.\n\t      Inconsistent Interpretation of HTTP Requests ('HTTP Request\n\t      Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server\n\t      allows an attacker to smuggle requests to the AJP server it forwards\n\t      requests to.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.apache.org/httpd/CHANGES_2.4.54"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/49adfbe5-e7d1-11ec-8fbd-d4c9ef517024.html"
+				}
+			],
+			"published": "2022-06-09T00:00:00Z",
+			"modified": "2022-06-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-26377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-26377"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-28330",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-28330"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-28614",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-28614"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-28615",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-28615"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-29404",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-29404"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-30522",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-30522"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-30556",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-30556"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31813",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-31813"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache24"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.54"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

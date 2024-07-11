@@ -1,0 +1,98 @@
+{
+	"id": "c174118e-1b11-11ec-9d9d-0022489ad614",
+	"advisories": [
+		{
+			"id": "c174118e-1b11-11ec-9d9d-0022489ad614",
+			"title": "Node.js -- July 2021 Security Releases",
+			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/july-2021-security-releases/\">\n\t  <h1>libuv upgrade - Out of bounds read (Medium) (CVE-2021-22918)</h1>\n\t  <p>Node.js is vulnerable to out-of-bounds read in libuv's uv__idna_toascii() function which is used to convert strings to ASCII. This is called by Node's dns module's lookup() function and can lead to information disclosures or crashes.</p>\n\t  <h1>Windows installer - Node Installer Local Privilege Escalation (Medium) (CVE-2021-22921)</h1>\n\t  <p>Node.js is vulnerable to local privilege escalation attacks under certain conditions on Windows platforms. More specifically, improper configuration of permissions in the installation directory allows an attacker to perform two different escalation attacks: PATH and DLL hijacking.</p>\n\t  <h1>npm upgrade - ssri Regular Expression Denial of Service (ReDoS) (High) (CVE-2021-27290)</h1>\n\t  <p>This is a vulnerability in the ssri npm module which may be vulnerable to denial of service attacks.</p>\n\t  <h1>npm upgrade - hosted-git-info Regular Expression Denial of Service (ReDoS) (Medium) (CVE-2021-23362)</h1>\n\t  <p>This is a vulnerability in the hosted-git-info npm module which may be vulnerable to denial of service attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nodejs.org/en/blog/vulnerability/july-2021-security-releases/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c174118e-1b11-11ec-9d9d-0022489ad614.html"
+				}
+			],
+			"published": "2021-09-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-22918",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22918"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-22921",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22921"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-23362",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-23362"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-27290",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-27290"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node14"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.17.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "node"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.4.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,46 @@
+{
+	"id": "44e5f5bd-4d76-11da-bf37-000fb586ba73",
+	"advisories": [
+		{
+			"id": "44e5f5bd-4d76-11da-bf37-000fb586ba73",
+			"title": "pear-PEAR -- PEAR installer arbitrary code execution vulnerability",
+			"description": "\n\t<p>Gregory Beaver reports:</p>\n\t<blockquote cite=\"http://pear.php.net/advisory-20051104.txt\">\n\t  <p>A standard feature of the PEAR installer implemented in\n\t    all versions of PEAR can lead to the execution of\n\t    arbitrary PHP code upon running the \"pear\" command\n\t    or loading the Web/Gtk frontend.</p>\n\t  <p>To be vulnerable, a user must explicitly install a\n\t    publicly released malicious package using the PEAR\n\t    installer, or explicitly install a package that depends on\n\t    a malicious package.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://pear.php.net/advisory-20051104.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/44e5f5bd-4d76-11da-bf37-000fb586ba73.html"
+				}
+			],
+			"published": "2005-11-04T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pear-PEAR"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

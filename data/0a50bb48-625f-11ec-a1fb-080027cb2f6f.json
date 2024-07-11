@@ -1,0 +1,130 @@
+{
+	"id": "0a50bb48-625f-11ec-a1fb-080027cb2f6f",
+	"advisories": [
+		{
+			"id": "0a50bb48-625f-11ec-a1fb-080027cb2f6f",
+			"title": "mediawiki -- multiple vulnerabilities",
+			"description": "\n\t<p>Mediawiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/QEN3EK4JXAVJMJ5GF3GYOAKNJPEKFQYA/\">\n\t  <p>(T292763. CVE-2021-44854) REST API incorrectly publicly caches\n\t    autocomplete search results from private wikis.</p>\n\t  <p>(T271037, CVE-2021-44856) Title blocked in AbuseFilter can be created via\n\t    Special:ChangeContentModel.</p>\n\t  <p>(T297322, CVE-2021-44857) Unauthorized users can use action=mcrundo to\n\t    replace the content of arbitrary pages.</p>\n\t  <p> (T297322, CVE-2021-44858) Unauthorized users can view contents of private\n\t    wikis using various actions.</p>\n\t  <p>(T297574, CVE-2021-45038) Unauthorized users can access private wiki\n\t    contents using rollback action</p>\n\t  <p>(T293589, CVE-2021-44855) Blind Stored XSS in VisualEditor media dialog.</p>\n\t  <p>(T294686) Special:Nuke doesn't actually delete pages.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/QEN3EK4JXAVJMJ5GF3GYOAKNJPEKFQYA/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0a50bb48-625f-11ec-a1fb-080027cb2f6f.html"
+				}
+			],
+			"published": "2021-12-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44854",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44854"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44855",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44855"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44856",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44856"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44857",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44857"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44858",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44858"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-45038",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-45038"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki135"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.35.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki136"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.36.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki137"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.37.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,51 @@
+{
+	"id": "e50b04e8-9c55-11d8-9366-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "e50b04e8-9c55-11d8-9366-0020ed76ef5a",
+			"title": "xine-lib arbitrary file overwrite",
+			"description": "\n\t<p>From the xinehq advisory:</p>\n\t<blockquote cite=\"http://www.xinehq.de/index.php/security/XSA-2004-1\">\n\t  <p>By opening a malicious MRL in any xine-lib based media\n\t    player, an attacker can write arbitrary content to an\n\t    arbitrary file, only restricted by the permissions of the\n\t    user running the application.</p>\n\t</blockquote>\n\t<p>The flaw is a result of a feature that allows MRLs (media\n\t  resource locator URIs) to specify arbitrary configuration\n\t  options.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10193"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.xinehq.de/index.php/security/XSA-2004-1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e50b04e8-9c55-11d8-9366-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-05-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxine"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.r3_5",
+									"gt": "0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

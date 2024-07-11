@@ -1,0 +1,58 @@
+{
+	"id": "2ffb1b0d-ecf5-11dd-abae-00219b0fc4d8",
+	"advisories": [
+		{
+			"id": "2ffb1b0d-ecf5-11dd-abae-00219b0fc4d8",
+			"title": "glpi -- SQL Injection",
+			"description": "\n\t<p>The GLPI project reports:</p>\n\t<blockquote cite=\"http://www.glpi-project.org/spip.php?page=annonce&amp;id_breve=161&amp;lang=en\">\n\t  <p>Input passed via unspecified parameters is not properly sanitised\n\t    before being used in SQL queries. This can be exploited to\n\t    manipulateSQL queries by injecting arbitrary SQL code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/33680/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.glpi-project.org/spip.php?page=annonce&id_breve=161&lang=en"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dev.indepnet.net/glpi/ticket/1224"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mail.gna.org/public/glpi-news/2009-01/msg00002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2ffb1b0d-ecf5-11dd-abae-00219b0fc4d8.html"
+				}
+			],
+			"published": "2009-01-28T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "glpi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.71.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,85 @@
+{
+	"id": "967b852b-1e28-11e6-8dd3-002590263bf5",
+	"advisories": [
+		{
+			"id": "967b852b-1e28-11e6-8dd3-002590263bf5",
+			"title": "hostapd and wpa_supplicant -- psk configuration parameter update allowing arbitrary data to be written",
+			"description": "\n\t<p>Jouni Malinen reports:</p>\n\t<blockquote cite=\"http://w1.fi/security/2016-1/psk-parameter-config-update.txt\">\n\t  <p>psk configuration parameter update allowing arbitrary data to be\n\t    written (2016-1 - CVE-2016-4476/CVE-2016-4477).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://w1.fi/security/2016-1/psk-parameter-config-update.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209564"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/967b852b-1e28-11e6-8dd3-002590263bf5.html"
+				}
+			],
+			"published": "2016-05-20T00:00:00Z",
+			"modified": "2017-03-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4476",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4476"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-4477",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4477"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wpa_supplicant"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.5_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "hostapd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

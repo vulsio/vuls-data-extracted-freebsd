@@ -1,0 +1,135 @@
+{
+	"id": "b84dbd94-e894-4c91-b8cd-d328537b1b2b",
+	"advisories": [
+		{
+			"id": "b84dbd94-e894-4c91-b8cd-d328537b1b2b",
+			"title": "ncurses -- multiple issues",
+			"description": "\n\t<p>ncurses developers reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=1484285\">\n\t  <p>There are multiple illegal address access issues and an infinite loop issue. Please refer to the CVE list for details.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484274"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484276"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484284"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484285"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484287"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484290"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1484291"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b84dbd94-e894-4c91-b8cd-d328537b1b2b.html"
+				}
+			],
+			"published": "2017-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-13728",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13728"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-13729",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13729"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-13730",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13730"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-13731",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13731"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-13732",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13732"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-13733",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13733"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-13734",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-13734"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ncurses"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

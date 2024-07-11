@@ -1,0 +1,143 @@
+{
+	"id": "a21037d5-2c38-11de-ab3b-0017a4cccfc6",
+	"advisories": [
+		{
+			"id": "a21037d5-2c38-11de-ab3b-0017a4cccfc6",
+			"title": "xpdf -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://www.vupen.com/english/advisories/2009/1065\">\n\t  <p>Some vulnerabilities have been reported in Xpdf, which can be\n\t    exploited by malicious people to potentially compromise a user's\n\t    system.</p>\n\t  <p>A boundary error exists when decoding JBIG2 symbol dictionary\n\t    segments. This can be exploited to cause a heap-based buffer\n\t    overflow and potentially execute arbitrary code.</p>\n\t  <p>Multiple integer overflows in the JBIG2 decoder can be\n\t    exploited to potentially execute arbitrary code.</p>\n\t  <p>Multiple boundary errors in the JBIG2 decoder can be\n\t    exploited to cause buffer overflows and potentially execute\n\t    arbitrary code.</p>\n\t  <p>Multiple errors in the JBIG2 decoder can be exploited can be\n\t    exploited to free arbitrary memory and potentially execute arbitrary\n\t    code.</p>\n\t  <p>Multiple unspecified input validation errors in the JBIG2 decoder can\n\t    be exploited to potentially execute arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/34291"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.vupen.com/english/advisories/2009/1065"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a21037d5-2c38-11de-ab3b-0017a4cccfc6.html"
+				}
+			],
+			"published": "2009-04-18T00:00:00Z",
+			"modified": "2009-04-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0146",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0146"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-0147",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0147"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-0166",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0166"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-0799",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0799"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-0800",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0800"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1179",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1179"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1180",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1181",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1181"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1182",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1182"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1183",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1183"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xpdf"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.02_11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

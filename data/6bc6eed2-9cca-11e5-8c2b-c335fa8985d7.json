@@ -1,0 +1,65 @@
+{
+	"id": "6bc6eed2-9cca-11e5-8c2b-c335fa8985d7",
+	"advisories": [
+		{
+			"id": "6bc6eed2-9cca-11e5-8c2b-c335fa8985d7",
+			"title": "libraw -- memory objects not properly initialized",
+			"description": "\n\t<p>ChenQin reports:</p>\n\t<blockquote cite=\"http://seclists.org/fulldisclosure/2015/Nov/108\">\n\t  <p>The LibRaw raw image decoder has multiple vulnerabilities that can\n\t    cause memory errors which may lead to code execution or other\n\t    problems.</p>\n\t  <p>In CVE-2015-8367, LibRaw's phase_one_correct function does not\n\t    handle memory initialization correctly, which may cause other\n\t    problems.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/fulldisclosure/2015/Nov/108"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.libraw.org/news/libraw-0-17-1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/LibRaw/LibRaw/commit/490ef94d1796f730180039e80997efe5c58db780"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6bc6eed2-9cca-11e5-8c2b-c335fa8985d7.html"
+				}
+			],
+			"published": "2015-12-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8367",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8367"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libraw"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.17.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,132 @@
+{
+	"id": "fc38cd83-00b3-11e5-8ebd-0026551a22dc",
+	"advisories": [
+		{
+			"id": "fc38cd83-00b3-11e5-8ebd-0026551a22dc",
+			"title": "PostgreSQL -- minor security problems.",
+			"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1587/\">\n\t  <p>\n\t\tThis update fixes three security vulnerabilities reported in\n\t\tPostgreSQL over the past few months. Nether of these issues is seen as\n\t\tparticularly urgent. However, users should examine them in case their\n\t\tinstallations are vulnerable:.\n\t  </p>\n\t  <ul>\n\t    <li>CVE-2015-3165 Double \"free\" after authentication timeout.</li>\n\t    <li>CVE-2015-3166 Unanticipated errors from the standard library.</li>\n\t    <li>CVE-2015-3167 pgcrypto has multiple error messages for decryption with an incorrect key.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc38cd83-00b3-11e5-8ebd-0026551a22dc.html"
+				}
+			],
+			"published": "2015-05-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3165",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3165"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3166",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3166"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-3167",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3167"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql90-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.0.20",
+									"ge": "9.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql91-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.1.16",
+									"ge": "9.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql92-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.2.11",
+									"ge": "9.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql93-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.3.7",
+									"ge": "9.3.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql94-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.4.2",
+									"ge": "9.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

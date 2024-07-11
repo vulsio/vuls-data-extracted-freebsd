@@ -1,0 +1,132 @@
+{
+	"id": "982872f1-7dd3-11e7-9736-6cc21735f730",
+	"advisories": [
+		{
+			"id": "982872f1-7dd3-11e7-9736-6cc21735f730",
+			"title": "PostgreSQL vulnerabilities",
+			"description": "\n\t<p>The PostgreSQL project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/about/news/1772/\">\n\t  <ul>\n\t    <li>CVE-2017-7546: Empty password accepted in some authentication\n\t    methods</li>\n\t    <li>CVE-2017-7547: The \"pg_user_mappings\" catalog view discloses passwords\n\t    to users lacking server privileges</li>\n\t    <li>CVE-2017-7548: lo_put() function ignores ACLs</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/982872f1-7dd3-11e7-9736-6cc21735f730.html"
+				}
+			],
+			"published": "2017-08-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-7546",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7546"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7547",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7547"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7548",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7548"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql92-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.2.22",
+									"ge": "9.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql93-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.3.18",
+									"ge": "9.3.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql94-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.4.13",
+									"ge": "9.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql95-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.5.8",
+									"ge": "9.5.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql96-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.6.4",
+									"ge": "9.6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

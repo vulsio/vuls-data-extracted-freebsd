@@ -1,0 +1,68 @@
+{
+	"id": "7a4f2aca-9d40-11da-8c1d-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "7a4f2aca-9d40-11da-8c1d-000e0c2e438a",
+			"title": "FreeBSD -- Local kernel memory disclosure",
+			"description": "\n\t<p>Problem description:</p>\n\t<p>A buffer allocated from the kernel stack may not be completely\n\t  initialized before being copied to userland. [CVE-2006-0379]</p>\n\t<p>A logic error in computing a buffer length may allow too much\n\t  data to be copied into userland. [CVE-2006-0380]</p>\n\t<p>Impact:</p>\n\t<p>Portions of kernel memory may be disclosed to local users.\n\t  Such memory might contain sensitive information, such as\n\t  portions of the file cache or terminal buffers.  This\n\t  information might be directly useful, or it might be\n\t  leveraged to obtain elevated privileges in some way.\tFor\n\t  example, a terminal buffer might include a user-entered\n\t  password.</p>\n\t<p>Workaround:</p>\n\t<p>No workaround is available.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:06.kmem.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7a4f2aca-9d40-11da-8c1d-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-02-14T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-0379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0379"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-0380",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0380"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0_4",
+									"ge": "6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

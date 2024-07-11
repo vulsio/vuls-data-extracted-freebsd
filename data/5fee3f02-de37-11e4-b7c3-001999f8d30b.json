@@ -1,0 +1,85 @@
+{
+	"id": "5fee3f02-de37-11e4-b7c3-001999f8d30b",
+	"advisories": [
+		{
+			"id": "5fee3f02-de37-11e4-b7c3-001999f8d30b",
+			"title": "asterisk -- TLS Certificate Common name NULL byte exploit",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>When Asterisk registers to a SIP TLS device and and\n\t  verifies the server, Asterisk will accept signed certificates\n\t  that match a common name other than the one Asterisk is\n\t  expecting if the signed certificate has a common name\n\t  containing a null byte after the portion of the common\n\t  name that Asterisk expected. For example, if Asterisk is\n\t  trying to register to www.domain.com, Asterisk will accept\n\t  certificates of the form\n\t  www.domain.com\\x00www.someotherdomain.com</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2015-003.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5fee3f02-de37-11e4-b7c3-001999f8d30b.html"
+				}
+			],
+			"published": "2015-04-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3008",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3008"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.32.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.17.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk13"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

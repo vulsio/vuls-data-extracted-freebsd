@@ -1,0 +1,46 @@
+{
+	"id": "f14ce57f-6dc8-11e8-a671-001999f8d30b",
+	"advisories": [
+		{
+			"id": "f14ce57f-6dc8-11e8-a671-001999f8d30b",
+			"title": "asterisk -- Infinite loop when reading iostreams",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>When connected to Asterisk via TCP/TLS if the client\n\t  abruptly disconnects, or sends a specially crafted message\n\t  then Asterisk gets caught in an infinite loop while trying\n\t  to read the data stream. Thus rendering the system as\n\t  unusable.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2018-007.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f14ce57f-6dc8-11e8-a671-001999f8d30b.html"
+				}
+			],
+			"published": "2018-06-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk15"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "15.4.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

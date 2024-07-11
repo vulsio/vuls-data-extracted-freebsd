@@ -1,0 +1,61 @@
+{
+	"id": "0bf9d7fb-05b3-11da-bc08-0001020eed82",
+	"advisories": [
+		{
+			"id": "0bf9d7fb-05b3-11da-bc08-0001020eed82",
+			"title": "mambo -- multiple vulnerabilities",
+			"description": "\n\t<p>A Secunia Advisory reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/15710/\">\n\t  <p>Some vulnerabilities have been reported in Mambo, where\n\t    some have unknown impacts and others can be exploited by\n\t    malicious people to conduct spoofing and SQL injection\n\t    attacks.</p>\n\t  <ol>\n\t    <li>Input passed to the \"user_rating\" parameter when\n\t      voting isn't properly sanitised before being used in a\n\t      SQL query. This can be exploited to manipulate SQL\n\t      queries by injecting arbitrary SQL code.</li>\n\t    <li>Some unspecified vulnerabilities in the \"mosDBTable\"\n\t      class and the \"DOMIT\" library have an unknown\n\t      impact.</li>\n\t    <li>An unspecified error in the \"administrator/index3.php\"\n\t      script can be exploited to spoof session IDs.</li>\n\t  </ol>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/15710/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/13966"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0bf9d7fb-05b3-11da-bc08-0001020eed82.html"
+				}
+			],
+			"published": "2005-08-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2002",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2002"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mambo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.5.2.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

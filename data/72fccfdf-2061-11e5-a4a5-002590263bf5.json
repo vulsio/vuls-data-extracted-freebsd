@@ -1,0 +1,71 @@
+{
+	"id": "72fccfdf-2061-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "72fccfdf-2061-11e5-a4a5-002590263bf5",
+			"title": "ansible -- multiple vulnerabilities",
+			"description": "\n\t<p>Ansible, Inc. reports:</p>\n\t<blockquote cite=\"http://www.ansible.com/security\">\n\t  <p>Ensure that hostnames match certificate names when using HTTPS -\n\t    resolved in Ansible 1.9.2</p>\n\t  <p>Improper symlink handling in zone, jail, and chroot connection\n\t    plugins could lead to escape from confined environment - resolved\n\t    in Ansible 1.9.2</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ansible.com/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://raw.githubusercontent.com/ansible/ansible/v1.9.2-1/CHANGELOG.md"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/72fccfdf-2061-11e5-a4a5-002590263bf5.html"
+				}
+			],
+			"published": "2015-07-02T00:00:00Z",
+			"modified": "2015-08-18T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3908",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3908"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-6240",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6240"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ansible"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

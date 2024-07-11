@@ -1,0 +1,61 @@
+{
+	"id": "70c44cd0-e717-11e5-85be-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "70c44cd0-e717-11e5-85be-14dae9d210b8",
+			"title": "quagga -- stack based buffer overflow vulnerability",
+			"description": "\n\t<p>Donald Sharp reports:</p>\n\t<blockquote cite=\"https://www.kb.cert.org/vuls/id/270232\">\n\t  <p>A malicious BGP peer may execute arbitrary code in\n\t    particularly configured remote bgpd hosts.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://savannah.nongnu.org/forum/forum.php?forum_id=8476"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/270232"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/70c44cd0-e717-11e5-85be-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-03-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2342",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2342"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "quagga"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.20160309"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

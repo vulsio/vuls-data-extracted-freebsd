@@ -1,0 +1,85 @@
+{
+	"id": "c561ce49-eabc-11eb-9c3f-0800270512f4",
+	"advisories": [
+		{
+			"id": "c561ce49-eabc-11eb-9c3f-0800270512f4",
+			"title": "redis -- Integer overflow issues with BITFIELD command on 32-bit systems",
+			"description": "\n\t<p>Huang Zhw reports:</p>\n\t<blockquote cite=\"https://github.com/redis/redis/security/advisories/GHSA-8wxq-j7rp-g8wj\">\n\t  <p>\n\t    On 32-bit versions, Redis BITFIELD command is vulnerable to integer\n\t    overflow that can potentially be exploited to corrupt the heap,\n\t    leak arbitrary heap contents or trigger remote code execution.\n\t    The vulnerability involves constructing specially crafted bit\n\t    commands which overflow the bit offset.\n\t  </p>\n\t  <p>\n\t    This problem only affects 32-bit versions of Redis.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/redis/redis/security/advisories/GHSA-8wxq-j7rp-g8wj"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c561ce49-eabc-11eb-9c3f-0800270512f4.html"
+				}
+			],
+			"published": "2021-07-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-32761",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-32761"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.15"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.0.13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

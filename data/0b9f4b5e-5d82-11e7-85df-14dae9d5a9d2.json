@@ -1,0 +1,79 @@
+{
+	"id": "0b9f4b5e-5d82-11e7-85df-14dae9d5a9d2",
+	"advisories": [
+		{
+			"id": "0b9f4b5e-5d82-11e7-85df-14dae9d5a9d2",
+			"title": "tor -- security regression",
+			"description": "\n\t<p>The Tor Project reports:</p>\n\t<blockquote cite=\"https://lists.torproject.org/pipermail/tor-announce/2017-June/000133.html\">\n\t  <p>Tor 0.3.0.9 fixes a path selection bug that would allow a client\n\t    to use a guard that was in the same network family as a chosen exit\n\t    relay. This is a security regression; all clients running earlier\n\t    versions of 0.3.0.x or 0.3.1.x should upgrade to 0.3.0.9 or\n\t    0.3.1.4-alpha.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.torproject.org/blog/tor-0309-released-security-update-clients"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.torproject.org/blog/tor-0314-alpha-released-security-update-clients"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.torproject.org/pipermail/tor-announce/2017-June/000133.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0b9f4b5e-5d82-11e7-85df-14dae9d5a9d2.html"
+				}
+			],
+			"published": "2017-06-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-0377",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-0377"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.3.0.9"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tor-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.3.1.4.a"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

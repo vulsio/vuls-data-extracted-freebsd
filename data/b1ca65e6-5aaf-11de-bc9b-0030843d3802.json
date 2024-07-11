@@ -1,0 +1,128 @@
+{
+	"id": "b1ca65e6-5aaf-11de-bc9b-0030843d3802",
+	"advisories": [
+		{
+			"id": "b1ca65e6-5aaf-11de-bc9b-0030843d3802",
+			"title": "pidgin -- multiple vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/35194/\">\n\t  <p>Some vulnerabilities and weaknesses have been reported in Pidgin,\n\t    which can be exploited by malicious people to cause a DoS or to\n\t    potentially compromise a user's system.</p>\n\t  <p>A truncation error in the processing of MSN SLP messages can be\n\t    exploited to cause a buffer overflow.</p>\n\t  <p>A boundary error in the XMPP SOCKS5 \"bytestream\" server when\n\t    initiating an outgoing file transfer can be exploited to cause a\n\t    buffer overflow.</p>\n\t  <p>A boundary error exists in the implementation of the\n\t    \"PurpleCircBuffer\" structure. This can be exploited to corrupt memory\n\t    and cause a crash via specially crafted XMPP or Sametime\n\t    packets.</p>\n\t  <p>A boundary error in the \"decrypt_out()\" function can be exploited\n\t    to cause a stack-based buffer overflow with 8 bytes and crash the\n\t    application via a specially crafted QQ packet.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/35194/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pidgin.im/news/security/?id=29"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pidgin.im/news/security/?id=30"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pidgin.im/news/security/?id=32"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/35067"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b1ca65e6-5aaf-11de-bc9b-0030843d3802.html"
+				}
+			],
+			"published": "2009-06-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-1373",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1373"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1374",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1374"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1375",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1375"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-1376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-1376"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pidgin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.5.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libpurple"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.5.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "finch"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.5.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

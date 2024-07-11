@@ -1,0 +1,46 @@
+{
+	"id": "36494478-6a88-11da-b96e-000fb586ba73",
+	"advisories": [
+		{
+			"id": "36494478-6a88-11da-b96e-000fb586ba73",
+			"title": "kronolith -- Cross site scripting vulnerabilities in several of the calendar name and event data fields",
+			"description": "\n\t<p>Announce of Kronolith H3 (2.0.6) (final):</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=kronolith&amp;m=113433029822279&amp;w=2\">\n\t  <p>This [2.0.6] is a security release that fixes cross site\n\t    scripting vulnerabilities in several of the calendar name\n\t    and event data fields. None of the vulnerabilities can be\n\t    exploited by unauthenticated users; however, we strongly\n\t    recommend that all users of Kronolith 2.0.5 upgrade to\n\t    2.0.6 as soon as possible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=kronolith&m=113433029822279&w=2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/36494478-6a88-11da-b96e-000fb586ba73.html"
+				}
+			],
+			"published": "2005-12-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kronolith"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

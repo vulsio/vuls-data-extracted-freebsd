@@ -1,0 +1,66 @@
+{
+	"id": "edc0bf7e-05a1-11ea-9dfa-f8b156ac3ff9",
+	"advisories": [
+		{
+			"id": "edc0bf7e-05a1-11ea-9dfa-f8b156ac3ff9",
+			"title": "FreeBSD -- Machine Check Exception on Page Size Change",
+			"description": "\n\t<p>Intel discovered a previously published erratum on some Intel\n\tplatforms can be exploited by malicious software to potentially cause\n\ta denial of service by triggering a machine check that will crash or\n\thang the system.</p>\n\t<p>Malicious guest operating systems may be able to crash the host.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:25.mcepsc.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/edc0bf7e-05a1-11ea-9dfa-f8b156ac3ff9.html"
+				}
+			],
+			"published": "2019-11-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-12207",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12207"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "12.1_1",
+									"ge": "12.1"
+								},
+								{
+									"lt": "12.0_12",
+									"ge": "12.0"
+								},
+								{
+									"lt": "11.3_5",
+									"ge": "11.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

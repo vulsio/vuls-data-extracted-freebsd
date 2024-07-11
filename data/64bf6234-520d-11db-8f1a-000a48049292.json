@@ -1,0 +1,79 @@
+{
+	"id": "64bf6234-520d-11db-8f1a-000a48049292",
+	"advisories": [
+		{
+			"id": "64bf6234-520d-11db-8f1a-000a48049292",
+			"title": "gnutls -- RSA Signature Forgery Vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/21937\">\n\t  <p>A vulnerability has been reported in GnuTLS, which can be\n\t    exploited by malicious people to bypass certain security\n\t    restrictions.</p>\n\t  <p>The vulnerability is caused due to an error in the\n\t    verification of certain signatures. If a RSA key with\n\t    exponent 3 is used, it may be possible to forge PKCS #1\n\t    v1.5 signatures signed with that key.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.gnupg.org/pipermail/gnutls-dev/2006-September/001205.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/21937"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/20027"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/64bf6234-520d-11db-8f1a-000a48049292.html"
+				}
+			],
+			"published": "2006-10-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-4790",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4790"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,78 @@
+{
+	"id": "7d52081f-2795-11da-bc01-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "7d52081f-2795-11da-bc01-000e0c2e438a",
+			"title": "squirrelmail -- _$POST variable handling allows for various attacks",
+			"description": "\n\t<p>A Squirrelmail Advisory reports:</p>\n\t<blockquote cite=\"http://www.squirrelmail.org/security/issue/2005-07-13\">\n\t  <p>An extract($_POST) was done in options_identities.php which\n\t    allowed for an attacker to set random variables in that\n\t    file.  This could lead to the reading (and possible\n\t    writing) of other people's preferences, cross site scripting\n\t    or writing files in webserver-writable locations.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/14254"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.squirrelmail.org/security/issue/2005-07-13"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7d52081f-2795-11da-bc01-000e0c2e438a.html"
+				}
+			],
+			"published": "2005-09-17T00:00:00Z",
+			"modified": "2005-09-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2095",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2095"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squirrelmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5",
+									"ge": "1.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-squirrelmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5",
+									"ge": "1.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

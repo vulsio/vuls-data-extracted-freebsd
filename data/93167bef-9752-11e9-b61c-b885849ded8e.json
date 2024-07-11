@@ -1,0 +1,46 @@
+{
+	"id": "93167bef-9752-11e9-b61c-b885849ded8e",
+	"advisories": [
+		{
+			"id": "93167bef-9752-11e9-b61c-b885849ded8e",
+			"title": "libxslt -- security framework bypass",
+			"description": "\n\t<p>Mitre report:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11068\">\n\t  <p>libxslt through 1.1.33 allows bypass of a protection mechanism because callers of xsltCheckRead and xsltCheckWrite permit access even upon receiving a -1 error code. xsltCheckRead can return -1 for a crafted URL that is not actually invalid and is subsequently loaded.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11068"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/93167bef-9752-11e9-b61c-b885849ded8e.html"
+				}
+			],
+			"published": "2019-07-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxslt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.33"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

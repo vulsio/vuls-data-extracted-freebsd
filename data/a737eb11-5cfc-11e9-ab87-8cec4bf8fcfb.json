@@ -1,0 +1,58 @@
+{
+	"id": "a737eb11-5cfc-11e9-ab87-8cec4bf8fcfb",
+	"advisories": [
+		{
+			"id": "a737eb11-5cfc-11e9-ab87-8cec4bf8fcfb",
+			"title": "wget -- security flaw in caching credentials passed as a part of the URL",
+			"description": "\n\t<p>Gynvael Coldwind reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20483\">\n\t  <p>\n\t    set_file_metadata in xattr.c in GNU Wget before 1.20.1 stores a\n\t    file's origin URL in the user.xdg.origin.url metadata attribute\n\t    of the extended attributes of the downloaded file, which allows\n\t    local users to obtain sensitive information (e.g., credentials\n\t    contained in the URL) by reading this attribute, as demonstrated\n\t    by getfattr. This also applies to Referer information in the\n\t    user.xdg.referrer.url metadata attribute.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20483"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a737eb11-5cfc-11e9-ab87-8cec4bf8fcfb.html"
+				}
+			],
+			"published": "2019-04-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-20483",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-20483"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wget"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.1",
+									"ge": "1.19"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

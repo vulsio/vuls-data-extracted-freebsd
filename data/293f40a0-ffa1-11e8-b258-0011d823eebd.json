@@ -1,0 +1,57 @@
+{
+	"id": "293f40a0-ffa1-11e8-b258-0011d823eebd",
+	"advisories": [
+		{
+			"id": "293f40a0-ffa1-11e8-b258-0011d823eebd",
+			"title": "Mbed TLS -- Local timing attack on RSA decryption",
+			"description": "\n\t<p>Janos Follath reports:</p>\n\t<blockquote cite=\"https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2018-03\">\n\t  <p>An attacker who can run code on the same machine that is\n\t    performing an RSA decryption can potentially recover the plaintext\n\t    through a Bleichenbacher-like oracle.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2018-03"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/293f40a0-ffa1-11e8-b258-0011d823eebd.html"
+				}
+			],
+			"published": "2018-12-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-19608",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-19608"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mbedtls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.14.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

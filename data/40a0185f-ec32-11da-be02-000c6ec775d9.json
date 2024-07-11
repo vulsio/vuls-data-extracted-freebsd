@@ -1,0 +1,70 @@
+{
+	"id": "40a0185f-ec32-11da-be02-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "40a0185f-ec32-11da-be02-000c6ec775d9",
+			"title": "drupal -- multiple vulnerabilities",
+			"description": "\n\t<p>The Drupal team reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/65357\">\n\t  <p>Vulnerability: SQL injection</p>\n\t  <p>A security vulnerability in the database layer allowed\n\t    certain queries to be submitted to the database without\n\t    going through Drupal's query sanitizer.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://drupal.org/node/65409\">\n\t  <p>Vulnerability: Execution of arbitrary files</p>\n\t  <p>Certain -- alas, typical -- configurations of Apache\n\t    allows execution of carefully named arbitrary scripts in\n\t    the files directory. Drupal now will attempt to\n\t    automatically create a .htaccess file in your \"files\"\n\t    directory to protect you.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://drupal.org/node/65357"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://drupal.org/node/65409"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/40a0185f-ec32-11da-be02-000c6ec775d9.html"
+				}
+			],
+			"published": "2006-06-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-2742",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2742"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-2743",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2743"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "drupal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.6.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

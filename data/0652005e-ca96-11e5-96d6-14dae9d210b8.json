@@ -1,0 +1,122 @@
+{
+	"id": "0652005e-ca96-11e5-96d6-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "0652005e-ca96-11e5-96d6-14dae9d210b8",
+			"title": "salt -- code execution",
+			"description": "\n\t<p>SaltStack reports:</p>\n\t<blockquote cite=\"https://docs.saltstack.com/en/latest/topics/releases/2015.8.4.html\">\n\t  <p>Improper handling of clear messages on the minion, which\n\t    could result in executing commands not sent by the master.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.saltstack.com/en/latest/topics/releases/2015.8.4.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/saltstack/salt/pull/30613/files"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0652005e-ca96-11e5-96d6-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-02-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1866",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1866"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-salt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2015.8.4",
+									"ge": "2015.8.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py32-salt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2015.8.4",
+									"ge": "2015.8.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py33-salt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2015.8.4",
+									"ge": "2015.8.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py34-salt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2015.8.4",
+									"ge": "2015.8.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py35-salt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2015.8.4",
+									"ge": "2015.8.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

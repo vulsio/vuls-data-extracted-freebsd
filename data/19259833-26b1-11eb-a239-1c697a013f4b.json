@@ -1,0 +1,130 @@
+{
+	"id": "19259833-26b1-11eb-a239-1c697a013f4b",
+	"advisories": [
+		{
+			"id": "19259833-26b1-11eb-a239-1c697a013f4b",
+			"title": "mantis -- multiple vulnerabilities",
+			"description": "\n\t<p>Mantis 2.24.3 release reports:</p>\n\t<blockquote cite=\"https://mantisbt.org/bugs/changelog_page.php?project=mantisbt&amp;version=2.24.3\">\n\t  <p>This release fixes 3 security issues:</p>\n\t  <ul>\n\t    <li>0027039: CVE-2020-25781: Access to private bug note attachments</li>\n\t    <li>0027275: CVE-2020-25288: HTML Injection on bug_update_page.php</li>\n\t    <li>0027304: CVE-2020-25830: HTML Injection in bug_actiongroup_page.php</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251141"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25288"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25781"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25830"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/19259833-26b1-11eb-a239-1c697a013f4b.html"
+				}
+			],
+			"published": "2020-11-14T00:00:00Z",
+			"modified": "2020-11-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-25288",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-25288"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-25781",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-25781"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-25830",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-25830"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php72"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.24.3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php73"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.24.3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php74"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.24.3,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php80"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.24.3,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

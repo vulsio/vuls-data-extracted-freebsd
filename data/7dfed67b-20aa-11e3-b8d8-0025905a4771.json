@@ -1,0 +1,362 @@
+{
+	"id": "7dfed67b-20aa-11e3-b8d8-0025905a4771",
+	"advisories": [
+		{
+			"id": "7dfed67b-20aa-11e3-b8d8-0025905a4771",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p> MFSA 2013-76 Miscellaneous memory safety hazards (rv:24.0 /\n\t    rv:17.0.9)</p>\n\t  <p> MFSA 2013-77 Improper state in HTML5 Tree Builder with templates</p>\n\t  <p> MFSA 2013-78 Integer overflow in ANGLE library</p>\n\t  <p> MFSA 2013-79 Use-after-free in Animation Manager during stylesheet\n\t    cloning</p>\n\t  <p> MFSA 2013-80 NativeKey continues handling key messages after\n\t    widget is destroyed</p>\n\t  <p> MFSA 2013-81 Use-after-free with select element</p>\n\t  <p> MFSA 2013-82 Calling scope for new Javascript objects can lead to\n\t    memory corruption</p>\n\t  <p> MFSA 2013-83 Mozilla Updater does not lock MAR file after\n\t    signature verification</p>\n\t  <p> MFSA 2013-84 Same-origin bypass through symbolic links</p>\n\t  <p> MFSA 2013-85 Uninitialized data in IonMonkey</p>\n\t  <p> MFSA 2013-86 WebGL Information disclosure through OS X NVIDIA\n\t    graphic drivers</p>\n\t  <p> MFSA 2013-87 Shared object library loading from writable location</p>\n\t  <p> MFSA 2013-88 compartment mismatch re-attaching XBL-backed nodes</p>\n\t  <p> MFSA 2013-89 Buffer overflow with multi-column, lists, and floats</p>\n\t  <p> MFSA 2013-90 Memory corruption involving scrolling</p>\n\t  <p> MFSA 2013-91 User-defined properties on DOM proxies get the wrong\n\t    \"this\" object</p>\n\t  <p> MFSA 2013-92 GC hazard with default compartments and frame chain\n\t    restoration</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/known-vulnerabilities/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-76.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-77.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-78.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-79.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-80.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-81.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-82.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-83.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-84.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-85.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-86.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-87.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-88.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-89.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-90.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-91.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2013/mfsa2013-92.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7dfed67b-20aa-11e3-b8d8-0025905a4771.html"
+				}
+			],
+			"published": "2013-08-18T00:00:00Z",
+			"modified": "2013-09-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1718"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1719",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1719"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1720",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1720"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1721",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1721"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1722",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1722"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1723",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1723"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1724",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1724"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1725",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1725"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1726",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1726"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1727",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1727"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1728",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1728"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1729",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1729"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1730",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1730"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1731",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1731"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1732",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1732"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1735",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1735"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1736",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1736"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1737",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1737"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1738",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1738"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.0,1",
+									"gt": "18.0,1"
+								},
+								{
+									"lt": "17.0.9,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.0.9,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.0.9"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

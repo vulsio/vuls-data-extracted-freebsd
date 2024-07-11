@@ -1,0 +1,57 @@
+{
+	"id": "0a7a5dfb-aba4-11ed-be2c-001cc0382b2f",
+	"advisories": [
+		{
+			"id": "0a7a5dfb-aba4-11ed-be2c-001cc0382b2f",
+			"title": "GnuTLS -- timing sidechannel in RSA decryption",
+			"description": "\n\t<p>The GnuTLS project reports:</p>\n\t<blockquote cite=\"https://gnutls.org/security-new.html#GNUTLS-SA-2020-07-14\">\n\t  <p>A vulnerability was found that the response times to malformed RSA\n\t    ciphertexts in ClientKeyExchange differ from response times of\n\t    ciphertexts with correct PKCS#1 v1.5 padding. Only TLS ciphertext\n\t    processing is affected.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gnutls.org/security-new.html#GNUTLS-SA-2020-07-14"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0a7a5dfb-aba4-11ed-be2c-001cc0382b2f.html"
+				}
+			],
+			"published": "2023-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-0361",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-0361"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.7.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

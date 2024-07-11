@@ -1,0 +1,126 @@
+{
+	"id": "17702e54-3da0-11ec-b7e0-3085a9a95629",
+	"advisories": [
+		{
+			"id": "17702e54-3da0-11ec-b7e0-3085a9a95629",
+			"title": "pyrad -- multiple vulnerabilities",
+			"description": "\n\t<p>Nathaniel McCallum reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=911682\">\n\t  <p>packet.py in pyrad before 2.1 uses weak random numbers to generate RADIUS authenticators and hash passwords, which makes it easier for remote attackers to obtain sensitive information via a brute force attack.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=911685\">\n\t  <p>The CreateID function in packet.py in pyrad before 2.1 uses sequential packet IDs, which makes it easier for remote attackers to spoof packets by predicting the next ID, a different vulnerability than CVE-2013-0294.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=911682"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=911685"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/17702e54-3da0-11ec-b7e0-3085a9a95629.html"
+				}
+			],
+			"published": "2021-11-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0294",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0294"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-0342",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0342"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py36-pyrad"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-pyrad"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-pyrad"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-pyrad"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-pyrad"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

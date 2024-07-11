@@ -1,0 +1,65 @@
+{
+	"id": "4c017345-1d89-11e0-bbee-0014a5e3cda6",
+	"advisories": [
+		{
+			"id": "4c017345-1d89-11e0-bbee-0014a5e3cda6",
+			"title": "MoinMoin -- cross-site scripting vulnerabilities",
+			"description": "\n\t<p>The MoinMoin developers reports:</p>\n\t<blockquote cite=\"http://hg.moinmo.in/moin/1.9/raw-file/1.9.3/docs/CHANGES\">\n\t  <p>Fix XSS in Despam action (CVE-2010-0828)</p>\n\t</blockquote>\n\t<blockquote cite=\"http://moinmo.in/MoinMoinBugs/1.9.2UnescapedInputForThemeAddMsg\">\n\t  <p>Fix XSS issues</p>\n\t  <ul>\n\t    <li>by escaping template name in messages</li>\n\t    <li>by fixing other places that had similar issues</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://hg.moinmo.in/moin/1.9/raw-file/1.9.3/docs/CHANGES"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://moinmo.in/MoinMoinBugs/1.9.2UnescapedInputForThemeAddMsg"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/39110"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4c017345-1d89-11e0-bbee-0014a5e3cda6.html"
+				}
+			],
+			"published": "2011-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-0828",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0828"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "moinmoin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

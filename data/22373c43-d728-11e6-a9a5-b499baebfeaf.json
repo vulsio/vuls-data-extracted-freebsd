@@ -1,0 +1,351 @@
+{
+	"id": "22373c43-d728-11e6-a9a5-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "22373c43-d728-11e6-a9a5-b499baebfeaf",
+			"title": "MySQL -- multiple vulnerabilities",
+			"description": "\n\t<p>The MySQL project reports:</p>\n\t<blockquote cite=\"http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html#AppendixMSQL\">\n\t  <ul>\n\t    <li>CVE-2016-3492: Remote security vulnerability in 'Server: Optimizer'\n\t      sub component.</li>\n\t    <li>CVE-2016-5616, CVE-2016-6663: Race condition allows local users with\n\t      certain permissions to gain privileges by leveraging use of my_copystat\n\t      by REPAIR TABLE to repair a MyISAM table.</li>\n\t    <li>CVE-2016-5617, CVE-2016-6664: mysqld_safe, when using file-based\n\t      logging, allows local users with access to the mysql account to gain\n\t      root privileges via a symlink attack on error logs and possibly other\n\t      files.</li>\n\t    <li>CVE-2016-5624: Remote security vulnerability in 'Server: DML' sub\n\t      component.</li>\n\t    <li>CVE-2016-5626: Remote security vulnerability in 'Server: GIS' sub\n\t      component.</li>\n\t    <li>CVE-2016-5629: Remote security vulnerability in 'Server: Federated'\n\t      sub component.</li>\n\t    <li>CVE-2016-8283: Remote security vulnerability in 'Server: Types' sub\n\t      component.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html#AppendixMSQL"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb/mariadb-10028-release-notes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb/mariadb-10118-release-notes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://mariadb.com/kb/en/mariadb/mariadb-5552-release-notes/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/22373c43-d728-11e6-a9a5-b499baebfeaf.html"
+				}
+			],
+			"published": "2017-01-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-3492",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3492"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5616",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5616"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5617",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5617"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5624",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5624"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5626",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5626"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5629",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5629"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6663",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6663"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6664",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6664"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8283",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8283"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb55-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.52"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb55-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.52"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb100-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb100-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb101-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.1.18"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb101-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.1.18"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql55-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.52"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql55-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.52"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql56-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.33"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql56-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.33"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql57-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.7.15"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql57-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.7.15"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "percona55-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.51.38.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "percona55-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.51.38.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "percona56-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.32.78.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "percona56-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.32.78.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

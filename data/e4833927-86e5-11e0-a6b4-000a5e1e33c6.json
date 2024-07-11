@@ -1,0 +1,61 @@
+{
+	"id": "e4833927-86e5-11e0-a6b4-000a5e1e33c6",
+	"advisories": [
+		{
+			"id": "e4833927-86e5-11e0-a6b4-000a5e1e33c6",
+			"title": "Erlang -- ssh library uses a weak random number generator",
+			"description": "\n\t<p>US-CERT reports:</p>\n\t<blockquote cite=\"http://www.kb.cert.org/vuls/id/178990\">\n\t  <p>The Erlang/OTP ssh library implements a number of\n\t    cryptographic operations that depend on cryptographically\n\t    strong random numbers.  Unfortunately the RNG used by the\n\t    library is not cryptographically strong, and is further\n\t    weakened by the use of predictable seed material.  The RNG\n\t    (Wichman-Hill) is not mixed with an entropy source.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.erlang.org/download/otp_src_R14B03.readme"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/erlang/otp/commit/f228601de45c5b53241b103af6616453c50885a5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e4833927-86e5-11e0-a6b4-000a5e1e33c6.html"
+				}
+			],
+			"published": "2011-05-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-0766",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0766"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "erlang"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "r14b03"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

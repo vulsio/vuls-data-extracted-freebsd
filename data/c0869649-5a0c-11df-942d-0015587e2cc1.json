@@ -1,0 +1,57 @@
+{
+	"id": "c0869649-5a0c-11df-942d-0015587e2cc1",
+	"advisories": [
+		{
+			"id": "c0869649-5a0c-11df-942d-0015587e2cc1",
+			"title": "piwik -- cross site scripting vulnerability",
+			"description": "\n\t<p>The Piwik security advisory reports:</p>\n\t<blockquote cite=\"http://piwik.org/blog/2010/04/piwik-0-6-security-advisory/\">\n\t  <p>A non-persistent, cross-site scripting vulnerability\n\t    (XSS) was found in Piwik's Login form that reflected\n\t    the form_url parameter without being properly escaped\n\t    or filtered.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://piwik.org/blog/2010/04/piwik-0-6-security-advisory/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c0869649-5a0c-11df-942d-0015587e2cc1.html"
+				}
+			],
+			"published": "2010-05-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1453",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1453"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "piwik"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "0.5.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

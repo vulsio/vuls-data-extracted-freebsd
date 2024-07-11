@@ -1,0 +1,130 @@
+{
+	"id": "5df757ef-a564-11ec-85fa-a0369f7f7be0",
+	"advisories": [
+		{
+			"id": "5df757ef-a564-11ec-85fa-a0369f7f7be0",
+			"title": "wordpress -- multiple issues",
+			"description": "\n\t<p>wordpress developers reports:</p>\n\t<blockquote cite=\"https://wordpress.org/news/2022/03/wordpress-5-9-2-security-maintenance-release/\">\n\t  <p>This security and maintenance release features 1 bug fix in addition to 3 security fixes.\n\t    Because this is a security release, it is recommended that you update your sites immediately.\n\t    All versions since WordPress 3.7 have also been updated.\n\t    The security team would like to thank the following people for responsively reporting\n\t    vulnerabilities, allowing them to be fixed in this release:\n\t    -Melar Dev, for finding a Prototype Pollution Vulnerability in a jQuery dependency\n\t    -Ben Bidner of the WordPress security team, for finding a Stored Cross Site Scripting Vulnerability\n\t    -Researchers from Johns Hopkins University, for finding a Prototype Pollution Vulnerability in the block editor</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://wordpress.org/news/2022/03/wordpress-5-9-2-security-maintenance-release/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5df757ef-a564-11ec-85fa-a0369f7f7be0.html"
+				}
+			],
+			"published": "2022-03-16T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fr-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "de-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh_CN-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "th_TW-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

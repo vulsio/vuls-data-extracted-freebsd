@@ -1,0 +1,71 @@
+{
+	"id": "a8d94711-0d03-11ea-87ca-001999f8d30b",
+	"advisories": [
+		{
+			"id": "a8d94711-0d03-11ea-87ca-001999f8d30b",
+			"title": "asterisk -- SIP request can change address of a SIP peer",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>A SIP request can be sent to Asterisk that can change\n\t  a SIP peers IP address. A REGISTER does not need to occur,\n\t  and calls can be hijacked as a result. The only thing\n\t  that needs to be known is the peers name; authentication\n\t  details such as passwords do not need to be known. This\n\t  vulnerability is only exploitable when the nat option is\n\t  set to the default, or auto_force_rport.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2019-006.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a8d94711-0d03-11ea-87ca-001999f8d30b.html"
+				}
+			],
+			"published": "2019-11-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-18790",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-18790"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk13"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.29.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.6.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,57 @@
+{
+	"id": "d4fc4599-8f75-11e9-8d9f-3065ec8fd3ec",
+	"advisories": [
+		{
+			"id": "d4fc4599-8f75-11e9-8d9f-3065ec8fd3ec",
+			"title": "chromium -- use after free",
+			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"https://chromereleases.googleblog.com/2019/06/stable-channel-update-for-desktop_13.html\">\n\t  <p>[961413] High CVE-2019-5842: Use-after-free in Blink. Reported by BUGFENSE Anonymous Bug Bounties https://bugfense.io on 2019-05-09</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2019/06/stable-channel-update-for-desktop_13.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d4fc4599-8f75-11e9-8d9f-3065ec8fd3ec.html"
+				}
+			],
+			"published": "2019-06-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-5842",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5842"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "75.0.3770.90"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

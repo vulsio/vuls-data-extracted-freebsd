@@ -1,0 +1,69 @@
+{
+	"id": "3efc106e-c451-11dd-a721-0030843d3802",
+	"advisories": [
+		{
+			"id": "3efc106e-c451-11dd-a721-0030843d3802",
+			"title": "dovecot-managesieve -- Script Name Directory Traversal Vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/Advisories/32768/\">\n\t  <p>The security issue is caused due to an input validation error when\n\t    processing script names. This can be exploited to read or modify\n\t    arbitrary files having \".sieve\" extensions via directory traversal\n\t    attacks, with the privileges of the attacker's user id.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://dovecot.org/list/dovecot/2008-November/035259.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/Advisories/32768/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.vupen.com/english/advisories/2008/3190"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3efc106e-c451-11dd-a721-0030843d3802.html"
+				}
+			],
+			"published": "2008-12-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-5301",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5301"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dovecot-managesieve"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.4"
+								},
+								{
+									"lt": "0.11.1",
+									"ge": "0.11.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

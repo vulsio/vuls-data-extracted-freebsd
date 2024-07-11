@@ -1,0 +1,46 @@
+{
+	"id": "a45d945a-cc2c-4cd7-a941-fb58fdb1b01e",
+	"advisories": [
+		{
+			"id": "a45d945a-cc2c-4cd7-a941-fb58fdb1b01e",
+			"title": "jenkins -- Privilege escalation vulnerability in bundled Spring Security library",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://www.jenkins.io/security/advisory/2021-02-19/\">\n\t  <h1>Description</h1>\n\t  <h5>(high) SECURITY-2195 / CVE-2021-22112</h5>\n\t  <p>Privilege escalation vulnerability in bundled Spring Security library</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.jenkins.io/security/advisory/2021-02-19/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a45d945a-cc2c-4cd7-a941-fb58fdb1b01e.html"
+				}
+			],
+			"published": "2021-02-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.280"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

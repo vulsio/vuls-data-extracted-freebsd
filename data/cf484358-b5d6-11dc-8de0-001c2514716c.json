@@ -1,0 +1,46 @@
+{
+	"id": "cf484358-b5d6-11dc-8de0-001c2514716c",
+	"advisories": [
+		{
+			"id": "cf484358-b5d6-11dc-8de0-001c2514716c",
+			"title": "dovecot -- Specific LDAP + auth cache configuration may mix up user logins",
+			"description": "\n\t<p>Dovecot reports:</p>\n\t<blockquote cite=\"http://www.dovecot.org/list/dovecot-news/2007-December/000057.html\">\n\t  <p>If two users with the same password and same pass_filter\n\t    variables log in within auth_cache_ttl seconds (1h by default),\n\t    the second user may get logged in with the first user's cached\n\t    pass_attrs. For example if pass_attrs contained the user's\n\t    home/mail directory, this would mean that the second user will\n\t    be accessing the first user's mails.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.dovecot.org/list/dovecot-news/2007-December/000057.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cf484358-b5d6-11dc-8de0-001c2514716c.html"
+				}
+			],
+			"published": "2007-12-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dovecot"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

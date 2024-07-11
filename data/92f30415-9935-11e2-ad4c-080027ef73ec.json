@@ -1,0 +1,74 @@
+{
+	"id": "92f30415-9935-11e2-ad4c-080027ef73ec",
+	"advisories": [
+		{
+			"id": "92f30415-9935-11e2-ad4c-080027ef73ec",
+			"title": "OpenVPN -- potential side-channel/timing attack when comparing HMACs",
+			"description": "\n\t<p>The OpenVPN project reports:</p>\n\t<blockquote cite=\"https://community.openvpn.net/openvpn/wiki/SecurityAnnouncement-f375aa67cc\">\n\t  <p>OpenVPN 2.3.0 and earlier running in UDP mode are subject\n\t    to chosen ciphertext injection due to a non-constant-time\n\t    HMAC comparison function.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2013/05/06/6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://community.openvpn.net/openvpn/wiki/SecurityAnnouncement-f375aa67cc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/OpenVPN/openvpn/commit/11d21349a4e7e38a025849479b36ace7c2eec2ee"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/92f30415-9935-11e2-ad4c-080027ef73ec.html"
+				}
+			],
+			"published": "2013-03-31T00:00:00Z",
+			"modified": "2013-06-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2061",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2061"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openvpn"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.9_4"
+								},
+								{
+									"lt": "2.2.2_2",
+									"ge": "2.1.0"
+								},
+								{
+									"lt": "2.3.1",
+									"ge": "2.3.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

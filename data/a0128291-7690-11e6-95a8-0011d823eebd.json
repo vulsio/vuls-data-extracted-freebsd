@@ -1,0 +1,46 @@
+{
+	"id": "a0128291-7690-11e6-95a8-0011d823eebd",
+	"advisories": [
+		{
+			"id": "a0128291-7690-11e6-95a8-0011d823eebd",
+			"title": "gnutls -- OCSP validation issue",
+			"description": "\n\t<p>gnutls.org reports:</p>\n\t<blockquote cite=\"https://gnutls.org/security.html#GNUTLS-SA-2016-3\">\n\t  <p>Stefan Bühler discovered an issue that affects validation\n\t    of certificates using OCSP responses, which can falsely report a\n\t    certificate as valid under certain circumstances.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://gnutls.org/security.html#GNUTLS-SA-2016-3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a0128291-7690-11e6-95a8-0011d823eebd.html"
+				}
+			],
+			"published": "2016-09-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.15"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

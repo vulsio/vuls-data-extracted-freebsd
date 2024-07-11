@@ -1,0 +1,201 @@
+{
+	"id": "7d08e608-5e95-11e6-b334-002590263bf5",
+	"advisories": [
+		{
+			"id": "7d08e608-5e95-11e6-b334-002590263bf5",
+			"title": "BIND,Knot,NSD,PowerDNS -- denial over service via oversized zone transfers",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01390\">\n\t  <p>DNS protocols were designed with the assumption that a certain\n\t    amount of trust could be presumed between the operators of primary\n\t    and secondary servers for a given zone. However, in current\n\t    practice some organizations have scenarios which require them to\n\t    accept zone data from sources that are not fully trusted (for\n\t    example: providers of secondary name service). A party who is\n\t    allowed to feed data into a zone (e.g. by AXFR, IXFR, or Dynamic DNS\n\t    updates) can overwhelm the server which is accepting data by\n\t    intentionally or accidentally exhausting that server's memory.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/07/06/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://kb.isc.org/article/AA-01390"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7d08e608-5e95-11e6-b334-002590263bf5.html"
+				}
+			],
+			"published": "2016-08-10T00:00:00Z",
+			"modified": "2017-04-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6170",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6170"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6171",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6171"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6172",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6172"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6173",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6173"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.9.9P2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind910"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.10.4P2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind911"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.11.0.b2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind9-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "9.12.0.a.2016.11.02"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "knot"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "knot1"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "knot2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nsd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.11"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

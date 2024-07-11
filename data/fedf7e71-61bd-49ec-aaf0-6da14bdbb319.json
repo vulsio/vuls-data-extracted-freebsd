@@ -1,0 +1,46 @@
+{
+	"id": "fedf7e71-61bd-49ec-aaf0-6da14bdbb319",
+	"advisories": [
+		{
+			"id": "fedf7e71-61bd-49ec-aaf0-6da14bdbb319",
+			"title": "zeek -- potential DoS vulnerability",
+			"description": "\n\t<p>Tim Wojtulewicz of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v6.0.3\">\n\t  <p>A specially-crafted series of packets containing nested\n\t  MIME entities can cause Zeek to spend large amounts of\n\t  time parsing the entities. </p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/zeek/zeek/releases/tag/v6.0.3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fedf7e71-61bd-49ec-aaf0-6da14bdbb319.html"
+				}
+			],
+			"published": "2024-01-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zeek"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.0.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,62 @@
+{
+	"id": "b7abdb0f-3b15-11eb-af2a-080027dbe4b7",
+	"advisories": [
+		{
+			"id": "b7abdb0f-3b15-11eb-af2a-080027dbe4b7",
+			"title": "glpi -- Multiple SQL Injections Stemming From isNameQuoted()",
+			"description": "\n\t<p>MITRE Corporation reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15176\">\n\t  <p>In GLPI before version 9.5.2, when supplying a back tick in input that gets put into a SQL query,the application does not escape or sanitize allowing for SQL Injection to occur. Leveraging this vulnerability an attacker is able to exfiltrate sensitive information like passwords, reset tokens, personal details, and more. The issue is patched in version 9.5.2</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/commit/f021f1f365b4acea5066d3e57c6d22658cf32575"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-x93w-64x9-58qw"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b7abdb0f-3b15-11eb-af2a-080027dbe4b7.html"
+				}
+			],
+			"published": "2020-06-25T00:00:00Z",
+			"modified": "2024-04-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15176",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-15176"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "glpi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.5.2,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

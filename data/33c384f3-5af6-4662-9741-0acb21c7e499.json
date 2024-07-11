@@ -1,0 +1,46 @@
+{
+	"id": "33c384f3-5af6-4662-9741-0acb21c7e499",
+	"advisories": [
+		{
+			"id": "33c384f3-5af6-4662-9741-0acb21c7e499",
+			"title": "mini_httpd -- disclose arbitrary files is some circumstances",
+			"description": "\n\t<p>Jef Poskanzer reports:</p>\n\t<blockquote cite=\"http://acme.com/updates/archive/211.html\">\n\t  <p>Prior versions allowed remote users to read arbitrary files in some circumstances.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://acme.com/updates/archive/211.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/33c384f3-5af6-4662-9741-0acb21c7e499.html"
+				}
+			],
+			"published": "2018-10-26T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mini_httpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.30"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

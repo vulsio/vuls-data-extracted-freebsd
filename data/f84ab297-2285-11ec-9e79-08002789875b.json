@@ -1,0 +1,112 @@
+{
+	"id": "f84ab297-2285-11ec-9e79-08002789875b",
+	"advisories": [
+		{
+			"id": "f84ab297-2285-11ec-9e79-08002789875b",
+			"title": "mediawiki -- multiple vulnerabilities",
+			"description": "\n\t<p>Mediawiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/2IFS5CM2YV4VMSODPX3J2LFHKSEWVFV5/\">\n\t  <p>(T285515, CVE-2021-41798) SECURITY: XSS vulnerability in Special:Search.</p>\n\t  <p>(T290379, CVE-2021-41799) SECURITY: ApiQueryBacklinks can cause a full\n\t    table scan.</p>\n\t  <p>(T284419, CVE-2021-41800) SECURITY: fix PoolCounter protection of\n\t    Special:Contributions.</p>\n\t  <p>(T279090, CVE-2021-41801) SECURITY: ReplaceText continues performing\n\t    actions if the user no longer has the correct permission (such as by being\n\t    blocked).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/2IFS5CM2YV4VMSODPX3J2LFHKSEWVFV5/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f84ab297-2285-11ec-9e79-08002789875b.html"
+				}
+			],
+			"published": "2021-10-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-41798",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41798"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-41799",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41799"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-41800",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41800"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-41801",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41801"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki131"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.31.16"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki135"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.35.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mediawiki136"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.36.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

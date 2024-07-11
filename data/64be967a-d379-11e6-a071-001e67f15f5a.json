@@ -1,0 +1,70 @@
+{
+	"id": "64be967a-d379-11e6-a071-001e67f15f5a",
+	"advisories": [
+		{
+			"id": "64be967a-d379-11e6-a071-001e67f15f5a",
+			"title": "libvncserver -- multiple buffer overflows",
+			"description": "\n\t<p>libvnc server reports:</p>\n\t<blockquote cite=\"https://github.com/LibVNC/libvncserver/pull/137\">\n\t  <p>Two unrelated buffer overflows can be used by a malicious server to overwrite parts of the heap and crash the client (or possibly execute arbitrary code).</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=215805"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/LibVNC/libvncserver/pull/137"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/64be967a-d379-11e6-a071-001e67f15f5a.html"
+				}
+			],
+			"published": "2017-01-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9941",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9941"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9942",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9942"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvncserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.11"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,103 @@
+{
+	"id": "0eab001a-9708-11ec-96c9-589cfc0f81b0",
+	"advisories": [
+		{
+			"id": "0eab001a-9708-11ec-96c9-589cfc0f81b0",
+			"title": "typo3 -- XSS vulnerability in svg-sanitize",
+			"description": "\n       <p>The TYPO3 project reports:</p>\n       <blockquote cite=\"https://typo3.org/article/typo3-psa-2022-001\">\n\t <p>The SVG sanitizer library enshrined/svg-sanitize before version\n\t 0.15.0 did not remove HTML elements wrapped in a CDATA section.\n\t As a result, SVG content embedded in HTML (fetched as text/html)\n\t was susceptible to cross-site scripting. Plain SVG files\n\t (fetched as image/svg+xml) were not affected.</p>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/typo3/typo3/commit/9940defb21"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://typo3.org/article/typo3-psa-2022-001"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0eab001a-9708-11ec-96c9-589cfc0f81b0.html"
+				}
+			],
+			"published": "2022-02-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23638",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23638"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "typo3-10-php74"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.4.25"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "typo3-11-php74"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.5.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "typo3-11-php80"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.5.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "typo3-11-php81"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.5.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

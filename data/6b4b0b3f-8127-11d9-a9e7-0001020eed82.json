@@ -1,0 +1,110 @@
+{
+	"id": "6b4b0b3f-8127-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "6b4b0b3f-8127-11d9-a9e7-0001020eed82",
+			"title": "postgresql -- multiple buffer overflows in PL/PgSQL parser",
+			"description": "\n\t<p>The PL/PgSQL parser in postgresql is vulnerable to several\n\t  buffer overflows.  These could be exploited by a remote\n\t  attacker to execute arbitrary code with the permissions of\n\t  the postgresql server by running a specially crafted\n\t  query.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://archives.postgresql.org/pgsql-committers/2005-02/msg00049.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6b4b0b3f-8127-11d9-a9e7-0001020eed82.html"
+				}
+			],
+			"published": "2005-02-17T00:00:00Z",
+			"modified": "2005-02-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0247",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0247"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.3.9_1"
+								},
+								{
+									"lt": "7.4.7_1",
+									"gt": "7.4.*"
+								},
+								{
+									"lt": "8.0.1_1",
+									"gt": "8.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.3.9_1"
+								},
+								{
+									"lt": "7.4.7_1",
+									"gt": "7.4.*"
+								},
+								{
+									"lt": "8.0.1_1",
+									"gt": "8.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-postgresql"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.3.9_1"
+								},
+								{
+									"lt": "7.4.7_1",
+									"gt": "7.4.*"
+								},
+								{
+									"lt": "8.0.1_1",
+									"gt": "8.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

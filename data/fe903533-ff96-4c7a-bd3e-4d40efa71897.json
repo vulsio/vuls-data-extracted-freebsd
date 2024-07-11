@@ -1,0 +1,61 @@
+{
+	"id": "fe903533-ff96-4c7a-bd3e-4d40efa71897",
+	"advisories": [
+		{
+			"id": "fe903533-ff96-4c7a-bd3e-4d40efa71897",
+			"title": "gforge -- directory traversal vulnerability",
+			"description": "\n\t<p>An STG Security Advisory reports:</p>\n\t  <blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=110627132209963\">\n\t    <p>GForge CVS module made by Dragos Moinescu and another\n\t      module made by Ronald Petty have a directory traversal\n\t      vulnerability. [...] malicious attackers can read\n\t      arbitrary directory lists.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110627132209963"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12318"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fe903533-ff96-4c7a-bd3e-4d40efa71897.html"
+				}
+			],
+			"published": "2005-06-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0299",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0299"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gforge"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,66 @@
+{
+	"id": "f7a97d43-c039-11ea-a051-001b217b3468",
+	"advisories": [
+		{
+			"id": "f7a97d43-c039-11ea-a051-001b217b3468",
+			"title": "Gitlab -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2020/07/06/critical-security-release-gitlab-13-1-3-released/\">\n\t  <p>Workhorse bypass allows files in /tmp to be read via Maven Repository APIs</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2020/07/06/critical-security-release-gitlab-13-1-3-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f7a97d43-c039-11ea-a051-001b217b3468.html"
+				}
+			],
+			"published": "2020-07-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15525",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-15525"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.1.3",
+									"ge": "13.1.0"
+								},
+								{
+									"lt": "13.0.9",
+									"ge": "13.0.0"
+								},
+								{
+									"lt": "12.10.14",
+									"ge": "0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

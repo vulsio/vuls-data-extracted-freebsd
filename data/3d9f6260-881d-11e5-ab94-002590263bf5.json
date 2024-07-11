@@ -1,0 +1,58 @@
+{
+	"id": "3d9f6260-881d-11e5-ab94-002590263bf5",
+	"advisories": [
+		{
+			"id": "3d9f6260-881d-11e5-ab94-002590263bf5",
+			"title": "xen-kernel -- Uncontrolled creation of large page mappings by PV guests",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-148.html\">\n\t  <p>The code to validate level 2 page table entries is bypassed when\n\t    certain conditions are satisfied. This means that a PV guest can\n\t    create writable mappings using super page mappings. Such writable\n\t    mappings can violate Xen intended invariants for pages which Xen is\n\t    supposed to keep read-only. This is possible even if the\n\t    \"allowsuperpage\" command line option is not used.</p>\n\t  <p>Malicious PV guest administrators can escalate privilege so as to\n\t    control the whole system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xenbits.xen.org/xsa/advisory-148.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3d9f6260-881d-11e5-ab94-002590263bf5.html"
+				}
+			],
+			"published": "2015-11-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-7835",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7835"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xen-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.5.1_1",
+									"ge": "3.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

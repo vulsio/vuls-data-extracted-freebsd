@@ -1,0 +1,57 @@
+{
+	"id": "309c35f4-7c9f-11ec-a739-206a8a720317",
+	"advisories": [
+		{
+			"id": "309c35f4-7c9f-11ec-a739-206a8a720317",
+			"title": "aide -- heap-based buffer overflow",
+			"description": "\n\t<p>David Bouman reports:</p>\n\t<blockquote cite=\"INSERT URL HERE\">\n\t  <p>AIDE before 0.17.4 allows local users to obtain root privileges\n\t     via crafted file metadata (such as XFS extended attributes or\n\t     tmpfs ACLs), because of a heap-based buffer overflow.</p>\n\t  <p>Aide uses a fixed size (16k bytes) for the return buffer in\n\t     encode_base64/decode_base64 functions. This results in a segfault\n\t     if aide processes a file with too large extended attribute value\n\t     or ACL.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45417"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/309c35f4-7c9f-11ec-a739-206a8a720317.html"
+				}
+			],
+			"published": "2022-01-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-45417",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-45417"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "aide"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.17.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

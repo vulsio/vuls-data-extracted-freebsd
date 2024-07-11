@@ -1,0 +1,47 @@
+{
+	"id": "700d43b4-a42a-11d8-9c6d-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "700d43b4-a42a-11d8-9c6d-0020ed76ef5a",
+			"title": "Cyrus IMSPd multiple vulnerabilities",
+			"description": "\n\t<p>The Cyrus team reported multiple vulnerabilities in older\n\t  versions of Cyrus IMSPd:</p>\n\t<blockquote cite=\"http://asg.web.cmu.edu/archive/message.php?mailbox=archive.cyrus-announce&amp;msg=25\">\n\t  <p>These releases correct a recently discovered buffer\n\t    overflow vulnerability, as well as clean up a significant\n\t    amount of buffer handling throughout the code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://asg.web.cmu.edu/archive/message.php?mailbox=archive.cyrus-announce&msg=25"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/700d43b4-a42a-11d8-9c6d-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-09-20T00:00:00Z",
+			"modified": "2013-06-19T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cyrus-imspd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6a5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

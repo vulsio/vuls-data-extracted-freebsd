@@ -1,0 +1,129 @@
+{
+	"id": "cd944b3f-51f6-11e7-b7b2-001c25e46b1d",
+	"advisories": [
+		{
+			"id": "cd944b3f-51f6-11e7-b7b2-001c25e46b1d",
+			"title": "Flash Player -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb17-17.html\">\n\t  <ul>\n\t    <li>These updates resolve use-after-free vulnerabilities that\n\t      could lead to code execution (CVE-2017-3075, CVE-2017-3081,\n\t      CVE-2017-3083, CVE-2017-3084).</li>\n\t    <li>These updates resolve memory corruption vulnerabilities that\n\t      could lead to code execution (CVE-2017-3076, CVE-2017-3077,\n\t      CVE-2017-3078, CVE-2017-3079, CVE-2017-3082).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb17-17.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cd944b3f-51f6-11e7-b7b2-001c25e46b1d.html"
+				}
+			],
+			"published": "2017-06-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-3075",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3075"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3076",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3076"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3077",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3077"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3078",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3078"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3079",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3079"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3081",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3081"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3082",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3082"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3083",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3083"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-3084",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3084"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "26.0.0.126"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

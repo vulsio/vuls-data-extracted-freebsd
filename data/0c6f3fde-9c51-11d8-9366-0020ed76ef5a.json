@@ -1,0 +1,72 @@
+{
+	"id": "0c6f3fde-9c51-11d8-9366-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "0c6f3fde-9c51-11d8-9366-0020ed76ef5a",
+			"title": "Midnight Commander buffer overflows, format string bugs, and insecure temporary file handling",
+			"description": "\n\t<p>Jakub Jelinek reports several security related bugs in\n\t  Midnight Commander, including:</p>\n\t<ul>\n\t  <li>Multiple buffer overflows (CVE-2004-0226)</li>\n\t  <li>Insecure temporary file handling (CVE-2004-0231)</li>\n\t  <li>Format string bug (CVE-2004-0232)</li>\n\t</ul>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0c6f3fde-9c51-11d8-9366-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-05-02T00:00:00Z",
+			"modified": "2004-06-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0226",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0226"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0231",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0231"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0232",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0232"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mc"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.6.0_10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

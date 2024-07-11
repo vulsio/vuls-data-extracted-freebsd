@@ -1,0 +1,46 @@
+{
+	"id": "4d6076fe-ee7a-11de-9cd0-001a926c7637",
+	"advisories": [
+		{
+			"id": "4d6076fe-ee7a-11de-9cd0-001a926c7637",
+			"title": "fuser -- missing user's privileges check",
+			"description": "\n\t<p>Denis Barov reports:</p>\n\t<blockquote>\n\t  <p>sysutils/fuser allows user to send any signal to any process when\n\t    installed with suid bit.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=141852"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4d6076fe-ee7a-11de-9cd0-001a926c7637.html"
+				}
+			],
+			"published": "2009-12-21T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fuser"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1142334561_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

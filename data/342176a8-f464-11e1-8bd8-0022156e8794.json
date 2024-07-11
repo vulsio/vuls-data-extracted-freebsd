@@ -1,0 +1,65 @@
+{
+	"id": "342176a8-f464-11e1-8bd8-0022156e8794",
+	"advisories": [
+		{
+			"id": "342176a8-f464-11e1-8bd8-0022156e8794",
+			"title": "GNU gatekeeper -- denial of service",
+			"description": "\n\t<p>Jan Willamowius reports:</p>\n\t<blockquote cite=\"http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-3534\">\n\t  <p>GNU Gatekeeper before 3.1 does not limit the number\n\t  of connections to the status port, which allows remote\n\t  attackers to cause a denial of service (connection and\n\t  thread consumption) via a large number of connections.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-3534"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gnugk.org/gnugk-3.1.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2012/08/25/4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/342176a8-f464-11e1-8bd8-0022156e8794.html"
+				}
+			],
+			"published": "2012-09-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3534",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3534"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gatekeeper"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

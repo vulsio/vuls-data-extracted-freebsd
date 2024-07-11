@@ -1,0 +1,61 @@
+{
+	"id": "1b725079-9ef6-11da-b410-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "1b725079-9ef6-11da-b410-000e0c2e438a",
+			"title": "sudo -- arbitrary command execution",
+			"description": "\n\t<p>Tavis Ormandy reports:</p>\n\t<blockquote cite=\"http://www.courtesan.com/sudo/alerts/bash_env.html\">\n\t  <p>The bash shell uses the value of the PS4 environment\n\t    variable (after expansion) as a prefix for commands run\n\t    in execution trace mode. Execution trace mode (xtrace) is\n\t    normally set via bash's -x command line option or\n\t    interactively by running \"set -o xtrace\". However, it may\n\t    also be enabled by placing the string \"xtrace\" in the\n\t    SHELLOPTS environment variable before bash is started.</p>\n\t  <p>A malicious user with sudo access to a shell script that\n\t    uses bash can use this feature to run arbitrary commands\n\t    for each line of the script.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.courtesan.com/sudo/alerts/bash_env.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/15191"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1b725079-9ef6-11da-b410-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-02-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-2959",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2959"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sudo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.8.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

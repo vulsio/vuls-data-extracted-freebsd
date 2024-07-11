@@ -1,0 +1,77 @@
+{
+	"id": "546deeea-3fc6-11e6-a671-60a44ce6887b",
+	"advisories": [
+		{
+			"id": "546deeea-3fc6-11e6-a671-60a44ce6887b",
+			"title": "SQLite3 -- Tempdir Selection Vulnerability",
+			"description": "\n\t<p>KoreLogic security reports:</p>\n\t<blockquote cite=\"https://www.korelogic.com/Resources/Advisories/KL-001-2016-003.txt\">\n\t  <p>Affected versions of SQLite reject potential tempdir locations if\n\t    they are not readable, falling back to '.'. Thus, SQLite will favor\n\t    e.g. using cwd for tempfiles on such a system, even if cwd is an\n\t    unsafe location.  Notably, SQLite also checks the permissions of\n\t    '.', but ignores the results of that check.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://openwall.com/lists/oss-security/2016/07/01/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sqlite.org/cgi/src/info/614bb709d34e1148"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sqlite.org/cgi/src/info/67985761aa93fb61"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.sqlite.org/cgi/src/info/b38fe522cfc971b3"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209827"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.korelogic.com/Resources/Advisories/KL-001-2016-003.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/546deeea-3fc6-11e6-a671-60a44ce6887b.html"
+				}
+			],
+			"published": "2016-07-03T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6153",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6153"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sqlite3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.13.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

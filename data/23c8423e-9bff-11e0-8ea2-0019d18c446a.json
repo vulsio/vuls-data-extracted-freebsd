@@ -1,0 +1,51 @@
+{
+	"id": "23c8423e-9bff-11e0-8ea2-0019d18c446a",
+	"advisories": [
+		{
+			"id": "23c8423e-9bff-11e0-8ea2-0019d18c446a",
+			"title": "Piwik -- remote command execution vulnerability",
+			"description": "\n\t<p>The Piwik security advisory reports:</p>\n\t<blockquote cite=\"http://piwik.org/blog/2011/06/piwik-1-5-security-advisory/\">\n\t  <p>The Piwik 1.5 release addresses a critical security\n\t    vulnerability, which affect all Piwik users that have let\n\t    granted some access to the \"anonymous\" user.</p>\n\t  <p>Piwik contains a remotely exploitable vulnerability that could\n\t    allow a remote attacker to execute arbitrary code.  Only\n\t    installations that have granted untrusted view access to their\n\t    stats (ie. grant \"view\" access to a website to anonymous) are\n\t    at risk.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://piwik.org/blog/2011/06/piwik-1-5-security-advisory/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=158084"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/23c8423e-9bff-11e0-8ea2-0019d18c446a.html"
+				}
+			],
+			"published": "2011-06-21T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "piwik"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5",
+									"ge": "1.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

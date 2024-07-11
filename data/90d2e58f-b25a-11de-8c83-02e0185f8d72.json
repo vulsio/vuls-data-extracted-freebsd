@@ -1,0 +1,52 @@
+{
+	"id": "90d2e58f-b25a-11de-8c83-02e0185f8d72",
+	"advisories": [
+		{
+			"id": "90d2e58f-b25a-11de-8c83-02e0185f8d72",
+			"title": "FreeBSD -- kqueue pipe race conditions",
+			"description": "\n\t<h1>Problem Description</h1>\n\t<p>A race condition exists in the pipe close() code relating\n\t  to kqueues, causing use-after-free for kernel memory, which\n\t  may lead to an exploitable NULL pointer vulnerability in the\n\t  kernel, kernel memory corruption, and other unpredictable\n\t  results.</p>\n\t<h1>Impact:</h1>\n\t<p>Successful exploitation of the race condition can lead to\n\t  local kernel privilege escalation, kernel data corruption\n\t  and/or crash.</p>\n\t<p>To exploit this vulnerability, an attacker must be able to\n\t  run code on the target system.</p>\n\t<h1>Workaround</h1>\n\t<p>An errata notice, FreeBSD-EN-09:05.null has been released\n\t  simultaneously to this advisory, and contains a kernel patch\n\t  implementing a workaround for a more broad class of\n\t  vulnerabilities.  However, prior to those changes, no\n\t  workaround is available.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-09:13.pipe.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/90d2e58f-b25a-11de-8c83-02e0185f8d72.html"
+				}
+			],
+			"published": "2009-10-06T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.4_7",
+									"ge": "6.3"
+								},
+								{
+									"lt": "6.3_13",
+									"ge": "6.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

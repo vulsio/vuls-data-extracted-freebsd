@@ -1,0 +1,70 @@
+{
+	"id": "bd730827-dfe0-11dd-a765-0030843d3802",
+	"advisories": [
+		{
+			"id": "bd730827-dfe0-11dd-a765-0030843d3802",
+			"title": "libcdaudio -- remote buffer overflow and code execution",
+			"description": "\n\t<p>securityfocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/32122/discuss\">\n\t  <p>The 'libcdaudio' library is prone to a remote heap code in the\n\t    context of an application that uses the library. Failed attacks will\n\t    cause denial-of-service conditions.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/12770/discuss\">\n\t  <p>A buffer-overflow in Grip occurs when the software processes a\n\t    response to a CDDB query that has more than 16 matches.</p>\n\t  <p>To exploit this issue, an attacker must be able to influence the\n\t    response to a CDDB query, either by controlling a malicious CDDB\n\t    server or through some other means. Successful exploits will allow\n\t    arbitrary code to run.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12770"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/32122"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bd730827-dfe0-11dd-a765-0030843d3802.html"
+				}
+			],
+			"published": "2009-01-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0706",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0706"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-5030",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5030"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcdaudio"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.12p2_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

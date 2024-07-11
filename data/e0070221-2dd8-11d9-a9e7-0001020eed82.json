@@ -1,0 +1,46 @@
+{
+	"id": "e0070221-2dd8-11d9-a9e7-0001020eed82",
+	"advisories": [
+		{
+			"id": "e0070221-2dd8-11d9-a9e7-0001020eed82",
+			"title": "wzdftpd -- remote DoS",
+			"description": "\n\t<p>wzdftpd contains a potential remote Denial-of-Service.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=263573"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e0070221-2dd8-11d9-a9e7-0001020eed82.html"
+				}
+			],
+			"published": "2004-11-03T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wzdftpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.4.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

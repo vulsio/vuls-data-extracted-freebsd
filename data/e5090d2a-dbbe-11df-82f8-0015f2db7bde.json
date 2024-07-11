@@ -1,0 +1,156 @@
+{
+	"id": "e5090d2a-dbbe-11df-82f8-0015f2db7bde",
+	"advisories": [
+		{
+			"id": "e5090d2a-dbbe-11df-82f8-0015f2db7bde",
+			"title": "Webkit-gtk2 -- Multiple Vulnabilities",
+			"description": "\n\t<p>Gustavo Noronha Silva reports:</p>\n\t<blockquote cite=\"http://gitorious.org/webkitgtk/stable/blobs/master/WebKit/gtk/NEWS\">\n\t  <p>The patches to fix the following CVEs are included with help from\n\t    Vincent Danen and other members of the Red Hat security team:</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gitorious.org/webkitgtk/stable/blobs/master/WebKit/gtk/NEWS"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e5090d2a-dbbe-11df-82f8-0015f2db7bde.html"
+				}
+			],
+			"published": "2010-10-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1780",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1780"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-1807",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1807"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-1812",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1812"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-1814",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1814"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-1815",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1815"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3113",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3113"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3114",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3114"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3115",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3115"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3116",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3116"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3255",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3255"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3257",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3257"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-3259",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3259"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkit-gtk2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

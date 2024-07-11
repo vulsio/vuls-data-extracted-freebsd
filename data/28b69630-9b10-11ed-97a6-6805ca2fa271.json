@@ -1,0 +1,58 @@
+{
+	"id": "28b69630-9b10-11ed-97a6-6805ca2fa271",
+	"advisories": [
+		{
+			"id": "28b69630-9b10-11ed-97a6-6805ca2fa271",
+			"title": "powerdns-recursor -- denial of service",
+			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://blog.powerdns.com/2023/01/20/security-advisory-2023-01-for-powerdns-recursor-4-8-0/\">\n\t  <p>PowerDNS Security Advisory 2023-01: unbounded recursion results in program termination</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2023-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/28b69630-9b10-11ed-97a6-6805ca2fa271.html"
+				}
+			],
+			"published": "2023-01-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-22617",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-22617"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns-recursor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.8.1",
+									"ge": "4.8.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,46 @@
+{
+	"id": "b07f3254-f83a-11dd-85a4-ea653f0746ab",
+	"advisories": [
+		{
+			"id": "b07f3254-f83a-11dd-85a4-ea653f0746ab",
+			"title": "pyblosxom -- atom flavor multiple XML injection vulnerabilities",
+			"description": "\n\t<p>Security Focus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/33676/\">\n\t  <p>PyBlosxom is prone to multiple XML-injection\n\t    vulnerabilities because the application fails to\n\t    properly sanitize user-supplied input before using it\n\t    in dynamically generated content.</p>\n\t  <p>Attacker-supplied XML and script code would run in the\n\t    context of the affected browser, potentially allowing\n\t    the attacker to steal cookie-based authentication credentials\n\t    or to control how the site is rendered to the user. Other attacks\n\t    are also possible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/33676"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b07f3254-f83a-11dd-85a4-ea653f0746ab.html"
+				}
+			],
+			"published": "2009-02-11T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pyblosxom"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.r3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

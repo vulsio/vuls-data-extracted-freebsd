@@ -1,0 +1,71 @@
+{
+	"id": "c2c8c84b-e734-11e3-9a25-5404a6a6412c",
+	"advisories": [
+		{
+			"id": "c2c8c84b-e734-11e3-9a25-5404a6a6412c",
+			"title": "mumble -- NULL pointer dereference and heap-based buffer overflow",
+			"description": "\n\t<p>Mumble reports:</p>\n\t<blockquote cite=\"http://blog.mumble.info/mumble-1-2-5/\">\n\t  <p>A malformed Opus voice packet sent to a Mumble client could trigger\n\t    a NULL pointer dereference or an out-of-bounds array access.</p>\n\t  <p>A malformed Opus voice packet sent to a Mumble client could trigger a\n\t    heap-based buffer overflow.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mumble.info/security/Mumble-SA-2014-001.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mumble.info/security/Mumble-SA-2014-002.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c2c8c84b-e734-11e3-9a25-5404a6a6412c.html"
+				}
+			],
+			"published": "2014-05-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0044",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0044"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0045",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0045"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mumble"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.2.4_6",
+									"ge": "1.2.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

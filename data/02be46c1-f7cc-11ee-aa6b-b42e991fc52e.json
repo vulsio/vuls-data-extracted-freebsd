@@ -1,0 +1,57 @@
+{
+	"id": "02be46c1-f7cc-11ee-aa6b-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "02be46c1-f7cc-11ee-aa6b-b42e991fc52e",
+			"title": "jose -- DoS vulnerability",
+			"description": "\n\t<p>cve@mitre.org reports:</p>\n\t<blockquote cite=\"https://github.com/P3ngu1nW/CVE_Request/blob/main/latch-jose.md\">\n\t<p>\n\t  latchset jose through version 11 allows attackers to cause\n\t  a denial of service (CPU consumption) via a large p2c (aka\n\t  PBES2 Count) value.</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50967"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/02be46c1-f7cc-11ee-aa6b-b42e991fc52e.html"
+				}
+			],
+			"published": "2024-04-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-50967",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-50967"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jose"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

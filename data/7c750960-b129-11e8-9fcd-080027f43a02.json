@@ -1,0 +1,50 @@
+{
+	"id": "7c750960-b129-11e8-9fcd-080027f43a02",
+	"advisories": [
+		{
+			"id": "7c750960-b129-11e8-9fcd-080027f43a02",
+			"title": "Information disclosure - Gitea leaks email addresses",
+			"description": "\n\t<p>The Gitea project reports:</p>\n\t<blockquote cite=\"https://github.com/go-gitea/gitea/issues/4417\">\n\t  <p>[Privacy] Gitea leaks hidden email addresses #4417</p>\n\t  <p>A fix has been implemented in Gitea 1.5.1.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/issues/4417"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/pull/4784"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7c750960-b129-11e8-9fcd-080027f43a02.html"
+				}
+			],
+			"published": "2018-09-05T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

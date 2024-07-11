@@ -1,0 +1,57 @@
+{
+	"id": "7ba65bfd-2a40-11e1-b96e-00215af774f0",
+	"advisories": [
+		{
+			"id": "7ba65bfd-2a40-11e1-b96e-00215af774f0",
+			"title": "unbound -- denial of service vulnerabilities from nonstandard redirection and denial of existence",
+			"description": "\n\t<p>Unbound developer reports:</p>\n\t<blockquote cite=\"http://www.unbound.net/downloads/CVE-2011-4528.txt\">\n\t  <p>Unbound crashes when confronted with a non-standard response\n\t    from a server for a domain.  This domain produces duplicate RRs\n\t    from a certain type and is DNSSEC signed.  Unbound also crashes\n\t    when confronted with a query that eventually, and under specific\n\t    circumstances, resolves to a domain that misses expected NSEC3\n\t    records.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://unbound.nlnetlabs.nl/downloads/CVE-2011-4528.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7ba65bfd-2a40-11e1-b96e-00215af774f0.html"
+				}
+			],
+			"published": "2011-12-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4528",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4528"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "unbound"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.14"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,82 @@
+{
+	"id": "f95a9005-88ae-11d8-90d1-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "f95a9005-88ae-11d8-90d1-0020ed76ef5a",
+			"title": "shmat reference counting bug",
+			"description": "\n\t<p>A programming error in the <a href=\"http://www.freebsd.org/cgi/man.cgi?query=shmat\">shmat(2)</a> system call can result\n\t  in a shared memory segment's reference count being erroneously\n\t  incremented.</p>\n\t<p>It may be possible to cause a shared memory segment to\n\t  reference unallocated kernel memory, but remain valid.\n\t  This could allow a local attacker to gain read or write\n\t  access to a portion of kernel memory, resulting in sensitive\n\t  information disclosure, bypass of access control mechanisms,\n\t  or privilege escalation.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pine.nl/press/pine-cert-20040201.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:02.shmat.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f95a9005-88ae-11d8-90d1-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-04-07T00:00:00Z",
+			"modified": "2004-05-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0114",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0114"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.2_2",
+									"ge": "5.2"
+								},
+								{
+									"lt": "5.1_14",
+									"ge": "5.1"
+								},
+								{
+									"lt": "5.0_20",
+									"ge": "5.0"
+								},
+								{
+									"lt": "4.9_2",
+									"ge": "4.9"
+								},
+								{
+									"lt": "4.8_15",
+									"ge": "4.8"
+								},
+								{
+									"lt": "4.7_25"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

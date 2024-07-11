@@ -1,0 +1,76 @@
+{
+	"id": "a813a219-d2d4-11da-a672-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "a813a219-d2d4-11da-a672-000e0c2e438a",
+			"title": "zgv, xzgv -- heap overflow vulnerability",
+			"description": "\n\t<p>Gentoo reports:</p>\n\t<blockquote cite=\"http://www.gentoo.org/security/en/glsa/glsa-200604-10.xml\">\n\t  <p>Andrea Barisani of Gentoo Linux discovered xzgv and zgv\n\t    allocate insufficient memory when rendering images with\n\t    more than 3 output components, such as images using the\n\t    YCCK or CMYK colour space.\tWhen xzgv or zgv attempt to\n\t    render the image, data from the image overruns a heap\n\t    allocated buffer.</p>\n\t  <p>An attacker may be able to construct a malicious image that\n\t    executes arbitrary code with the permissions of the xzgv or\n\t    zgv user when attempting to render the image.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200604-10.xml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/17409"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a813a219-d2d4-11da-a672-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-04-23T00:00:00Z",
+			"modified": "2010-03-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1060",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1060"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zgv"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.9_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xzgv"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

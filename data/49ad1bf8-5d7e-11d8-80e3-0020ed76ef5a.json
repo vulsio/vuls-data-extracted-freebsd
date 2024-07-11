@@ -1,0 +1,46 @@
+{
+	"id": "49ad1bf8-5d7e-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "49ad1bf8-5d7e-11d8-80e3-0020ed76ef5a",
+			"title": "ChiTeX/ChiLaTeX unsafe set-user-id root",
+			"description": "\n\t<p>Niels Heinen reports that ChiTeX installs set-user-id root\n\t  executables that invoked system(3) without setting up the\n\t  environment, trivially allowing local root compromise.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.freebsd.org/cgi/mid.cgi?200303251301.h2PD1m9Y053389"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/49ad1bf8-5d7e-11d8-80e3-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-02-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-chitex"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"gt": "0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,108 @@
+{
+	"id": "a61374fc-3a4d-11e6-a671-60a44ce6887b",
+	"advisories": [
+		{
+			"id": "a61374fc-3a4d-11e6-a671-60a44ce6887b",
+			"title": "Python -- HTTP Header Injection in Python urllib",
+			"description": "\n\t<p>Guido Vranken reports:</p>\n\t<blockquote cite=\"https://bugs.python.org/issue22928\">\n\t  <p>HTTP header injection in urrlib2/urllib/httplib/http.client with\n\t     newlines in header values, where newlines have a semantic consequence of\n\t     denoting the start of an additional header line.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.blindspotsecurity.com/2016/06/advisory-http-header-injection-in.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/06/14/7"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.python.org/issue22928"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a61374fc-3a4d-11e6-a671-60a44ce6887b.html"
+				}
+			],
+			"published": "2016-06-30T00:00:00Z",
+			"modified": "2016-07-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-5699",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5699"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python27"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.10"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python33"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python34"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.4.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python35"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

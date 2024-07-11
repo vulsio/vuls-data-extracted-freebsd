@@ -1,0 +1,68 @@
+{
+	"id": "fc07c9ca-22ce-11d9-814e-0001020eed82",
+	"advisories": [
+		{
+			"id": "fc07c9ca-22ce-11d9-814e-0001020eed82",
+			"title": "phpmyadmin -- remote command execution vulnerability",
+			"description": "\n\t<p>From the phpMyAdmin 2.6.0p2 release notes:</p>\n\t<blockquote cite=\"http://sourceforge.net/project/shownotes.php?release_id=274709\">\n\t  <p>If PHP is not running in safe mode, a problem in the\n\t    MIME-based transformation system (with an \"external\"\n\t    transformation) allows to execute any command with the\n\t    privileges of the web server's user.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=274709"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/tracker/index.php?func=detail&aid=1044864&group_id=23067&atid=377408"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11391"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fc07c9ca-22ce-11d9-814e-0001020eed82.html"
+				}
+			],
+			"published": "2004-10-20T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.0.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpmyadmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

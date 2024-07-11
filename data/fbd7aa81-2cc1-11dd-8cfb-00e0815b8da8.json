@@ -1,0 +1,80 @@
+{
+	"id": "fbd7aa81-2cc1-11dd-8cfb-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "fbd7aa81-2cc1-11dd-8cfb-00e0815b8da8",
+			"title": "Nagios -- Cross Site Scripting Vulnerability",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/30283\">\n\t  <p>A vulnerability has been reported in Nagios, which can be\n\t    exploited by malicious people to conduct cross-site scripting\n\t    attacks.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/30283"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/29140"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fbd7aa81-2cc1-11dd-8cfb-00e0815b8da8.html"
+				}
+			],
+			"published": "2008-05-28T00:00:00Z",
+			"modified": "2008-09-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-5803",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5803"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nagios"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.12"
+								},
+								{
+									"lt": "3.0.2",
+									"gt": "3.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nagios-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

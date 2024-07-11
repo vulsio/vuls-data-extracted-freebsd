@@ -1,0 +1,107 @@
+{
+	"id": "2d9ad236-4d26-11db-b48d-00508d6a62df",
+	"advisories": [
+		{
+			"id": "2d9ad236-4d26-11db-b48d-00508d6a62df",
+			"title": "freeciv -- Denial of Service Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/21171/\">\n\t  <p>Luigi Auriemma has reported a vulnerability in Freeciv,\n\t    which can be exploited by malicious people to cause a DoS\n\t    (Denial of Service).</p>\n\t  <p>An error in the \"generic_handle_player_attribute_chunk()\"\n\t    function in common/packets.c can be exploited to crash the\n\t    service via a specially crafted\n\t    PACKET_PLAYER_ATTRIBUTE_CHUNK packet sent to the server.</p>\n\t  <p>An error in the \"handle_unit_orders()\" function in\n\t    server/unithand.c can be exploited to crash the service\n\t    via a specially crafted packet.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://aluigi.altervista.org/adv/freecivx-adv.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/21171/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/19117"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2d9ad236-4d26-11db-b48d-00508d6a62df.html"
+				}
+			],
+			"published": "2006-09-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-3913",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-3913"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeciv"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.8_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeciv-gtk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.8_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeciv-gtk2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.8_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeciv-nox11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.8_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

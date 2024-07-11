@@ -1,0 +1,137 @@
+{
+	"id": "265c8b00-d2d0-11d8-b479-02e0185c0b53",
+	"advisories": [
+		{
+			"id": "265c8b00-d2d0-11d8-b479-02e0185c0b53",
+			"title": "multiple vulnerabilities in ethereal",
+			"description": "\n\t<p>Issues have been discovered in multiple protocol dissectors.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/12024"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ethereal.com/appnotes/enpa-sa-00015.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/7536"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/7537"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/7538"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/10672"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/265c8b00-d2d0-11d8-b479-02e0185c0b53.html"
+				}
+			],
+			"published": "2004-07-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0633",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0633"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0634",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0634"
+				}
+			]
+		},
+		{
+			"id": "CVE-2004-0635",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0635"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ethereal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ethereal-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tethereal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tethereal-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

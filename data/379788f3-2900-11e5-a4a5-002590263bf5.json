@@ -1,0 +1,83 @@
+{
+	"id": "379788f3-2900-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "379788f3-2900-11e5-a4a5-002590263bf5",
+			"title": "freeradius -- insufficient CRL application vulnerability",
+			"description": "\n\t<p>oCERT reports:</p>\n\t<blockquote cite=\"http://www.ocert.org/advisories/ocert-2015-008.html\">\n\t  <p>The FreeRADIUS server relies on OpenSSL to perform certificate\n\t    validation, including Certificate Revocation List (CRL) checks. The\n\t    FreeRADIUS usage of OpenSSL, in CRL application, limits the checks\n\t    to leaf certificates, therefore not detecting revocation of\n\t    intermediate CA certificates.</p>\n\t  <p>An unexpired client certificate, issued by an intermediate CA with\n\t    a revoked certificate, is therefore accepted by FreeRADIUS.</p>\n\t  <p>Specifically sets the X509_V_FLAG_CRL_CHECK flag for leaf\n\t    certificate CRL checks, but does not use X509_V_FLAG_CRL_CHECK_ALL\n\t    for CRL checks on the complete trust chain.</p>\n\t  <p>The FreeRADIUS project advises that the recommended configuration\n\t    is to use self-signed CAs for all EAP-TLS methods.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://freeradius.org/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ocert.org/advisories/ocert-2015-008.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=201058"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=201059"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/379788f3-2900-11e5-a4a5-002590263bf5.html"
+				}
+			],
+			"published": "2015-07-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-4680",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4680"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeradius2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeradius3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

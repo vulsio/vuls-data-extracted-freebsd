@@ -1,0 +1,78 @@
+{
+	"id": "74a9541d-5d6c-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "74a9541d-5d6c-11d8-80e3-0020ed76ef5a",
+			"title": "clamav remote denial-of-service",
+			"description": "\n\t<p>clamav will exit when a programming\n\t  assertion is not met.  A malformed uuencoded message can\n\t  trigger this assertion, allowing an attacker to trivially\n\t  crash clamd or other components of clamav.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/10826"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.osvdb.org/3894"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/archive/1/353186"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/9610"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xforce.iss.net/xforce/xfdb/15077"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=62586"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/74a9541d-5d6c-11d8-80e3-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-02-12T00:00:00Z",
+			"modified": "2004-06-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0270",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0270"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.65_7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

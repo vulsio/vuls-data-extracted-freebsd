@@ -1,0 +1,54 @@
+{
+	"id": "deb4f633-de1d-11e8-a9fb-080027f43a02",
+	"advisories": [
+		{
+			"id": "deb4f633-de1d-11e8-a9fb-080027f43a02",
+			"title": "gitea -- remote code exeution",
+			"description": "\n\t<p>The Gitea project reports:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2018/10/gitea-1.5.3-is-released/\">\n\t  <p>[This release] contains crit[i]cal security fix for vulnerability\n\t  that could potentially allow for authorized users to do remote code\n\t  ex[e]cution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/pull/5177"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-gitea/gitea/pull/5196"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/go-macaron/session/commit/084f1e5c1071f585902a7552b483cee04bc00a14"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/deb4f633-de1d-11e8-a9fb-080027f43a02.html"
+				}
+			],
+			"published": "2018-11-01T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

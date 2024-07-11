@@ -1,0 +1,57 @@
+{
+	"id": "8e20430d-a72b-11ed-a04f-40b034455553",
+	"advisories": [
+		{
+			"id": "8e20430d-a72b-11ed-a04f-40b034455553",
+			"title": "MinIO -- unprivileged users can create service accounts for admin users",
+			"description": "\n\t<p>MinIO reports:</p>\n\t<blockquote cite=\"https://github.com/minio/minio/security/advisories/GHSA-2j69-jjmg-534q\">\n\t  <p>\n\t      A security issue was found where an unprivileged user is\n\t      able to create service accounts for root or other admin\n\t      users and then is able to assume their access policies\n\t      via the generated credentials.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/minio/minio/security/advisories/GHSA-2j69-jjmg-534q"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/8e20430d-a72b-11ed-a04f-40b034455553.html"
+				}
+			],
+			"published": "2023-02-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24842",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24842"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "minio"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2022.04.12.06.55.35"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,46 @@
+{
+	"id": "55041d37-ff62-11d9-a9a5-000ae4641456",
+	"advisories": [
+		{
+			"id": "55041d37-ff62-11d9-a9a5-000ae4641456",
+			"title": "jabberd -- 3 buffer overflows",
+			"description": "\n\t<p>There are 3 buffer overflows in jid.c that are triggered\n\t  during parsing of JID strings when components (user, host or\n\t  resource) are too long.</p>\n\t<ol>\n\t  <li>jid.c, line 103: overflow in `str' buffer through\n\t    <code>strcpy()</code> when \"user\" part is too long.</li>\n\t  <li>jid.c, line 115: overflow in `str' buffer through\n\t    <code>strcpy()</code> when \"host\" part is too long.</li>\n\t  <li>jid.c, line 127: overflow in `str' buffer through\n\t    <code>strcpy()</code> when \"resource\" part is too\n\t    long.</li>\n\t</ol>\n\t<p>These overflows can be used to perform a DoS attack on the\n\t  server (sm process segfaults) and can possible be used for\n\t  arbitrary code execution.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://j2.openaether.org/bugzilla/show_bug.cgi?id=99"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/55041d37-ff62-11d9-a9a5-000ae4641456.html"
+				}
+			],
+			"published": "2005-07-30T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jabberd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

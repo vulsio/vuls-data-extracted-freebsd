@@ -1,0 +1,135 @@
+{
+	"id": "cb470368-94d2-11d9-a9e0-0001020eed82",
+	"advisories": [
+		{
+			"id": "cb470368-94d2-11d9-a9e0-0001020eed82",
+			"title": "ethereal -- multiple protocol dissectors vulnerabilities",
+			"description": "\n\t<p>An Ethreal Security Advisories reports:</p>\n\t<blockquote cite=\"http://www.ethereal.com/appnotes/enpa-sa-00018.html\">\n\t  <p>Issues have been discovered in the following protocol\n\t    dissectors:</p>\n\t  <ul>\n\t    <li>Matevz Pustisek discovered a buffer overflow in the\n\t      Etheric dissector. CVE: CAN-2005-0704</li>\n\t    <li>The GPRS-LLC dissector could crash if the \"ignore\n\t      cipher bit\" option was enabled. CVE: CAN-2005-0705</li>\n\t    <li>Diego Giago discovered a buffer overflow in the 3GPP2\n\t      A11 dissector. This flaw was later reported by Leon\n\t      Juranic. CVE: CAN-2005-0699</li>\n\t    <li>Leon Juranic discovered a buffer overflow in the IAPP dissector.\n\t      CVE: CAN-2005-0739</li>\n\t    <li>A bug in the JXTA dissector could make Ethereal crash.</li>\n\t    <li>A bug in the sFlow dissector could make Ethereal crash.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ethereal.com/appnotes/enpa-sa-00018.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/12759"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cb470368-94d2-11d9-a9e0-0001020eed82.html"
+				}
+			],
+			"published": "2005-03-14T00:00:00Z",
+			"modified": "2005-06-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2005-0699",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0699"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0704",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0704"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0705",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0705"
+				}
+			]
+		},
+		{
+			"id": "CVE-2005-0739",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0739"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ethereal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.10",
+									"ge": "0.9.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ethereal-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.10",
+									"ge": "0.9.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tethereal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.10",
+									"ge": "0.9.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tethereal-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.10.10",
+									"ge": "0.9.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

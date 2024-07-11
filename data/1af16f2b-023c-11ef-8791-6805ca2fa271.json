@@ -1,0 +1,57 @@
+{
+	"id": "1af16f2b-023c-11ef-8791-6805ca2fa271",
+	"advisories": [
+		{
+			"id": "1af16f2b-023c-11ef-8791-6805ca2fa271",
+			"title": "powerdns-recursor -- denial of service",
+			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://blog.powerdns.com/2024/04/24/powerdns-recursor-4-8-8-4-9-5-5-0-4-released\">\n\t  <p>PowerDNS Security Advisory 2024-02: if recursive forwarding is configured,\n\t   crafted responses can lead to a denial of service in Recursor</p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1af16f2b-023c-11ef-8791-6805ca2fa271.html"
+				}
+			],
+			"published": "2024-04-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-25583",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-25583"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns-recursor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.0.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,61 @@
+{
+	"id": "b1aa54ae-74cb-42a0-b462-cbb6831c5c50",
+	"advisories": [
+		{
+			"id": "b1aa54ae-74cb-42a0-b462-cbb6831c5c50",
+			"title": "RabbitMQ -- Denial of Service in AMQP1.0 plugin",
+			"description": "\n\t<p>Pivotal.io reports:</p>\n\t<blockquote cite=\"https://tanzu.vmware.com/security/cve-2021-22116\">\n\t<p>All versions prior to 3.8.16 are prone to a denial of\n\t   service vulnerability due to improper input validation\n\t   in AMQP 1.0 client connection endpoint.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.8.19"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://tanzu.vmware.com/security/cve-2021-22116"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b1aa54ae-74cb-42a0-b462-cbb6831c5c50.html"
+				}
+			],
+			"published": "2021-05-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9877",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9877"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rabbitmq"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.8.16"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

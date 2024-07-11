@@ -1,0 +1,46 @@
+{
+	"id": "31d9fbb4-9d09-11dc-a29d-0016d325a0ed",
+	"advisories": [
+		{
+			"id": "31d9fbb4-9d09-11dc-a29d-0016d325a0ed",
+			"title": "ikiwiki -- improper symlink verification vulnerability",
+			"description": "\n\t<p>The ikiwiki development team reports:</p>\n\t<blockquote cite=\"http://ikiwiki.info/security/#index29h2\">\n\t  <p>Ikiwiki did not check if path to the srcdir to contained a\n\t    symlink. If an attacker had commit access to the directories in\n\t    the path, they could change it to a symlink, causing ikiwiki to\n\t    read and publish files that were not intended to be\n\t    published. (But not write to them due to other checks.)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://ikiwiki.info/security/#index29h2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/31d9fbb4-9d09-11dc-a29d-0016d325a0ed.html"
+				}
+			],
+			"published": "2007-11-27T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ikiwiki"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.14"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

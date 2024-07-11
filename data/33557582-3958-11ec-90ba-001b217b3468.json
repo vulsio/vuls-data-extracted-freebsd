@@ -1,0 +1,192 @@
+{
+	"id": "33557582-3958-11ec-90ba-001b217b3468",
+	"advisories": [
+		{
+			"id": "33557582-3958-11ec-90ba-001b217b3468",
+			"title": "Gitlab -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2021/10/28/security-release-gitlab-14-4-1-released/\">\n\t  <p>Stored XSS via ipynb files</p>\n\t  <p>Pipeline schedules on imported projects can be set to automatically active after import</p>\n\t  <p>Potential Denial of service via Workhorse</p>\n\t  <p>Improper Access Control allows Merge Request creator to bypass locked status</p>\n\t  <p>Projects API discloses ID and name of private groups</p>\n\t  <p>Severity of an incident can be changed by a guest user</p>\n\t  <p>System root password accidentally written to log file</p>\n\t  <p>Potential DoS via a malformed TIFF image</p>\n\t  <p>Bypass of CODEOWNERS Merge Request approval requirement</p>\n\t  <p>Change project visibility to a restricted option</p>\n\t  <p>Project exports leak external webhook token value</p>\n\t  <p>SCIM token is visible after creation</p>\n\t  <p>Invited group members, with access inherited from parent group, continue to have project access even after invited subgroup is transfered</p>\n\t  <p>Regular expression denial of service issue when cleaning namespace path</p>\n\t  <p>Prevent creation of scopeless apps using applications API</p>\n\t  <p>Webhook data exposes assignee's private email address</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://about.gitlab.com/releases/2021/10/28/security-release-gitlab-14-4-1-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/33557582-3958-11ec-90ba-001b217b3468.html"
+				}
+			],
+			"published": "2021-10-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-39895",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39895"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39897",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39897"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39898",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39898"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39901",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39901"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39902",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39902"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39903",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39903"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39904",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39904"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39905",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39905"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39906",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39906"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39907",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39907"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39909",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39909"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39911",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39911"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39912",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39912"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39913",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39913"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39914",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-39914"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.4.1",
+									"ge": "14.4.0"
+								},
+								{
+									"lt": "14.3.4",
+									"ge": "14.3.0"
+								},
+								{
+									"lt": "14.2.6",
+									"ge": "0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

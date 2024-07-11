@@ -1,0 +1,173 @@
+{
+	"id": "d37407bd-5c5f-11ea-bb2a-8c164582fbac",
+	"advisories": [
+		{
+			"id": "d37407bd-5c5f-11ea-bb2a-8c164582fbac",
+			"title": "TiMidity++ -- Multiple vulnerabilities",
+			"description": "\n\t<p>qflb.wu of DBAPPSecurity reports:</p>\n\t<blockquote cite=\"https://seclists.org/fulldisclosure/2017/Jul/83\">\n\t  <p>Ihe insert_note_steps function in readmidi.c in TiMidity++ 2.14.0\n\t  can cause a denial of service(divide-by-zero error and application\n\t  crash) via a crafted mid file.</p>\n\t  <p>The resample_gauss function in resample.c in TiMidity++ 2.14.0\n\t  can cause a denial of service(heap-buffer-overflow) via a crafted\n\t  mid file.</p>\n\t  <p>The play_midi function in playmidi.c in TiMidity++ 2.14.0 can\n\t  cause a denial of service(large loop and CPU consumption) via\n\t  a crafted mid file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://seclists.org/fulldisclosure/2017/Jul/83"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d37407bd-5c5f-11ea-bb2a-8c164582fbac.html"
+				}
+			],
+			"published": "2020-03-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-11546",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-11546"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-11547",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-11547"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-11549",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-11549"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-emacs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-gtk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-motif"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-slang"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-tcltk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-xaw"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "timidity++-xskin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.15.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,126 @@
+{
+	"id": "1f0d0024-ac9c-11ee-8e91-1c697a013f4b",
+	"advisories": [
+		{
+			"id": "1f0d0024-ac9c-11ee-8e91-1c697a013f4b",
+			"title": "mantis -- multiple vulnerabilities",
+			"description": "\n\t<p>Mantis 2.25.8 release reports:</p>\n\t<blockquote cite=\"https://mantisbt.org/bugs/changelog_page.php?version_id=370\">\n\t  <p>Security and maintenance release</p>\n\t  <ul>\n\t    <li>0032432: Update guzzlehttp/psr7 to 1.9.1 (CVE-2023-29197)</li>\n\t    <li>0032981: Information Leakage on DokuWiki Integration (CVE-2023-44394)</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29197"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44394"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1f0d0024-ac9c-11ee-8e91-1c697a013f4b.html"
+				}
+			],
+			"published": "2024-01-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-29197",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-29197"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-44394",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-44394"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php74"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25.8,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php80"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25.8,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php81"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25.8,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php82"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25.8,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mantis-php83"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25.8,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,61 @@
+{
+	"id": "d1ce8a4f-c235-11dd-8cbc-00163e000016",
+	"advisories": [
+		{
+			"id": "d1ce8a4f-c235-11dd-8cbc-00163e000016",
+			"title": "squirrelmail -- Cross site scripting vulnerability",
+			"description": "\n\t<p>Squirrelmail team reports:</p>\n\t<blockquote cite=\"http://sourceforge.net/project/shownotes.php?release_id=644750&amp;group_id=311\">\n\t  <p>An issue was fixed that allowed an attacker to send specially-\n\t    crafted hyperlinks in a message that could execute cross-site\n\t    scripting (XSS) when the user viewed the message in SquirrelMail.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/Advisories/32143/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?release_id=644750&group_id=311"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d1ce8a4f-c235-11dd-8cbc-00163e000016.html"
+				}
+			],
+			"published": "2008-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-2379",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-2379"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squirrelmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.17"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "42852f72-6bd3-11e5-9909-002590263bf5",
+	"advisories": [
+		{
+			"id": "42852f72-6bd3-11e5-9909-002590263bf5",
+			"title": "OpenSMTPD -- multiple vulnerabilities",
+			"description": "\n\t<p>OpenSMTPD developers report:</p>\n\t<blockquote cite=\"https://www.opensmtpd.org/announces/release-5.7.3.txt\">\n\t  <p>fix an mda buffer truncation bug which allows a user to create\n\t    forward files that pass session checks but fail delivery later down\n\t    the chain, within the user mda</p>\n\t  <p>fix remote buffer overflow in unprivileged pony process</p>\n\t  <p>reworked offline enqueue to better protect against hardlink\n\t    attacks</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2015/10/04/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.opensmtpd.org/announces/release-5.7.3.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/42852f72-6bd3-11e5-9909-002590263bf5.html"
+				}
+			],
+			"published": "2015-10-06T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opensmtpd"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.7.3,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

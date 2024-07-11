@@ -1,0 +1,58 @@
+{
+	"id": "912cb7f7-27df-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "912cb7f7-27df-11e5-a4a5-002590263bf5",
+			"title": "xen-kernel -- arm: vgic: incorrect rate limiting of guest triggered logging",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-118.html\">\n\t  <p>On ARM systems the code which deals with virtualizing the GIC\n\t    distributor would, under various circumstances, log messages on a\n\t    guest accessible code path without appropriate rate limiting.</p>\n\t  <p>A malicious guest could cause repeated logging to the hypervisor\n\t    console, leading to a Denial of Service attack.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://xenbits.xen.org/xsa/advisory-118.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/912cb7f7-27df-11e5-a4a5-002590263bf5.html"
+				}
+			],
+			"published": "2015-07-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1563",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1563"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xen-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.5.0_3",
+									"ge": "4.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

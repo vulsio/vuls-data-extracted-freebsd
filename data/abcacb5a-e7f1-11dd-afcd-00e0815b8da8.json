@@ -1,0 +1,70 @@
+{
+	"id": "abcacb5a-e7f1-11dd-afcd-00e0815b8da8",
+	"advisories": [
+		{
+			"id": "abcacb5a-e7f1-11dd-afcd-00e0815b8da8",
+			"title": "ipset-tools -- Denial of Service Vulnerabilities",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/30657/discuss\">\n\t  <p>IPsec-Tools is affected by multiple remote denial-of-service\n\t    vulnerabilities because the software fails to properly handle\n\t    certain network packets.</p>\n\t  <p>A successful attack allows a remote attacker to crash the\n\t    software, denying further service to legitimate users.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.info/?l=ipsec-tools-devel&m=121688914101709&w=2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/30657"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/abcacb5a-e7f1-11dd-afcd-00e0815b8da8.html"
+				}
+			],
+			"published": "2009-01-21T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-3651",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3651"
+				}
+			]
+		},
+		{
+			"id": "CVE-2008-3652",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3652"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ipsec-tools"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.7.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

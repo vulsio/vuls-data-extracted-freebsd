@@ -1,0 +1,164 @@
+{
+	"id": "043d3a78-f245-4938-9bc7-3d0d35dd94bf",
+	"advisories": [
+		{
+			"id": "043d3a78-f245-4938-9bc7-3d0d35dd94bf",
+			"title": "wordpress -- multiple vulnerabilities",
+			"description": "\n\t<p>The wordpress development team reports:</p>\n\t<blockquote cite=\"http://wordpress.org/news/2013/09/wordpress-3-6-1/\">\n\t  <ul>\n\t    <li>Block unsafe PHP unserialization that could occur in limited\n\t      situations and setups, which can lead to remote code\n\t      execution.</li>\n\t    <li>Prevent a user with an Author role, using a specially crafted\n\t      request, from being able to create a post \"written by\" another\n\t      user.</li>\n\t    <li>Fix insufficient input validation that could result in\n\t      redirecting or leading a user to another website.</li>\n\t  </ul>\n\t<p>Additionally, we've adjusted security restrictions around file\n\t  uploads to mitigate the potential for cross-site scripting.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://wordpress.org/news/2013/09/wordpress-3-6-1/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/043d3a78-f245-4938-9bc7-3d0d35dd94bf.html"
+				}
+			],
+			"published": "2013-10-19T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4338",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4338"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-4339",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4339"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-4340",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-4340"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-5738",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-5738"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-5739",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-5739"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-wordpress-zh_CN"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zh-wordpress-zh_TW"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "de-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wordpress"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.6.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

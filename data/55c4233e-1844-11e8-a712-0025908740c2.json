@@ -1,0 +1,87 @@
+{
+	"id": "55c4233e-1844-11e8-a712-0025908740c2",
+	"advisories": [
+		{
+			"id": "55c4233e-1844-11e8-a712-0025908740c2",
+			"title": "tomcat -- Security constraints ignored or applied too late",
+			"description": "\n    <p>The Apache Software Foundation reports:</p>\n    <blockquote cite=\"https://lists.apache.org/thread.html/d3354bb0a4eda4acc0a66f3eb24a213fdb75d12c7d16060b23e65781@%3Cannounce.tomcat.apache.org%3E\">\n      <p>Security constraints defined by annotations of Servlets were only\n      applied once a Servlet had been loaded. Because security constraints\n      defined in this way apply to the URL pattern and any URLs below that\n      point, it was possible - depending on the order Servlets were loaded -\n      for some security constraints not to be applied. This could have exposed\n      resources to users who were not authorised to access them.</p>\n    </blockquote>\n    <blockquote cite=\"https://lists.apache.org/thread.html/b1d7e2425d6fd2cebed40d318f9365b44546077e10949b01b1f8a0fb@%3Cannounce.tomcat.apache.org%3E\">\n      <p>The URL pattern of \"\" (the empty string) which exactly maps to the\n      context root was not correctly handled when used as part of a security\n      constraint definition. This caused the constraint to be ignored. It was,\n      therefore, possible for unauthorised users to gain access to web\n      application resources that should have been protected. Only security\n      constraints with a URL pattern of the empty string were affected.</p>\n    </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-7.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-8.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://tomcat.apache.org/security-9.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/55c4233e-1844-11e8-a712-0025908740c2.html"
+				}
+			],
+			"published": "2018-02-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1304",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1304"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-1305",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1305"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tomcat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "7.0.84",
+									"ge": "7.0.0"
+								},
+								{
+									"le": "8.0.49",
+									"ge": "8.0.0"
+								},
+								{
+									"le": "8.5.27",
+									"ge": "8.5.0"
+								},
+								{
+									"le": "9.0.4",
+									"ge": "9.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

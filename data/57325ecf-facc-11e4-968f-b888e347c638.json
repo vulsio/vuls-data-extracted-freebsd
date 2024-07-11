@@ -1,0 +1,254 @@
+{
+	"id": "57325ecf-facc-11e4-968f-b888e347c638",
+	"advisories": [
+		{
+			"id": "57325ecf-facc-11e4-968f-b888e347c638",
+			"title": "dcraw -- integer overflow condition",
+			"description": "\n\t<p>ocert reports:</p>\n\t<blockquote cite=\"http://www.ocert.org/advisories/ocert-2015-006.html\">\n\t  <p>The dcraw tool, as well as several other projects re-using its\n\t     code, suffers from an integer overflow condition which lead to a\n\t     buffer overflow.</p>\n\t  <p>The vulnerability concerns the 'len' variable, parsed without\n\t     validation from opened images, used in the ljpeg_start()\n\t     function.</p>\n\t  <p>A maliciously crafted raw image file can be used to trigger the\n\t     vulnerability, causing a Denial of Service condition.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ocert.org/advisories/ocert-2015-006.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/LibRaw/LibRaw/commit/4606c28f494a750892c5c1ac7903e62dd1c6fdb5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/rawstudio/rawstudio/commit/983bda1f0fa5fa86884381208274198a620f006e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://sourceforge.net/p/netpbm/code/2512/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/57325ecf-facc-11e4-968f-b888e347c638.html"
+				}
+			],
+			"published": "2015-05-15T00:00:00Z",
+			"modified": "2016-01-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3885",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3885"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cinepaint"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0.22.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "darktable"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dcraw"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.26",
+									"ge": "7.00"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dcraw-m"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "exact-image"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.9.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "flphoto"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeimage"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.16.0_1",
+									"ge": "3.13.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kodi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.2_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libraw"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.16.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lightzone"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.1.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "netpbm"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.35.96"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opengtl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rawstudio"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0_11"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ufraw"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.21"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

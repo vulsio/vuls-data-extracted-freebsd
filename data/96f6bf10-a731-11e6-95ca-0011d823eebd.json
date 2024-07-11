@@ -1,0 +1,157 @@
+{
+	"id": "96f6bf10-a731-11e6-95ca-0011d823eebd",
+	"advisories": [
+		{
+			"id": "96f6bf10-a731-11e6-95ca-0011d823eebd",
+			"title": "flash -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb16-37.html\">\n\t  <ul>\n\t    <li>These updates resolve type confusion vulnerabilities that\n\t       could lead to code execution (CVE-2016-7860, CVE-2016-7861,\n\t       CVE-2016-7865).</li>\n\t    <li>These updates resolve use-after-free vulnerabilities that\n\t       could lead to code execution (CVE-2016-7857, CVE-2016-7858,\n\t       CVE-2016-7859, CVE-2016-7862, CVE-2016-7863, CVE-2016-7864).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb16-37.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/96f6bf10-a731-11e6-95ca-0011d823eebd.html"
+				}
+			],
+			"published": "2016-11-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-7857",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7857"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7858",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7858"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7859",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7859"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7860",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7860"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7861",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7861"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7862",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7862"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7863",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7863"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7864",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7864"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-7865",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7865"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.644"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c7-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.644"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.644"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

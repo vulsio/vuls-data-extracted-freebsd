@@ -1,0 +1,71 @@
+{
+	"id": "2af10639-4299-11ea-aab1-98fa9bfec35a",
+	"advisories": [
+		{
+			"id": "2af10639-4299-11ea-aab1-98fa9bfec35a",
+			"title": "pkg -- vulnerability in libfetch",
+			"description": "\n\t<p>A programming error allows an attacker who can specify a URL with a username\n\t   and/or password components to overflow libfetch(3) buffers.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:01.libfetch.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2af10639-4299-11ea-aab1-98fa9bfec35a.html"
+				}
+			],
+			"published": "2020-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-7450",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7450"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pkg"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.12.0_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pkg-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.12.99_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

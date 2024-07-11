@@ -1,0 +1,58 @@
+{
+	"id": "cc627e6c-3b89-11e4-b629-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "cc627e6c-3b89-11e4-b629-6805ca0b3d42",
+			"title": "phpMyAdmin -- XSRF/CSRF due to DOM based XSS in the micro history feature",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2014-10.php\">\n\t  <p>XSRF/CSRF due to DOM based XSS in the micro history feature.</p>\n\t  <p>By deceiving a logged-in user to click on a crafted URL,\n\t    it is possible to perform remote code execution and in some\n\t    cases, create a root account due to a DOM based XSS\n\t    vulnerability in the micro history feature.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2014-10.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cc627e6c-3b89-11e4-b629-6805ca0b3d42.html"
+				}
+			],
+			"published": "2014-09-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-6300",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6300"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.8.1",
+									"ge": "4.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

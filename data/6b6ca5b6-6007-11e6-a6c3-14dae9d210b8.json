@@ -1,0 +1,58 @@
+{
+	"id": "6b6ca5b6-6007-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "6b6ca5b6-6007-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- devfs rules not applied by default for jails",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The default devfs rulesets are not loaded on boot, even\n\twhen jails are used. Device nodes will be created in the\n\tjail with their normal default access permissions, while\n\tmost of them should be hidden and inaccessible.</p>\n\t<h1>Impact:</h1>\n\t<p>Jailed processes can get access to restricted resources\n\ton the host system. For jailed processes running with\n\tsuperuser privileges this implies access to all devices on\n\tthe system. This level of access could lead to information\n\tleakage and privilege escalation.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:07.devfs.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6b6ca5b6-6007-11e6-a6c3-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-3001",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3001"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0_2",
+									"ge": "10.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

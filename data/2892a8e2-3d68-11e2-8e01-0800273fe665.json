@@ -1,0 +1,95 @@
+{
+	"id": "2892a8e2-3d68-11e2-8e01-0800273fe665",
+	"advisories": [
+		{
+			"id": "2892a8e2-3d68-11e2-8e01-0800273fe665",
+			"title": "dns/bind9* -- servers using DNS64 can be crashed by a crafted query",
+			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-00828\">\n\t  <p>BIND 9 nameservers using the DNS64 IPv6 transition mechanism are\n\t     vulnerable to a software defect that allows a crafted query to\n\t     crash the server with a REQUIRE assertion failure.  Remote\n\t     exploitation of this defect can be achieved without extensive\n\t     effort, resulting in a denial-of-service (DoS) vector against\n\t     affected servers.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2892a8e2-3d68-11e2-8e01-0800273fe665.html"
+				}
+			],
+			"published": "2012-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5688",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5688"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.2.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind98"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.8.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind98-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.8.4.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

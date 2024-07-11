@@ -1,0 +1,51 @@
+{
+	"id": "76301302-1d59-11d9-814e-0001020eed82",
+	"advisories": [
+		{
+			"id": "76301302-1d59-11d9-814e-0001020eed82",
+			"title": "xerces-c2 -- Attribute blowup denial-of-service",
+			"description": "\n\t<p>Amit Klein reports about Xerces-C++:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=109674050017645\">\n\t  <p>An attacker can craft a malicious XML document, which\n\t    uses XML attributes in a way that inflicts a denial of\n\t    service condition on the target machine (XML parser).  The\n\t    result of this attack is that the XML parser consumes all\n\t    the CPU.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109674050017645"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/11312"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/76301302-1d59-11d9-814e-0001020eed82.html"
+				}
+			],
+			"published": "2004-10-13T00:00:00Z",
+			"modified": "2004-10-14T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xerces-c2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,66 @@
+{
+	"id": "0da8a68e-600a-11e6-a6c3-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "0da8a68e-600a-11e6-a6c3-14dae9d210b8",
+			"title": "FreeBSD -- Multiple integer overflows in expat (libbsdxml) XML parser",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Multiple integer overflows have been discovered in the\n\tXML_GetBuffer() function in the expat library.</p>\n\t<h1>Impact:</h1>\n\t<p>The integer overflows may be exploited by using specifically\n\tcrafted XML data and lead to infinite loop, or a heap buffer\n\toverflow, which results in a Denial of Service condition,\n\tor enables remote attackers to execute arbitrary code.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:20.expat.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0da8a68e-600a-11e6-a6c3-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-08-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-1283",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1283"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.1_18",
+									"ge": "10.1"
+								},
+								{
+									"lt": "10.2_1",
+									"ge": "10.2"
+								},
+								{
+									"lt": "9.3_23",
+									"ge": "9.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

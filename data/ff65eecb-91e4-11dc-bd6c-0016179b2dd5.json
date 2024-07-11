@@ -1,0 +1,61 @@
+{
+	"id": "ff65eecb-91e4-11dc-bd6c-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "ff65eecb-91e4-11dc-bd6c-0016179b2dd5",
+			"title": "flac -- media file processing integer overflow vulnerabilities",
+			"description": "\n\t<p>iDefense Laps reports:</p>\n\t<blockquote cite=\"http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=608\">\n\t  <p>Remote exploitation of multiple integer overflow vulnerabilities\n\t    in libFLAC, as included with various vendor's software\n\t    distributions, allows attackers to execute arbitrary code\n\t    in the context of the currently logged in user.</p>\n\t  <p>These vulnerabilities specifically exist in the handling of\n\t    malformed FLAC media files. In each case, an integer overflow can\n\t    occur while calculating the amount of memory to allocate. As such,\n\t    insufficient memory is allocated for the data that is subsequently\n\t    read in from the file, and a heap based buffer overflow occurs.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=608"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/27210/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ff65eecb-91e4-11dc-bd6c-0016179b2dd5.html"
+				}
+			],
+			"published": "2007-11-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-4619",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-4619"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "flac"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.2_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

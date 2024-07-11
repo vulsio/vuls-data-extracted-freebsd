@@ -1,0 +1,66 @@
+{
+	"id": "28a7310f-9855-11df-8d36-001aa0166822",
+	"advisories": [
+		{
+			"id": "28a7310f-9855-11df-8d36-001aa0166822",
+			"title": "apache -- Remote DoS bug in mod_cache and mod_dav",
+			"description": "\n\t<p>Apache ChangeLog reports:</p>\n\t<blockquote cite=\"http://www.apache.org/dist/httpd/CHANGES_2.2.16\">\n\t  <p>mod_dav, mod_cache: Fix Handling of requests without a path segment.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://svn.apache.org/viewvc?view=revision&revision=966349"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.apache.org/dist/httpd/CHANGES_2.2.16"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://issues.apache.org/bugzilla/show_bug.cgi?id=49246"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/28a7310f-9855-11df-8d36-001aa0166822.html"
+				}
+			],
+			"published": "2010-07-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1452",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1452"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.16",
+									"ge": "2.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

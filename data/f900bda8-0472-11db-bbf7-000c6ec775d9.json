@@ -1,0 +1,69 @@
+{
+	"id": "f900bda8-0472-11db-bbf7-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "f900bda8-0472-11db-bbf7-000c6ec775d9",
+			"title": "gnupg -- user id integer overflow vulnerability",
+			"description": "\n\t<p>If GnuPG processes a userid with a very long packet length,\n\t  GnuPG can crash due to insufficient bounds check.  This can\n\t  result in a denial-of-service condition or potentially\n\t  execution of arbitrary code with the privileges of the user\n\t  running GnuPG.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://cvs.gnupg.org/cgi-bin/viewcvs.cgi/trunk/g10/parse-packet.c?rev=4157&r1=4141&r2=4157"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=114907659313360"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=gnupg-users&m=115124706210430"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/18554"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f900bda8-0472-11db-bbf7-000c6ec775d9.html"
+				}
+			],
+			"published": "2006-06-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-3082",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-3082"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnupg"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

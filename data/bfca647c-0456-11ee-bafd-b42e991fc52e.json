@@ -1,0 +1,96 @@
+{
+	"id": "bfca647c-0456-11ee-bafd-b42e991fc52e",
+	"advisories": [
+		{
+			"id": "bfca647c-0456-11ee-bafd-b42e991fc52e",
+			"title": "Kanboard -- Multiple vulnerabilities",
+			"description": "\n\t<p/>\n\t<p>Kanboard is project management software that focuses on the Kanban\n\tmethodology. The last update includes 4 vulnerabilities:</p>\n\t<p>security-advisories@github.com reports:</p>\n\t<blockquote cite=\"https://github.com/kanboard/kanboard/commit/b501ef44bc28ee9cf603a4fa446ee121d66f652f\">\n\t  <ul>\n\t    <li>Missing access control in internal task links feature</li>\n\t    <li>Stored Cross site scripting in the Task External Link Functionality in Kanboard</li>\n\t    <li>Missing Access Control allows User to move and duplicate tasks in Kanboard</li>\n\t    <li>Parameter based Indirect Object Referencing leading to private file exposure in Kanboard</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-33956"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-33968"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-33969"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://nvd.nist.gov/vuln/detail/CVE-2023-33970"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bfca647c-0456-11ee-bafd-b42e991fc52e.html"
+				}
+			],
+			"published": "2023-06-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-33956",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-33956"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-33968",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-33968"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-33969",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-33969"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-33970",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-33970"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php80-kanboard"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.30"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

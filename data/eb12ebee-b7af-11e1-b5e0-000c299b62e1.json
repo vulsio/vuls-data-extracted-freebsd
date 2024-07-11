@@ -1,0 +1,94 @@
+{
+	"id": "eb12ebee-b7af-11e1-b5e0-000c299b62e1",
+	"advisories": [
+		{
+			"id": "eb12ebee-b7af-11e1-b5e0-000c299b62e1",
+			"title": "clamav -- multiple vulnerabilities",
+			"description": "\n\t<p>MITRE Advisories report:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1419\">\n\t  <p>The TAR parser allows remote attackers to bypass malware detection\n\t     via a POSIX TAR file with an initial [aliases] character sequence.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1457\">\n\t  <p>The TAR parser allows remote attackers to bypass malware detection\n\t     via a TAR archive entry with a length field that exceeds the total\n\t     TAR file size.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1458\">\n\t  <p>The Microsoft CHM file parser allows remote attackers to bypass\n\t     malware detection via a crafted reset interval in the LZXC header\n\t     of a CHM file.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1459\">\n\t  <p>The TAR file parser allows remote attackers to bypass malware\n\t     detection via a TAR archive entry with a length field\n\t     corresponding to that entire entry, plus part of the header ofxi\n\t     the next entry.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/eb12ebee-b7af-11e1-b5e0-000c299b62e1.html"
+				}
+			],
+			"published": "2012-06-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1419",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1419"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-1457",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1457"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-1458",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1458"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-1459",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1459"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.97.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "clamav-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20120612"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

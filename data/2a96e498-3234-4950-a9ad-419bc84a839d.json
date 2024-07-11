@@ -1,0 +1,248 @@
+{
+	"id": "2a96e498-3234-4950-a9ad-419bc84a839d",
+	"advisories": [
+		{
+			"id": "2a96e498-3234-4950-a9ad-419bc84a839d",
+			"title": "tiff -- multiple vulnerabilities",
+			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2017-5225\">\n\t  <p>Please reference CVE/URL list for details</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/0a76a8c765c7"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/2ea32f7372b6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/3144e57770c1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/3cfd62d77c2a"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/47f2fb61a3a6"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/48780b4fcc42"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/5c080298d59e"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/66e7bd595209"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/8283e4d1b7e5"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/vadz/libtiff/commit/d60332057b95"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2a96e498-3234-4950-a9ad-419bc84a839d.html"
+				}
+			],
+			"published": "2017-04-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-5225",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5225"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7592",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7592"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7593",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7593"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7594",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7594"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7595",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7595"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7596",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7596"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7597",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7597"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7598",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7598"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7599",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7599"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7600",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7600"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7601",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7601"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-7602",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7602"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f8-tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c7-tiff"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.0.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

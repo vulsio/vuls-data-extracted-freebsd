@@ -1,0 +1,103 @@
+{
+	"id": "d8fbf13a-6215-11db-a59e-0211d85f11fb",
+	"advisories": [
+		{
+			"id": "d8fbf13a-6215-11db-a59e-0211d85f11fb",
+			"title": "kdelibs -- integer overflow in khtml",
+			"description": "\n\t<p>Red Hat reports:</p>\n\t<blockquote cite=\"http://rhn.redhat.com/errata/RHSA-2006-0720.html\">\n\t  <p>An integer overflow flaw was found in the way Qt handled pixmap\n\t    images. The KDE khtml library uses Qt in such a way that untrusted\n\t    parameters could be passed to Qt, triggering the overflow.\n\t    An attacker could for example create a malicious web page that when\n\t    viewed by a victim in the Konqueror browser would cause Konqueror\n\t    to crash or possibly execute arbitrary code with the privileges of\n\t    the victim.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=210742"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://rhn.redhat.com/errata/RHSA-2006-0720.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/d8fbf13a-6215-11db-a59e-0211d85f11fb.html"
+				}
+			],
+			"published": "2006-10-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-4811",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4811"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kdelibs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.5.4_4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kdelibs-nocups"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.5.4_4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.3.6_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-copy"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.3.6_3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

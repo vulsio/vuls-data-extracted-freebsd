@@ -1,0 +1,57 @@
+{
+	"id": "79789daa-8af8-4e21-a47f-e8a645752bdb",
+	"advisories": [
+		{
+			"id": "79789daa-8af8-4e21-a47f-e8a645752bdb",
+			"title": "ruby -- Object taint bypassing in DL and Fiddle in Ruby",
+			"description": "\n\t<p>Ruby Developers report:</p>\n\t<blockquote cite=\"http://www.ruby-lang.org/en/news/2013/05/14/taint-bypass-dl-fiddle-cve-2013-2065/\">\n\t  <p>There is a vulnerability in DL and Fiddle in Ruby where tainted\n\t     strings can be used by system calls regardless of the $SAFE level\n\t     set in Ruby.\n\t  </p>\n\t  <p>Native functions exposed to Ruby with DL or Fiddle do not check the\n\t     taint values set on the objects passed in. This can result in\n\t     tainted objects being accepted as input when a SecurityError\n\t     exception should be raised.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ruby-lang.org/en/news/2013/05/14/taint-bypass-dl-fiddle-cve-2013-2065/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/79789daa-8af8-4e21-a47f-e8a645752bdb.html"
+				}
+			],
+			"published": "2013-05-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2065",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2065"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby19"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.3.429,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

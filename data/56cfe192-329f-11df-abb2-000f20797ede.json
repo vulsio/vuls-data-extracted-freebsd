@@ -1,0 +1,200 @@
+{
+	"id": "56cfe192-329f-11df-abb2-000f20797ede",
+	"advisories": [
+		{
+			"id": "56cfe192-329f-11df-abb2-000f20797ede",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2010-07 Fixes for potentially exploitable crashes ported to the legacy branch</p>\n\t  <p>MFSA 2010-06 Scriptable plugin execution in SeaMonkey mail</p>\n\t  <p>MFSA 2009-68 NTLM reflection vulnerability</p>\n\t  <p>MFSA 2009-62 Download filename spoofing with RTL override</p>\n\t  <p>MFSA 2009-59 Heap buffer overflow in string to number conversion</p>\n\t  <p>MFSA 2009-49 TreeColumns dangling pointer vulnerability</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2009/mfsa2009-49.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2009/mfsa2009-59.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2009/mfsa2009-62.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2009/mfsa2009-68.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-06.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-07.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/56cfe192-329f-11df-abb2-000f20797ede.html"
+				}
+			],
+			"published": "2010-03-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0689",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0689"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-2463",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-2463"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3072",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3072"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3075",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3075"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3077",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3077"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3376",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3376"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3385",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3385"
+				}
+			]
+		},
+		{
+			"id": "CVE-2009-3983",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3983"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-0161",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0161"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-0163",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0163"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.19"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.19"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.0.24"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.0.24"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

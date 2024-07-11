@@ -1,0 +1,75 @@
+{
+	"id": "bb0a8795-15dc-11df-bf0a-002170daae37",
+	"advisories": [
+		{
+			"id": "bb0a8795-15dc-11df-bf0a-002170daae37",
+			"title": "wireshark -- LWRES vulnerability",
+			"description": "\n\t<p>Wireshark project reports:</p>\n\t<blockquote cite=\"http://www.wireshark.org/security/wnpa-sec-2010-02.html\">\n\t  <p>Babi discovered several buffer overflows in the\n\t    LWRES dissector.</p>\n\t  <p>It may be possible to make Wireshark crash remotely\n\t    or by convincing someone to read a malformed packet\n\t    trace file.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/38257/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.wireshark.org/security/wnpa-sec-2010-02.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bb0a8795-15dc-11df-bf0a-002170daae37.html"
+				}
+			],
+			"published": "2010-02-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-0304",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0304"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wireshark"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "wireshark-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

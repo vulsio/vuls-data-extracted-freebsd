@@ -1,0 +1,66 @@
+{
+	"id": "4dd575b8-8f82-11e3-bb11-0025905a4771",
+	"advisories": [
+		{
+			"id": "4dd575b8-8f82-11e3-bb11-0025905a4771",
+			"title": "phpmyfaq -- multiple vulnerabilities",
+			"description": "\n\t<p>The phpMyFAQ team reports:</p>\n\t<blockquote cite=\"http://www.phpmyfaq.de/advisory_2014-02-04.php\">\n\t  <p> An arbitrary script may be executed on the user's Internet\n\t    Explorer when using an older version of the browser. If a user views\n\t    a malicious page while logged in, settings may be changed\n\t    unintentionally.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyfaq.de/advisory_2014-02-04.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4dd575b8-8f82-11e3-bb11-0025905a4771.html"
+				}
+			],
+			"published": "2014-02-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0813",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0813"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0814",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0814"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpmyfaq"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.8.6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

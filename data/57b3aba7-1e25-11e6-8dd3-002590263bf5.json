@@ -1,0 +1,90 @@
+{
+	"id": "57b3aba7-1e25-11e6-8dd3-002590263bf5",
+	"advisories": [
+		{
+			"id": "57b3aba7-1e25-11e6-8dd3-002590263bf5",
+			"title": "expat -- denial of service vulnerability on malformed input",
+			"description": "\n\t<p>Gustavo Grieco reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/05/17/12\">\n\t  <p>The Expat XML parser mishandles certain kinds of malformed input\n\t    documents, resulting in buffer overflows during processing and error\n\t    reporting. The overflows can manifest as a segmentation fault or as\n\t    memory corruption during a parse operation. The bugs allow for a\n\t    denial of service attack in many applications by an unauthenticated\n\t    attacker, and could conceivably result in remote code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2016/05/17/12"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209360"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/57b3aba7-1e25-11e6-8dd3-002590263bf5.html"
+				}
+			],
+			"published": "2016-05-20T00:00:00Z",
+			"modified": "2016-11-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-0718",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0718"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-expat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.1_3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c7-expat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.0_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

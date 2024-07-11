@@ -1,0 +1,161 @@
+{
+	"id": "a0c65049-bddd-11e2-a0f6-001060e06fd4",
+	"advisories": [
+		{
+			"id": "a0c65049-bddd-11e2-a0f6-001060e06fd4",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb13-14.html\">\n\t  <p>These updates address vulnerabilities that could cause a crash\n\t    and potentially allow an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a0c65049-bddd-11e2-a0f6-001060e06fd4.html"
+				}
+			],
+			"published": "2013-05-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2728",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2728"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3324",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3324"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3325",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3325"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3326",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3326"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3327",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3327"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3328",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3328"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3329",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3329"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3330",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3330"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3331",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3331"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3332",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3332"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3333",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3333"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3334",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3334"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3335",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-3335"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.285"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

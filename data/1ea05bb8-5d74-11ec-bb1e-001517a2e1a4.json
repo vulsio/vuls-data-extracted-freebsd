@@ -1,0 +1,53 @@
+{
+	"id": "1ea05bb8-5d74-11ec-bb1e-001517a2e1a4",
+	"advisories": [
+		{
+			"id": "1ea05bb8-5d74-11ec-bb1e-001517a2e1a4",
+			"title": "serviio -- affected by log4j vulnerability",
+			"description": "\n\t<p>Serviio reports:</p>\n\t<blockquote cite=\"https://serviio.org/news/124-version-2-2-1-released\">\n\t  <p>Serviio is affectred by the log4j vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1ea05bb8-5d74-11ec-bb1e-001517a2e1a4.html"
+				}
+			],
+			"published": "2021-12-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44228",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44228"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "serviio"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

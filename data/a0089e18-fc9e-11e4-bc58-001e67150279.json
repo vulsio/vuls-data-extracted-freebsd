@@ -1,0 +1,89 @@
+{
+	"id": "a0089e18-fc9e-11e4-bc58-001e67150279",
+	"advisories": [
+		{
+			"id": "a0089e18-fc9e-11e4-bc58-001e67150279",
+			"title": "rubygems -- request hijacking vulnerability",
+			"description": "\n\t<p>Jonathan Claudius reports:</p>\n\t<blockquote cite=\"http://blog.rubygems.org/2015/05/14/CVE-2015-3900.html\">\n\t  <p>RubyGems provides the ability of a domain to direct clients to a\n\t    separate host that is used to fetch gems and make API calls against.\n\t    This mechanism is implemented via DNS, specifically a SRV record\n\t    _rubygems._tcp under the original requested domain.</p>\n\t  <p>RubyGems did not validate the hostname returned in the SRV record\n\t    before sending requests to it. This left clients open to a DNS\n\t    hijack attack, whereby an attacker could return a SRV of their\n\t    choosing and get the client to use it.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://blog.rubygems.org/2015/05/14/CVE-2015-3900.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200264"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/a0089e18-fc9e-11e4-bc58-001e67150279.html"
+				}
+			],
+			"published": "2015-05-17T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3900",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3900"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby20-gems"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby21-gems"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby22-gems"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

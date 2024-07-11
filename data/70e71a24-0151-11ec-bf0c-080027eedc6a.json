@@ -1,0 +1,58 @@
+{
+	"id": "70e71a24-0151-11ec-bf0c-080027eedc6a",
+	"advisories": [
+		{
+			"id": "70e71a24-0151-11ec-bf0c-080027eedc6a",
+			"title": "bouncycastle15 -- bcrypt password checking vulnerability",
+			"description": "\n\t<p>The Bouncy Castle team reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28052\">\n\t  <p>\n\t    The OpenBSDBCrypt.checkPassword utility method compared incorrect\n\t    data when checking the password, allowing incorrect passwords to\n\t    indicate they were matching with previously hashed ones that were\n\t    different.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28052"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/70e71a24-0151-11ec-bf0c-080027eedc6a.html"
+				}
+			],
+			"published": "2021-08-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-28052",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-28052"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bouncycastle15"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.67",
+									"ge": "1.65"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

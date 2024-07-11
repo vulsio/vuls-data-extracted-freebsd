@@ -1,0 +1,62 @@
+{
+	"id": "7c769c89-53c2-11e1-8e52-00163e22ef61",
+	"advisories": [
+		{
+			"id": "7c769c89-53c2-11e1-8e52-00163e22ef61",
+			"title": "glpi -- remote attack via crafted POST request",
+			"description": "\n\t<p>The GLPI project reports:</p>\n\t<blockquote cite=\"http://www.glpi-project.org/spip.php?page=annonce&amp;id_breve=237&amp;lang=en\">\n\t  <p>The autocompletion functionality in GLPI before 0.80.2 does not\n\t    blacklist certain username and password fields, which allows\n\t    remote attackers to obtain sensitive information via a crafted\n\t    POST request.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.glpi-project.org/spip.php?page=annonce&id_breve=237&lang=en"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://forge.indepnet.net/issues/3017"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7c769c89-53c2-11e1-8e52-00163e22ef61.html"
+				}
+			],
+			"published": "2012-02-10T00:00:00Z",
+			"modified": "2013-06-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-2720",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2720"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "glpi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.80.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

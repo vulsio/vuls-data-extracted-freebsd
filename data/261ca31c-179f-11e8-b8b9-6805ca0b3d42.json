@@ -1,0 +1,58 @@
+{
+	"id": "261ca31c-179f-11e8-b8b9-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "261ca31c-179f-11e8-b8b9-6805ca0b3d42",
+			"title": "phpMyAdmin -- self XSS in central columns feature",
+			"description": "\n\t<p>The phpMyAdmin team reports:</p>\n\t<blockquote cite=\"https://www.phpmyadmin.net/security/PMASA-2018-1/\">\n\t  <h3>Summary</h3>\n\t  <p>Self XSS in central columns feature</p>\n\t  <h3>Description</h3>\n\t  <p>A self-cross site scripting (XSS) vulnerability has been\n\t    reported relating to the central columns feature.</p>\n\t  <h3>Severity</h3>\n\t  <p>We consider this vulnerability to be of moderate severity.</p>\n\t  <h3>Mitigation factor</h3>\n\t  <p>A valid token must be used in the attack</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.phpmyadmin.net/security/PMASA-2018-1/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/261ca31c-179f-11e8-b8b9-6805ca0b3d42.html"
+				}
+			],
+			"published": "2018-02-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-7260",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-7260"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.7.8",
+									"ge": "4.7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

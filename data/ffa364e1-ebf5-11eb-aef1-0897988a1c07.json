@@ -1,0 +1,73 @@
+{
+	"id": "ffa364e1-ebf5-11eb-aef1-0897988a1c07",
+	"advisories": [
+		{
+			"id": "ffa364e1-ebf5-11eb-aef1-0897988a1c07",
+			"title": "asterisk -- Remote Crash Vulnerability in PJSIP channel driver",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>When Asterisk receives a re-INVITE without SDP after\n\t  having sent a BYE request a crash will occur. This occurs\n\t  due to the Asterisk channel no longer being present while\n\t  code assumes it is.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2021-007.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ffa364e1-ebf5-11eb-aef1-0897988a1c07.html"
+				}
+			],
+			"published": "2021-07-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-31878",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-31878"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.19.1",
+									"ge": "16.17.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "18.5.1",
+									"ge": "18.3.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

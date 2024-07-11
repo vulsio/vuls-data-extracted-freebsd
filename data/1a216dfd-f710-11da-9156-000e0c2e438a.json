@@ -1,0 +1,58 @@
+{
+	"id": "1a216dfd-f710-11da-9156-000e0c2e438a",
+	"advisories": [
+		{
+			"id": "1a216dfd-f710-11da-9156-000e0c2e438a",
+			"title": "freeradius -- authentication bypass vulnerability",
+			"description": "\n\t<p>The freeradius development team reports:</p>\n\t<blockquote cite=\"http://www.freeradius.org/security.html\">\n\t  <p>A validation issue exists with the EAP-MSCHAPv2 module\n\t    in all versions from 1.0.0 (where the module first\n\t    appeared) to 1.1.0. Insufficient input validation was being\n\t    done in the EAP-MSCHAPv2 state machine.  A malicious\n\t    attacker could manipulate their EAP-MSCHAPv2 client state\n\t    machine to potentially convince the server to bypass\n\t    authentication checks.  This bypassing could also result\n\t    in the server crashing</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/17293"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1a216dfd-f710-11da-9156-000e0c2e438a.html"
+				}
+			],
+			"published": "2006-06-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1354",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1354"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeradius"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.1.0",
+									"gt": "1.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

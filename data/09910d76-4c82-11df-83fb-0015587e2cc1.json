@@ -1,0 +1,66 @@
+{
+	"id": "09910d76-4c82-11df-83fb-0015587e2cc1",
+	"advisories": [
+		{
+			"id": "09910d76-4c82-11df-83fb-0015587e2cc1",
+			"title": "fetchmail -- denial of service vulnerability",
+			"description": "\n\t<p>Fetchmail developer Matthias Andree reported a vulnerability\n\t  that allows remote attackers to crash the application\n\t  when it is runs in verbose mode.</p>\n\t<blockquote cite=\"http://gitorious.org/fetchmail/fetchmail/commit/ec06293\">\n\t  <p>Fetchmail before release 6.3.17 did not properly\n\t    sanitize external input (mail headers and UID). When a\n\t    multi-character locale (such as UTF-8) was in use, this\n\t    could cause memory exhaustion and thus a denial of\n\t    service.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://gitorious.org/fetchmail/fetchmail/commit/ec06293"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2010/q2/76"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=145857"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/09910d76-4c82-11df-83fb-0015587e2cc1.html"
+				}
+			],
+			"published": "2010-04-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1167",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1167"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fetchmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "6.3.16",
+									"ge": "4.6.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

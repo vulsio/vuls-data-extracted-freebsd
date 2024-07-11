@@ -1,0 +1,50 @@
+{
+	"id": "4af3241d-1f0c-11e9-b4bd-d43d7eed0ce2",
+	"advisories": [
+		{
+			"id": "4af3241d-1f0c-11e9-b4bd-d43d7eed0ce2",
+			"title": "www/mod_dav_svn -- Malicious SVN clients can crash mod_dav_svn.",
+			"description": "\n\t<p>Subversion project reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2018-11803-advisory.txt\">\n\t  <p>Malicious SVN clients can trigger a crash in mod_dav_svn by omitting\n\t     the root path from a recursive directory listing request.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://subversion.apache.org/security/CVE-2018-11803-advisory.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4af3241d-1f0c-11e9-b4bd-d43d7eed0ce2.html"
+				}
+			],
+			"published": "2019-01-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_dav_svn"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.10.3",
+									"ge": "1.10.0"
+								},
+								{
+									"eq": "1.11.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,94 @@
+{
+	"id": "e7bb3885-da40-11e3-9ecb-2c4138874f7d",
+	"advisories": [
+		{
+			"id": "e7bb3885-da40-11e3-9ecb-2c4138874f7d",
+			"title": "libxml2 -- lack of end-of-document check DoS",
+			"description": "\n\t<p>CVE MITRE reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2877\">\n\t  <p>parser.c in libxml2 before 2.9.0, as used in Google\n\t     Chrome before 28.0.1500.71 and other products, allows remote\n\t     attackers to cause a denial of service (out-of-bounds read)\n\t     via a document that ends abruptly, related to the lack of\n\t     certain checks for the XML_PARSER_EOF state.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2877"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://git.gnome.org/browse/libxml2/tag/?id=CVE-2013-2877"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-2877"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e7bb3885-da40-11e3-9ecb-2c4138874f7d.html"
+				}
+			],
+			"published": "2013-07-10T00:00:00Z",
+			"modified": "2015-07-15T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2877",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2877"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.9.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-libxml2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.7.6_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-libxml2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

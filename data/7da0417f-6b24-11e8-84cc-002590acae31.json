@@ -1,0 +1,84 @@
+{
+	"id": "7da0417f-6b24-11e8-84cc-002590acae31",
+	"advisories": [
+		{
+			"id": "7da0417f-6b24-11e8-84cc-002590acae31",
+			"title": "gnupg -- unsanitized output (CVE-2018-12020)",
+			"description": "\n\t<p>GnuPG reports:</p>\n\t<blockquote cite=\"https://lists.gnupg.org/pipermail/gnupg-announce/2018q2/000425.html\">\n\t  <p>GnuPG did not sanitize input file names, which may then be output to\n\t    the terminal.  This could allow terminal control sequences or fake\n\t    status messages to be injected into the output.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7526"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12020"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7da0417f-6b24-11e8-84cc-002590acae31.html"
+				}
+			],
+			"published": "2018-06-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-7526",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7526"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12020",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12020"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnupg"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.2.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnupg1"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.23"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

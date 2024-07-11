@@ -1,0 +1,65 @@
+{
+	"id": "2c493ac8-205e-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "2c493ac8-205e-11e5-a4a5-002590263bf5",
+			"title": "ansible -- remote code execution vulnerability",
+			"description": "\n\t<p>Ansible, Inc. reports:</p>\n\t<blockquote cite=\"http://www.ansible.com/security\">\n\t  <p>Incomplete Fix Remote Code Execution Vulnerability - Fixed in\n\t    Ansible 1.6.4</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ansible.com/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/68335"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://raw.githubusercontent.com/ansible/ansible/devel/CHANGELOG.md"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2c493ac8-205e-11e5-a4a5-002590263bf5.html"
+				}
+			],
+			"published": "2015-07-02T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-4678",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4678"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ansible"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

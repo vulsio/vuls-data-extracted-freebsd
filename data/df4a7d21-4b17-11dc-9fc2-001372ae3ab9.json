@@ -1,0 +1,75 @@
+{
+	"id": "df4a7d21-4b17-11dc-9fc2-001372ae3ab9",
+	"advisories": [
+		{
+			"id": "df4a7d21-4b17-11dc-9fc2-001372ae3ab9",
+			"title": "opera -- Vulnerability in javascript handling",
+			"description": "\n\t<p>An advisory from Opera reports:</p>\n\t<blockquote cite=\"http://www.opera.com/support/search/view/865/\">\n\t  <p>A specially crafted JavaScript can make Opera execute\n\t    arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.opera.com/support/search/view/865/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/df4a7d21-4b17-11dc-9fc2-001372ae3ab9.html"
+				}
+			],
+			"published": "2007-08-15T00:00:00Z",
+			"modified": "2007-08-25T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opera"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.23.20070809"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "opera-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.23.20070809"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-opera"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.23.20070809"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,70 @@
+{
+	"id": "77420ebb-0cf4-11d9-8a8a-000c41e2cdad",
+	"advisories": [
+		{
+			"id": "77420ebb-0cf4-11d9-8a8a-000c41e2cdad",
+			"title": "mysql -- heap buffer overflow with prepared statements",
+			"description": "\n\t<p>There is a buffer overflow in the prepared statements API\n\t  (libmysqlclient) when a statement containing thousands of\n\t  placeholders is executed.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.mysql.com/bug.php?id=5194"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://dev.mysql.com/doc/mysql/en/News-4.1.5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://mysql.bkbits.net:8080/mysql-4.1/cset@1.1932.152.4"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/77420ebb-0cf4-11d9-8a8a-000c41e2cdad.html"
+				}
+			],
+			"published": "2004-09-23T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.1.4",
+									"ge": "4.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "4.1.4",
+									"ge": "4.1.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

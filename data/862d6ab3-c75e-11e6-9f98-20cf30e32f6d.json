@@ -1,0 +1,94 @@
+{
+	"id": "862d6ab3-c75e-11e6-9f98-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "862d6ab3-c75e-11e6-9f98-20cf30e32f6d",
+			"title": "Apache httpd -- several vulnerabilities",
+			"description": "\n\t<p>Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <p>Please reference CVE/URL list for details</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://httpd.apache.org/security/vulnerabilities_24.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/862d6ab3-c75e-11e6-9f98-20cf30e32f6d.html"
+				}
+			],
+			"published": "2016-12-21T00:00:00Z",
+			"modified": "2016-12-22T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-0736",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-0736"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2161",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2161"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-5387",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5387"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8740",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8740"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8743",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-8743"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache24"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.25"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

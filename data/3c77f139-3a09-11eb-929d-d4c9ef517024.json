@@ -1,0 +1,76 @@
+{
+	"id": "3c77f139-3a09-11eb-929d-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "3c77f139-3a09-11eb-929d-d4c9ef517024",
+			"title": "cURL -- Multiple vulnerabilities",
+			"description": "\n\t<p>The cURL project reports:</p>\n\t<blockquote cite=\"https://curl.se/docs/security.html\">\n\t  <p>Trusting FTP PASV responses (CVE-2020-8284)</p>\n\t  <p>FTP wildcard stack overflow (CVE-2020-8285)</p>\n\t  <p>Inferior OCSP verification (CVE-2020-8286)</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://curl.se/docs/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3c77f139-3a09-11eb-929d-d4c9ef517024.html"
+				}
+			],
+			"published": "2020-12-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8284",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8284"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-8285",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8285"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-8286",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-8286"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.74.0",
+									"gt": "4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

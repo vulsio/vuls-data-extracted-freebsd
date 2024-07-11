@@ -1,0 +1,179 @@
+{
+	"id": "21c223f2-d596-11da-8098-00123ffe8333",
+	"advisories": [
+		{
+			"id": "21c223f2-d596-11da-8098-00123ffe8333",
+			"title": "ethereal -- Multiple Protocol Dissector Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/19769/\">\n\t  <p>Multiple vulnerabilities have been reported in Ethereal, which\n\t    can be exploited by malicious people to cause a DoS (Denial of\n\t    Service) or compromise a vulnerable system.</p>\n\t  <p>The vulnerabilities are caused due to various types of errors\n\t    including boundary errors, an off-by-one error, an infinite loop\n\t    error, and several unspecified errors in a multitude of protocol\n\t    dissectors.</p>\n\t  <p>Successful exploitation causes Ethereal to stop responding,\n\t    consume a large amount of system resources, crash, or execute\n\t    arbitrary code.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/19769/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.ethereal.com/appnotes/enpa-sa-00023.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/21c223f2-d596-11da-8098-00123ffe8333.html"
+				}
+			],
+			"published": "2006-04-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-1932",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1932"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1933",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1933"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1934",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1934"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1935",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1935"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1936",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1936"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1937",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1937"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1938",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1938"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1939",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1939"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-1940",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1940"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ethereal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.0",
+									"ge": "0.8.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ethereal-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.0",
+									"ge": "0.8.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tethereal"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.0",
+									"ge": "0.8.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "tethereal-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.0",
+									"ge": "0.8.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,59 @@
+{
+	"id": "c218873d-d444-11e6-84ef-f0def167eeea",
+	"advisories": [
+		{
+			"id": "c218873d-d444-11e6-84ef-f0def167eeea",
+			"title": "Use-After-Free Vulnerability in pcsc-lite",
+			"description": "\n\t<p>Peter Wu on Openwall mailing-list reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2017/01/03/2\">\n\t  <p>The issue allows a local attacker to cause a Denial of Service,\n\t    but can potentially result in Privilege Escalation since\n\t    the daemon is running as root. while any local user can\n\t    connect to the Unix socket.\n\t    Fixed by patch which is released with hpcsc-lite 1.8.20.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.openwall.com/lists/oss-security/2017/01/03/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c218873d-d444-11e6-84ef-f0def167eeea.html"
+				}
+			],
+			"published": "2017-01-06T00:00:00Z",
+			"modified": "2017-01-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10109",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-10109"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pcsc-lite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.20",
+									"ge": "1.6.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

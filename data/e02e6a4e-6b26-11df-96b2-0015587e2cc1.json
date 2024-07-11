@@ -1,0 +1,58 @@
+{
+	"id": "e02e6a4e-6b26-11df-96b2-0015587e2cc1",
+	"advisories": [
+		{
+			"id": "e02e6a4e-6b26-11df-96b2-0015587e2cc1",
+			"title": "cacti -- multiple vulnerabilities",
+			"description": "\n\t<p>Multiple vulnerabilities have been reported to exist in older version of\n\t  Cacti. The release notes of Cacti 0.8.7f summarizes the problems as\n\t  follows:</p>\n\t<blockquote cite=\"http://www.cacti.net/release_notes_0_8_7f.php\">\n\t<ul>\n\t  <li>SQL injection and shell escaping issues</li>\n\t  <li>Cross-site scripting issues</li>\n\t  <li>Cacti Graph Viewer SQL injection vulnerability</li>\n\t</ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php-security.org/2010/05/13/mops-2010-023-cacti-graph-viewer-sql-injection-vulnerability/index.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.bonsai-sec.com/en/research/vulnerabilities/cacti-os-command-injection-0105.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.cacti.net/release_notes_0_8_7f.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.vupen.com/english/advisories/2010/1204"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e02e6a4e-6b26-11df-96b2-0015587e2cc1.html"
+				}
+			],
+			"published": "2010-06-24T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cacti"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.8.7f"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,57 @@
+{
+	"id": "c5c6e293-9cc7-11e6-823f-b8aeed92ecc4",
+	"advisories": [
+		{
+			"id": "c5c6e293-9cc7-11e6-823f-b8aeed92ecc4",
+			"title": "urllib3 -- certificate verification failure",
+			"description": "\n\t<p>urllib3 reports:</p>\n\t<blockquote cite=\"https://github.com/shazow/urllib3/blob/1.18.1/CHANGES.rst\">\n\t  <p>CVE-2016-9015: Certification verification failure</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/shazow/urllib3/blob/1.18.1/CHANGES.rst"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/c5c6e293-9cc7-11e6-823f-b8aeed92ecc4.html"
+				}
+			],
+			"published": "2016-10-28T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-9015",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-9015"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py-urllib3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.18"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

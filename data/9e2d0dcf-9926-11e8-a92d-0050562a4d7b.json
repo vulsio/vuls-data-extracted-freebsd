@@ -1,0 +1,109 @@
+{
+	"id": "9e2d0dcf-9926-11e8-a92d-0050562a4d7b",
+	"advisories": [
+		{
+			"id": "9e2d0dcf-9926-11e8-a92d-0050562a4d7b",
+			"title": "py-cryptography -- tag forgery vulnerability",
+			"description": "\n\t<p>The Python Cryptographic Authority (PyCA) project reports:</p>\n\t<blockquote cite=\"https://cryptography.io/en/latest/changelog/#v2-3\">\n\t  <p>finalize_with_tag() allowed tag truncation by default which can allow tag forgery in some cases. The method now enforces the min_tag_length provided to the GCM constructor</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9e2d0dcf-9926-11e8-a92d-0050562a4d7b.html"
+				}
+			],
+			"published": "2018-08-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-10903",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-10903"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-cryptography"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py34-cryptography"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py35-cryptography"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py36-cryptography"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-cryptography"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,65 @@
+{
+	"id": "2544f543-c178-11de-b175-001cc0377035",
+	"advisories": [
+		{
+			"id": "2544f543-c178-11de-b175-001cc0377035",
+			"title": "elinks -- buffer overflow vulnerability",
+			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/36574/discuss\">\n\t  <p>ELinks is prone to an off-by-one buffer-overflow vulnerability\n\t    because the application fails to accurately reference the last\n\t    element of a buffer.</p>\n\t  <p>Attackers may leverage this issue to execute arbitrary code in\n\t    the context of the application. Failed attacks will cause\n\t    denial-of-service conditions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=380347"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://linuxfromscratch.org/pipermail/elinks-users/2008-February/001604.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/36574"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2544f543-c178-11de-b175-001cc0377035.html"
+				}
+			],
+			"published": "2009-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2008-7224",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2008-7224"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "elinks"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.11.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

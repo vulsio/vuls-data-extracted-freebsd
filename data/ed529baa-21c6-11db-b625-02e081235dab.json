@@ -1,0 +1,46 @@
+{
+	"id": "ed529baa-21c6-11db-b625-02e081235dab",
+	"advisories": [
+		{
+			"id": "ed529baa-21c6-11db-b625-02e081235dab",
+			"title": "gnupg -- 2 more possible memory allocation attacks",
+			"description": "\n\t<p>Author reports:</p>\n\t<blockquote cite=\"http://lists.gnupg.org/pipermail/gnupg-announce/2006q3/000229.html\">\n\t  <p>Fixed 2 more possible memory allocation attacks.  They are\n\t    similar to the problem we fixed with 1.4.4.  This bug can easily\n\t    be exploted for a DoS; remote code execution is not entirely\n\t    impossible.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://lists.gnupg.org/pipermail/gnupg-announce/2006q3/000229.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ed529baa-21c6-11db-b625-02e081235dab.html"
+				}
+			],
+			"published": "2006-08-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnupg"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

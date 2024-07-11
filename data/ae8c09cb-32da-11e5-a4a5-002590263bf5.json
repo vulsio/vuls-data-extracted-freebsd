@@ -1,0 +1,62 @@
+{
+	"id": "ae8c09cb-32da-11e5-a4a5-002590263bf5",
+	"advisories": [
+		{
+			"id": "ae8c09cb-32da-11e5-a4a5-002590263bf5",
+			"title": "elasticsearch -- directory traversal attack via snapshot API",
+			"description": "\n\t<p>Elastic reports:</p>\n\t<blockquote cite=\"https://www.elastic.co/community/security\">\n\t  <p>Vulnerability Summary: Elasticsearch versions from 1.0.0 to 1.6.0\n\t    are vulnerable to a directory traversal attack.</p>\n\t  <p>Remediation Summary: Users should upgrade to 1.6.1 or later, or\n\t    constrain access to the snapshot API to trusted sources.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=201834"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.elastic.co/community/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ae8c09cb-32da-11e5-a4a5-002590263bf5.html"
+				}
+			],
+			"published": "2015-08-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5531",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5531"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "elasticsearch"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.1",
+									"ge": "1.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

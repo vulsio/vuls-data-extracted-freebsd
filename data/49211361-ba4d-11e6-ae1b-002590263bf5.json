@@ -1,0 +1,68 @@
+{
+	"id": "49211361-ba4d-11e6-ae1b-002590263bf5",
+	"advisories": [
+		{
+			"id": "49211361-ba4d-11e6-ae1b-002590263bf5",
+			"title": "xen-kernel -- x86: Mishandling of instruction pointer truncation during emulation",
+			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"https://xenbits.xen.org/xsa/advisory-186.html\">\n\t  <p>When emulating HVM instructions, Xen uses a small i-cache for\n\t    fetches from guest memory. The code that handles cache misses does\n\t    not check if the address from which it fetched lies within the cache\n\t    before blindly writing to it. As such it is possible for the guest\n\t    to overwrite hypervisor memory.</p>\n\t  <p>It is currently believed that the only way to trigger this bug is\n\t    to use the way that Xen currently incorrectly wraps CS:IP in 16 bit\n\t    modes. The included patch prevents such wrapping.</p>\n\t  <p>A malicious HVM guest administrator can escalate their privilege to\n\t    that of the host.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=214936"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/49211361-ba4d-11e6-ae1b-002590263bf5.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://xenbits.xen.org/xsa/advisory-186.html"
+				}
+			],
+			"published": "2016-12-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-7093",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-7093"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xen-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"eq": "4.5.3"
+								},
+								{
+									"eq": "4.6.3"
+								},
+								{
+									"lt": "4.7.1",
+									"ge": "4.7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

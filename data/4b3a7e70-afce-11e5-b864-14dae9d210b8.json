@@ -1,0 +1,57 @@
+{
+	"id": "4b3a7e70-afce-11e5-b864-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "4b3a7e70-afce-11e5-b864-14dae9d210b8",
+			"title": "mono -- DoS and code execution",
+			"description": "\n\t<p>NCC Group reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q4/543\">\n\t  <p>An attacker who can cause a carefully-chosen string to be\n\t    converted to a floating-point number can cause a crash and potentially\n\t    induce arbitrary code execution.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2015/q4/543"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4b3a7e70-afce-11e5-b864-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-12-31T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0689",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0689"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mono"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

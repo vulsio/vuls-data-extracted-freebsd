@@ -1,0 +1,66 @@
+{
+	"id": "bc43a578-14ec-11ed-856e-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "bc43a578-14ec-11ed-856e-d4c9ef517024",
+			"title": "Unbound -- Multiple vulnerabilities",
+			"description": "\n\t<p>NLnet Labs reports:</p>\n\t<blockquote cite=\"https://www.nlnetlabs.nl/projects/unbound/security-advisories/\">\n\t  <p>novel type of the \"ghost domain names\" attack. The vulnerability\n\t    works by targeting an Unbound instance. Unbound is queried for a\n\t    rogue domain name when the cached delegation information is about to\n\t    expire. The rogue nameserver delays the response so that the cached\n\t    delegation information is expired. Upon receiving the delayed answer\n\t    containing the delegation information, Unbound overwrites the now\n\t    expired entries. This action can be repeated when the delegation\n\t    information is about to expire making the rogue delegation\n\t    information ever-updating.</p>\n\t  <p>novel type of the \"ghost domain names\" attack. The vulnerability\n\t    works by targeting an Unbound instance. Unbound is queried for a\n\t    subdomain of a rogue domain name. The rogue nameserver returns\n\t    delegation information for the subdomain that updates Unbound's\n\t    delegation cache. This action can be repeated before expiry of the\n\t    delegation information by querying Unbound for a second level\n\t    subdomain which the rogue nameserver provides new delegation\n\t    information.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.nlnetlabs.nl/projects/unbound/security-advisories/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bc43a578-14ec-11ed-856e-d4c9ef517024.html"
+				}
+			],
+			"published": "2022-08-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-30698",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-30698"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-30699",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-30699"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "unbound"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.16.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,66 @@
+{
+	"id": "0844671c-5a09-11ed-856e-d4c9ef517024",
+	"advisories": [
+		{
+			"id": "0844671c-5a09-11ed-856e-d4c9ef517024",
+			"title": "OpenSSL -- Buffer overflows in Email verification",
+			"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20221101.txt\">\n\t  <p>X.509 Email Address 4-byte Buffer Overflow (CVE-2022-3602) (High):\n\t    A buffer overrun can be triggered in X.509 certificate verification,\n\t    specifically in name constraint checking.</p>\n\t  <p>X.509 Email Address Variable Length Buffer Overflow (CVE-2022-3786)\n\t    (High): A buffer overrun can be triggered in X.509 certificate\n\t    verification, specifically in name constraint checking.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20221101.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0844671c-5a09-11ed-856e-d4c9ef517024.html"
+				}
+			],
+			"published": "2022-11-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-3602",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3602"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-3786",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3786"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

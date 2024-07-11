@@ -1,0 +1,238 @@
+{
+	"id": "787ef75e-44da-11e5-93ad-002590263bf5",
+	"advisories": [
+		{
+			"id": "787ef75e-44da-11e5-93ad-002590263bf5",
+			"title": "php5 -- multiple vulnerabilities",
+			"description": "\n\t<p>The PHP project reports:</p>\n\t<blockquote cite=\"http://php.net/ChangeLog-5.php\">\n\t  <p>Core:</p>\n\t  <ul>\n\t    <li>Fixed bug #69793 (Remotely triggerable stack exhaustion via\n\t      recursive method calls).</li>\n\t    <li>Fixed bug #70121 (unserialize() could lead to unexpected methods\n\t      execution / NULL pointer deref).</li>\n\t  </ul>\n\t  <p>OpenSSL:</p>\n\t  <ul>\n\t    <li>Fixed bug #70014 (openssl_random_pseudo_bytes() is not\n\t      cryptographically secure).</li>\n\t  </ul>\n\t  <p>Phar:</p>\n\t  <ul>\n\t    <li>Improved fix for bug #69441.</li>\n\t    <li>Fixed bug #70019 (Files extracted from archive may be placed\n\t      outside of destination directory).</li>\n\t  </ul>\n\t  <p>SOAP:</p>\n\t  <ul>\n\t    <li>Fixed bug #70081 (SoapClient info leak / null pointer\n\t      dereference via multiple type confusions).</li>\n\t  </ul>\n\t  <p>SPL:</p>\n\t  <ul>\n\t    <li>Fixed bug #70068 (Dangling pointer in the unserialization of\n\t      ArrayObject items).</li>\n\t    <li>Fixed bug #70166 (Use After Free Vulnerability in unserialize()\n\t      with SPLArrayObject).</li>\n\t    <li>Fixed bug #70168 (Use After Free Vulnerability in unserialize()\n\t      with SplObjectStorage).</li>\n\t    <li>Fixed bug #70169 (Use After Free Vulnerability in unserialize()\n\t      with SplDoublyLinkedList).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.4.44"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.5.28"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://php.net/ChangeLog-5.php#5.6.12"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/787ef75e-44da-11e5-93ad-002590263bf5.html"
+				}
+			],
+			"published": "2015-08-17T00:00:00Z",
+			"modified": "2015-09-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-6831",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6831"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-6832",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6832"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-6833",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6833"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.44"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.44"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-phar"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.44"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php5-soap"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.4.44"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-phar"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php55-soap"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.5.28"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.12"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.12"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-phar"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.12"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php56-soap"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.6.12"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

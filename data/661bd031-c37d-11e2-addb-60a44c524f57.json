@@ -1,0 +1,57 @@
+{
+	"id": "661bd031-c37d-11e2-addb-60a44c524f57",
+	"advisories": [
+		{
+			"id": "661bd031-c37d-11e2-addb-60a44c524f57",
+			"title": "otrs -- XSS vulnerability",
+			"description": "\n\t<p>The OTRS Project reports:</p>\n\t<blockquote cite=\"http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-02/\">\n\t  <p>An attacker with permission to write changes, workorder items or FAQ articles could inject JavaScript code into the articles which would be executed by the browser of other users reading the article.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-02/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/661bd031-c37d-11e2-addb-60a44c524f57.html"
+				}
+			],
+			"published": "2013-05-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2637",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2637"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "otrs"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.8"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

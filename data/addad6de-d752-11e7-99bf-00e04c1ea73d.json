@@ -1,0 +1,46 @@
+{
+	"id": "addad6de-d752-11e7-99bf-00e04c1ea73d",
+	"advisories": [
+		{
+			"id": "addad6de-d752-11e7-99bf-00e04c1ea73d",
+			"title": "mybb -- multiple vulnerabilities",
+			"description": "\n\t<p>mybb Team reports:</p>\n\t<blockquote cite=\"https://blog.mybb.com/2017/11/28/mybb-1-8-14-released-security-maintenance-release/\">\n\t  <p>High risk: Language file headers RCE</p>\n\t  <p>Low risk: Language Pack Properties XSS</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.mybb.com/2017/11/28/mybb-1-8-14-released-security-maintenance-release/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/addad6de-d752-11e7-99bf-00e04c1ea73d.html"
+				}
+			],
+			"published": "2017-12-02T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mybb"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.14"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

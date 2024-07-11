@@ -1,0 +1,118 @@
+{
+	"id": "daf0a339-9850-11e2-879e-d43d7e0c7c02",
+	"advisories": [
+		{
+			"id": "daf0a339-9850-11e2-879e-d43d7e0c7c02",
+			"title": "asterisk -- multiple vulnerabilities",
+			"description": "\n\t<p>Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/security\">\n\t  <p>Buffer Overflow Exploit Through SIP SDP Header</p>\n\t  <p>Username disclosure in SIP channel driver</p>\n\t  <p>Denial of Service in HTTP server</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2013-001.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2013-002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2013-003.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.asterisk.org/security"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/daf0a339-9850-11e2-879e-d43d7e0c7c02.html"
+				}
+			],
+			"published": "2013-03-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2264",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2264"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2685",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2685"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2686"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2.2",
+									"gt": "11.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk10"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.12.2",
+									"gt": "10.*"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.20.2",
+									"gt": "1.8.*"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

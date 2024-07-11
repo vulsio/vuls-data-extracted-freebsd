@@ -1,0 +1,67 @@
+{
+	"id": "f8b0f83c-8bb3-11dc-bffa-0016179b2dd5",
+	"advisories": [
+		{
+			"id": "f8b0f83c-8bb3-11dc-bffa-0016179b2dd5",
+			"title": "gftp -- multiple vulnerabilities",
+			"description": "\n\t<p>Gentoo reports:</p>\n\t<blockquote cite=\"http://www.gentoo.org/security/en/glsa/glsa-200711-01.xml\">\n\t  <p>Kalle Olavi Niemitalo discovered two boundary errors in fsplib code\n\t    included in gFTP when processing overly long directory or file\n\t    names.</p>\n\t  <p>A remote attacker could trigger these vulnerabilities by enticing\n\t    a user to download a file with a specially crafted directory or file\n\t    name, possibly resulting in the execution of arbitrary code or a\n\t    Denial of Service.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gentoo.org/security/en/glsa/glsa-200711-01.xml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f8b0f83c-8bb3-11dc-bffa-0016179b2dd5.html"
+				}
+			],
+			"published": "2007-11-05T00:00:00Z",
+			"modified": "2007-11-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2007-3961",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3961"
+				}
+			]
+		},
+		{
+			"id": "CVE-2007-3962",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3962"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gftp"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0.18_6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

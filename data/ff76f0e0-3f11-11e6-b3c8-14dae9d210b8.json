@@ -1,0 +1,58 @@
+{
+	"id": "ff76f0e0-3f11-11e6-b3c8-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "ff76f0e0-3f11-11e6-b3c8-14dae9d210b8",
+			"title": "expat2 -- denial of service",
+			"description": "\n\t<p>Adam Maris reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=1344251\">\n\t  <p>It was found that original patch for issues CVE-2015-1283\n\t    and CVE-2015-2716 used overflow checks that could be optimized out by\n\t    some compilers applying certain optimization settings, which can cause\n\t    the vulnerability to remain even after applying the patch.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1344251"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ff76f0e0-3f11-11e6-b3c8-14dae9d210b8.html"
+				}
+			],
+			"published": "2016-06-30T00:00:00Z",
+			"modified": "2016-11-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-4472",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4472"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.1_2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

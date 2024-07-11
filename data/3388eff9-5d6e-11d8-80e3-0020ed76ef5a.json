@@ -1,0 +1,58 @@
+{
+	"id": "3388eff9-5d6e-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "3388eff9-5d6e-11d8-80e3-0020ed76ef5a",
+			"title": "Samba 3.0.x password initialization bug",
+			"description": "\n\t<p>From the Samba 3.0.2 release notes:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/whatsnew/samba-3.0.2.html\">\n\t  <p>Security Announcement: It has been confirmed that\n\t  previous versions of Samba 3.0 are susceptible to a password\n\t  initialization bug that could grant an attacker unauthorized\n\t  access to a user account created by the mksmbpasswd.sh shell\n\t  script.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.samba.org/samba/whatsnew/samba-3.0.2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3388eff9-5d6e-11d8-80e3-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-02-12T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2004-0082",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0082"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "samba"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.1_2,1",
+									"ge": "3.0,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

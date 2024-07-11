@@ -1,0 +1,91 @@
+{
+	"id": "6c72b13f-4d1d-11ee-a7f1-080027f5fec9",
+	"advisories": [
+		{
+			"id": "6c72b13f-4d1d-11ee-a7f1-080027f5fec9",
+			"title": "redis -- Possible bypassing ACL configuration",
+			"description": "\n\t<p>yangbodong22011 reports:</p>\n\t<blockquote cite=\"https://github.com/redis/redis/security/advisories/GHSA-q4jr-5p56-4xwc\">\n\t  <p>\n\t    Redis does not correctly identify keys accessed by SORT_RO\n\t    and, as a result, may grant users executing this command\n\t    access to keys that are not explicitly authorized by the\n\t    ACL configuration.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/redis/redis/security/advisories/GHSA-q4jr-5p56-4xwc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/6c72b13f-4d1d-11ee-a7f1-080027f5fec9.html"
+				}
+			],
+			"published": "2023-09-07T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-41053",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-41053"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.13",
+									"ge": "7.0.0"
+								},
+								{
+									"lt": "7.2.1",
+									"ge": "7.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2.0.20230831"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis70"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.13",
+									"ge": "7.0.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

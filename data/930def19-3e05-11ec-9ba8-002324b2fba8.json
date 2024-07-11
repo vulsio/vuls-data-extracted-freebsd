@@ -1,0 +1,70 @@
+{
+	"id": "930def19-3e05-11ec-9ba8-002324b2fba8",
+	"advisories": [
+		{
+			"id": "930def19-3e05-11ec-9ba8-002324b2fba8",
+			"title": "go -- multiple vulnerabilities",
+			"description": "\n\t<p>The Go project reports:</p>\n\t<blockquote cite=\"https://github.com/golang/go/issues/48990\">\n\t  <p>debug/macho fails out when loading a file that contains a dynamic\n\t    symbol table command that indicates a larger number of symbols than\n\t    exist in the loaded symbol table.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/golang/go/issues/48085\">\n\t  <p>Previously, opening a zip with (*Reader).Open could result in a\n\t    panic if the zip contained a file whose name was exclusively made up\n\t    of slash characters or \"..\" path elements. Open could also panic if\n\t    passed the empty string directly as an argument.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/48085"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/golang/go/issues/48990"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/930def19-3e05-11ec-9ba8-002324b2fba8.html"
+				}
+			],
+			"published": "2021-11-05T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-41771",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41771"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-41772",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41772"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "go"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.17.3,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "b12a341a-0932-11ea-bf09-080027e0baa0",
+	"advisories": [
+		{
+			"id": "b12a341a-0932-11ea-bf09-080027e0baa0",
+			"title": "gitea -- multiple vulnerabilities",
+			"description": "\n\t<p>The Gitea Team reports:</p>\n\t<blockquote cite=\"https://blog.gitea.io/2019/11/gitea-1.10.0-is-released/\">\n\t  <p>This release contains five security fixes, so we recommend updating:</p>\n\t  <ul>\n\t    <li>Fix issue with user.fullname</li>\n\t    <li>Ignore mentions for users with no access</li>\n\t    <li>Be more strict with git arguments</li>\n\t    <li>Extract the username and password from the mirror url</li>\n\t    <li>Reserve .well-known username</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://blog.gitea.io/2019/11/gitea-1.10.0-is-released/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=241981"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b12a341a-0932-11ea-bf09-080027e0baa0.html"
+				}
+			],
+			"published": "2019-11-22T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.9.10"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

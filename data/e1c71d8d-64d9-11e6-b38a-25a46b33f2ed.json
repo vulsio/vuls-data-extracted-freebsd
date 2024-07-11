@@ -1,0 +1,100 @@
+{
+	"id": "e1c71d8d-64d9-11e6-b38a-25a46b33f2ed",
+	"advisories": [
+		{
+			"id": "e1c71d8d-64d9-11e6-b38a-25a46b33f2ed",
+			"title": "gnupg -- attacker who obtains 4640 bits from the RNG can trivially predict the next 160 bits of output",
+			"description": "\n\t<p>Werner Koch reports:</p>\n\t<blockquote cite=\"https://lists.gnupg.org/pipermail/gnupg-announce/2016q3/000395.html\">\n\t  <p>There was a bug in the mixing functions of Libgcrypt's random\n\t    number generator: An attacker who obtains 4640 bits from the RNG can\n\t    trivially predict the next 160 bits of output.  This bug exists since\n\t    1998 in all GnuPG and Libgcrypt versions.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.gnupg.org/pipermail/gnupg-announce/2016q3/000395.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e1c71d8d-64d9-11e6-b38a-25a46b33f2ed.html"
+				}
+			],
+			"published": "2016-08-18T00:00:00Z",
+			"modified": "2016-11-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6313",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6313"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnupg1"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.7.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-libgcrypt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5_4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c7-libgcrypt"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.5.3_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

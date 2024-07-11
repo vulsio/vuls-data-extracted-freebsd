@@ -1,0 +1,71 @@
+{
+	"id": "e358b470-b37d-4e47-bc8a-2cd9adbeb63c",
+	"advisories": [
+		{
+			"id": "e358b470-b37d-4e47-bc8a-2cd9adbeb63c",
+			"title": "jenkins -- Denial of service vulnerability in bundled Jetty",
+			"description": "\n\t<p>Jenkins Security Advisory:</p>\n\t<blockquote cite=\"https://www.jenkins.io/security/advisory/2021-04-20/\">\n\t  <h1>Description</h1>\n\t  <h5>(High) JENKINS-65280 / CVE-2021-28165</h5>\n\t  <p>Denial of service vulnerability in bundled Jetty</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.jenkins.io/security/advisory/2021-04-20/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e358b470-b37d-4e47-bc8a-2cd9adbeb63c.html"
+				}
+			],
+			"published": "2021-04-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-28165",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-28165"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.286"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "jenkins-lts"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.277.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

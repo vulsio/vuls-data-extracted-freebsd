@@ -1,0 +1,72 @@
+{
+	"id": "bbb18fcb-7f0d-11ee-94b4-6cc21735f730",
+	"advisories": [
+		{
+			"id": "bbb18fcb-7f0d-11ee-94b4-6cc21735f730",
+			"title": "postgresql-server -- Role pg_cancel_backend can signal certain superuser processes",
+			"description": "\n\t<p>PostgreSQL Project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2023-5870/\">\n\t  <p>\n\t    Documentation says the pg_cancel_backend role cannot\n\t    signal \"a backend owned by a superuser\". On the\n\t    contrary, it can signal background workers, including\n\t    the logical replication launcher. It can signal\n\t    autovacuum workers and the autovacuum launcher.\n\t    Signaling autovacuum workers and those two launchers\n\t    provides no meaningful exploit, so exploiting this\n\t    vulnerability requires a non-core extension with a\n\t    less-resilient background worker. For example, a\n\t    non-core background worker that does not auto-restart\n\t    would experience a denial of service with respect to\n\t    that particular background worker.\n\t  </p>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.postgresql.org/support/security/CVE-2023-5870/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/bbb18fcb-7f0d-11ee-94b4-6cc21735f730.html"
+				}
+			],
+			"published": "2023-11-09T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-5870",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-5870"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postgresql-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.1"
+								},
+								{
+									"lt": "15.5"
+								},
+								{
+									"lt": "14.10"
+								},
+								{
+									"lt": "13.13"
+								},
+								{
+									"lt": "12.17"
+								},
+								{
+									"lt": "11.22"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

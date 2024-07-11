@@ -1,0 +1,235 @@
+{
+	"id": "43eaa656-80bc-11e6-bf52-b499baebfeaf",
+	"advisories": [
+		{
+			"id": "43eaa656-80bc-11e6-bf52-b499baebfeaf",
+			"title": "OpenSSL -- multiple vulnerabilities",
+			"description": "\n\t<p>OpenSSL reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20160922.txt\">\n\t  <p>High: OCSP Status Request extension unbounded memory growth</p>\n\t  <p>SSL_peek() hang on empty record</p>\n\t  <p>SWEET32 Mitigation</p>\n\t  <p>OOB write in MDC2_Update()</p>\n\t  <p>Malformed SHA512 ticket DoS</p>\n\t  <p>OOB write in BN_bn2dec()</p>\n\t  <p>OOB read in TS_OBJ_print_bio()</p>\n\t  <p>Pointer arithmetic undefined behaviour</p>\n\t  <p>Constant time flag not preserved in DSA signing</p>\n\t  <p>DTLS buffered message DoS</p>\n\t  <p>DTLS replay protection DoS</p>\n\t  <p>Certificate message OOB reads</p>\n\t  <p>Excessive allocation of memory in tls_get_message_header()</p>\n\t  <p>Excessive allocation of memory in dtls1_preprocess_fragment()</p>\n\t  <p>NB: LibreSSL is only affected by CVE-2016-6304</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:26.openssl.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openssl.org/news/secadv/20160922.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/43eaa656-80bc-11e6-bf52-b499baebfeaf.html"
+				}
+			],
+			"published": "2016-09-22T00:00:00Z",
+			"modified": "2016-10-11T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-2177",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2177"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2178",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2178"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2179",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2179"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2180",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2181",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2181"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2182",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2182"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2183",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2183"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6302",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6302"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6303",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6303"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6304",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6304"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6305",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6305"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6306",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6306"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6307",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6307"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-6308",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6308"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.1.0_1",
+									"ge": "1.1.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.2i,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c6-openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.1e_11"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.3_8",
+									"ge": "10.3"
+								},
+								{
+									"lt": "10.2_21",
+									"ge": "10.2"
+								},
+								{
+									"lt": "10.1_38",
+									"ge": "10.1"
+								},
+								{
+									"lt": "9.3_46",
+									"ge": "9.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

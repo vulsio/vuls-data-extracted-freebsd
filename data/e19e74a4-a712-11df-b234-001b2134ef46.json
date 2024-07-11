@@ -1,0 +1,130 @@
+{
+	"id": "e19e74a4-a712-11df-b234-001b2134ef46",
+	"advisories": [
+		{
+			"id": "e19e74a4-a712-11df-b234-001b2134ef46",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe Product Security Incident Response Team reports:</p>\n\t<blockquote cite=\"http://www.adobe.com/support/security/bulletins/apsb10-16.html\">\n\t  <p>Critical  vulnerabilities have been identified in Adobe\n\t    Flash Player version 10.1.53.64 and earlier. These\n\t    vulnerabilities could cause the application to crash and\n\t    could potentially allow an attacker to take control of the\n\t    affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.adobe.com/support/security/bulletins/apsb10-16.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e19e74a4-a712-11df-b234-001b2134ef46.html"
+				}
+			],
+			"published": "2010-08-13T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-0209",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0209"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-2188",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2188"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-2213",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2213"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-2214",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2214"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-2215",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2215"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-2216",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2216"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.0r280"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f8-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.1r82"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.1r82"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

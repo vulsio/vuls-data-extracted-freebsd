@@ -1,0 +1,70 @@
+{
+	"id": "756a8631-0b84-11e8-a986-6451062f0f7a",
+	"advisories": [
+		{
+			"id": "756a8631-0b84-11e8-a986-6451062f0f7a",
+			"title": "Flash Player -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://helpx.adobe.com/security/products/flash-player/apsb18-03.html\">\n\t  <ul>\n\t    <li>This update resolves use-after-free vulnerabilities that\n\t      could lead to remote code execution (CVE-2018-4877,\n\t      CVE-2018-4878).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsa18-01.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://helpx.adobe.com/security/products/flash-player/apsb18-03.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/756a8631-0b84-11e8-a986-6451062f0f7a.html"
+				}
+			],
+			"published": "2018-02-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-4877",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-4877"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-4878",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2018-4878"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-flashplayer"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "28.0.0.161"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

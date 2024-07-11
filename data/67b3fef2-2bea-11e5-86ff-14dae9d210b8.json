@@ -1,0 +1,66 @@
+{
+	"id": "67b3fef2-2bea-11e5-86ff-14dae9d210b8",
+	"advisories": [
+		{
+			"id": "67b3fef2-2bea-11e5-86ff-14dae9d210b8",
+			"title": "groovy -- remote execution of untrusted code",
+			"description": "\n\t<p>Cédric Champeau reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/121\">\n\t  <p>Description</p>\n\t  <p>When an application has Groovy on the classpath and that\n\t    it uses standard Java serialization mechanism to communicate\n\t    between servers, or to store local data, it is possible for\n\t    an attacker to bake a special serialized object that will\n\t    execute code directly when deserialized. All applications\n\t    which rely on serialization and do not isolate the code which\n\t    deserializes objects are subject to this vulnerability.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://groovy-lang.org/security.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://seclists.org/oss-sec/2015/q3/121"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://issues.apache.org/jira/browse/GROOVY-7504"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/67b3fef2-2bea-11e5-86ff-14dae9d210b8.html"
+				}
+			],
+			"published": "2015-07-16T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3253",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3253"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "groovy"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.4.4",
+									"ge": "1.7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

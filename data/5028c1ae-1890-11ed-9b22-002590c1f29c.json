@@ -1,0 +1,66 @@
+{
+	"id": "5028c1ae-1890-11ed-9b22-002590c1f29c",
+	"advisories": [
+		{
+			"id": "5028c1ae-1890-11ed-9b22-002590c1f29c",
+			"title": "FreeBSD -- Out of bound read in elf_note_prpsinfo()",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When dumping core and saving process information, proc_getargv()\n\tmight return an sbuf which have a sbuf_len() of 0 or -1, which is not\n\tproperly handled.</p>\n\t<h1>Impact:</h1>\n\t<p>An out-of-bound read can happen when user constructs a specially\n\tcrafted ps_string, which in turn can cause the kernel to crash.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-22:09.elf.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5028c1ae-1890-11ed-9b22-002590c1f29c.html"
+				}
+			],
+			"published": "2022-08-10T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23089",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23089"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.1_1",
+									"ge": "13.1"
+								},
+								{
+									"lt": "13.0_12",
+									"ge": "13.0"
+								},
+								{
+									"lt": "12.3_6",
+									"ge": "12.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

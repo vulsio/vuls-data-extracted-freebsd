@@ -1,0 +1,46 @@
+{
+	"id": "83a548b5-4fa5-11e8-9a8e-001e2a3f778d",
+	"advisories": [
+		{
+			"id": "83a548b5-4fa5-11e8-9a8e-001e2a3f778d",
+			"title": "KWallet-PAM -- Access to privileged files",
+			"description": "\n\t<p>The KDE Community reports:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20180503-1.txt\">\n\t  <p>\n\t  kwallet-pam was doing file writing and permission changing\n\t  as root that with correct timing and use of carefully\n\t  crafted symbolic links could allow a non privileged user\n\t  to become the owner of any file on the system.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kde.org/info/security/advisory-20180503-1.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/83a548b5-4fa5-11e8-9a8e-001e2a3f778d.html"
+				}
+			],
+			"published": "2018-05-04T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "plasma5-kwallet-pam"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.12.5_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

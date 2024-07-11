@@ -1,0 +1,57 @@
+{
+	"id": "dec6b8e9-c9fe-11ed-bb39-901b0e9408dc",
+	"advisories": [
+		{
+			"id": "dec6b8e9-c9fe-11ed-bb39-901b0e9408dc",
+			"title": "dino -- Insufficient message sender validation in Dino",
+			"description": "\n\t<p>Dino team reports:</p>\n\t<blockquote cite=\"https://dino.im/security/cve-2023-28686/\">\n\t  <p>Dino before 0.2.3, 0.3.x before 0.3.2, and 0.4.x before 0.4.2 allows\n\tattackers to modify the personal bookmark store via a crafted\n\tmessage.  The attacker can change the display of group chats or\n\tforce a victim to join a group chat; the victim may then be tricked\n\tinto disclosing sensitive information.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://dino.im/security/cve-2023-28686/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dec6b8e9-c9fe-11ed-bb39-901b0e9408dc.html"
+				}
+			],
+			"published": "2023-03-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28686",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28686"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dino"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.4.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

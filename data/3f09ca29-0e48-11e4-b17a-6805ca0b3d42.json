@@ -1,0 +1,98 @@
+{
+	"id": "3f09ca29-0e48-11e4-b17a-6805ca0b3d42",
+	"advisories": [
+		{
+			"id": "3f09ca29-0e48-11e4-b17a-6805ca0b3d42",
+			"title": "phpMyAdmin -- multiple XSS vulnerabilities, missing validation",
+			"description": "\n\t<p>The phpMyAdmin development team reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2014-4.php\">\n\t  <p>Self-XSS due to unescaped HTML output in database\n\t    structure page.</p>\n\t  <p>With a crafted table comment, it is possible to trigger\n\t    an XSS in database structure page.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2014-5.php\">\n\t  <p>Self-XSS due to unescaped HTML output in database\n\t    triggers page.</p>\n\t  <p>When navigating into the database triggers page, it is\n\t    possible to trigger an XSS with a crafted trigger\n\t    name.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2014-6.php\">\n\t  <p>Multiple XSS in AJAX confirmation messages.</p>\n\t  <p>With a crafted column name it is possible to trigger an\n\t    XSS when dropping the column in table structure page. With\n\t    a crafted table name it is possible to trigger an XSS when\n\t    dropping or truncating the table in table operations\n\t    page.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security/PMASA-2014-7.php\">\n\t  <p>Access for an unprivileged user to MySQL user list.</p>\n\t  <p>An unpriviledged user could view the MySQL user list and\n\t    manipulate the tabs displayed in phpMyAdmin for them.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2014-4.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2014-5.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2014-6.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.phpmyadmin.net/home_page/security/PMASA-2014-7.php"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/3f09ca29-0e48-11e4-b17a-6805ca0b3d42.html"
+				}
+			],
+			"published": "2014-07-18T00:00:00Z",
+			"modified": "2014-07-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-4954",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4954"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-4955",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4955"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-4986",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4986"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-4987",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4987"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "phpMyAdmin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.6",
+									"ge": "4.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

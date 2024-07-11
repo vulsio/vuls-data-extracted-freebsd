@@ -1,0 +1,62 @@
+{
+	"id": "13d6d997-f455-11dd-8516-001b77d09812",
+	"advisories": [
+		{
+			"id": "13d6d997-f455-11dd-8516-001b77d09812",
+			"title": "sudo -- certain authorized users could run commands as any user",
+			"description": "\n\t<p>Todd Miller reports:</p>\n\t<blockquote cite=\"http://www.gratisoft.us/pipermail/sudo-announce/2009-February/000085.html\">\n\t  <p>A bug was introduced in Sudo's group matching code in version\n\t    1.6.9 when support for matching based on the supplemental group\n\t    vector was added.  This bug may allow certain users listed in\n\t    the sudoers file to run a command as a different user than their\n\t    access rule specifies.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.gratisoft.us/pipermail/sudo-announce/2009-February/000085.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/33517"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/13d6d997-f455-11dd-8516-001b77d09812.html"
+				}
+			],
+			"published": "2009-02-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2009-0034",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0034"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sudo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.9.20",
+									"ge": "1.6.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

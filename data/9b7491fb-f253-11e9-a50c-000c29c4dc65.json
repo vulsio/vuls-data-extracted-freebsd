@@ -1,0 +1,57 @@
+{
+	"id": "9b7491fb-f253-11e9-a50c-000c29c4dc65",
+	"advisories": [
+		{
+			"id": "9b7491fb-f253-11e9-a50c-000c29c4dc65",
+			"title": "python 3.7 -- multiple vulnerabilities",
+			"description": "\n\t<p>Python changelog:</p>\n\t<blockquote cite=\"https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-5-final\">\n\t  <p>bpo-38243: Escape the server title of xmlrpc.server.DocXMLRPCServer when rendering\n\t   the document page as HTML.</p>\n\t  <p>bpo-38174: Update vendorized expat library version to 2.2.8, which resolves\n\t   CVE-2019-15903.</p>\n\t  <p>bpo-37764: Fixes email._header_value_parser.get_unstructured going into an infinite\n\t   loop for a specific case in which the email header does not have trailing whitespace,\n\t   and the case in which it contains an invalid encoded word.</p>\n\t  <p>bpo-37461: Fix an infinite loop when parsing specially crafted email headers.</p>\n\t  <p>bpo-34155: Fix parsing of invalid email addresses with more than one @\n\t   (e.g. a@b@c.com.) to not return the part before 2nd @ as valid email address.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-5-final"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/9b7491fb-f253-11e9-a50c-000c29c4dc65.html"
+				}
+			],
+			"published": "2019-10-19T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-15903",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15903"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python37"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.7.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,60 @@
+{
+	"id": "50383bde-b25b-11de-8c83-02e0185f8d72",
+	"advisories": [
+		{
+			"id": "50383bde-b25b-11de-8c83-02e0185f8d72",
+			"title": "FreeBSD -- Devfs / VFS NULL pointer race condition",
+			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to the interaction between devfs and VFS, a race condition\n\t  exists where the kernel might dereference a NULL pointer.</p>\n\t<h1>Impact:</h1>\n\t<p>Successful exploitation of the race condition can lead to local\n\t  kernel privilege escalation, kernel data corruption and/or\n\t  crash.</p>\n\t<p>To exploit this vulnerability, an attacker must be able to run\n\t  code with user privileges on the target system.</p>\n\t<h1>Workaround:</h1>\n\t<p>An errata note, FreeBSD-EN-09:05.null has been released\n\t  simultaneously to this advisory, and contains a kernel patch\n\t  implementing a workaround for a more broad class of\n\t  vulnerabilities.  However, prior to those changes, no workaround\n\t  is available.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-09:14.devfs.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/50383bde-b25b-11de-8c83-02e0185f8d72.html"
+				}
+			],
+			"published": "2009-10-06T00:00:00Z",
+			"modified": "2016-08-09T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.3_13",
+									"ge": "6.3"
+								},
+								{
+									"lt": "6.4_7",
+									"ge": "6.4"
+								},
+								{
+									"lt": "7.1_8",
+									"ge": "7.1"
+								},
+								{
+									"lt": "7.2_4",
+									"ge": "7.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

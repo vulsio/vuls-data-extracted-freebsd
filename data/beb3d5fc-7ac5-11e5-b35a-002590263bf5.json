@@ -1,0 +1,83 @@
+{
+	"id": "beb3d5fc-7ac5-11e5-b35a-002590263bf5",
+	"advisories": [
+		{
+			"id": "beb3d5fc-7ac5-11e5-b35a-002590263bf5",
+			"title": "Joomla! -- Core - Unauthorized Login vulnerability",
+			"description": "\n\t<p>The JSST and the Joomla! Security Center report:</p>\n\t<blockquote cite=\"http://developer.joomla.org/security-centre/594-20140902-core-unauthorised-logins.html\">\n\t  <h2>[20140902] - Core - Unauthorized Logins</h2>\n\t  <p>Inadequate checking allowed unauthorized logins via LDAP\n\t    authentication.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://developer.joomla.org/security-centre/594-20140902-core-unauthorised-logins.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.joomla.org/announcements/release-news/5563-joomla-2-5-25-released.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.joomla.org/announcements/release-news/5564-joomla-3-3-4-released.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/beb3d5fc-7ac5-11e5-b35a-002590263bf5.html"
+				}
+			],
+			"published": "2015-10-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-6632",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-6632"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "joomla3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.5"
+								},
+								{
+									"lt": "3.3.4",
+									"ge": "3.3.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "joomla2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.5.25"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

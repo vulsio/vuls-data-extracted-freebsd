@@ -1,0 +1,70 @@
+{
+	"id": "059a99a9-45e0-492b-b9f9-5a79573c8eb6",
+	"advisories": [
+		{
+			"id": "059a99a9-45e0-492b-b9f9-5a79573c8eb6",
+			"title": "electron29 -- multiple vulnerabilities",
+			"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v29.3.2\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2024-4060.</li>\n\t    <li>Security: backported fix for CVE-2024-4058.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-23rw-79p3-xgcm"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/advisories/GHSA-4qw6-vwc8-mh38"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/059a99a9-45e0-492b-b9f9-5a79573c8eb6.html"
+				}
+			],
+			"published": "2024-05-08T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-4058",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4058"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-4060",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2024-4060"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "electron29"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "29.3.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

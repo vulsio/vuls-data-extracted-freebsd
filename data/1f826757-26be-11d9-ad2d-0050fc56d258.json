@@ -1,0 +1,50 @@
+{
+	"id": "1f826757-26be-11d9-ad2d-0050fc56d258",
+	"advisories": [
+		{
+			"id": "1f826757-26be-11d9-ad2d-0050fc56d258",
+			"title": "rssh -- format string vulnerability",
+			"description": "\n\t<p>There is a format string bug in rssh that enables an attacker\n\t  to execute arbitrary code from an account configured to use\n\t  rssh.  On FreeBSD it is only possible to compromise the rssh\n\t  running account, not root.</p>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109855982425122"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.pizzashack.org/rssh/security.shtml"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1f826757-26be-11d9-ad2d-0050fc56d258.html"
+				}
+			],
+			"published": "2004-10-25T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rssh"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.2.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

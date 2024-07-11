@@ -1,0 +1,51 @@
+{
+	"id": "00784d6e-f4ce-11da-87a1-000c6ec775d9",
+	"advisories": [
+		{
+			"id": "00784d6e-f4ce-11da-87a1-000c6ec775d9",
+			"title": "squirrelmail -- plugin.php local file inclusion vulnerability",
+			"description": "\n\t<p>The SquirrelMail Project Team reports:</p>\n\t<blockquote cite=\"http://www.squirrelmail.org/security/issue/2006-06-01\">\n\t  <p>A security issue has been uncovered in\n\t    functions/plugin.php that could allow a remote user to\n\t    access local files on the server without requiring\n\t    login. This issue manifests itself if register_globals is\n\t    enabled, and magic_quotes_gpc is disabled.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/20406/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.squirrelmail.org/security/issue/2006-06-01"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/00784d6e-f4ce-11da-87a1-000c6ec775d9.html"
+				}
+			],
+			"published": "2006-06-05T00:00:00Z",
+			"modified": "2006-06-06T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squirrelmail"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.6_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

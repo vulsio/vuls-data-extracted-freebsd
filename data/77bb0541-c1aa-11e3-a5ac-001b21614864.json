@@ -1,0 +1,72 @@
+{
+	"id": "77bb0541-c1aa-11e3-a5ac-001b21614864",
+	"advisories": [
+		{
+			"id": "77bb0541-c1aa-11e3-a5ac-001b21614864",
+			"title": "dbus-glib -- privledge escalation",
+			"description": "\n\t<p>Sebastian Krahmer reports:</p>\n\t<blockquote cite=\"https://bugs.freedesktop.org/show_bug.cgi?id=60916\">\n\t  <p>A privilege escalation flaw was found in the way dbus-glib, the\n\t    D-Bus add-on library to integrate the standard D-Bus library with\n\t    the GLib thread abstraction and main loop, performed filtering of\n\t    the message sender (message source subject), when the\n\t    NameOwnerChanged signal was received. A local attacker could use\n\t    this flaw to escalate their privileges.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freedesktop.org/show_bug.cgi?id=60916"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/77bb0541-c1aa-11e3-a5ac-001b21614864.html"
+				}
+			],
+			"published": "2014-04-11T00:00:00Z",
+			"modified": "2014-04-30T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0292",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0292"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "dbus-glib"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.100.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-dbus-glib"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.100.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

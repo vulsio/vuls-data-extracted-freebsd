@@ -1,0 +1,61 @@
+{
+	"id": "f69e1f09-e39b-11e5-9f77-5453ed2e2b49",
+	"advisories": [
+		{
+			"id": "f69e1f09-e39b-11e5-9f77-5453ed2e2b49",
+			"title": "websvn -- information disclosure",
+			"description": "\n\t<p>Thijs Kinkhorst reports:</p>\n\t<blockquote cite=\"https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=775682\">\n\t  <p>James Clawson reported:</p>\n\t  <p>\"Arbitrary files with a known path can be accessed in websvn by\n\t  committing a symlink to a repository and then downloading the file\n\t  (using the download link).</p>\n\t  <p>An attacker must have write access to the repo, and the download\n\t  option must have been enabled in the websvn config file.\"</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=775682"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-6892"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/f69e1f09-e39b-11e5-9f77-5453ed2e2b49.html"
+				}
+			],
+			"published": "2016-03-06T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-6892",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6892"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "websvn"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.3.3_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

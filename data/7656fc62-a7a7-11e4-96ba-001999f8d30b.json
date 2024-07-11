@@ -1,0 +1,74 @@
+{
+	"id": "7656fc62-a7a7-11e4-96ba-001999f8d30b",
+	"advisories": [
+		{
+			"id": "7656fc62-a7a7-11e4-96ba-001999f8d30b",
+			"title": "asterisk -- Mitigation for libcURL HTTP request injection vulnerability",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"http://www.asterisk.org/downloads/security-advisories\">\n\t  <p>CVE-2014-8150 reported an HTTP request injection\n\t  vulnerability in libcURL. Asterisk uses libcURL in its\n\t  func_curl.so module (the CURL() dialplan function), as\n\t  well as its res_config_curl.so (cURL realtime backend)\n\t  modules.</p>\n\t  <p>Since Asterisk may be configured to allow for user-supplied\n\t  URLs to be passed to libcURL, it is possible that an\n\t  attacker could use Asterisk as an attack vector to inject\n\t  unauthorized HTTP requests if the version of libcURL\n\t  installed on the Asterisk server is affected by\n\t  CVE-2014-8150.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://downloads.asterisk.org/pub/security/AST-2015-002.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/7656fc62-a7a7-11e4-96ba-001999f8d30b.html"
+				}
+			],
+			"published": "2015-01-29T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.32.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk11"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.15.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk13"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.1.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,153 @@
+{
+	"id": "0700e76c-3eb0-11ea-8478-3085a9a95629",
+	"advisories": [
+		{
+			"id": "0700e76c-3eb0-11ea-8478-3085a9a95629",
+			"title": "Pillow -- Multiple vulnerabilities",
+			"description": "\n\t<p>Pillow developers report:</p>\n\t<blockquote cite=\"https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\">\n\t  <p>\n\t    This release addresses several security problems, as well as\n\t    addressing CVE-2019-19911.\n\t  </p><p>\n\t    CVE-2019-19911 is regarding FPX images. If an image reports that it\n\t    has a large number of bands, a large amount of resources will be\n\t    used when trying to process the image. This is fixed by limiting the\n\t    number of bands to those usable by Pillow.\n\t  </p><p>\n\t    Buffer overruns were found when processing an SGI, PCX or FLI image.\n\t    Checks have been added to prevent this.\n\t  </p><p>\n\t    Overflow checks have been added when calculating the size of a\n\t    memory block to be reallocated in the processing of a TIFF image.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243336"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/0700e76c-3eb0-11ea-8478-3085a9a95629.html"
+				}
+			],
+			"published": "2020-01-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-19911",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19911"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-5310",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-5310"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-5311",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-5311"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-5312",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-5312"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-5313",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-5313"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py27-pillow"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py35-pillow"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py36-pillow"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py37-pillow"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-pillow"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

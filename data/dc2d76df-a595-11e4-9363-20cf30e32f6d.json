@@ -1,0 +1,61 @@
+{
+	"id": "dc2d76df-a595-11e4-9363-20cf30e32f6d",
+	"advisories": [
+		{
+			"id": "dc2d76df-a595-11e4-9363-20cf30e32f6d",
+			"title": "Bugzilla multiple security issues",
+			"description": "\n\t<p>Bugzilla Security Advisory</p>\n\t<blockquote cite=\"http://www.bugzilla.org/security/4.0.15/\">\n\t  <h5>Command Injection</h5>\n\t  <p>Some code in Bugzilla does not properly utilize 3 arguments form\n\t    for open() and it is possible for an account with editcomponents\n\t    permissions to inject commands into product names and other\n\t    attributes.</p>\n\t  <h5>Information Leak</h5>\n\t  <p>Using the WebServices API, a user can possibly execute imported\n\t    functions from other non-WebService modules. A whitelist has now\n\t    been added that lists explicit methods that can be executed via the\n\t    API.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1079065"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1090275"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/dc2d76df-a595-11e4-9363-20cf30e32f6d.html"
+				}
+			],
+			"published": "2015-01-26T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8630",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8630"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bugzilla44"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

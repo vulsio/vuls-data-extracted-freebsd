@@ -1,0 +1,154 @@
+{
+	"id": "ffa15b3b-e6f6-11ea-8cbf-54e1ad3d6335",
+	"advisories": [
+		{
+			"id": "ffa15b3b-e6f6-11ea-8cbf-54e1ad3d6335",
+			"title": "xorg-server -- Multiple input validation failures in X server extensions",
+			"description": "\n\t<p>The X.org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2020-August/003058.html\">\n\t  <p>All theses issuses  can lead to local privileges elevation on\n\t    systems where the X server is running privileged.</p>\n\t  <p>The handler for the XkbSetNames request does not validate the\n\t    request length before accessing its contents.</p>\n\t  <p>An integer underflow exists in the handler for the\n\t    XIChangeHierarchy request.</p>\n\t  <p>An integer underflow exist in the handler for the XkbSelectEvents\n\t    request.</p>\n\t  <p> An integer underflow exist in the handler for the CreateRegister\n\t    request of the X record extension.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://lists.x.org/archives/xorg-announce/2020-August/003058.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ffa15b3b-e6f6-11ea-8cbf-54e1ad3d6335.html"
+				}
+			],
+			"published": "2020-08-25T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-14345",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14345"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14346",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14346"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14361",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14361"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14362",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14362"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.8_4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xephyr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.8_4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-vfbserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.8_4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-nestserver"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.8_4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xwayland"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.8_4,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-dmx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.20.8_4,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

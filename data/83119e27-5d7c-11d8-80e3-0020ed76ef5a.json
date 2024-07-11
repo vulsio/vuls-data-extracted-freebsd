@@ -1,0 +1,46 @@
+{
+	"id": "83119e27-5d7c-11d8-80e3-0020ed76ef5a",
+	"advisories": [
+		{
+			"id": "83119e27-5d7c-11d8-80e3-0020ed76ef5a",
+			"title": "nap allows arbitrary file access",
+			"description": "\n\t<p>According to the author:</p>\n\t<blockquote>\n\t  <p>Fixed security loophole which allowed remote\n\t    clients to access arbitrary files on our\n\t    system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://quasar.mathstat.uottawa.ca/~selinger/nap/NEWS"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/83119e27-5d7c-11d8-80e3-0020ed76ef5a.html"
+				}
+			],
+			"published": "2004-02-12T00:00:00Z"
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nap"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

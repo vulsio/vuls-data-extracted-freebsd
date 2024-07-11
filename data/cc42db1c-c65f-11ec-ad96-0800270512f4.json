@@ -1,0 +1,94 @@
+{
+	"id": "cc42db1c-c65f-11ec-ad96-0800270512f4",
+	"advisories": [
+		{
+			"id": "cc42db1c-c65f-11ec-ad96-0800270512f4",
+			"title": "redis -- Multiple vulnerabilities",
+			"description": "\n\t<p>Aviv Yahav reports:</p>\n\t<blockquote cite=\"https://groups.google.com/g/redis-db/c/7iWUlwtoDqU\">\n\t  <dl>\n\t    <dt>CVE-2022-24735</dt>\n\t    <dd>\n\t      By exploiting weaknesses in the Lua script execution\n\t      environment, an attacker with access to Redis can inject\n\t      Lua code that will execute with the (potentially higher)\n\t      privileges of another Redis user.\n\t    </dd>\n\t    <dt>CVE-2022-24736</dt>\n\t    <dd>\n\t      An attacker attempting to load a specially crafted Lua\n\t      script can cause NULL pointer dereference which will\n\t      result with a crash of the redis-server process.\n\t    </dd>\n\t  </dl>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://groups.google.com/g/redis-db/c/7iWUlwtoDqU"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/cc42db1c-c65f-11ec-ad96-0800270512f4.html"
+				}
+			],
+			"published": "2022-04-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24735",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24735"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-24736",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24736"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.0.20220428"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis62"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

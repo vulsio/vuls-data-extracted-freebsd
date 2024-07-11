@@ -1,0 +1,71 @@
+{
+	"id": "5b6bc863-89dc-11ea-af8b-00155d0a0200",
+	"advisories": [
+		{
+			"id": "5b6bc863-89dc-11ea-af8b-00155d0a0200",
+			"title": "ceph14 -- multiple security issues",
+			"description": "\n\t<p>RedHat reports:</p>\n\t<blockquote cite=\"https://access.redhat.com/security/cve/cve-2020-1759\">\n\t  <p>ceph: secure mode of msgr2 breaks both confidentiality and integrity aspects for long-lived sessions.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://access.redhat.com/security/cve/cve-2020-1760\">\n\t  <p>ceph: header-splitting in RGW GetObject has a possible XSS.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openwall.com/lists/oss-security/2020/04/07/1"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.openwall.com/lists/oss-security/2020/04/07/2"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/5b6bc863-89dc-11ea-af8b-00155d0a0200.html"
+				}
+			],
+			"published": "2020-04-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-1759",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-1759"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-1760",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-1760"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ceph14"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.2.9",
+									"gt": "14.1.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

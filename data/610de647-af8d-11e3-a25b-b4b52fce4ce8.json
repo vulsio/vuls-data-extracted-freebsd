@@ -1,0 +1,385 @@
+{
+	"id": "610de647-af8d-11e3-a25b-b4b52fce4ce8",
+	"advisories": [
+		{
+			"id": "610de647-af8d-11e3-a25b-b4b52fce4ce8",
+			"title": "mozilla -- multiple vulnerabilities",
+			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2014-15 Miscellaneous memory safety hazards\n\t    (rv:28.0 / rv:24.4)</p>\n\t  <p>MFSA 2014-16 Files extracted during updates are not always\n\t    read only</p>\n\t  <p>MFSA 2014-17 Out of bounds read during WAV file decoding</p>\n\t  <p>MFSA 2014-18 crypto.generateCRMFRequest does not validate\n\t    type of key</p>\n\t  <p>MFSA 2014-19 Spoofing attack on WebRTC permission prompt</p>\n\t  <p>MFSA 2014-20 onbeforeunload and Javascript navigation DOS</p>\n\t  <p>MFSA 2014-21 Local file access via Open Link in new tab</p>\n\t  <p>MFSA 2014-22 WebGL content injection from one domain to\n\t    rendering in another</p>\n\t  <p>MFSA 2014-23 Content Security Policy for data: documents\n\t    not preserved by session restore</p>\n\t  <p>MFSA 2014-24 Android Crash Reporter open to manipulation</p>\n\t  <p>MFSA 2014-25 Firefox OS DeviceStorageFile object vulnerable\n\t    to relative path escape</p>\n\t  <p>MFSA 2014-26 Information disclosure through polygon\n\t    rendering in MathML</p>\n\t  <p>MFSA 2014-27 Memory corruption in Cairo during PDF font\n\t    rendering</p>\n\t  <p>MFSA 2014-28 SVG filters information disclosure through\n\t    feDisplacementMap</p>\n\t  <p>MFSA 2014-29 Privilege escalation using WebIDL-implemented\n\t    APIs</p>\n\t  <p>MFSA 2014-30 Use-after-free in TypeObject</p>\n\t  <p>MFSA 2014-31 Out-of-bounds read/write through neutering\n\t    ArrayBuffer objects</p>\n\t  <p>MFSA 2014-32 Out-of-bounds write through TypedArrayObject\n\t    after neutering</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.mozilla.org/security/known-vulnerabilities/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-15.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-16.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-17.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-18.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-19.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-20.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-21.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-22.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-23.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-24.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-25.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-26.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-27.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-28.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-29.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-30.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-31.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.mozilla.org/security/announce/2014/mfsa2014-32.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/610de647-af8d-11e3-a25b-b4b52fce4ce8.html"
+				}
+			],
+			"published": "2014-03-19T00:00:00Z",
+			"modified": "2014-03-20T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-1493",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1493"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1494",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1494"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1496",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1496"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1497",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1497"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1498",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1498"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1499",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1499"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1500",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1500"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1501",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1501"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1502",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1502"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1504",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1504"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1505",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1505"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1506",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1506"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1507",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1507"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1508",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1508"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1509",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1509"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1510",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1510"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1511",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1511"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1512",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1512"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1513",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1513"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1514",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1514"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "28.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-esr"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.4.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "28.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.25"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "24.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

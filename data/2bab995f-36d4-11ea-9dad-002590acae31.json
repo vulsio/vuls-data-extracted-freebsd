@@ -1,0 +1,61 @@
+{
+	"id": "2bab995f-36d4-11ea-9dad-002590acae31",
+	"advisories": [
+		{
+			"id": "2bab995f-36d4-11ea-9dad-002590acae31",
+			"title": "Template::Toolkit -- Directory traversal on write",
+			"description": "\n\t<p>Art Manion and Will Dormann report:</p>\n\t<blockquote cite=\"https://www.kb.cert.org/vuls/id/619785/\">\n\t  <p>\n\t    By using an older and less-secure form of open(), it is\n\t    possible for untrusted template files to cause reads/writes\n\t    outside of the template directories. This vulnerability is\n\t    a component of the recent Citrix exploit.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19781"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.kb.cert.org/vuls/id/619785/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/2bab995f-36d4-11ea-9dad-002590acae31.html"
+				}
+			],
+			"published": "2020-01-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-19781",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19781"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "p5-Template-Toolkit"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.004"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

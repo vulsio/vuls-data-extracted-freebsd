@@ -1,0 +1,66 @@
+{
+	"id": "b2a40507-5c88-11e0-9e85-00215af774f0",
+	"advisories": [
+		{
+			"id": "b2a40507-5c88-11e0-9e85-00215af774f0",
+			"title": "quagga -- two DoS vulnerabilities",
+			"description": "\n\t<p>Quagga developers report:</p>\n\t<blockquote cite=\"http://www.quagga.net/news2.php?y=2011&amp;m=3&amp;d=21#id1300723200\">\n\t  <p>Quagga 0.99.18 has been released.\n\t    This release fixes 2 denial of services in bgpd, which can be\n\t    remotely triggered by malformed AS-Pathlimit or Extended-Community\n\t    attributes. These issues have been assigned CVE-2010-1674 and\n\t    CVE-2010-1675. Support for AS-Pathlimit has been removed with this\n\t    release.\n\t  </p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.quagga.net/news2.php?y=2011&m=3&d=21#id1300723200"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/b2a40507-5c88-11e0-9e85-00215af774f0.html"
+				}
+			],
+			"published": "2011-04-01T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-1674",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1674"
+				}
+			]
+		},
+		{
+			"id": "CVE-2010-1675",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1675"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "quagga"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.99.17_6"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

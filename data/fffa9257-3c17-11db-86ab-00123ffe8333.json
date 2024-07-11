@@ -1,0 +1,121 @@
+{
+	"id": "fffa9257-3c17-11db-86ab-00123ffe8333",
+	"advisories": [
+		{
+			"id": "fffa9257-3c17-11db-86ab-00123ffe8333",
+			"title": "mailman -- Multiple Vulnerabilities",
+			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/21732/\">\n\t  <p>Mailman can be exploited by malicious people to conduct cross-site\n\t    scripting and phishing attacks, and cause a DoS (Denial of\n\t    Service).</p>\n\t  <p>1) An error in the logging functionality can be exploited to\n\t    inject a spoofed log message into the error log via a specially\n\t    crafted URL.</p>\n\t  <p>Successful exploitation may trick an administrator into visiting\n\t    a malicious web site.</p>\n\t  <p>2) An error in the processing of malformed headers which does not\n\t    follow the RFC 2231 standard can be exploited to cause a DoS\n\t    (Denial of Service).</p>\n\t  <p>3) Some unspecified input isn't properly sanitised before being\n\t    returned to the user. This can be exploited to execute arbitrary\n\t    HTML and script code in a user's browser session in context of an\n\t    affected site.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://secunia.com/advisories/21732/"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://sourceforge.net/project/shownotes.php?group_id=103&release_id=444295"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://www.securityfocus.com/bid/19831"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fffa9257-3c17-11db-86ab-00123ffe8333.html"
+				}
+			],
+			"published": "2006-09-04T00:00:00Z",
+			"modified": "2006-10-04T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2006-2191",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2191"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-2941",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-2941"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-3636",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-3636"
+				}
+			]
+		},
+		{
+			"id": "CVE-2006-4624",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4624"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.9.r1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ja-mailman"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.9.r1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailman-with-htdig"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.1.9.r1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

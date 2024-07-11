@@ -1,0 +1,89 @@
+{
+	"id": "ad05a737-14bd-11ee-8290-a8a1599412c6",
+	"advisories": [
+		{
+			"id": "ad05a737-14bd-11ee-8290-a8a1599412c6",
+			"title": "chromium -- multiple vulnerabilities",
+			"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_26.html\">\n\t <p>This update includes 4 security fixes:</p>\n\t <ul>\n\t    <li>[1452137] High CVE-2023-3420: Type Confusion in V8. Reported by Man Yue Mo of GitHub Security Lab on 2023-06-07</li>\n\t    <li>[1447568] High CVE-2023-3421: Use after free in Media. Reported by Piotr Bania of Cisco Talos on 2023-05-22</li>\n\t    <li>[1450397] High CVE-2023-3422: Use after free in Guest View. Reported by asnine on 2023-06-01</li>\n\t </ul>\n       </blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_26.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/ad05a737-14bd-11ee-8290-a8a1599412c6.html"
+				}
+			],
+			"published": "2023-06-27T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-3420",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3420"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-3421",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3421"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-3422",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3422"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "114.0.5735.198"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ungoogled-chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "114.0.5735.198"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

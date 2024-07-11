@@ -1,0 +1,85 @@
+{
+	"id": "fb3455be-ebf6-11eb-aef1-0897988a1c07",
+	"advisories": [
+		{
+			"id": "fb3455be-ebf6-11eb-aef1-0897988a1c07",
+			"title": "asterisk -- Remote crash when using IAX2 channel driver",
+			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>If the IAX2 channel driver receives a packet that\n\t  contains an unsupported media format it can cause a crash\n\t  to occur in Asterisk.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://downloads.asterisk.org/pub/security/AST-2021-008.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/fb3455be-ebf6-11eb-aef1-0897988a1c07.html"
+				}
+			],
+			"published": "2021-07-23T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-32558",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2021-32558"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk13"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.38.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk16"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.19.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "asterisk18"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "18.5.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,75 @@
+{
+	"id": "1657a3e6-4585-11e2-a396-10bf48230856",
+	"advisories": [
+		{
+			"id": "1657a3e6-4585-11e2-a396-10bf48230856",
+			"title": "linux-flashplugin -- multiple vulnerabilities",
+			"description": "\n\t<p>Adobe reports:</p>\n\t<blockquote cite=\"https://www.adobe.com/support/security/bulletins/apsb12-27.html\">\n\t  <p>These updates address vulnerabilities that could cause a crash\n\t    and potentially allow an attacker to take control of the affected system.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.adobe.com/support/security/bulletins/apsb12-27.html"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/1657a3e6-4585-11e2-a396-10bf48230856.html"
+				}
+			],
+			"published": "2012-12-14T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5676",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5676"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5677",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5677"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-5678",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5678"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-f10-flashplugin"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "11.2r202.258"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

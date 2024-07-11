@@ -1,0 +1,59 @@
+{
+	"id": "e4cd0b38-c9f9-11eb-87e1-08002750c711",
+	"advisories": [
+		{
+			"id": "e4cd0b38-c9f9-11eb-87e1-08002750c711",
+			"title": "cacti -- SQL Injection was possible due to incorrect validation order",
+			"description": "\n\t<p>Cati team reports:</p>\n\t<blockquote cite=\"https://github.com/Cacti/cacti/issues/4022\">\n\t  <p>Due to a lack of validation, data_debug.php can be the source of a SQL injection.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://github.com/Cacti/cacti/issues/4022"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/e4cd0b38-c9f9-11eb-87e1-08002750c711.html"
+				}
+			],
+			"published": "2021-06-10T00:00:00Z",
+			"modified": "2021-06-24T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-35701",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2020-35701"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cacti"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.2.17",
+									"ge": "1.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

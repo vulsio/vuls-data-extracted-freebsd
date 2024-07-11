@@ -1,0 +1,93 @@
+{
+	"id": "4ddc78dc-300a-11e1-a2aa-0016ce01e285",
+	"advisories": [
+		{
+			"id": "4ddc78dc-300a-11e1-a2aa-0016ce01e285",
+			"title": "krb5-appl -- telnetd code execution vulnerability",
+			"description": "\n\t<p>The MIT Kerberos Team reports:</p>\n\t<blockquote cite=\"http://security.FreeBSD.org/advisories/FreeBSD-SA-11:08.telnetd.asc\">\n\t  <p>When an encryption key is supplied via the TELNET protocol,\n\t    its length is not validated before the key is copied into a\n\t    fixed-size buffer. Also see MITKRB5-SA-2011-008.</p>\n\t</blockquote>\n      ",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://security.FreeBSD.org/advisories/FreeBSD-SA-11:08.telnetd.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-008.txt"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-11:08.telnetd.asc"
+				},
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.vuxml.org/freebsd/4ddc78dc-300a-11e1-a2aa-0016ce01e285.html"
+				}
+			],
+			"published": "2011-12-26T00:00:00Z",
+			"modified": "2012-01-29T00:00:00Z"
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4862",
+			"references": [
+				{
+					"source": "vuxml.freebsd.org",
+					"url": "https://www.cve.org/CVERecord?id=CVE-2011-4862"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.3_9",
+									"ge": "7.3"
+								},
+								{
+									"lt": "7.4_5",
+									"ge": "7.4"
+								},
+								{
+									"lt": "8.1_7",
+									"ge": "8.1"
+								},
+								{
+									"lt": "8.2_5",
+									"ge": "8.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "krb5-appl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.0.2_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
