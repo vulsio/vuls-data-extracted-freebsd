@@ -84,6 +84,34 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "node"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.6.7"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "2.4.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "ruby"
 						},
 						"affected": {
@@ -161,34 +189,6 @@
 							"range": [
 								{
 									"lt": "3.8.5"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "redis"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2.4.6"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "node"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "0.6.7"
 								}
 							]
 						}

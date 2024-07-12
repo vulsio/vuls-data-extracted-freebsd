@@ -36,20 +36,6 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "nss"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "3.12.11"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "ca_root_nss"
 						},
 						"affected": {
@@ -83,20 +69,6 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "seamonkey"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.3.2"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "linux-firefox"
 						},
 						"affected": {
@@ -111,18 +83,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "thunderbird"
+							"name": "linux-seamonkey"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "3.1.14",
-									"gt": "3.1.*"
-								},
-								{
-									"lt": "6.0.2",
-									"gt": "5.0.*"
+									"lt": "2.3.2"
 								}
 							]
 						}
@@ -144,13 +111,46 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "linux-seamonkey"
+							"name": "nss"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.12.11"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
 									"lt": "2.3.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "thunderbird"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.14",
+									"gt": "3.1.*"
+								},
+								{
+									"lt": "6.0.2",
+									"gt": "5.0.*"
 								}
 							]
 						}

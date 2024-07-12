@@ -39,13 +39,18 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "linux_base-suse"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.3_1"
+									"lt": "5.3_20",
+									"ge": "5.3"
+								},
+								{
+									"lt": "5.4_6",
+									"ge": "5.4"
 								}
 							]
 						}
@@ -53,18 +58,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "linux_base-suse"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "5.4_6",
-									"ge": "5.4"
-								},
-								{
-									"lt": "5.3_20",
-									"ge": "5.3"
+									"lt": "9.3_1"
 								}
 							]
 						}

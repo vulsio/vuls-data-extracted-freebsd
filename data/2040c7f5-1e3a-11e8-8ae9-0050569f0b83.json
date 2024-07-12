@@ -51,27 +51,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp44-server"
+							"name": "isc-dhcp43-client"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "4.4.1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "isc-dhcp44-client"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.4.1"
+									"le": "4.3.6"
 								}
 							]
 						}
@@ -93,13 +79,27 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp43-client"
+							"name": "isc-dhcp44-client"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"le": "4.3.6"
+									"lt": "4.4.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "isc-dhcp44-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.4.1"
 								}
 							]
 						}

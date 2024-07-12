@@ -38,20 +38,6 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp41-server"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.1.e_10,2"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "isc-dhcp41-client"
 						},
 						"affected": {
@@ -80,13 +66,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp42-client"
+							"name": "isc-dhcp41-server"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"ge": "0"
+									"lt": "4.1.e_10,2"
 								}
 							]
 						}
@@ -94,7 +80,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp42-server"
+							"name": "isc-dhcp42-client"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
@@ -122,6 +108,20 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "isc-dhcp42-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "isc-dhcp43-client"
 						},
 						"affected": {
@@ -136,7 +136,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp43-server"
+							"name": "isc-dhcp43-relay"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
@@ -150,7 +150,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "isc-dhcp43-relay"
+							"name": "isc-dhcp43-server"
 						},
 						"affected": {
 							"type": "freebsd-pkg",

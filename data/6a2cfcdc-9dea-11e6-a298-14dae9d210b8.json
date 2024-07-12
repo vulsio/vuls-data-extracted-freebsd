@@ -43,13 +43,18 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssh-portable"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "7.3p1_1"
+									"lt": "10.3_12",
+									"ge": "10.3"
+								},
+								{
+									"lt": "11.0_3",
+									"ge": "11.0"
 								}
 							]
 						}
@@ -57,18 +62,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "openssh-portable"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "11.0_3",
-									"ge": "11.0"
-								},
-								{
-									"lt": "10.3_12",
-									"ge": "10.3"
+									"lt": "7.3p1_1"
 								}
 							]
 						}

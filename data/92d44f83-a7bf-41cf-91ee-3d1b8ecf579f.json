@@ -166,13 +166,17 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "linux-firefox"
+							"name": "firefox-esr"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "46.0,1"
+									"lt": "38.8.0,1"
+								},
+								{
+									"lt": "45.1.0,1",
+									"ge": "39.0,1"
 								}
 							]
 						}
@@ -180,13 +184,31 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "seamonkey"
+							"name": "libxul"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "2.43"
+									"lt": "38.8.0"
+								},
+								{
+									"lt": "45.1.0",
+									"ge": "39.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "46.0,1"
 								}
 							]
 						}
@@ -208,17 +230,17 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "firefox-esr"
+							"name": "linux-thunderbird"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "45.1.0,1",
-									"ge": "39.0,1"
+									"lt": "38.8.0"
 								},
 								{
-									"lt": "38.8.0,1"
+									"lt": "45.1.0",
+									"ge": "39.0"
 								}
 							]
 						}
@@ -226,17 +248,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "libxul"
+							"name": "seamonkey"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "45.1.0",
-									"ge": "39.0"
-								},
-								{
-									"lt": "38.8.0"
+									"lt": "2.43"
 								}
 							]
 						}
@@ -250,29 +268,11 @@
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "45.1.0",
-									"ge": "39.0"
-								},
-								{
 									"lt": "38.8.0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "linux-thunderbird"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
+								},
 								{
 									"lt": "45.1.0",
 									"ge": "39.0"
-								},
-								{
-									"lt": "38.8.0"
 								}
 							]
 						}

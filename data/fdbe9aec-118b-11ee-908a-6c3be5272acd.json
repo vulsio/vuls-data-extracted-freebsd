@@ -44,6 +44,10 @@
 							"type": "freebsd-pkg",
 							"range": [
 								{
+									"lt": "10.0.1",
+									"ge": "10.0.0"
+								},
+								{
 									"lt": "8.5.27",
 									"ge": "6.7.0"
 								},
@@ -62,10 +66,20 @@
 								{
 									"lt": "9.5.5",
 									"ge": "9.5.0"
-								},
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grafana10"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
 								{
-									"lt": "10.0.1",
-									"ge": "10.0.0"
+									"lt": "10.0.1"
 								}
 							]
 						}
@@ -106,20 +120,6 @@
 								{
 									"lt": "9.5.5",
 									"ge": "9.5.0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "grafana10"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "10.0.1"
 								}
 							]
 						}

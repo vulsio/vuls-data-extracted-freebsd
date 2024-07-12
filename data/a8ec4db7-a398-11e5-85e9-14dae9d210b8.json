@@ -69,27 +69,14 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bind99"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.9.8P2"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "bind910"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "9.10.3P2"
+									"lt": "9.3_32",
+									"ge": "9.3"
 								}
 							]
 						}
@@ -111,14 +98,27 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "bind910"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.3_32",
-									"ge": "9.3"
+									"lt": "9.10.3P2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.9.8P2"
 								}
 							]
 						}

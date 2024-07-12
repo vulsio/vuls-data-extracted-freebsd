@@ -47,13 +47,26 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bind9"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.3.6.1.1"
+									"lt": "6.3_12",
+									"ge": "6.3"
+								},
+								{
+									"lt": "6.4_6",
+									"ge": "6.4"
+								},
+								{
+									"lt": "7.1_7",
+									"ge": "7.1"
+								},
+								{
+									"lt": "7.2_3",
+									"ge": "7.2"
 								}
 							]
 						}
@@ -61,13 +74,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bind9-sdb-postgresql"
+							"name": "bind9"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.4.3.3"
+									"lt": "9.3.6.1.1"
 								}
 							]
 						}
@@ -89,26 +102,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "bind9-sdb-postgresql"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "6.3_12",
-									"ge": "6.3"
-								},
-								{
-									"lt": "6.4_6",
-									"ge": "6.4"
-								},
-								{
-									"lt": "7.1_7",
-									"ge": "7.1"
-								},
-								{
-									"lt": "7.2_3",
-									"ge": "7.2"
+									"lt": "9.4.3.3"
 								}
 							]
 						}

@@ -39,13 +39,22 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "file"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "4.21"
+									"lt": "5.5_13",
+									"ge": "5.5"
+								},
+								{
+									"lt": "6.1_17",
+									"ge": "6.1"
+								},
+								{
+									"lt": "6.2_5",
+									"ge": "6.2"
 								}
 							]
 						}
@@ -53,22 +62,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "file"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "6.2_5",
-									"ge": "6.2"
-								},
-								{
-									"lt": "6.1_17",
-									"ge": "6.1"
-								},
-								{
-									"lt": "5.5_13",
-									"ge": "5.5"
+									"lt": "4.21"
 								}
 							]
 						}

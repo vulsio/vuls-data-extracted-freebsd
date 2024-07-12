@@ -42,13 +42,17 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openvpn-polarssl"
+							"name": "openvpn"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
 									"lt": "2.3.18"
+								},
+								{
+									"lt": "2.4.4",
+									"ge": "2.4.0"
 								}
 							]
 						}
@@ -71,15 +75,11 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openvpn"
+							"name": "openvpn-polarssl"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
-								{
-									"lt": "2.4.4",
-									"ge": "2.4.0"
-								},
 								{
 									"lt": "2.3.18"
 								}

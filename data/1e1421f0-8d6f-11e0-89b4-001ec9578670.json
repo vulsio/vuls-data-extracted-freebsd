@@ -43,6 +43,33 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.3_6",
+									"ge": "7.3"
+								},
+								{
+									"lt": "7.4_2",
+									"ge": "7.4"
+								},
+								{
+									"lt": "8.1_4",
+									"ge": "8.1"
+								},
+								{
+									"lt": "8.2_2",
+									"ge": "8.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "bind9-sdb-ldap"
 						},
 						"affected": {
@@ -106,33 +133,6 @@
 							"range": [
 								{
 									"lt": "9.8.0.2"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "FreeBSD"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "7.3_6",
-									"ge": "7.3"
-								},
-								{
-									"lt": "7.4_2",
-									"ge": "7.4"
-								},
-								{
-									"lt": "8.1_4",
-									"ge": "8.1"
-								},
-								{
-									"lt": "8.2_2",
-									"ge": "8.2"
 								}
 							]
 						}

@@ -215,6 +215,20 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "flock"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "linux-firefox"
 						},
 						"affected": {
@@ -243,13 +257,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "seamonkey"
+							"name": "linux-flock"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "1.1.12"
+									"lt": "2.0"
 								}
 							]
 						}
@@ -271,13 +285,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "thunderbird"
+							"name": "linux-seamonkey-devel"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "2.0.0.17"
+									"gt": "0"
 								}
 							]
 						}
@@ -299,13 +313,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "flock"
+							"name": "seamonkey"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "2.0"
+									"lt": "1.1.12"
 								}
 							]
 						}
@@ -313,27 +327,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "linux-flock"
+							"name": "thunderbird"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "2.0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "linux-seamonkey-devel"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"gt": "0"
+									"lt": "2.0.0.17"
 								}
 							]
 						}

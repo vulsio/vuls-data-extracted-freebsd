@@ -53,7 +53,51 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "perl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"ge": "0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "perl5"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.18.4_24"
+								},
+								{
+									"lt": "5.20.3_15",
+									"ge": "5.20"
+								},
+								{
+									"lt": "5.22.3.r2",
+									"ge": "5.21"
+								},
+								{
+									"lt": "5.24.1.r2",
+									"ge": "5.23"
+								},
+								{
+									"lt": "5.25.2.87",
+									"ge": "5.25"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl5-devel"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
@@ -196,50 +240,6 @@
 								{
 									"lt": "5.25.2.87",
 									"ge": "5.25"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "perl5-devel"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "5.18.4_24"
-								},
-								{
-									"lt": "5.20.3_15",
-									"ge": "5.20"
-								},
-								{
-									"lt": "5.22.3.r2",
-									"ge": "5.21"
-								},
-								{
-									"lt": "5.24.1.r2",
-									"ge": "5.23"
-								},
-								{
-									"lt": "5.25.2.87",
-									"ge": "5.25"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "perl"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"ge": "0"
 								}
 							]
 						}

@@ -115,14 +115,30 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "openssl"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "1.0.1_14",
-									"ge": "1.0.1"
+									"lt": "10.0_8",
+									"ge": "10.0"
+								},
+								{
+									"lt": "8.4_15",
+									"ge": "8.4"
+								},
+								{
+									"lt": "9.1_18",
+									"ge": "9.1"
+								},
+								{
+									"lt": "9.2_11",
+									"ge": "9.2"
+								},
+								{
+									"lt": "9.3_1",
+									"ge": "9.3"
 								}
 							]
 						}
@@ -145,30 +161,14 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "openssl"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "8.4_15",
-									"ge": "8.4"
-								},
-								{
-									"lt": "9.1_18",
-									"ge": "9.1"
-								},
-								{
-									"lt": "9.2_11",
-									"ge": "9.2"
-								},
-								{
-									"lt": "9.3_1",
-									"ge": "9.3"
-								},
-								{
-									"lt": "10.0_8",
-									"ge": "10.0"
+									"lt": "1.0.1_14",
+									"ge": "1.0.1"
 								}
 							]
 						}

@@ -39,6 +39,24 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "ja-samba"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.28"
+								},
+								{
+									"lt": "3.0.28,1",
+									"gt": "*,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "samba"
 						},
 						"affected": {
@@ -58,24 +76,6 @@
 						"vulnerable": true,
 						"package": {
 							"name": "samba3"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "3.0.28"
-								},
-								{
-									"lt": "3.0.28,1",
-									"gt": "*,1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "ja-samba"
 						},
 						"affected": {
 							"type": "freebsd-pkg",

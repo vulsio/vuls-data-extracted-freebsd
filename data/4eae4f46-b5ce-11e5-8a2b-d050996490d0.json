@@ -51,6 +51,29 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.1_26",
+									"ge": "10.1"
+								},
+								{
+									"lt": "10.2_9",
+									"ge": "10.2"
+								},
+								{
+									"lt": "9.3_33",
+									"ge": "9.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "ntp"
 						},
 						"affected": {
@@ -72,29 +95,6 @@
 							"range": [
 								{
 									"lt": "4.3.78"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "FreeBSD"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "10.2_9",
-									"ge": "10.2"
-								},
-								{
-									"lt": "10.1_26",
-									"ge": "10.1"
-								},
-								{
-									"lt": "9.3_33",
-									"ge": "9.3"
 								}
 							]
 						}

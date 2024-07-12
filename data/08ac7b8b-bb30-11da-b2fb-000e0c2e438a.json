@@ -39,6 +39,37 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.10_22",
+									"ge": "4.10"
+								},
+								{
+									"lt": "4.11_16",
+									"ge": "4.11"
+								},
+								{
+									"lt": "5.3_28",
+									"ge": "5.3"
+								},
+								{
+									"lt": "5.4_13",
+									"ge": "5.4"
+								},
+								{
+									"lt": "6.0_6",
+									"ge": "6.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "sendmail"
 						},
 						"affected": {
@@ -47,37 +78,6 @@
 								{
 									"lt": "8.13.6",
 									"gt": "8.13"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "FreeBSD"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "6.0_6",
-									"ge": "6.0"
-								},
-								{
-									"lt": "5.4_13",
-									"ge": "5.4"
-								},
-								{
-									"lt": "5.3_28",
-									"ge": "5.3"
-								},
-								{
-									"lt": "4.11_16",
-									"ge": "4.11"
-								},
-								{
-									"lt": "4.10_22",
-									"ge": "4.10"
 								}
 							]
 						}

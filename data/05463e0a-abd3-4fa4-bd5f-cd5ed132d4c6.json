@@ -231,13 +231,17 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "waterfox"
+							"name": "firefox-esr"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "56.2.14"
+									"lt": "60.9.0,1"
+								},
+								{
+									"lt": "68.1.0,1",
+									"ge": "61.0,1"
 								}
 							]
 						}
@@ -245,13 +249,35 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "seamonkey"
+							"name": "libxul"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "2.53.0"
+									"lt": "60.9.0"
+								},
+								{
+									"lt": "68.1.0",
+									"ge": "61.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "60.9.0,2"
+								},
+								{
+									"lt": "68.1.0,2",
+									"ge": "61.0,2"
 								}
 							]
 						}
@@ -273,53 +299,31 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "firefox-esr"
+							"name": "linux-thunderbird"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "68.1.0,1",
-									"ge": "61.0,1"
+									"lt": "60.9.0"
 								},
-								{
-									"lt": "60.9.0,1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "linux-firefox"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "68.1.0,2",
-									"ge": "61.0,2"
-								},
-								{
-									"lt": "60.9.0,2"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libxul"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
 								{
 									"lt": "68.1.0",
 									"ge": "61.0"
-								},
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "seamonkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
 								{
-									"lt": "60.9.0"
+									"lt": "2.53.0"
 								}
 							]
 						}
@@ -333,11 +337,11 @@
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "68.1.0",
-									"ge": "61.0"
+									"lt": "60.9.0"
 								},
 								{
-									"lt": "60.9.0"
+									"lt": "68.1.0",
+									"ge": "61.0"
 								}
 							]
 						}
@@ -345,17 +349,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "linux-thunderbird"
+							"name": "waterfox"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "68.1.0",
-									"ge": "61.0"
-								},
-								{
-									"lt": "60.9.0"
+									"lt": "56.2.14"
 								}
 							]
 						}

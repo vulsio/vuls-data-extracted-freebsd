@@ -52,13 +52,22 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cvs+ipv6"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"le": "1.11.5_1"
+									"lt": "4.8_18",
+									"ge": "4.8"
+								},
+								{
+									"lt": "4.9_5",
+									"ge": "4.9"
+								},
+								{
+									"lt": "5.2.1_5",
+									"ge": "5.2"
 								}
 							]
 						}
@@ -66,22 +75,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "cvs+ipv6"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "5.2.1_5",
-									"ge": "5.2"
-								},
-								{
-									"lt": "4.9_5",
-									"ge": "4.9"
-								},
-								{
-									"lt": "4.8_18",
-									"ge": "4.8"
+									"le": "1.11.5_1"
 								}
 							]
 						}

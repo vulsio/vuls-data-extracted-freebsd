@@ -38,6 +38,24 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "acroread"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.0"
+								},
+								{
+									"lt": "7.0.0,1",
+									"gt": "5.*,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "acroread4"
 						},
 						"affected": {
@@ -59,24 +77,6 @@
 							"range": [
 								{
 									"ge": "0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "acroread"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "7.0.0"
-								},
-								{
-									"lt": "7.0.0,1",
-									"gt": "5.*,1"
 								}
 							]
 						}

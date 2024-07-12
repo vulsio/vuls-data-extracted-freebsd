@@ -71,11 +71,15 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "tomcat"
+							"name": "jakarta-tomcat"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
+								{
+									"lt": "4.1.0",
+									"ge": "4.0.0"
+								},
 								{
 									"lt": "5.5.23",
 									"gt": "5.0.0"
@@ -86,15 +90,11 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "jakarta-tomcat"
+							"name": "tomcat"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
-								{
-									"lt": "4.1.0",
-									"ge": "4.0.0"
-								},
 								{
 									"lt": "5.5.23",
 									"gt": "5.0.0"

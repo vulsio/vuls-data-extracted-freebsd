@@ -38,13 +38,18 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "heimdal"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "0.6.1_1"
+									"lt": "4.8_20",
+									"ge": "4.0"
+								},
+								{
+									"lt": "4.9_7",
+									"ge": "4.9"
 								}
 							]
 						}
@@ -52,18 +57,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "heimdal"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "4.9_7",
-									"ge": "4.9"
-								},
-								{
-									"lt": "4.8_20",
-									"ge": "4.0"
+									"lt": "0.6.1_1"
 								}
 							]
 						}

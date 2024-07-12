@@ -51,6 +51,33 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.8_17",
+									"ge": "4.0"
+								},
+								{
+									"lt": "4.9_4",
+									"ge": "4.9"
+								},
+								{
+									"lt": "5.1_16",
+									"ge": "5.0"
+								},
+								{
+									"lt": "5.2.1_3",
+									"ge": "5.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "openssl"
 						},
 						"affected": {
@@ -72,33 +99,6 @@
 							"range": [
 								{
 									"lt": "0.9.7d"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "FreeBSD"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.8_17",
-									"ge": "4.0"
-								},
-								{
-									"lt": "4.9_4",
-									"ge": "4.9"
-								},
-								{
-									"lt": "5.1_16",
-									"ge": "5.0"
-								},
-								{
-									"lt": "5.2.1_3",
-									"ge": "5.2"
 								}
 							]
 						}

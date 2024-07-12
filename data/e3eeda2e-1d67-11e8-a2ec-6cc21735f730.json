@@ -38,6 +38,21 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "postgresql10-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.3",
+									"ge": "10.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "postgresql93-server"
 						},
 						"affected": {
@@ -91,21 +106,6 @@
 								{
 									"lt": "9.6.8",
 									"ge": "9.6.0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "postgresql10-server"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "10.3",
-									"ge": "10.0"
 								}
 							]
 						}

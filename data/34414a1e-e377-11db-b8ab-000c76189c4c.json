@@ -51,13 +51,28 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "plone"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.5.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "zope"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "2.7.9_2"
+									"le": "2.10.2",
+									"ge": "2.10.0"
 								},
 								{
 									"le": "2.8.8",
@@ -68,22 +83,7 @@
 									"ge": "2.9.0"
 								},
 								{
-									"le": "2.10.2",
-									"ge": "2.10.0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "plone"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.5.3"
+									"lt": "2.7.9_2"
 								}
 							]
 						}

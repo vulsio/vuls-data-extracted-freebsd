@@ -39,13 +39,18 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "zsync"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "0.4.1"
+									"lt": "5.3_18",
+									"ge": "5.3"
+								},
+								{
+									"lt": "5.4_4",
+									"ge": "5.4"
 								}
 							]
 						}
@@ -53,18 +58,13 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "zsync"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "5.4_4",
-									"ge": "5.4"
-								},
-								{
-									"lt": "5.3_18",
-									"ge": "5.3"
+									"lt": "0.4.1"
 								}
 							]
 						}

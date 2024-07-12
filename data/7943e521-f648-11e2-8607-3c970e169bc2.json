@@ -43,29 +43,18 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bind99"
+							"name": "FreeBSD"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.9.3.2",
-									"gt": "9.9.3"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "bind99-base"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
+									"lt": "8.4_2",
+									"ge": "8.4"
+								},
 								{
-									"lt": "9.9.3.2",
-									"gt": "9.9.3"
+									"lt": "9.1_5",
+									"ge": "9.0"
 								}
 							]
 						}
@@ -103,18 +92,29 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "FreeBSD"
+							"name": "bind99"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "9.1_5",
-									"ge": "9.0"
-								},
+									"lt": "9.9.3.2",
+									"gt": "9.9.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind99-base"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
 								{
-									"lt": "8.4_2",
-									"ge": "8.4"
+									"lt": "9.9.3.2",
+									"gt": "9.9.3"
 								}
 							]
 						}

@@ -343,11 +343,26 @@
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "16.0.1,1",
-									"gt": "11.0,1"
+									"lt": "10.0.9,1"
 								},
 								{
-									"lt": "10.0.9,1"
+									"lt": "16.0.1,1",
+									"gt": "11.0,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxul"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.9",
+									"gt": "1.9.2.*"
 								}
 							]
 						}
@@ -417,26 +432,11 @@
 							"type": "freebsd-pkg",
 							"range": [
 								{
-									"lt": "16.0.1",
-									"gt": "11.0"
+									"lt": "10.0.9"
 								},
 								{
-									"lt": "10.0.9"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "libxul"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "10.0.9",
-									"gt": "1.9.2.*"
+									"lt": "16.0.1",
+									"gt": "11.0"
 								}
 							]
 						}

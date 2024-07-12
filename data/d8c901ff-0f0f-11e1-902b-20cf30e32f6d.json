@@ -56,20 +56,6 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "apache+ssl"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "1.3.43.1.59_2"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "apache+ipv6"
 						},
 						"affected": {
@@ -126,7 +112,21 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "ru-apache-1.3"
+							"name": "apache+ssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.3.43.1.59_2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ru-apache+mod_ssl"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
@@ -140,7 +140,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "ru-apache+mod_ssl"
+							"name": "ru-apache-1.3"
 						},
 						"affected": {
 							"type": "freebsd-pkg",

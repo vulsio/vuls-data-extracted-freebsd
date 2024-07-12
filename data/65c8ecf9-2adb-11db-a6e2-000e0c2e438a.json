@@ -56,6 +56,33 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "ja-postgresql"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2.7",
+									"ge": "7.2"
+								},
+								{
+									"lt": "7.3.9",
+									"ge": "7.3"
+								},
+								{
+									"lt": "7.4.7",
+									"ge": "7.4"
+								},
+								{
+									"lt": "8.0.1",
+									"ge": "8.0.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "postgresql"
 						},
 						"affected": {
@@ -84,33 +111,6 @@
 						"vulnerable": true,
 						"package": {
 							"name": "postgresql-server"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "7.2.7",
-									"ge": "7.2"
-								},
-								{
-									"lt": "7.3.9",
-									"ge": "7.3"
-								},
-								{
-									"lt": "7.4.7",
-									"ge": "7.4"
-								},
-								{
-									"lt": "8.0.1",
-									"ge": "8.0.0"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "ja-postgresql"
 						},
 						"affected": {
 							"type": "freebsd-pkg",

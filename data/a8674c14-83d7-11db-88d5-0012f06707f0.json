@@ -54,6 +54,21 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "ruby+oniguruma"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.8.5_5,1",
+									"ge": "1.8.*,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "ruby+pthreads"
 						},
 						"affected": {
@@ -70,21 +85,6 @@
 						"vulnerable": true,
 						"package": {
 							"name": "ruby+pthreads+oniguruma"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "1.8.5_5,1",
-									"ge": "1.8.*,1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "ruby+oniguruma"
 						},
 						"affected": {
 							"type": "freebsd-pkg",
