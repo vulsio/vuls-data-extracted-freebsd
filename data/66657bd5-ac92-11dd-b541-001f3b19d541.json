@@ -2,31 +2,41 @@
 	"id": "66657bd5-ac92-11dd-b541-001f3b19d541",
 	"advisories": [
 		{
-			"id": "66657bd5-ac92-11dd-b541-001f3b19d541",
-			"title": "emacs -- run-python vulnerability",
-			"description": "\n\t<p>Emacs developers report:</p>\n\t<blockquote cite=\"http://lists.gnu.org/archive/html/emacs-devel/2008-09/msg00215.html\">\n\t  <p>The Emacs command `run-python' launches an interactive\n\t    Python interpreter.  After the Python process starts up,\n\t    Emacs automatically sends it the line:</p>\n\t <p>import emacs</p>\n\t <p>which normally imports a script named emacs.py which is\n\t   distributed with Emacs.  This script, which is typically\n\t   located in a write-protected installation directory with\n\t   other Emacs program files, defines various functions to help\n\t   the Python process communicate with Emacs.</p>\n\t <p>The vulnerability arises because Python, by default,\n\t   prepends '' to the module search path, so modules are looked\n\t   for in the current directory.  If the current directory is\n\t   world-writable, an attacker may insert malicious code by\n\t   adding a fake Python module named emacs.py into that\n\t   directory.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.gnu.org/archive/html/emacs-devel/2008-09/msg00215.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/66657bd5-ac92-11dd-b541-001f3b19d541.html"
-				}
-			],
-			"published": "2008-11-07T00:00:00Z",
-			"modified": "2010-05-02T00:00:00Z"
+			"content": {
+				"id": "66657bd5-ac92-11dd-b541-001f3b19d541",
+				"title": "emacs -- run-python vulnerability",
+				"description": "\n\t<p>Emacs developers report:</p>\n\t<blockquote cite=\"http://lists.gnu.org/archive/html/emacs-devel/2008-09/msg00215.html\">\n\t  <p>The Emacs command `run-python' launches an interactive\n\t    Python interpreter.  After the Python process starts up,\n\t    Emacs automatically sends it the line:</p>\n\t <p>import emacs</p>\n\t <p>which normally imports a script named emacs.py which is\n\t   distributed with Emacs.  This script, which is typically\n\t   located in a write-protected installation directory with\n\t   other Emacs program files, defines various functions to help\n\t   the Python process communicate with Emacs.</p>\n\t <p>The vulnerability arises because Python, by default,\n\t   prepends '' to the module search path, so modules are looked\n\t   for in the current directory.  If the current directory is\n\t   world-writable, an attacker may insert malicious code by\n\t   adding a fake Python module named emacs.py into that\n\t   directory.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.gnu.org/archive/html/emacs-devel/2008-09/msg00215.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/66657bd5-ac92-11dd-b541-001f3b19d541.html"
+					}
+				],
+				"published": "2008-11-07T00:00:00Z",
+				"modified": "2010-05-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2008-3949",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2008-3949"
-				}
+			"content": {
+				"id": "CVE-2008-3949",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2008-3949"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "52311651-f100-4720-8c62-0887dad6d321",
 	"advisories": [
 		{
-			"id": "52311651-f100-4720-8c62-0887dad6d321",
-			"title": "py-tensorflow -- unchecked argument causing crash",
-			"description": "\n    <p>Jingyi Shi reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-mgmh-g2v6-mqw5\">\n      <p>The 'AvgPoolOp' function takes an argument `ksize` that must be positive but is not checked.</p>\n      <p>A negative `ksize` can trigger a `CHECK` failure and crash the program.</p>\n    </blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://osv.dev/vulnerability/GHSA-mgmh-g2v6-mqw5"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/52311651-f100-4720-8c62-0887dad6d321.html"
-				}
-			],
-			"published": "2023-04-09T00:00:00Z"
+			"content": {
+				"id": "52311651-f100-4720-8c62-0887dad6d321",
+				"title": "py-tensorflow -- unchecked argument causing crash",
+				"description": "\n    <p>Jingyi Shi reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-mgmh-g2v6-mqw5\">\n      <p>The 'AvgPoolOp' function takes an argument `ksize` that must be positive but is not checked.</p>\n      <p>A negative `ksize` can trigger a `CHECK` failure and crash the program.</p>\n    </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://osv.dev/vulnerability/GHSA-mgmh-g2v6-mqw5"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/52311651-f100-4720-8c62-0887dad6d321.html"
+					}
+				],
+				"published": "2023-04-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-35941",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-35941"
-				}
+			"content": {
+				"id": "CVE-2022-35941",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-35941"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

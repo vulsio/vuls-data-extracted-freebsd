@@ -2,134 +2,184 @@
 	"id": "d49f86ab-d9c7-11eb-a200-00155d01f201",
 	"advisories": [
 		{
-			"id": "d49f86ab-d9c7-11eb-a200-00155d01f201",
-			"title": "Exiv2 -- Multiple vulnerabilities",
-			"description": "\n\t<p>Exiv2 teams reports:</p>\n\t<blockquote cite=\"https://github.com/Exiv2/exiv2/security/advisories\">\n\t  <p>Multiple vulnerabilities covering buffer overflows, out-of-bounds,\n\t    read of uninitialized memory and denial of serivce. The heap\n\t    overflow is triggered when Exiv2 is used to read the metadata of\n\t    a crafted image file. An attacker could potentially exploit the\n\t    vulnerability to gain code execution, if they can trick the victim\n\t    into running Exiv2 on a crafted image file. The out-of-bounds read\n\t    is triggered when Exiv2 is used to write metadata into a crafted\n\t    image file. An attacker could potentially exploit the vulnerability\n\t    to cause a denial of service by crashing Exiv2, if they can trick\n\t    the victim into running Exiv2 on a crafted image file. The read of\n\t    uninitialized memory is triggered when Exiv2 is used to read the\n\t    metadata of a crafted image file. An attacker could potentially\n\t    exploit the vulnerability to leak a few bytes of stack memory, if\n\t    they can trick the victim into running Exiv2 on a crafted image\n\t    file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-57jj-75fm-9rq5"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-5p8g-9xf3-gfrr"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-6253-qjwm-3q4v"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-7569-phvm-vwc2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-8949-hhfh-j7rj"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-9jp9-m3fv-2vg9"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-jgm9-5fw5-pw9p"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-v74w-h496-cgqm"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-w8mv-g8qq-36mj"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d49f86ab-d9c7-11eb-a200-00155d01f201.html"
-				}
-			],
-			"published": "2021-06-30T00:00:00Z"
+			"content": {
+				"id": "d49f86ab-d9c7-11eb-a200-00155d01f201",
+				"title": "Exiv2 -- Multiple vulnerabilities",
+				"description": "\n\t<p>Exiv2 teams reports:</p>\n\t<blockquote cite=\"https://github.com/Exiv2/exiv2/security/advisories\">\n\t  <p>Multiple vulnerabilities covering buffer overflows, out-of-bounds,\n\t    read of uninitialized memory and denial of serivce. The heap\n\t    overflow is triggered when Exiv2 is used to read the metadata of\n\t    a crafted image file. An attacker could potentially exploit the\n\t    vulnerability to gain code execution, if they can trick the victim\n\t    into running Exiv2 on a crafted image file. The out-of-bounds read\n\t    is triggered when Exiv2 is used to write metadata into a crafted\n\t    image file. An attacker could potentially exploit the vulnerability\n\t    to cause a denial of service by crashing Exiv2, if they can trick\n\t    the victim into running Exiv2 on a crafted image file. The read of\n\t    uninitialized memory is triggered when Exiv2 is used to read the\n\t    metadata of a crafted image file. An attacker could potentially\n\t    exploit the vulnerability to leak a few bytes of stack memory, if\n\t    they can trick the victim into running Exiv2 on a crafted image\n\t    file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-57jj-75fm-9rq5"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-5p8g-9xf3-gfrr"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-6253-qjwm-3q4v"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-7569-phvm-vwc2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-8949-hhfh-j7rj"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-9jp9-m3fv-2vg9"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-jgm9-5fw5-pw9p"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-v74w-h496-cgqm"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/Exiv2/exiv2/security/advisories/GHSA-w8mv-g8qq-36mj"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d49f86ab-d9c7-11eb-a200-00155d01f201.html"
+					}
+				],
+				"published": "2021-06-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-29457",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29457"
-				}
+			"content": {
+				"id": "CVE-2021-29457",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29457"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-29458",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29458"
-				}
+			"content": {
+				"id": "CVE-2021-29458",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29458"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-29463",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29463"
-				}
+			"content": {
+				"id": "CVE-2021-29463",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29463"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-29464",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29464"
-				}
+			"content": {
+				"id": "CVE-2021-29464",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29464"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-29470",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29470"
-				}
+			"content": {
+				"id": "CVE-2021-29470",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29470"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-29473",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29473"
-				}
+			"content": {
+				"id": "CVE-2021-29473",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29473"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-29623",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29623"
-				}
+			"content": {
+				"id": "CVE-2021-29623",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29623"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-32617",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-32617"
-				}
+			"content": {
+				"id": "CVE-2021-32617",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-32617"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-3482",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-3482"
-				}
+			"content": {
+				"id": "CVE-2021-3482",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-3482"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

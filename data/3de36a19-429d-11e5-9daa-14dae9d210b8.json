@@ -2,28 +2,33 @@
 	"id": "3de36a19-429d-11e5-9daa-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "3de36a19-429d-11e5-9daa-14dae9d210b8",
-			"title": "gnutls -- MD5 downgrade in TLS signatures",
-			"description": "\n\t<p>Karthikeyan Bhargavan reports:</p>\n\t<blockquote cite=\"http://permalink.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/8132\">\n\t  <p>GnuTLS does not by default support MD5 signatures. Indeed the RSA-MD5\n\t    signature-hash algorithm needs to be explicitly enabled using the\n\t    priority option VERIFY_ALLOW_SIGN_RSA_MD5. In the NORMAL and SECURE\n\t    profiles, GnuTLS clients do not offer RSA-MD5 in the signature\n\t    algorithms extension. However, we find that all GnuTLS clients still\n\t    accept RSA-MD5 in the ServerKeyExchange and GnuTLS servers still\n\t    accept RSA-MD5 in the ClientCertificateVerify.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://permalink.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/8132"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/oss-sec/2015/q2/367"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2015-2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3de36a19-429d-11e5-9daa-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-08-14T00:00:00Z"
+			"content": {
+				"id": "3de36a19-429d-11e5-9daa-14dae9d210b8",
+				"title": "gnutls -- MD5 downgrade in TLS signatures",
+				"description": "\n\t<p>Karthikeyan Bhargavan reports:</p>\n\t<blockquote cite=\"http://permalink.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/8132\">\n\t  <p>GnuTLS does not by default support MD5 signatures. Indeed the RSA-MD5\n\t    signature-hash algorithm needs to be explicitly enabled using the\n\t    priority option VERIFY_ALLOW_SIGN_RSA_MD5. In the NORMAL and SECURE\n\t    profiles, GnuTLS clients do not offer RSA-MD5 in the signature\n\t    algorithms extension. However, we find that all GnuTLS clients still\n\t    accept RSA-MD5 in the ServerKeyExchange and GnuTLS servers still\n\t    accept RSA-MD5 in the ClientCertificateVerify.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://permalink.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/8132"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/oss-sec/2015/q2/367"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2015-2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3de36a19-429d-11e5-9daa-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-08-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

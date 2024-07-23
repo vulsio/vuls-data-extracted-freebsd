@@ -2,39 +2,54 @@
 	"id": "a9c5e89d-2d15-11ec-8363-0022489ad614",
 	"advisories": [
 		{
-			"id": "a9c5e89d-2d15-11ec-8363-0022489ad614",
-			"title": "Node.js -- October 2021 Security Releases",
-			"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/oct-2021-security-releases/\">\n\t  <h1>HTTP Request Smuggling due to spaced in headers (Medium)(CVE-2021-22959)</h1>\n\t  <p>The http parser accepts requests with a space (SP) right after the header name before the colon. This can lead to HTTP Request Smuggling (HRS).</p>\n\t  <h1>HTTP Request Smuggling when parsing the body (Medium)(CVE-2021-22960)</h1>\n\t  <p>The parse ignores chunk extensions when parsing the body of chunked requests. This leads to HTTP Request Smuggling (HRS) under certain conditions.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nodejs.org/en/blog/vulnerability/oct-2021-security-releases/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a9c5e89d-2d15-11ec-8363-0022489ad614.html"
-				}
-			],
-			"published": "2021-10-14T00:00:00Z"
+			"content": {
+				"id": "a9c5e89d-2d15-11ec-8363-0022489ad614",
+				"title": "Node.js -- October 2021 Security Releases",
+				"description": "\n\t<p>Node.js reports:</p>\n\t<blockquote cite=\"https://nodejs.org/en/blog/vulnerability/oct-2021-security-releases/\">\n\t  <h1>HTTP Request Smuggling due to spaced in headers (Medium)(CVE-2021-22959)</h1>\n\t  <p>The http parser accepts requests with a space (SP) right after the header name before the colon. This can lead to HTTP Request Smuggling (HRS).</p>\n\t  <h1>HTTP Request Smuggling when parsing the body (Medium)(CVE-2021-22960)</h1>\n\t  <p>The parse ignores chunk extensions when parsing the body of chunked requests. This leads to HTTP Request Smuggling (HRS) under certain conditions.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nodejs.org/en/blog/vulnerability/oct-2021-security-releases/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a9c5e89d-2d15-11ec-8363-0022489ad614.html"
+					}
+				],
+				"published": "2021-10-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-22959",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22959"
-				}
+			"content": {
+				"id": "CVE-2021-22959",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-22959"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-22960",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-22960"
-				}
+			"content": {
+				"id": "CVE-2021-22960",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-22960"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

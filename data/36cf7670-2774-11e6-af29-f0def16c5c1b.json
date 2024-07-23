@@ -2,31 +2,41 @@
 	"id": "36cf7670-2774-11e6-af29-f0def16c5c1b",
 	"advisories": [
 		{
-			"id": "36cf7670-2774-11e6-af29-f0def16c5c1b",
-			"title": "nginx -- a specially crafted request might result in worker process crash",
-			"description": "\n\t<p>Maxim Dounin reports:</p>\n\t<blockquote cite=\"http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html\">\n\t  <p>A problem was identified in nginx code responsible for saving\n\t    client request body to a temporary file.  A specially crafted\n\t    request might result in worker process crash due to a NULL\n\t    pointer dereference while writing client request body to a\n\t    temporary file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/36cf7670-2774-11e6-af29-f0def16c5c1b.html"
-				}
-			],
-			"published": "2016-05-31T00:00:00Z",
-			"modified": "2016-06-05T00:00:00Z"
+			"content": {
+				"id": "36cf7670-2774-11e6-af29-f0def16c5c1b",
+				"title": "nginx -- a specially crafted request might result in worker process crash",
+				"description": "\n\t<p>Maxim Dounin reports:</p>\n\t<blockquote cite=\"http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html\">\n\t  <p>A problem was identified in nginx code responsible for saving\n\t    client request body to a temporary file.  A specially crafted\n\t    request might result in worker process crash due to a NULL\n\t    pointer dereference while writing client request body to a\n\t    temporary file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/36cf7670-2774-11e6-af29-f0def16c5c1b.html"
+					}
+				],
+				"published": "2016-05-31T00:00:00Z",
+				"modified": "2016-06-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-4450",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4450"
-				}
+			"content": {
+				"id": "CVE-2016-4450",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-4450"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

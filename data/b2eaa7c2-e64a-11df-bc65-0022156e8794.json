@@ -2,34 +2,44 @@
 	"id": "b2eaa7c2-e64a-11df-bc65-0022156e8794",
 	"advisories": [
 		{
-			"id": "b2eaa7c2-e64a-11df-bc65-0022156e8794",
-			"title": "Wireshark -- DoS in the BER-based dissectors",
-			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/41535\">\n\t  <p>A vulnerability has been discovered in Wireshark, which can\n\t    be exploited by malicious people to cause a DoS (Denial of\n\t    Service).</p>\n\t  <p>The vulnerability is caused due to an infinite recursion\n\t    error in the \"dissect_unknown_ber()\" function in\n\t    epan/dissectors/packet-ber.c and can be exploited to cause a\n\t    stack overflow e.g. via a specially crafted SNMP packet.</p>\n\t  <p>The vulnerability is confirmed in version 1.4.0 and\n\t    reported in version 1.2.11 and prior and version 1.4.0 and\n\t    prior.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.wireshark.org/lists/wireshark-announce/201010/msg00001.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.wireshark.org/lists/wireshark-announce/201010/msg00002.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b2eaa7c2-e64a-11df-bc65-0022156e8794.html"
-				}
-			],
-			"published": "2010-11-05T00:00:00Z"
+			"content": {
+				"id": "b2eaa7c2-e64a-11df-bc65-0022156e8794",
+				"title": "Wireshark -- DoS in the BER-based dissectors",
+				"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/41535\">\n\t  <p>A vulnerability has been discovered in Wireshark, which can\n\t    be exploited by malicious people to cause a DoS (Denial of\n\t    Service).</p>\n\t  <p>The vulnerability is caused due to an infinite recursion\n\t    error in the \"dissect_unknown_ber()\" function in\n\t    epan/dissectors/packet-ber.c and can be exploited to cause a\n\t    stack overflow e.g. via a specially crafted SNMP packet.</p>\n\t  <p>The vulnerability is confirmed in version 1.4.0 and\n\t    reported in version 1.2.11 and prior and version 1.4.0 and\n\t    prior.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.wireshark.org/lists/wireshark-announce/201010/msg00001.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.wireshark.org/lists/wireshark-announce/201010/msg00002.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b2eaa7c2-e64a-11df-bc65-0022156e8794.html"
+					}
+				],
+				"published": "2010-11-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-3445",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3445"
-				}
+			"content": {
+				"id": "CVE-2010-3445",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-3445"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

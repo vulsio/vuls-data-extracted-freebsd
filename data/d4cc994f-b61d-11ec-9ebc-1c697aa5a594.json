@@ -2,30 +2,40 @@
 	"id": "d4cc994f-b61d-11ec-9ebc-1c697aa5a594",
 	"advisories": [
 		{
-			"id": "d4cc994f-b61d-11ec-9ebc-1c697aa5a594",
-			"title": "FreeBSD -- 802.11 heap buffer overflow",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The 802.11 beacon handling routine failed to validate the length of\n\tan IEEE 802.11s Mesh ID before copying it to a heap-allocated\n\tbuffer.</p>\n\t<h1>Impact:</h1>\n\t<p>While a FreeBSD Wi-Fi client is in scanning mode (i.e., not\n\tassociated with a SSID) a malicious beacon frame may overwrite kernel\n\tmemory, leading to remote code execution.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d4cc994f-b61d-11ec-9ebc-1c697aa5a594.html"
-				}
-			],
-			"published": "2022-04-07T00:00:00Z"
+			"content": {
+				"id": "d4cc994f-b61d-11ec-9ebc-1c697aa5a594",
+				"title": "FreeBSD -- 802.11 heap buffer overflow",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The 802.11 beacon handling routine failed to validate the length of\n\tan IEEE 802.11s Mesh ID before copying it to a heap-allocated\n\tbuffer.</p>\n\t<h1>Impact:</h1>\n\t<p>While a FreeBSD Wi-Fi client is in scanning mode (i.e., not\n\tassociated with a SSID) a malicious beacon frame may overwrite kernel\n\tmemory, leading to remote code execution.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d4cc994f-b61d-11ec-9ebc-1c697aa5a594.html"
+					}
+				],
+				"published": "2022-04-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-23088",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23088"
-				}
+			"content": {
+				"id": "CVE-2022-23088",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-23088"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

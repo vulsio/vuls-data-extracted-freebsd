@@ -2,31 +2,41 @@
 	"id": "6111ecb8-b20d-11da-b2fb-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "6111ecb8-b20d-11da-b2fb-000e0c2e438a",
-			"title": "nfs -- remote denial of service",
-			"description": "\n\t<h1>Problem description:</h1>\n\t<p>A part of the NFS server code charged with handling incoming\n\t  RPC messages via TCP had an error which, when the server\n\t  received a message with a zero-length payload, would cause a\n\t  NULL pointer dereference which results in a kernel panic.  The\n\t  kernel will only process the RPC messages if a userland nfsd\n\t  daemon is running.</p>\n\t<h1>Impact:</h1>\n\t<p>The NULL pointer deference allows a remote attacker capable\n\t  of sending RPC messages to an affected FreeBSD system to crash\n\t  the FreeBSD system.</p>\n\t<h1>Workaround:</h1>\n\t<ol>\n\t  <li>\n\t    <p>Disable the NFS server: set the nfs_server_enable\n\t      variable to \"NO\" in /etc/rc.conf, and reboot.</p>\n\t    <p>Alternatively, if there are no active NFS clients (as\n\t      listed by the showmount(8) utility), simply killing the\n\t      mountd and nfsd processes should suffice.</p>\n\t  </li>\n\t  <li>\n\t    <p>Add firewall rules to block RPC traffic to the NFS server\n\t      from untrusted hosts.</p>\n\t  </li>\n\t</ol>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:10.nfs.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6111ecb8-b20d-11da-b2fb-000e0c2e438a.html"
-				}
-			],
-			"published": "2006-03-12T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "6111ecb8-b20d-11da-b2fb-000e0c2e438a",
+				"title": "nfs -- remote denial of service",
+				"description": "\n\t<h1>Problem description:</h1>\n\t<p>A part of the NFS server code charged with handling incoming\n\t  RPC messages via TCP had an error which, when the server\n\t  received a message with a zero-length payload, would cause a\n\t  NULL pointer dereference which results in a kernel panic.  The\n\t  kernel will only process the RPC messages if a userland nfsd\n\t  daemon is running.</p>\n\t<h1>Impact:</h1>\n\t<p>The NULL pointer deference allows a remote attacker capable\n\t  of sending RPC messages to an affected FreeBSD system to crash\n\t  the FreeBSD system.</p>\n\t<h1>Workaround:</h1>\n\t<ol>\n\t  <li>\n\t    <p>Disable the NFS server: set the nfs_server_enable\n\t      variable to \"NO\" in /etc/rc.conf, and reboot.</p>\n\t    <p>Alternatively, if there are no active NFS clients (as\n\t      listed by the showmount(8) utility), simply killing the\n\t      mountd and nfsd processes should suffice.</p>\n\t  </li>\n\t  <li>\n\t    <p>Add firewall rules to block RPC traffic to the NFS server\n\t      from untrusted hosts.</p>\n\t  </li>\n\t</ol>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:10.nfs.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6111ecb8-b20d-11da-b2fb-000e0c2e438a.html"
+					}
+				],
+				"published": "2006-03-12T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-0900",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-0900"
-				}
+			"content": {
+				"id": "CVE-2006-0900",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-0900"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

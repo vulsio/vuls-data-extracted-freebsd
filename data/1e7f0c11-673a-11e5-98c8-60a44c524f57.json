@@ -2,39 +2,54 @@
 	"id": "1e7f0c11-673a-11e5-98c8-60a44c524f57",
 	"advisories": [
 		{
-			"id": "1e7f0c11-673a-11e5-98c8-60a44c524f57",
-			"title": "otrs -- Scheduler Process ID File Access",
-			"description": "\n\t<p>The OTRS project reports:</p>\n\t<blockquote cite=\"https://www.otrs.com/security-advisory-2015-02-scheduler-process-id-file-access/\">\n\t  <p>An attacker with valid LOCAL credentials could access and\n\t     manipulate the process ID file for bin/otrs.schduler.pl from the\n\t     CLI.</p>\n\t  <p>The Proc::Daemon module 0.14 for Perl uses world-writable\n\t     permissions for a file that stores a process ID, which allows local\n\t     users to have an unspecified impact by modifying this file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.otrs.com/security-advisory-2015-02-scheduler-process-id-file-access/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1e7f0c11-673a-11e5-98c8-60a44c524f57.html"
-				}
-			],
-			"published": "2015-09-30T00:00:00Z"
+			"content": {
+				"id": "1e7f0c11-673a-11e5-98c8-60a44c524f57",
+				"title": "otrs -- Scheduler Process ID File Access",
+				"description": "\n\t<p>The OTRS project reports:</p>\n\t<blockquote cite=\"https://www.otrs.com/security-advisory-2015-02-scheduler-process-id-file-access/\">\n\t  <p>An attacker with valid LOCAL credentials could access and\n\t     manipulate the process ID file for bin/otrs.schduler.pl from the\n\t     CLI.</p>\n\t  <p>The Proc::Daemon module 0.14 for Perl uses world-writable\n\t     permissions for a file that stores a process ID, which allows local\n\t     users to have an unspecified impact by modifying this file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.otrs.com/security-advisory-2015-02-scheduler-process-id-file-access/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1e7f0c11-673a-11e5-98c8-60a44c524f57.html"
+					}
+				],
+				"published": "2015-09-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-7135",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-7135"
-				}
+			"content": {
+				"id": "CVE-2013-7135",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-7135"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6842",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6842"
-				}
+			"content": {
+				"id": "CVE-2015-6842",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6842"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

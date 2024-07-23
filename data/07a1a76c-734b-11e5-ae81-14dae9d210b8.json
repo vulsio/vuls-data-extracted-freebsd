@@ -2,30 +2,40 @@
 	"id": "07a1a76c-734b-11e5-ae81-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "07a1a76c-734b-11e5-ae81-14dae9d210b8",
-			"title": "mbedTLS/PolarSSL -- DoS and possible remote code execution",
-			"description": "\n\t<p>ARM Limited reports:</p>\n\t<blockquote cite=\"https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2015-01\">\n\t  <p>When the client creates its ClientHello message, due to\n\t    insufficient bounds checking it can overflow the heap-based buffer\n\t    containing the message while writing some extensions. Two extensions in\n\t    particular could be used by a remote attacker to trigger the overflow:\n\t    the session ticket extension and the server name indication (SNI)\n\t    extension.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2015-01"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/07a1a76c-734b-11e5-ae81-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-10-15T00:00:00Z"
+			"content": {
+				"id": "07a1a76c-734b-11e5-ae81-14dae9d210b8",
+				"title": "mbedTLS/PolarSSL -- DoS and possible remote code execution",
+				"description": "\n\t<p>ARM Limited reports:</p>\n\t<blockquote cite=\"https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2015-01\">\n\t  <p>When the client creates its ClientHello message, due to\n\t    insufficient bounds checking it can overflow the heap-based buffer\n\t    containing the message while writing some extensions. Two extensions in\n\t    particular could be used by a remote attacker to trigger the overflow:\n\t    the session ticket extension and the server name indication (SNI)\n\t    extension.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2015-01"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/07a1a76c-734b-11e5-ae81-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-10-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-5291",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5291"
-				}
+			"content": {
+				"id": "CVE-2015-5291",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5291"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

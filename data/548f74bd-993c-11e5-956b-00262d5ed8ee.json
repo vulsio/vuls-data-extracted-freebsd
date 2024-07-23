@@ -2,228 +2,348 @@
 	"id": "548f74bd-993c-11e5-956b-00262d5ed8ee",
 	"advisories": [
 		{
-			"id": "548f74bd-993c-11e5-956b-00262d5ed8ee",
-			"title": "chromium -- multiple vulnerabilities",
-			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.nl/2015/12/stable-channel-update.html\">\n\t  <p>41 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[558589] Critical CVE-2015-6765: Use-after-free in AppCache.\n\t      Credit to anonymous.</li>\n\t    <li>[551044] High CVE-2015-6766: Use-after-free in AppCache.\n\t      Credit to anonymous.</li>\n\t    <li>[554908] High CVE-2015-6767: Use-after-free in AppCache.\n\t      Credit to anonymous.</li>\n\t    <li>[556724] High CVE-2015-6768: Cross-origin bypass in DOM.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[534923] High CVE-2015-6769: Cross-origin bypass in core.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[541206] High CVE-2015-6770: Cross-origin bypass in DOM.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[544991] High CVE-2015-6771: Out of bounds access in v8.\n\t      Credit to anonymous.</li>\n\t    <li>[546545] High CVE-2015-6772: Cross-origin bypass in DOM.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[554946] High CVE-2015-6764: Out of bounds access in v8.\n\t      Credit to Guang Gong of Qihoo 360 via pwn2own.</li>\n\t    <li>[491660] High CVE-2015-6773: Out of bounds access in Skia.\n\t      Credit to cloudfuzzer.</li>\n\t    <li>[549251] High CVE-2015-6774: Use-after-free in Extensions.\n\t      Credit to anonymous.</li>\n\t    <li>[529012] High CVE-2015-6775: Type confusion in PDFium.\n\t      Credit to Atte Kettunen of OUSPG.</li>\n\t    <li>[457480] High CVE-2015-6776: Out of bounds access in PDFium.\n\t      Credit to Hanno Böck.</li>\n\t    <li>[544020] High CVE-2015-6777: Use-after-free in DOM.\n\t      Credit to Long Liu of Qihoo 360Vulcan Team.</li>\n\t    <li>[514891] Medium CVE-2015-6778: Out of bounds access in PDFium.\n\t      Credit to Karl Skomski.</li>\n\t    <li>[528505] Medium CVE-2015-6779: Scheme bypass in PDFium.\n\t      Credit to Til Jasper Ullrich.</li>\n\t    <li>[490492] Medium CVE-2015-6780: Use-after-free in Infobars.\n\t      Credit to Khalil Zhani.</li>\n\t    <li>[497302] Medium CVE-2015-6781: Integer overflow in Sfntly.\n\t      Credit to miaubiz.</li>\n\t    <li>[536652] Medium CVE-2015-6782: Content spoofing in Omnibox.\n\t      Credit to Luan Herrera.</li>\n\t    <li>[537205] Medium CVE-2015-6783: Signature validation issue in\n\t      Android Crazy Linker. Credit to Michal Bednarski.</li>\n\t    <li>[503217] Low CVE-2015-6784: Escaping issue in saved pages.\n\t      Credit to Inti De Ceukelaire.</li>\n\t    <li>[534542] Low CVE-2015-6785: Wildcard matching issue in CSP.\n\t      Credit to Michael Ficarra / Shape Security.</li>\n\t    <li>[534570] Low CVE-2015-6786: Scheme bypass in CSP. Credit to\n\t      Michael Ficarra / Shape Security.</li>\n\t    <li>[563930] CVE-2015-6787: Various fixes from internal audits,\n\t      fuzzing and other initiatives.</li>\n\t    <li>  Multiple vulnerabilities in V8 fixed at the tip of the 4.7\n\t      branch (currently 4.7.80.23).</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://googlechromereleases.blogspot.nl/2015/12/stable-channel-update.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/548f74bd-993c-11e5-956b-00262d5ed8ee.html"
-				}
-			],
-			"published": "2015-12-02T00:00:00Z"
+			"content": {
+				"id": "548f74bd-993c-11e5-956b-00262d5ed8ee",
+				"title": "chromium -- multiple vulnerabilities",
+				"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"http://googlechromereleases.blogspot.nl/2015/12/stable-channel-update.html\">\n\t  <p>41 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[558589] Critical CVE-2015-6765: Use-after-free in AppCache.\n\t      Credit to anonymous.</li>\n\t    <li>[551044] High CVE-2015-6766: Use-after-free in AppCache.\n\t      Credit to anonymous.</li>\n\t    <li>[554908] High CVE-2015-6767: Use-after-free in AppCache.\n\t      Credit to anonymous.</li>\n\t    <li>[556724] High CVE-2015-6768: Cross-origin bypass in DOM.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[534923] High CVE-2015-6769: Cross-origin bypass in core.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[541206] High CVE-2015-6770: Cross-origin bypass in DOM.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[544991] High CVE-2015-6771: Out of bounds access in v8.\n\t      Credit to anonymous.</li>\n\t    <li>[546545] High CVE-2015-6772: Cross-origin bypass in DOM.\n\t      Credit to Mariusz Mlynski.</li>\n\t    <li>[554946] High CVE-2015-6764: Out of bounds access in v8.\n\t      Credit to Guang Gong of Qihoo 360 via pwn2own.</li>\n\t    <li>[491660] High CVE-2015-6773: Out of bounds access in Skia.\n\t      Credit to cloudfuzzer.</li>\n\t    <li>[549251] High CVE-2015-6774: Use-after-free in Extensions.\n\t      Credit to anonymous.</li>\n\t    <li>[529012] High CVE-2015-6775: Type confusion in PDFium.\n\t      Credit to Atte Kettunen of OUSPG.</li>\n\t    <li>[457480] High CVE-2015-6776: Out of bounds access in PDFium.\n\t      Credit to Hanno Böck.</li>\n\t    <li>[544020] High CVE-2015-6777: Use-after-free in DOM.\n\t      Credit to Long Liu of Qihoo 360Vulcan Team.</li>\n\t    <li>[514891] Medium CVE-2015-6778: Out of bounds access in PDFium.\n\t      Credit to Karl Skomski.</li>\n\t    <li>[528505] Medium CVE-2015-6779: Scheme bypass in PDFium.\n\t      Credit to Til Jasper Ullrich.</li>\n\t    <li>[490492] Medium CVE-2015-6780: Use-after-free in Infobars.\n\t      Credit to Khalil Zhani.</li>\n\t    <li>[497302] Medium CVE-2015-6781: Integer overflow in Sfntly.\n\t      Credit to miaubiz.</li>\n\t    <li>[536652] Medium CVE-2015-6782: Content spoofing in Omnibox.\n\t      Credit to Luan Herrera.</li>\n\t    <li>[537205] Medium CVE-2015-6783: Signature validation issue in\n\t      Android Crazy Linker. Credit to Michal Bednarski.</li>\n\t    <li>[503217] Low CVE-2015-6784: Escaping issue in saved pages.\n\t      Credit to Inti De Ceukelaire.</li>\n\t    <li>[534542] Low CVE-2015-6785: Wildcard matching issue in CSP.\n\t      Credit to Michael Ficarra / Shape Security.</li>\n\t    <li>[534570] Low CVE-2015-6786: Scheme bypass in CSP. Credit to\n\t      Michael Ficarra / Shape Security.</li>\n\t    <li>[563930] CVE-2015-6787: Various fixes from internal audits,\n\t      fuzzing and other initiatives.</li>\n\t    <li>  Multiple vulnerabilities in V8 fixed at the tip of the 4.7\n\t      branch (currently 4.7.80.23).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://googlechromereleases.blogspot.nl/2015/12/stable-channel-update.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/548f74bd-993c-11e5-956b-00262d5ed8ee.html"
+					}
+				],
+				"published": "2015-12-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-6765",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6765"
-				}
+			"content": {
+				"id": "CVE-2015-6765",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6765"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6766",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6766"
-				}
+			"content": {
+				"id": "CVE-2015-6766",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6766"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6767",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6767"
-				}
+			"content": {
+				"id": "CVE-2015-6767",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6767"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6768",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6768"
-				}
+			"content": {
+				"id": "CVE-2015-6768",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6768"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6769",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6769"
-				}
+			"content": {
+				"id": "CVE-2015-6769",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6769"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6770",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6770"
-				}
+			"content": {
+				"id": "CVE-2015-6770",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6770"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6771",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6771"
-				}
+			"content": {
+				"id": "CVE-2015-6771",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6771"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6772",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6772"
-				}
+			"content": {
+				"id": "CVE-2015-6772",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6772"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6773",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6773"
-				}
+			"content": {
+				"id": "CVE-2015-6773",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6773"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6774",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6774"
-				}
+			"content": {
+				"id": "CVE-2015-6774",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6774"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6775",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6775"
-				}
+			"content": {
+				"id": "CVE-2015-6775",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6775"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6776",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6776"
-				}
+			"content": {
+				"id": "CVE-2015-6776",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6776"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6777",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6777"
-				}
+			"content": {
+				"id": "CVE-2015-6777",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6777"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6778",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6778"
-				}
+			"content": {
+				"id": "CVE-2015-6778",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6778"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6779",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6779"
-				}
+			"content": {
+				"id": "CVE-2015-6779",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6779"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6780",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6780"
-				}
+			"content": {
+				"id": "CVE-2015-6780",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6780"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6781",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6781"
-				}
+			"content": {
+				"id": "CVE-2015-6781",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6781"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6782",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6782"
-				}
+			"content": {
+				"id": "CVE-2015-6782",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6782"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6783",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6783"
-				}
+			"content": {
+				"id": "CVE-2015-6783",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6783"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6784",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6784"
-				}
+			"content": {
+				"id": "CVE-2015-6784",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6784"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6785",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6785"
-				}
+			"content": {
+				"id": "CVE-2015-6785",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6785"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6786",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6786"
-				}
+			"content": {
+				"id": "CVE-2015-6786",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6786"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6787",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6787"
-				}
+			"content": {
+				"id": "CVE-2015-6787",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6787"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

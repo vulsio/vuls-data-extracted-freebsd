@@ -2,35 +2,45 @@
 	"id": "2e25d38b-54d1-11d9-b612-000c6e8f12ef",
 	"advisories": [
 		{
-			"id": "2e25d38b-54d1-11d9-b612-000c6e8f12ef",
-			"title": "jabberd -- denial-of-service vulnerability",
-			"description": "\n\t<p>José Antonio Calvo discovered a bug in the Jabber 1.x server.\n\t  According to Matthias Wimmer:</p>\n\t<blockquote cite=\"http://devel.amessage.info/jabberd14/README.html\">\n\t  <p>Without this patch, it is possible to remotly crash\n\t    jabberd14, if there is access to one of the following types\n\t    of network sockets:</p>\n\t  <ul>\n\t    <li>Socket accepting client connections</li>\n\t    <li>Socket accepting connections from other servers</li>\n\t    <li>Socket connecting to an other Jabber server</li>\n\t    <li>Socket accepting connections from server components</li>\n\t    <li>Socket connecting to server components</li>\n\t  </ul>\n\t  <p>This is any socket on which the jabberd server parses\n\t    XML!</p>\n\t  <p>The problem existed in the included expat XML parser code.\n\t    This patch removes the included expat code from jabberd14\n\t    and links jabberd against an installed version of expat.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://devel.amessage.info/jabberd14/README.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://mail.jabber.org/pipermail/jabberd/2004-September/002004.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2e25d38b-54d1-11d9-b612-000c6e8f12ef.html"
-				}
-			],
-			"published": "2004-12-26T00:00:00Z",
-			"modified": "2005-01-19T00:00:00Z"
+			"content": {
+				"id": "2e25d38b-54d1-11d9-b612-000c6e8f12ef",
+				"title": "jabberd -- denial-of-service vulnerability",
+				"description": "\n\t<p>José Antonio Calvo discovered a bug in the Jabber 1.x server.\n\t  According to Matthias Wimmer:</p>\n\t<blockquote cite=\"http://devel.amessage.info/jabberd14/README.html\">\n\t  <p>Without this patch, it is possible to remotly crash\n\t    jabberd14, if there is access to one of the following types\n\t    of network sockets:</p>\n\t  <ul>\n\t    <li>Socket accepting client connections</li>\n\t    <li>Socket accepting connections from other servers</li>\n\t    <li>Socket connecting to an other Jabber server</li>\n\t    <li>Socket accepting connections from server components</li>\n\t    <li>Socket connecting to server components</li>\n\t  </ul>\n\t  <p>This is any socket on which the jabberd server parses\n\t    XML!</p>\n\t  <p>The problem existed in the included expat XML parser code.\n\t    This patch removes the included expat code from jabberd14\n\t    and links jabberd against an installed version of expat.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://devel.amessage.info/jabberd14/README.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://mail.jabber.org/pipermail/jabberd/2004-September/002004.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2e25d38b-54d1-11d9-b612-000c6e8f12ef.html"
+					}
+				],
+				"published": "2004-12-26T00:00:00Z",
+				"modified": "2005-01-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-1378",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1378"
-				}
+			"content": {
+				"id": "CVE-2004-1378",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-1378"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

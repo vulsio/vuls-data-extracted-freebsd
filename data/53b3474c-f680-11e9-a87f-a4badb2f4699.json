@@ -2,30 +2,40 @@
 	"id": "53b3474c-f680-11e9-a87f-a4badb2f4699",
 	"advisories": [
 		{
-			"id": "53b3474c-f680-11e9-a87f-a4badb2f4699",
-			"title": "FreeBSD -- Reference count overflow in mqueue filesystem 32-bit compat",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>System calls operating on file descriptors obtain a\n\treference to relevant struct file which due to a programming\n\terror was not always put back, which in turn could be used\n\tto overflow the counter of affected struct file.</p>\n\t<h1>Impact:</h1>\n\t<p>A local user can use this flaw to obtain access to files,\n\tdirectories, sockets, etc., opened by processes owned by\n\tother users. If obtained struct file represents a directory\n\tfrom outside of user's jail, it can be used to access files\n\toutside of the jail. If the user in question is a jailed\n\troot they can obtain root privileges on the host system.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:24.mqueuefs.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/53b3474c-f680-11e9-a87f-a4badb2f4699.html"
-				}
-			],
-			"published": "2019-10-24T00:00:00Z"
+			"content": {
+				"id": "53b3474c-f680-11e9-a87f-a4badb2f4699",
+				"title": "FreeBSD -- Reference count overflow in mqueue filesystem 32-bit compat",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>System calls operating on file descriptors obtain a\n\treference to relevant struct file which due to a programming\n\terror was not always put back, which in turn could be used\n\tto overflow the counter of affected struct file.</p>\n\t<h1>Impact:</h1>\n\t<p>A local user can use this flaw to obtain access to files,\n\tdirectories, sockets, etc., opened by processes owned by\n\tother users. If obtained struct file represents a directory\n\tfrom outside of user's jail, it can be used to access files\n\toutside of the jail. If the user in question is a jailed\n\troot they can obtain root privileges on the host system.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:24.mqueuefs.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/53b3474c-f680-11e9-a87f-a4badb2f4699.html"
+					}
+				],
+				"published": "2019-10-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-5603",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5603"
-				}
+			"content": {
+				"id": "CVE-2019-5603",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-5603"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

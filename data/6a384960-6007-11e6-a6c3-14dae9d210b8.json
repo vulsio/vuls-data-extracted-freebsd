@@ -2,30 +2,40 @@
 	"id": "6a384960-6007-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "6a384960-6007-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- Deadlock in the NFS server",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The kernel holds a lock over the source directory vnode\n\twhile trying to convert the target directory file handle\n\tto a vnode, which needs to be returned with the lock held,\n\ttoo. This order may be in violation of normal lock order,\n\twhich in conjunction with other threads that grab locks in\n\tthe right order, constitutes a deadlock condition because\n\tno thread can proceed.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker on a trusted client could cause the NFS\n\tserver become deadlocked, resulting in a denial of service.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:05.nfsserver.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6a384960-6007-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "6a384960-6007-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- Deadlock in the NFS server",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The kernel holds a lock over the source directory vnode\n\twhile trying to convert the target directory file handle\n\tto a vnode, which needs to be returned with the lock held,\n\ttoo. This order may be in violation of normal lock order,\n\twhich in conjunction with other threads that grab locks in\n\tthe right order, constitutes a deadlock condition because\n\tno thread can proceed.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker on a trusted client could cause the NFS\n\tserver become deadlocked, resulting in a denial of service.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:05.nfsserver.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6a384960-6007-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-1453",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1453"
-				}
+			"content": {
+				"id": "CVE-2014-1453",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-1453"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

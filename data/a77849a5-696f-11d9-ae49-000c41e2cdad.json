@@ -2,24 +2,29 @@
 	"id": "a77849a5-696f-11d9-ae49-000c41e2cdad",
 	"advisories": [
 		{
-			"id": "a77849a5-696f-11d9-ae49-000c41e2cdad",
-			"title": "mozilla -- insecure permissions for some downloaded files",
-			"description": "\n\t<p>In a Mozilla bug report, Daniel Kleinsinger writes:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/show_bug.cgi?id=251297\">\n\t  <p>I was comparing treatment of attachments opened directly\n\t    from emails on different platforms. I discovered that Linux\n\t    builds save attachments in /tmp with world readable rights.\n\t    This doesn't seem like a good thing. Couldn't someone else\n\t    logged onto the same machine read your attachments?</p>\n\t</blockquote>\n\t<p>This could expose the contents of downloaded files or email\n\t  attachments to other users on a multi-user system.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=109865078103911"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=251297"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a77849a5-696f-11d9-ae49-000c41e2cdad.html"
-				}
-			],
-			"published": "2005-01-18T00:00:00Z"
+			"content": {
+				"id": "a77849a5-696f-11d9-ae49-000c41e2cdad",
+				"title": "mozilla -- insecure permissions for some downloaded files",
+				"description": "\n\t<p>In a Mozilla bug report, Daniel Kleinsinger writes:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/show_bug.cgi?id=251297\">\n\t  <p>I was comparing treatment of attachments opened directly\n\t    from emails on different platforms. I discovered that Linux\n\t    builds save attachments in /tmp with world readable rights.\n\t    This doesn't seem like a good thing. Couldn't someone else\n\t    logged onto the same machine read your attachments?</p>\n\t</blockquote>\n\t<p>This could expose the contents of downloaded files or email\n\t  attachments to other users on a multi-user system.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=109865078103911"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=251297"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a77849a5-696f-11d9-ae49-000c41e2cdad.html"
+					}
+				],
+				"published": "2005-01-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

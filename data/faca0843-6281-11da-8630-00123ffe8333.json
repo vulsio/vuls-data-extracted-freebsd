@@ -2,32 +2,37 @@
 	"id": "faca0843-6281-11da-8630-00123ffe8333",
 	"advisories": [
 		{
-			"id": "faca0843-6281-11da-8630-00123ffe8333",
-			"title": "drupal -- multiple vulnerabilities",
-			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/17824/\">\n\t  <p>Some vulnerabilities have been reported in Drupal,\n\t    which can be exploited by malicious people to bypass\n\t    certain security restrictions, and conduct script\n\t    insertion and HTTP response splitting attacks.</p>\n\t  <p>1) An input validation error in the filtering of\n\t    HTML code can be exploited to inject arbitrary\n\t    JavaScript code in submitted content, which will be\n\t    executed in a user's browser session in context of\n\t    an affected site when the malicious user data is\n\t    viewed.\n\t    Successful exploitation requires that the user has\n\t    access to the full HTML input format.\n\t    Ref: sa-2005-007</p>\n\t  <p>2) An input validation error in the attachment\n\t    handling can be exploited to upload a malicious\n\t    image with embedded HTML and script content, which\n\t    will be executed in a user's browser session in\n\t    context of an affected site when viewed directly with\n\t    the Microsoft Internet Explorer browser.\n\t    This can also be exploited to inject arbitrary HTTP\n\t    headers, which will be included in the response sent\n\t    to the user.\n\t    Ref: sa-2005-008</p>\n\t  <p>3) The problem is that it is possible to bypass the\n\t    \"access user profile\" permission. However, this cannot\n\t    be exploited to modify data.\n\t    Successful exploitation requires that the server runs\n\t    PHP 5.\n\t    Ref: sa-2005-009</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://drupal.org/files/sa-2005-007/advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://drupal.org/files/sa-2005-008/advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://drupal.org/files/sa-2005-009/advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/17824/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/faca0843-6281-11da-8630-00123ffe8333.html"
-				}
-			],
-			"published": "2005-12-01T00:00:00Z"
+			"content": {
+				"id": "faca0843-6281-11da-8630-00123ffe8333",
+				"title": "drupal -- multiple vulnerabilities",
+				"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/17824/\">\n\t  <p>Some vulnerabilities have been reported in Drupal,\n\t    which can be exploited by malicious people to bypass\n\t    certain security restrictions, and conduct script\n\t    insertion and HTTP response splitting attacks.</p>\n\t  <p>1) An input validation error in the filtering of\n\t    HTML code can be exploited to inject arbitrary\n\t    JavaScript code in submitted content, which will be\n\t    executed in a user's browser session in context of\n\t    an affected site when the malicious user data is\n\t    viewed.\n\t    Successful exploitation requires that the user has\n\t    access to the full HTML input format.\n\t    Ref: sa-2005-007</p>\n\t  <p>2) An input validation error in the attachment\n\t    handling can be exploited to upload a malicious\n\t    image with embedded HTML and script content, which\n\t    will be executed in a user's browser session in\n\t    context of an affected site when viewed directly with\n\t    the Microsoft Internet Explorer browser.\n\t    This can also be exploited to inject arbitrary HTTP\n\t    headers, which will be included in the response sent\n\t    to the user.\n\t    Ref: sa-2005-008</p>\n\t  <p>3) The problem is that it is possible to bypass the\n\t    \"access user profile\" permission. However, this cannot\n\t    be exploited to modify data.\n\t    Successful exploitation requires that the server runs\n\t    PHP 5.\n\t    Ref: sa-2005-009</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://drupal.org/files/sa-2005-007/advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://drupal.org/files/sa-2005-008/advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://drupal.org/files/sa-2005-009/advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/17824/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/faca0843-6281-11da-8630-00123ffe8333.html"
+					}
+				],
+				"published": "2005-12-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

@@ -2,30 +2,40 @@
 	"id": "37e30313-9d8c-11db-858b-0060084a00e5",
 	"advisories": [
 		{
-			"id": "37e30313-9d8c-11db-858b-0060084a00e5",
-			"title": "fetchmail -- crashes when refusing a message bound for an MDA",
-			"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2006-03.txt\">\n\t  <p>When delivering messages to a message delivery agent by means\n\t    of the \"mda\" option, fetchmail can crash (by passing\n\t    a NULL pointer to ferror() and fflush()) when refusing a message.\n\t    SMTP and LMTP delivery modes aren't affected.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.fetchmail.info/fetchmail-SA-2006-03.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/37e30313-9d8c-11db-858b-0060084a00e5.html"
-				}
-			],
-			"published": "2007-01-06T00:00:00Z"
+			"content": {
+				"id": "37e30313-9d8c-11db-858b-0060084a00e5",
+				"title": "fetchmail -- crashes when refusing a message bound for an MDA",
+				"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2006-03.txt\">\n\t  <p>When delivering messages to a message delivery agent by means\n\t    of the \"mda\" option, fetchmail can crash (by passing\n\t    a NULL pointer to ferror() and fflush()) when refusing a message.\n\t    SMTP and LMTP delivery modes aren't affected.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.fetchmail.info/fetchmail-SA-2006-03.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/37e30313-9d8c-11db-858b-0060084a00e5.html"
+					}
+				],
+				"published": "2007-01-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-5974",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-5974"
-				}
+			"content": {
+				"id": "CVE-2006-5974",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-5974"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

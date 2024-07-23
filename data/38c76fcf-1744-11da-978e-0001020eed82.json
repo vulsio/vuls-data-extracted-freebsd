@@ -2,34 +2,44 @@
 	"id": "38c76fcf-1744-11da-978e-0001020eed82",
 	"advisories": [
 		{
-			"id": "38c76fcf-1744-11da-978e-0001020eed82",
-			"title": "pam_ldap -- authentication bypass vulnerability",
-			"description": "\n\t<p>Luke Howard reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=166163\">\n\t  <p>If a pam_ldap client authenticates against an LDAP server\n\t    that returns a passwordPolicyResponse control, but omits\n\t    the optional \"error\" field of the\n\t    PasswordPolicyResponseValue, then the LDAP authentication\n\t    result will be ignored and the authentication step will\n\t    always succeed.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=166163"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kb.cert.org/vuls/id/778916"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/38c76fcf-1744-11da-978e-0001020eed82.html"
-				}
-			],
-			"published": "2005-08-27T00:00:00Z"
+			"content": {
+				"id": "38c76fcf-1744-11da-978e-0001020eed82",
+				"title": "pam_ldap -- authentication bypass vulnerability",
+				"description": "\n\t<p>Luke Howard reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=166163\">\n\t  <p>If a pam_ldap client authenticates against an LDAP server\n\t    that returns a passwordPolicyResponse control, but omits\n\t    the optional \"error\" field of the\n\t    PasswordPolicyResponseValue, then the LDAP authentication\n\t    result will be ignored and the authentication step will\n\t    always succeed.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=166163"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kb.cert.org/vuls/id/778916"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/38c76fcf-1744-11da-978e-0001020eed82.html"
+					}
+				],
+				"published": "2005-08-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-2641",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2641"
-				}
+			"content": {
+				"id": "CVE-2005-2641",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-2641"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

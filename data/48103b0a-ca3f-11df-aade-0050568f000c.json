@@ -2,21 +2,26 @@
 	"id": "48103b0a-ca3f-11df-aade-0050568f000c",
 	"advisories": [
 		{
-			"id": "48103b0a-ca3f-11df-aade-0050568f000c",
-			"title": "FreeBSD -- ntpd mode 7 denial of service",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>If ntpd receives a mode 7 (MODE_PRIVATE) request or error response\n\t  from a source address not listed in either a 'restrict ... noquery'\n\t  or a 'restrict ... ignore' section it will log the even and send a\n\t  mode 7 error response.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:02.ntpd.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/48103b0a-ca3f-11df-aade-0050568f000c.html"
-				}
-			],
-			"published": "2010-10-24T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "48103b0a-ca3f-11df-aade-0050568f000c",
+				"title": "FreeBSD -- ntpd mode 7 denial of service",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>If ntpd receives a mode 7 (MODE_PRIVATE) request or error response\n\t  from a source address not listed in either a 'restrict ... noquery'\n\t  or a 'restrict ... ignore' section it will log the even and send a\n\t  mode 7 error response.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:02.ntpd.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/48103b0a-ca3f-11df-aade-0050568f000c.html"
+					}
+				],
+				"published": "2010-10-24T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

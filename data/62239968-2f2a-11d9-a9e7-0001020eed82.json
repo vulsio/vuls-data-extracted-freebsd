@@ -2,38 +2,48 @@
 	"id": "62239968-2f2a-11d9-a9e7-0001020eed82",
 	"advisories": [
 		{
-			"id": "62239968-2f2a-11d9-a9e7-0001020eed82",
-			"title": "gd -- integer overflow",
-			"description": "\n\t<p>infamous41md reports about the GD Graphics Library:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=109882489302099\">\n\t  <p>There is an integer overflow when allocating memory in\n\t    the routine that handles loading PNG image files.  This\n\t    later leads to heap data structures being overwritten.  If\n\t    an attacker tricked a user into loading a malicious PNG\n\t    image, they could leverage this into executing arbitrary\n\t    code in the context of the user opening image.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109882489302099"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.boutell.com/gd/manual2.0.29.html#whatsnew2.0.29"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/11523"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/62239968-2f2a-11d9-a9e7-0001020eed82.html"
-				}
-			],
-			"published": "2004-11-05T00:00:00Z"
+			"content": {
+				"id": "62239968-2f2a-11d9-a9e7-0001020eed82",
+				"title": "gd -- integer overflow",
+				"description": "\n\t<p>infamous41md reports about the GD Graphics Library:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=109882489302099\">\n\t  <p>There is an integer overflow when allocating memory in\n\t    the routine that handles loading PNG image files.  This\n\t    later leads to heap data structures being overwritten.  If\n\t    an attacker tricked a user into loading a malicious PNG\n\t    image, they could leverage this into executing arbitrary\n\t    code in the context of the user opening image.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109882489302099"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.boutell.com/gd/manual2.0.29.html#whatsnew2.0.29"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/11523"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/62239968-2f2a-11d9-a9e7-0001020eed82.html"
+					}
+				],
+				"published": "2004-11-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0990",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0990"
-				}
+			"content": {
+				"id": "CVE-2004-0990",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0990"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

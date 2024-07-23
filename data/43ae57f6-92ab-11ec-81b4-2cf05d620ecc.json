@@ -2,30 +2,40 @@
 	"id": "43ae57f6-92ab-11ec-81b4-2cf05d620ecc",
 	"advisories": [
 		{
-			"id": "43ae57f6-92ab-11ec-81b4-2cf05d620ecc",
-			"title": "Qt5 -- QProcess unexpected search path",
-			"description": "\n\t<p>The Qt Company reports:</p>\n\t<blockquote cite=\"https://lists.qt-project.org/pipermail/announce/2022-February/000333.html\">\n\t  <p>Recently, the Qt Project's security team was made aware of an issue regarding QProcess and determined it to be a security issue on Unix-based platforms only. We do not believe this to be a considerable risk for applications as the likelihood of it being triggered is minimal.\n</p>\n<p>Specifically, the problem is around using QProcess to start an application without having an absolute path, and as a result, it depends on it finding it in the PATH environment variable. As a result, it may be possible for an attacker to place their copy of the executable in question inside the working/current directory for the QProcess and have it invoked that instead.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25255"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/43ae57f6-92ab-11ec-81b4-2cf05d620ecc.html"
-				}
-			],
-			"published": "2022-02-21T00:00:00Z"
+			"content": {
+				"id": "43ae57f6-92ab-11ec-81b4-2cf05d620ecc",
+				"title": "Qt5 -- QProcess unexpected search path",
+				"description": "\n\t<p>The Qt Company reports:</p>\n\t<blockquote cite=\"https://lists.qt-project.org/pipermail/announce/2022-February/000333.html\">\n\t  <p>Recently, the Qt Project's security team was made aware of an issue regarding QProcess and determined it to be a security issue on Unix-based platforms only. We do not believe this to be a considerable risk for applications as the likelihood of it being triggered is minimal.\n</p>\n<p>Specifically, the problem is around using QProcess to start an application without having an absolute path, and as a result, it depends on it finding it in the PATH environment variable. As a result, it may be possible for an attacker to place their copy of the executable in question inside the working/current directory for the QProcess and have it invoked that instead.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25255"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/43ae57f6-92ab-11ec-81b4-2cf05d620ecc.html"
+					}
+				],
+				"published": "2022-02-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-25255",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-25255"
-				}
+			"content": {
+				"id": "CVE-2022-25255",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-25255"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

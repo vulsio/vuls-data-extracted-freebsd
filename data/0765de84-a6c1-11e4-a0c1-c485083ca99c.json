@@ -2,35 +2,45 @@
 	"id": "0765de84-a6c1-11e4-a0c1-c485083ca99c",
 	"advisories": [
 		{
-			"id": "0765de84-a6c1-11e4-a0c1-c485083ca99c",
-			"title": "glibc -- gethostbyname buffer overflow",
-			"description": "\n\t<p>Robert Krátký reports:</p>\n\t<blockquote cite=\"https://access.redhat.com/discussions/1332403\">\n\t  <p>\n\t    GHOST is a 'buffer overflow' bug affecting the gethostbyname() and\n\t    gethostbyname2() function calls in the glibc library. This\n\t    vulnerability allows a remote attacker that is able to make an\n\t    application call to either of these functions to execute arbitrary\n\t    code with the permissions of the user running the application.\n\t    The gethostbyname() function calls are used for DNS resolving, which\n\t    is a very common event. To exploit this vulnerability, an attacker\n\t    must trigger a buffer overflow by supplying an invalid hostname\n\t    argument to an application that performs a DNS resolution.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/01/27/9"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://access.redhat.com/articles/1332213"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0765de84-a6c1-11e4-a0c1-c485083ca99c.html"
-				}
-			],
-			"published": "2015-01-28T00:00:00Z",
-			"modified": "2015-02-02T00:00:00Z"
+			"content": {
+				"id": "0765de84-a6c1-11e4-a0c1-c485083ca99c",
+				"title": "glibc -- gethostbyname buffer overflow",
+				"description": "\n\t<p>Robert Krátký reports:</p>\n\t<blockquote cite=\"https://access.redhat.com/discussions/1332403\">\n\t  <p>\n\t    GHOST is a 'buffer overflow' bug affecting the gethostbyname() and\n\t    gethostbyname2() function calls in the glibc library. This\n\t    vulnerability allows a remote attacker that is able to make an\n\t    application call to either of these functions to execute arbitrary\n\t    code with the permissions of the user running the application.\n\t    The gethostbyname() function calls are used for DNS resolving, which\n\t    is a very common event. To exploit this vulnerability, an attacker\n\t    must trigger a buffer overflow by supplying an invalid hostname\n\t    argument to an application that performs a DNS resolution.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/01/27/9"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://access.redhat.com/articles/1332213"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0765de84-a6c1-11e4-a0c1-c485083ca99c.html"
+					}
+				],
+				"published": "2015-01-28T00:00:00Z",
+				"modified": "2015-02-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-0235",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-0235"
-				}
+			"content": {
+				"id": "CVE-2015-0235",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-0235"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,31 +2,41 @@
 	"id": "0cf3480d-5fdf-11d9-b721-00065be4b5b6",
 	"advisories": [
 		{
-			"id": "0cf3480d-5fdf-11d9-b721-00065be4b5b6",
-			"title": "helvis -- arbitrary file deletion problem",
-			"description": "\n\t<p>The setuid root elvprsv utility, used to preserve\n\t recovery helvis files, can be abused by local users to delete\n\twith root privileges.</p>\n\t<p>The problem is that elvprsv deletes files when it thinks they\n\thave become corrupt. When elvprsv is pointed to a normal file then\n\tit will almost always think the file is corrupt and deletes it.\n\tThis behavior may be exploited by local attackers to delete critical\n\tfiles.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://people.freebsd.org/~niels/ports/korean/helvis/issues.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0cf3480d-5fdf-11d9-b721-00065be4b5b6.html"
-				}
-			],
-			"published": "2005-01-10T00:00:00Z",
-			"modified": "2005-01-19T00:00:00Z"
+			"content": {
+				"id": "0cf3480d-5fdf-11d9-b721-00065be4b5b6",
+				"title": "helvis -- arbitrary file deletion problem",
+				"description": "\n\t<p>The setuid root elvprsv utility, used to preserve\n\t recovery helvis files, can be abused by local users to delete\n\twith root privileges.</p>\n\t<p>The problem is that elvprsv deletes files when it thinks they\n\thave become corrupt. When elvprsv is pointed to a normal file then\n\tit will almost always think the file is corrupt and deletes it.\n\tThis behavior may be exploited by local attackers to delete critical\n\tfiles.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://people.freebsd.org/~niels/ports/korean/helvis/issues.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0cf3480d-5fdf-11d9-b721-00065be4b5b6.html"
+					}
+				],
+				"published": "2005-01-10T00:00:00Z",
+				"modified": "2005-01-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0120",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0120"
-				}
+			"content": {
+				"id": "CVE-2005-0120",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0120"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

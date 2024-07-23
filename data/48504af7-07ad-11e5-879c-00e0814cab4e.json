@@ -2,30 +2,40 @@
 	"id": "48504af7-07ad-11e5-879c-00e0814cab4e",
 	"advisories": [
 		{
-			"id": "48504af7-07ad-11e5-879c-00e0814cab4e",
-			"title": "django -- Fixed session flushing in the cached_db backend",
-			"description": "\n\t<p>The Django project reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2015/may/20/security-release/\">\n\t  <p>A change to session.flush() in the cached_db session backend in\n\t    Django 1.8 mistakenly sets the session key to an empty string\n\t    rather than None. An empty string is treated as a valid session key\n\t    and the session cookie is set accordingly. Any users with an empty\n\t    string in their session cookie will use the same session store.\n\t    session.flush() is called by django.contrib.auth.logout() and, more\n\t    seriously, by django.contrib.auth.login() when a user switches accounts.\n\t    If a user is logged in and logs in again to a different account\n\t    (without logging out) the session is flushed to avoid reuse.\n\t    After the session is flushed (and its session key becomes '') the\n\t    account details are set on the session and the session is saved.\n\t    Any users with an empty string in their session cookie will now be\n\t    logged into that account.</p>\n\t  <p>Thanks to Sam Cooke for reporting the issue.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.djangoproject.com/weblog/2015/may/20/security-release/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/48504af7-07ad-11e5-879c-00e0814cab4e.html"
-				}
-			],
-			"published": "2015-05-31T00:00:00Z"
+			"content": {
+				"id": "48504af7-07ad-11e5-879c-00e0814cab4e",
+				"title": "django -- Fixed session flushing in the cached_db backend",
+				"description": "\n\t<p>The Django project reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2015/may/20/security-release/\">\n\t  <p>A change to session.flush() in the cached_db session backend in\n\t    Django 1.8 mistakenly sets the session key to an empty string\n\t    rather than None. An empty string is treated as a valid session key\n\t    and the session cookie is set accordingly. Any users with an empty\n\t    string in their session cookie will use the same session store.\n\t    session.flush() is called by django.contrib.auth.logout() and, more\n\t    seriously, by django.contrib.auth.login() when a user switches accounts.\n\t    If a user is logged in and logs in again to a different account\n\t    (without logging out) the session is flushed to avoid reuse.\n\t    After the session is flushed (and its session key becomes '') the\n\t    account details are set on the session and the session is saved.\n\t    Any users with an empty string in their session cookie will now be\n\t    logged into that account.</p>\n\t  <p>Thanks to Sam Cooke for reporting the issue.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.djangoproject.com/weblog/2015/may/20/security-release/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/48504af7-07ad-11e5-879c-00e0814cab4e.html"
+					}
+				],
+				"published": "2015-05-31T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3982",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3982"
-				}
+			"content": {
+				"id": "CVE-2015-3982",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3982"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

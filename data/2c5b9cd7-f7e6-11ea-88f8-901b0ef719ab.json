@@ -2,30 +2,40 @@
 	"id": "2c5b9cd7-f7e6-11ea-88f8-901b0ef719ab",
 	"advisories": [
 		{
-			"id": "2c5b9cd7-f7e6-11ea-88f8-901b0ef719ab",
-			"title": "FreeBSD -- bhyve privilege escalation via VMCS access",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>AMD and Intel CPUs support hardware virtualization using specialized data\n\tstructures that control various aspects of guest operation.  These are the\n\tVirtual Machine Control Structure (VMCS) on Intel CPUs, and the Virtual\n\tMachine Control Block (VMCB) on AMD CPUs.  Insufficient access controls allow\n\troot users, including those running in a jail, to change these data\n\tstructures.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker with host root access (including to a jailed bhyve instance) can\n\tuse this vulnerability to achieve kernel code execution.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:28.bhyve_vmcs.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2c5b9cd7-f7e6-11ea-88f8-901b0ef719ab.html"
-				}
-			],
-			"published": "2020-09-16T00:00:00Z"
+			"content": {
+				"id": "2c5b9cd7-f7e6-11ea-88f8-901b0ef719ab",
+				"title": "FreeBSD -- bhyve privilege escalation via VMCS access",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>AMD and Intel CPUs support hardware virtualization using specialized data\n\tstructures that control various aspects of guest operation.  These are the\n\tVirtual Machine Control Structure (VMCS) on Intel CPUs, and the Virtual\n\tMachine Control Block (VMCB) on AMD CPUs.  Insufficient access controls allow\n\troot users, including those running in a jail, to change these data\n\tstructures.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker with host root access (including to a jailed bhyve instance) can\n\tuse this vulnerability to achieve kernel code execution.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:28.bhyve_vmcs.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2c5b9cd7-f7e6-11ea-88f8-901b0ef719ab.html"
+					}
+				],
+				"published": "2020-09-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-24718",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24718"
-				}
+			"content": {
+				"id": "CVE-2020-24718",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-24718"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

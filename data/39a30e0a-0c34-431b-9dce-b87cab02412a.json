@@ -2,34 +2,44 @@
 	"id": "39a30e0a-0c34-431b-9dce-b87cab02412a",
 	"advisories": [
 		{
-			"id": "39a30e0a-0c34-431b-9dce-b87cab02412a",
-			"title": "Sanitize -- XSS vulnerability",
-			"description": "\n\t<p>Sanitize release:</p>\n\t<blockquote cite=\"https://github.com/rgrove/sanitize/releases\">\n\t  <p>Fixed an HTML injection vulnerability that could allow XSS.</p>\n\t  <p>When Sanitize &lt;= 4.6.2 is used in combination with libxml2 &gt;= 2.9.2,\n\t    a specially crafted HTML fragment can cause libxml2 to generate\n\t    improperly escaped output, allowing non-whitelisted attributes to be\n\t    used on whitelisted elements.</p>\n\t  <p>Sanitize now performs additional escaping on affected attributes to\n\t  prevent this.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/rgrove/sanitize/issues/176"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/rgrove/sanitize/releases"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/39a30e0a-0c34-431b-9dce-b87cab02412a.html"
-				}
-			],
-			"published": "2018-03-21T00:00:00Z"
+			"content": {
+				"id": "39a30e0a-0c34-431b-9dce-b87cab02412a",
+				"title": "Sanitize -- XSS vulnerability",
+				"description": "\n\t<p>Sanitize release:</p>\n\t<blockquote cite=\"https://github.com/rgrove/sanitize/releases\">\n\t  <p>Fixed an HTML injection vulnerability that could allow XSS.</p>\n\t  <p>When Sanitize &lt;= 4.6.2 is used in combination with libxml2 &gt;= 2.9.2,\n\t    a specially crafted HTML fragment can cause libxml2 to generate\n\t    improperly escaped output, allowing non-whitelisted attributes to be\n\t    used on whitelisted elements.</p>\n\t  <p>Sanitize now performs additional escaping on affected attributes to\n\t  prevent this.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/rgrove/sanitize/issues/176"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/rgrove/sanitize/releases"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/39a30e0a-0c34-431b-9dce-b87cab02412a.html"
+					}
+				],
+				"published": "2018-03-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-3740",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-3740"
-				}
+			"content": {
+				"id": "CVE-2018-3740",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-3740"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

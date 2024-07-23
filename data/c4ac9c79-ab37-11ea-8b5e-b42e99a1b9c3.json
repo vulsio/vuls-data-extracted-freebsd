@@ -2,100 +2,135 @@
 	"id": "c4ac9c79-ab37-11ea-8b5e-b42e99a1b9c3",
 	"advisories": [
 		{
-			"id": "c4ac9c79-ab37-11ea-8b5e-b42e99a1b9c3",
-			"title": "several security issues in sqlite3",
-			"description": "\n\t<p>sqlite3 update:</p>\n\t<p>Various security issues could be used by an attacker to cause SQLite to crash, resulting in a denial of service, or possibly execute arbitrary code.</p>\n\t<ul>\n\t  <li>CVE-2020-11655: SQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled.</li>\n\t  <li>CVE-2020-13434: SQLite through 3.32.0 has an integer overflow in sqlite3_str_vappendf in printf.c.</li>\n\t  <li>CVE-2020-13435: SQLite through 3.32.0 has a segmentation fault in sqlite3ExprCodeTarget in expr.c.</li>\n\t  <li>CVE-2020-13630: ext/fts3/fts3.c in SQLite before 3.32.0 has a use-after-free in fts3EvalNextRow, related to the snippet feature.</li>\n\t  <li>CVE-2020-13631: SQLite before 3.32.0 allows a virtual table to be renamed to the name of one of its shadow tables, related to alter.c and build.c.</li>\n\t  <li>CVE-2020-13632: ext/fts3/fts3_snippet.c in SQLite before 3.32.0 has a NULL pointer dereference via a crafted matchinfo() query.</li>\n\t</ul>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11655"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13434"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13435"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13630"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13631"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13632"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:22.sqlite.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c4ac9c79-ab37-11ea-8b5e-b42e99a1b9c3.html"
-				}
-			],
-			"published": "2020-06-10T00:00:00Z",
-			"modified": "2020-08-06T00:00:00Z"
+			"content": {
+				"id": "c4ac9c79-ab37-11ea-8b5e-b42e99a1b9c3",
+				"title": "several security issues in sqlite3",
+				"description": "\n\t<p>sqlite3 update:</p>\n\t<p>Various security issues could be used by an attacker to cause SQLite to crash, resulting in a denial of service, or possibly execute arbitrary code.</p>\n\t<ul>\n\t  <li>CVE-2020-11655: SQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled.</li>\n\t  <li>CVE-2020-13434: SQLite through 3.32.0 has an integer overflow in sqlite3_str_vappendf in printf.c.</li>\n\t  <li>CVE-2020-13435: SQLite through 3.32.0 has a segmentation fault in sqlite3ExprCodeTarget in expr.c.</li>\n\t  <li>CVE-2020-13630: ext/fts3/fts3.c in SQLite before 3.32.0 has a use-after-free in fts3EvalNextRow, related to the snippet feature.</li>\n\t  <li>CVE-2020-13631: SQLite before 3.32.0 allows a virtual table to be renamed to the name of one of its shadow tables, related to alter.c and build.c.</li>\n\t  <li>CVE-2020-13632: ext/fts3/fts3_snippet.c in SQLite before 3.32.0 has a NULL pointer dereference via a crafted matchinfo() query.</li>\n\t</ul>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11655"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13434"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13435"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13630"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13631"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13632"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:22.sqlite.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c4ac9c79-ab37-11ea-8b5e-b42e99a1b9c3.html"
+					}
+				],
+				"published": "2020-06-10T00:00:00Z",
+				"modified": "2020-08-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-11655",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-11655"
-				}
+			"content": {
+				"id": "CVE-2020-11655",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-11655"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-13434",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-13434"
-				}
+			"content": {
+				"id": "CVE-2020-13434",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-13434"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-13435",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-13435"
-				}
+			"content": {
+				"id": "CVE-2020-13435",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-13435"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-13630",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-13630"
-				}
+			"content": {
+				"id": "CVE-2020-13630",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-13630"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-13631",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-13631"
-				}
+			"content": {
+				"id": "CVE-2020-13631",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-13631"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-13632",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-13632"
-				}
+			"content": {
+				"id": "CVE-2020-13632",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-13632"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

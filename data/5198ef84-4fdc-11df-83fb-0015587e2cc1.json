@@ -2,43 +2,53 @@
 	"id": "5198ef84-4fdc-11df-83fb-0015587e2cc1",
 	"advisories": [
 		{
-			"id": "5198ef84-4fdc-11df-83fb-0015587e2cc1",
-			"title": "cacti -- SQL injection and command execution vulnerabilities",
-			"description": "\n\t<p>Bonsai information security reports:</p>\n\t<blockquote cite=\"http://www.bonsai-sec.com/en/research/vulnerability.php\">\n\t  <p>A Vulnerability has been discovered in Cacti, which\n\t    can be exploited by any user to conduct SQL Injection\n\t    attacks. Input passed via the \"export_item_id\" parameter\n\t    to \"templates_export.php\" script is not properly sanitized\n\t    before being used in a SQL query.</p>\n\t</blockquote>\n\t  <p>The same source also reported a command execution\n\t    vulnerability. This second issue can be exploited by\n\t    Cacti users who have the rights to modify device or\n\t    graph configurations.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.bonsai-sec.com/en/research/vulnerabilities/cacti-os-command-injection-0105.php"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.bonsai-sec.com/en/research/vulnerabilities/cacti-sql-injection-0104.php"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.debian.org/security/2010/dsa-2039"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=146021"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5198ef84-4fdc-11df-83fb-0015587e2cc1.html"
-				}
-			],
-			"published": "2010-04-24T00:00:00Z",
-			"modified": "2013-06-16T00:00:00Z"
+			"content": {
+				"id": "5198ef84-4fdc-11df-83fb-0015587e2cc1",
+				"title": "cacti -- SQL injection and command execution vulnerabilities",
+				"description": "\n\t<p>Bonsai information security reports:</p>\n\t<blockquote cite=\"http://www.bonsai-sec.com/en/research/vulnerability.php\">\n\t  <p>A Vulnerability has been discovered in Cacti, which\n\t    can be exploited by any user to conduct SQL Injection\n\t    attacks. Input passed via the \"export_item_id\" parameter\n\t    to \"templates_export.php\" script is not properly sanitized\n\t    before being used in a SQL query.</p>\n\t</blockquote>\n\t  <p>The same source also reported a command execution\n\t    vulnerability. This second issue can be exploited by\n\t    Cacti users who have the rights to modify device or\n\t    graph configurations.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.bonsai-sec.com/en/research/vulnerabilities/cacti-os-command-injection-0105.php"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.bonsai-sec.com/en/research/vulnerabilities/cacti-sql-injection-0104.php"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.debian.org/security/2010/dsa-2039"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=146021"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5198ef84-4fdc-11df-83fb-0015587e2cc1.html"
+					}
+				],
+				"published": "2010-04-24T00:00:00Z",
+				"modified": "2013-06-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-1431",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-1431"
-				}
+			"content": {
+				"id": "CVE-2010-1431",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-1431"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

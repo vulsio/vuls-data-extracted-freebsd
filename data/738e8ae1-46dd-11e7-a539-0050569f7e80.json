@@ -2,20 +2,25 @@
 	"id": "738e8ae1-46dd-11e7-a539-0050569f7e80",
 	"advisories": [
 		{
-			"id": "738e8ae1-46dd-11e7-a539-0050569f7e80",
-			"title": "duo -- Two-factor authentication bypass",
-			"description": "\n\t<p>The duo security team reports:</p>\n\t<blockquote cite=\"https://duo.com/labs/psa/duo-psa-2017-002\">\n\t  <p>An untrusted user may be able to set the http_proxy variable to\n\t    an invalid address.  If this happens, this will trigger the\n\t    configured 'failmode' behavior, which defaults to safe.  Safe\n\t    mode causes the authentication to report a success.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://duo.com/labs/psa/duo-psa-2017-002"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/738e8ae1-46dd-11e7-a539-0050569f7e80.html"
-				}
-			],
-			"published": "2017-06-01T00:00:00Z"
+			"content": {
+				"id": "738e8ae1-46dd-11e7-a539-0050569f7e80",
+				"title": "duo -- Two-factor authentication bypass",
+				"description": "\n\t<p>The duo security team reports:</p>\n\t<blockquote cite=\"https://duo.com/labs/psa/duo-psa-2017-002\">\n\t  <p>An untrusted user may be able to set the http_proxy variable to\n\t    an invalid address.  If this happens, this will trigger the\n\t    configured 'failmode' behavior, which defaults to safe.  Safe\n\t    mode causes the authentication to report a success.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://duo.com/labs/psa/duo-psa-2017-002"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/738e8ae1-46dd-11e7-a539-0050569f7e80.html"
+					}
+				],
+				"published": "2017-06-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

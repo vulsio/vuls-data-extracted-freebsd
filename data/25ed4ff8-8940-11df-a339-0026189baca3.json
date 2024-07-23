@@ -2,30 +2,40 @@
 	"id": "25ed4ff8-8940-11df-a339-0026189baca3",
 	"advisories": [
 		{
-			"id": "25ed4ff8-8940-11df-a339-0026189baca3",
-			"title": "bogofilter -- heap underrun on malformed base64 input",
-			"description": "\n\t<p>Julius Plenz reports:</p>\n\t<blockquote cite=\"http://www.bogofilter.org/pipermail/bogofilter-dev/2010-June/003475.html\">\n\t  <p>I found a bug in the base64_decode function which may cause memory\n\t    corruption when the function is executed on a malformed base64\n\t    encoded string.</p>\n\t  <p>If a string starting with an equal-sign is passed to the\n\t    base64_decode function it triggers a memory corruption that\n\t    in some cases makes bogofilter crash.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bogofilter.sourceforge.net/security/bogofilter-SA-2010-01"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/25ed4ff8-8940-11df-a339-0026189baca3.html"
-				}
-			],
-			"published": "2010-07-06T00:00:00Z"
+			"content": {
+				"id": "25ed4ff8-8940-11df-a339-0026189baca3",
+				"title": "bogofilter -- heap underrun on malformed base64 input",
+				"description": "\n\t<p>Julius Plenz reports:</p>\n\t<blockquote cite=\"http://www.bogofilter.org/pipermail/bogofilter-dev/2010-June/003475.html\">\n\t  <p>I found a bug in the base64_decode function which may cause memory\n\t    corruption when the function is executed on a malformed base64\n\t    encoded string.</p>\n\t  <p>If a string starting with an equal-sign is passed to the\n\t    base64_decode function it triggers a memory corruption that\n\t    in some cases makes bogofilter crash.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bogofilter.sourceforge.net/security/bogofilter-SA-2010-01"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/25ed4ff8-8940-11df-a339-0026189baca3.html"
+					}
+				],
+				"published": "2010-07-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-2494",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2494"
-				}
+			"content": {
+				"id": "CVE-2010-2494",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2494"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "be5421ab-1b56-11e4-a767-5453ed2e2b49",
 	"advisories": [
 		{
-			"id": "be5421ab-1b56-11e4-a767-5453ed2e2b49",
-			"title": "krfb -- Possible Denial of Service or code execution via integer overflow",
-			"description": "\n\t<p>Albert Aastals Cid reports:</p>\n\t<blockquote cite=\"http://lists.kde.org/?l=kde-announce&amp;m=140709940701878&amp;w=2\">\n\t  <p>krfb embeds libvncserver which embeds liblzo2, it contains various\n\t    flaws that result in integer overflow problems.</p>\n\t  <p>This potentially allows a malicious application to create a\n\t    possible denial of service or code execution. Due to the need to\n\t    exploit precise details of the target architecture and threading it\n\t    is unlikely that remote code execution can be achieved in\n\t    practice.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.kde.org/?l=kde-announce&m=140709940701878&w=2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/be5421ab-1b56-11e4-a767-5453ed2e2b49.html"
-				}
-			],
-			"published": "2014-08-03T00:00:00Z"
+			"content": {
+				"id": "be5421ab-1b56-11e4-a767-5453ed2e2b49",
+				"title": "krfb -- Possible Denial of Service or code execution via integer overflow",
+				"description": "\n\t<p>Albert Aastals Cid reports:</p>\n\t<blockquote cite=\"http://lists.kde.org/?l=kde-announce&amp;m=140709940701878&amp;w=2\">\n\t  <p>krfb embeds libvncserver which embeds liblzo2, it contains various\n\t    flaws that result in integer overflow problems.</p>\n\t  <p>This potentially allows a malicious application to create a\n\t    possible denial of service or code execution. Due to the need to\n\t    exploit precise details of the target architecture and threading it\n\t    is unlikely that remote code execution can be achieved in\n\t    practice.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.kde.org/?l=kde-announce&m=140709940701878&w=2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/be5421ab-1b56-11e4-a767-5453ed2e2b49.html"
+					}
+				],
+				"published": "2014-08-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-4607",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-4607"
-				}
+			"content": {
+				"id": "CVE-2014-4607",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-4607"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

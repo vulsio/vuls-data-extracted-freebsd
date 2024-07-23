@@ -2,192 +2,292 @@
 	"id": "1aa7a094-1147-11ea-b537-001b217b3468",
 	"advisories": [
 		{
-			"id": "1aa7a094-1147-11ea-b537-001b217b3468",
-			"title": "Gitlab -- Multiple Vulnerabilities",
-			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/blog/2019/11/27/security-release-gitlab-12-5-1-released/\">\n\t  <p>Path traversal with potential remote code execution</p>\n\t  <p>Private objects exposed through project import</p>\n\t  <p>Disclosure of notes via Elasticsearch integration</p>\n\t  <p>Disclosure of comments via Elasticsearch integration</p>\n\t  <p>DNS Rebind SSRF in various chat notifications</p>\n\t  <p>Disclosure of vulnerability status in dependency list</p>\n\t  <p>Disclosure of commit count in Cycle Analytics</p>\n\t  <p>Exposure of related branch names</p>\n\t  <p>Tags pushes from blocked users</p>\n\t  <p>Branches and Commits exposed to Guest members via integration</p>\n\t  <p>IDOR when adding users to protected environments</p>\n\t  <p>Former project members able to access repository information</p>\n\t  <p>Unauthorized access to grafana metrics</p>\n\t  <p>Todos created for former project members</p>\n\t  <p>Update Mattermost dependency</p>\n\t  <p>Disclosure of AWS secret keys on certain Admin pages</p>\n\t  <p>Stored XSS in Group and User profile fields</p>\n\t  <p>Forked project information disclosed via Project API</p>\n\t  <p>Denial of Service in the issue and commit comment pages</p>\n\t  <p>Tokens stored in plaintext</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://about.gitlab.com/blog/2019/11/27/security-release-gitlab-12-5-1-released/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1aa7a094-1147-11ea-b537-001b217b3468.html"
-				}
-			],
-			"published": "2019-11-27T00:00:00Z"
+			"content": {
+				"id": "1aa7a094-1147-11ea-b537-001b217b3468",
+				"title": "Gitlab -- Multiple Vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/blog/2019/11/27/security-release-gitlab-12-5-1-released/\">\n\t  <p>Path traversal with potential remote code execution</p>\n\t  <p>Private objects exposed through project import</p>\n\t  <p>Disclosure of notes via Elasticsearch integration</p>\n\t  <p>Disclosure of comments via Elasticsearch integration</p>\n\t  <p>DNS Rebind SSRF in various chat notifications</p>\n\t  <p>Disclosure of vulnerability status in dependency list</p>\n\t  <p>Disclosure of commit count in Cycle Analytics</p>\n\t  <p>Exposure of related branch names</p>\n\t  <p>Tags pushes from blocked users</p>\n\t  <p>Branches and Commits exposed to Guest members via integration</p>\n\t  <p>IDOR when adding users to protected environments</p>\n\t  <p>Former project members able to access repository information</p>\n\t  <p>Unauthorized access to grafana metrics</p>\n\t  <p>Todos created for former project members</p>\n\t  <p>Update Mattermost dependency</p>\n\t  <p>Disclosure of AWS secret keys on certain Admin pages</p>\n\t  <p>Stored XSS in Group and User profile fields</p>\n\t  <p>Forked project information disclosed via Project API</p>\n\t  <p>Denial of Service in the issue and commit comment pages</p>\n\t  <p>Tokens stored in plaintext</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/blog/2019/11/27/security-release-gitlab-12-5-1-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1aa7a094-1147-11ea-b537-001b217b3468.html"
+					}
+				],
+				"published": "2019-11-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-19086",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19086"
-				}
+			"content": {
+				"id": "CVE-2019-19086",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19086"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19087",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19087"
-				}
+			"content": {
+				"id": "CVE-2019-19087",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19087"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19088",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19088"
-				}
+			"content": {
+				"id": "CVE-2019-19088",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19088"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19254",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19254"
-				}
+			"content": {
+				"id": "CVE-2019-19254",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19254"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19255",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19255"
-				}
+			"content": {
+				"id": "CVE-2019-19255",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19255"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19256",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19256"
-				}
+			"content": {
+				"id": "CVE-2019-19256",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19256"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19257",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19257"
-				}
+			"content": {
+				"id": "CVE-2019-19257",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19257"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19258",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19258"
-				}
+			"content": {
+				"id": "CVE-2019-19258",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19258"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19259",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19259"
-				}
+			"content": {
+				"id": "CVE-2019-19259",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19259"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19260",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19260"
-				}
+			"content": {
+				"id": "CVE-2019-19260",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19260"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19261",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19261"
-				}
+			"content": {
+				"id": "CVE-2019-19261",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19261"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19262",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19262"
-				}
+			"content": {
+				"id": "CVE-2019-19262",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19262"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19263",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19263"
-				}
+			"content": {
+				"id": "CVE-2019-19263",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19263"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19309",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19309"
-				}
+			"content": {
+				"id": "CVE-2019-19309",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19309"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19310",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19310"
-				}
+			"content": {
+				"id": "CVE-2019-19310",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19310"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19311",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19311"
-				}
+			"content": {
+				"id": "CVE-2019-19311",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19311"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19312",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19312"
-				}
+			"content": {
+				"id": "CVE-2019-19312",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19312"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19313",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19313"
-				}
+			"content": {
+				"id": "CVE-2019-19313",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19313"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-19314",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-19314"
-				}
+			"content": {
+				"id": "CVE-2019-19314",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-19314"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

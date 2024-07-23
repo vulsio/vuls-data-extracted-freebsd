@@ -2,60 +2,80 @@
 	"id": "d177d9f9-e317-11d9-8088-00123f0f7307",
 	"advisories": [
 		{
-			"id": "d177d9f9-e317-11d9-8088-00123f0f7307",
-			"title": "nwclient -- multiple vulnerabilities",
-			"description": "\n\t<p>Insecure file permissions, network access control and DNS\n\t  usage put systems that use Legato NetWorker at risk.</p>\n\t<p>When the software is running, several files that contain\n\t  sensitive information are created with insecure permissions.\n\t  The information exposed include passwords and can therefore\n\t  be used for privilege elevation.</p>\n\t<p>An empty \"servers\" file, which should normally\n\t  contain hostnames of authorized backup servers, may allow\n\t  unauthorized backups to be made. Sensitive information can\n\t  be extracted from these backups.</p>\n\t<p>When reverse DNS fails for the Legato client IP a weak\n\t  authorization scheme, containing a flaw that allows\n\t  unauthorized access, is used. This may allow unauthorized\n\t  access.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://portal1.legato.com/resources/bulletins/372.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/3564"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/3840"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/3842"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d177d9f9-e317-11d9-8088-00123f0f7307.html"
-				}
-			],
-			"published": "2005-07-08T00:00:00Z"
+			"content": {
+				"id": "d177d9f9-e317-11d9-8088-00123f0f7307",
+				"title": "nwclient -- multiple vulnerabilities",
+				"description": "\n\t<p>Insecure file permissions, network access control and DNS\n\t  usage put systems that use Legato NetWorker at risk.</p>\n\t<p>When the software is running, several files that contain\n\t  sensitive information are created with insecure permissions.\n\t  The information exposed include passwords and can therefore\n\t  be used for privilege elevation.</p>\n\t<p>An empty \"servers\" file, which should normally\n\t  contain hostnames of authorized backup servers, may allow\n\t  unauthorized backups to be made. Sensitive information can\n\t  be extracted from these backups.</p>\n\t<p>When reverse DNS fails for the Legato client IP a weak\n\t  authorization scheme, containing a flaw that allows\n\t  unauthorized access, is used. This may allow unauthorized\n\t  access.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://portal1.legato.com/resources/bulletins/372.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/3564"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/3840"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/3842"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d177d9f9-e317-11d9-8088-00123f0f7307.html"
+					}
+				],
+				"published": "2005-07-08T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2001-0910",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2001-0910"
-				}
+			"content": {
+				"id": "CVE-2001-0910",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2001-0910"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2002-0113",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2002-0113"
-				}
+			"content": {
+				"id": "CVE-2002-0113",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2002-0113"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2002-0114",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2002-0114"
-				}
+			"content": {
+				"id": "CVE-2002-0114",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2002-0114"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

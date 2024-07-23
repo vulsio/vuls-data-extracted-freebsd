@@ -2,35 +2,45 @@
 	"id": "e4644df8-e7da-11e5-829d-c80aa9043978",
 	"advisories": [
 		{
-			"id": "e4644df8-e7da-11e5-829d-c80aa9043978",
-			"title": "openssh -- command injection when X11Forwarding is enabled",
-			"description": "\n\t<p>The OpenSSH project reports:</p>\n\t<blockquote cite=\"http://www.openssh.com/txt/x11fwd.adv\">\n\t  <p>Missing sanitisation of untrusted input allows an\n\t    authenticated user who is able to request X11 forwarding\n\t    to inject commands to xauth(1).\n\t  </p>\n\t  <p>Injection of xauth commands grants the ability to read\n\t    arbitrary files under the authenticated user's privilege,\n\t    Other xauth commands allow limited information leakage,\n\t    file overwrite, port probing and generally expose xauth(1),\n\t    which was not written with a hostile user in mind, as an\n\t    attack surface.\n\t  </p>\n\t  <p>Mitigation:</p>\n\t  <p>Set X11Forwarding=no in sshd_config. This is the default.</p>\n\t  <p>For authorized_keys that specify a \"command\" restriction,\n\t    also set the \"restrict\" (available in OpenSSH &gt;=7.2) or\n\t    \"no-x11-forwarding\" restrictions.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openssh.com/txt/x11fwd.adv"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:14.openssh.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e4644df8-e7da-11e5-829d-c80aa9043978.html"
-				}
-			],
-			"published": "2016-03-11T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "e4644df8-e7da-11e5-829d-c80aa9043978",
+				"title": "openssh -- command injection when X11Forwarding is enabled",
+				"description": "\n\t<p>The OpenSSH project reports:</p>\n\t<blockquote cite=\"http://www.openssh.com/txt/x11fwd.adv\">\n\t  <p>Missing sanitisation of untrusted input allows an\n\t    authenticated user who is able to request X11 forwarding\n\t    to inject commands to xauth(1).\n\t  </p>\n\t  <p>Injection of xauth commands grants the ability to read\n\t    arbitrary files under the authenticated user's privilege,\n\t    Other xauth commands allow limited information leakage,\n\t    file overwrite, port probing and generally expose xauth(1),\n\t    which was not written with a hostile user in mind, as an\n\t    attack surface.\n\t  </p>\n\t  <p>Mitigation:</p>\n\t  <p>Set X11Forwarding=no in sshd_config. This is the default.</p>\n\t  <p>For authorized_keys that specify a \"command\" restriction,\n\t    also set the \"restrict\" (available in OpenSSH &gt;=7.2) or\n\t    \"no-x11-forwarding\" restrictions.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openssh.com/txt/x11fwd.adv"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:14.openssh.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e4644df8-e7da-11e5-829d-c80aa9043978.html"
+					}
+				],
+				"published": "2016-03-11T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-3115",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3115"
-				}
+			"content": {
+				"id": "CVE-2016-3115",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-3115"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,24 +2,29 @@
 	"id": "15a04b9f-47cb-11e7-a853-001fbc0f280f",
 	"advisories": [
 		{
-			"id": "15a04b9f-47cb-11e7-a853-001fbc0f280f",
-			"title": "ansible -- Input validation flaw in jinja2 templating system",
-			"description": "\n\t<p>RedHat security team reports:</p>\n\t<blockquote cite=\"https://access.redhat.com/security/cve/cve-2017-7481\">\n\t  <p>An input validation flaw was found in Ansible, where it fails to\n\t    properly mark lookup-plugin results as unsafe. If an attacker could\n\t    control the results of lookup() calls, they could inject Unicode\n\t    strings to be parsed by the jinja2 templating system, result in\n\t    code execution.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7481"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://access.redhat.com/security/cve/cve-2017-7481"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/15a04b9f-47cb-11e7-a853-001fbc0f280f.html"
-				}
-			],
-			"published": "2017-06-02T00:00:00Z"
+			"content": {
+				"id": "15a04b9f-47cb-11e7-a853-001fbc0f280f",
+				"title": "ansible -- Input validation flaw in jinja2 templating system",
+				"description": "\n\t<p>RedHat security team reports:</p>\n\t<blockquote cite=\"https://access.redhat.com/security/cve/cve-2017-7481\">\n\t  <p>An input validation flaw was found in Ansible, where it fails to\n\t    properly mark lookup-plugin results as unsafe. If an attacker could\n\t    control the results of lookup() calls, they could inject Unicode\n\t    strings to be parsed by the jinja2 templating system, result in\n\t    code execution.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7481"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://access.redhat.com/security/cve/cve-2017-7481"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/15a04b9f-47cb-11e7-a853-001fbc0f280f.html"
+					}
+				],
+				"published": "2017-06-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

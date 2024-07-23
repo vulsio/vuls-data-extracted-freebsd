@@ -2,24 +2,29 @@
 	"id": "3d19c776-68e7-11ea-91db-0050562a4d7b",
 	"advisories": [
 		{
-			"id": "3d19c776-68e7-11ea-91db-0050562a4d7b",
-			"title": "www/py-bleach -- multiple vulnerabilities",
-			"description": "\n\t<blockquote>\n\t  <p>* ``bleach.clean`` behavior parsing embedded MathML and SVG content\n\t\twith RCDATA tags did not match browser behavior and could result in\n\t\ta mutation XSS.\n\t  </p>\n\t  <p>  Calls to ``bleach.clean`` with ``strip=False`` and ``math`` or\n\t\t``svg`` tags and one or more of the RCDATA tags ``script``,\n\t\t``noscript``, ``style``, ``noframes``, ``iframe``, ``noembed``, or\n\t\t``xmp`` in the allowed tags whitelist were vulnerable to a mutation\n\t\tXSS.\n\t  </p>\n\t  <p>* ``bleach.clean`` behavior parsing ``noscript`` tags did not match\n\t\tbrowser behavior.\n\t  </p>\n\t  <p>  Calls to ``bleach.clean`` allowing ``noscript`` and one or more of\n\t\tthe raw text tags (``title``, ``textarea``, ``script``, ``style``,\n\t\t``noembed``, ``noframes``, ``iframe``, and ``xmp``) were vulnerable\n\t\tto a mutation XSS.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1615315"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1621692"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3d19c776-68e7-11ea-91db-0050562a4d7b.html"
-				}
-			],
-			"published": "2020-03-18T00:00:00Z"
+			"content": {
+				"id": "3d19c776-68e7-11ea-91db-0050562a4d7b",
+				"title": "www/py-bleach -- multiple vulnerabilities",
+				"description": "\n\t<blockquote>\n\t  <p>* ``bleach.clean`` behavior parsing embedded MathML and SVG content\n\t\twith RCDATA tags did not match browser behavior and could result in\n\t\ta mutation XSS.\n\t  </p>\n\t  <p>  Calls to ``bleach.clean`` with ``strip=False`` and ``math`` or\n\t\t``svg`` tags and one or more of the RCDATA tags ``script``,\n\t\t``noscript``, ``style``, ``noframes``, ``iframe``, ``noembed``, or\n\t\t``xmp`` in the allowed tags whitelist were vulnerable to a mutation\n\t\tXSS.\n\t  </p>\n\t  <p>* ``bleach.clean`` behavior parsing ``noscript`` tags did not match\n\t\tbrowser behavior.\n\t  </p>\n\t  <p>  Calls to ``bleach.clean`` allowing ``noscript`` and one or more of\n\t\tthe raw text tags (``title``, ``textarea``, ``script``, ``style``,\n\t\t``noembed``, ``noframes``, ``iframe``, and ``xmp``) were vulnerable\n\t\tto a mutation XSS.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1615315"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1621692"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3d19c776-68e7-11ea-91db-0050562a4d7b.html"
+					}
+				],
+				"published": "2020-03-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

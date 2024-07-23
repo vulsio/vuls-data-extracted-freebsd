@@ -2,30 +2,40 @@
 	"id": "273c6c43-e3ad-11e9-8af7-08002720423d",
 	"advisories": [
 		{
-			"id": "273c6c43-e3ad-11e9-8af7-08002720423d",
-			"title": "mongodb -- Our init scripts check /proc/[pid]/stat should validate that `(${procname})` is the process' command name.",
-			"description": "\n\t<p>Sicheng Liu of Beijing DBSEC Technology Co., Ltd reports:</p>\n\t<blockquote cite=\"https://jira.mongodb.org/browse/SERVER-40563\">\n\t  <p>Incorrect scoping of kill operations in MongoDB Server's packaged SysV init scripts allow users with write access to the PID file to insert arbitrary PIDs to be killed when the root user stops the MongoDB process via SysV init.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://jira.mongodb.org/browse/SERVER-40563"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/273c6c43-e3ad-11e9-8af7-08002720423d.html"
-				}
-			],
-			"published": "2019-09-30T00:00:00Z"
+			"content": {
+				"id": "273c6c43-e3ad-11e9-8af7-08002720423d",
+				"title": "mongodb -- Our init scripts check /proc/[pid]/stat should validate that `(${procname})` is the process' command name.",
+				"description": "\n\t<p>Sicheng Liu of Beijing DBSEC Technology Co., Ltd reports:</p>\n\t<blockquote cite=\"https://jira.mongodb.org/browse/SERVER-40563\">\n\t  <p>Incorrect scoping of kill operations in MongoDB Server's packaged SysV init scripts allow users with write access to the PID file to insert arbitrary PIDs to be killed when the root user stops the MongoDB process via SysV init.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://jira.mongodb.org/browse/SERVER-40563"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/273c6c43-e3ad-11e9-8af7-08002720423d.html"
+					}
+				],
+				"published": "2019-09-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-2389",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-2389"
-				}
+			"content": {
+				"id": "CVE-2019-2389",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-2389"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

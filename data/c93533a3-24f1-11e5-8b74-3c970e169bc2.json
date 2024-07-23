@@ -2,35 +2,45 @@
 	"id": "c93533a3-24f1-11e5-8b74-3c970e169bc2",
 	"advisories": [
 		{
-			"id": "c93533a3-24f1-11e5-8b74-3c970e169bc2",
-			"title": "bind -- denial of service vulnerability",
-			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01267/\">\n\t  <p>A very uncommon combination of zone data has been found\n\t    that triggers a bug in BIND, with the result that named\n\t    will exit with a \"REQUIRE\" failure in name.c when validating\n\t    the data returned in answer to a recursive query.</p>\n\t  <p>A recursive resolver that is performing DNSSEC validation\n\t    can be deliberately terminated by any attacker who can\n\t    cause a query to be performed against a maliciously\n\t    constructed zone.  This will result in a denial of\n\t    service to clients who rely on that resolver.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01267/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:11.bind.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c93533a3-24f1-11e5-8b74-3c970e169bc2.html"
-				}
-			],
-			"published": "2015-07-07T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "c93533a3-24f1-11e5-8b74-3c970e169bc2",
+				"title": "bind -- denial of service vulnerability",
+				"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01267/\">\n\t  <p>A very uncommon combination of zone data has been found\n\t    that triggers a bug in BIND, with the result that named\n\t    will exit with a \"REQUIRE\" failure in name.c when validating\n\t    the data returned in answer to a recursive query.</p>\n\t  <p>A recursive resolver that is performing DNSSEC validation\n\t    can be deliberately terminated by any attacker who can\n\t    cause a query to be performed against a maliciously\n\t    constructed zone.  This will result in a denial of\n\t    service to clients who rely on that resolver.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01267/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:11.bind.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c93533a3-24f1-11e5-8b74-3c970e169bc2.html"
+					}
+				],
+				"published": "2015-07-07T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-4620",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4620"
-				}
+			"content": {
+				"id": "CVE-2015-4620",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-4620"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

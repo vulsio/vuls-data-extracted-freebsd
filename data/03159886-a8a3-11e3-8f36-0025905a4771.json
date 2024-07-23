@@ -2,60 +2,80 @@
 	"id": "03159886-a8a3-11e3-8f36-0025905a4771",
 	"advisories": [
 		{
-			"id": "03159886-a8a3-11e3-8f36-0025905a4771",
-			"title": "asterisk -- multiple vulnerabilities",
-			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/security\">\n\t  <p>Stack Overflow in HTTP Processing of Cookie Headers. Sending a HTTP\n\t    request that is handled by Asterisk with a large number of Cookie\n\t    headers could overflow the stack. You could even exhaust memory if you\n\t    sent an unlimited number of headers in the request.</p>\n\t  <p>Denial of Service Through File Descriptor Exhaustion with chan_sip\n\t    Session-Timers. An attacker can use all available file descriptors\n\t    using SIP INVITE requests. Asterisk will respond with code 400, 420,\n\t    or 422 for INVITEs meeting this criteria.\n\t    Each INVITE meeting these conditions will leak a channel and several\n\t    file descriptors. The file descriptors cannot be released without\n\t    restarting Asterisk which may allow intrusion detection systems to be\n\t    bypassed by sending the requests slowly.</p>\n\t  <p>Remote Crash Vulnerability in PJSIP channel driver. A remotely\n\t    exploitable crash vulnerability exists in the PJSIP channel driver if\n\t    the \"qualify_frequency\" configuration option is enabled on an AOR and\n\t    the remote SIP server challenges for authentication of the resulting\n\t    OPTIONS request. The response handling code wrongly assumes that a\n\t    PJSIP endpoint will always be associated with an outgoing request which\n\t    is incorrect.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://downloads.asterisk.org/pub/security/AST-2014-001.pdf"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://downloads.asterisk.org/pub/security/AST-2014-002.pdf"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://downloads.asterisk.org/pub/security/AST-2014-003.pdf"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.asterisk.org/security"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/03159886-a8a3-11e3-8f36-0025905a4771.html"
-				}
-			],
-			"published": "2014-03-10T00:00:00Z"
+			"content": {
+				"id": "03159886-a8a3-11e3-8f36-0025905a4771",
+				"title": "asterisk -- multiple vulnerabilities",
+				"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/security\">\n\t  <p>Stack Overflow in HTTP Processing of Cookie Headers. Sending a HTTP\n\t    request that is handled by Asterisk with a large number of Cookie\n\t    headers could overflow the stack. You could even exhaust memory if you\n\t    sent an unlimited number of headers in the request.</p>\n\t  <p>Denial of Service Through File Descriptor Exhaustion with chan_sip\n\t    Session-Timers. An attacker can use all available file descriptors\n\t    using SIP INVITE requests. Asterisk will respond with code 400, 420,\n\t    or 422 for INVITEs meeting this criteria.\n\t    Each INVITE meeting these conditions will leak a channel and several\n\t    file descriptors. The file descriptors cannot be released without\n\t    restarting Asterisk which may allow intrusion detection systems to be\n\t    bypassed by sending the requests slowly.</p>\n\t  <p>Remote Crash Vulnerability in PJSIP channel driver. A remotely\n\t    exploitable crash vulnerability exists in the PJSIP channel driver if\n\t    the \"qualify_frequency\" configuration option is enabled on an AOR and\n\t    the remote SIP server challenges for authentication of the resulting\n\t    OPTIONS request. The response handling code wrongly assumes that a\n\t    PJSIP endpoint will always be associated with an outgoing request which\n\t    is incorrect.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://downloads.asterisk.org/pub/security/AST-2014-001.pdf"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://downloads.asterisk.org/pub/security/AST-2014-002.pdf"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://downloads.asterisk.org/pub/security/AST-2014-003.pdf"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.asterisk.org/security"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/03159886-a8a3-11e3-8f36-0025905a4771.html"
+					}
+				],
+				"published": "2014-03-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-2286",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-2286"
-				}
+			"content": {
+				"id": "CVE-2014-2286",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-2286"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-2287",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-2287"
-				}
+			"content": {
+				"id": "CVE-2014-2287",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-2287"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-2288",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-2288"
-				}
+			"content": {
+				"id": "CVE-2014-2288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-2288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

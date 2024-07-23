@@ -2,126 +2,171 @@
 	"id": "b0da85af-21a3-4c15-a137-fe9e4bc86002",
 	"advisories": [
 		{
-			"id": "b0da85af-21a3-4c15-a137-fe9e4bc86002",
-			"title": "ffmpeg -- multiple vulnerabilities",
-			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-6761\">\n\t  <p>The update_dimensions function in libavcodec/vp8.c in\n\t    FFmpeg through 2.8.1, as used in Google Chrome before\n\t    46.0.2490.71 and other products, relies on a\n\t    coefficient-partition count during multi-threaded operation,\n\t    which allows remote attackers to cause a denial of service\n\t    (race condition and memory corruption) or possibly have\n\t    unspecified other impact via a crafted WebM file.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8216\">\n\t  <p>The ljpeg_decode_yuv_scan function in\n\t    libavcodec/mjpegdec.c in FFmpeg before 2.8.2 omits certain\n\t    width and height checks, which allows remote attackers to\n\t    cause a denial of service (out-of-bounds array access) or\n\t    possibly have unspecified other impact via crafted MJPEG\n\t    data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8217\">\n\t  <p>The ff_hevc_parse_sps function in libavcodec/hevc_ps.c in\n\t    FFmpeg before 2.8.2 does not validate the Chroma Format\n\t    Indicator, which allows remote attackers to cause a denial\n\t    of service (out-of-bounds array access) or possibly have\n\t    unspecified other impact via crafted High Efficiency Video\n\t    Coding (HEVC) data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8218\">\n\t  <p>The decode_uncompressed function in libavcodec/faxcompr.c\n\t    in FFmpeg before 2.8.2 does not validate uncompressed runs,\n\t    which allows remote attackers to cause a denial of service\n\t    (out-of-bounds array access) or possibly have unspecified\n\t    other impact via crafted CCITT FAX data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8219\">\n\t  <p>The init_tile function in libavcodec/jpeg2000dec.c in\n\t    FFmpeg before 2.8.2 does not enforce minimum-value and\n\t    maximum-value constraints on tile coordinates, which allows\n\t    remote attackers to cause a denial of service (out-of-bounds\n\t    array access) or possibly have unspecified other impact via\n\t    crafted JPEG 2000 data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8363\">\n\t  <p>The jpeg2000_read_main_headers function in\n\t    libavcodec/jpeg2000dec.c in FFmpeg before 2.6.5, 2.7.x\n\t    before 2.7.3, and 2.8.x through 2.8.2 does not enforce\n\t    uniqueness of the SIZ marker in a JPEG 2000 image, which\n\t    allows remote attackers to cause a denial of service\n\t    (out-of-bounds heap-memory access) or possibly have\n\t    unspecified other impact via a crafted image with two or\n\t    more of these markers.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8364\">\n\t  <p>Integer overflow in the ff_ivi_init_planes function in\n\t    libavcodec/ivi.c in FFmpeg before 2.6.5, 2.7.x before 2.7.3,\n\t    and 2.8.x through 2.8.2 allows remote attackers to cause a\n\t    denial of service (out-of-bounds heap-memory access) or\n\t    possibly have unspecified other impact via crafted image\n\t    dimensions in Indeo Video Interactive data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8365\">\n\t  <p>The smka_decode_frame function in libavcodec/smacker.c in\n\t    FFmpeg before 2.6.5, 2.7.x before 2.7.3, and 2.8.x through\n\t    2.8.2 does not verify that the data size is consistent with\n\t    the number of channels, which allows remote attackers to\n\t    cause a denial of service (out-of-bounds array access) or\n\t    possibly have unspecified other impact via crafted Smacker\n\t    data.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://ffmpeg.org/security.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=43492ff3ab68a343c1264801baa1d5a02de10167"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=44a7f17d0b20e6f8d836b2957e3e357b639f19a2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=4a9af07a49295e014b059c1ab624c40345af5892"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=93f30f825c08477fe8f76be00539e96014cc83c8"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=d24888ef19ba38b787b11d1ee091a3d94920c76a"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=d4a731b84a08f0f3839eaaaf82e97d8d9c67da46"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=dabea74d0e82ea80cd344f630497cafcb3ef872c"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=df91aa034b82b77a3c4e01791f4a2b2ff6c82066"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b0da85af-21a3-4c15-a137-fe9e4bc86002.html"
-				}
-			],
-			"published": "2015-12-02T00:00:00Z",
-			"modified": "2018-03-25T00:00:00Z"
+			"content": {
+				"id": "b0da85af-21a3-4c15-a137-fe9e4bc86002",
+				"title": "ffmpeg -- multiple vulnerabilities",
+				"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-6761\">\n\t  <p>The update_dimensions function in libavcodec/vp8.c in\n\t    FFmpeg through 2.8.1, as used in Google Chrome before\n\t    46.0.2490.71 and other products, relies on a\n\t    coefficient-partition count during multi-threaded operation,\n\t    which allows remote attackers to cause a denial of service\n\t    (race condition and memory corruption) or possibly have\n\t    unspecified other impact via a crafted WebM file.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8216\">\n\t  <p>The ljpeg_decode_yuv_scan function in\n\t    libavcodec/mjpegdec.c in FFmpeg before 2.8.2 omits certain\n\t    width and height checks, which allows remote attackers to\n\t    cause a denial of service (out-of-bounds array access) or\n\t    possibly have unspecified other impact via crafted MJPEG\n\t    data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8217\">\n\t  <p>The ff_hevc_parse_sps function in libavcodec/hevc_ps.c in\n\t    FFmpeg before 2.8.2 does not validate the Chroma Format\n\t    Indicator, which allows remote attackers to cause a denial\n\t    of service (out-of-bounds array access) or possibly have\n\t    unspecified other impact via crafted High Efficiency Video\n\t    Coding (HEVC) data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8218\">\n\t  <p>The decode_uncompressed function in libavcodec/faxcompr.c\n\t    in FFmpeg before 2.8.2 does not validate uncompressed runs,\n\t    which allows remote attackers to cause a denial of service\n\t    (out-of-bounds array access) or possibly have unspecified\n\t    other impact via crafted CCITT FAX data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8219\">\n\t  <p>The init_tile function in libavcodec/jpeg2000dec.c in\n\t    FFmpeg before 2.8.2 does not enforce minimum-value and\n\t    maximum-value constraints on tile coordinates, which allows\n\t    remote attackers to cause a denial of service (out-of-bounds\n\t    array access) or possibly have unspecified other impact via\n\t    crafted JPEG 2000 data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8363\">\n\t  <p>The jpeg2000_read_main_headers function in\n\t    libavcodec/jpeg2000dec.c in FFmpeg before 2.6.5, 2.7.x\n\t    before 2.7.3, and 2.8.x through 2.8.2 does not enforce\n\t    uniqueness of the SIZ marker in a JPEG 2000 image, which\n\t    allows remote attackers to cause a denial of service\n\t    (out-of-bounds heap-memory access) or possibly have\n\t    unspecified other impact via a crafted image with two or\n\t    more of these markers.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8364\">\n\t  <p>Integer overflow in the ff_ivi_init_planes function in\n\t    libavcodec/ivi.c in FFmpeg before 2.6.5, 2.7.x before 2.7.3,\n\t    and 2.8.x through 2.8.2 allows remote attackers to cause a\n\t    denial of service (out-of-bounds heap-memory access) or\n\t    possibly have unspecified other impact via crafted image\n\t    dimensions in Indeo Video Interactive data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8365\">\n\t  <p>The smka_decode_frame function in libavcodec/smacker.c in\n\t    FFmpeg before 2.6.5, 2.7.x before 2.7.3, and 2.8.x through\n\t    2.8.2 does not verify that the data size is consistent with\n\t    the number of channels, which allows remote attackers to\n\t    cause a denial of service (out-of-bounds array access) or\n\t    possibly have unspecified other impact via crafted Smacker\n\t    data.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://ffmpeg.org/security.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=43492ff3ab68a343c1264801baa1d5a02de10167"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=44a7f17d0b20e6f8d836b2957e3e357b639f19a2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=4a9af07a49295e014b059c1ab624c40345af5892"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=93f30f825c08477fe8f76be00539e96014cc83c8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=d24888ef19ba38b787b11d1ee091a3d94920c76a"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=d4a731b84a08f0f3839eaaaf82e97d8d9c67da46"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=dabea74d0e82ea80cd344f630497cafcb3ef872c"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=df91aa034b82b77a3c4e01791f4a2b2ff6c82066"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b0da85af-21a3-4c15-a137-fe9e4bc86002.html"
+					}
+				],
+				"published": "2015-12-02T00:00:00Z",
+				"modified": "2018-03-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-6761",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6761"
-				}
+			"content": {
+				"id": "CVE-2015-6761",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6761"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8216",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8216"
-				}
+			"content": {
+				"id": "CVE-2015-8216",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8216"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8217",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8217"
-				}
+			"content": {
+				"id": "CVE-2015-8217",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8217"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8218",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8218"
-				}
+			"content": {
+				"id": "CVE-2015-8218",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8218"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8219",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8219"
-				}
+			"content": {
+				"id": "CVE-2015-8219",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8219"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8363",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8363"
-				}
+			"content": {
+				"id": "CVE-2015-8363",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8363"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8364",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8364"
-				}
+			"content": {
+				"id": "CVE-2015-8364",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8364"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8365",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8365"
-				}
+			"content": {
+				"id": "CVE-2015-8365",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8365"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

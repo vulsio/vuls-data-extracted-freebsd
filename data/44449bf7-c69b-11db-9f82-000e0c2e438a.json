@@ -2,31 +2,41 @@
 	"id": "44449bf7-c69b-11db-9f82-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "44449bf7-c69b-11db-9f82-000e0c2e438a",
-			"title": "gtar -- name mangling symlink vulnerability",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Symlinks created using the \"GNUTYPE_NAMES\" tar extension can\n\t  be absolute due to lack of proper sanity checks.</p>\n\t<h1>Impact:</h1>\n\t<p>If an attacker can get a user to extract a specially crafted\n\t  tar archive the attacker can overwrite arbitrary files with\n\t  the permissions of the user running gtar.  If file system\n\t  permissions allow it, this may allow the attacker to overwrite\n\t  important system file (if gtar is being run as root), or\n\t  important user configuration files such as .tcshrc or .bashrc,\n\t  which would allow the attacker to run arbitrary commands.</p>\n\t<h1>Workaround:</h1>\n\t<p>Use \"bsdtar\", which is the default tar implementation in\n\t  FreeBSD 5.3 and higher.  For FreeBSD 4.x, bsdtar is available\n\t  in the FreeBSD Ports Collection as\n\t  ports/archivers/libarchive.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:26.gtar.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/44449bf7-c69b-11db-9f82-000e0c2e438a.html"
-				}
-			],
-			"published": "2007-02-27T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "44449bf7-c69b-11db-9f82-000e0c2e438a",
+				"title": "gtar -- name mangling symlink vulnerability",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Symlinks created using the \"GNUTYPE_NAMES\" tar extension can\n\t  be absolute due to lack of proper sanity checks.</p>\n\t<h1>Impact:</h1>\n\t<p>If an attacker can get a user to extract a specially crafted\n\t  tar archive the attacker can overwrite arbitrary files with\n\t  the permissions of the user running gtar.  If file system\n\t  permissions allow it, this may allow the attacker to overwrite\n\t  important system file (if gtar is being run as root), or\n\t  important user configuration files such as .tcshrc or .bashrc,\n\t  which would allow the attacker to run arbitrary commands.</p>\n\t<h1>Workaround:</h1>\n\t<p>Use \"bsdtar\", which is the default tar implementation in\n\t  FreeBSD 5.3 and higher.  For FreeBSD 4.x, bsdtar is available\n\t  in the FreeBSD Ports Collection as\n\t  ports/archivers/libarchive.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:26.gtar.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/44449bf7-c69b-11db-9f82-000e0c2e438a.html"
+					}
+				],
+				"published": "2007-02-27T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-6097",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-6097"
-				}
+			"content": {
+				"id": "CVE-2006-6097",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-6097"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

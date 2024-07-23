@@ -2,35 +2,45 @@
 	"id": "3761df02-0f9c-11e0-becc-0022156e8794",
 	"advisories": [
 		{
-			"id": "3761df02-0f9c-11e0-becc-0022156e8794",
-			"title": "php -- NULL byte poisoning",
-			"description": "\n\t<p>PHP-specific version of NULL-byte poisoning was briefly\n\t  described by ShAnKaR:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/archive/1/archive/1/445788/100/0/threaded\">\n\t  <p>Poison NULL byte vulnerability for perl CGI applications\n\t    was described in\n\t    <a href=\"http://artofhacking.com/files/phrack/phrack55/P55-07.TXT\">[1]</a>.\n\t    ShAnKaR noted, that same vulnerability also affects\n\t    different PHP applications.</p>\n\t</blockquote>\n\t<p>PHP developers report that branch 5.3 received a fix:</p>\n\t<blockquote cite=\"http://www.php.net/releases/5_3_4.php\">\n\t  <p>Paths with NULL in them (foo\\0bar.txt) are now considered\n\t    as invalid (CVE-2006-7243).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://artofhacking.com/files/phrack/phrack55/P55-07.TXT"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/archive/1/archive/1/445788/100/0/threaded"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3761df02-0f9c-11e0-becc-0022156e8794.html"
-				}
-			],
-			"published": "2011-01-13T00:00:00Z",
-			"modified": "2012-11-25T00:00:00Z"
+			"content": {
+				"id": "3761df02-0f9c-11e0-becc-0022156e8794",
+				"title": "php -- NULL byte poisoning",
+				"description": "\n\t<p>PHP-specific version of NULL-byte poisoning was briefly\n\t  described by ShAnKaR:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/archive/1/archive/1/445788/100/0/threaded\">\n\t  <p>Poison NULL byte vulnerability for perl CGI applications\n\t    was described in\n\t    <a href=\"http://artofhacking.com/files/phrack/phrack55/P55-07.TXT\">[1]</a>.\n\t    ShAnKaR noted, that same vulnerability also affects\n\t    different PHP applications.</p>\n\t</blockquote>\n\t<p>PHP developers report that branch 5.3 received a fix:</p>\n\t<blockquote cite=\"http://www.php.net/releases/5_3_4.php\">\n\t  <p>Paths with NULL in them (foo\\0bar.txt) are now considered\n\t    as invalid (CVE-2006-7243).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://artofhacking.com/files/phrack/phrack55/P55-07.TXT"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/archive/1/archive/1/445788/100/0/threaded"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3761df02-0f9c-11e0-becc-0022156e8794.html"
+					}
+				],
+				"published": "2011-01-13T00:00:00Z",
+				"modified": "2012-11-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-7243",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-7243"
-				}
+			"content": {
+				"id": "CVE-2006-7243",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-7243"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

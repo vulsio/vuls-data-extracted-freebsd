@@ -2,34 +2,44 @@
 	"id": "f2217cdf-01e4-11e6-b1ce-002590263bf5",
 	"advisories": [
 		{
-			"id": "f2217cdf-01e4-11e6-b1ce-002590263bf5",
-			"title": "go -- remote denial of service",
-			"description": "\n\t<p>Jason Buberel reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/04/05/2\">\n\t  <p>Go has an infinite loop in several big integer routines that makes\n\t    Go programs vulnerable to remote denial of service attacks. Programs\n\t    using HTTPS client authentication or the Go ssh server libraries are\n\t    both exposed to this vulnerability.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2016/04/05/2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://golang.org/cl/21533"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f2217cdf-01e4-11e6-b1ce-002590263bf5.html"
-				}
-			],
-			"published": "2016-04-14T00:00:00Z"
+			"content": {
+				"id": "f2217cdf-01e4-11e6-b1ce-002590263bf5",
+				"title": "go -- remote denial of service",
+				"description": "\n\t<p>Jason Buberel reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2016/04/05/2\">\n\t  <p>Go has an infinite loop in several big integer routines that makes\n\t    Go programs vulnerable to remote denial of service attacks. Programs\n\t    using HTTPS client authentication or the Go ssh server libraries are\n\t    both exposed to this vulnerability.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2016/04/05/2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://golang.org/cl/21533"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f2217cdf-01e4-11e6-b1ce-002590263bf5.html"
+					}
+				],
+				"published": "2016-04-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-3959",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3959"
-				}
+			"content": {
+				"id": "CVE-2016-3959",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-3959"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

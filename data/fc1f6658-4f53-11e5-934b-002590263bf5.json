@@ -2,39 +2,49 @@
 	"id": "fc1f6658-4f53-11e5-934b-002590263bf5",
 	"advisories": [
 		{
-			"id": "fc1f6658-4f53-11e5-934b-002590263bf5",
-			"title": "ghostscript -- denial of service (crash) via crafted Postscript files",
-			"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3228\">\n\t  <p>Integer overflow in the gs_heap_alloc_bytes function in\n\t    base/gsmalloc.c in Ghostscript 9.15 and earlier allows remote\n\t    attackers to cause a denial of service (crash) via a crafted\n\t    Postscript (ps) file, as demonstrated by using the ps2pdf command,\n\t    which triggers an out-of-bounds read or write.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.ghostscript.com/show_bug.cgi?id=696041"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.ghostscript.com/show_bug.cgi?id=696070"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.ghostscript.com/?p=ghostpdl.git;a=commitdiff;h=0c0b0859"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/fc1f6658-4f53-11e5-934b-002590263bf5.html"
-				}
-			],
-			"published": "2015-09-01T00:00:00Z",
-			"modified": "2015-09-02T00:00:00Z"
+			"content": {
+				"id": "fc1f6658-4f53-11e5-934b-002590263bf5",
+				"title": "ghostscript -- denial of service (crash) via crafted Postscript files",
+				"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3228\">\n\t  <p>Integer overflow in the gs_heap_alloc_bytes function in\n\t    base/gsmalloc.c in Ghostscript 9.15 and earlier allows remote\n\t    attackers to cause a denial of service (crash) via a crafted\n\t    Postscript (ps) file, as demonstrated by using the ps2pdf command,\n\t    which triggers an out-of-bounds read or write.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.ghostscript.com/show_bug.cgi?id=696041"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.ghostscript.com/show_bug.cgi?id=696070"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.ghostscript.com/?p=ghostpdl.git;a=commitdiff;h=0c0b0859"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fc1f6658-4f53-11e5-934b-002590263bf5.html"
+					}
+				],
+				"published": "2015-09-01T00:00:00Z",
+				"modified": "2015-09-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3228",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3228"
-				}
+			"content": {
+				"id": "CVE-2015-3228",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3228"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

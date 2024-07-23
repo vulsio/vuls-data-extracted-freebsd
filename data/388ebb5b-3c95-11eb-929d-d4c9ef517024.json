@@ -2,30 +2,40 @@
 	"id": "388ebb5b-3c95-11eb-929d-d4c9ef517024",
 	"advisories": [
 		{
-			"id": "388ebb5b-3c95-11eb-929d-d4c9ef517024",
-			"title": "Unbound/NSD -- Denial of service vulnerability",
-			"description": "\n\t<p>NLNetLabs reports:</p>\n\t<blockquote cite=\"https://nlnetlabs.nl/downloads/unbound/CVE-2020-28935.txt\">\n\t  <p>Unbound and NSD when writing the PID file would not check if an\n\t    existing file was a symlink. This could allow for a local symlink \\\n\t    attack if an attacker has access to the user Unbound/NSD runs as.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nlnetlabs.nl/downloads/unbound/CVE-2020-28935.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/388ebb5b-3c95-11eb-929d-d4c9ef517024.html"
-				}
-			],
-			"published": "2020-12-12T00:00:00Z"
+			"content": {
+				"id": "388ebb5b-3c95-11eb-929d-d4c9ef517024",
+				"title": "Unbound/NSD -- Denial of service vulnerability",
+				"description": "\n\t<p>NLNetLabs reports:</p>\n\t<blockquote cite=\"https://nlnetlabs.nl/downloads/unbound/CVE-2020-28935.txt\">\n\t  <p>Unbound and NSD when writing the PID file would not check if an\n\t    existing file was a symlink. This could allow for a local symlink \\\n\t    attack if an attacker has access to the user Unbound/NSD runs as.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nlnetlabs.nl/downloads/unbound/CVE-2020-28935.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/388ebb5b-3c95-11eb-929d-d4c9ef517024.html"
+					}
+				],
+				"published": "2020-12-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-28935",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-28935"
-				}
+			"content": {
+				"id": "CVE-2020-28935",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-28935"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

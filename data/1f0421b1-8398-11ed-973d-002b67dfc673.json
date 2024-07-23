@@ -2,108 +2,148 @@
 	"id": "1f0421b1-8398-11ed-973d-002b67dfc673",
 	"advisories": [
 		{
-			"id": "1f0421b1-8398-11ed-973d-002b67dfc673",
-			"title": "freerdp -- multiple vulnerabilities",
-			"description": "\n\t<p>FreeRDP reports:</p>\n\t<blockquote cite=\"https://www.freerdp.com/2022/11/16/2_9_0-release\">\n\t  <p>GHSA-5w4j-mrrh-jjrm: Out of bound read in zgfx decoder.</p>\n\t  <p>GHSA-99cm-4gw7-c8jh: Undefined behaviour in zgfx decoder.</p>\n\t  <p>GHSA-387j-8j96-7q35: Division by zero in urbdrc channel.</p>\n\t  <p>GHSA-mvxm-wfj2-5fvh: Missing length validation in urbdrc channel.</p>\n\t  <p>GHSA-qfq2-82qr-7f4j: Heap buffer overflow in urbdrc channel.</p>\n\t  <p>GHSA-c5xq-8v35-pffg: Missing path sanitation with `drive` channel.</p>\n\t  <p>GHSA-pmv3-wpw4-pw5h: Missing input length validation in `drive` channel.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39316"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39317"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39318"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39319"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39320"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39347"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-41877"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1f0421b1-8398-11ed-973d-002b67dfc673.html"
-				}
-			],
-			"published": "2022-12-24T00:00:00Z"
+			"content": {
+				"id": "1f0421b1-8398-11ed-973d-002b67dfc673",
+				"title": "freerdp -- multiple vulnerabilities",
+				"description": "\n\t<p>FreeRDP reports:</p>\n\t<blockquote cite=\"https://www.freerdp.com/2022/11/16/2_9_0-release\">\n\t  <p>GHSA-5w4j-mrrh-jjrm: Out of bound read in zgfx decoder.</p>\n\t  <p>GHSA-99cm-4gw7-c8jh: Undefined behaviour in zgfx decoder.</p>\n\t  <p>GHSA-387j-8j96-7q35: Division by zero in urbdrc channel.</p>\n\t  <p>GHSA-mvxm-wfj2-5fvh: Missing length validation in urbdrc channel.</p>\n\t  <p>GHSA-qfq2-82qr-7f4j: Heap buffer overflow in urbdrc channel.</p>\n\t  <p>GHSA-c5xq-8v35-pffg: Missing path sanitation with `drive` channel.</p>\n\t  <p>GHSA-pmv3-wpw4-pw5h: Missing input length validation in `drive` channel.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39316"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39317"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39318"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39319"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39320"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39347"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-41877"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1f0421b1-8398-11ed-973d-002b67dfc673.html"
+					}
+				],
+				"published": "2022-12-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-39316",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39316"
-				}
+			"content": {
+				"id": "CVE-2022-39316",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-39316"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-39317",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39317"
-				}
+			"content": {
+				"id": "CVE-2022-39317",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-39317"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-39318",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39318"
-				}
+			"content": {
+				"id": "CVE-2022-39318",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-39318"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-39319",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39319"
-				}
+			"content": {
+				"id": "CVE-2022-39319",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-39319"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-39320",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39320"
-				}
+			"content": {
+				"id": "CVE-2022-39320",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-39320"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-39347",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-39347"
-				}
+			"content": {
+				"id": "CVE-2022-39347",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-39347"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-41877",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-41877"
-				}
+			"content": {
+				"id": "CVE-2022-41877",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-41877"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

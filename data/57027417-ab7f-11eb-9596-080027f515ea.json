@@ -2,30 +2,40 @@
 	"id": "57027417-ab7f-11eb-9596-080027f515ea",
 	"advisories": [
 		{
-			"id": "57027417-ab7f-11eb-9596-080027f515ea",
-			"title": "RDoc -- command injection vulnerability",
-			"description": "\n\t<p>Alexandr Savca reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2021/05/02/os-command-injection-in-rdoc/\">\n\t  <p>\n\t    RDoc used to call Kernel#open to open a local file. If a Ruby project\n\t    has a file whose name starts with | and ends with tags, the command\n\t    following the pipe character is executed. A malicious Ruby project\n\t    could exploit it to run an arbitrary command execution against a user\n\t    who attempts to run rdoc command.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.ruby-lang.org/en/news/2021/05/02/os-command-injection-in-rdoc/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/57027417-ab7f-11eb-9596-080027f515ea.html"
-				}
-			],
-			"published": "2021-05-02T00:00:00Z"
+			"content": {
+				"id": "57027417-ab7f-11eb-9596-080027f515ea",
+				"title": "RDoc -- command injection vulnerability",
+				"description": "\n\t<p>Alexandr Savca reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2021/05/02/os-command-injection-in-rdoc/\">\n\t  <p>\n\t    RDoc used to call Kernel#open to open a local file. If a Ruby project\n\t    has a file whose name starts with | and ends with tags, the command\n\t    following the pipe character is executed. A malicious Ruby project\n\t    could exploit it to run an arbitrary command execution against a user\n\t    who attempts to run rdoc command.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.ruby-lang.org/en/news/2021/05/02/os-command-injection-in-rdoc/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/57027417-ab7f-11eb-9596-080027f515ea.html"
+					}
+				],
+				"published": "2021-05-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-31799",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-31799"
-				}
+			"content": {
+				"id": "CVE-2021-31799",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-31799"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

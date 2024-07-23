@@ -2,30 +2,40 @@
 	"id": "5d91370b-61fd-11eb-b87a-901b0ef719ab",
 	"advisories": [
 		{
-			"id": "5d91370b-61fd-11eb-b87a-901b0ef719ab",
-			"title": "FreeBSD -- Xen guests can triger backend Out Of Memory",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Some OSes (including Linux, FreeBSD, and NetBSD) are processing watch\n\tevents using a single thread.  If the events are received faster than\n\tthe thread is able to handle, they will get queued.</p>\n\t<p>As the queue is unbound, a guest may be able to trigger a OOM in\n\tthe backend.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:02.xenoom.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5d91370b-61fd-11eb-b87a-901b0ef719ab.html"
-				}
-			],
-			"published": "2021-01-29T00:00:00Z"
+			"content": {
+				"id": "5d91370b-61fd-11eb-b87a-901b0ef719ab",
+				"title": "FreeBSD -- Xen guests can triger backend Out Of Memory",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Some OSes (including Linux, FreeBSD, and NetBSD) are processing watch\n\tevents using a single thread.  If the events are received faster than\n\tthe thread is able to handle, they will get queued.</p>\n\t<p>As the queue is unbound, a guest may be able to trigger a OOM in\n\tthe backend.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:02.xenoom.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5d91370b-61fd-11eb-b87a-901b0ef719ab.html"
+					}
+				],
+				"published": "2021-01-29T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-29568",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-29568"
-				}
+			"content": {
+				"id": "CVE-2020-29568",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-29568"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

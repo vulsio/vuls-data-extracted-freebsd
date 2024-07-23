@@ -2,57 +2,82 @@
 	"id": "f661184a-eb90-11ee-92fc-1c697a616631",
 	"advisories": [
 		{
-			"id": "f661184a-eb90-11ee-92fc-1c697a616631",
-			"title": "emacs -- multiple vulnerabilities",
-			"description": "\n\t<p>GNU Emacs developers report:</p>\n\t<blockquote cite=\"https://git.savannah.gnu.org/cgit/emacs.git/tree/etc/NEWS?h=emacs-29.3\">\n\t  <p>Emacs 29.3 is an emergency bugfix release intended to fix several security vulnerabilities.</p>\n\t<ul>\n\t  <li>Arbitrary Lisp code is no longer evaluated as part of turning on Org mode.  This is for security reasons, to avoid evaluating malicious Lisp code.</li>\n\t  <li>New buffer-local variable 'untrusted-content'.  When this is non-nil, Lisp programs should treat buffer contents with extra caution.</li>\n\t  <li>Gnus now treats inline MIME contents as untrusted.  To get back previous insecure behavior, 'untrusted-content' should be reset to nil in the buffer.</li>\n\t  <li>LaTeX preview is now by default disabled for email attachments.  To get back previous insecure behavior, set the variable 'org--latex-preview-when-risky' to a non-nil value.</li>\n\t  <li>Org mode now considers contents of remote files to be untrusted.  Remote files are recognized by calling 'file-remote-p'.</li>\n\t</ul>\n\t</blockquote>\n\t",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.savannah.gnu.org/cgit/emacs.git/tree/etc/NEWS?h=emacs-29.3"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f661184a-eb90-11ee-92fc-1c697a616631.html"
-				}
-			],
-			"published": "2024-03-26T00:00:00Z"
+			"content": {
+				"id": "f661184a-eb90-11ee-92fc-1c697a616631",
+				"title": "emacs -- multiple vulnerabilities",
+				"description": "\n\t<p>GNU Emacs developers report:</p>\n\t<blockquote cite=\"https://git.savannah.gnu.org/cgit/emacs.git/tree/etc/NEWS?h=emacs-29.3\">\n\t  <p>Emacs 29.3 is an emergency bugfix release intended to fix several security vulnerabilities.</p>\n\t<ul>\n\t  <li>Arbitrary Lisp code is no longer evaluated as part of turning on Org mode.  This is for security reasons, to avoid evaluating malicious Lisp code.</li>\n\t  <li>New buffer-local variable 'untrusted-content'.  When this is non-nil, Lisp programs should treat buffer contents with extra caution.</li>\n\t  <li>Gnus now treats inline MIME contents as untrusted.  To get back previous insecure behavior, 'untrusted-content' should be reset to nil in the buffer.</li>\n\t  <li>LaTeX preview is now by default disabled for email attachments.  To get back previous insecure behavior, set the variable 'org--latex-preview-when-risky' to a non-nil value.</li>\n\t  <li>Org mode now considers contents of remote files to be untrusted.  Remote files are recognized by calling 'file-remote-p'.</li>\n\t</ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.savannah.gnu.org/cgit/emacs.git/tree/etc/NEWS?h=emacs-29.3"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f661184a-eb90-11ee-92fc-1c697a616631.html"
+					}
+				],
+				"published": "2024-03-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2024-30202",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-30202"
-				}
+			"content": {
+				"id": "CVE-2024-30202",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-30202"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2024-30203",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-30203"
-				}
+			"content": {
+				"id": "CVE-2024-30203",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-30203"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2024-30204",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-30204"
-				}
+			"content": {
+				"id": "CVE-2024-30204",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-30204"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2024-30205",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-30205"
-				}
+			"content": {
+				"id": "CVE-2024-30205",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-30205"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

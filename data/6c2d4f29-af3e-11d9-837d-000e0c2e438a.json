@@ -2,51 +2,66 @@
 	"id": "6c2d4f29-af3e-11d9-837d-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "6c2d4f29-af3e-11d9-837d-000e0c2e438a",
-			"title": "gld -- format string and buffer overflow vulnerabilities",
-			"description": "\n\t<p>Gld has been found vulnerable to multiple buffer overflows as\n\t  well as multiple format string vulnerabilities.</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=111339935903880\">\n\t  <p>An attacker could exploit this vulnerability to execute\n\t    arbitrary code with the permissions of the user running Gld,\n\t    the default user being root.</p>\n\t</blockquote>\n\t<p>The FreeBSD port defaults to running gld as the root user.\n\t  The risk of exploitation can be minimized by making gld\n\t  listen on the loopback address only, or configure it to only\n\t  accept connections from trusted smtp servers.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111339935903880"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111342432325670"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/13129"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/13133"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6c2d4f29-af3e-11d9-837d-000e0c2e438a.html"
-				}
-			],
-			"published": "2005-04-19T00:00:00Z"
+			"content": {
+				"id": "6c2d4f29-af3e-11d9-837d-000e0c2e438a",
+				"title": "gld -- format string and buffer overflow vulnerabilities",
+				"description": "\n\t<p>Gld has been found vulnerable to multiple buffer overflows as\n\t  well as multiple format string vulnerabilities.</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=111339935903880\">\n\t  <p>An attacker could exploit this vulnerability to execute\n\t    arbitrary code with the permissions of the user running Gld,\n\t    the default user being root.</p>\n\t</blockquote>\n\t<p>The FreeBSD port defaults to running gld as the root user.\n\t  The risk of exploitation can be minimized by making gld\n\t  listen on the loopback address only, or configure it to only\n\t  accept connections from trusted smtp servers.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111339935903880"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111342432325670"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/13129"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/13133"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6c2d4f29-af3e-11d9-837d-000e0c2e438a.html"
+					}
+				],
+				"published": "2005-04-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-1099",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1099"
-				}
+			"content": {
+				"id": "CVE-2005-1099",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-1099"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2005-1100",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1100"
-				}
+			"content": {
+				"id": "CVE-2005-1100",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-1100"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

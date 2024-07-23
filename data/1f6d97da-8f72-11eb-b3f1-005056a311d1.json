@@ -2,43 +2,58 @@
 	"id": "1f6d97da-8f72-11eb-b3f1-005056a311d1",
 	"advisories": [
 		{
-			"id": "1f6d97da-8f72-11eb-b3f1-005056a311d1",
-			"title": "samba -- Multiple Vulnerabilities",
-			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/history/security.html\">\n\t  <ul>\n\t  <li>CVE-2020-27840: An anonymous attacker can crash the Samba AD DC\n\t\tLDAP server by sending easily crafted DNs as\n\t\tpart of a bind request. More serious heap corruption\n\t\tis likely also possible.</li>\n\t  <li>CVE-2021-20277: User-controlled LDAP filter strings against\n\t\tthe AD DC LDAP server may crash the LDAP server.</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.samba.org/samba/security/CVE-2020-27840.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.samba.org/samba/security/CVE-2021-20277.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1f6d97da-8f72-11eb-b3f1-005056a311d1.html"
-				}
-			],
-			"published": "2021-03-28T00:00:00Z"
+			"content": {
+				"id": "1f6d97da-8f72-11eb-b3f1-005056a311d1",
+				"title": "samba -- Multiple Vulnerabilities",
+				"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/history/security.html\">\n\t  <ul>\n\t  <li>CVE-2020-27840: An anonymous attacker can crash the Samba AD DC\n\t\tLDAP server by sending easily crafted DNs as\n\t\tpart of a bind request. More serious heap corruption\n\t\tis likely also possible.</li>\n\t  <li>CVE-2021-20277: User-controlled LDAP filter strings against\n\t\tthe AD DC LDAP server may crash the LDAP server.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.samba.org/samba/security/CVE-2020-27840.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.samba.org/samba/security/CVE-2021-20277.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1f6d97da-8f72-11eb-b3f1-005056a311d1.html"
+					}
+				],
+				"published": "2021-03-28T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-27840",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-27840"
-				}
+			"content": {
+				"id": "CVE-2020-27840",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-27840"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-20277",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-20277"
-				}
+			"content": {
+				"id": "CVE-2021-20277",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-20277"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

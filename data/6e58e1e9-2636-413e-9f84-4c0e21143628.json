@@ -2,139 +2,189 @@
 	"id": "6e58e1e9-2636-413e-9f84-4c0e21143628",
 	"advisories": [
 		{
-			"id": "6e58e1e9-2636-413e-9f84-4c0e21143628",
-			"title": "libssh2 -- multiple issues",
-			"description": "\n\t<p>libssh2 developers report:</p>\n\t<blockquote cite=\"https://github.com/libssh2/libssh2/releases/tag/libssh2-1.8.1\">\n\t  <ul>\n\t    <li>Defend against possible integer overflows in comp_method_zlib_decomp.</li>\n\t    <li>Defend against writing beyond the end of the payload in _libssh2_transport_read().</li>\n\t    <li>Sanitize padding_length - _libssh2_transport_read().</li>\n\t    <li>This prevents an underflow resulting in a potential out-of-bounds read if a server sends a too-large padding_length, possibly with malicious intent.</li>\n\t    <li>Prevent zero-byte allocation in sftp_packet_read() which could lead to an out-of-bounds read.</li>\n\t    <li>Check the length of data passed to sftp_packet_add() to prevent out-of-bounds reads.</li>\n\t    <li>Add a required_size parameter to sftp_packet_require et. al. to require callers of these functions to handle packets that are too short.</li>\n\t    <li>Additional length checks to prevent out-of-bounds reads and writes in _libssh2_packet_add().</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/libssh2/libssh2/releases/tag/libssh2-1.8.1"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3855.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3856.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3857.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3858.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3859.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3860.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3861.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3862.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://libssh2.org/CVE-2019-3863.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6e58e1e9-2636-413e-9f84-4c0e21143628.html"
-				}
-			],
-			"published": "2019-04-18T00:00:00Z",
-			"modified": "2019-07-07T00:00:00Z"
+			"content": {
+				"id": "6e58e1e9-2636-413e-9f84-4c0e21143628",
+				"title": "libssh2 -- multiple issues",
+				"description": "\n\t<p>libssh2 developers report:</p>\n\t<blockquote cite=\"https://github.com/libssh2/libssh2/releases/tag/libssh2-1.8.1\">\n\t  <ul>\n\t    <li>Defend against possible integer overflows in comp_method_zlib_decomp.</li>\n\t    <li>Defend against writing beyond the end of the payload in _libssh2_transport_read().</li>\n\t    <li>Sanitize padding_length - _libssh2_transport_read().</li>\n\t    <li>This prevents an underflow resulting in a potential out-of-bounds read if a server sends a too-large padding_length, possibly with malicious intent.</li>\n\t    <li>Prevent zero-byte allocation in sftp_packet_read() which could lead to an out-of-bounds read.</li>\n\t    <li>Check the length of data passed to sftp_packet_add() to prevent out-of-bounds reads.</li>\n\t    <li>Add a required_size parameter to sftp_packet_require et. al. to require callers of these functions to handle packets that are too short.</li>\n\t    <li>Additional length checks to prevent out-of-bounds reads and writes in _libssh2_packet_add().</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/libssh2/libssh2/releases/tag/libssh2-1.8.1"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3855.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3856.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3857.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3858.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3859.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3860.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3861.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3862.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://libssh2.org/CVE-2019-3863.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6e58e1e9-2636-413e-9f84-4c0e21143628.html"
+					}
+				],
+				"published": "2019-04-18T00:00:00Z",
+				"modified": "2019-07-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-3855",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3855"
-				}
+			"content": {
+				"id": "CVE-2019-3855",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3855"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3856",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3856"
-				}
+			"content": {
+				"id": "CVE-2019-3856",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3856"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3857",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3857"
-				}
+			"content": {
+				"id": "CVE-2019-3857",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3857"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3858",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3858"
-				}
+			"content": {
+				"id": "CVE-2019-3858",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3858"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3859",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3859"
-				}
+			"content": {
+				"id": "CVE-2019-3859",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3859"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3860",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3860"
-				}
+			"content": {
+				"id": "CVE-2019-3860",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3860"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3861",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3861"
-				}
+			"content": {
+				"id": "CVE-2019-3861",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3861"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3862",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3862"
-				}
+			"content": {
+				"id": "CVE-2019-3862",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3862"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3863",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3863"
-				}
+			"content": {
+				"id": "CVE-2019-3863",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3863"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

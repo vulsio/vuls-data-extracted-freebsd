@@ -2,165 +2,250 @@
 	"id": "04422df1-40d8-11ed-9be7-454b1dd82c64",
 	"advisories": [
 		{
-			"id": "04422df1-40d8-11ed-9be7-454b1dd82c64",
-			"title": "Gitlab -- Multiple vulnerabilities",
-			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/\">\n\t  <p>Denial of Service via cloning an issue</p>\n\t  <p>Arbitrary PUT request as victim user through Sentry error list</p>\n\t  <p>Content injection via External Status Checks</p>\n\t  <p>Project maintainers can access Datadog API Key from logs</p>\n\t  <p>Unsafe serialization of Json data could lead to sensitive data leakage</p>\n\t  <p>Import bug allows importing of private local git repos</p>\n\t  <p>Maintainer can leak Github access tokens by changing integration URL (even after 15.2.1 patch)</p>\n\t  <p>Unauthorized users able to create issues in any project</p>\n\t  <p>Bypass group IP restriction on Dependency Proxy</p>\n\t  <p>Healthcheck endpoint allow list can be bypassed when accessed over HTTP in an HTTPS enabled system</p>\n\t  <p>Disclosure of Todo details to guest users</p>\n\t  <p>A user's primary email may be disclosed through group member events webhooks</p>\n\t  <p>Content manipulation due to branch/tag name confusion with the default branch name</p>\n\t  <p>Leakage of email addresses in WebHook logs</p>\n\t  <p>Specially crafted output makes job logs inaccessible</p>\n\t  <p>Enforce editing approval rules on project level</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/04422df1-40d8-11ed-9be7-454b1dd82c64.html"
-				}
-			],
-			"published": "2022-09-30T00:00:00Z"
+			"content": {
+				"id": "04422df1-40d8-11ed-9be7-454b1dd82c64",
+				"title": "Gitlab -- Multiple vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/\">\n\t  <p>Denial of Service via cloning an issue</p>\n\t  <p>Arbitrary PUT request as victim user through Sentry error list</p>\n\t  <p>Content injection via External Status Checks</p>\n\t  <p>Project maintainers can access Datadog API Key from logs</p>\n\t  <p>Unsafe serialization of Json data could lead to sensitive data leakage</p>\n\t  <p>Import bug allows importing of private local git repos</p>\n\t  <p>Maintainer can leak Github access tokens by changing integration URL (even after 15.2.1 patch)</p>\n\t  <p>Unauthorized users able to create issues in any project</p>\n\t  <p>Bypass group IP restriction on Dependency Proxy</p>\n\t  <p>Healthcheck endpoint allow list can be bypassed when accessed over HTTP in an HTTPS enabled system</p>\n\t  <p>Disclosure of Todo details to guest users</p>\n\t  <p>A user's primary email may be disclosed through group member events webhooks</p>\n\t  <p>Content manipulation due to branch/tag name confusion with the default branch name</p>\n\t  <p>Leakage of email addresses in WebHook logs</p>\n\t  <p>Specially crafted output makes job logs inaccessible</p>\n\t  <p>Enforce editing approval rules on project level</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/04422df1-40d8-11ed-9be7-454b1dd82c64.html"
+					}
+				],
+				"published": "2022-09-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-2882",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-2882"
-				}
+			"content": {
+				"id": "CVE-2022-2882",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-2882"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-2904",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-2904"
-				}
+			"content": {
+				"id": "CVE-2022-2904",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-2904"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3018",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3018"
-				}
+			"content": {
+				"id": "CVE-2022-3018",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3018"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3060",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3060"
-				}
+			"content": {
+				"id": "CVE-2022-3060",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3060"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3066",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3066"
-				}
+			"content": {
+				"id": "CVE-2022-3066",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3066"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3067",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3067"
-				}
+			"content": {
+				"id": "CVE-2022-3067",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3067"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3279",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3279"
-				}
+			"content": {
+				"id": "CVE-2022-3279",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3279"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3283",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3283"
-				}
+			"content": {
+				"id": "CVE-2022-3283",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3283"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3285",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3285"
-				}
+			"content": {
+				"id": "CVE-2022-3285",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3285"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3286",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3286"
-				}
+			"content": {
+				"id": "CVE-2022-3286",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3286"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3288",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3288"
-				}
+			"content": {
+				"id": "CVE-2022-3288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3291",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3291"
-				}
+			"content": {
+				"id": "CVE-2022-3291",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3291"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3293",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3293"
-				}
+			"content": {
+				"id": "CVE-2022-3293",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3293"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3325",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3325"
-				}
+			"content": {
+				"id": "CVE-2022-3325",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3325"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3330",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3330"
-				}
+			"content": {
+				"id": "CVE-2022-3330",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3330"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3351",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3351"
-				}
+			"content": {
+				"id": "CVE-2022-3351",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3351"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

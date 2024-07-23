@@ -2,38 +2,48 @@
 	"id": "be72e773-1131-11e6-94fa-002590263bf5",
 	"advisories": [
 		{
-			"id": "be72e773-1131-11e6-94fa-002590263bf5",
-			"title": "gitlab -- privilege escalation via \"impersonate\" feature",
-			"description": "\n\t<p>GitLab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2016/05/02/cve-2016-4340-patches/\">\n\t  <p>During an internal code review, we discovered a critical security\n\t    flaw in the \"impersonate\" feature of GitLab. Added in GitLab 8.2,\n\t    this feature was intended to allow an administrator to simulate\n\t    being logged in as any other user.</p>\n\t  <p>A part of this feature was not properly secured and it was possible\n\t    for any authenticated user, administrator or not, to \"log in\" as any\n\t    other user, including administrators. Please see the issue for more\n\t    details.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://about.gitlab.com/2016/05/02/cve-2016-4340-patches/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209225"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://gitlab.com/gitlab-org/gitlab-ce/issues/15548"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/be72e773-1131-11e6-94fa-002590263bf5.html"
-				}
-			],
-			"published": "2016-05-03T00:00:00Z"
+			"content": {
+				"id": "be72e773-1131-11e6-94fa-002590263bf5",
+				"title": "gitlab -- privilege escalation via \"impersonate\" feature",
+				"description": "\n\t<p>GitLab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/2016/05/02/cve-2016-4340-patches/\">\n\t  <p>During an internal code review, we discovered a critical security\n\t    flaw in the \"impersonate\" feature of GitLab. Added in GitLab 8.2,\n\t    this feature was intended to allow an administrator to simulate\n\t    being logged in as any other user.</p>\n\t  <p>A part of this feature was not properly secured and it was possible\n\t    for any authenticated user, administrator or not, to \"log in\" as any\n\t    other user, including administrators. Please see the issue for more\n\t    details.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/2016/05/02/cve-2016-4340-patches/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209225"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gitlab.com/gitlab-org/gitlab-ce/issues/15548"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/be72e773-1131-11e6-94fa-002590263bf5.html"
+					}
+				],
+				"published": "2016-05-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-4340",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4340"
-				}
+			"content": {
+				"id": "CVE-2016-4340",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-4340"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

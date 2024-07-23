@@ -2,30 +2,40 @@
 	"id": "51d1282d-420e-11e7-82c5-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "51d1282d-420e-11e7-82c5-14dae9d210b8",
-			"title": "FreeBSD -- ipfilter(4) fragment handling panic",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>ipfilter(4), capable of stateful packet inspection, using\n\tthe \"keep state\" or \"keep frags\" rule options, will not\n\tonly maintain the state of connections, such as TCP streams\n\tor UDP communication, it also maintains the state of\n\tfragmented packets. When a packet fragments are received\n\tthey are cached in a hash table (and linked list). When a\n\tfragment is received it is compared with fragments already\n\tcached in the hash table for a match. If it does not match\n\tthe new entry is used to create a new entry in the hash\n\ttable. If on the other hand it does match, unfortunately\n\tthe wrong entry is freed, the entry in the hash table. This\n\tresults in use after free panic (and for a brief moment\n\tprior to the panic a memory leak due to the wrong entry\n\tbeing freed).</p>\n\t<h1>Impact:</h1>\n\t<p>Carefully feeding fragments that are allowed to pass by\n\tan ipfilter(4) firewall can be used to cause a panic followed\n\tby reboot loop denial of service attack.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-17:04.ipfilter.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/51d1282d-420e-11e7-82c5-14dae9d210b8.html"
-				}
-			],
-			"published": "2017-05-26T00:00:00Z"
+			"content": {
+				"id": "51d1282d-420e-11e7-82c5-14dae9d210b8",
+				"title": "FreeBSD -- ipfilter(4) fragment handling panic",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>ipfilter(4), capable of stateful packet inspection, using\n\tthe \"keep state\" or \"keep frags\" rule options, will not\n\tonly maintain the state of connections, such as TCP streams\n\tor UDP communication, it also maintains the state of\n\tfragmented packets. When a packet fragments are received\n\tthey are cached in a hash table (and linked list). When a\n\tfragment is received it is compared with fragments already\n\tcached in the hash table for a match. If it does not match\n\tthe new entry is used to create a new entry in the hash\n\ttable. If on the other hand it does match, unfortunately\n\tthe wrong entry is freed, the entry in the hash table. This\n\tresults in use after free panic (and for a brief moment\n\tprior to the panic a memory leak due to the wrong entry\n\tbeing freed).</p>\n\t<h1>Impact:</h1>\n\t<p>Carefully feeding fragments that are allowed to pass by\n\tan ipfilter(4) firewall can be used to cause a panic followed\n\tby reboot loop denial of service attack.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-17:04.ipfilter.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/51d1282d-420e-11e7-82c5-14dae9d210b8.html"
+					}
+				],
+				"published": "2017-05-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-1081",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1081"
-				}
+			"content": {
+				"id": "CVE-2017-1081",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-1081"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

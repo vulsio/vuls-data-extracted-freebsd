@@ -2,64 +2,79 @@
 	"id": "405446f4-b1b3-11e5-9728-002590263bf5",
 	"advisories": [
 		{
-			"id": "405446f4-b1b3-11e5-9728-002590263bf5",
-			"title": "qemu and xen-tools -- denial of service vulnerabilities in AMD PC-Net II NIC support",
-			"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/11/30/2\">\n\t  <p>Qemu emulator built with the AMD PC-Net II Ethernet Controller\n\t    support is vulnerable to a heap buffer overflow flaw. While\n\t    receiving packets in the loopback mode, it appends CRC code to the\n\t    receive buffer. If the data size given is same as the receive buffer\n\t    size, the appended CRC code overwrites 4 bytes beyond this\n\t    's-&gt;buffer' array.</p>\n\t  <p>A privileged(CAP_SYS_RAWIO) user inside guest could use this flaw\n\t    to crash the Qemu instance resulting in DoS or potentially execute\n\t    arbitrary code with privileges of the Qemu process on the host.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/11/30/3\">\n\t  <p>The AMD PC-Net II emulator(hw/net/pcnet.c), while receiving packets\n\t    from a remote host(non-loopback mode), fails to validate the\n\t    received data size, thus resulting in a buffer overflow issue. It\n\t    could potentially lead to arbitrary code execution on the host, with\n\t    privileges of the Qemu process. It requires the guest NIC to have\n\t    larger MTU limit.</p>\n\t  <p>A remote user could use this flaw to crash the guest instance\n\t    resulting in DoS or potentially execute arbitrary code on a remote\n\t    host with privileges of the Qemu process.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=837f21aacf5a714c23ddaadbbc5212f9b661e3f7"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=8b98a2f07175d46c3f7217639bd5e03f2ec56343"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/11/30/2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/11/30/3"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xenbits.xen.org/xsa/advisory-162.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/seanbruno/qemu-bsd-user/commit/837f21aacf5a714c23ddaadbbc5212f9b661e3f7"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/seanbruno/qemu-bsd-user/commit/8b98a2f07175d46c3f7217639bd5e03f2ec56343"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/405446f4-b1b3-11e5-9728-002590263bf5.html"
-				}
-			],
-			"published": "2016-01-03T00:00:00Z",
-			"modified": "2016-01-06T00:00:00Z"
+			"content": {
+				"id": "405446f4-b1b3-11e5-9728-002590263bf5",
+				"title": "qemu and xen-tools -- denial of service vulnerabilities in AMD PC-Net II NIC support",
+				"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/11/30/2\">\n\t  <p>Qemu emulator built with the AMD PC-Net II Ethernet Controller\n\t    support is vulnerable to a heap buffer overflow flaw. While\n\t    receiving packets in the loopback mode, it appends CRC code to the\n\t    receive buffer. If the data size given is same as the receive buffer\n\t    size, the appended CRC code overwrites 4 bytes beyond this\n\t    's-&gt;buffer' array.</p>\n\t  <p>A privileged(CAP_SYS_RAWIO) user inside guest could use this flaw\n\t    to crash the Qemu instance resulting in DoS or potentially execute\n\t    arbitrary code with privileges of the Qemu process on the host.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/11/30/3\">\n\t  <p>The AMD PC-Net II emulator(hw/net/pcnet.c), while receiving packets\n\t    from a remote host(non-loopback mode), fails to validate the\n\t    received data size, thus resulting in a buffer overflow issue. It\n\t    could potentially lead to arbitrary code execution on the host, with\n\t    privileges of the Qemu process. It requires the guest NIC to have\n\t    larger MTU limit.</p>\n\t  <p>A remote user could use this flaw to crash the guest instance\n\t    resulting in DoS or potentially execute arbitrary code on a remote\n\t    host with privileges of the Qemu process.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=837f21aacf5a714c23ddaadbbc5212f9b661e3f7"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=8b98a2f07175d46c3f7217639bd5e03f2ec56343"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/11/30/2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/11/30/3"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xenbits.xen.org/xsa/advisory-162.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/seanbruno/qemu-bsd-user/commit/837f21aacf5a714c23ddaadbbc5212f9b661e3f7"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/seanbruno/qemu-bsd-user/commit/8b98a2f07175d46c3f7217639bd5e03f2ec56343"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/405446f4-b1b3-11e5-9728-002590263bf5.html"
+					}
+				],
+				"published": "2016-01-03T00:00:00Z",
+				"modified": "2016-01-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7504",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7504"
-				}
+			"content": {
+				"id": "CVE-2015-7504",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7504"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7512",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7512"
-				}
+			"content": {
+				"id": "CVE-2015-7512",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7512"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

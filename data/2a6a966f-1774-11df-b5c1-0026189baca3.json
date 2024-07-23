@@ -2,38 +2,48 @@
 	"id": "2a6a966f-1774-11df-b5c1-0026189baca3",
 	"advisories": [
 		{
-			"id": "2a6a966f-1774-11df-b5c1-0026189baca3",
-			"title": "fetchmail -- heap overflow on verbose X.509 display",
-			"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2010-01.txt\">\n\t  <p>In verbose mode, fetchmail prints X.509 certificate subject and\n\t    issuer information to the user, and counts and allocates a malloc()\n\t    buffer for that purpose.</p>\n\t  <p>If the material to be displayed contains characters with high bit\n\t    set and the platform treats the \"char\" type as signed, this can cause\n\t    a heap buffer overrun because non-printing characters are escaped as\n\t    \\xFF..FFnn, where nn is 80..FF in hex.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.fetchmail.info/fetchmail-SA-2010-01.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/38088"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.berlios.de/pipermail/fetchmail-announce/2010-February/000073.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2a6a966f-1774-11df-b5c1-0026189baca3.html"
-				}
-			],
-			"published": "2010-02-12T00:00:00Z"
+			"content": {
+				"id": "2a6a966f-1774-11df-b5c1-0026189baca3",
+				"title": "fetchmail -- heap overflow on verbose X.509 display",
+				"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2010-01.txt\">\n\t  <p>In verbose mode, fetchmail prints X.509 certificate subject and\n\t    issuer information to the user, and counts and allocates a malloc()\n\t    buffer for that purpose.</p>\n\t  <p>If the material to be displayed contains characters with high bit\n\t    set and the platform treats the \"char\" type as signed, this can cause\n\t    a heap buffer overrun because non-printing characters are escaped as\n\t    \\xFF..FFnn, where nn is 80..FF in hex.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.fetchmail.info/fetchmail-SA-2010-01.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/38088"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.berlios.de/pipermail/fetchmail-announce/2010-February/000073.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2a6a966f-1774-11df-b5c1-0026189baca3.html"
+					}
+				],
+				"published": "2010-02-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-0562",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0562"
-				}
+			"content": {
+				"id": "CVE-2010-0562",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-0562"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,43 +2,58 @@
 	"id": "6ad309d9-fb03-11e3-bebd-000c2980a9f3",
 	"advisories": [
 		{
-			"id": "6ad309d9-fb03-11e3-bebd-000c2980a9f3",
-			"title": "samba -- multiple vulnerabilities",
-			"description": "\n\t<p>The samba project reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/history/\">\n\t  <p>A malformed packet can cause the nmbd server to loop the CPU and\n\t    prevent any further NetBIOS name service.</p>\n\t  <p>Valid unicode path names stored on disk can cause smbd to\n\t    crash if an authenticated client attempts to read them\n\t    using a non-unicode request.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.samba.org/samba/security/CVE-2014-0244"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.samba.org/samba/security/CVE-2014-3493"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6ad309d9-fb03-11e3-bebd-000c2980a9f3.html"
-				}
-			],
-			"published": "2014-06-23T00:00:00Z"
+			"content": {
+				"id": "6ad309d9-fb03-11e3-bebd-000c2980a9f3",
+				"title": "samba -- multiple vulnerabilities",
+				"description": "\n\t<p>The samba project reports:</p>\n\t<blockquote cite=\"https://www.samba.org/samba/history/\">\n\t  <p>A malformed packet can cause the nmbd server to loop the CPU and\n\t    prevent any further NetBIOS name service.</p>\n\t  <p>Valid unicode path names stored on disk can cause smbd to\n\t    crash if an authenticated client attempts to read them\n\t    using a non-unicode request.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.samba.org/samba/security/CVE-2014-0244"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.samba.org/samba/security/CVE-2014-3493"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6ad309d9-fb03-11e3-bebd-000c2980a9f3.html"
+					}
+				],
+				"published": "2014-06-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-0244",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0244"
-				}
+			"content": {
+				"id": "CVE-2014-0244",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-0244"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-3493",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3493"
-				}
+			"content": {
+				"id": "CVE-2014-3493",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-3493"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

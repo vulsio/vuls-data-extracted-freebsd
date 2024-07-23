@@ -2,39 +2,54 @@
 	"id": "3934cc60-f0fa-4eca-be09-c8bd7ae42871",
 	"advisories": [
 		{
-			"id": "3934cc60-f0fa-4eca-be09-c8bd7ae42871",
-			"title": "Salt -- multiple vulnerabilities",
-			"description": "\n\t<p>Salt release notes:</p>\n\t<blockquote cite=\"https://docs.saltstack.com/en/latest/topics/releases/2015.8.1.html\">\n\t  <p>CVE-2015-6918 - Git modules leaking HTTPS auth credentials to debug log</p>\n\t  <p>Updated the Git state and execution modules to no longer display HTTPS basic\n\t    authentication credentials in loglevel debug output on the Salt master. These\n\t    credentials are now replaced with REDACTED in the debug output. Thanks to\n\t    Andreas Stieger for bringing this to our attention.</p>\n\t  <p>CVE-2015-6941 - win_useradd module and salt-cloud display passwords in debug\n\t    log</p>\n\t  <p>Updated the win_useradd module return data to no longer include the password\n\t    of the newly created user. The password is now replaced with the string\n\t    XXX-REDACTED-XXX. Updated the Salt Cloud debug output to no longer display\n\t    win_password and sudo_password authentication credentials. Also updated the\n\t    Linode driver to no longer display authentication credentials in debug logs.\n\t    These credentials are now replaced with REDACTED in the debug output.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.saltstack.com/en/latest/topics/releases/2015.8.1.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3934cc60-f0fa-4eca-be09-c8bd7ae42871.html"
-				}
-			],
-			"published": "2015-10-17T00:00:00Z"
+			"content": {
+				"id": "3934cc60-f0fa-4eca-be09-c8bd7ae42871",
+				"title": "Salt -- multiple vulnerabilities",
+				"description": "\n\t<p>Salt release notes:</p>\n\t<blockquote cite=\"https://docs.saltstack.com/en/latest/topics/releases/2015.8.1.html\">\n\t  <p>CVE-2015-6918 - Git modules leaking HTTPS auth credentials to debug log</p>\n\t  <p>Updated the Git state and execution modules to no longer display HTTPS basic\n\t    authentication credentials in loglevel debug output on the Salt master. These\n\t    credentials are now replaced with REDACTED in the debug output. Thanks to\n\t    Andreas Stieger for bringing this to our attention.</p>\n\t  <p>CVE-2015-6941 - win_useradd module and salt-cloud display passwords in debug\n\t    log</p>\n\t  <p>Updated the win_useradd module return data to no longer include the password\n\t    of the newly created user. The password is now replaced with the string\n\t    XXX-REDACTED-XXX. Updated the Salt Cloud debug output to no longer display\n\t    win_password and sudo_password authentication credentials. Also updated the\n\t    Linode driver to no longer display authentication credentials in debug logs.\n\t    These credentials are now replaced with REDACTED in the debug output.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.saltstack.com/en/latest/topics/releases/2015.8.1.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3934cc60-f0fa-4eca-be09-c8bd7ae42871.html"
+					}
+				],
+				"published": "2015-10-17T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-6918",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6918"
-				}
+			"content": {
+				"id": "CVE-2015-6918",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6918"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6941",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6941"
-				}
+			"content": {
+				"id": "CVE-2015-6941",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6941"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

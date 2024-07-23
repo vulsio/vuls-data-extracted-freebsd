@@ -2,34 +2,44 @@
 	"id": "37569eb7-0125-11e5-9d98-080027ef73ec",
 	"advisories": [
 		{
-			"id": "37569eb7-0125-11e5-9d98-080027ef73ec",
-			"title": "dnsmasq -- data exposure and denial of service",
-			"description": "\n\t<p>Nick Sampanis reported a potential memory exposure and denial of service vulnerability against dnsmasq 2.72. The CVE entry summarizes this as:\n\t</p>\n\t<blockquote cite=\"http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3294\"><p>The tcp_request function in Dnsmasq before 2.73rc4\n\t  does not properly handle the return value of the setup_reply function,\n\t  which allows remote attackers to read process memory and cause a\n\t  denial of service (out-of-bounds read and crash) via a malformed DNS\n\t  request.\"</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009382.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=commitdiff;h=ad4a8ff7d9097008d7623df8543df435bfddeac8"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/37569eb7-0125-11e5-9d98-080027ef73ec.html"
-				}
-			],
-			"published": "2015-05-23T00:00:00Z"
+			"content": {
+				"id": "37569eb7-0125-11e5-9d98-080027ef73ec",
+				"title": "dnsmasq -- data exposure and denial of service",
+				"description": "\n\t<p>Nick Sampanis reported a potential memory exposure and denial of service vulnerability against dnsmasq 2.72. The CVE entry summarizes this as:\n\t</p>\n\t<blockquote cite=\"http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3294\"><p>The tcp_request function in Dnsmasq before 2.73rc4\n\t  does not properly handle the return value of the setup_reply function,\n\t  which allows remote attackers to read process memory and cause a\n\t  denial of service (out-of-bounds read and crash) via a malformed DNS\n\t  request.\"</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009382.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=commitdiff;h=ad4a8ff7d9097008d7623df8543df435bfddeac8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/37569eb7-0125-11e5-9d98-080027ef73ec.html"
+					}
+				],
+				"published": "2015-05-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3294",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3294"
-				}
+			"content": {
+				"id": "CVE-2015-3294",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3294"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

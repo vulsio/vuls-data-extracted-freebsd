@@ -2,30 +2,40 @@
 	"id": "af61b271-9e47-4db0-a0f6-29fb032236a3",
 	"advisories": [
 		{
-			"id": "af61b271-9e47-4db0-a0f6-29fb032236a3",
-			"title": "zookeeper -- Denial Of Service",
-			"description": "\n\t<p>zookeeper developers report:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread.html/58170aeb7a681d462b7fa31cae81110cbb749d2dc83c5736a0bb8370@%3Cdev.zookeeper.apache.org%3E\">\n\t  <p>Two four letter word commands \"wchp/wchc\" are CPU intensive and could cause spike of CPU utilization on Apache ZooKeeper server if abused, which leads to the server unable to serve legitimate client requests. Apache ZooKeeper thru version 3.4.9 and 3.5.2 suffer from this issue, fixed in 3.4.10, 3.5.3, and later.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.apache.org/thread.html/58170aeb7a681d462b7fa31cae81110cbb749d2dc83c5736a0bb8370@%3Cdev.zookeeper.apache.org%3E"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/af61b271-9e47-4db0-a0f6-29fb032236a3.html"
-				}
-			],
-			"published": "2017-10-10T00:00:00Z"
+			"content": {
+				"id": "af61b271-9e47-4db0-a0f6-29fb032236a3",
+				"title": "zookeeper -- Denial Of Service",
+				"description": "\n\t<p>zookeeper developers report:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread.html/58170aeb7a681d462b7fa31cae81110cbb749d2dc83c5736a0bb8370@%3Cdev.zookeeper.apache.org%3E\">\n\t  <p>Two four letter word commands \"wchp/wchc\" are CPU intensive and could cause spike of CPU utilization on Apache ZooKeeper server if abused, which leads to the server unable to serve legitimate client requests. Apache ZooKeeper thru version 3.4.9 and 3.5.2 suffer from this issue, fixed in 3.4.10, 3.5.3, and later.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.apache.org/thread.html/58170aeb7a681d462b7fa31cae81110cbb749d2dc83c5736a0bb8370@%3Cdev.zookeeper.apache.org%3E"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/af61b271-9e47-4db0-a0f6-29fb032236a3.html"
+					}
+				],
+				"published": "2017-10-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-5637",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5637"
-				}
+			"content": {
+				"id": "CVE-2017-5637",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5637"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

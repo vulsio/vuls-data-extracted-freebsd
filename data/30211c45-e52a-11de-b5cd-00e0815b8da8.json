@@ -2,34 +2,44 @@
 	"id": "30211c45-e52a-11de-b5cd-00e0815b8da8",
 	"advisories": [
 		{
-			"id": "30211c45-e52a-11de-b5cd-00e0815b8da8",
-			"title": "dovecot -- Insecure directory permissions",
-			"description": "\n\t<p>Dovecot author reports:</p>\n\t<blockquote cite=\"http://www.dovecot.org/list/dovecot-news/2009-November/000143.html\">\n\t  <p>Dovecot v1.2.x had been creating base_dir (and its parents if\n\t    necessary) with 0777 permissions. The base_dir's permissions get\n\t    changed to 0755 automatically at startup, but you may need to\n\t    chmod the parent directories manually.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/37443"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/37084"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/30211c45-e52a-11de-b5cd-00e0815b8da8.html"
-				}
-			],
-			"published": "2009-12-10T00:00:00Z"
+			"content": {
+				"id": "30211c45-e52a-11de-b5cd-00e0815b8da8",
+				"title": "dovecot -- Insecure directory permissions",
+				"description": "\n\t<p>Dovecot author reports:</p>\n\t<blockquote cite=\"http://www.dovecot.org/list/dovecot-news/2009-November/000143.html\">\n\t  <p>Dovecot v1.2.x had been creating base_dir (and its parents if\n\t    necessary) with 0777 permissions. The base_dir's permissions get\n\t    changed to 0755 automatically at startup, but you may need to\n\t    chmod the parent directories manually.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/37443"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/37084"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/30211c45-e52a-11de-b5cd-00e0815b8da8.html"
+					}
+				],
+				"published": "2009-12-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2009-3897",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3897"
-				}
+			"content": {
+				"id": "CVE-2009-3897",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2009-3897"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

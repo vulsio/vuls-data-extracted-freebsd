@@ -2,43 +2,53 @@
 	"id": "01c231cd-4393-11d9-8bb9-00065be4b5b6",
 	"advisories": [
 		{
-			"id": "01c231cd-4393-11d9-8bb9-00065be4b5b6",
-			"title": "mysql -- GRANT access restriction problem",
-			"description": "\n\t <p>When a user is granted access to a database with a name containing\n\t   an underscore and the underscore is not escaped then that user might\n\t   also be able to access other, similarly named, databases on the\n\t   affected system.</p>\n\t <p>The problem is that the underscore is seen as a wildcard by MySQL\n\t   and therefore it is possible that an admin might accidently GRANT a\n\t   user access to multiple databases.</p>\n       ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.mysql.com/bug.php?id=3933"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://rhn.redhat.com/errata/RHSA-2004-611.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openpkg.org/security/OpenPKG-SA-2004.045-mysql.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/11435"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/01c231cd-4393-11d9-8bb9-00065be4b5b6.html"
-				}
-			],
-			"published": "2004-12-16T00:00:00Z",
-			"modified": "2005-03-15T00:00:00Z"
+			"content": {
+				"id": "01c231cd-4393-11d9-8bb9-00065be4b5b6",
+				"title": "mysql -- GRANT access restriction problem",
+				"description": "\n\t <p>When a user is granted access to a database with a name containing\n\t   an underscore and the underscore is not escaped then that user might\n\t   also be able to access other, similarly named, databases on the\n\t   affected system.</p>\n\t <p>The problem is that the underscore is seen as a wildcard by MySQL\n\t   and therefore it is possible that an admin might accidently GRANT a\n\t   user access to multiple databases.</p>\n       ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.mysql.com/bug.php?id=3933"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://rhn.redhat.com/errata/RHSA-2004-611.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openpkg.org/security/OpenPKG-SA-2004.045-mysql.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/11435"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/01c231cd-4393-11d9-8bb9-00065be4b5b6.html"
+					}
+				],
+				"published": "2004-12-16T00:00:00Z",
+				"modified": "2005-03-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0957",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0957"
-				}
+			"content": {
+				"id": "CVE-2004-0957",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0957"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

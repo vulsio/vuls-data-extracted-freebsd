@@ -2,32 +2,37 @@
 	"id": "207f8ff3-f697-11d8-81b0-000347a4fa7d",
 	"advisories": [
 		{
-			"id": "207f8ff3-f697-11d8-81b0-000347a4fa7d",
-			"title": "nss -- exploitable buffer overflow in SSLv2 protocol handler",
-			"description": "\n\t<p>ISS X-Force reports that a remotely exploitable buffer\n\t  overflow exists in the Netscape Security Services (NSS)\n\t  library's implementation of SSLv2.  From their advisory:</p>\n\t<blockquote cite=\"http://xforce.iss.net/xforce/alerts/id/180\">\n\t  <p>The NSS library contains a flaw in SSLv2 record parsing\n\t    that may lead to remote compromise. When parsing the\n\t    first record in an SSLv2 negotiation, the client hello\n\t    message, the server fails to validate the length of a\n\t    record field. As a result, it is possible for an attacker\n\t    to trigger a heap-based overflow of arbitrary length.</p>\n\t</blockquote>\n\t<p>Note that the vulnerable NSS library is also present in\n\t  Mozilla-based browsers.  However, it is not believed that\n\t  browsers are affected, as the vulnerability is present only in\n\t  code used by SSLv2 *servers*.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/12362"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/9116"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/11015"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xforce.iss.net/xforce/alerts/id/180"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/207f8ff3-f697-11d8-81b0-000347a4fa7d.html"
-				}
-			],
-			"published": "2004-08-27T00:00:00Z"
+			"content": {
+				"id": "207f8ff3-f697-11d8-81b0-000347a4fa7d",
+				"title": "nss -- exploitable buffer overflow in SSLv2 protocol handler",
+				"description": "\n\t<p>ISS X-Force reports that a remotely exploitable buffer\n\t  overflow exists in the Netscape Security Services (NSS)\n\t  library's implementation of SSLv2.  From their advisory:</p>\n\t<blockquote cite=\"http://xforce.iss.net/xforce/alerts/id/180\">\n\t  <p>The NSS library contains a flaw in SSLv2 record parsing\n\t    that may lead to remote compromise. When parsing the\n\t    first record in an SSLv2 negotiation, the client hello\n\t    message, the server fails to validate the length of a\n\t    record field. As a result, it is possible for an attacker\n\t    to trigger a heap-based overflow of arbitrary length.</p>\n\t</blockquote>\n\t<p>Note that the vulnerable NSS library is also present in\n\t  Mozilla-based browsers.  However, it is not believed that\n\t  browsers are affected, as the vulnerability is present only in\n\t  code used by SSLv2 *servers*.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/12362"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/9116"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/11015"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xforce.iss.net/xforce/alerts/id/180"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/207f8ff3-f697-11d8-81b0-000347a4fa7d.html"
+					}
+				],
+				"published": "2004-08-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

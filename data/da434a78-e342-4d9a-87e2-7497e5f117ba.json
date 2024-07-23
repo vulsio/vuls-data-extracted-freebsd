@@ -2,43 +2,53 @@
 	"id": "da434a78-e342-4d9a-87e2-7497e5f117ba",
 	"advisories": [
 		{
-			"id": "da434a78-e342-4d9a-87e2-7497e5f117ba",
-			"title": "ffmpeg -- use-after-free",
-			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-3417\">\n\t  <p>Use-after-free vulnerability in the ff_h264_free_tables\n\t    function in libavcodec/h264.c in FFmpeg before 2.3.6 allows\n\t    remote attackers to cause a denial of service or possibly\n\t    have unspecified other impact via crafted H.264 data in an\n\t    MP4 file, as demonstrated by an HTML VIDEO element that\n\t    references H.264 data.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://ffmpeg.org/security.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.libav.org/?p=libav.git;a=blob;f=Changelog;hb=refs/tags/v11.4"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.libav.org/?p=libav.git;a=commitdiff;h=3b69f245dbe6e2016659a45c4bfe284f6c5ac57e"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=e8714f6f93d1a32f4e4655209960afcf4c185214"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/da434a78-e342-4d9a-87e2-7497e5f117ba.html"
-				}
-			],
-			"published": "2015-09-01T00:00:00Z",
-			"modified": "2018-03-25T00:00:00Z"
+			"content": {
+				"id": "da434a78-e342-4d9a-87e2-7497e5f117ba",
+				"title": "ffmpeg -- use-after-free",
+				"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-3417\">\n\t  <p>Use-after-free vulnerability in the ff_h264_free_tables\n\t    function in libavcodec/h264.c in FFmpeg before 2.3.6 allows\n\t    remote attackers to cause a denial of service or possibly\n\t    have unspecified other impact via crafted H.264 data in an\n\t    MP4 file, as demonstrated by an HTML VIDEO element that\n\t    references H.264 data.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://ffmpeg.org/security.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.libav.org/?p=libav.git;a=blob;f=Changelog;hb=refs/tags/v11.4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.libav.org/?p=libav.git;a=commitdiff;h=3b69f245dbe6e2016659a45c4bfe284f6c5ac57e"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=e8714f6f93d1a32f4e4655209960afcf4c185214"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/da434a78-e342-4d9a-87e2-7497e5f117ba.html"
+					}
+				],
+				"published": "2015-09-01T00:00:00Z",
+				"modified": "2018-03-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3417",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3417"
-				}
+			"content": {
+				"id": "CVE-2015-3417",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3417"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,39 +2,49 @@
 	"id": "06a6b2cf-484b-11d9-813c-00065be4b5b6",
 	"advisories": [
 		{
-			"id": "06a6b2cf-484b-11d9-813c-00065be4b5b6",
-			"title": "mysql -- ALTER MERGE denial of service vulnerability",
-			"description": "\n\t <p>Dean Ellis reported a denial of service vulnerability in the MySQL\n\t   server:</p>\n\t <blockquote cite=\"http://bugs.mysql.com/bug.php?id=4017\">\n\t   <p> Multiple threads ALTERing the same (or different) MERGE tables to\n\t     change the UNION eventually crash the server or hang the individual\n\t     threads.</p>\n\t </blockquote>\n\t <p>Note that a script demonstrating the problem is included in the\n\t   MySQL bug report. Attackers that have control of a MySQL account can\n\t   easily use a modified version of that script during an attack.</p>\n       ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.mysql.com/bug.php?id=2408"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://rhn.redhat.com/errata/RHSA-2004-611.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/11357"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/06a6b2cf-484b-11d9-813c-00065be4b5b6.html"
-				}
-			],
-			"published": "2004-12-16T00:00:00Z",
-			"modified": "2005-03-15T00:00:00Z"
+			"content": {
+				"id": "06a6b2cf-484b-11d9-813c-00065be4b5b6",
+				"title": "mysql -- ALTER MERGE denial of service vulnerability",
+				"description": "\n\t <p>Dean Ellis reported a denial of service vulnerability in the MySQL\n\t   server:</p>\n\t <blockquote cite=\"http://bugs.mysql.com/bug.php?id=4017\">\n\t   <p> Multiple threads ALTERing the same (or different) MERGE tables to\n\t     change the UNION eventually crash the server or hang the individual\n\t     threads.</p>\n\t </blockquote>\n\t <p>Note that a script demonstrating the problem is included in the\n\t   MySQL bug report. Attackers that have control of a MySQL account can\n\t   easily use a modified version of that script during an attack.</p>\n       ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.mysql.com/bug.php?id=2408"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://rhn.redhat.com/errata/RHSA-2004-611.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/11357"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/06a6b2cf-484b-11d9-813c-00065be4b5b6.html"
+					}
+				],
+				"published": "2004-12-16T00:00:00Z",
+				"modified": "2005-03-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0837",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0837"
-				}
+			"content": {
+				"id": "CVE-2004-0837",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0837"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

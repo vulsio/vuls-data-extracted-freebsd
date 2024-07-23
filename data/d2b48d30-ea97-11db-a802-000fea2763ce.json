@@ -2,30 +2,40 @@
 	"id": "d2b48d30-ea97-11db-a802-000fea2763ce",
 	"advisories": [
 		{
-			"id": "d2b48d30-ea97-11db-a802-000fea2763ce",
-			"title": "lighttpd -- Remote DOS in CRLF parsing",
-			"description": "\n\t<p>Lighttpd SA:</p>\n\t<blockquote cite=\"http://www.lighttpd.net/assets/2007/4/13/lighttpd_sa2007_01.txt\">\n\t  <p>If the connection aborts during parsing \"\\r\\n\\r\\n\" the server\n\t    might get into a infinite loop and use 100% of the CPU time.\n\t    lighttpd still responses to other requests. This can be repeated\n\t    until either the server limit for concurrent connections or file\n\t    descriptors is reached.</p>\n\t  <p>The bug was reported and fixed by Robert Jakabosky.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.lighttpd.net/assets/2007/4/13/lighttpd_sa2007_01.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d2b48d30-ea97-11db-a802-000fea2763ce.html"
-				}
-			],
-			"published": "2007-04-14T00:00:00Z"
+			"content": {
+				"id": "d2b48d30-ea97-11db-a802-000fea2763ce",
+				"title": "lighttpd -- Remote DOS in CRLF parsing",
+				"description": "\n\t<p>Lighttpd SA:</p>\n\t<blockquote cite=\"http://www.lighttpd.net/assets/2007/4/13/lighttpd_sa2007_01.txt\">\n\t  <p>If the connection aborts during parsing \"\\r\\n\\r\\n\" the server\n\t    might get into a infinite loop and use 100% of the CPU time.\n\t    lighttpd still responses to other requests. This can be repeated\n\t    until either the server limit for concurrent connections or file\n\t    descriptors is reached.</p>\n\t  <p>The bug was reported and fixed by Robert Jakabosky.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.lighttpd.net/assets/2007/4/13/lighttpd_sa2007_01.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d2b48d30-ea97-11db-a802-000fea2763ce.html"
+					}
+				],
+				"published": "2007-04-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-1869",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-1869"
-				}
+			"content": {
+				"id": "CVE-2007-1869",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-1869"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

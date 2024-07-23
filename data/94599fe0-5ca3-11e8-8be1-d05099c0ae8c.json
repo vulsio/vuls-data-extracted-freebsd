@@ -2,43 +2,58 @@
 	"id": "94599fe0-5ca3-11e8-8be1-d05099c0ae8c",
 	"advisories": [
 		{
-			"id": "94599fe0-5ca3-11e8-8be1-d05099c0ae8c",
-			"title": "BIND -- multiple vulnerabilities",
-			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01602\">\n\t  <p>An error in zone database reference counting can\n\t    lead to an assertion failure if a server which is\n\t    running an affected version of BIND attempts\n\t    several transfers of a slave zone in quick\n\t    succession.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01606\">\n\t  <p>A problem with the implementation of the new\n\t    serve-stale feature in BIND 9.12 can lead to\n\t    an assertion failure in rbtdb.c, even when\n\t    stale-answer-enable is off.  Additionally,\n\t    problematic interaction between the serve-stale\n\t    feature and NSEC aggressive negative caching can\n\t    in some cases cause undesirable behavior from named,\n\t    such as a recursion loop or excessive logging.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01602"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01606"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/94599fe0-5ca3-11e8-8be1-d05099c0ae8c.html"
-				}
-			],
-			"published": "2018-05-21T00:00:00Z"
+			"content": {
+				"id": "94599fe0-5ca3-11e8-8be1-d05099c0ae8c",
+				"title": "BIND -- multiple vulnerabilities",
+				"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01602\">\n\t  <p>An error in zone database reference counting can\n\t    lead to an assertion failure if a server which is\n\t    running an affected version of BIND attempts\n\t    several transfers of a slave zone in quick\n\t    succession.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01606\">\n\t  <p>A problem with the implementation of the new\n\t    serve-stale feature in BIND 9.12 can lead to\n\t    an assertion failure in rbtdb.c, even when\n\t    stale-answer-enable is off.  Additionally,\n\t    problematic interaction between the serve-stale\n\t    feature and NSEC aggressive negative caching can\n\t    in some cases cause undesirable behavior from named,\n\t    such as a recursion loop or excessive logging.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01602"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01606"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/94599fe0-5ca3-11e8-8be1-d05099c0ae8c.html"
+					}
+				],
+				"published": "2018-05-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-5736",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5736"
-				}
+			"content": {
+				"id": "CVE-2018-5736",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-5736"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-5737",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5737"
-				}
+			"content": {
+				"id": "CVE-2018-5737",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-5737"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

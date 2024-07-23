@@ -2,34 +2,44 @@
 	"id": "533d20e7-f71f-11df-9ae1-000bcdf0a03b",
 	"advisories": [
 		{
-			"id": "533d20e7-f71f-11df-9ae1-000bcdf0a03b",
-			"title": "proftpd -- remote code execution vulnerability",
-			"description": "\n\t<p>Tippingpoint reports:</p>\n\t<blockquote cite=\"http://www.zerodayinitiative.com/advisories/ZDI-10-229/\">\n\t  <p>This vulnerability allows remote attackers to execute arbitrary\n\t    code on vulnerable installations of ProFTPD.  Authentication is not\n\t    required to exploit this vulnerability.</p>\n\t  <p>The flaw exists within the proftpd server component which\n\t    listens by default on TCP port 21.  When reading user input if a\n\t    TELNET_IAC escape sequence is encountered the process\n\t    miscalculates a buffer length counter value allowing a user\n\t    controlled copy of data to a stack buffer.  A remote attacker can\n\t    exploit this vulnerability to execute arbitrary code under the\n\t    context of the proftpd process.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/44562"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.zerodayinitiative.com/advisories/ZDI-10-229/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/533d20e7-f71f-11df-9ae1-000bcdf0a03b.html"
-				}
-			],
-			"published": "2010-11-23T00:00:00Z"
+			"content": {
+				"id": "533d20e7-f71f-11df-9ae1-000bcdf0a03b",
+				"title": "proftpd -- remote code execution vulnerability",
+				"description": "\n\t<p>Tippingpoint reports:</p>\n\t<blockquote cite=\"http://www.zerodayinitiative.com/advisories/ZDI-10-229/\">\n\t  <p>This vulnerability allows remote attackers to execute arbitrary\n\t    code on vulnerable installations of ProFTPD.  Authentication is not\n\t    required to exploit this vulnerability.</p>\n\t  <p>The flaw exists within the proftpd server component which\n\t    listens by default on TCP port 21.  When reading user input if a\n\t    TELNET_IAC escape sequence is encountered the process\n\t    miscalculates a buffer length counter value allowing a user\n\t    controlled copy of data to a stack buffer.  A remote attacker can\n\t    exploit this vulnerability to execute arbitrary code under the\n\t    context of the proftpd process.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/44562"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.zerodayinitiative.com/advisories/ZDI-10-229/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/533d20e7-f71f-11df-9ae1-000bcdf0a03b.html"
+					}
+				],
+				"published": "2010-11-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-4221",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-4221"
-				}
+			"content": {
+				"id": "CVE-2010-4221",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-4221"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

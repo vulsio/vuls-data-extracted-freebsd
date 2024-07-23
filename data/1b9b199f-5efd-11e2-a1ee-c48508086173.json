@@ -2,34 +2,44 @@
 	"id": "1b9b199f-5efd-11e2-a1ee-c48508086173",
 	"advisories": [
 		{
-			"id": "1b9b199f-5efd-11e2-a1ee-c48508086173",
-			"title": "ettercap -- buffer overflow in target list parsing",
-			"description": "\n\t<p>Host target list parsing routine in ettercap\n\t  0.7.4-series prior to 0.7.4.1 and 0.7.5-series\n\t  is prone to the stack-based buffer overflow that\n\t  may lead to the code execution with the privileges\n\t  of the ettercap process.</p>\n\t<p>In order to trigger this vulnerability, user or service\n\t  that use ettercap should be tricked to pass the crafted list\n\t  of targets via the \"-j\" option.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.exploit-db.com/exploits/23945/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://secunia.com/advisories/51731/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1b9b199f-5efd-11e2-a1ee-c48508086173.html"
-				}
-			],
-			"published": "2013-01-16T00:00:00Z"
+			"content": {
+				"id": "1b9b199f-5efd-11e2-a1ee-c48508086173",
+				"title": "ettercap -- buffer overflow in target list parsing",
+				"description": "\n\t<p>Host target list parsing routine in ettercap\n\t  0.7.4-series prior to 0.7.4.1 and 0.7.5-series\n\t  is prone to the stack-based buffer overflow that\n\t  may lead to the code execution with the privileges\n\t  of the ettercap process.</p>\n\t<p>In order to trigger this vulnerability, user or service\n\t  that use ettercap should be tricked to pass the crafted list\n\t  of targets via the \"-j\" option.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.exploit-db.com/exploits/23945/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://secunia.com/advisories/51731/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1b9b199f-5efd-11e2-a1ee-c48508086173.html"
+					}
+				],
+				"published": "2013-01-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-0722",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0722"
-				}
+			"content": {
+				"id": "CVE-2013-0722",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-0722"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

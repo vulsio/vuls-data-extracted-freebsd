@@ -2,30 +2,40 @@
 	"id": "73964eac-6007-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "73964eac-6007-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- memory leak in sandboxed namei lookup",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The namei facility will leak a small amount of kernel\n\tmemory every time a sandboxed process looks up a nonexistent\n\tpath name.</p>\n\t<h1>Impact:</h1>\n\t<p>A remote attacker that can cause a sandboxed process\n\t(for instance, a web server) to look up a large number of\n\tnonexistent path names can cause memory exhaustion.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:22.namei.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/73964eac-6007-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "73964eac-6007-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- memory leak in sandboxed namei lookup",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The namei facility will leak a small amount of kernel\n\tmemory every time a sandboxed process looks up a nonexistent\n\tpath name.</p>\n\t<h1>Impact:</h1>\n\t<p>A remote attacker that can cause a sandboxed process\n\t(for instance, a web server) to look up a large number of\n\tnonexistent path names can cause memory exhaustion.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:22.namei.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/73964eac-6007-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-3711",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3711"
-				}
+			"content": {
+				"id": "CVE-2014-3711",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-3711"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,20 +2,25 @@
 	"id": "6d9eadaf-6007-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "6d9eadaf-6007-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- sendmail improper close-on-exec flag handling",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>There is a programming error in sendmail(8) that prevented\n\topen file descriptors have close-on-exec properly set.\n\tConsequently a subprocess will be able to access all open\n\tfiles that the parent process have open.</p>\n\t<h1>Impact:</h1>\n\t<p>A local user who can execute their own program for mail\n\tdelivery will be able to interfere with an open SMTP\n\tconnection.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:11.sendmail.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6d9eadaf-6007-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "6d9eadaf-6007-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- sendmail improper close-on-exec flag handling",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>There is a programming error in sendmail(8) that prevented\n\topen file descriptors have close-on-exec properly set.\n\tConsequently a subprocess will be able to access all open\n\tfiles that the parent process have open.</p>\n\t<h1>Impact:</h1>\n\t<p>A local user who can execute their own program for mail\n\tdelivery will be able to interfere with an open SMTP\n\tconnection.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:11.sendmail.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6d9eadaf-6007-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

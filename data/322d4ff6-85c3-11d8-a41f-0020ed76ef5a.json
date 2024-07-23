@@ -2,35 +2,45 @@
 	"id": "322d4ff6-85c3-11d8-a41f-0020ed76ef5a",
 	"advisories": [
 		{
-			"id": "322d4ff6-85c3-11d8-a41f-0020ed76ef5a",
-			"title": "Midnight Commander buffer overflow during symlink resolution",
-			"description": "\n\t<p>Midnight Commander uses a fixed sized stack buffer while\n\t  resolving symbolic links within file archives (tar or cpio).\n\t  If an attacker can cause a user to process a specially\n\t  crafted file archive with Midnight Commander,\n\t  the attacker may be able to obtain the privileges of the\n\t  target user.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=106399528518704"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/8658"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/322d4ff6-85c3-11d8-a41f-0020ed76ef5a.html"
-				}
-			],
-			"published": "2004-04-03T00:00:00Z",
-			"modified": "2004-04-13T00:00:00Z"
+			"content": {
+				"id": "322d4ff6-85c3-11d8-a41f-0020ed76ef5a",
+				"title": "Midnight Commander buffer overflow during symlink resolution",
+				"description": "\n\t<p>Midnight Commander uses a fixed sized stack buffer while\n\t  resolving symbolic links within file archives (tar or cpio).\n\t  If an attacker can cause a user to process a specially\n\t  crafted file archive with Midnight Commander,\n\t  the attacker may be able to obtain the privileges of the\n\t  target user.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=106399528518704"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/8658"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/322d4ff6-85c3-11d8-a41f-0020ed76ef5a.html"
+					}
+				],
+				"published": "2004-04-03T00:00:00Z",
+				"modified": "2004-04-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2003-1023",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2003-1023"
-				}
+			"content": {
+				"id": "CVE-2003-1023",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2003-1023"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

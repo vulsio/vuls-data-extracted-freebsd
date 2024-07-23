@@ -2,34 +2,44 @@
 	"id": "497b82e0-f9a0-11e5-92ce-002590263bf5",
 	"advisories": [
 		{
-			"id": "497b82e0-f9a0-11e5-92ce-002590263bf5",
-			"title": "pcre -- heap overflow vulnerability",
-			"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1283\">\n\t  <p>The pcre_compile2 function in pcre_compile.c in PCRE 8.38\n\t    mishandles the /((?:F?+(?:^(?(R)a+\\\"){99}-))(?J)(?'R'(?'R'&lt;((?'RR'(?'R'\\){97)?J)?J)(?'R'(?'R'\\){99|(:(?|(?'R')(\\k'R')|((?'R')))H'R'R)(H'R))))))/\n\t    pattern and related patterns with named subgroups, which allows\n\t    remote attackers to cause a denial of service (heap-based buffer\n\t    overflow) or possibly have unspecified other impact via a crafted\n\t    regular expression, as demonstrated by a JavaScript RegExp object\n\t    encountered by Konqueror.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.exim.org/show_bug.cgi?id=1767"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=208260"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/497b82e0-f9a0-11e5-92ce-002590263bf5.html"
-				}
-			],
-			"published": "2016-04-03T00:00:00Z"
+			"content": {
+				"id": "497b82e0-f9a0-11e5-92ce-002590263bf5",
+				"title": "pcre -- heap overflow vulnerability",
+				"description": "\n\t<p>Mitre reports:</p>\n\t<blockquote cite=\"http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1283\">\n\t  <p>The pcre_compile2 function in pcre_compile.c in PCRE 8.38\n\t    mishandles the /((?:F?+(?:^(?(R)a+\\\"){99}-))(?J)(?'R'(?'R'&lt;((?'RR'(?'R'\\){97)?J)?J)(?'R'(?'R'\\){99|(:(?|(?'R')(\\k'R')|((?'R')))H'R'R)(H'R))))))/\n\t    pattern and related patterns with named subgroups, which allows\n\t    remote attackers to cause a denial of service (heap-based buffer\n\t    overflow) or possibly have unspecified other impact via a crafted\n\t    regular expression, as demonstrated by a JavaScript RegExp object\n\t    encountered by Konqueror.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.exim.org/show_bug.cgi?id=1767"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=208260"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/497b82e0-f9a0-11e5-92ce-002590263bf5.html"
+					}
+				],
+				"published": "2016-04-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-1283",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1283"
-				}
+			"content": {
+				"id": "CVE-2016-1283",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1283"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

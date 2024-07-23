@@ -2,30 +2,40 @@
 	"id": "f22144d7-bad1-11ec-9cfe-0800270512f4",
 	"advisories": [
 		{
-			"id": "f22144d7-bad1-11ec-9cfe-0800270512f4",
-			"title": "Ruby -- Double free in Regexp compilation",
-			"description": "\n\t<p>piao reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2022/04/12/double-free-in-regexp-compilation-cve-2022-28738/\">\n\t  <p>\n\t    Due to a bug in the Regexp compilation process, creating\n\t    a Regexp object with a crafted source string could cause\n\t    the same memory to be freed twice. This is known as a\n\t    \"double free\" vulnerability. Note that, in general, it\n\t    is considered unsafe to create and use a Regexp object\n\t    generated from untrusted input. In this case, however,\n\t    following a comprehensive assessment, we treat this issue\n\t    as a vulnerability.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.ruby-lang.org/en/news/2022/04/12/double-free-in-regexp-compilation-cve-2022-28738/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f22144d7-bad1-11ec-9cfe-0800270512f4.html"
-				}
-			],
-			"published": "2022-04-13T00:00:00Z"
+			"content": {
+				"id": "f22144d7-bad1-11ec-9cfe-0800270512f4",
+				"title": "Ruby -- Double free in Regexp compilation",
+				"description": "\n\t<p>piao reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2022/04/12/double-free-in-regexp-compilation-cve-2022-28738/\">\n\t  <p>\n\t    Due to a bug in the Regexp compilation process, creating\n\t    a Regexp object with a crafted source string could cause\n\t    the same memory to be freed twice. This is known as a\n\t    \"double free\" vulnerability. Note that, in general, it\n\t    is considered unsafe to create and use a Regexp object\n\t    generated from untrusted input. In this case, however,\n\t    following a comprehensive assessment, we treat this issue\n\t    as a vulnerability.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.ruby-lang.org/en/news/2022/04/12/double-free-in-regexp-compilation-cve-2022-28738/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f22144d7-bad1-11ec-9cfe-0800270512f4.html"
+					}
+				],
+				"published": "2022-04-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-28738",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-28738"
-				}
+			"content": {
+				"id": "CVE-2022-28738",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-28738"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

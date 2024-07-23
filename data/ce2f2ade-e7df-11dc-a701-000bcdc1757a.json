@@ -2,35 +2,45 @@
 	"id": "ce2f2ade-e7df-11dc-a701-000bcdc1757a",
 	"advisories": [
 		{
-			"id": "ce2f2ade-e7df-11dc-a701-000bcdc1757a",
-			"title": "phpmyadmin -- SQL injection vulnerability",
-			"description": "\n\t<p>A phpMyAdmin security announcement report:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-1\">\n\t  <p>phpMyAdmin used the $_REQUEST superglobal as a source for\n\t    its parameters, instead of $_GET and $_POST. This means that\n\t    on most servers, a cookie with the same name as one of\n\t    phpMyAdmin's parameters can interfere.</p>\n\t  <p>Another application could set a cookie for the root path\n\t    \"/\" with a \"sql_query\" name, therefore overriding the\n\t    user-submitted sql_query because by default, the $_REQUEST\n\t    superglobal imports first GET, then POST then COOKIE data.</p>\n\t  <h3>Mitigation factor</h3>\n\t  <p>An attacker must trick the victim into visiting a page on\n\t    the same web server where he has placed code that creates\n\t    a malicious cookie.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-1"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/28068"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ce2f2ade-e7df-11dc-a701-000bcdc1757a.html"
-				}
-			],
-			"published": "2008-03-04T00:00:00Z",
-			"modified": "2010-05-12T00:00:00Z"
+			"content": {
+				"id": "ce2f2ade-e7df-11dc-a701-000bcdc1757a",
+				"title": "phpmyadmin -- SQL injection vulnerability",
+				"description": "\n\t<p>A phpMyAdmin security announcement report:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-1\">\n\t  <p>phpMyAdmin used the $_REQUEST superglobal as a source for\n\t    its parameters, instead of $_GET and $_POST. This means that\n\t    on most servers, a cookie with the same name as one of\n\t    phpMyAdmin's parameters can interfere.</p>\n\t  <p>Another application could set a cookie for the root path\n\t    \"/\" with a \"sql_query\" name, therefore overriding the\n\t    user-submitted sql_query because by default, the $_REQUEST\n\t    superglobal imports first GET, then POST then COOKIE data.</p>\n\t  <h3>Mitigation factor</h3>\n\t  <p>An attacker must trick the victim into visiting a page on\n\t    the same web server where he has placed code that creates\n\t    a malicious cookie.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-1"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/28068"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ce2f2ade-e7df-11dc-a701-000bcdc1757a.html"
+					}
+				],
+				"published": "2008-03-04T00:00:00Z",
+				"modified": "2010-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2008-1149",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1149"
-				}
+			"content": {
+				"id": "CVE-2008-1149",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2008-1149"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

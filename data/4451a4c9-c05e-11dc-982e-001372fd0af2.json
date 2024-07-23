@@ -2,35 +2,45 @@
 	"id": "4451a4c9-c05e-11dc-982e-001372fd0af2",
 	"advisories": [
 		{
-			"id": "4451a4c9-c05e-11dc-982e-001372fd0af2",
-			"title": "drupal -- cross site request forgery",
-			"description": "\n\t<p>The Drupal Project reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/208562\">\n\t  <p>The aggregator module fetches items from RSS feeds and makes\n\t    them available on the site. The module provides an option to\n\t    remove items from a particular feed. This has been implemented\n\t    as a simple GET request and is therefore vulnerable to cross\n\t    site request forgeries. For example: Should a privileged user\n\t    view a page containing an &lt;img&gt; tag with a specially\n\t    constructed src pointing to a remove items URL, the items would\n\t    be removed.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://drupal.org/node/208562"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/28422/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4451a4c9-c05e-11dc-982e-001372fd0af2.html"
-				}
-			],
-			"published": "2008-01-11T00:00:00Z",
-			"modified": "2010-05-12T00:00:00Z"
+			"content": {
+				"id": "4451a4c9-c05e-11dc-982e-001372fd0af2",
+				"title": "drupal -- cross site request forgery",
+				"description": "\n\t<p>The Drupal Project reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/208562\">\n\t  <p>The aggregator module fetches items from RSS feeds and makes\n\t    them available on the site. The module provides an option to\n\t    remove items from a particular feed. This has been implemented\n\t    as a simple GET request and is therefore vulnerable to cross\n\t    site request forgeries. For example: Should a privileged user\n\t    view a page containing an &lt;img&gt; tag with a specially\n\t    constructed src pointing to a remove items URL, the items would\n\t    be removed.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://drupal.org/node/208562"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/28422/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4451a4c9-c05e-11dc-982e-001372fd0af2.html"
+					}
+				],
+				"published": "2008-01-11T00:00:00Z",
+				"modified": "2010-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2008-0272",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2008-0272"
-				}
+			"content": {
+				"id": "CVE-2008-0272",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2008-0272"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

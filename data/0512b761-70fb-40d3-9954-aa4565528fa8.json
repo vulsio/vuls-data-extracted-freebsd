@@ -2,30 +2,40 @@
 	"id": "0512b761-70fb-40d3-9954-aa4565528fa8",
 	"advisories": [
 		{
-			"id": "0512b761-70fb-40d3-9954-aa4565528fa8",
-			"title": "kstars -- exploitable set-user-ID application fliccd",
-			"description": "\n\t<p>A KDE Security Advisory explains:</p>\n\t<blockquote cite=\"http://www.kde.org/info/security/advisory-20050215-1.txt\">\n\t  <h1>Overview</h1>\n\t  <p>KStars includes support for the Instrument Neutral\n\t    Distributed Interface (INDI). The build system of this\n\t    extra 3rd party software contained an installation hook to\n\t    install fliccd (part of INDI) as SUID root\n\t    application.</p>\n\t  <p>Erik Sjölund discovered that the code contains several\n\t    vulnerabilities that allow stack based buffer\n\t    overflows.</p>\n\t  <h1>Impact</h1>\n\t  <p>If the fliccd binary is installed as suid root, it\n\t    enables root privilege escalation for local users, or, if\n\t    the daemon is actually running (which it does not by\n\t    default) and is running as root, remote root privilege\n\t    escalation.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.kde.org/info/security/advisory-20050215-1.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0512b761-70fb-40d3-9954-aa4565528fa8.html"
-				}
-			],
-			"published": "2005-06-17T00:00:00Z"
+			"content": {
+				"id": "0512b761-70fb-40d3-9954-aa4565528fa8",
+				"title": "kstars -- exploitable set-user-ID application fliccd",
+				"description": "\n\t<p>A KDE Security Advisory explains:</p>\n\t<blockquote cite=\"http://www.kde.org/info/security/advisory-20050215-1.txt\">\n\t  <h1>Overview</h1>\n\t  <p>KStars includes support for the Instrument Neutral\n\t    Distributed Interface (INDI). The build system of this\n\t    extra 3rd party software contained an installation hook to\n\t    install fliccd (part of INDI) as SUID root\n\t    application.</p>\n\t  <p>Erik Sjölund discovered that the code contains several\n\t    vulnerabilities that allow stack based buffer\n\t    overflows.</p>\n\t  <h1>Impact</h1>\n\t  <p>If the fliccd binary is installed as suid root, it\n\t    enables root privilege escalation for local users, or, if\n\t    the daemon is actually running (which it does not by\n\t    default) and is running as root, remote root privilege\n\t    escalation.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.kde.org/info/security/advisory-20050215-1.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0512b761-70fb-40d3-9954-aa4565528fa8.html"
+					}
+				],
+				"published": "2005-06-17T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0011",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0011"
-				}
+			"content": {
+				"id": "CVE-2005-0011",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0011"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

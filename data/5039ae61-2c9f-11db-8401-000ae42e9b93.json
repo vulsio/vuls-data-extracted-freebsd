@@ -2,44 +2,59 @@
 	"id": "5039ae61-2c9f-11db-8401-000ae42e9b93",
 	"advisories": [
 		{
-			"id": "5039ae61-2c9f-11db-8401-000ae42e9b93",
-			"title": "globus -- Multiple tmpfile races",
-			"description": "\n\t<p>The Globus Alliance reports:</p>\n\t<blockquote cite=\"http://www.globus.org/mail_archive/security-announce/2006/08/msg00000.html\">\n\t  <p>The proxy generation tool (grid-proxy-init) creates the\n\t    file, secures the file to provide access only to owner and\n\t    writes proxy to the file. A race condition exists between\n\t    the opening of the proxy credentials file, and making sure\n\t    it is safe file to write to. The checks to ensure this\n\t    file is accessible only to the owner take place using the\n\t    filename after the file is opened for writing, but before\n\t    any data is written.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.globus.org/mail_archive/security-announce/2006/08/msg00001.html\">\n\t  <p>Various components of the toolkit use files in shared\n\t    directories to store information, some being sensitive\n\t    information. For example, the tool to create proxy\n\t    certificates, stores the generated proxy certificate by\n\t    default in /tmp. Specific vulnerabilities in handling such\n\t    files were reported in myproxy-admin-adduser, grid-ca-sign\n\t    and grid-security-config.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.globus.org/mail_archive/security-announce/2006/08/msg00000.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.globus.org/mail_archive/security-announce/2006/08/msg00001.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5039ae61-2c9f-11db-8401-000ae42e9b93.html"
-				}
-			],
-			"published": "2006-08-15T00:00:00Z",
-			"modified": "2010-05-12T00:00:00Z"
+			"content": {
+				"id": "5039ae61-2c9f-11db-8401-000ae42e9b93",
+				"title": "globus -- Multiple tmpfile races",
+				"description": "\n\t<p>The Globus Alliance reports:</p>\n\t<blockquote cite=\"http://www.globus.org/mail_archive/security-announce/2006/08/msg00000.html\">\n\t  <p>The proxy generation tool (grid-proxy-init) creates the\n\t    file, secures the file to provide access only to owner and\n\t    writes proxy to the file. A race condition exists between\n\t    the opening of the proxy credentials file, and making sure\n\t    it is safe file to write to. The checks to ensure this\n\t    file is accessible only to the owner take place using the\n\t    filename after the file is opened for writing, but before\n\t    any data is written.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.globus.org/mail_archive/security-announce/2006/08/msg00001.html\">\n\t  <p>Various components of the toolkit use files in shared\n\t    directories to store information, some being sensitive\n\t    information. For example, the tool to create proxy\n\t    certificates, stores the generated proxy certificate by\n\t    default in /tmp. Specific vulnerabilities in handling such\n\t    files were reported in myproxy-admin-adduser, grid-ca-sign\n\t    and grid-security-config.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.globus.org/mail_archive/security-announce/2006/08/msg00000.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.globus.org/mail_archive/security-announce/2006/08/msg00001.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5039ae61-2c9f-11db-8401-000ae42e9b93.html"
+					}
+				],
+				"published": "2006-08-15T00:00:00Z",
+				"modified": "2010-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-4232",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4232"
-				}
+			"content": {
+				"id": "CVE-2006-4232",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-4232"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2006-4233",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4233"
-				}
+			"content": {
+				"id": "CVE-2006-4233",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-4233"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

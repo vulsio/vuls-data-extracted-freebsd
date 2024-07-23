@@ -2,119 +2,149 @@
 	"id": "d2102505-f03d-11d8-81b0-000347a4fa7d",
 	"advisories": [
 		{
-			"id": "d2102505-f03d-11d8-81b0-000347a4fa7d",
-			"title": "cvs -- numerous vulnerabilities",
-			"description": "\n\t<p>A number of vulnerabilities were discovered in CVS by\n\t  Stefan Esser, Sebastian Krahmer, and Derek Price.</p>\n\t<ul>\n\t  <li>Insufficient input validation while processing \"Entry\"\n\t    lines.  (CVE-2004-0414)</li>\n\t  <li>A double-free resulting from erroneous state handling while\n\t    processing \"Argumentx\" commands. (CVE-2004-0416)</li>\n\t  <li>Integer overflow while processing \"Max-dotdot\" commands.\n\t    (CVE-2004-0417)</li>\n\t  <li>Erroneous handling of empty entries handled while processing\n\t    \"Notify\" commands. (CVE-2004-0418)</li>\n\t  <li>A format string bug while processing CVS wrappers.</li>\n\t  <li>Single-byte buffer underflows while processing configuration files\n\t    from CVSROOT.</li>\n\t  <li>Various other integer overflows.</li>\n\t</ul>\n\t<p>Additionally, iDEFENSE reports an undocumented command-line\n\t  flag used in debugging does not perform input validation on\n\t  the given path names.</p>\n\t<p>CVS servers (\"cvs server\" or :pserver: modes) are\n\t  affected by these vulnerabilities.  They vary in impact\n\t  but include information disclosure (the iDEFENSE-reported\n\t  bug), denial-of-service (CVE-2004-0414, CVE-2004-0416,\n\t  CVE-2004-0417 and other bugs), or possibly arbitrary code\n\t  execution (CVE-2004-0418).  In very special situations where\n\t  the attacker may somehow influence the contents of CVS\n\t  configuration files in CVSROOT, additional attacks may be\n\t  possible.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/11817"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/12309"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://security.e-matters.de/advisories/092004.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.idefense.com/application/poi/display?id=130&type=vulnerabilities&flashstatus=false"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6830"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6831"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6832"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6833"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6834"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6835"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/6836"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/10499"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://ccvs.cvshome.org/source/browse/ccvs/NEWS?rev=1.116.2.104"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:14.cvs.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d2102505-f03d-11d8-81b0-000347a4fa7d.html"
-				}
-			],
-			"published": "2004-08-17T00:00:00Z",
-			"modified": "2004-09-19T00:00:00Z"
+			"content": {
+				"id": "d2102505-f03d-11d8-81b0-000347a4fa7d",
+				"title": "cvs -- numerous vulnerabilities",
+				"description": "\n\t<p>A number of vulnerabilities were discovered in CVS by\n\t  Stefan Esser, Sebastian Krahmer, and Derek Price.</p>\n\t<ul>\n\t  <li>Insufficient input validation while processing \"Entry\"\n\t    lines.  (CVE-2004-0414)</li>\n\t  <li>A double-free resulting from erroneous state handling while\n\t    processing \"Argumentx\" commands. (CVE-2004-0416)</li>\n\t  <li>Integer overflow while processing \"Max-dotdot\" commands.\n\t    (CVE-2004-0417)</li>\n\t  <li>Erroneous handling of empty entries handled while processing\n\t    \"Notify\" commands. (CVE-2004-0418)</li>\n\t  <li>A format string bug while processing CVS wrappers.</li>\n\t  <li>Single-byte buffer underflows while processing configuration files\n\t    from CVSROOT.</li>\n\t  <li>Various other integer overflows.</li>\n\t</ul>\n\t<p>Additionally, iDEFENSE reports an undocumented command-line\n\t  flag used in debugging does not perform input validation on\n\t  the given path names.</p>\n\t<p>CVS servers (\"cvs server\" or :pserver: modes) are\n\t  affected by these vulnerabilities.  They vary in impact\n\t  but include information disclosure (the iDEFENSE-reported\n\t  bug), denial-of-service (CVE-2004-0414, CVE-2004-0416,\n\t  CVE-2004-0417 and other bugs), or possibly arbitrary code\n\t  execution (CVE-2004-0418).  In very special situations where\n\t  the attacker may somehow influence the contents of CVS\n\t  configuration files in CVSROOT, additional attacks may be\n\t  possible.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/11817"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/12309"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://security.e-matters.de/advisories/092004.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.idefense.com/application/poi/display?id=130&type=vulnerabilities&flashstatus=false"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6830"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6831"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6832"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6833"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6834"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6835"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/6836"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/10499"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://ccvs.cvshome.org/source/browse/ccvs/NEWS?rev=1.116.2.104"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:14.cvs.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d2102505-f03d-11d8-81b0-000347a4fa7d.html"
+					}
+				],
+				"published": "2004-08-17T00:00:00Z",
+				"modified": "2004-09-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0414",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0414"
-				}
+			"content": {
+				"id": "CVE-2004-0414",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0414"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2004-0416",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0416"
-				}
+			"content": {
+				"id": "CVE-2004-0416",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0416"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2004-0417",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0417"
-				}
+			"content": {
+				"id": "CVE-2004-0417",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0417"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2004-0418",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0418"
-				}
+			"content": {
+				"id": "CVE-2004-0418",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0418"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2004-0778",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0778"
-				}
+			"content": {
+				"id": "CVE-2004-0778",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0778"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

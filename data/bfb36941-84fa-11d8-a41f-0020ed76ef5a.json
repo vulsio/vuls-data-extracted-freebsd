@@ -2,35 +2,45 @@
 	"id": "bfb36941-84fa-11d8-a41f-0020ed76ef5a",
 	"advisories": [
 		{
-			"id": "bfb36941-84fa-11d8-a41f-0020ed76ef5a",
-			"title": "Incorrect cross-realm trust handling in Heimdal",
-			"description": "\n\t<p>Heimdal does not correctly validate the `transited' field of\n\t  Kerberos tickets when computing the authentication path.  This\n\t  could allow a rogue KDC with which cross-realm relationships\n\t  have been established to impersonate any KDC in the\n\t  authentication path.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.pdc.kth.se/heimdal/advisory/2004-04-01/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:08.heimdal.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bfb36941-84fa-11d8-a41f-0020ed76ef5a.html"
-				}
-			],
-			"published": "2004-04-02T00:00:00Z",
-			"modified": "2004-05-05T00:00:00Z"
+			"content": {
+				"id": "bfb36941-84fa-11d8-a41f-0020ed76ef5a",
+				"title": "Incorrect cross-realm trust handling in Heimdal",
+				"description": "\n\t<p>Heimdal does not correctly validate the `transited' field of\n\t  Kerberos tickets when computing the authentication path.  This\n\t  could allow a rogue KDC with which cross-realm relationships\n\t  have been established to impersonate any KDC in the\n\t  authentication path.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.pdc.kth.se/heimdal/advisory/2004-04-01/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-04:08.heimdal.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bfb36941-84fa-11d8-a41f-0020ed76ef5a.html"
+					}
+				],
+				"published": "2004-04-02T00:00:00Z",
+				"modified": "2004-05-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0371",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0371"
-				}
+			"content": {
+				"id": "CVE-2004-0371",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0371"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

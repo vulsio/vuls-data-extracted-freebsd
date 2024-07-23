@@ -2,20 +2,25 @@
 	"id": "ce808022-8ee6-11e6-a590-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "ce808022-8ee6-11e6-a590-14dae9d210b8",
-			"title": "FreeBSD -- Heap overflow vulnerability in bspatch",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The implementation of bspatch is susceptible to integer\n\toverflows with carefully crafted input, potentially allowing\n\tan attacker who can control the patch file to write at\n\tarbitrary locations in the heap. This issue was partially\n\taddressed in FreeBSD-SA-16:25.bspatch, but some possible\n\tinteger overflows remained.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can control the patch file can cause a\n\tcrash or run arbitrary code under the credentials of the\n\tuser who runs bspatch, in many cases, root.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:29.bspatch.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ce808022-8ee6-11e6-a590-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-10-10T00:00:00Z"
+			"content": {
+				"id": "ce808022-8ee6-11e6-a590-14dae9d210b8",
+				"title": "FreeBSD -- Heap overflow vulnerability in bspatch",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The implementation of bspatch is susceptible to integer\n\toverflows with carefully crafted input, potentially allowing\n\tan attacker who can control the patch file to write at\n\tarbitrary locations in the heap. This issue was partially\n\taddressed in FreeBSD-SA-16:25.bspatch, but some possible\n\tinteger overflows remained.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can control the patch file can cause a\n\tcrash or run arbitrary code under the credentials of the\n\tuser who runs bspatch, in many cases, root.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:29.bspatch.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ce808022-8ee6-11e6-a590-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-10-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

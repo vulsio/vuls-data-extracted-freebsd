@@ -2,20 +2,25 @@
 	"id": "c0cae920-c4e9-11e4-898e-90e6ba741e35",
 	"advisories": [
 		{
-			"id": "c0cae920-c4e9-11e4-898e-90e6ba741e35",
-			"title": "mono -- TLS bugs",
-			"description": "\n\t<p>The Mono project reports:</p>\n\t<blockquote cite=\"http://www.mono-project.com/docs/about-mono/vulnerabilities/#tls-bugs\">\n\t  <p>Mono’s implementation of the SSL/TLS stack failed to check the order of the handshake messages. Which would allow various attacks on the protocol to succeed. Details of this vulnerability are discussed in <a href=\"https://www.smacktls.com/#skip\">SKIP-TLS post</a>.</p>\n\t  <p>Mono’s implementation of SSL/TLS also contained support for the weak EXPORT cyphers and was susceptible to the <a href=\"https://www.smacktls.com/#freak\">FREAK</a> attack.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mono-project.com/docs/about-mono/vulnerabilities/#tls-bugs"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c0cae920-c4e9-11e4-898e-90e6ba741e35.html"
-				}
-			],
-			"published": "2015-03-07T00:00:00Z"
+			"content": {
+				"id": "c0cae920-c4e9-11e4-898e-90e6ba741e35",
+				"title": "mono -- TLS bugs",
+				"description": "\n\t<p>The Mono project reports:</p>\n\t<blockquote cite=\"http://www.mono-project.com/docs/about-mono/vulnerabilities/#tls-bugs\">\n\t  <p>Mono’s implementation of the SSL/TLS stack failed to check the order of the handshake messages. Which would allow various attacks on the protocol to succeed. Details of this vulnerability are discussed in <a href=\"https://www.smacktls.com/#skip\">SKIP-TLS post</a>.</p>\n\t  <p>Mono’s implementation of SSL/TLS also contained support for the weak EXPORT cyphers and was susceptible to the <a href=\"https://www.smacktls.com/#freak\">FREAK</a> attack.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mono-project.com/docs/about-mono/vulnerabilities/#tls-bugs"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c0cae920-c4e9-11e4-898e-90e6ba741e35.html"
+					}
+				],
+				"published": "2015-03-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

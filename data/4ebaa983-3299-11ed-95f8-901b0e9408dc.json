@@ -2,20 +2,25 @@
 	"id": "4ebaa983-3299-11ed-95f8-901b0e9408dc",
 	"advisories": [
 		{
-			"id": "4ebaa983-3299-11ed-95f8-901b0e9408dc",
-			"title": "dendrite -- Signature checks not applied to some retrieved missing events",
-			"description": "\n\t<p>Dendrite team reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c\">\n\t  <p>Events retrieved from a remote homeserver using /get_missing_events did\n\t  not have their signatures verified correctly. This could potentially allow\n\t  a remote homeserver to provide invalid/modified events to Dendrite via this\n\t  endpoint.</p>\n\t  <p>Note that this does not apply to events retrieved through other endpoints\n\t  (e.g. /event, /state) as they have been correctly verified.</p>\n\t  <p>Homeservers that have federation disabled are not vulnerable.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4ebaa983-3299-11ed-95f8-901b0e9408dc.html"
-				}
-			],
-			"published": "2022-09-12T00:00:00Z"
+			"content": {
+				"id": "4ebaa983-3299-11ed-95f8-901b0e9408dc",
+				"title": "dendrite -- Signature checks not applied to some retrieved missing events",
+				"description": "\n\t<p>Dendrite team reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c\">\n\t  <p>Events retrieved from a remote homeserver using /get_missing_events did\n\t  not have their signatures verified correctly. This could potentially allow\n\t  a remote homeserver to provide invalid/modified events to Dendrite via this\n\t  endpoint.</p>\n\t  <p>Note that this does not apply to events retrieved through other endpoints\n\t  (e.g. /event, /state) as they have been correctly verified.</p>\n\t  <p>Homeservers that have federation disabled are not vulnerable.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4ebaa983-3299-11ed-95f8-901b0e9408dc.html"
+					}
+				],
+				"published": "2022-09-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

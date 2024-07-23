@@ -2,215 +2,325 @@
 	"id": "0592f49f-b3b8-4260-b648-d1718762656c",
 	"advisories": [
 		{
-			"id": "0592f49f-b3b8-4260-b648-d1718762656c",
-			"title": "mozilla -- multiple vulnerabilities",
-			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/\">\n\t  <p>CVE-2019-9811: Sandbox escape via installation of malicious language pack</p>\n\t  <p>CVE-2019-11711: Script injection within domain through inner window reuse</p>\n\t  <p>CVE-2019-11712: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects</p>\n\t  <p>CVE-2019-11713: Use-after-free with HTTP/2 cached stream</p>\n\t  <p>CVE-2019-11714: NeckoChild can trigger crash when accessed off of main thread</p>\n\t  <p>CVE-2019-11729: Empty or malformed p256-ECDH public keys may trigger a segmentation fault</p>\n\t  <p>CVE-2019-11715: HTML parsing error can contribute to content XSS</p>\n\t  <p>CVE-2019-11716: globalThis not enumerable until accessed</p>\n\t  <p>CVE-2019-11717: Caret character improperly escaped in origins</p>\n\t  <p>CVE-2019-11718: Activity Stream writes unsanitized content to innerHTML</p>\n\t  <p>CVE-2019-11719: Out-of-bounds read when importing curve25519 private key</p>\n\t  <p>CVE-2019-11720: Character encoding XSS vulnerability</p>\n\t  <p>CVE-2019-11721: Domain spoofing through unicode latin 'kra' character</p>\n\t  <p>CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin</p>\n\t  <p>CVE-2019-11723: Cookie leakage during add-on fetching across private browsing boundaries</p>\n\t  <p>CVE-2019-11724: Retired site input.mozilla.org has remote troubleshooting permissions</p>\n\t  <p>CVE-2019-11725: Websocket resources bypass safebrowsing protections</p>\n\t  <p>CVE-2019-11727: PKCS#1 v1.5 signatures can be used for TLS 1.3</p>\n\t  <p>CVE-2019-11728: Port scanning through Alt-Svc header</p>\n\t  <p>CVE-2019-11710: Memory safety bugs fixed in Firefox 68</p>\n\t  <p>CVE-2019-11709: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2019-21/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2019-22/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0592f49f-b3b8-4260-b648-d1718762656c.html"
-				}
-			],
-			"published": "2019-07-09T00:00:00Z",
-			"modified": "2019-07-23T00:00:00Z"
+			"content": {
+				"id": "0592f49f-b3b8-4260-b648-d1718762656c",
+				"title": "mozilla -- multiple vulnerabilities",
+				"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/\">\n\t  <p>CVE-2019-9811: Sandbox escape via installation of malicious language pack</p>\n\t  <p>CVE-2019-11711: Script injection within domain through inner window reuse</p>\n\t  <p>CVE-2019-11712: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects</p>\n\t  <p>CVE-2019-11713: Use-after-free with HTTP/2 cached stream</p>\n\t  <p>CVE-2019-11714: NeckoChild can trigger crash when accessed off of main thread</p>\n\t  <p>CVE-2019-11729: Empty or malformed p256-ECDH public keys may trigger a segmentation fault</p>\n\t  <p>CVE-2019-11715: HTML parsing error can contribute to content XSS</p>\n\t  <p>CVE-2019-11716: globalThis not enumerable until accessed</p>\n\t  <p>CVE-2019-11717: Caret character improperly escaped in origins</p>\n\t  <p>CVE-2019-11718: Activity Stream writes unsanitized content to innerHTML</p>\n\t  <p>CVE-2019-11719: Out-of-bounds read when importing curve25519 private key</p>\n\t  <p>CVE-2019-11720: Character encoding XSS vulnerability</p>\n\t  <p>CVE-2019-11721: Domain spoofing through unicode latin 'kra' character</p>\n\t  <p>CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin</p>\n\t  <p>CVE-2019-11723: Cookie leakage during add-on fetching across private browsing boundaries</p>\n\t  <p>CVE-2019-11724: Retired site input.mozilla.org has remote troubleshooting permissions</p>\n\t  <p>CVE-2019-11725: Websocket resources bypass safebrowsing protections</p>\n\t  <p>CVE-2019-11727: PKCS#1 v1.5 signatures can be used for TLS 1.3</p>\n\t  <p>CVE-2019-11728: Port scanning through Alt-Svc header</p>\n\t  <p>CVE-2019-11710: Memory safety bugs fixed in Firefox 68</p>\n\t  <p>CVE-2019-11709: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2019-21/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2019-22/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0592f49f-b3b8-4260-b648-d1718762656c.html"
+					}
+				],
+				"published": "2019-07-09T00:00:00Z",
+				"modified": "2019-07-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-11709",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11709"
-				}
+			"content": {
+				"id": "CVE-2019-11709",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11709"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11710",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11710"
-				}
+			"content": {
+				"id": "CVE-2019-11710",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11710"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11711",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11711"
-				}
+			"content": {
+				"id": "CVE-2019-11711",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11711"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11712",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11712"
-				}
+			"content": {
+				"id": "CVE-2019-11712",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11712"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11713",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11713"
-				}
+			"content": {
+				"id": "CVE-2019-11713",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11713"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11714",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11714"
-				}
+			"content": {
+				"id": "CVE-2019-11714",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11714"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11715",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11715"
-				}
+			"content": {
+				"id": "CVE-2019-11715",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11715"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11716",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11716"
-				}
+			"content": {
+				"id": "CVE-2019-11716",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11716"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11717",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11717"
-				}
+			"content": {
+				"id": "CVE-2019-11717",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11717"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11718",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11718"
-				}
+			"content": {
+				"id": "CVE-2019-11718",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11718"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11719",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11719"
-				}
+			"content": {
+				"id": "CVE-2019-11719",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11719"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11720",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11720"
-				}
+			"content": {
+				"id": "CVE-2019-11720",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11720"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11721",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11721"
-				}
+			"content": {
+				"id": "CVE-2019-11721",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11721"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11723",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11723"
-				}
+			"content": {
+				"id": "CVE-2019-11723",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11723"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11724",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11724"
-				}
+			"content": {
+				"id": "CVE-2019-11724",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11724"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11725",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11725"
-				}
+			"content": {
+				"id": "CVE-2019-11725",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11725"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11727",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11727"
-				}
+			"content": {
+				"id": "CVE-2019-11727",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11727"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11728",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11728"
-				}
+			"content": {
+				"id": "CVE-2019-11728",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11728"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11729",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11729"
-				}
+			"content": {
+				"id": "CVE-2019-11729",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11729"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-11730",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-11730"
-				}
+			"content": {
+				"id": "CVE-2019-11730",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-11730"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-9811",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9811"
-				}
+			"content": {
+				"id": "CVE-2019-9811",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-9811"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

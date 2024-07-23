@@ -2,61 +2,81 @@
 	"id": "faf7c1d0-f5bb-47b4-a6a8-ef57317b9766",
 	"advisories": [
 		{
-			"id": "faf7c1d0-f5bb-47b4-a6a8-ef57317b9766",
-			"title": "ffmpeg -- multiple vulnerabilities",
-			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-3109\">\n\t  <p>An issue was discovered in the FFmpeg package, where\n\t  vp3_decode_frame in libavcodec/vp3.c lacks check of the\n\t  return value of av_malloc() and will cause a null pointer\n\t  dereference, impacting availability.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-3341\">\n\t  <p>A null pointer dereference issue was discovered in\n\t  'FFmpeg' in decode_main_header() function of\n\t  libavformat/nutdec.c file. The flaw occurs because the\n\t  function lacks check of the return value of\n\t  avformat_new_stream() and triggers the null pointer\n\t  dereference error, causing an application to crash.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-3964\">\n\t  <p>A vulnerability classified as problematic has been found\n\t  in ffmpeg. This affects an unknown part of the file\n\t  libavcodec/rpzaenc.c of the component QuickTime RPZA Video\n\t  Encoder. The manipulation of the argument y_size leads to\n\t  out-of-bounds read. It is possible to initiate the attack\n\t  remotely. The name of the patch is\n\t  92f9b28ed84a77138105475beba16c146bdaf984. It is recommended\n\t  to apply a patch to fix this issue. The associated\n\t  identifier of this vulnerability is VDB-213543.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://ffmpeg.org/security.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/1eb002596e3761d88de4aeea3158692b82fb6307"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/2cdddcd6ec90c7a248ffe792d85faa4d89eab9f7"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/481e81be1271ac9a0124ee615700390c2371bd89"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/faf7c1d0-f5bb-47b4-a6a8-ef57317b9766.html"
-				}
-			],
-			"published": "2023-04-07T00:00:00Z",
-			"modified": "2023-04-10T00:00:00Z"
+			"content": {
+				"id": "faf7c1d0-f5bb-47b4-a6a8-ef57317b9766",
+				"title": "ffmpeg -- multiple vulnerabilities",
+				"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-3109\">\n\t  <p>An issue was discovered in the FFmpeg package, where\n\t  vp3_decode_frame in libavcodec/vp3.c lacks check of the\n\t  return value of av_malloc() and will cause a null pointer\n\t  dereference, impacting availability.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-3341\">\n\t  <p>A null pointer dereference issue was discovered in\n\t  'FFmpeg' in decode_main_header() function of\n\t  libavformat/nutdec.c file. The flaw occurs because the\n\t  function lacks check of the return value of\n\t  avformat_new_stream() and triggers the null pointer\n\t  dereference error, causing an application to crash.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2022-3964\">\n\t  <p>A vulnerability classified as problematic has been found\n\t  in ffmpeg. This affects an unknown part of the file\n\t  libavcodec/rpzaenc.c of the component QuickTime RPZA Video\n\t  Encoder. The manipulation of the argument y_size leads to\n\t  out-of-bounds read. It is possible to initiate the attack\n\t  remotely. The name of the patch is\n\t  92f9b28ed84a77138105475beba16c146bdaf984. It is recommended\n\t  to apply a patch to fix this issue. The associated\n\t  identifier of this vulnerability is VDB-213543.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://ffmpeg.org/security.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/1eb002596e3761d88de4aeea3158692b82fb6307"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/2cdddcd6ec90c7a248ffe792d85faa4d89eab9f7"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/481e81be1271ac9a0124ee615700390c2371bd89"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/faf7c1d0-f5bb-47b4-a6a8-ef57317b9766.html"
+					}
+				],
+				"published": "2023-04-07T00:00:00Z",
+				"modified": "2023-04-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-3109",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3109"
-				}
+			"content": {
+				"id": "CVE-2022-3109",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3109"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3341",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3341"
-				}
+			"content": {
+				"id": "CVE-2022-3341",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3341"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-3964",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-3964"
-				}
+			"content": {
+				"id": "CVE-2022-3964",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-3964"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

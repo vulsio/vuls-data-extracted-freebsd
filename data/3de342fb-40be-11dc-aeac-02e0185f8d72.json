@@ -2,31 +2,41 @@
 	"id": "3de342fb-40be-11dc-aeac-02e0185f8d72",
 	"advisories": [
 		{
-			"id": "3de342fb-40be-11dc-aeac-02e0185f8d72",
-			"title": "FreeBSD -- Predictable query ids in named(8)",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When named(8) is operating as a recursive DNS server or\n\t  sending NOTIFY requests to slave DNS servers, named(8)\n\t  uses a predictable query id.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can see the query id for some request(s)\n\t  sent by named(8) is likely to be able to perform DNS cache\n\t  poisoning by predicting the query id for other request(s).</p>\n\t<h1>Workaround:</h1>\n\t<p>No workaround is available.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-07:07.bind.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3de342fb-40be-11dc-aeac-02e0185f8d72.html"
-				}
-			],
-			"published": "2007-08-02T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "3de342fb-40be-11dc-aeac-02e0185f8d72",
+				"title": "FreeBSD -- Predictable query ids in named(8)",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When named(8) is operating as a recursive DNS server or\n\t  sending NOTIFY requests to slave DNS servers, named(8)\n\t  uses a predictable query id.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can see the query id for some request(s)\n\t  sent by named(8) is likely to be able to perform DNS cache\n\t  poisoning by predicting the query id for other request(s).</p>\n\t<h1>Workaround:</h1>\n\t<p>No workaround is available.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-07:07.bind.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3de342fb-40be-11dc-aeac-02e0185f8d72.html"
+					}
+				],
+				"published": "2007-08-02T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-2926",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2926"
-				}
+			"content": {
+				"id": "CVE-2007-2926",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-2926"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

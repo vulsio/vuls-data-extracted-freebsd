@@ -2,49 +2,69 @@
 	"id": "f9c5a410-9b4e-11ea-ac3f-6805ca2fa271",
 	"advisories": [
 		{
-			"id": "f9c5a410-9b4e-11ea-ac3f-6805ca2fa271",
-			"title": "powerdns-recursor -- multiple vulnerabilities",
-			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://doc.powerdns.com/recursor/changelog/4.3.html#change-4.3.1\">\n\t  <p>CVE-2020-10995: An issue in the DNS protocol has been found that allow malicious parties to use\n\t   recursive DNS services to attack third party authoritative name servers. The attack uses a crafted\n\t   reply by an authoritative name server to amplify the resulting traffic between the recursive and\n\t   other authoritative name servers. Both types of service can suffer degraded performance as an effect.</p>\n\t  <p>CVE-2020-12244: An issue has been found in PowerDNS Recursor 4.1.0 through 4.3.0 where records in\n\t   the answer section of a NXDOMAIN response lacking an SOA were not properly validated in\n\t   SyncRes::processAnswer. This would allow an attacker in position of man-in-the-middle to send a\n\t   NXDOMAIN answer for a name that does exist, bypassing DNSSEC validation.</p>\n\t  <p>CVE-2020-10030: An issue has been found in PowerDNS Authoritative Server allowing an attacker\n\t   with enough privileges to change the system's hostname to cause disclosure of uninitialized memory\n\t   content via a stack-based out-of-bounds read. It only occurs on systems where gethostname() does\n\t   not null-terminate the returned string if the hostname is larger than the supplied buffer. Linux\n\t   systems are not affected because the buffer is always large enough. OpenBSD systems are not affected\n\t   because the returned hostname is always null-terminated. Under some conditions this issue can lead\n\t   to the writing of one null-byte out-of-bounds on the stack, causing a denial of service or possibly\n\t   arbitrary code execution.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://doc.powerdns.com/recursor/security-advisories/index.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f9c5a410-9b4e-11ea-ac3f-6805ca2fa271.html"
-				}
-			],
-			"published": "2020-05-26T00:00:00Z",
-			"modified": "2020-05-29T00:00:00Z"
+			"content": {
+				"id": "f9c5a410-9b4e-11ea-ac3f-6805ca2fa271",
+				"title": "powerdns-recursor -- multiple vulnerabilities",
+				"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://doc.powerdns.com/recursor/changelog/4.3.html#change-4.3.1\">\n\t  <p>CVE-2020-10995: An issue in the DNS protocol has been found that allow malicious parties to use\n\t   recursive DNS services to attack third party authoritative name servers. The attack uses a crafted\n\t   reply by an authoritative name server to amplify the resulting traffic between the recursive and\n\t   other authoritative name servers. Both types of service can suffer degraded performance as an effect.</p>\n\t  <p>CVE-2020-12244: An issue has been found in PowerDNS Recursor 4.1.0 through 4.3.0 where records in\n\t   the answer section of a NXDOMAIN response lacking an SOA were not properly validated in\n\t   SyncRes::processAnswer. This would allow an attacker in position of man-in-the-middle to send a\n\t   NXDOMAIN answer for a name that does exist, bypassing DNSSEC validation.</p>\n\t  <p>CVE-2020-10030: An issue has been found in PowerDNS Authoritative Server allowing an attacker\n\t   with enough privileges to change the system's hostname to cause disclosure of uninitialized memory\n\t   content via a stack-based out-of-bounds read. It only occurs on systems where gethostname() does\n\t   not null-terminate the returned string if the hostname is larger than the supplied buffer. Linux\n\t   systems are not affected because the buffer is always large enough. OpenBSD systems are not affected\n\t   because the returned hostname is always null-terminated. Under some conditions this issue can lead\n\t   to the writing of one null-byte out-of-bounds on the stack, causing a denial of service or possibly\n\t   arbitrary code execution.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://doc.powerdns.com/recursor/security-advisories/index.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f9c5a410-9b4e-11ea-ac3f-6805ca2fa271.html"
+					}
+				],
+				"published": "2020-05-26T00:00:00Z",
+				"modified": "2020-05-29T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-10030",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-10030"
-				}
+			"content": {
+				"id": "CVE-2020-10030",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-10030"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-10995",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-10995"
-				}
+			"content": {
+				"id": "CVE-2020-10995",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-10995"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-12244",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-12244"
-				}
+			"content": {
+				"id": "CVE-2020-12244",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-12244"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

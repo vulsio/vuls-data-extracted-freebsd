@@ -2,52 +2,72 @@
 	"id": "41c96ffd-29a6-4dcc-9a88-65f5038fa6eb",
 	"advisories": [
 		{
-			"id": "41c96ffd-29a6-4dcc-9a88-65f5038fa6eb",
-			"title": "perl -- multiple vulnerabilities",
-			"description": "\n\t<p>perldelta:</p>\n\t<blockquote cite=\"https://metacpan.org/changes/release/SHAY/perl-5.26.2\">\n\t  <p>CVE-2018-6797: heap-buffer-overflow (WRITE of size 1) in S_regatom\n\t    (regcomp.c)</p>\n\t  <p>A crafted regular expression could cause a heap buffer write overflow,\n\t    with control over the bytes written. [perl #132227]</p>\n\t  <p>CVE-2018-6798: Heap-buffer-overflow in Perl__byte_dump_string (utf8.c)</p>\n\t  <p>Matching a crafted locale dependent regular expression could cause a\n\t    heap buffer read overflow and potentially information disclosure. [perl\n\t    #132063]</p>\n\t  <p>CVE-2018-6913: heap-buffer-overflow in S_pack_rec</p>\n\t  <p>pack() could cause a heap buffer write overflow with a large item\n\t    count. [perl #131844]</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://metacpan.org/changes/release/SHAY/perl-5.24.4"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://metacpan.org/changes/release/SHAY/perl-5.26.2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/41c96ffd-29a6-4dcc-9a88-65f5038fa6eb.html"
-				}
-			],
-			"published": "2018-04-15T00:00:00Z"
+			"content": {
+				"id": "41c96ffd-29a6-4dcc-9a88-65f5038fa6eb",
+				"title": "perl -- multiple vulnerabilities",
+				"description": "\n\t<p>perldelta:</p>\n\t<blockquote cite=\"https://metacpan.org/changes/release/SHAY/perl-5.26.2\">\n\t  <p>CVE-2018-6797: heap-buffer-overflow (WRITE of size 1) in S_regatom\n\t    (regcomp.c)</p>\n\t  <p>A crafted regular expression could cause a heap buffer write overflow,\n\t    with control over the bytes written. [perl #132227]</p>\n\t  <p>CVE-2018-6798: Heap-buffer-overflow in Perl__byte_dump_string (utf8.c)</p>\n\t  <p>Matching a crafted locale dependent regular expression could cause a\n\t    heap buffer read overflow and potentially information disclosure. [perl\n\t    #132063]</p>\n\t  <p>CVE-2018-6913: heap-buffer-overflow in S_pack_rec</p>\n\t  <p>pack() could cause a heap buffer write overflow with a large item\n\t    count. [perl #131844]</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://metacpan.org/changes/release/SHAY/perl-5.24.4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://metacpan.org/changes/release/SHAY/perl-5.26.2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/41c96ffd-29a6-4dcc-9a88-65f5038fa6eb.html"
+					}
+				],
+				"published": "2018-04-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-6797",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6797"
-				}
+			"content": {
+				"id": "CVE-2018-6797",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-6797"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-6798",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6798"
-				}
+			"content": {
+				"id": "CVE-2018-6798",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-6798"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-6913",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6913"
-				}
+			"content": {
+				"id": "CVE-2018-6913",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-6913"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

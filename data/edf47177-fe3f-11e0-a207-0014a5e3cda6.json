@@ -2,24 +2,29 @@
 	"id": "edf47177-fe3f-11e0-a207-0014a5e3cda6",
 	"advisories": [
 		{
-			"id": "edf47177-fe3f-11e0-a207-0014a5e3cda6",
-			"title": "phpLDAPadmin -- Remote PHP code injection vulnerability",
-			"description": "\n\t<p>EgiX (n0b0d13s at gmail dot com) reports:</p>\n\t<blockquote cite=\"http://packetstormsecurity.org/files/106120/phpldapadmin-inject.txt\">\n\t  <p>The $sortby parameter passed to 'masort' function in file\n\t    lib/functions.php isn't properly sanitized before being used in\n\t    a call to create_function() at line 1080.  This can be exploited\n\t    to inject and execute arbitrary PHP code.  The only possible\n\t    attack vector is when handling the 'query_engine' command, in\n\t    which input passed through $_REQUEST['orderby'] is passed as\n\t    $sortby parameter to 'masort' function.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://packetstormsecurity.org/files/106120/phpldapadmin-inject.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://sourceforge.net/tracker/?func=detail&aid=3417184&group_id=61828&atid=498546"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/edf47177-fe3f-11e0-a207-0014a5e3cda6.html"
-				}
-			],
-			"published": "2011-10-24T00:00:00Z"
+			"content": {
+				"id": "edf47177-fe3f-11e0-a207-0014a5e3cda6",
+				"title": "phpLDAPadmin -- Remote PHP code injection vulnerability",
+				"description": "\n\t<p>EgiX (n0b0d13s at gmail dot com) reports:</p>\n\t<blockquote cite=\"http://packetstormsecurity.org/files/106120/phpldapadmin-inject.txt\">\n\t  <p>The $sortby parameter passed to 'masort' function in file\n\t    lib/functions.php isn't properly sanitized before being used in\n\t    a call to create_function() at line 1080.  This can be exploited\n\t    to inject and execute arbitrary PHP code.  The only possible\n\t    attack vector is when handling the 'query_engine' command, in\n\t    which input passed through $_REQUEST['orderby'] is passed as\n\t    $sortby parameter to 'masort' function.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://packetstormsecurity.org/files/106120/phpldapadmin-inject.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://sourceforge.net/tracker/?func=detail&aid=3417184&group_id=61828&atid=498546"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/edf47177-fe3f-11e0-a207-0014a5e3cda6.html"
+					}
+				],
+				"published": "2011-10-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

@@ -2,30 +2,40 @@
 	"id": "e4848ca4-8820-11e5-ab94-002590263bf5",
 	"advisories": [
 		{
-			"id": "e4848ca4-8820-11e5-ab94-002590263bf5",
-			"title": "xen-kernel -- some pmu and profiling hypercalls log without rate limiting",
-			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-152.html\">\n\t  <p>HYPERCALL_xenoprof_op and HYPERVISOR_xenpmu_op log some errors and\n\t    attempts at invalid operations. These log messages are not\n\t    rate-limited, even though they can be triggered by guests.</p>\n\t  <p>A malicious guest could cause repeated logging to the hypervisor\n\t    console, leading to a Denial of Service attack.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xenbits.xen.org/xsa/advisory-152.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e4848ca4-8820-11e5-ab94-002590263bf5.html"
-				}
-			],
-			"published": "2015-11-11T00:00:00Z"
+			"content": {
+				"id": "e4848ca4-8820-11e5-ab94-002590263bf5",
+				"title": "xen-kernel -- some pmu and profiling hypercalls log without rate limiting",
+				"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-152.html\">\n\t  <p>HYPERCALL_xenoprof_op and HYPERVISOR_xenpmu_op log some errors and\n\t    attempts at invalid operations. These log messages are not\n\t    rate-limited, even though they can be triggered by guests.</p>\n\t  <p>A malicious guest could cause repeated logging to the hypervisor\n\t    console, leading to a Denial of Service attack.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xenbits.xen.org/xsa/advisory-152.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e4848ca4-8820-11e5-ab94-002590263bf5.html"
+					}
+				],
+				"published": "2015-11-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7971",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7971"
-				}
+			"content": {
+				"id": "CVE-2015-7971",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7971"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

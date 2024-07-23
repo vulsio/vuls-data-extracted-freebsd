@@ -2,20 +2,25 @@
 	"id": "a6427195-c2c7-11d9-89f7-02061b08fc24",
 	"advisories": [
 		{
-			"id": "a6427195-c2c7-11d9-89f7-02061b08fc24",
-			"title": "mozilla -- privilege escalation via non-DOM property overrides",
-			"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-44.html\">\n\t  <p>Additional checks were added to make sure Javascript eval\n\t    and Script objects are run with the privileges of the\n\t    context that created them, not the potentially elevated\n\t    privilege of the context calling them in order to protect\n\t    against an additional variant of <a href=\"http://www.mozilla.org/security/announce/mfsa2005-41.html\">MFSA\n\t    2005-41</a>.</p>\n\t</blockquote>\n\t<p>The Mozilla Foundation Security Advisory MFSA 2005-41\n\t  reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-41.html\">\n\t  <p>moz_bug_r_a4 reported several exploits giving an attacker\n\t    the ability to install malicious code or steal data,\n\t    requiring only that the user do commonplace actions like\n\t    click on a link or open the context menu.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/mfsa2005-44.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a6427195-c2c7-11d9-89f7-02061b08fc24.html"
-				}
-			],
-			"published": "2005-05-12T00:00:00Z"
+			"content": {
+				"id": "a6427195-c2c7-11d9-89f7-02061b08fc24",
+				"title": "mozilla -- privilege escalation via non-DOM property overrides",
+				"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-44.html\">\n\t  <p>Additional checks were added to make sure Javascript eval\n\t    and Script objects are run with the privileges of the\n\t    context that created them, not the potentially elevated\n\t    privilege of the context calling them in order to protect\n\t    against an additional variant of <a href=\"http://www.mozilla.org/security/announce/mfsa2005-41.html\">MFSA\n\t    2005-41</a>.</p>\n\t</blockquote>\n\t<p>The Mozilla Foundation Security Advisory MFSA 2005-41\n\t  reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-41.html\">\n\t  <p>moz_bug_r_a4 reported several exploits giving an attacker\n\t    the ability to install malicious code or steal data,\n\t    requiring only that the user do commonplace actions like\n\t    click on a link or open the context menu.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/mfsa2005-44.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a6427195-c2c7-11d9-89f7-02061b08fc24.html"
+					}
+				],
+				"published": "2005-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

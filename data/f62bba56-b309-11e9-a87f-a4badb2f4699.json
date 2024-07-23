@@ -2,30 +2,40 @@
 	"id": "f62bba56-b309-11e9-a87f-a4badb2f4699",
 	"advisories": [
 		{
-			"id": "f62bba56-b309-11e9-a87f-a4badb2f4699",
-			"title": "FreeBSD -- iconv buffer overflow",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>With certain inputs, iconv may write beyond the end of\n\tthe output buffer.</p>\n\t<h1>Impact:</h1>\n\t<p>Depending on the way in which iconv is used, an attacker\n\tmay be able to create a denial of service, provoke incorrect\n\tprogram behavior, or induce a remote code execution. iconv\n\tis a libc library function and the nature of possible attacks\n\twill depend on the way in which iconv is used by applications\n\tor daemons.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:09.iconv.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f62bba56-b309-11e9-a87f-a4badb2f4699.html"
-				}
-			],
-			"published": "2019-07-30T00:00:00Z"
+			"content": {
+				"id": "f62bba56-b309-11e9-a87f-a4badb2f4699",
+				"title": "FreeBSD -- iconv buffer overflow",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>With certain inputs, iconv may write beyond the end of\n\tthe output buffer.</p>\n\t<h1>Impact:</h1>\n\t<p>Depending on the way in which iconv is used, an attacker\n\tmay be able to create a denial of service, provoke incorrect\n\tprogram behavior, or induce a remote code execution. iconv\n\tis a libc library function and the nature of possible attacks\n\twill depend on the way in which iconv is used by applications\n\tor daemons.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:09.iconv.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f62bba56-b309-11e9-a87f-a4badb2f4699.html"
+					}
+				],
+				"published": "2019-07-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-5600",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5600"
-				}
+			"content": {
+				"id": "CVE-2019-5600",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-5600"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

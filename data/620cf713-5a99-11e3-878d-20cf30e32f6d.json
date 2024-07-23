@@ -2,24 +2,29 @@
 	"id": "620cf713-5a99-11e3-878d-20cf30e32f6d",
 	"advisories": [
 		{
-			"id": "620cf713-5a99-11e3-878d-20cf30e32f6d",
-			"title": "monitorix -- serious bug in the built-in HTTP server",
-			"description": "\n\t<p>Monitorix Project reports:</p>\n\t<blockquote cite=\"http://www.monitorix.org/news.html#N331\">\n\t  <p>A serious bug in the built-in HTTP server. It was discovered that the\n\t    handle_request() routine did not properly perform input sanitization\n\t    which led into a number of security vulnerabilities.  An unauthenticated,\n\t    remote attacker could exploit this flaw to execute arbitrary commands on\n\t    the remote host.  All users still using older versions are advised to\n\t    upgrade to this version, which resolves this issue.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.monitorix.org/news.html#N331"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/mikaku/Monitorix/issues/30"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/620cf713-5a99-11e3-878d-20cf30e32f6d.html"
-				}
-			],
-			"published": "2013-12-01T00:00:00Z"
+			"content": {
+				"id": "620cf713-5a99-11e3-878d-20cf30e32f6d",
+				"title": "monitorix -- serious bug in the built-in HTTP server",
+				"description": "\n\t<p>Monitorix Project reports:</p>\n\t<blockquote cite=\"http://www.monitorix.org/news.html#N331\">\n\t  <p>A serious bug in the built-in HTTP server. It was discovered that the\n\t    handle_request() routine did not properly perform input sanitization\n\t    which led into a number of security vulnerabilities.  An unauthenticated,\n\t    remote attacker could exploit this flaw to execute arbitrary commands on\n\t    the remote host.  All users still using older versions are advised to\n\t    upgrade to this version, which resolves this issue.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.monitorix.org/news.html#N331"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/mikaku/Monitorix/issues/30"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/620cf713-5a99-11e3-878d-20cf30e32f6d.html"
+					}
+				],
+				"published": "2013-12-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

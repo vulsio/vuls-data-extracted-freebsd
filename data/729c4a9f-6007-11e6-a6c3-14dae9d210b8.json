@@ -2,30 +2,40 @@
 	"id": "729c4a9f-6007-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "729c4a9f-6007-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- Denial of Service in TCP packet processing",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When a segment with the SYN flag for an already existing\n\tconnection arrives, the TCP stack tears down the connection,\n\tbypassing a check that the sequence number in the segment\n\tis in the expected window.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who has the ability to spoof IP traffic can\n\ttear down a TCP connection by sending only 2 packets, if\n\tthey know both TCP port numbers. In case one of the two\n\tport numbers is unknown, a successful attack requires less\n\tthan 2**17 packets spoofed, which can be generated within\n\tless than a second on a decent connection to the Internet.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:19.tcp.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/729c4a9f-6007-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "729c4a9f-6007-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- Denial of Service in TCP packet processing",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When a segment with the SYN flag for an already existing\n\tconnection arrives, the TCP stack tears down the connection,\n\tbypassing a check that the sequence number in the segment\n\tis in the expected window.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who has the ability to spoof IP traffic can\n\ttear down a TCP connection by sending only 2 packets, if\n\tthey know both TCP port numbers. In case one of the two\n\tport numbers is unknown, a successful attack requires less\n\tthan 2**17 packets spoofed, which can be generated within\n\tless than a second on a decent connection to the Internet.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:19.tcp.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/729c4a9f-6007-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0230",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0230"
-				}
+			"content": {
+				"id": "CVE-2004-0230",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0230"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

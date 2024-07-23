@@ -2,57 +2,82 @@
 	"id": "897e1962-5d5a-11ec-a3ed-040e3c3cf7e7",
 	"advisories": [
 		{
-			"id": "897e1962-5d5a-11ec-a3ed-040e3c3cf7e7",
-			"title": "Privoxy -- Multiple vulnerabilities (memory leak, XSS)",
-			"description": "\n\t<p>Privoxy reports:</p>\n\t<blockquote cite=\"https://lists.privoxy.org/pipermail/privoxy-announce/2021-December/000009.html\">\n\t<p>cgi_error_no_template(): Encode the template name to prevent\n\t    XSS (cross-site scripting) when Privoxy is configured to servce\n\t    the user-manual itself.</p>\n\t<p>Commit 0e668e9409c. OVE-20211102-0001. CVE-2021-44543.\n\t    Reported by: Artem Ivanov</p>\n\t<p>get_url_spec_param(): Free memory of compiled pattern spec\n\t    before bailing.\n\t    Reported by Joshua Rogers (Opera) who also provided the fix.\n\t    Commit 652b4b7cb0. OVE-20211201-0003. CVE-2021-44540.</p>\n\t<p>process_encrypted_request_headers(): Free header memory when\n\t    failing to get the request destination.\n\t    Reported by Joshua Rogers (Opera) who also provided the fix.\n\t    Commit 0509c58045. OVE-20211201-0002. CVE-2021-44541.</p>\n\t<p>send_http_request(): Prevent memory leaks when handling errors\n\t    Reported by Joshua Rogers (Opera) who also provided the fix.\n\t    Commit c48d1d6d08. OVE-20211201-0001. CVE-2021-44542.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.privoxy.org/pipermail/privoxy-announce/2021-December/000009.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/897e1962-5d5a-11ec-a3ed-040e3c3cf7e7.html"
-				}
-			],
-			"published": "2021-12-15T00:00:00Z"
+			"content": {
+				"id": "897e1962-5d5a-11ec-a3ed-040e3c3cf7e7",
+				"title": "Privoxy -- Multiple vulnerabilities (memory leak, XSS)",
+				"description": "\n\t<p>Privoxy reports:</p>\n\t<blockquote cite=\"https://lists.privoxy.org/pipermail/privoxy-announce/2021-December/000009.html\">\n\t<p>cgi_error_no_template(): Encode the template name to prevent\n\t    XSS (cross-site scripting) when Privoxy is configured to servce\n\t    the user-manual itself.</p>\n\t<p>Commit 0e668e9409c. OVE-20211102-0001. CVE-2021-44543.\n\t    Reported by: Artem Ivanov</p>\n\t<p>get_url_spec_param(): Free memory of compiled pattern spec\n\t    before bailing.\n\t    Reported by Joshua Rogers (Opera) who also provided the fix.\n\t    Commit 652b4b7cb0. OVE-20211201-0003. CVE-2021-44540.</p>\n\t<p>process_encrypted_request_headers(): Free header memory when\n\t    failing to get the request destination.\n\t    Reported by Joshua Rogers (Opera) who also provided the fix.\n\t    Commit 0509c58045. OVE-20211201-0002. CVE-2021-44541.</p>\n\t<p>send_http_request(): Prevent memory leaks when handling errors\n\t    Reported by Joshua Rogers (Opera) who also provided the fix.\n\t    Commit c48d1d6d08. OVE-20211201-0001. CVE-2021-44542.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.privoxy.org/pipermail/privoxy-announce/2021-December/000009.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/897e1962-5d5a-11ec-a3ed-040e3c3cf7e7.html"
+					}
+				],
+				"published": "2021-12-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-44540",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44540"
-				}
+			"content": {
+				"id": "CVE-2021-44540",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-44540"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-44541",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44541"
-				}
+			"content": {
+				"id": "CVE-2021-44541",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-44541"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-44542",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44542"
-				}
+			"content": {
+				"id": "CVE-2021-44542",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-44542"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2021-44543",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-44543"
-				}
+			"content": {
+				"id": "CVE-2021-44543",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-44543"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

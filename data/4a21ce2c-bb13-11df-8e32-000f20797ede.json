@@ -2,213 +2,293 @@
 	"id": "4a21ce2c-bb13-11df-8e32-000f20797ede",
 	"advisories": [
 		{
-			"id": "4a21ce2c-bb13-11df-8e32-000f20797ede",
-			"title": "mozilla -- multiple vulnerabilities",
-			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2010-49 Miscellaneous memory safety hazards (rv:1.9.2.9/ 1.9.1.12)</p>\n\t  <p>MFSA 2010-50 Frameset integer overflow vulnerability</p>\n\t  <p>MFSA 2010-51 Dangling pointer vulnerability using DOM plugin array</p>\n\t  <p>MFSA 2010-52 Windows XP DLL loading vulnerability</p>\n\t  <p>MFSA 2010-53 Heap buffer overflow in nsTextFrameUtils::TransformText</p>\n\t  <p>MFSA 2010-54 Dangling pointer vulnerability in nsTreeSelection</p>\n\t  <p>MFSA 2010-55 XUL tree removal crash and remote code execution</p>\n\t  <p>MFSA 2010-56 Dangling pointer vulnerability in nsTreeContentView</p>\n\t  <p>MFSA 2010-57 Crash and remote code execution in normalizeDocument</p>\n\t  <p>MFSA 2010-58 Crash on Mac using fuzzed font in data: URL</p>\n\t  <p>MFSA 2010-59 SJOW creates scope chains ending in outer object</p>\n\t  <p>MFSA 2010-60 XSS using SJOW scripted function</p>\n\t  <p>MFSA 2010-61 UTF-7 XSS by overriding document charset using object type attribute</p>\n\t  <p>MFSA 2010-62 Copy-and-paste or drag-and-drop into designMode document allows XSS</p>\n\t  <p>MFSA 2010-63 Information leak via XMLHttpRequest statusText</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-49.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-50.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-51.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-52.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-53.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-54.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-55.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-56.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-57.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-58.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-59.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-60.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-61.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-62.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-63.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4a21ce2c-bb13-11df-8e32-000f20797ede.html"
-				}
-			],
-			"published": "2010-09-08T00:00:00Z",
-			"modified": "2010-09-15T00:00:00Z"
+			"content": {
+				"id": "4a21ce2c-bb13-11df-8e32-000f20797ede",
+				"title": "mozilla -- multiple vulnerabilities",
+				"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2010-49 Miscellaneous memory safety hazards (rv:1.9.2.9/ 1.9.1.12)</p>\n\t  <p>MFSA 2010-50 Frameset integer overflow vulnerability</p>\n\t  <p>MFSA 2010-51 Dangling pointer vulnerability using DOM plugin array</p>\n\t  <p>MFSA 2010-52 Windows XP DLL loading vulnerability</p>\n\t  <p>MFSA 2010-53 Heap buffer overflow in nsTextFrameUtils::TransformText</p>\n\t  <p>MFSA 2010-54 Dangling pointer vulnerability in nsTreeSelection</p>\n\t  <p>MFSA 2010-55 XUL tree removal crash and remote code execution</p>\n\t  <p>MFSA 2010-56 Dangling pointer vulnerability in nsTreeContentView</p>\n\t  <p>MFSA 2010-57 Crash and remote code execution in normalizeDocument</p>\n\t  <p>MFSA 2010-58 Crash on Mac using fuzzed font in data: URL</p>\n\t  <p>MFSA 2010-59 SJOW creates scope chains ending in outer object</p>\n\t  <p>MFSA 2010-60 XSS using SJOW scripted function</p>\n\t  <p>MFSA 2010-61 UTF-7 XSS by overriding document charset using object type attribute</p>\n\t  <p>MFSA 2010-62 Copy-and-paste or drag-and-drop into designMode document allows XSS</p>\n\t  <p>MFSA 2010-63 Information leak via XMLHttpRequest statusText</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-49.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-50.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-51.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-52.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-53.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-54.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-55.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-56.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-57.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-58.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-59.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-60.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-61.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-62.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2010/mfsa2010-63.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4a21ce2c-bb13-11df-8e32-000f20797ede.html"
+					}
+				],
+				"published": "2010-09-08T00:00:00Z",
+				"modified": "2010-09-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-2760",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2760"
-				}
+			"content": {
+				"id": "CVE-2010-2760",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2760"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2762",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2762"
-				}
+			"content": {
+				"id": "CVE-2010-2762",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2762"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2763",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2763"
-				}
+			"content": {
+				"id": "CVE-2010-2763",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2763"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2764",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2764"
-				}
+			"content": {
+				"id": "CVE-2010-2764",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2764"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2765",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2765"
-				}
+			"content": {
+				"id": "CVE-2010-2765",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2765"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2766",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2766"
-				}
+			"content": {
+				"id": "CVE-2010-2766",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2766"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2767",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2767"
-				}
+			"content": {
+				"id": "CVE-2010-2767",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2767"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2768",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2768"
-				}
+			"content": {
+				"id": "CVE-2010-2768",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2768"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2769",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2769"
-				}
+			"content": {
+				"id": "CVE-2010-2769",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2769"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-2770",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-2770"
-				}
+			"content": {
+				"id": "CVE-2010-2770",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-2770"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-3131",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3131"
-				}
+			"content": {
+				"id": "CVE-2010-3131",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-3131"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-3166",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3166"
-				}
+			"content": {
+				"id": "CVE-2010-3166",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-3166"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-3167",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3167"
-				}
+			"content": {
+				"id": "CVE-2010-3167",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-3167"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-3168",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3168"
-				}
+			"content": {
+				"id": "CVE-2010-3168",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-3168"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2010-3169",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-3169"
-				}
+			"content": {
+				"id": "CVE-2010-3169",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-3169"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

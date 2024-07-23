@@ -2,35 +2,45 @@
 	"id": "9f0a405e-4edd-11d9-a9e7-0001020eed82",
 	"advisories": [
 		{
-			"id": "9f0a405e-4edd-11d9-a9e7-0001020eed82",
-			"title": "phpmyadmin -- file disclosure vulnerability",
-			"description": "\n\t<p>A phpMyAdmin security announcement reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4\">\n\t  <p>File disclosure: on systems where the UploadDir mecanism\n\t    is active, read_dump.php can be called with a crafted\n\t    form; using the fact that the sql_localfile variable is\n\t    not sanitized can lead to a file disclosure.</p>\n\t</blockquote>\n\t<p>Enabling <q>PHP safe mode</q> on the server can be used as\n\t  a workaround for this vulnerability.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.exaprobe.com/labs/advisories/esa-2004-1213.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9f0a405e-4edd-11d9-a9e7-0001020eed82.html"
-				}
-			],
-			"published": "2004-12-15T00:00:00Z",
-			"modified": "2004-12-19T00:00:00Z"
+			"content": {
+				"id": "9f0a405e-4edd-11d9-a9e7-0001020eed82",
+				"title": "phpmyadmin -- file disclosure vulnerability",
+				"description": "\n\t<p>A phpMyAdmin security announcement reports:</p>\n\t<blockquote cite=\"http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4\">\n\t  <p>File disclosure: on systems where the UploadDir mecanism\n\t    is active, read_dump.php can be called with a crafted\n\t    form; using the fact that the sql_localfile variable is\n\t    not sanitized can lead to a file disclosure.</p>\n\t</blockquote>\n\t<p>Enabling <q>PHP safe mode</q> on the server can be used as\n\t  a workaround for this vulnerability.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.exaprobe.com/labs/advisories/esa-2004-1213.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9f0a405e-4edd-11d9-a9e7-0001020eed82.html"
+					}
+				],
+				"published": "2004-12-15T00:00:00Z",
+				"modified": "2004-12-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-1148",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1148"
-				}
+			"content": {
+				"id": "CVE-2004-1148",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-1148"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

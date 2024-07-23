@@ -2,78 +2,108 @@
 	"id": "6b110175-246d-11e6-8dd3-002590263bf5",
 	"advisories": [
 		{
-			"id": "6b110175-246d-11e6-8dd3-002590263bf5",
-			"title": "php -- multiple vulnerabilities",
-			"description": "\n\t<p>The PHP Group reports:</p>\n\t<blockquote cite=\"http://php.net/ChangeLog-5.php#5.5.36\">\n\t  <ul><li>Core:\n\t  <ul>\n\t    <li>Fixed bug #72114 (Integer underflow / arbitrary null write in\n\t      fread/gzread). (CVE-2016-5096) (PHP 5.5/5.6 only)</li>\n\t    <li>Fixed bug #72135 (Integer Overflow in php_html_entities).\n\t      (CVE-2016-5094) (PHP 5.5/5.6 only)</li>\n\t  </ul></li>\n\t  <li>GD:\n\t  <ul>\n\t    <li>Fixed bug #72227 (imagescale out-of-bounds read).\n\t      (CVE-2013-7456)</li>\n\t  </ul></li>\n\t  <li>Intl:\n\t  <ul>\n\t    <li>Fixed bug #72241 (get_icu_value_internal out-of-bounds read).\n\t      (CVE-2016-5093)</li>\n\t  </ul></li>\n\t  <li>Phar:\n\t  <ul>\n\t    <li>Fixed bug #71331 (Uninitialized pointer in\n\t      phar_make_dirstream()). (CVE-2016-4343) (PHP 5.5 only)</li>\n\t  </ul></li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://php.net/ChangeLog-5.php#5.5.36"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://php.net/ChangeLog-5.php#5.6.22"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://php.net/ChangeLog-7.php#7.0.7"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209779"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6b110175-246d-11e6-8dd3-002590263bf5.html"
-				}
-			],
-			"published": "2016-05-28T00:00:00Z"
+			"content": {
+				"id": "6b110175-246d-11e6-8dd3-002590263bf5",
+				"title": "php -- multiple vulnerabilities",
+				"description": "\n\t<p>The PHP Group reports:</p>\n\t<blockquote cite=\"http://php.net/ChangeLog-5.php#5.5.36\">\n\t  <ul><li>Core:\n\t  <ul>\n\t    <li>Fixed bug #72114 (Integer underflow / arbitrary null write in\n\t      fread/gzread). (CVE-2016-5096) (PHP 5.5/5.6 only)</li>\n\t    <li>Fixed bug #72135 (Integer Overflow in php_html_entities).\n\t      (CVE-2016-5094) (PHP 5.5/5.6 only)</li>\n\t  </ul></li>\n\t  <li>GD:\n\t  <ul>\n\t    <li>Fixed bug #72227 (imagescale out-of-bounds read).\n\t      (CVE-2013-7456)</li>\n\t  </ul></li>\n\t  <li>Intl:\n\t  <ul>\n\t    <li>Fixed bug #72241 (get_icu_value_internal out-of-bounds read).\n\t      (CVE-2016-5093)</li>\n\t  </ul></li>\n\t  <li>Phar:\n\t  <ul>\n\t    <li>Fixed bug #71331 (Uninitialized pointer in\n\t      phar_make_dirstream()). (CVE-2016-4343) (PHP 5.5 only)</li>\n\t  </ul></li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://php.net/ChangeLog-5.php#5.5.36"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://php.net/ChangeLog-5.php#5.6.22"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://php.net/ChangeLog-7.php#7.0.7"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209779"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6b110175-246d-11e6-8dd3-002590263bf5.html"
+					}
+				],
+				"published": "2016-05-28T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-7456",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-7456"
-				}
+			"content": {
+				"id": "CVE-2013-7456",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-7456"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-4343",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4343"
-				}
+			"content": {
+				"id": "CVE-2016-4343",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-4343"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-5093",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5093"
-				}
+			"content": {
+				"id": "CVE-2016-5093",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5093"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-5094",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5094"
-				}
+			"content": {
+				"id": "CVE-2016-5094",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5094"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-5096",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5096"
-				}
+			"content": {
+				"id": "CVE-2016-5096",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5096"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

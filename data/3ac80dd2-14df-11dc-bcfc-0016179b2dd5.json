@@ -2,30 +2,40 @@
 	"id": "3ac80dd2-14df-11dc-bcfc-0016179b2dd5",
 	"advisories": [
 		{
-			"id": "3ac80dd2-14df-11dc-bcfc-0016179b2dd5",
-			"title": "mplayer -- cddb stack overflow",
-			"description": "\n\t<p>Mplayer Team reports:</p>\n\t<blockquote cite=\"http://www.mplayerhq.hu/design7/news.html\">\n\t  <p>A stack overflow was found in the code used to handle\n\t    cddb queries.  When copying the album title and category,\n\t    no checking was performed on the size of the strings\n\t    before storing them in a fixed-size array.\tA malicious\n\t    entry in the database could trigger a stack overflow in\n\t    the program, leading to arbitrary code execution with the\n\t    uid of the user running MPlayer.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/24302"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3ac80dd2-14df-11dc-bcfc-0016179b2dd5.html"
-				}
-			],
-			"published": "2007-06-07T00:00:00Z"
+			"content": {
+				"id": "3ac80dd2-14df-11dc-bcfc-0016179b2dd5",
+				"title": "mplayer -- cddb stack overflow",
+				"description": "\n\t<p>Mplayer Team reports:</p>\n\t<blockquote cite=\"http://www.mplayerhq.hu/design7/news.html\">\n\t  <p>A stack overflow was found in the code used to handle\n\t    cddb queries.  When copying the album title and category,\n\t    no checking was performed on the size of the strings\n\t    before storing them in a fixed-size array.\tA malicious\n\t    entry in the database could trigger a stack overflow in\n\t    the program, leading to arbitrary code execution with the\n\t    uid of the user running MPlayer.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/24302"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3ac80dd2-14df-11dc-bcfc-0016179b2dd5.html"
+					}
+				],
+				"published": "2007-06-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-2948",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2948"
-				}
+			"content": {
+				"id": "CVE-2007-2948",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-2948"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

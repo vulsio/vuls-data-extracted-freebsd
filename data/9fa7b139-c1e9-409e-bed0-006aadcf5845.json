@@ -2,75 +2,110 @@
 	"id": "9fa7b139-c1e9-409e-bed0-006aadcf5845",
 	"advisories": [
 		{
-			"id": "9fa7b139-c1e9-409e-bed0-006aadcf5845",
-			"title": "xorg-server -- Multiple security issues in X server extensions",
-			"description": "\n\t<p>The X.org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2022-December/003302.html\">\n\t  <ul>\n\t    <li>CVE-2022-46340/ZDI-CAN-19265: X.Org Server XTestSwapFakeInput stack\n\t    overflow\n\n\t    <p>The swap handler for the XTestFakeInput request of the XTest extension\n\t    may corrupt the stack if GenericEvents with lengths larger than 32 bytes\n\t    are sent through a the XTestFakeInput request.</p>\n\n\t    <p>This issue does not affect systems where client and server use the same\n\t    byte order.</p></li>\n\n\t    <li>CVE-2022-46341/ZDI-CAN-19381: X.Org Server XIPassiveUngrab\n\t    out-of-bounds access\n\n\t    <p>The handler for the XIPassiveUngrab request accesses out-of-bounds\n\t    memory when invoked with a high keycode or button code.</p></li>\n\n\t    <li>CVE-2022-46342/ZDI-CAN-19400: X.Org Server XvdiSelectVideoNotify\n\t    use-after-free\n\n\t    <p>The handler for the XvdiSelectVideoNotify request may write to memory\n\t    after it has been freed.</p></li>\n\n\t    <li>CVE-2022-46343/ZDI-CAN-19404: X.Org Server ScreenSaverSetAttributes\n\t    use-after-free\n\n\t    <p>The handler for the ScreenSaverSetAttributes request may write to memory\n\t    after it has been freed.</p></li>\n\n\t    <li>CVE-2022-46344/ZDI-CAN-19405: X.Org Server XIChangeProperty\n\t    out-of-bounds access\n\n\t    <p>The handler for the XIChangeProperty request has a length-validation\n\t    issues, resulting in out-of-bounds memory reads and potential\n\t    information disclosure.</p></li>\n\n\t    <li>CVE-2022-4283/ZDI-CAN-19530: X.Org Server XkbGetKbdByName use-after-free\n\n\t    <p>The XkbCopyNames function left a dangling pointer to freed memory,\n\t    resulting in out-of-bounds memory access on subsequent XkbGetKbdByName\n\t    requests.</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.x.org/archives/xorg-announce/2022-December/003302.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9fa7b139-c1e9-409e-bed0-006aadcf5845.html"
-				}
-			],
-			"published": "2023-01-11T00:00:00Z"
+			"content": {
+				"id": "9fa7b139-c1e9-409e-bed0-006aadcf5845",
+				"title": "xorg-server -- Multiple security issues in X server extensions",
+				"description": "\n\t<p>The X.org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2022-December/003302.html\">\n\t  <ul>\n\t    <li>CVE-2022-46340/ZDI-CAN-19265: X.Org Server XTestSwapFakeInput stack\n\t    overflow\n\n\t    <p>The swap handler for the XTestFakeInput request of the XTest extension\n\t    may corrupt the stack if GenericEvents with lengths larger than 32 bytes\n\t    are sent through a the XTestFakeInput request.</p>\n\n\t    <p>This issue does not affect systems where client and server use the same\n\t    byte order.</p></li>\n\n\t    <li>CVE-2022-46341/ZDI-CAN-19381: X.Org Server XIPassiveUngrab\n\t    out-of-bounds access\n\n\t    <p>The handler for the XIPassiveUngrab request accesses out-of-bounds\n\t    memory when invoked with a high keycode or button code.</p></li>\n\n\t    <li>CVE-2022-46342/ZDI-CAN-19400: X.Org Server XvdiSelectVideoNotify\n\t    use-after-free\n\n\t    <p>The handler for the XvdiSelectVideoNotify request may write to memory\n\t    after it has been freed.</p></li>\n\n\t    <li>CVE-2022-46343/ZDI-CAN-19404: X.Org Server ScreenSaverSetAttributes\n\t    use-after-free\n\n\t    <p>The handler for the ScreenSaverSetAttributes request may write to memory\n\t    after it has been freed.</p></li>\n\n\t    <li>CVE-2022-46344/ZDI-CAN-19405: X.Org Server XIChangeProperty\n\t    out-of-bounds access\n\n\t    <p>The handler for the XIChangeProperty request has a length-validation\n\t    issues, resulting in out-of-bounds memory reads and potential\n\t    information disclosure.</p></li>\n\n\t    <li>CVE-2022-4283/ZDI-CAN-19530: X.Org Server XkbGetKbdByName use-after-free\n\n\t    <p>The XkbCopyNames function left a dangling pointer to freed memory,\n\t    resulting in out-of-bounds memory access on subsequent XkbGetKbdByName\n\t    requests.</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.x.org/archives/xorg-announce/2022-December/003302.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9fa7b139-c1e9-409e-bed0-006aadcf5845.html"
+					}
+				],
+				"published": "2023-01-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-4283",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-4283"
-				}
+			"content": {
+				"id": "CVE-2022-4283",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-4283"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-46340",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-46340"
-				}
+			"content": {
+				"id": "CVE-2022-46340",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-46340"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-46341",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-46341"
-				}
+			"content": {
+				"id": "CVE-2022-46341",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-46341"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-46342",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-46342"
-				}
+			"content": {
+				"id": "CVE-2022-46342",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-46342"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-46343",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-46343"
-				}
+			"content": {
+				"id": "CVE-2022-46343",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-46343"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-46344",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-46344"
-				}
+			"content": {
+				"id": "CVE-2022-46344",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-46344"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

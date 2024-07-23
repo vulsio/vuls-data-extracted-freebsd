@@ -2,30 +2,40 @@
 	"id": "8db74c04-d794-11ea-88f8-901b0ef719ab",
 	"advisories": [
 		{
-			"id": "8db74c04-d794-11ea-88f8-901b0ef719ab",
-			"title": "FreeBSD -- sendmsg(2) privilege escalation",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When handling a 32-bit sendmsg(2) call, the compat32 subsystem copies the\n\tcontrol message to be transmitted (if any) into kernel memory, and adjusts\n\talignment of control message headers.  The code which performs this work\n\tcontained a time-of-check to time-of-use (TOCTOU) vulnerability which allows a\n\tmalicious userspace program to modify control message headers after they were\n\tvalidated by the kernel.</p>\n\t<h1>Impact:</h1>\n\t<p>The TOCTOU bug can be exploited by an unprivileged malicious userspace program\n\tto trigger privilege escalation.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:23.sendmsg.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/8db74c04-d794-11ea-88f8-901b0ef719ab.html"
-				}
-			],
-			"published": "2020-08-06T00:00:00Z"
+			"content": {
+				"id": "8db74c04-d794-11ea-88f8-901b0ef719ab",
+				"title": "FreeBSD -- sendmsg(2) privilege escalation",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When handling a 32-bit sendmsg(2) call, the compat32 subsystem copies the\n\tcontrol message to be transmitted (if any) into kernel memory, and adjusts\n\talignment of control message headers.  The code which performs this work\n\tcontained a time-of-check to time-of-use (TOCTOU) vulnerability which allows a\n\tmalicious userspace program to modify control message headers after they were\n\tvalidated by the kernel.</p>\n\t<h1>Impact:</h1>\n\t<p>The TOCTOU bug can be exploited by an unprivileged malicious userspace program\n\tto trigger privilege escalation.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:23.sendmsg.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8db74c04-d794-11ea-88f8-901b0ef719ab.html"
+					}
+				],
+				"published": "2020-08-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-7460",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7460"
-				}
+			"content": {
+				"id": "CVE-2020-7460",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-7460"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

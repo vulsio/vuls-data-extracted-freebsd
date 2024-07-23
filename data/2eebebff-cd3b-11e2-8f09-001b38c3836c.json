@@ -2,278 +2,428 @@
 	"id": "2eebebff-cd3b-11e2-8f09-001b38c3836c",
 	"advisories": [
 		{
-			"id": "2eebebff-cd3b-11e2-8f09-001b38c3836c",
-			"title": "xorg -- protocol handling issues in X Window System client libraries",
-			"description": "\n\t<p>freedesktop.org reports:</p>\n\t<blockquote cite=\"http://www.x.org/wiki/Development/Security/Advisory-2013-05-23\">\n\t  <p>Ilja van Sprundel, a security researcher with IOActive, has\n\t    discovered a large number of issues in the way various X client\n\t    libraries handle the responses they receive from servers, and has\n\t    worked with X.Org's security team to analyze, confirm, and fix\n\t    these issues.</p>\n\t  <p>Most of these issues stem from the client libraries trusting the\n\t    server to send correct protocol data, and not verifying that the\n\t    values will not overflow or cause other damage. Most of the time X\n\t    clients &amp; servers are run by the same user, with the server\n\t    more privileged from the clients, so this is not a problem, but\n\t    there are scenarios in which a privileged client can be connected\n\t    to an unprivileged server, for instance, connecting a setuid X\n\t    client (such as a screen lock program) to a virtual X server (such\n\t    as Xvfb or Xephyr) which the user has modified to return invalid\n\t    data, potentially allowing the user to escalate their privileges.</p>\n\t  <p>The vulnerabilities include:</p>\n\t  <p>Integer overflows calculating memory needs for replies.</p>\n\t  <p>Sign extension issues calculating memory needs for replies.</p>\n\t  <p>Buffer overflows due to not validating length or offset values in\n\t    replies.</p>\n\t  <p>Integer overflows parsing user-specified files.</p>\n\t  <p>Unbounded recursion parsing user-specified files.</p>\n\t  <p>Memory corruption due to unchecked return values.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2eebebff-cd3b-11e2-8f09-001b38c3836c.html"
-				}
-			],
-			"published": "2013-06-04T00:00:00Z"
+			"content": {
+				"id": "2eebebff-cd3b-11e2-8f09-001b38c3836c",
+				"title": "xorg -- protocol handling issues in X Window System client libraries",
+				"description": "\n\t<p>freedesktop.org reports:</p>\n\t<blockquote cite=\"http://www.x.org/wiki/Development/Security/Advisory-2013-05-23\">\n\t  <p>Ilja van Sprundel, a security researcher with IOActive, has\n\t    discovered a large number of issues in the way various X client\n\t    libraries handle the responses they receive from servers, and has\n\t    worked with X.Org's security team to analyze, confirm, and fix\n\t    these issues.</p>\n\t  <p>Most of these issues stem from the client libraries trusting the\n\t    server to send correct protocol data, and not verifying that the\n\t    values will not overflow or cause other damage. Most of the time X\n\t    clients &amp; servers are run by the same user, with the server\n\t    more privileged from the clients, so this is not a problem, but\n\t    there are scenarios in which a privileged client can be connected\n\t    to an unprivileged server, for instance, connecting a setuid X\n\t    client (such as a screen lock program) to a virtual X server (such\n\t    as Xvfb or Xephyr) which the user has modified to return invalid\n\t    data, potentially allowing the user to escalate their privileges.</p>\n\t  <p>The vulnerabilities include:</p>\n\t  <p>Integer overflows calculating memory needs for replies.</p>\n\t  <p>Sign extension issues calculating memory needs for replies.</p>\n\t  <p>Buffer overflows due to not validating length or offset values in\n\t    replies.</p>\n\t  <p>Integer overflows parsing user-specified files.</p>\n\t  <p>Unbounded recursion parsing user-specified files.</p>\n\t  <p>Memory corruption due to unchecked return values.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2eebebff-cd3b-11e2-8f09-001b38c3836c.html"
+					}
+				],
+				"published": "2013-06-04T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-1981",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1981"
-				}
+			"content": {
+				"id": "CVE-2013-1981",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1981"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1982",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1982"
-				}
+			"content": {
+				"id": "CVE-2013-1982",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1982"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1983",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1983"
-				}
+			"content": {
+				"id": "CVE-2013-1983",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1983"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1984",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1984"
-				}
+			"content": {
+				"id": "CVE-2013-1984",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1984"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1985",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1985"
-				}
+			"content": {
+				"id": "CVE-2013-1985",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1985"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1986",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1986"
-				}
+			"content": {
+				"id": "CVE-2013-1986",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1986"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1987",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1987"
-				}
+			"content": {
+				"id": "CVE-2013-1987",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1987"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1988",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1988"
-				}
+			"content": {
+				"id": "CVE-2013-1988",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1988"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1989",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1989"
-				}
+			"content": {
+				"id": "CVE-2013-1989",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1989"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1990",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1990"
-				}
+			"content": {
+				"id": "CVE-2013-1990",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1990"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1991",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1991"
-				}
+			"content": {
+				"id": "CVE-2013-1991",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1991"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1992",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1992"
-				}
+			"content": {
+				"id": "CVE-2013-1992",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1992"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1993",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1993"
-				}
+			"content": {
+				"id": "CVE-2013-1993",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1993"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1994",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1994"
-				}
+			"content": {
+				"id": "CVE-2013-1994",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1994"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1995",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1995"
-				}
+			"content": {
+				"id": "CVE-2013-1995",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1995"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1996",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1996"
-				}
+			"content": {
+				"id": "CVE-2013-1996",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1996"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1997",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1997"
-				}
+			"content": {
+				"id": "CVE-2013-1997",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1997"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1998",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1998"
-				}
+			"content": {
+				"id": "CVE-2013-1998",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1998"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-1999",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1999"
-				}
+			"content": {
+				"id": "CVE-2013-1999",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1999"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2000",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2000"
-				}
+			"content": {
+				"id": "CVE-2013-2000",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2000"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2001",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2001"
-				}
+			"content": {
+				"id": "CVE-2013-2001",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2001"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2002",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2002"
-				}
+			"content": {
+				"id": "CVE-2013-2002",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2002"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2003",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2003"
-				}
+			"content": {
+				"id": "CVE-2013-2003",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2003"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2004",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2004"
-				}
+			"content": {
+				"id": "CVE-2013-2004",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2004"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2005",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2005"
-				}
+			"content": {
+				"id": "CVE-2013-2005",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2005"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2062",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2062"
-				}
+			"content": {
+				"id": "CVE-2013-2062",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2062"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2063",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2063"
-				}
+			"content": {
+				"id": "CVE-2013-2063",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2063"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2064",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2064"
-				}
+			"content": {
+				"id": "CVE-2013-2064",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2064"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-2066",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2066"
-				}
+			"content": {
+				"id": "CVE-2013-2066",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2066"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

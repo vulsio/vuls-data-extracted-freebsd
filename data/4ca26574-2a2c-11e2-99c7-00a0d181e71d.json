@@ -2,39 +2,49 @@
 	"id": "4ca26574-2a2c-11e2-99c7-00a0d181e71d",
 	"advisories": [
 		{
-			"id": "4ca26574-2a2c-11e2-99c7-00a0d181e71d",
-			"title": "tomcat -- Denial of Service",
-			"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://tomcat.apache.org/security.html\">\n\t  <p>The checks that limited the permitted size of request headers were\n\t    implemented too late in the request parsing process for the HTTP NIO\n\t    connector. This enabled a malicious user to trigger an\n\t    OutOfMemoryError by sending a single request with very large\n\t    headers. This issue was identified by Josh Spiewak.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://tomcat.apache.org/security-6.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://tomcat.apache.org/security-7.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://tomcat.apache.org/security.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4ca26574-2a2c-11e2-99c7-00a0d181e71d.html"
-				}
-			],
-			"published": "2012-11-08T00:00:00Z",
-			"modified": "2012-11-09T00:00:00Z"
+			"content": {
+				"id": "4ca26574-2a2c-11e2-99c7-00a0d181e71d",
+				"title": "tomcat -- Denial of Service",
+				"description": "\n\t<p>The Apache Software Foundation reports:</p>\n\t<blockquote cite=\"http://tomcat.apache.org/security.html\">\n\t  <p>The checks that limited the permitted size of request headers were\n\t    implemented too late in the request parsing process for the HTTP NIO\n\t    connector. This enabled a malicious user to trigger an\n\t    OutOfMemoryError by sending a single request with very large\n\t    headers. This issue was identified by Josh Spiewak.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://tomcat.apache.org/security-6.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://tomcat.apache.org/security-7.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://tomcat.apache.org/security.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4ca26574-2a2c-11e2-99c7-00a0d181e71d.html"
+					}
+				],
+				"published": "2012-11-08T00:00:00Z",
+				"modified": "2012-11-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-2733",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2733"
-				}
+			"content": {
+				"id": "CVE-2012-2733",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-2733"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,24 +2,29 @@
 	"id": "3f4ac724-fa8b-11d9-afcf-0060084a00e5",
 	"advisories": [
 		{
-			"id": "3f4ac724-fa8b-11d9-afcf-0060084a00e5",
-			"title": "fetchmail -- denial of service/crash from malicious POP3 server",
-			"description": "\n\t<p>In fetchmail 6.2.5.1, the remote code injection via\n\t  POP3 UIDL was fixed, but a denial of service attack was\n\t  introduced:</p>\n\t<p>Two possible NULL-pointer dereferences allow a malicious\n\t  POP3 server to crash fetchmail by respondig with UID lines\n\t  containing only the article number but no UID (in violation\n\t  of RFC-1939), or a message without Message-ID when no UIDL\n\t  support is available.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.berlios.de/pipermail/fetchmail-devel/2005-July/000397.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.fetchmail.info/fetchmail-SA-2005-01.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3f4ac724-fa8b-11d9-afcf-0060084a00e5.html"
-				}
-			],
-			"published": "2005-07-22T00:00:00Z"
+			"content": {
+				"id": "3f4ac724-fa8b-11d9-afcf-0060084a00e5",
+				"title": "fetchmail -- denial of service/crash from malicious POP3 server",
+				"description": "\n\t<p>In fetchmail 6.2.5.1, the remote code injection via\n\t  POP3 UIDL was fixed, but a denial of service attack was\n\t  introduced:</p>\n\t<p>Two possible NULL-pointer dereferences allow a malicious\n\t  POP3 server to crash fetchmail by respondig with UID lines\n\t  containing only the article number but no UID (in violation\n\t  of RFC-1939), or a message without Message-ID when no UIDL\n\t  support is available.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.berlios.de/pipermail/fetchmail-devel/2005-July/000397.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.fetchmail.info/fetchmail-SA-2005-01.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3f4ac724-fa8b-11d9-afcf-0060084a00e5.html"
+					}
+				],
+				"published": "2005-07-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

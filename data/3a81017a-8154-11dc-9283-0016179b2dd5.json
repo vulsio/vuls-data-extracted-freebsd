@@ -2,34 +2,44 @@
 	"id": "3a81017a-8154-11dc-9283-0016179b2dd5",
 	"advisories": [
 		{
-			"id": "3a81017a-8154-11dc-9283-0016179b2dd5",
-			"title": "ldapscripts -- Command Line User Credentials Disclosure",
-			"description": "\n\t<p>Ganael Laplanche reports:</p>\n\t<blockquote cite=\"http://sourceforge.net/project/shownotes.php?group_id=156483&amp;release_id=546600\">\n\t  <p>Up to now, each ldap* command was called with the -w parameter,\n\t    which allows to specify the bind password on the command line.\n\t    Unfortunately, this could make the password appear to anybody\n\t    performing a `ps` during the call. This is now avoided by using\n\t    the -y parameter and a password file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/27111"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://sourceforge.net/project/shownotes.php?group_id=156483&release_id=546600"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3a81017a-8154-11dc-9283-0016179b2dd5.html"
-				}
-			],
-			"published": "2007-10-23T00:00:00Z"
+			"content": {
+				"id": "3a81017a-8154-11dc-9283-0016179b2dd5",
+				"title": "ldapscripts -- Command Line User Credentials Disclosure",
+				"description": "\n\t<p>Ganael Laplanche reports:</p>\n\t<blockquote cite=\"http://sourceforge.net/project/shownotes.php?group_id=156483&amp;release_id=546600\">\n\t  <p>Up to now, each ldap* command was called with the -w parameter,\n\t    which allows to specify the bind password on the command line.\n\t    Unfortunately, this could make the password appear to anybody\n\t    performing a `ps` during the call. This is now avoided by using\n\t    the -y parameter and a password file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/27111"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://sourceforge.net/project/shownotes.php?group_id=156483&release_id=546600"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3a81017a-8154-11dc-9283-0016179b2dd5.html"
+					}
+				],
+				"published": "2007-10-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-5373",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-5373"
-				}
+			"content": {
+				"id": "CVE-2007-5373",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-5373"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

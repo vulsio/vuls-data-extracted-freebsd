@@ -2,297 +2,417 @@
 	"id": "9d04936c-75f1-4a2c-9ade-4c1708be5df9",
 	"advisories": [
 		{
-			"id": "9d04936c-75f1-4a2c-9ade-4c1708be5df9",
-			"title": "mozilla -- multiple vulnerabilities",
-			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/\">\n\t  <p>MFSA 2015-133 NSS and NSPR memory corruption issues</p>\n\t  <p>MFSA 2015-132 Mixed content WebSocket policy bypass\n\t    through workers</p>\n\t  <p>MFSA 2015-131 Vulnerabilities found through code\n\t    inspection</p>\n\t  <p>MFSA 2015-130 JavaScript garbage collection crash with\n\t    Java applet</p>\n\t  <p>MFSA 2015-129 Certain escaped characters in host of\n\t    Location-header are being treated as non-escaped</p>\n\t  <p>MFSA 2015-128 Memory corruption in libjar through zip\n\t    files</p>\n\t  <p>MFSA 2015-127 CORS preflight is bypassed when\n\t    non-standard Content-Type headers are received</p>\n\t  <p>MFSA 2015-126 Crash when accessing HTML tables with\n\t    accessibility tools on OS X</p>\n\t  <p>MFSA 2015-125 XSS attack through intents on Firefox for\n\t    Android</p>\n\t  <p>MFSA 2015-124 Android intents can be used on Firefox for\n\t    Android to open privileged files</p>\n\t  <p>MFSA 2015-123 Buffer overflow during image interactions\n\t    in canvas</p>\n\t  <p>MFSA 2015-122 Trailing whitespace in IP address hostnames\n\t    can bypass same-origin policy</p>\n\t  <p>MFSA 2015-121 Disabling scripts in Add-on SDK panels has\n\t    no effect</p>\n\t  <p>MFSA 2015-120 Reading sensitive profile files through\n\t    local HTML file on Android</p>\n\t  <p>MFSA 2015-119 Firefox for Android addressbar can be\n\t    removed after fullscreen mode</p>\n\t  <p>MFSA 2015-118 CSP bypass due to permissive Reader mode\n\t    whitelist</p>\n\t  <p>MFSA 2015-117 Information disclosure through NTLM\n\t    authentication</p>\n\t  <p>MFSA 2015-116 Miscellaneous memory safety hazards\n\t    (rv:42.0 / rv:38.4)</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-116/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-117/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-118/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-119/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-120/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-121/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-122/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-123/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-124/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-125/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-126/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-127/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-128/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-129/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-130/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-131/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-132/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-133/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9d04936c-75f1-4a2c-9ade-4c1708be5df9.html"
-				}
-			],
-			"published": "2015-11-19T00:00:00Z",
-			"modified": "2016-04-13T00:00:00Z"
+			"content": {
+				"id": "9d04936c-75f1-4a2c-9ade-4c1708be5df9",
+				"title": "mozilla -- multiple vulnerabilities",
+				"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/\">\n\t  <p>MFSA 2015-133 NSS and NSPR memory corruption issues</p>\n\t  <p>MFSA 2015-132 Mixed content WebSocket policy bypass\n\t    through workers</p>\n\t  <p>MFSA 2015-131 Vulnerabilities found through code\n\t    inspection</p>\n\t  <p>MFSA 2015-130 JavaScript garbage collection crash with\n\t    Java applet</p>\n\t  <p>MFSA 2015-129 Certain escaped characters in host of\n\t    Location-header are being treated as non-escaped</p>\n\t  <p>MFSA 2015-128 Memory corruption in libjar through zip\n\t    files</p>\n\t  <p>MFSA 2015-127 CORS preflight is bypassed when\n\t    non-standard Content-Type headers are received</p>\n\t  <p>MFSA 2015-126 Crash when accessing HTML tables with\n\t    accessibility tools on OS X</p>\n\t  <p>MFSA 2015-125 XSS attack through intents on Firefox for\n\t    Android</p>\n\t  <p>MFSA 2015-124 Android intents can be used on Firefox for\n\t    Android to open privileged files</p>\n\t  <p>MFSA 2015-123 Buffer overflow during image interactions\n\t    in canvas</p>\n\t  <p>MFSA 2015-122 Trailing whitespace in IP address hostnames\n\t    can bypass same-origin policy</p>\n\t  <p>MFSA 2015-121 Disabling scripts in Add-on SDK panels has\n\t    no effect</p>\n\t  <p>MFSA 2015-120 Reading sensitive profile files through\n\t    local HTML file on Android</p>\n\t  <p>MFSA 2015-119 Firefox for Android addressbar can be\n\t    removed after fullscreen mode</p>\n\t  <p>MFSA 2015-118 CSP bypass due to permissive Reader mode\n\t    whitelist</p>\n\t  <p>MFSA 2015-117 Information disclosure through NTLM\n\t    authentication</p>\n\t  <p>MFSA 2015-116 Miscellaneous memory safety hazards\n\t    (rv:42.0 / rv:38.4)</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-116/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-117/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-118/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-119/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-120/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-121/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-122/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-123/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-124/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-125/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-126/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-127/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-128/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-129/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-130/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-131/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-132/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-133/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9d04936c-75f1-4a2c-9ade-4c1708be5df9.html"
+					}
+				],
+				"published": "2015-11-19T00:00:00Z",
+				"modified": "2016-04-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-4513",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4513"
-				}
+			"content": {
+				"id": "CVE-2015-4513",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-4513"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-4514",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4514"
-				}
+			"content": {
+				"id": "CVE-2015-4514",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-4514"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-4515",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4515"
-				}
+			"content": {
+				"id": "CVE-2015-4515",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-4515"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-4518",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4518"
-				}
+			"content": {
+				"id": "CVE-2015-4518",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-4518"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7181",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7181"
-				}
+			"content": {
+				"id": "CVE-2015-7181",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7181"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7182",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7182"
-				}
+			"content": {
+				"id": "CVE-2015-7182",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7182"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7183",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7183"
-				}
+			"content": {
+				"id": "CVE-2015-7183",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7183"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7185",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7185"
-				}
+			"content": {
+				"id": "CVE-2015-7185",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7185"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7186",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7186"
-				}
+			"content": {
+				"id": "CVE-2015-7186",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7186"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7187",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7187"
-				}
+			"content": {
+				"id": "CVE-2015-7187",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7187"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7188",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7188"
-				}
+			"content": {
+				"id": "CVE-2015-7188",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7188"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7189",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7189"
-				}
+			"content": {
+				"id": "CVE-2015-7189",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7189"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7190",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7190"
-				}
+			"content": {
+				"id": "CVE-2015-7190",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7190"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7191",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7191"
-				}
+			"content": {
+				"id": "CVE-2015-7191",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7191"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7192",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7192"
-				}
+			"content": {
+				"id": "CVE-2015-7192",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7192"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7193",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7193"
-				}
+			"content": {
+				"id": "CVE-2015-7193",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7193"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7194",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7194"
-				}
+			"content": {
+				"id": "CVE-2015-7194",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7194"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7195",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7195"
-				}
+			"content": {
+				"id": "CVE-2015-7195",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7195"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7196",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7196"
-				}
+			"content": {
+				"id": "CVE-2015-7196",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7196"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7197",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7197"
-				}
+			"content": {
+				"id": "CVE-2015-7197",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7197"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7198",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7198"
-				}
+			"content": {
+				"id": "CVE-2015-7198",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7198"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7199",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7199"
-				}
+			"content": {
+				"id": "CVE-2015-7199",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7199"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7200",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7200"
-				}
+			"content": {
+				"id": "CVE-2015-7200",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7200"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "0afe8b29-600a-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "0afe8b29-600a-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- Integer overflow in IGMP protocol",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>An integer overflow in computing the size of IGMPv3 data\n\tbuffer can result in a buffer which is too small for the\n\trequested operation.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can send specifically crafted IGMP packets\n\tcould cause a denial of service situation by causing the\n\tkernel to crash.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:04.igmp.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0afe8b29-600a-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "0afe8b29-600a-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- Integer overflow in IGMP protocol",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>An integer overflow in computing the size of IGMPv3 data\n\tbuffer can result in a buffer which is too small for the\n\trequested operation.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can send specifically crafted IGMP packets\n\tcould cause a denial of service situation by causing the\n\tkernel to crash.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:04.igmp.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0afe8b29-600a-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-1414",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1414"
-				}
+			"content": {
+				"id": "CVE-2015-1414",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-1414"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

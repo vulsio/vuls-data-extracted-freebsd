@@ -2,30 +2,40 @@
 	"id": "bba3f684-9b1d-11ed-9a3f-b42e991fc52e",
 	"advisories": [
 		{
-			"id": "bba3f684-9b1d-11ed-9a3f-b42e991fc52e",
-			"title": "www/awstats -- Partial absolute pathname",
-			"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35176\">\n\t  <p>It seems #90 is not completely fixed in 7.8.\n\t    (that is, even after CVE-2017-1000501 and CVE-2020-29600 are fixed).\n\t  In AWStats through 7.8, cgi-bin/awstats.pl?config= accepts a\n\t  partial absolute pathname (omitting the initial /etc), even\n\t  though it was intended to only read a file in the /etc/awstats/awstats.conf format.\n\t  NOTE: this issue exists because of an incomplete fix for CVE-2017-1000501 and CVE-2020-29600.\n\t</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35176"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bba3f684-9b1d-11ed-9a3f-b42e991fc52e.html"
-				}
-			],
-			"published": "2023-01-23T00:00:00Z"
+			"content": {
+				"id": "bba3f684-9b1d-11ed-9a3f-b42e991fc52e",
+				"title": "www/awstats -- Partial absolute pathname",
+				"description": "\n\t<p>MITRE reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35176\">\n\t  <p>It seems #90 is not completely fixed in 7.8.\n\t    (that is, even after CVE-2017-1000501 and CVE-2020-29600 are fixed).\n\t  In AWStats through 7.8, cgi-bin/awstats.pl?config= accepts a\n\t  partial absolute pathname (omitting the initial /etc), even\n\t  though it was intended to only read a file in the /etc/awstats/awstats.conf format.\n\t  NOTE: this issue exists because of an incomplete fix for CVE-2017-1000501 and CVE-2020-29600.\n\t</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35176"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bba3f684-9b1d-11ed-9a3f-b42e991fc52e.html"
+					}
+				],
+				"published": "2023-01-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-35176",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-35176"
-				}
+			"content": {
+				"id": "CVE-2020-35176",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-35176"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

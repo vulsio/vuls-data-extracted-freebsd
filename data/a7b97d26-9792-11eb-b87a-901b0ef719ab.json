@@ -2,30 +2,40 @@
 	"id": "a7b97d26-9792-11eb-b87a-901b0ef719ab",
 	"advisories": [
 		{
-			"id": "a7b97d26-9792-11eb-b87a-901b0ef719ab",
-			"title": "FreeBSD -- jail escape possible by mounting over jail root",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to a race condition between lookup of \"..\" and remounting a filesystem,\n\ta process running inside a jail might access filesystem hierarchy outside\n\tof jail.</p>\n\t<h1>Impact:</h1>\n\t<p>A process with superuser privileges running inside a jail configured\n\twith the allow.mount permission (not enabled by default) could change the root\n\tdirectory outside of the jail, and thus gain full read and write access\n\tto all files and directories in the system.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:10.jail_mount.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a7b97d26-9792-11eb-b87a-901b0ef719ab.html"
-				}
-			],
-			"published": "2021-04-07T00:00:00Z"
+			"content": {
+				"id": "a7b97d26-9792-11eb-b87a-901b0ef719ab",
+				"title": "FreeBSD -- jail escape possible by mounting over jail root",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to a race condition between lookup of \"..\" and remounting a filesystem,\n\ta process running inside a jail might access filesystem hierarchy outside\n\tof jail.</p>\n\t<h1>Impact:</h1>\n\t<p>A process with superuser privileges running inside a jail configured\n\twith the allow.mount permission (not enabled by default) could change the root\n\tdirectory outside of the jail, and thus gain full read and write access\n\tto all files and directories in the system.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:10.jail_mount.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a7b97d26-9792-11eb-b87a-901b0ef719ab.html"
+					}
+				],
+				"published": "2021-04-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-25584",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-25584"
-				}
+			"content": {
+				"id": "CVE-2020-25584",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-25584"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

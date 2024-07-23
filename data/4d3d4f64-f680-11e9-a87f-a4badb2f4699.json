@@ -2,30 +2,40 @@
 	"id": "4d3d4f64-f680-11e9-a87f-a4badb2f4699",
 	"advisories": [
 		{
-			"id": "4d3d4f64-f680-11e9-a87f-a4badb2f4699",
-			"title": "FreeBSD -- IPv6 remote Denial-of-Service",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due do a missing check in the code of m_pulldown(9) data\n\treturned may not be contiguous as requested by the caller.</p>\n\t<h1>Impact:</h1>\n\t<p>Extra checks in the IPv6 code catch the error condition\n\tand trigger a kernel panic leading to a remote DoS\n\t(denial-of-service) attack with certain Ethernet interfaces.\n\tAt this point it is unknown if any other than the IPv6 code\n\tpaths can trigger a similar condition.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:22.mbuf.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4d3d4f64-f680-11e9-a87f-a4badb2f4699.html"
-				}
-			],
-			"published": "2019-10-24T00:00:00Z"
+			"content": {
+				"id": "4d3d4f64-f680-11e9-a87f-a4badb2f4699",
+				"title": "FreeBSD -- IPv6 remote Denial-of-Service",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due do a missing check in the code of m_pulldown(9) data\n\treturned may not be contiguous as requested by the caller.</p>\n\t<h1>Impact:</h1>\n\t<p>Extra checks in the IPv6 code catch the error condition\n\tand trigger a kernel panic leading to a remote DoS\n\t(denial-of-service) attack with certain Ethernet interfaces.\n\tAt this point it is unknown if any other than the IPv6 code\n\tpaths can trigger a similar condition.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:22.mbuf.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4d3d4f64-f680-11e9-a87f-a4badb2f4699.html"
+					}
+				],
+				"published": "2019-10-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-5611",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5611"
-				}
+			"content": {
+				"id": "CVE-2019-5611",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-5611"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

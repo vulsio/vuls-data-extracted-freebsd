@@ -2,30 +2,40 @@
 	"id": "f235fe7a-b9ca-11db-bf0f-0013720b182d",
 	"advisories": [
 		{
-			"id": "f235fe7a-b9ca-11db-bf0f-0013720b182d",
-			"title": "samba -- potential Denial of Service bug in smbd",
-			"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2007-0452.html\">\n\t  <p>Internally Samba's file server daemon, smbd, implements\n\t    support for deferred file open calls in an attempt to serve\n\t    client requests that would otherwise fail due to a share mode\n\t    violation.\tWhen renaming a file under certain circumstances\n\t    it is possible that the request is never removed from the deferred\n\t    open queue.  smbd will then become stuck is a loop trying to\n\t    service the open request.</p>\n\t  <p>This bug may allow an authenticated user to exhaust resources\n\t    such as memory and CPU on the server by opening multiple CIFS\n\t    sessions, each of which will normally spawn a new smbd process,\n\t    and sending each connection into an infinite loop.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.samba.org/samba/security/CVE-2007-0452.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f235fe7a-b9ca-11db-bf0f-0013720b182d.html"
-				}
-			],
-			"published": "2007-03-16T00:00:00Z"
+			"content": {
+				"id": "f235fe7a-b9ca-11db-bf0f-0013720b182d",
+				"title": "samba -- potential Denial of Service bug in smbd",
+				"description": "\n\t<p>The Samba Team reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2007-0452.html\">\n\t  <p>Internally Samba's file server daemon, smbd, implements\n\t    support for deferred file open calls in an attempt to serve\n\t    client requests that would otherwise fail due to a share mode\n\t    violation.\tWhen renaming a file under certain circumstances\n\t    it is possible that the request is never removed from the deferred\n\t    open queue.  smbd will then become stuck is a loop trying to\n\t    service the open request.</p>\n\t  <p>This bug may allow an authenticated user to exhaust resources\n\t    such as memory and CPU on the server by opening multiple CIFS\n\t    sessions, each of which will normally spawn a new smbd process,\n\t    and sending each connection into an infinite loop.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.samba.org/samba/security/CVE-2007-0452.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f235fe7a-b9ca-11db-bf0f-0013720b182d.html"
+					}
+				],
+				"published": "2007-03-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-0452",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-0452"
-				}
+			"content": {
+				"id": "CVE-2007-0452",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-0452"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

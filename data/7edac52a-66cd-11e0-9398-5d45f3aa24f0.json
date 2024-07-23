@@ -2,30 +2,40 @@
 	"id": "7edac52a-66cd-11e0-9398-5d45f3aa24f0",
 	"advisories": [
 		{
-			"id": "7edac52a-66cd-11e0-9398-5d45f3aa24f0",
-			"title": "krb5 -- MITKRB5-SA-2011-003, KDC vulnerable to double-free when PKINIT enabled",
-			"description": "\n\t<p>An advisory published by the MIT Kerberos team says:</p>\n\t<blockquote cite=\"http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-003.txt\">\n\t  <p>The MIT Kerberos 5 Key Distribution Center (KDC) daemon is\n\t     vulnerable to a double-free condition if the Public Key\n\t     Cryptography for Initial Authentication (PKINIT) capability is\n\t     enabled, resulting in daemon crash or arbitrary code execution\n\t     (which is believed to be difficult).</p>\n\t  <p>An unauthenticated remote attacker can induce a double-free\n\t     event, causing the KDC daemon to crash (denial of service),\n\t     or to execute arbitrary code.  Exploiting a double-free event\n\t     to execute arbitrary code is believed to be difficult.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-003.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/7edac52a-66cd-11e0-9398-5d45f3aa24f0.html"
-				}
-			],
-			"published": "2011-04-14T00:00:00Z"
+			"content": {
+				"id": "7edac52a-66cd-11e0-9398-5d45f3aa24f0",
+				"title": "krb5 -- MITKRB5-SA-2011-003, KDC vulnerable to double-free when PKINIT enabled",
+				"description": "\n\t<p>An advisory published by the MIT Kerberos team says:</p>\n\t<blockquote cite=\"http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-003.txt\">\n\t  <p>The MIT Kerberos 5 Key Distribution Center (KDC) daemon is\n\t     vulnerable to a double-free condition if the Public Key\n\t     Cryptography for Initial Authentication (PKINIT) capability is\n\t     enabled, resulting in daemon crash or arbitrary code execution\n\t     (which is believed to be difficult).</p>\n\t  <p>An unauthenticated remote attacker can induce a double-free\n\t     event, causing the KDC daemon to crash (denial of service),\n\t     or to execute arbitrary code.  Exploiting a double-free event\n\t     to execute arbitrary code is believed to be difficult.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-003.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7edac52a-66cd-11e0-9398-5d45f3aa24f0.html"
+					}
+				],
+				"published": "2011-04-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2011-0284",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0284"
-				}
+			"content": {
+				"id": "CVE-2011-0284",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-0284"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

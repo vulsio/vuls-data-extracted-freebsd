@@ -2,30 +2,40 @@
 	"id": "d22b336d-0567-11ec-b69d-4062311215d5",
 	"advisories": [
 		{
-			"id": "d22b336d-0567-11ec-b69d-4062311215d5",
-			"title": "FreeBSD -- libfetch out of bounds read",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The passive mode in FTP communication allows an out of boundary read while\n\tlibfetch uses strtol to parse the relevant numbers into address bytes.  It\n\tdoes not check if the line ends prematurely.  If it does, the for-loop\n\tcondition checks for *p == '\\0' one byte too late because p++ was already\n\tperformed.</p>\n\t<h1>Impact:</h1>\n\t<p>The connection buffer size can be controlled by a malicious FTP server\n\tbecause the size is increased until a newline is encountered (or no more\n\tcharacters are read).  This also allows to move the buffer into more\n\tinteresting areas within the address space, potentially parsing relevant\n\tnumbers for the attacker.  Since these bytes become available to the server\n\tin form of a new TCP connection to a constructed port number or even part of\n\tthe IPv6 address this is a potential information leak.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:15.libfetch.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d22b336d-0567-11ec-b69d-4062311215d5.html"
-				}
-			],
-			"published": "2021-08-25T00:00:00Z"
+			"content": {
+				"id": "d22b336d-0567-11ec-b69d-4062311215d5",
+				"title": "FreeBSD -- libfetch out of bounds read",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The passive mode in FTP communication allows an out of boundary read while\n\tlibfetch uses strtol to parse the relevant numbers into address bytes.  It\n\tdoes not check if the line ends prematurely.  If it does, the for-loop\n\tcondition checks for *p == '\\0' one byte too late because p++ was already\n\tperformed.</p>\n\t<h1>Impact:</h1>\n\t<p>The connection buffer size can be controlled by a malicious FTP server\n\tbecause the size is increased until a newline is encountered (or no more\n\tcharacters are read).  This also allows to move the buffer into more\n\tinteresting areas within the address space, potentially parsing relevant\n\tnumbers for the attacker.  Since these bytes become available to the server\n\tin form of a new TCP connection to a constructed port number or even part of\n\tthe IPv6 address this is a potential information leak.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:15.libfetch.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d22b336d-0567-11ec-b69d-4062311215d5.html"
+					}
+				],
+				"published": "2021-08-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-36159",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-36159"
-				}
+			"content": {
+				"id": "CVE-2021-36159",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-36159"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

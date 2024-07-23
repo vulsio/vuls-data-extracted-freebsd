@@ -2,30 +2,40 @@
 	"id": "8b571fb2-f311-11eb-b12b-fc4dd43e2b6a",
 	"advisories": [
 		{
-			"id": "8b571fb2-f311-11eb-b12b-fc4dd43e2b6a",
-			"title": "tomcat -- JNDI Realm Authentication Weakness in multiple versions",
-			"description": "\n\t<p>ilja.farber reports:</p>\n\t<blockquote cite=\"https://tomcat.apache.org/security.html\">\n\t  <p>Queries made by the JNDI Realm did not always correctly escape parameters. Parameter values could be sourced from user provided data (eg user names) as well as configuration data provided by an administrator.\nIn limited circumstances it was possible for users to authenticate using variations of their user name and/or to bypass some of the protection provided by the LockOut Realm.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30640"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/8b571fb2-f311-11eb-b12b-fc4dd43e2b6a.html"
-				}
-			],
-			"published": "2021-08-01T00:00:00Z"
+			"content": {
+				"id": "8b571fb2-f311-11eb-b12b-fc4dd43e2b6a",
+				"title": "tomcat -- JNDI Realm Authentication Weakness in multiple versions",
+				"description": "\n\t<p>ilja.farber reports:</p>\n\t<blockquote cite=\"https://tomcat.apache.org/security.html\">\n\t  <p>Queries made by the JNDI Realm did not always correctly escape parameters. Parameter values could be sourced from user provided data (eg user names) as well as configuration data provided by an administrator.\nIn limited circumstances it was possible for users to authenticate using variations of their user name and/or to bypass some of the protection provided by the LockOut Realm.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30640"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8b571fb2-f311-11eb-b12b-fc4dd43e2b6a.html"
+					}
+				],
+				"published": "2021-08-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-30640",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-30640"
-				}
+			"content": {
+				"id": "CVE-2021-30640",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-30640"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

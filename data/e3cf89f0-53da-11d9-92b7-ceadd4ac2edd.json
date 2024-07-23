@@ -2,55 +2,65 @@
 	"id": "e3cf89f0-53da-11d9-92b7-ceadd4ac2edd",
 	"advisories": [
 		{
-			"id": "e3cf89f0-53da-11d9-92b7-ceadd4ac2edd",
-			"title": "phpbb -- arbitrary command execution and other vulnerabilities",
-			"description": "\n\t<p>The ChangeLog for phpBB 2.0.11 states:</p>\n\t<blockquote cite=\"http://www.phpbb.com/support/documents.php?mode=changelog\">\n\t  <p>Changes since 2.0.10</p>\n\t  <ul>\n\t    <li>Fixed vulnerability in highlighting code (<strong>very\n\t      high severity, please update your installation as soon\n\t      as possible</strong>)</li>\n\t    <li>Fixed unsetting global vars - <strong>Matt\n\t      Kavanagh</strong></li>\n\t    <li>Fixed XSS vulnerability in username handling\n\t      - <strong>AnthraX101</strong></li>\n\t    <li>Fixed not confirmed sql injection in username handling\n\t      - <strong>warmth</strong></li>\n\t    <li>Added check for empty topic id in topic_review\n\t      function</li>\n\t    <li>Added visual confirmation mod to code base</li>\n\t  </ul>\n\t</blockquote>\n\t<p>Additionally, a US-CERT Technical Cyber Security Alert reports:</p>\n\t<blockquote cite=\"http://www.us-cert.gov/cas/techalerts/TA04-356A.html\">\n\t  <p>phpBB contains an user input validation problem with\n\t    regard to the parsing of the URL. An intruder can deface a\n\t    phpBB website, execute arbitrary commands, or gain\n\t    administrative privileges on a compromised bulletin\n\t    board.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110029415208724"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110079436714518"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.phpbb.com/phpBB/viewtopic.php?f=14&t=240636"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.phpbb.com/support/documents.php?mode=changelog"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.uscert.gov/cas/techalerts/TA04-356A.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=74106"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kb.cert.org/vuls/id/497400"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e3cf89f0-53da-11d9-92b7-ceadd4ac2edd.html"
-				}
-			],
-			"published": "2004-12-22T00:00:00Z",
-			"modified": "2005-01-24T00:00:00Z"
+			"content": {
+				"id": "e3cf89f0-53da-11d9-92b7-ceadd4ac2edd",
+				"title": "phpbb -- arbitrary command execution and other vulnerabilities",
+				"description": "\n\t<p>The ChangeLog for phpBB 2.0.11 states:</p>\n\t<blockquote cite=\"http://www.phpbb.com/support/documents.php?mode=changelog\">\n\t  <p>Changes since 2.0.10</p>\n\t  <ul>\n\t    <li>Fixed vulnerability in highlighting code (<strong>very\n\t      high severity, please update your installation as soon\n\t      as possible</strong>)</li>\n\t    <li>Fixed unsetting global vars - <strong>Matt\n\t      Kavanagh</strong></li>\n\t    <li>Fixed XSS vulnerability in username handling\n\t      - <strong>AnthraX101</strong></li>\n\t    <li>Fixed not confirmed sql injection in username handling\n\t      - <strong>warmth</strong></li>\n\t    <li>Added check for empty topic id in topic_review\n\t      function</li>\n\t    <li>Added visual confirmation mod to code base</li>\n\t  </ul>\n\t</blockquote>\n\t<p>Additionally, a US-CERT Technical Cyber Security Alert reports:</p>\n\t<blockquote cite=\"http://www.us-cert.gov/cas/techalerts/TA04-356A.html\">\n\t  <p>phpBB contains an user input validation problem with\n\t    regard to the parsing of the URL. An intruder can deface a\n\t    phpBB website, execute arbitrary commands, or gain\n\t    administrative privileges on a compromised bulletin\n\t    board.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110029415208724"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110079436714518"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.phpbb.com/phpBB/viewtopic.php?f=14&t=240636"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.phpbb.com/support/documents.php?mode=changelog"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.uscert.gov/cas/techalerts/TA04-356A.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=74106"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kb.cert.org/vuls/id/497400"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e3cf89f0-53da-11d9-92b7-ceadd4ac2edd.html"
+					}
+				],
+				"published": "2004-12-22T00:00:00Z",
+				"modified": "2005-01-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-1315",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1315"
-				}
+			"content": {
+				"id": "CVE-2004-1315",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-1315"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

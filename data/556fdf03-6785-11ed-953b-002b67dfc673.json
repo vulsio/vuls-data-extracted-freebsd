@@ -2,30 +2,40 @@
 	"id": "556fdf03-6785-11ed-953b-002b67dfc673",
 	"advisories": [
 		{
-			"id": "556fdf03-6785-11ed-953b-002b67dfc673",
-			"title": "Tomcat -- Request Smuggling",
-			"description": "\n\t<p>Apache Tomcat reports:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread/zzcxzvqfdqn515zfs3dxb7n8gty589sq\">\n\t  <p>\n\t  If Tomcat was configured to ignore invalid HTTP headers via setting rejectIllegalHeader to false (the default for 8.5.x only), Tomcat did not reject a request containing an invalid Content-Length header making a request smuggling attack possible if Tomcat was located behind a reverse proxy that also failed to reject the request with the invalid header.\n\t  </p>\n\t  <p>The CVSS score for this vulnerability is 7.5 High</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42252"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/556fdf03-6785-11ed-953b-002b67dfc673.html"
-				}
-			],
-			"published": "2022-11-18T00:00:00Z"
+			"content": {
+				"id": "556fdf03-6785-11ed-953b-002b67dfc673",
+				"title": "Tomcat -- Request Smuggling",
+				"description": "\n\t<p>Apache Tomcat reports:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread/zzcxzvqfdqn515zfs3dxb7n8gty589sq\">\n\t  <p>\n\t  If Tomcat was configured to ignore invalid HTTP headers via setting rejectIllegalHeader to false (the default for 8.5.x only), Tomcat did not reject a request containing an invalid Content-Length header making a request smuggling attack possible if Tomcat was located behind a reverse proxy that also failed to reject the request with the invalid header.\n\t  </p>\n\t  <p>The CVSS score for this vulnerability is 7.5 High</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42252"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/556fdf03-6785-11ed-953b-002b67dfc673.html"
+					}
+				],
+				"published": "2022-11-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-42252",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-42252"
-				}
+			"content": {
+				"id": "CVE-2022-42252",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-42252"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

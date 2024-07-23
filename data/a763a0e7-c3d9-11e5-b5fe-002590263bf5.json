@@ -2,47 +2,62 @@
 	"id": "a763a0e7-c3d9-11e5-b5fe-002590263bf5",
 	"advisories": [
 		{
-			"id": "a763a0e7-c3d9-11e5-b5fe-002590263bf5",
-			"title": "privoxy -- multiple vulnerabilities",
-			"description": "\n\t<p>Privoxy Developers reports:</p>\n\t<blockquote cite=\"http://www.privoxy.org/3.0.24/user-manual/whatsnew.html\">\n\t  <p>Prevent invalid reads in case of corrupt chunk-encoded content.\n\t    CVE-2016-1982. Bug discovered with afl-fuzz and AddressSanitizer.\n\t    </p>\n\t  <p>Remove empty Host headers in client requests. Previously they\n\t    would result in invalid reads. CVE-2016-1983. Bug discovered with\n\t    afl-fuzz and AddressSanitizer.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2016/01/21/4"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.privoxy.org/3.0.24/user-manual/whatsnew.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206504"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a763a0e7-c3d9-11e5-b5fe-002590263bf5.html"
-				}
-			],
-			"published": "2016-01-26T00:00:00Z"
+			"content": {
+				"id": "a763a0e7-c3d9-11e5-b5fe-002590263bf5",
+				"title": "privoxy -- multiple vulnerabilities",
+				"description": "\n\t<p>Privoxy Developers reports:</p>\n\t<blockquote cite=\"http://www.privoxy.org/3.0.24/user-manual/whatsnew.html\">\n\t  <p>Prevent invalid reads in case of corrupt chunk-encoded content.\n\t    CVE-2016-1982. Bug discovered with afl-fuzz and AddressSanitizer.\n\t    </p>\n\t  <p>Remove empty Host headers in client requests. Previously they\n\t    would result in invalid reads. CVE-2016-1983. Bug discovered with\n\t    afl-fuzz and AddressSanitizer.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2016/01/21/4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.privoxy.org/3.0.24/user-manual/whatsnew.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206504"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a763a0e7-c3d9-11e5-b5fe-002590263bf5.html"
+					}
+				],
+				"published": "2016-01-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-1982",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1982"
-				}
+			"content": {
+				"id": "CVE-2016-1982",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1982"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-1983",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1983"
-				}
+			"content": {
+				"id": "CVE-2016-1983",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1983"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

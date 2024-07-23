@@ -2,30 +2,40 @@
 	"id": "6d334fdb-f7e7-11ea-88f8-901b0ef719ab",
 	"advisories": [
 		{
-			"id": "6d334fdb-f7e7-11ea-88f8-901b0ef719ab",
-			"title": "FreeBSD -- ftpd privilege escalation via ftpchroot feature",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A ftpd(8) bug in the implementation of the file system sandbox, combined\n\twith capabilities available to an authenticated FTP user, can be used to\n\tescape the file system restriction configured in ftpchroot(5).\n\tMoreover, the bug allows a malicious client to gain root privileges.</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious FTP user can gain privileged access to an affected system.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:30.ftpd.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6d334fdb-f7e7-11ea-88f8-901b0ef719ab.html"
-				}
-			],
-			"published": "2020-09-16T00:00:00Z"
+			"content": {
+				"id": "6d334fdb-f7e7-11ea-88f8-901b0ef719ab",
+				"title": "FreeBSD -- ftpd privilege escalation via ftpchroot feature",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A ftpd(8) bug in the implementation of the file system sandbox, combined\n\twith capabilities available to an authenticated FTP user, can be used to\n\tescape the file system restriction configured in ftpchroot(5).\n\tMoreover, the bug allows a malicious client to gain root privileges.</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious FTP user can gain privileged access to an affected system.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:30.ftpd.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6d334fdb-f7e7-11ea-88f8-901b0ef719ab.html"
+					}
+				],
+				"published": "2020-09-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-7468",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7468"
-				}
+			"content": {
+				"id": "CVE-2020-7468",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-7468"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

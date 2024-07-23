@@ -2,39 +2,54 @@
 	"id": "07234e78-e899-11e1-b38d-0023ae8e59f0",
 	"advisories": [
 		{
-			"id": "07234e78-e899-11e1-b38d-0023ae8e59f0",
-			"title": "databases/postgresql*-server -- multiple vulnerabilities",
-			"description": "\n\t<p>The PostgreSQL Global Development Group reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1407/\">\n\t  <p>The PostgreSQL Global Development Group today released\n\t    security updates for all active branches of the PostgreSQL\n\t    database system, including versions 9.1.5, 9.0.9, 8.4.13 and\n\t    8.3.20. This update patches security holes associated with\n\t    libxml2 and libxslt, similar to those affecting other open\n\t    source projects. All users are urged to update their\n\t    installations at the first available opportunity</p>\n\t  <p>Users who are relying on the built-in XML functionality to\n\t    validate external DTDs will need to implement a workaround, as\n\t    this security patch disables that functionality. Users who are\n\t    using xslt_process() to fetch documents or stylesheets from\n\t    external URLs will no longer be able to do so. The PostgreSQL\n\t    project regrets the need to disable both of these features in\n\t    order to maintain our security standards. These security issues\n\t    with XML are substantially similar to issues patched recently\n\t    by the Webkit (CVE-2011-1774), XMLsec (CVE-2011-1425) and PHP5\n\t    (CVE-2012-0057) projects.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.postgresql.org/about/news/1407/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/07234e78-e899-11e1-b38d-0023ae8e59f0.html"
-				}
-			],
-			"published": "2012-08-17T00:00:00Z"
+			"content": {
+				"id": "07234e78-e899-11e1-b38d-0023ae8e59f0",
+				"title": "databases/postgresql*-server -- multiple vulnerabilities",
+				"description": "\n\t<p>The PostgreSQL Global Development Group reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1407/\">\n\t  <p>The PostgreSQL Global Development Group today released\n\t    security updates for all active branches of the PostgreSQL\n\t    database system, including versions 9.1.5, 9.0.9, 8.4.13 and\n\t    8.3.20. This update patches security holes associated with\n\t    libxml2 and libxslt, similar to those affecting other open\n\t    source projects. All users are urged to update their\n\t    installations at the first available opportunity</p>\n\t  <p>Users who are relying on the built-in XML functionality to\n\t    validate external DTDs will need to implement a workaround, as\n\t    this security patch disables that functionality. Users who are\n\t    using xslt_process() to fetch documents or stylesheets from\n\t    external URLs will no longer be able to do so. The PostgreSQL\n\t    project regrets the need to disable both of these features in\n\t    order to maintain our security standards. These security issues\n\t    with XML are substantially similar to issues patched recently\n\t    by the Webkit (CVE-2011-1774), XMLsec (CVE-2011-1425) and PHP5\n\t    (CVE-2012-0057) projects.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.postgresql.org/about/news/1407/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/07234e78-e899-11e1-b38d-0023ae8e59f0.html"
+					}
+				],
+				"published": "2012-08-17T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-3488",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3488"
-				}
+			"content": {
+				"id": "CVE-2012-3488",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-3488"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-3489",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3489"
-				}
+			"content": {
+				"id": "CVE-2012-3489",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-3489"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

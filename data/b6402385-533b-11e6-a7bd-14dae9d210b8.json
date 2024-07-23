@@ -2,141 +2,206 @@
 	"id": "b6402385-533b-11e6-a7bd-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "b6402385-533b-11e6-a7bd-14dae9d210b8",
-			"title": "php -- multiple vulnerabilities",
-			"description": "\n\t<p>PHP reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php#5.5.38\">\n\t  <ul>\n\t    <li><p>Fixed bug #69975 (PHP segfaults when accessing nvarchar(max) defined columns)</p></li>\n\t    <li><p>Fixed bug #72479 (Use After Free Vulnerability in SNMP with GC and unserialize()).</p></li>\n\t    <li><p>Fixed bug #72512 (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</p></li>\n\t    <li><p>Fixed bug #72519 (imagegif/output out-of-bounds access).</p></li>\n\t    <li><p>Fixed bug #72520 (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</p></li>\n\t    <li><p>Fixed bug #72533 (locale_accept_from_http out-of-bounds access).</p></li>\n\t    <li><p>Fixed bug #72541 (size_t overflow lead to heap corruption).</p></li>\n\t    <li><p>Fixed bug #72551, bug #72552 (Incorrect casting from size_t to int lead to heap overflow in mdecrypt_generic).</p></li>\n\t    <li><p>Fixed bug #72558 (Integer overflow error within _gdContributionsAlloc()).</p></li>\n\t    <li><p>Fixed bug #72573 (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</p></li>\n\t    <li><p>Fixed bug #72603 (Out of bound read in exif_process_IFD_in_MAKERNOTE).</p></li>\n\t    <li><p>Fixed bug #72606 (heap-buffer-overflow (write) simplestring_addn simplestring.c).</p></li>\n\t    <li><p>Fixed bug #72613 (Inadequate error handling in bzread()).</p></li>\n\t    <li><p>Fixed bug #72618 (NULL Pointer Dereference in exif_process_user_comment).</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/oss-sec/2016/q3/121"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.php.net/ChangeLog-5.php#5.5.38"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.php.net/ChangeLog-5.php#5.6.24"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.php.net/ChangeLog-7.php#7.0.8"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b6402385-533b-11e6-a7bd-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-07-26T00:00:00Z"
+			"content": {
+				"id": "b6402385-533b-11e6-a7bd-14dae9d210b8",
+				"title": "php -- multiple vulnerabilities",
+				"description": "\n\t<p>PHP reports:</p>\n\t<blockquote cite=\"http://www.php.net/ChangeLog-5.php#5.5.38\">\n\t  <ul>\n\t    <li><p>Fixed bug #69975 (PHP segfaults when accessing nvarchar(max) defined columns)</p></li>\n\t    <li><p>Fixed bug #72479 (Use After Free Vulnerability in SNMP with GC and unserialize()).</p></li>\n\t    <li><p>Fixed bug #72512 (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</p></li>\n\t    <li><p>Fixed bug #72519 (imagegif/output out-of-bounds access).</p></li>\n\t    <li><p>Fixed bug #72520 (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</p></li>\n\t    <li><p>Fixed bug #72533 (locale_accept_from_http out-of-bounds access).</p></li>\n\t    <li><p>Fixed bug #72541 (size_t overflow lead to heap corruption).</p></li>\n\t    <li><p>Fixed bug #72551, bug #72552 (Incorrect casting from size_t to int lead to heap overflow in mdecrypt_generic).</p></li>\n\t    <li><p>Fixed bug #72558 (Integer overflow error within _gdContributionsAlloc()).</p></li>\n\t    <li><p>Fixed bug #72573 (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</p></li>\n\t    <li><p>Fixed bug #72603 (Out of bound read in exif_process_IFD_in_MAKERNOTE).</p></li>\n\t    <li><p>Fixed bug #72606 (heap-buffer-overflow (write) simplestring_addn simplestring.c).</p></li>\n\t    <li><p>Fixed bug #72613 (Inadequate error handling in bzread()).</p></li>\n\t    <li><p>Fixed bug #72618 (NULL Pointer Dereference in exif_process_user_comment).</p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/oss-sec/2016/q3/121"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.php.net/ChangeLog-5.php#5.5.38"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.php.net/ChangeLog-5.php#5.6.24"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.php.net/ChangeLog-7.php#7.0.8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b6402385-533b-11e6-a7bd-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-07-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-8879",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8879"
-				}
+			"content": {
+				"id": "CVE-2015-8879",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8879"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-5385",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5385"
-				}
+			"content": {
+				"id": "CVE-2016-5385",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5385"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-5399",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5399"
-				}
+			"content": {
+				"id": "CVE-2016-5399",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5399"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6288",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6288"
-				}
+			"content": {
+				"id": "CVE-2016-6288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6289",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6289"
-				}
+			"content": {
+				"id": "CVE-2016-6289",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6289"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6290",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6290"
-				}
+			"content": {
+				"id": "CVE-2016-6290",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6290"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6291",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6291"
-				}
+			"content": {
+				"id": "CVE-2016-6291",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6291"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6292",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6292"
-				}
+			"content": {
+				"id": "CVE-2016-6292",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6292"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6294",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6294"
-				}
+			"content": {
+				"id": "CVE-2016-6294",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6294"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6295",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6295"
-				}
+			"content": {
+				"id": "CVE-2016-6295",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6295"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6296",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6296"
-				}
+			"content": {
+				"id": "CVE-2016-6296",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6296"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-6297",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-6297"
-				}
+			"content": {
+				"id": "CVE-2016-6297",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-6297"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

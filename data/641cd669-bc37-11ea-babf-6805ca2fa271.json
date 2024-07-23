@@ -2,30 +2,40 @@
 	"id": "641cd669-bc37-11ea-babf-6805ca2fa271",
 	"advisories": [
 		{
-			"id": "641cd669-bc37-11ea-babf-6805ca2fa271",
-			"title": "powerdns-recursor -- access restriction bypass",
-			"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://doc.powerdns.com/recursor/changelog/4.3.html#change-4.3.2\">\n\t  <p>CVE-2020-14196: An issue has been found in PowerDNS Recursor where the ACL applied to the internal\n\t     web server via webserver-allow-from is not properly enforced, allowing a remote attacker to send\n\t     HTTP queries to the internal web server, bypassing the restriction.\n\n\t     In the default configuration the API webserver is not enabled. Only installations using a\n\t     non-default value for webserver and webserver-address are affected.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://doc.powerdns.com/recursor/security-advisories/index.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/641cd669-bc37-11ea-babf-6805ca2fa271.html"
-				}
-			],
-			"published": "2020-07-02T00:00:00Z"
+			"content": {
+				"id": "641cd669-bc37-11ea-babf-6805ca2fa271",
+				"title": "powerdns-recursor -- access restriction bypass",
+				"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://doc.powerdns.com/recursor/changelog/4.3.html#change-4.3.2\">\n\t  <p>CVE-2020-14196: An issue has been found in PowerDNS Recursor where the ACL applied to the internal\n\t     web server via webserver-allow-from is not properly enforced, allowing a remote attacker to send\n\t     HTTP queries to the internal web server, bypassing the restriction.\n\n\t     In the default configuration the API webserver is not enabled. Only installations using a\n\t     non-default value for webserver and webserver-address are affected.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://doc.powerdns.com/recursor/security-advisories/index.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/641cd669-bc37-11ea-babf-6805ca2fa271.html"
+					}
+				],
+				"published": "2020-07-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-14196",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14196"
-				}
+			"content": {
+				"id": "CVE-2020-14196",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-14196"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

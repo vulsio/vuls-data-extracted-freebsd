@@ -2,24 +2,29 @@
 	"id": "84ab58cf-e4ac-11d8-9b0a-000347a4fa7d",
 	"advisories": [
 		{
-			"id": "84ab58cf-e4ac-11d8-9b0a-000347a4fa7d",
-			"title": "gnutls -- certificate chain verification DoS",
-			"description": "\n\t<p>Patric Hornik reports on a problem in the certificate chain\n\t  verification procedures of GnuTLS that may result in a\n\t  denial-of-service vulnerability:</p>\n\t<blockquote cite=\"http://www.hornik.sk/SA/SA-20040802.txt\">\n\t  <p>The certificate chain should be verified from last root\n\t    certificate to the first certificate.  Otherwise a lot\n\t    of unauthorized CPU processing can be forced to check\n\t    certificate signatures signed with arbitrary RSA/DSA keys\n\t    chosen by attacker.</p>\n\t  <p>In GnuTLS the signatures are checked from first to last\n\t    certificate, there is no limit on size of keys and no\n\t    limit on length of certificate chain.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/12156"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.hornik.sk/SA/SA-20040802.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/84ab58cf-e4ac-11d8-9b0a-000347a4fa7d.html"
-				}
-			],
-			"published": "2004-10-05T00:00:00Z"
+			"content": {
+				"id": "84ab58cf-e4ac-11d8-9b0a-000347a4fa7d",
+				"title": "gnutls -- certificate chain verification DoS",
+				"description": "\n\t<p>Patric Hornik reports on a problem in the certificate chain\n\t  verification procedures of GnuTLS that may result in a\n\t  denial-of-service vulnerability:</p>\n\t<blockquote cite=\"http://www.hornik.sk/SA/SA-20040802.txt\">\n\t  <p>The certificate chain should be verified from last root\n\t    certificate to the first certificate.  Otherwise a lot\n\t    of unauthorized CPU processing can be forced to check\n\t    certificate signatures signed with arbitrary RSA/DSA keys\n\t    chosen by attacker.</p>\n\t  <p>In GnuTLS the signatures are checked from first to last\n\t    certificate, there is no limit on size of keys and no\n\t    limit on length of certificate chain.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/12156"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.hornik.sk/SA/SA-20040802.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/84ab58cf-e4ac-11d8-9b0a-000347a4fa7d.html"
+					}
+				],
+				"published": "2004-10-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

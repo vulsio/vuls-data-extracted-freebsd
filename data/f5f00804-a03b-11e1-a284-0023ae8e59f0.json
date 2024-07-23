@@ -2,31 +2,41 @@
 	"id": "f5f00804-a03b-11e1-a284-0023ae8e59f0",
 	"advisories": [
 		{
-			"id": "f5f00804-a03b-11e1-a284-0023ae8e59f0",
-			"title": "inspircd -- buffer overflow",
-			"description": "\n\t<p>InspIRCd reports:</p>\n\t<blockquote cite=\"http://inspircd.github.com/\">\n\t  <p>InspIRCd contains a heap corruption vulnerability that exists in the\n\t    dns.cpp code. The res[] buffer is allocated on the heap and can be\n\t    overflowed. The res[] buffer can be exploited during its deallocation.\n\t    The number of overflowed bytes can be controlled with DNS compression\n\t    features.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://inspircd.github.com/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f5f00804-a03b-11e1-a284-0023ae8e59f0.html"
-				}
-			],
-			"published": "2012-05-17T00:00:00Z",
-			"modified": "2012-06-21T00:00:00Z"
+			"content": {
+				"id": "f5f00804-a03b-11e1-a284-0023ae8e59f0",
+				"title": "inspircd -- buffer overflow",
+				"description": "\n\t<p>InspIRCd reports:</p>\n\t<blockquote cite=\"http://inspircd.github.com/\">\n\t  <p>InspIRCd contains a heap corruption vulnerability that exists in the\n\t    dns.cpp code. The res[] buffer is allocated on the heap and can be\n\t    overflowed. The res[] buffer can be exploited during its deallocation.\n\t    The number of overflowed bytes can be controlled with DNS compression\n\t    features.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://inspircd.github.com/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f5f00804-a03b-11e1-a284-0023ae8e59f0.html"
+					}
+				],
+				"published": "2012-05-17T00:00:00Z",
+				"modified": "2012-06-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-1836",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1836"
-				}
+			"content": {
+				"id": "CVE-2012-1836",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1836"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

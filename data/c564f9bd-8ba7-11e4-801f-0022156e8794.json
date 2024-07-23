@@ -2,24 +2,29 @@
 	"id": "c564f9bd-8ba7-11e4-801f-0022156e8794",
 	"advisories": [
 		{
-			"id": "c564f9bd-8ba7-11e4-801f-0022156e8794",
-			"title": "png -- heap overflow for 32-bit builds",
-			"description": "\n\t<p>32-bit builds of PNG library are vulnerable to an unsigned\n\t  integer overflow that is triggered by a crafted wide\n\t  interlaced images.\n\t  Overflow results in a heap corruption that will crash the\n\t  application and may lead to the controlled overwrite of a\n\t  selected portions of process address space.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://codelabs.ru/security/vulns/analysis/libpng/2014-dec-libpng-1.6.15/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://tfpwn.com/files/libpng_heap_overflow_1.6.15.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c564f9bd-8ba7-11e4-801f-0022156e8794.html"
-				}
-			],
-			"published": "2015-01-05T00:00:00Z"
+			"content": {
+				"id": "c564f9bd-8ba7-11e4-801f-0022156e8794",
+				"title": "png -- heap overflow for 32-bit builds",
+				"description": "\n\t<p>32-bit builds of PNG library are vulnerable to an unsigned\n\t  integer overflow that is triggered by a crafted wide\n\t  interlaced images.\n\t  Overflow results in a heap corruption that will crash the\n\t  application and may lead to the controlled overwrite of a\n\t  selected portions of process address space.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://codelabs.ru/security/vulns/analysis/libpng/2014-dec-libpng-1.6.15/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://tfpwn.com/files/libpng_heap_overflow_1.6.15.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c564f9bd-8ba7-11e4-801f-0022156e8794.html"
+					}
+				],
+				"published": "2015-01-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

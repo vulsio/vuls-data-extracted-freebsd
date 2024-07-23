@@ -2,192 +2,287 @@
 	"id": "cd81806c-26e7-4d4a-8425-02724a2f48af",
 	"advisories": [
 		{
-			"id": "cd81806c-26e7-4d4a-8425-02724a2f48af",
-			"title": "mozilla -- multiple vulnerabilities",
-			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2018-15/\">\n\t  <p>CVE-2018-12359: Buffer overflow using computed size of canvas element</p>\n\t  <p>CVE-2018-12360: Use-after-free when using focus()</p>\n\t  <p>CVE-2018-12361: Integer overflow in SwizzleData</p>\n\t  <p>CVE-2018-12358: Same-origin bypass using service worker and redirection</p>\n\t  <p>CVE-2018-12362: Integer overflow in SSSE3 scaler</p>\n\t  <p>CVE-2018-5156: Media recorder segmentation fault when track type is changed during capture</p>\n\t  <p>CVE-2018-12363: Use-after-free when appending DOM nodes</p>\n\t  <p>CVE-2018-12364: CSRF attacks through 307 redirects and NPAPI plugins</p>\n\t  <p>CVE-2018-12365: Compromised IPC child process can list local filenames</p>\n\t  <p>CVE-2018-12371: Integer overflow in Skia library during edge builder allocation</p>\n\t  <p>CVE-2018-12366: Invalid data handling during QCMS transformations</p>\n\t  <p>CVE-2018-12367: Timing attack mitigation of PerformanceNavigationTiming</p>\n\t  <p>CVE-2018-12368: No warning when opening executable SettingContent-ms files</p>\n\t  <p>CVE-2018-12369: WebExtension security permission checks bypassed by embedded experiments</p>\n\t  <p>CVE-2018-12370: SameSite cookie protections bypassed when exiting Reader View</p>\n\t  <p>CVE-2018-5186: Memory safety bugs fixed in Firefox 61</p>\n\t  <p>CVE-2018-5187: Memory safety bugs fixed in Firefox 60 and Firefox ESR 60.1</p>\n\t  <p>CVE-2018-5188: Memory safety bugs fixed in Firefox 60, Firefox ESR 60.1, and Firefox ESR 52.9</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-15/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-16/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-17/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cd81806c-26e7-4d4a-8425-02724a2f48af.html"
-				}
-			],
-			"published": "2018-06-26T00:00:00Z",
-			"modified": "2018-07-07T00:00:00Z"
+			"content": {
+				"id": "cd81806c-26e7-4d4a-8425-02724a2f48af",
+				"title": "mozilla -- multiple vulnerabilities",
+				"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2018-15/\">\n\t  <p>CVE-2018-12359: Buffer overflow using computed size of canvas element</p>\n\t  <p>CVE-2018-12360: Use-after-free when using focus()</p>\n\t  <p>CVE-2018-12361: Integer overflow in SwizzleData</p>\n\t  <p>CVE-2018-12358: Same-origin bypass using service worker and redirection</p>\n\t  <p>CVE-2018-12362: Integer overflow in SSSE3 scaler</p>\n\t  <p>CVE-2018-5156: Media recorder segmentation fault when track type is changed during capture</p>\n\t  <p>CVE-2018-12363: Use-after-free when appending DOM nodes</p>\n\t  <p>CVE-2018-12364: CSRF attacks through 307 redirects and NPAPI plugins</p>\n\t  <p>CVE-2018-12365: Compromised IPC child process can list local filenames</p>\n\t  <p>CVE-2018-12371: Integer overflow in Skia library during edge builder allocation</p>\n\t  <p>CVE-2018-12366: Invalid data handling during QCMS transformations</p>\n\t  <p>CVE-2018-12367: Timing attack mitigation of PerformanceNavigationTiming</p>\n\t  <p>CVE-2018-12368: No warning when opening executable SettingContent-ms files</p>\n\t  <p>CVE-2018-12369: WebExtension security permission checks bypassed by embedded experiments</p>\n\t  <p>CVE-2018-12370: SameSite cookie protections bypassed when exiting Reader View</p>\n\t  <p>CVE-2018-5186: Memory safety bugs fixed in Firefox 61</p>\n\t  <p>CVE-2018-5187: Memory safety bugs fixed in Firefox 60 and Firefox ESR 60.1</p>\n\t  <p>CVE-2018-5188: Memory safety bugs fixed in Firefox 60, Firefox ESR 60.1, and Firefox ESR 52.9</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-15/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-16/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/en-US/security/advisories/mfsa2018-17/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cd81806c-26e7-4d4a-8425-02724a2f48af.html"
+					}
+				],
+				"published": "2018-06-26T00:00:00Z",
+				"modified": "2018-07-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-12358",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12358"
-				}
+			"content": {
+				"id": "CVE-2018-12358",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12358"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12359",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12359"
-				}
+			"content": {
+				"id": "CVE-2018-12359",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12359"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12360",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12360"
-				}
+			"content": {
+				"id": "CVE-2018-12360",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12360"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12361",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12361"
-				}
+			"content": {
+				"id": "CVE-2018-12361",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12361"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12362",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12362"
-				}
+			"content": {
+				"id": "CVE-2018-12362",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12362"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12363",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12363"
-				}
+			"content": {
+				"id": "CVE-2018-12363",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12363"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12364",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12364"
-				}
+			"content": {
+				"id": "CVE-2018-12364",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12364"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12365",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12365"
-				}
+			"content": {
+				"id": "CVE-2018-12365",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12365"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12366",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12366"
-				}
+			"content": {
+				"id": "CVE-2018-12366",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12366"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12367",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12367"
-				}
+			"content": {
+				"id": "CVE-2018-12367",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12367"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12368",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12368"
-				}
+			"content": {
+				"id": "CVE-2018-12368",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12368"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12369",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12369"
-				}
+			"content": {
+				"id": "CVE-2018-12369",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12369"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12370",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12370"
-				}
+			"content": {
+				"id": "CVE-2018-12370",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12370"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-12371",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-12371"
-				}
+			"content": {
+				"id": "CVE-2018-12371",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-12371"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-5156",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5156"
-				}
+			"content": {
+				"id": "CVE-2018-5156",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-5156"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-5186",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5186"
-				}
+			"content": {
+				"id": "CVE-2018-5186",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-5186"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-5187",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5187"
-				}
+			"content": {
+				"id": "CVE-2018-5187",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-5187"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-5188",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-5188"
-				}
+			"content": {
+				"id": "CVE-2018-5188",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-5188"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

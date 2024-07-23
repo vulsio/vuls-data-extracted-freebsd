@@ -2,39 +2,49 @@
 	"id": "5fe7e27a-64cb-11d9-9e1e-c296ac722cb3",
 	"advisories": [
 		{
-			"id": "5fe7e27a-64cb-11d9-9e1e-c296ac722cb3",
-			"title": "squid -- denial of service with forged WCCP messages",
-			"description": "\n\t<p>The squid patches page notes:</p>\n\t<blockquote cite=\"http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-wccp_denial_of_service\">\n\t  <p>WCCP_I_SEE_YOU messages contain a 'number of caches'\n\t    field which should be between 1 and 32. Values outside\n\t    that range may crash Squid if WCCP is enabled, and if an\n\t    attacker can spoof UDP packets with the WCCP router's IP\n\t    address.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.squid-cache.org/Advisories/SQUID-2005_2.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-wccp_denial_of_service"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.squid-cache.org/bugs/show_bug.cgi?id=1190"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5fe7e27a-64cb-11d9-9e1e-c296ac722cb3.html"
-				}
-			],
-			"published": "2005-01-12T00:00:00Z",
-			"modified": "2005-01-22T00:00:00Z"
+			"content": {
+				"id": "5fe7e27a-64cb-11d9-9e1e-c296ac722cb3",
+				"title": "squid -- denial of service with forged WCCP messages",
+				"description": "\n\t<p>The squid patches page notes:</p>\n\t<blockquote cite=\"http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-wccp_denial_of_service\">\n\t  <p>WCCP_I_SEE_YOU messages contain a 'number of caches'\n\t    field which should be between 1 and 32. Values outside\n\t    that range may crash Squid if WCCP is enabled, and if an\n\t    attacker can spoof UDP packets with the WCCP router's IP\n\t    address.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.squid-cache.org/Advisories/SQUID-2005_2.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-wccp_denial_of_service"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.squid-cache.org/bugs/show_bug.cgi?id=1190"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5fe7e27a-64cb-11d9-9e1e-c296ac722cb3.html"
+					}
+				],
+				"published": "2005-01-12T00:00:00Z",
+				"modified": "2005-01-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0095",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0095"
-				}
+			"content": {
+				"id": "CVE-2005-0095",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0095"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

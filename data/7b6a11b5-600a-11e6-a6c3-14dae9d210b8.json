@@ -2,31 +2,41 @@
 	"id": "7b6a11b5-600a-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "7b6a11b5-600a-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- Incorrect argument validation in sysarch(2)",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A special combination of sysarch(2) arguments, specify\n\ta request to uninstall a set of descriptors from the LDT.\n\tThe start descriptor is cleared and the number of descriptors\n\tare provided. Due to lack of sufficient bounds checking\n\tduring argument validity verification, unbound zero'ing of\n\tthe process LDT and adjacent memory can be initiated from\n\tusermode.</p>\n\t<h1>Impact:</h1>\n\t<p>This vulnerability could cause the kernel to panic. In\n\taddition it is possible to perform a local Denial of Service\n\tagainst the system by unprivileged processes.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:15.sysarch.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/7b6a11b5-600a-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z",
-			"modified": "2016-10-25T00:00:00Z"
+			"content": {
+				"id": "7b6a11b5-600a-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- Incorrect argument validation in sysarch(2)",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A special combination of sysarch(2) arguments, specify\n\ta request to uninstall a set of descriptors from the LDT.\n\tThe start descriptor is cleared and the number of descriptors\n\tare provided. Due to lack of sufficient bounds checking\n\tduring argument validity verification, unbound zero'ing of\n\tthe process LDT and adjacent memory can be initiated from\n\tusermode.</p>\n\t<h1>Impact:</h1>\n\t<p>This vulnerability could cause the kernel to panic. In\n\taddition it is possible to perform a local Denial of Service\n\tagainst the system by unprivileged processes.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:15.sysarch.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7b6a11b5-600a-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z",
+				"modified": "2016-10-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-1885",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1885"
-				}
+			"content": {
+				"id": "CVE-2016-1885",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1885"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

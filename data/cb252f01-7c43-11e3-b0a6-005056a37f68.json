@@ -2,35 +2,45 @@
 	"id": "cb252f01-7c43-11e3-b0a6-005056a37f68",
 	"advisories": [
 		{
-			"id": "cb252f01-7c43-11e3-b0a6-005056a37f68",
-			"title": "bind -- denial of service vulnerability",
-			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01078/74/\">\n\t  <p>Because of a defect in handling queries for NSEC3-signed zones,\n\t    BIND can crash with an \"INSIST\" failure in name.c when processing\n\t    queries possessing certain properties. By exploiting this defect\n\t    an attacker deliberately constructing a query with the right\n\t    properties could achieve denial of service against an authoritative\n\t    nameserver serving NSEC3-signed zones.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01078/74/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:04.bind.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cb252f01-7c43-11e3-b0a6-005056a37f68.html"
-				}
-			],
-			"published": "2014-01-13T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "cb252f01-7c43-11e3-b0a6-005056a37f68",
+				"title": "bind -- denial of service vulnerability",
+				"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01078/74/\">\n\t  <p>Because of a defect in handling queries for NSEC3-signed zones,\n\t    BIND can crash with an \"INSIST\" failure in name.c when processing\n\t    queries possessing certain properties. By exploiting this defect\n\t    an attacker deliberately constructing a query with the right\n\t    properties could achieve denial of service against an authoritative\n\t    nameserver serving NSEC3-signed zones.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01078/74/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:04.bind.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cb252f01-7c43-11e3-b0a6-005056a37f68.html"
+					}
+				],
+				"published": "2014-01-13T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-0591",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0591"
-				}
+			"content": {
+				"id": "CVE-2014-0591",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-0591"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

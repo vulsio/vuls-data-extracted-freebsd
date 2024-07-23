@@ -2,30 +2,40 @@
 	"id": "3310014a-5ef9-11ed-812b-206a8a720317",
 	"advisories": [
 		{
-			"id": "3310014a-5ef9-11ed-812b-206a8a720317",
-			"title": "sudo -- Potential out-of-bounds write for small passwords",
-			"description": "\n\t<p>SO-AND-SO reports:</p>\n\t<blockquote cite=\"INSERT URL HERE\">\n\t  <p>Sudo 1.8.0 through 1.9.12, with the crypt() password backend,\n\t     contains a plugins/sudoers/auth/passwd.c array-out-of-bounds\n\t     error that can result in a heap-based buffer over-read. This\n\t     can be triggered by arbitrary local users with access to sudo\n\t     by entering a password of seven characters or fewer. The impact\n\t     could vary depending on the system libraries, compiler,\n\t     and processor architecture.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43995"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3310014a-5ef9-11ed-812b-206a8a720317.html"
-				}
-			],
-			"published": "2022-11-07T00:00:00Z"
+			"content": {
+				"id": "3310014a-5ef9-11ed-812b-206a8a720317",
+				"title": "sudo -- Potential out-of-bounds write for small passwords",
+				"description": "\n\t<p>SO-AND-SO reports:</p>\n\t<blockquote cite=\"INSERT URL HERE\">\n\t  <p>Sudo 1.8.0 through 1.9.12, with the crypt() password backend,\n\t     contains a plugins/sudoers/auth/passwd.c array-out-of-bounds\n\t     error that can result in a heap-based buffer over-read. This\n\t     can be triggered by arbitrary local users with access to sudo\n\t     by entering a password of seven characters or fewer. The impact\n\t     could vary depending on the system libraries, compiler,\n\t     and processor architecture.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43995"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3310014a-5ef9-11ed-812b-206a8a720317.html"
+					}
+				],
+				"published": "2022-11-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-43995",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-43995"
-				}
+			"content": {
+				"id": "CVE-2022-43995",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-43995"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

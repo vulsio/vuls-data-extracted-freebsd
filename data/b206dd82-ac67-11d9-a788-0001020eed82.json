@@ -2,39 +2,49 @@
 	"id": "b206dd82-ac67-11d9-a788-0001020eed82",
 	"advisories": [
 		{
-			"id": "b206dd82-ac67-11d9-a788-0001020eed82",
-			"title": "openoffice -- DOC document heap overflow vulnerability",
-			"description": "\n\t<p>AD-LAB reports that a heap-based buffer overflow\n\t  vulnerability exists in OpenOffice's handling of DOC\n\t  documents.  When reading a DOC document 16 bit from a 32 bit\n\t  integer is used for memory allocation, but the full 32 bit\n\t  is used for further processing of the document.  This can\n\t  allow an attacker to crash OpenOffice, or potentially\n\t  execute arbitrary code as the user running OpenOffice, by\n\t  tricking an user into opening a specially crafted DOC\n\t  document.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111325305109137"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openoffice.org/issues/show_bug.cgi?id=46388"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/13092"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b206dd82-ac67-11d9-a788-0001020eed82.html"
-				}
-			],
-			"published": "2005-04-13T00:00:00Z",
-			"modified": "2005-04-20T00:00:00Z"
+			"content": {
+				"id": "b206dd82-ac67-11d9-a788-0001020eed82",
+				"title": "openoffice -- DOC document heap overflow vulnerability",
+				"description": "\n\t<p>AD-LAB reports that a heap-based buffer overflow\n\t  vulnerability exists in OpenOffice's handling of DOC\n\t  documents.  When reading a DOC document 16 bit from a 32 bit\n\t  integer is used for memory allocation, but the full 32 bit\n\t  is used for further processing of the document.  This can\n\t  allow an attacker to crash OpenOffice, or potentially\n\t  execute arbitrary code as the user running OpenOffice, by\n\t  tricking an user into opening a specially crafted DOC\n\t  document.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111325305109137"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openoffice.org/issues/show_bug.cgi?id=46388"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/13092"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b206dd82-ac67-11d9-a788-0001020eed82.html"
+					}
+				],
+				"published": "2005-04-13T00:00:00Z",
+				"modified": "2005-04-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0941",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0941"
-				}
+			"content": {
+				"id": "CVE-2005-0941",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0941"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

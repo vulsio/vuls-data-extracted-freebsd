@@ -2,30 +2,40 @@
 	"id": "890b6b22-70fa-11e4-91ae-5453ed2e2b49",
 	"advisories": [
 		{
-			"id": "890b6b22-70fa-11e4-91ae-5453ed2e2b49",
-			"title": "kwebkitpart, kde-runtime -- insufficient input validation",
-			"description": "\n\t<p>Albert Aastals Cid reports:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20141113-1.txt\">\n\t  <p>kwebkitpart and the bookmarks:// io slave were not sanitizing\n\t    input correctly allowing to some javascript being executed on the\n\t    context of the referenced hostname.</p>\n\t  <p>Whilst in most cases, the JavaScript will be executed in an\n\t    untrusted context, with the bookmarks IO slave, it will be executed\n\t    in the context of the referenced hostname. It should however be\n\t    noted that KDE mitigates this risk by attempting to ensure that\n\t    such URLs cannot be embedded directly into Internet hosted\n\t    content.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kde.org/info/security/advisory-20141113-1.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/890b6b22-70fa-11e4-91ae-5453ed2e2b49.html"
-				}
-			],
-			"published": "2014-11-20T00:00:00Z"
+			"content": {
+				"id": "890b6b22-70fa-11e4-91ae-5453ed2e2b49",
+				"title": "kwebkitpart, kde-runtime -- insufficient input validation",
+				"description": "\n\t<p>Albert Aastals Cid reports:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20141113-1.txt\">\n\t  <p>kwebkitpart and the bookmarks:// io slave were not sanitizing\n\t    input correctly allowing to some javascript being executed on the\n\t    context of the referenced hostname.</p>\n\t  <p>Whilst in most cases, the JavaScript will be executed in an\n\t    untrusted context, with the bookmarks IO slave, it will be executed\n\t    in the context of the referenced hostname. It should however be\n\t    noted that KDE mitigates this risk by attempting to ensure that\n\t    such URLs cannot be embedded directly into Internet hosted\n\t    content.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kde.org/info/security/advisory-20141113-1.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/890b6b22-70fa-11e4-91ae-5453ed2e2b49.html"
+					}
+				],
+				"published": "2014-11-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-8600",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8600"
-				}
+			"content": {
+				"id": "CVE-2014-8600",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-8600"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

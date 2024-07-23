@@ -2,38 +2,48 @@
 	"id": "cbfde1cd-87eb-11d9-aa18-0001020eed82",
 	"advisories": [
 		{
-			"id": "cbfde1cd-87eb-11d9-aa18-0001020eed82",
-			"title": "mozilla -- arbitrary code execution vulnerability",
-			"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-27.html\">\n\t  <p>Plugins (such as flash) can be used to load privileged\n\t    content into a frame. Once loaded various spoofs can be\n\t    applied to get the user to interact with the privileged\n\t    content. Michael Krax's \"Fireflashing\" example\n\t    demonstrates that an attacker can open about:config in a\n\t    frame, hide it with an opacity setting, and if the\n\t    attacker can get the victim to click at a particular spot\n\t    (design some kind of simple game) you could toggle boolean\n\t    preferences, some of which would make further attacks\n\t    easier.</p>\n\t  <p>The \"firescrolling\" example demonstrates arbitrary code\n\t    execution (in this case downloading a file) by convincing\n\t    the user to scroll twice.</p>\n\t</blockquote>\n\t<p><strong>Workaround:</strong> Disable JavaScript.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mikx.de/fireflashing/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mikx.de/firescrolling/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/mfsa2005-27.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cbfde1cd-87eb-11d9-aa18-0001020eed82.html"
-				}
-			],
-			"published": "2005-02-26T00:00:00Z"
+			"content": {
+				"id": "cbfde1cd-87eb-11d9-aa18-0001020eed82",
+				"title": "mozilla -- arbitrary code execution vulnerability",
+				"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-27.html\">\n\t  <p>Plugins (such as flash) can be used to load privileged\n\t    content into a frame. Once loaded various spoofs can be\n\t    applied to get the user to interact with the privileged\n\t    content. Michael Krax's \"Fireflashing\" example\n\t    demonstrates that an attacker can open about:config in a\n\t    frame, hide it with an opacity setting, and if the\n\t    attacker can get the victim to click at a particular spot\n\t    (design some kind of simple game) you could toggle boolean\n\t    preferences, some of which would make further attacks\n\t    easier.</p>\n\t  <p>The \"firescrolling\" example demonstrates arbitrary code\n\t    execution (in this case downloading a file) by convincing\n\t    the user to scroll twice.</p>\n\t</blockquote>\n\t<p><strong>Workaround:</strong> Disable JavaScript.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mikx.de/fireflashing/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mikx.de/firescrolling/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/mfsa2005-27.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cbfde1cd-87eb-11d9-aa18-0001020eed82.html"
+					}
+				],
+				"published": "2005-02-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0527",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0527"
-				}
+			"content": {
+				"id": "CVE-2005-0527",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0527"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

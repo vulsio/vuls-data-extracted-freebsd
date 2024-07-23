@@ -2,20 +2,25 @@
 	"id": "29b7f0be-1fb7-11eb-b9d4-001999f8d30b",
 	"advisories": [
 		{
-			"id": "29b7f0be-1fb7-11eb-b9d4-001999f8d30b",
-			"title": "asterisk -- Outbound INVITE loop on challenge with different nonce",
-			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>If Asterisk is challenged on an outbound INVITE and\n\t  the nonce is changed in each response, Asterisk will\n\t  continually send INVITEs in a loop. This causes Asterisk\n\t  to consume more and more memory since the transaction\n\t  will never terminate (even if the call is hung up),\n\t  ultimately leading to a restart or shutdown of Asterisk.\n\t  Outbound authentication must be configured on the endpoint\n\t  for this to occur.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://downloads.asterisk.org/pub/security/AST-2020-002.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/29b7f0be-1fb7-11eb-b9d4-001999f8d30b.html"
-				}
-			],
-			"published": "2020-11-05T00:00:00Z"
+			"content": {
+				"id": "29b7f0be-1fb7-11eb-b9d4-001999f8d30b",
+				"title": "asterisk -- Outbound INVITE loop on challenge with different nonce",
+				"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories\">\n\t  <p>If Asterisk is challenged on an outbound INVITE and\n\t  the nonce is changed in each response, Asterisk will\n\t  continually send INVITEs in a loop. This causes Asterisk\n\t  to consume more and more memory since the transaction\n\t  will never terminate (even if the call is hung up),\n\t  ultimately leading to a restart or shutdown of Asterisk.\n\t  Outbound authentication must be configured on the endpoint\n\t  for this to occur.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://downloads.asterisk.org/pub/security/AST-2020-002.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/29b7f0be-1fb7-11eb-b9d4-001999f8d30b.html"
+					}
+				],
+				"published": "2020-11-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

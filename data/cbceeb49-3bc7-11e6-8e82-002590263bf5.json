@@ -2,47 +2,57 @@
 	"id": "cbceeb49-3bc7-11e6-8e82-002590263bf5",
 	"advisories": [
 		{
-			"id": "cbceeb49-3bc7-11e6-8e82-002590263bf5",
-			"title": "Apache Commons FileUpload -- denial of service (DoS) vulnerability",
-			"description": "\n\t<p>Mark Thomas reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/tomcat-announce/201606.mbox/%3C6223ece6-2b41-ef4f-22f9-d3481e492832%40apache.org%3E\">\n\t  <p>CVE-2016-3092 is a denial of service vulnerability that has been\n\t    corrected in the Apache Commons FileUpload component. It occurred\n\t    when the length of the multipart boundary was just below the size of\n\t    the buffer (4096 bytes) used to read the uploaded file. This caused\n\t    the file upload process to take several orders of magnitude longer\n\t    than if the boundary length was the typical tens of bytes.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://jvn.jp/en/jp/JVN89379547/index.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://mail-archives.apache.org/mod_mbox/tomcat-announce/201606.mbox/%3C6223ece6-2b41-ef4f-22f9-d3481e492832%40apache.org%3E"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://tomcat.apache.org/security-7.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://tomcat.apache.org/security-8.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209669"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cbceeb49-3bc7-11e6-8e82-002590263bf5.html"
-				}
-			],
-			"published": "2016-06-26T00:00:00Z",
-			"modified": "2017-08-10T00:00:00Z"
+			"content": {
+				"id": "cbceeb49-3bc7-11e6-8e82-002590263bf5",
+				"title": "Apache Commons FileUpload -- denial of service (DoS) vulnerability",
+				"description": "\n\t<p>Mark Thomas reports:</p>\n\t<blockquote cite=\"http://mail-archives.apache.org/mod_mbox/tomcat-announce/201606.mbox/%3C6223ece6-2b41-ef4f-22f9-d3481e492832%40apache.org%3E\">\n\t  <p>CVE-2016-3092 is a denial of service vulnerability that has been\n\t    corrected in the Apache Commons FileUpload component. It occurred\n\t    when the length of the multipart boundary was just below the size of\n\t    the buffer (4096 bytes) used to read the uploaded file. This caused\n\t    the file upload process to take several orders of magnitude longer\n\t    than if the boundary length was the typical tens of bytes.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://jvn.jp/en/jp/JVN89379547/index.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://mail-archives.apache.org/mod_mbox/tomcat-announce/201606.mbox/%3C6223ece6-2b41-ef4f-22f9-d3481e492832%40apache.org%3E"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://tomcat.apache.org/security-7.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://tomcat.apache.org/security-8.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209669"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cbceeb49-3bc7-11e6-8e82-002590263bf5.html"
+					}
+				],
+				"published": "2016-06-26T00:00:00Z",
+				"modified": "2017-08-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-3092",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3092"
-				}
+			"content": {
+				"id": "CVE-2016-3092",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-3092"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

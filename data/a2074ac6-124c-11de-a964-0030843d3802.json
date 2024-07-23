@@ -2,30 +2,40 @@
 	"id": "a2074ac6-124c-11de-a964-0030843d3802",
 	"advisories": [
 		{
-			"id": "a2074ac6-124c-11de-a964-0030843d3802",
-			"title": "php-mbstring -- php mbstring buffer overflow vulnerability",
-			"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/32948\">\n\t  <p>PHP is prone to a buffer-overflow vulnerability because it fails to\n\t    perform boundary checks before copying user-supplied data to\n\t    insufficiently sized memory buffers. The issue affects the 'mbstring'\n\t    extension included in the standard distribution.</p>\n\t  <p>An attacker can exploit this issue to execute arbitrary machine\n\t    code in the context of the affected webserver. Failed exploit attempts\n\t    will likely crash the webserver, denying service to legitimate\n\t    users.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/32948"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a2074ac6-124c-11de-a964-0030843d3802.html"
-				}
-			],
-			"published": "2009-03-16T00:00:00Z"
+			"content": {
+				"id": "a2074ac6-124c-11de-a964-0030843d3802",
+				"title": "php-mbstring -- php mbstring buffer overflow vulnerability",
+				"description": "\n\t<p>SecurityFocus reports:</p>\n\t<blockquote cite=\"http://www.securityfocus.com/bid/32948\">\n\t  <p>PHP is prone to a buffer-overflow vulnerability because it fails to\n\t    perform boundary checks before copying user-supplied data to\n\t    insufficiently sized memory buffers. The issue affects the 'mbstring'\n\t    extension included in the standard distribution.</p>\n\t  <p>An attacker can exploit this issue to execute arbitrary machine\n\t    code in the context of the affected webserver. Failed exploit attempts\n\t    will likely crash the webserver, denying service to legitimate\n\t    users.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/32948"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a2074ac6-124c-11de-a964-0030843d3802.html"
+					}
+				],
+				"published": "2009-03-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2008-5557",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2008-5557"
-				}
+			"content": {
+				"id": "CVE-2008-5557",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2008-5557"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

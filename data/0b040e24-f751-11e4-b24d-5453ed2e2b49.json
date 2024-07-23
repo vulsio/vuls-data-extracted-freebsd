@@ -2,30 +2,40 @@
 	"id": "0b040e24-f751-11e4-b24d-5453ed2e2b49",
 	"advisories": [
 		{
-			"id": "0b040e24-f751-11e4-b24d-5453ed2e2b49",
-			"title": "libssh -- null pointer dereference",
-			"description": "\n\t<p>Andreas Schneider reports:</p>\n\t<blockquote cite=\"https://www.libssh.org/2015/04/30/libssh-0-6-5-security-and-bugfix-release/\">\n\t  <p>libssh versions 0.5.1 and above have a logical error in the\n\t    handling of a SSH_MSG_NEWKEYS and SSH_MSG_KEXDH_REPLY package. A\n\t    detected error did not set the session into the error state\n\t    correctly and further processed the packet which leads to a null\n\t    pointer dereference. This is the packet after the initial key\n\t    exchange and doesn’t require authentication.</p>\n\t  <p>This could be used for a Denial of Service (DoS) attack.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.libssh.org/2015/04/30/libssh-0-6-5-security-and-bugfix-release"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0b040e24-f751-11e4-b24d-5453ed2e2b49.html"
-				}
-			],
-			"published": "2015-05-10T00:00:00Z"
+			"content": {
+				"id": "0b040e24-f751-11e4-b24d-5453ed2e2b49",
+				"title": "libssh -- null pointer dereference",
+				"description": "\n\t<p>Andreas Schneider reports:</p>\n\t<blockquote cite=\"https://www.libssh.org/2015/04/30/libssh-0-6-5-security-and-bugfix-release/\">\n\t  <p>libssh versions 0.5.1 and above have a logical error in the\n\t    handling of a SSH_MSG_NEWKEYS and SSH_MSG_KEXDH_REPLY package. A\n\t    detected error did not set the session into the error state\n\t    correctly and further processed the packet which leads to a null\n\t    pointer dereference. This is the packet after the initial key\n\t    exchange and doesn’t require authentication.</p>\n\t  <p>This could be used for a Denial of Service (DoS) attack.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.libssh.org/2015/04/30/libssh-0-6-5-security-and-bugfix-release"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0b040e24-f751-11e4-b24d-5453ed2e2b49.html"
+					}
+				],
+				"published": "2015-05-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3146",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3146"
-				}
+			"content": {
+				"id": "CVE-2015-3146",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3146"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

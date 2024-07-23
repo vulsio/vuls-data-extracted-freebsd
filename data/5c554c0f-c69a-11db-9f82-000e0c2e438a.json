@@ -2,31 +2,41 @@
 	"id": "5c554c0f-c69a-11db-9f82-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "5c554c0f-c69a-11db-9f82-000e0c2e438a",
-			"title": "FreeBSD -- Kernel memory disclosure in firewire(4)",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>In the FW_GCROM ioctl, a signed integer comparison is used\n\t  instead of an unsigned integer comparison when computing the\n\t  length of a buffer to be copied from the kernel into the\n\t  calling application.</p>\n\t<h1>Impact:</h1>\n\t<p>A user in the \"operator\" group can read the contents of\n\t  kernel memory.  Such memory might contain sensitive\n\t  information, such as portions of the file cache or terminal\n\t  buffers.  This information might be directly useful, or it\n\t  might be leveraged to obtain elevated privileges in some way;\n\t  for example, a terminal buffer might include a user-entered\n\t  password.</p>\n\t<h1>Workaround:</h1>\n\t<p>No workaround is available, but systems without IEEE 1394\n\t  (\"FireWire\") interfaces are not vulnerable.  (Note that\n\t  systems with IEEE 1394 interfaces are affected regardless of\n\t  whether any devices are attached.)</p>\n\t<p>Note also that FreeBSD does not have any non-root users in\n\t  the \"operator\" group by default; systems on which no users\n\t  have been added to this group are therefore also not\n\t  vulnerable.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:25.kmem.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5c554c0f-c69a-11db-9f82-000e0c2e438a.html"
-				}
-			],
-			"published": "2007-02-27T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "5c554c0f-c69a-11db-9f82-000e0c2e438a",
+				"title": "FreeBSD -- Kernel memory disclosure in firewire(4)",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>In the FW_GCROM ioctl, a signed integer comparison is used\n\t  instead of an unsigned integer comparison when computing the\n\t  length of a buffer to be copied from the kernel into the\n\t  calling application.</p>\n\t<h1>Impact:</h1>\n\t<p>A user in the \"operator\" group can read the contents of\n\t  kernel memory.  Such memory might contain sensitive\n\t  information, such as portions of the file cache or terminal\n\t  buffers.  This information might be directly useful, or it\n\t  might be leveraged to obtain elevated privileges in some way;\n\t  for example, a terminal buffer might include a user-entered\n\t  password.</p>\n\t<h1>Workaround:</h1>\n\t<p>No workaround is available, but systems without IEEE 1394\n\t  (\"FireWire\") interfaces are not vulnerable.  (Note that\n\t  systems with IEEE 1394 interfaces are affected regardless of\n\t  whether any devices are attached.)</p>\n\t<p>Note also that FreeBSD does not have any non-root users in\n\t  the \"operator\" group by default; systems on which no users\n\t  have been added to this group are therefore also not\n\t  vulnerable.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:25.kmem.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5c554c0f-c69a-11db-9f82-000e0c2e438a.html"
+					}
+				],
+				"published": "2007-02-27T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-6013",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-6013"
-				}
+			"content": {
+				"id": "CVE-2006-6013",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-6013"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

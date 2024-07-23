@@ -2,56 +2,76 @@
 	"id": "37a365ed-1269-11de-a964-0030843d3802",
 	"advisories": [
 		{
-			"id": "37a365ed-1269-11de-a964-0030843d3802",
-			"title": "gstreamer-plugins-good -- multiple memory overflows",
-			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/33650/\">\n\t  <p>Tobias Klein has reported some vulnerabilities in GStreamer Good\n\t    Plug-ins, which can potentially be exploited by malicious people to\n\t    compromise a vulnerable system.</p>\n\t  <p>A boundary error occurs within the \"qtdemux_parse_samples()\"\n\t    function in gst/gtdemux/qtdemux.c when performing QuickTime \"ctts\"\n\t    Atom parsing. This can be exploited to cause a heap-based buffer\n\t    overflow via a specially crafted QuickTime media file.</p>\n\t  <p>An array indexing error exists in the \"qtdemux_parse_samples()\"\n\t    function in gst/gtdemux/qtdemux.c when performing QuickTime \"stss\"\n\t    Atom parsing. This can be exploited to corrupt memory via a specially\n\t    crafted QuickTime media file.</p>\n\t  <p>A boundary error occurs within the \"qtdemux_parse_samples()\"\n\t    function in gst/gtdemux/qtdemux.c when performing QuickTime \"stts\"\n\t    Atom parsing. This can be exploited to cause a heap-based buffer\n\t    overflow via a specially crafted QuickTime media file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://gstreamer.freedesktop.org/releases/gst-plugins-good/0.10.12.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/33650/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://trapkit.de/advisories/TKADV2009-003.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/37a365ed-1269-11de-a964-0030843d3802.html"
-				}
-			],
-			"published": "2009-03-16T00:00:00Z"
+			"content": {
+				"id": "37a365ed-1269-11de-a964-0030843d3802",
+				"title": "gstreamer-plugins-good -- multiple memory overflows",
+				"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/33650/\">\n\t  <p>Tobias Klein has reported some vulnerabilities in GStreamer Good\n\t    Plug-ins, which can potentially be exploited by malicious people to\n\t    compromise a vulnerable system.</p>\n\t  <p>A boundary error occurs within the \"qtdemux_parse_samples()\"\n\t    function in gst/gtdemux/qtdemux.c when performing QuickTime \"ctts\"\n\t    Atom parsing. This can be exploited to cause a heap-based buffer\n\t    overflow via a specially crafted QuickTime media file.</p>\n\t  <p>An array indexing error exists in the \"qtdemux_parse_samples()\"\n\t    function in gst/gtdemux/qtdemux.c when performing QuickTime \"stss\"\n\t    Atom parsing. This can be exploited to corrupt memory via a specially\n\t    crafted QuickTime media file.</p>\n\t  <p>A boundary error occurs within the \"qtdemux_parse_samples()\"\n\t    function in gst/gtdemux/qtdemux.c when performing QuickTime \"stts\"\n\t    Atom parsing. This can be exploited to cause a heap-based buffer\n\t    overflow via a specially crafted QuickTime media file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://gstreamer.freedesktop.org/releases/gst-plugins-good/0.10.12.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/33650/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://trapkit.de/advisories/TKADV2009-003.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/37a365ed-1269-11de-a964-0030843d3802.html"
+					}
+				],
+				"published": "2009-03-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2009-0386",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0386"
-				}
+			"content": {
+				"id": "CVE-2009-0386",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2009-0386"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2009-0387",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0387"
-				}
+			"content": {
+				"id": "CVE-2009-0387",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2009-0387"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2009-0397",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2009-0397"
-				}
+			"content": {
+				"id": "CVE-2009-0397",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2009-0397"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

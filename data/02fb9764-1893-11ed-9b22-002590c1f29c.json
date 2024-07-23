@@ -2,30 +2,40 @@
 	"id": "02fb9764-1893-11ed-9b22-002590c1f29c",
 	"advisories": [
 		{
-			"id": "02fb9764-1893-11ed-9b22-002590c1f29c",
-			"title": "FreeBSD -- Memory disclosure by stale virtual memory mapping",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A particular case of memory sharing is mishandled in the virtual\n\tmemory system.  This is very similar to SA-21:08.vm, but with a\n\tdifferent root cause.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged local user process can maintain a mapping of a page\n\tafter it is freed, allowing that process to read private data\n\tbelonging to other processes or the kernel.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-22:11.vm.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/02fb9764-1893-11ed-9b22-002590c1f29c.html"
-				}
-			],
-			"published": "2022-08-10T00:00:00Z"
+			"content": {
+				"id": "02fb9764-1893-11ed-9b22-002590c1f29c",
+				"title": "FreeBSD -- Memory disclosure by stale virtual memory mapping",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A particular case of memory sharing is mishandled in the virtual\n\tmemory system.  This is very similar to SA-21:08.vm, but with a\n\tdifferent root cause.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged local user process can maintain a mapping of a page\n\tafter it is freed, allowing that process to read private data\n\tbelonging to other processes or the kernel.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-22:11.vm.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/02fb9764-1893-11ed-9b22-002590c1f29c.html"
+					}
+				],
+				"published": "2022-08-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-23091",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23091"
-				}
+			"content": {
+				"id": "CVE-2022-23091",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-23091"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

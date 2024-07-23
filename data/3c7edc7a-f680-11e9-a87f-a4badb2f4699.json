@@ -2,39 +2,54 @@
 	"id": "3c7edc7a-f680-11e9-a87f-a4badb2f4699",
 	"advisories": [
 		{
-			"id": "3c7edc7a-f680-11e9-a87f-a4badb2f4699",
-			"title": "FreeBSD -- Multiple vulnerabilities in bzip2",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The decompressor used in bzip2 contains a bug which can\n\tlead to an out-of-bounds write when processing a specially\n\tcrafted bzip2(1) file.</p>\n\t<p>bzip2recover contains a heap use-after-free bug which\n\tcan be triggered when processing a specially crafted bzip2(1)\n\tfile.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can cause maliciously crafted input to\n\tbe processed may trigger either of these bugs. The bzip2recover\n\tbug may cause a crash, permitting a denial-of-service. The\n\tbzip2 decompressor bug could potentially be exploited to\n\texecute arbitrary code.</p>\n\t<p>Note that some utilities, including the tar(1) archiver\n\tand the bspatch(1) binary patching utility (used in portsnap(8)\n\tand freebsd-update(8)) decompress bzip2(1)-compressed data\n\tinternally; system administrators should assume that their\n\tsystems will at some point decompress bzip2(1)-compressed\n\tdata even if they never explicitly invoke the bunzip2(1)\n\tutility.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:18.bzip2.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3c7edc7a-f680-11e9-a87f-a4badb2f4699.html"
-				}
-			],
-			"published": "2019-10-24T00:00:00Z"
+			"content": {
+				"id": "3c7edc7a-f680-11e9-a87f-a4badb2f4699",
+				"title": "FreeBSD -- Multiple vulnerabilities in bzip2",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The decompressor used in bzip2 contains a bug which can\n\tlead to an out-of-bounds write when processing a specially\n\tcrafted bzip2(1) file.</p>\n\t<p>bzip2recover contains a heap use-after-free bug which\n\tcan be triggered when processing a specially crafted bzip2(1)\n\tfile.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can cause maliciously crafted input to\n\tbe processed may trigger either of these bugs. The bzip2recover\n\tbug may cause a crash, permitting a denial-of-service. The\n\tbzip2 decompressor bug could potentially be exploited to\n\texecute arbitrary code.</p>\n\t<p>Note that some utilities, including the tar(1) archiver\n\tand the bspatch(1) binary patching utility (used in portsnap(8)\n\tand freebsd-update(8)) decompress bzip2(1)-compressed data\n\tinternally; system administrators should assume that their\n\tsystems will at some point decompress bzip2(1)-compressed\n\tdata even if they never explicitly invoke the bunzip2(1)\n\tutility.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:18.bzip2.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3c7edc7a-f680-11e9-a87f-a4badb2f4699.html"
+					}
+				],
+				"published": "2019-10-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-3189",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-3189"
-				}
+			"content": {
+				"id": "CVE-2016-3189",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-3189"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-1290",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-1290"
-				}
+			"content": {
+				"id": "CVE-2019-1290",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-1290"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

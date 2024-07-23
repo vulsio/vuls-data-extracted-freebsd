@@ -2,61 +2,86 @@
 	"id": "30704aba-1da4-11e8-b6aa-4ccc6adda413",
 	"advisories": [
 		{
-			"id": "30704aba-1da4-11e8-b6aa-4ccc6adda413",
-			"title": "libsndfile -- out-of-bounds reads",
-			"description": "\n\t<p>Xin-Jiang on Github reports:</p>\n\t<blockquote cite=\"https://github.com/erikd/libsndfile/issues/317\">\n\t  <p>CVE-2017-14245 (Medium): An out of bounds read in the function\n\t    d2alaw_array() in alaw.c of libsndfile 1.0.28 may lead to a remote\n\t    DoS attack or information disclosure, related to mishandling of\n\t    the NAN and INFINITY floating-point values.</p>\n\t  <p>CVE-2017-14246 (Medium): An out of bounds read in the function\n\t    d2ulaw_array() in ulaw.c of libsndfile 1.0.28 may lead to a remote\n\t    DoS attack or information disclosure, related to mishandling of the\n\t    NAN and INFINITY floating-point values.</p>\n\t</blockquote>\n\t<p>my123px on Github reports:</p>\n\t<blockquote cite=\"https://github.com/erikd/libsndfile/issues/344\">\n\t  <p>CVE-2017-17456 (Medium): The function d2alaw_array() in alaw.c of\n\t    libsndfile 1.0.29pre1 may lead to a remote DoS attack (SEGV on unknown\n\t    address 0x000000000000), a different vulnerability than CVE-2017-14245.</p>\n\t  <p>CVE-2017-17457 (Medium): The function d2ulaw_array() in ulaw.c of\n\t    libsndfile 1.0.29pre1 may lead to a remote DoS attack (SEGV on unknown\n\t    address 0x000000000000), a different vulnerability than CVE-2017-14246.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/erikd/libsndfile/issues/317"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/erikd/libsndfile/issues/344"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/30704aba-1da4-11e8-b6aa-4ccc6adda413.html"
-				}
-			],
-			"published": "2018-03-01T00:00:00Z"
+			"content": {
+				"id": "30704aba-1da4-11e8-b6aa-4ccc6adda413",
+				"title": "libsndfile -- out-of-bounds reads",
+				"description": "\n\t<p>Xin-Jiang on Github reports:</p>\n\t<blockquote cite=\"https://github.com/erikd/libsndfile/issues/317\">\n\t  <p>CVE-2017-14245 (Medium): An out of bounds read in the function\n\t    d2alaw_array() in alaw.c of libsndfile 1.0.28 may lead to a remote\n\t    DoS attack or information disclosure, related to mishandling of\n\t    the NAN and INFINITY floating-point values.</p>\n\t  <p>CVE-2017-14246 (Medium): An out of bounds read in the function\n\t    d2ulaw_array() in ulaw.c of libsndfile 1.0.28 may lead to a remote\n\t    DoS attack or information disclosure, related to mishandling of the\n\t    NAN and INFINITY floating-point values.</p>\n\t</blockquote>\n\t<p>my123px on Github reports:</p>\n\t<blockquote cite=\"https://github.com/erikd/libsndfile/issues/344\">\n\t  <p>CVE-2017-17456 (Medium): The function d2alaw_array() in alaw.c of\n\t    libsndfile 1.0.29pre1 may lead to a remote DoS attack (SEGV on unknown\n\t    address 0x000000000000), a different vulnerability than CVE-2017-14245.</p>\n\t  <p>CVE-2017-17457 (Medium): The function d2ulaw_array() in ulaw.c of\n\t    libsndfile 1.0.29pre1 may lead to a remote DoS attack (SEGV on unknown\n\t    address 0x000000000000), a different vulnerability than CVE-2017-14246.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/erikd/libsndfile/issues/317"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/erikd/libsndfile/issues/344"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/30704aba-1da4-11e8-b6aa-4ccc6adda413.html"
+					}
+				],
+				"published": "2018-03-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-14245",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14245"
-				}
+			"content": {
+				"id": "CVE-2017-14245",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-14245"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-14246",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-14246"
-				}
+			"content": {
+				"id": "CVE-2017-14246",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-14246"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-17456",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-17456"
-				}
+			"content": {
+				"id": "CVE-2017-17456",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-17456"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-17457",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-17457"
-				}
+			"content": {
+				"id": "CVE-2017-17457",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-17457"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,47 +2,62 @@
 	"id": "bcbd3fe0-2b46-11e6-ae88-002590263bf5",
 	"advisories": [
 		{
-			"id": "bcbd3fe0-2b46-11e6-ae88-002590263bf5",
-			"title": "openafs -- multiple vulnerabilities",
-			"description": "\n\t<p>The OpenAFS development team reports:</p>\n\t<blockquote cite=\"http://www.openafs.org/pages/security/OPENAFS-SA-2016-001.txt\">\n\t  <p>Foreign users can bypass access controls to create groups as\n\t    system:administrators, including in the user namespace and the\n\t    system: namespace.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.openafs.org/pages/security/OPENAFS-SA-2016-002.txt\">\n\t  <p>The contents of uninitialized memory are sent on the wire when\n\t    clients perform certain RPCs.  Depending on the RPC, the information\n\t    leaked may come from kernel memory or userspace.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openafs.org/pages/security/OPENAFS-SA-2016-001.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openafs.org/pages/security/OPENAFS-SA-2016-002.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209534"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bcbd3fe0-2b46-11e6-ae88-002590263bf5.html"
-				}
-			],
-			"published": "2016-06-05T00:00:00Z"
+			"content": {
+				"id": "bcbd3fe0-2b46-11e6-ae88-002590263bf5",
+				"title": "openafs -- multiple vulnerabilities",
+				"description": "\n\t<p>The OpenAFS development team reports:</p>\n\t<blockquote cite=\"http://www.openafs.org/pages/security/OPENAFS-SA-2016-001.txt\">\n\t  <p>Foreign users can bypass access controls to create groups as\n\t    system:administrators, including in the user namespace and the\n\t    system: namespace.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.openafs.org/pages/security/OPENAFS-SA-2016-002.txt\">\n\t  <p>The contents of uninitialized memory are sent on the wire when\n\t    clients perform certain RPCs.  Depending on the RPC, the information\n\t    leaked may come from kernel memory or userspace.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openafs.org/pages/security/OPENAFS-SA-2016-001.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openafs.org/pages/security/OPENAFS-SA-2016-002.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=209534"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bcbd3fe0-2b46-11e6-ae88-002590263bf5.html"
+					}
+				],
+				"published": "2016-06-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-2860",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2860"
-				}
+			"content": {
+				"id": "CVE-2016-2860",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2860"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-4536",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-4536"
-				}
+			"content": {
+				"id": "CVE-2016-4536",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-4536"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

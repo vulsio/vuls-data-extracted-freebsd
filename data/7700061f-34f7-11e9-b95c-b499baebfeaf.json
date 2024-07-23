@@ -2,31 +2,41 @@
 	"id": "7700061f-34f7-11e9-b95c-b499baebfeaf",
 	"advisories": [
 		{
-			"id": "7700061f-34f7-11e9-b95c-b499baebfeaf",
-			"title": "OpenSSL -- Padding oracle vulnerability",
-			"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20190226.txt\">\n\t  <p>0-byte record padding oracle (CVE-2019-1559) (Moderate)<br/>\n\t    If an application encounters a fatal protocol error and then calls\n\t    SSL_shutdown() twice (once to send a close_notify, and once to receive\n\t    one) then OpenSSL can respond differently to the calling application if\n\t    a 0 byte record is received with invalid padding compared to if a 0 byte\n\t    record is received with an invalid MAC. If the application then behaves\n\t    differently based on that in a way that is detectable to the remote peer,\n\t    then this amounts to a padding oracle that could be used to decrypt data.\n\t    </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.openssl.org/news/secadv/20190226.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/7700061f-34f7-11e9-b95c-b499baebfeaf.html"
-				}
-			],
-			"published": "2019-02-20T00:00:00Z",
-			"modified": "2019-03-07T00:00:00Z"
+			"content": {
+				"id": "7700061f-34f7-11e9-b95c-b499baebfeaf",
+				"title": "OpenSSL -- Padding oracle vulnerability",
+				"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://www.openssl.org/news/secadv/20190226.txt\">\n\t  <p>0-byte record padding oracle (CVE-2019-1559) (Moderate)<br/>\n\t    If an application encounters a fatal protocol error and then calls\n\t    SSL_shutdown() twice (once to send a close_notify, and once to receive\n\t    one) then OpenSSL can respond differently to the calling application if\n\t    a 0 byte record is received with invalid padding compared to if a 0 byte\n\t    record is received with an invalid MAC. If the application then behaves\n\t    differently based on that in a way that is detectable to the remote peer,\n\t    then this amounts to a padding oracle that could be used to decrypt data.\n\t    </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.openssl.org/news/secadv/20190226.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7700061f-34f7-11e9-b95c-b499baebfeaf.html"
+					}
+				],
+				"published": "2019-02-20T00:00:00Z",
+				"modified": "2019-03-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-1559",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-1559"
-				}
+			"content": {
+				"id": "CVE-2019-1559",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-1559"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

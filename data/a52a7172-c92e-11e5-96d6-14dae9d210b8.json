@@ -2,20 +2,25 @@
 	"id": "a52a7172-c92e-11e5-96d6-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "a52a7172-c92e-11e5-96d6-14dae9d210b8",
-			"title": "socat -- diffie hellman parameter was not prime",
-			"description": "\n\t<p>socat reports:</p>\n\t<blockquote cite=\"http://www.dest-unreach.org/socat/contrib/socat-secadv7.html\">\n\t  <p>In the OpenSSL address implementation the hard coded 1024\n\t    bit DH p parameter was not prime. The effective cryptographic strength\n\t    of a key exchange using these parameters was weaker than the one one\n\t    could get by using a prime p. Moreover, since there is no indication of\n\t    how these parameters were chosen, the existence of a trapdoor that makes\n\t    possible for an eavesdropper to recover the shared secret from a key\n\t    exchange that uses them cannot be ruled out.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.dest-unreach.org/socat/contrib/socat-secadv7.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a52a7172-c92e-11e5-96d6-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-02-01T00:00:00Z"
+			"content": {
+				"id": "a52a7172-c92e-11e5-96d6-14dae9d210b8",
+				"title": "socat -- diffie hellman parameter was not prime",
+				"description": "\n\t<p>socat reports:</p>\n\t<blockquote cite=\"http://www.dest-unreach.org/socat/contrib/socat-secadv7.html\">\n\t  <p>In the OpenSSL address implementation the hard coded 1024\n\t    bit DH p parameter was not prime. The effective cryptographic strength\n\t    of a key exchange using these parameters was weaker than the one one\n\t    could get by using a prime p. Moreover, since there is no indication of\n\t    how these parameters were chosen, the existence of a trapdoor that makes\n\t    possible for an eavesdropper to recover the shared secret from a key\n\t    exchange that uses them cannot be ruled out.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.dest-unreach.org/socat/contrib/socat-secadv7.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a52a7172-c92e-11e5-96d6-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-02-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

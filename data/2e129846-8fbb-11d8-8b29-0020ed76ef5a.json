@@ -2,39 +2,49 @@
 	"id": "2e129846-8fbb-11d8-8b29-0020ed76ef5a",
 	"advisories": [
 		{
-			"id": "2e129846-8fbb-11d8-8b29-0020ed76ef5a",
-			"title": "MySQL insecure temporary file creation (mysqlbug)",
-			"description": "\n\t <p>Shaun Colley reports that the script `mysqlbug' included\n\t   with MySQL sometimes creates temporary files in an unsafe\n\t   manner.  As a result, an attacker may create a symlink in\n\t   /tmp so that if another user invokes `mysqlbug' and <em>quits\n\t   without making <strong>any</strong> changes</em>, an\n\t   arbitrary file may be overwritten with the bug report\n\t   template.</p>\n       ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.mysql.com/bug.php?id=3284"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108023246916294&w=2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/9976"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2e129846-8fbb-11d8-8b29-0020ed76ef5a.html"
-				}
-			],
-			"published": "2004-04-16T00:00:00Z",
-			"modified": "2004-05-21T00:00:00Z"
+			"content": {
+				"id": "2e129846-8fbb-11d8-8b29-0020ed76ef5a",
+				"title": "MySQL insecure temporary file creation (mysqlbug)",
+				"description": "\n\t <p>Shaun Colley reports that the script `mysqlbug' included\n\t   with MySQL sometimes creates temporary files in an unsafe\n\t   manner.  As a result, an attacker may create a symlink in\n\t   /tmp so that if another user invokes `mysqlbug' and <em>quits\n\t   without making <strong>any</strong> changes</em>, an\n\t   arbitrary file may be overwritten with the bug report\n\t   template.</p>\n       ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.mysql.com/bug.php?id=3284"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108023246916294&w=2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/9976"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2e129846-8fbb-11d8-8b29-0020ed76ef5a.html"
+					}
+				],
+				"published": "2004-04-16T00:00:00Z",
+				"modified": "2004-05-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0381",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0381"
-				}
+			"content": {
+				"id": "CVE-2004-0381",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0381"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

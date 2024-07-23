@@ -2,30 +2,40 @@
 	"id": "e2f981f1-ad9e-11ee-8b55-4ccc6adda413",
 	"advisories": [
 		{
-			"id": "e2f981f1-ad9e-11ee-8b55-4ccc6adda413",
-			"title": "QtNetwork -- potential buffer overflow",
-			"description": "\n\t<p>Andy Shaw reports:</p>\n\t<blockquote cite=\"https://www.qt.io/blog/security-advisory-potential-integer-overflow-in-qts-http2-implementation\">\n\t  <p>A potential integer overflow has been discovered in Qt's HTTP2\n\t  implementation. If the HTTP2 implementation receives more than 4GiB\n\t  in total headers, or more than 2GiB for any given header pair, then\n\t  the internal buffers may overflow.</p>\n\t</blockquote>\n\t",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.qt.io/blog/security-advisory-potential-integer-overflow-in-qts-http2-implementation"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e2f981f1-ad9e-11ee-8b55-4ccc6adda413.html"
-				}
-			],
-			"published": "2024-01-07T00:00:00Z"
+			"content": {
+				"id": "e2f981f1-ad9e-11ee-8b55-4ccc6adda413",
+				"title": "QtNetwork -- potential buffer overflow",
+				"description": "\n\t<p>Andy Shaw reports:</p>\n\t<blockquote cite=\"https://www.qt.io/blog/security-advisory-potential-integer-overflow-in-qts-http2-implementation\">\n\t  <p>A potential integer overflow has been discovered in Qt's HTTP2\n\t  implementation. If the HTTP2 implementation receives more than 4GiB\n\t  in total headers, or more than 2GiB for any given header pair, then\n\t  the internal buffers may overflow.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.qt.io/blog/security-advisory-potential-integer-overflow-in-qts-http2-implementation"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e2f981f1-ad9e-11ee-8b55-4ccc6adda413.html"
+					}
+				],
+				"published": "2024-01-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-51714",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-51714"
-				}
+			"content": {
+				"id": "CVE-2023-51714",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-51714"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

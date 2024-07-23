@@ -2,34 +2,44 @@
 	"id": "bc4a7efa-7d9a-11d9-a9e7-0001020eed82",
 	"advisories": [
 		{
-			"id": "bc4a7efa-7d9a-11d9-a9e7-0001020eed82",
-			"title": "ngircd -- format string vulnerability",
-			"description": "\n\t<p>A No System Group security advisory reports that ngircd is\n\t  vulnerable to a format string vulnerability in the\n\t  <code>Log_Resolver()</code> function of log.c, if IDENT\n\t  support is enabled.  This could allow a remote attacker to\n\t  execute arbitrary code with the permissions of the ngircd\n\t  daemon, which is <q>root</q> by default.</p>\n\t<p><strong>Note:</strong> By default the FreeBSD ngircd port\n\t  does not enable IDENT support.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110746413108183"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/12434"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bc4a7efa-7d9a-11d9-a9e7-0001020eed82.html"
-				}
-			],
-			"published": "2005-02-13T00:00:00Z"
+			"content": {
+				"id": "bc4a7efa-7d9a-11d9-a9e7-0001020eed82",
+				"title": "ngircd -- format string vulnerability",
+				"description": "\n\t<p>A No System Group security advisory reports that ngircd is\n\t  vulnerable to a format string vulnerability in the\n\t  <code>Log_Resolver()</code> function of log.c, if IDENT\n\t  support is enabled.  This could allow a remote attacker to\n\t  execute arbitrary code with the permissions of the ngircd\n\t  daemon, which is <q>root</q> by default.</p>\n\t<p><strong>Note:</strong> By default the FreeBSD ngircd port\n\t  does not enable IDENT support.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110746413108183"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/12434"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bc4a7efa-7d9a-11d9-a9e7-0001020eed82.html"
+					}
+				],
+				"published": "2005-02-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0226",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0226"
-				}
+			"content": {
+				"id": "CVE-2005-0226",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0226"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

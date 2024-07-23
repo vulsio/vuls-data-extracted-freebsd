@@ -2,35 +2,45 @@
 	"id": "ee99899d-4347-11e5-93ad-002590263bf5",
 	"advisories": [
 		{
-			"id": "ee99899d-4347-11e5-93ad-002590263bf5",
-			"title": "qemu, xen-tools -- use-after-free in QEMU/Xen block unplug protocol",
-			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-139.html\">\n\t  <p>When unplugging an emulated block device the device was not fully\n\t    unplugged, meaning a second unplug attempt would attempt to unplug\n\t    the device a second time using a previously freed pointer.</p>\n\t  <p>An HVM guest which has access to an emulated IDE disk device may be\n\t    able to exploit this vulnerability in order to take over the qemu\n\t    process elevating its privilege to that of the qemu process.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=260425ab405ea76c44dd59744d05176d4f579a52"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xenbits.xen.org/xsa/advisory-139.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ee99899d-4347-11e5-93ad-002590263bf5.html"
-				}
-			],
-			"published": "2015-08-17T00:00:00Z",
-			"modified": "2015-08-19T00:00:00Z"
+			"content": {
+				"id": "ee99899d-4347-11e5-93ad-002590263bf5",
+				"title": "qemu, xen-tools -- use-after-free in QEMU/Xen block unplug protocol",
+				"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-139.html\">\n\t  <p>When unplugging an emulated block device the device was not fully\n\t    unplugged, meaning a second unplug attempt would attempt to unplug\n\t    the device a second time using a previously freed pointer.</p>\n\t  <p>An HVM guest which has access to an emulated IDE disk device may be\n\t    able to exploit this vulnerability in order to take over the qemu\n\t    process elevating its privilege to that of the qemu process.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=260425ab405ea76c44dd59744d05176d4f579a52"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xenbits.xen.org/xsa/advisory-139.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ee99899d-4347-11e5-93ad-002590263bf5.html"
+					}
+				],
+				"published": "2015-08-17T00:00:00Z",
+				"modified": "2015-08-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-5166",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5166"
-				}
+			"content": {
+				"id": "CVE-2015-5166",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5166"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

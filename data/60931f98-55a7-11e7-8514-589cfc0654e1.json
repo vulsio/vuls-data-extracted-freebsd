@@ -2,39 +2,54 @@
 	"id": "60931f98-55a7-11e7-8514-589cfc0654e1",
 	"advisories": [
 		{
-			"id": "60931f98-55a7-11e7-8514-589cfc0654e1",
-			"title": "Dropbear -- two vulnerabilities",
-			"description": "\n\t<p>Matt Johnston reports:</p>\n\t<blockquote cite=\"https://matt.ucc.asn.au/dropbear/CHANGES\">\n\t  <p>Fix double-free in server TCP listener cleanup A double-free in\n\t    the server could be triggered by an authenticated user if dropbear\n\t    is running with -a (Allow connections to forwarded ports from any\n\t    host) This could potentially allow arbitrary code execution as root\n\t    by an authenticated user.</p>\n\t  <p>Fix information disclosure with ~/.ssh/authorized_keys symlink.\n\t    Dropbear parsed authorized_keys as root, even if it were a symlink.\n\t    The fix is to switch to user permissions when opening authorized_keys.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://matt.ucc.asn.au/dropbear/CHANGES"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/60931f98-55a7-11e7-8514-589cfc0654e1.html"
-				}
-			],
-			"published": "2017-07-03T00:00:00Z"
+			"content": {
+				"id": "60931f98-55a7-11e7-8514-589cfc0654e1",
+				"title": "Dropbear -- two vulnerabilities",
+				"description": "\n\t<p>Matt Johnston reports:</p>\n\t<blockquote cite=\"https://matt.ucc.asn.au/dropbear/CHANGES\">\n\t  <p>Fix double-free in server TCP listener cleanup A double-free in\n\t    the server could be triggered by an authenticated user if dropbear\n\t    is running with -a (Allow connections to forwarded ports from any\n\t    host) This could potentially allow arbitrary code execution as root\n\t    by an authenticated user.</p>\n\t  <p>Fix information disclosure with ~/.ssh/authorized_keys symlink.\n\t    Dropbear parsed authorized_keys as root, even if it were a symlink.\n\t    The fix is to switch to user permissions when opening authorized_keys.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://matt.ucc.asn.au/dropbear/CHANGES"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/60931f98-55a7-11e7-8514-589cfc0654e1.html"
+					}
+				],
+				"published": "2017-07-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-9078",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9078"
-				}
+			"content": {
+				"id": "CVE-2017-9078",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-9078"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-9079",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-9079"
-				}
+			"content": {
+				"id": "CVE-2017-9079",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-9079"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

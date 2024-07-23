@@ -2,31 +2,41 @@
 	"id": "68c1f75b-8824-11e2-9996-c48508086173",
 	"advisories": [
 		{
-			"id": "68c1f75b-8824-11e2-9996-c48508086173",
-			"title": "perl -- denial of service via algorithmic complexity attack on hashing routines",
-			"description": "\n\t<p>Perl developers report:</p>\n\t<blockquote cite=\"http://www.nntp.perl.org/group/perl.perl5.porters/2013/03/msg199755.html\">\n\t  <p>In order to prevent an algorithmic complexity attack\n\t    against its hashing mechanism, perl will sometimes\n\t    recalculate keys and redistribute the contents of a hash.\n\t    This mechanism has made perl robust against attacks that\n\t    have been demonstrated against other systems.</p>\n\t  <p>Research by Yves Orton has recently uncovered a flaw in\n\t    the rehashing code which can result in pathological\n\t    behavior.  This flaw could be exploited to carry out a\n\t    denial of service attack against code that uses arbitrary\n\t    user input as hash keys.</p>\n\t  <p>Because using user-provided strings as hash keys is a\n\t    very common operation, we urge users of perl to update their\n\t    perl executable as soon as possible.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.nntp.perl.org/group/perl.perl5.porters/2013/03/msg199755.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/68c1f75b-8824-11e2-9996-c48508086173.html"
-				}
-			],
-			"published": "2013-03-10T00:00:00Z",
-			"modified": "2016-08-22T00:00:00Z"
+			"content": {
+				"id": "68c1f75b-8824-11e2-9996-c48508086173",
+				"title": "perl -- denial of service via algorithmic complexity attack on hashing routines",
+				"description": "\n\t<p>Perl developers report:</p>\n\t<blockquote cite=\"http://www.nntp.perl.org/group/perl.perl5.porters/2013/03/msg199755.html\">\n\t  <p>In order to prevent an algorithmic complexity attack\n\t    against its hashing mechanism, perl will sometimes\n\t    recalculate keys and redistribute the contents of a hash.\n\t    This mechanism has made perl robust against attacks that\n\t    have been demonstrated against other systems.</p>\n\t  <p>Research by Yves Orton has recently uncovered a flaw in\n\t    the rehashing code which can result in pathological\n\t    behavior.  This flaw could be exploited to carry out a\n\t    denial of service attack against code that uses arbitrary\n\t    user input as hash keys.</p>\n\t  <p>Because using user-provided strings as hash keys is a\n\t    very common operation, we urge users of perl to update their\n\t    perl executable as soon as possible.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.nntp.perl.org/group/perl.perl5.porters/2013/03/msg199755.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/68c1f75b-8824-11e2-9996-c48508086173.html"
+					}
+				],
+				"published": "2013-03-10T00:00:00Z",
+				"modified": "2016-08-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-1667",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1667"
-				}
+			"content": {
+				"id": "CVE-2013-1667",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1667"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

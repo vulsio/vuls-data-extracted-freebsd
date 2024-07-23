@@ -2,30 +2,40 @@
 	"id": "5721ae65-b30a-11e9-a87f-a4badb2f4699",
 	"advisories": [
 		{
-			"id": "5721ae65-b30a-11e9-a87f-a4badb2f4699",
-			"title": "FreeBSD -- pts(4) write-after-free",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The code which handles a close(2) of a descriptor created\n\tby posix_openpt(2) fails to undo the configuration which\n\tcauses SIGIO to be raised. This bug can lead to a\n\twrite-after-free of kernel memory.</p>\n\t<h1>Impact:</h1>\n\t<p>The bug permits malicious code to trigger a write-after-free,\n\twhich may be used to gain root privileges or escape a\n\tjail.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:13.pts.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5721ae65-b30a-11e9-a87f-a4badb2f4699.html"
-				}
-			],
-			"published": "2019-07-30T00:00:00Z"
+			"content": {
+				"id": "5721ae65-b30a-11e9-a87f-a4badb2f4699",
+				"title": "FreeBSD -- pts(4) write-after-free",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The code which handles a close(2) of a descriptor created\n\tby posix_openpt(2) fails to undo the configuration which\n\tcauses SIGIO to be raised. This bug can lead to a\n\twrite-after-free of kernel memory.</p>\n\t<h1>Impact:</h1>\n\t<p>The bug permits malicious code to trigger a write-after-free,\n\twhich may be used to gain root privileges or escape a\n\tjail.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-19:13.pts.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5721ae65-b30a-11e9-a87f-a4badb2f4699.html"
+					}
+				],
+				"published": "2019-07-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-5606",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-5606"
-				}
+			"content": {
+				"id": "CVE-2019-5606",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-5606"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

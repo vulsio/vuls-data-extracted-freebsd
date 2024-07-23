@@ -2,52 +2,72 @@
 	"id": "eb888ce5-1f19-11e9-be05-4c72b94353b5",
 	"advisories": [
 		{
-			"id": "eb888ce5-1f19-11e9-be05-4c72b94353b5",
-			"title": "Apache -- vulnerability",
-			"description": "\n\t<p>The Apache httpd Project reports:</p>\n\t<blockquote cite=\"http://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <p>SECURITY: CVE-2018-17199\n\t    mod_session: mod_session_cookie does not respect expiry time allowing\n\t    sessions to be reused.</p>\n\t  <p>SECURITY: CVE-2019-0190\n\t    mod_ssl: Fix infinite loop triggered by a client-initiated\n\t    renegotiation in TLSv1.2 (or earlier) with OpenSSL 1.1.1 and\n\t    later.  PR 63052.</p>\n\t  <p>SECURITY: CVE-2018-17189\n\t    mod_http2: fixes a DoS attack vector. By sending slow request bodies\n\t    to resources not consuming them, httpd cleanup code occupies a server\n\t    thread unnecessarily. This was changed to an immediate stream reset\n\t    which discards all stream state and incoming data.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://httpd.apache.org/security/vulnerabilities_24.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.apache.org/dist/httpd/CHANGES_2.4.38"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/eb888ce5-1f19-11e9-be05-4c72b94353b5.html"
-				}
-			],
-			"published": "2019-01-23T00:00:00Z"
+			"content": {
+				"id": "eb888ce5-1f19-11e9-be05-4c72b94353b5",
+				"title": "Apache -- vulnerability",
+				"description": "\n\t<p>The Apache httpd Project reports:</p>\n\t<blockquote cite=\"http://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <p>SECURITY: CVE-2018-17199\n\t    mod_session: mod_session_cookie does not respect expiry time allowing\n\t    sessions to be reused.</p>\n\t  <p>SECURITY: CVE-2019-0190\n\t    mod_ssl: Fix infinite loop triggered by a client-initiated\n\t    renegotiation in TLSv1.2 (or earlier) with OpenSSL 1.1.1 and\n\t    later.  PR 63052.</p>\n\t  <p>SECURITY: CVE-2018-17189\n\t    mod_http2: fixes a DoS attack vector. By sending slow request bodies\n\t    to resources not consuming them, httpd cleanup code occupies a server\n\t    thread unnecessarily. This was changed to an immediate stream reset\n\t    which discards all stream state and incoming data.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://httpd.apache.org/security/vulnerabilities_24.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.apache.org/dist/httpd/CHANGES_2.4.38"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/eb888ce5-1f19-11e9-be05-4c72b94353b5.html"
+					}
+				],
+				"published": "2019-01-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-17189",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-17189"
-				}
+			"content": {
+				"id": "CVE-2018-17189",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-17189"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-17199",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-17199"
-				}
+			"content": {
+				"id": "CVE-2018-17199",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-17199"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-0190",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-0190"
-				}
+			"content": {
+				"id": "CVE-2019-0190",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-0190"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

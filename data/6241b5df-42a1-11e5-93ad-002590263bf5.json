@@ -2,137 +2,197 @@
 	"id": "6241b5df-42a1-11e5-93ad-002590263bf5",
 	"advisories": [
 		{
-			"id": "6241b5df-42a1-11e5-93ad-002590263bf5",
-			"title": "mediawiki -- multiple vulnerabilities",
-			"description": "\n\t<p>MediaWiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/pipermail/mediawiki-announce/2015-August/000179.html\">\n\t  <p>Internal review discovered that Special:DeletedContributions did\n\t    not properly protect the IP of autoblocked users. This fix makes\n\t    the functionality of Special:DeletedContributions consistent with\n\t    Special:Contributions and Special:BlockList.</p>\n\t  <p>Internal review discovered that watchlist anti-csrf tokens were not\n\t    being compared in constant time, which could allow various timing\n\t    attacks. This could allow an attacker to modify a user's watchlist\n\t    via csrf</p>\n\t  <p>John Menerick reported that MediaWiki's thumb.php failed to sanitize\n\t    various error messages, resulting in xss.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/08/27/6"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.wikimedia.org/pipermail/mediawiki-announce/2015-August/000179.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://phabricator.wikimedia.org/T106893"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://phabricator.wikimedia.org/T94116"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://phabricator.wikimedia.org/T97391"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6241b5df-42a1-11e5-93ad-002590263bf5.html"
-				}
-			],
-			"published": "2015-08-14T00:00:00Z",
-			"modified": "2015-12-24T00:00:00Z"
+			"content": {
+				"id": "6241b5df-42a1-11e5-93ad-002590263bf5",
+				"title": "mediawiki -- multiple vulnerabilities",
+				"description": "\n\t<p>MediaWiki reports:</p>\n\t<blockquote cite=\"https://lists.wikimedia.org/pipermail/mediawiki-announce/2015-August/000179.html\">\n\t  <p>Internal review discovered that Special:DeletedContributions did\n\t    not properly protect the IP of autoblocked users. This fix makes\n\t    the functionality of Special:DeletedContributions consistent with\n\t    Special:Contributions and Special:BlockList.</p>\n\t  <p>Internal review discovered that watchlist anti-csrf tokens were not\n\t    being compared in constant time, which could allow various timing\n\t    attacks. This could allow an attacker to modify a user's watchlist\n\t    via csrf</p>\n\t  <p>John Menerick reported that MediaWiki's thumb.php failed to sanitize\n\t    various error messages, resulting in xss.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/08/27/6"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.wikimedia.org/pipermail/mediawiki-announce/2015-August/000179.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://phabricator.wikimedia.org/T106893"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://phabricator.wikimedia.org/T94116"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://phabricator.wikimedia.org/T97391"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6241b5df-42a1-11e5-93ad-002590263bf5.html"
+					}
+				],
+				"published": "2015-08-14T00:00:00Z",
+				"modified": "2015-12-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-7444",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-7444"
-				}
+			"content": {
+				"id": "CVE-2013-7444",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-7444"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6727",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6727"
-				}
+			"content": {
+				"id": "CVE-2015-6727",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6727"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6728",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6728"
-				}
+			"content": {
+				"id": "CVE-2015-6728",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6728"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6729",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6729"
-				}
+			"content": {
+				"id": "CVE-2015-6729",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6729"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6730",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6730"
-				}
+			"content": {
+				"id": "CVE-2015-6730",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6730"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6731",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6731"
-				}
+			"content": {
+				"id": "CVE-2015-6731",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6731"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6733",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6733"
-				}
+			"content": {
+				"id": "CVE-2015-6733",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6733"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6734",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6734"
-				}
+			"content": {
+				"id": "CVE-2015-6734",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6734"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6735",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6735"
-				}
+			"content": {
+				"id": "CVE-2015-6735",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6735"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6736",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6736"
-				}
+			"content": {
+				"id": "CVE-2015-6736",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6736"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6737",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6737"
-				}
+			"content": {
+				"id": "CVE-2015-6737",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6737"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

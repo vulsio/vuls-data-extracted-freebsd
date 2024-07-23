@@ -2,31 +2,41 @@
 	"id": "111f1f84-1d14-4ff2-a9ea-cf07119c0d3b",
 	"advisories": [
 		{
-			"id": "111f1f84-1d14-4ff2-a9ea-cf07119c0d3b",
-			"title": "libyaml heap overflow resulting in possible code execution",
-			"description": "\n\t<p>libyaml was prone to a heap overflow that could result in\n\t  arbitrary code execution. Pkg uses libyaml to parse\n\t  the package manifests in some cases. Pkg also used libyaml\n\t  to parse the remote repository until 1.2.</p>\n\t<p>RedHat Product Security Team reports on libyaml:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=1033990\">\n\t  <p>A heap-based buffer overflow flaw was found in the way libyaml\n\t    parsed YAML tags. A remote attacker could provide a\n\t    specially-crafted YAML document that, when parsed by an application\n\t    using libyaml, would cause the application to crash or, potentially,\n\t    execute arbitrary code with the privileges of the user running the\n\t    application.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033990"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/111f1f84-1d14-4ff2-a9ea-cf07119c0d3b.html"
-				}
-			],
-			"published": "2014-02-01T00:00:00Z",
-			"modified": "2014-02-01T00:00:00Z"
+			"content": {
+				"id": "111f1f84-1d14-4ff2-a9ea-cf07119c0d3b",
+				"title": "libyaml heap overflow resulting in possible code execution",
+				"description": "\n\t<p>libyaml was prone to a heap overflow that could result in\n\t  arbitrary code execution. Pkg uses libyaml to parse\n\t  the package manifests in some cases. Pkg also used libyaml\n\t  to parse the remote repository until 1.2.</p>\n\t<p>RedHat Product Security Team reports on libyaml:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=1033990\">\n\t  <p>A heap-based buffer overflow flaw was found in the way libyaml\n\t    parsed YAML tags. A remote attacker could provide a\n\t    specially-crafted YAML document that, when parsed by an application\n\t    using libyaml, would cause the application to crash or, potentially,\n\t    execute arbitrary code with the privileges of the user running the\n\t    application.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033990"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/111f1f84-1d14-4ff2-a9ea-cf07119c0d3b.html"
+					}
+				],
+				"published": "2014-02-01T00:00:00Z",
+				"modified": "2014-02-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-6393",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-6393"
-				}
+			"content": {
+				"id": "CVE-2013-6393",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-6393"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

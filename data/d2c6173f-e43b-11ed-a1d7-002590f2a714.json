@@ -2,43 +2,58 @@
 	"id": "d2c6173f-e43b-11ed-a1d7-002590f2a714",
 	"advisories": [
 		{
-			"id": "d2c6173f-e43b-11ed-a1d7-002590f2a714",
-			"title": "git -- Multiple vulnerabilities",
-			"description": "\n\t<p>git developers reports:</p>\n\t<blockquote cite=\"INSERT URL HERE\">\n\t  <p>This update includes 2 security fixes:</p>\n\t  <ul>\n\t     <li>CVE-2023-25652: By feeding specially crafted input to `git apply --reject`, a path outside the working tree can be overwritten with partially controlled contents (corresponding to the rejected hunk(s) from the given patch)</li>\n\t     <li>CVE-2023-29007: A specially crafted `.gitmodules` file with submodule URLs that are longer than 1024 characters can used to exploit a bug that can be used to inject arbitrary configuration into user's git config.  This can result in arbitrary execution of code, by inserting values for core.pager, core.editor and so on</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/git/git/security/advisories/GHSA-2hvf-7c8p-28fx"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/git/git/security/advisories/GHSA-v48j-4xgg-4844"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d2c6173f-e43b-11ed-a1d7-002590f2a714.html"
-				}
-			],
-			"published": "2023-04-26T00:00:00Z"
+			"content": {
+				"id": "d2c6173f-e43b-11ed-a1d7-002590f2a714",
+				"title": "git -- Multiple vulnerabilities",
+				"description": "\n\t<p>git developers reports:</p>\n\t<blockquote cite=\"INSERT URL HERE\">\n\t  <p>This update includes 2 security fixes:</p>\n\t  <ul>\n\t     <li>CVE-2023-25652: By feeding specially crafted input to `git apply --reject`, a path outside the working tree can be overwritten with partially controlled contents (corresponding to the rejected hunk(s) from the given patch)</li>\n\t     <li>CVE-2023-29007: A specially crafted `.gitmodules` file with submodule URLs that are longer than 1024 characters can used to exploit a bug that can be used to inject arbitrary configuration into user's git config.  This can result in arbitrary execution of code, by inserting values for core.pager, core.editor and so on</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/git/git/security/advisories/GHSA-2hvf-7c8p-28fx"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/git/git/security/advisories/GHSA-v48j-4xgg-4844"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d2c6173f-e43b-11ed-a1d7-002590f2a714.html"
+					}
+				],
+				"published": "2023-04-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-25652",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-25652"
-				}
+			"content": {
+				"id": "CVE-2023-25652",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-25652"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-29007",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-29007"
-				}
+			"content": {
+				"id": "CVE-2023-29007",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-29007"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

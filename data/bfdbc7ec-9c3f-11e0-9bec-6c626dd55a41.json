@@ -2,34 +2,44 @@
 	"id": "bfdbc7ec-9c3f-11e0-9bec-6c626dd55a41",
 	"advisories": [
 		{
-			"id": "bfdbc7ec-9c3f-11e0-9bec-6c626dd55a41",
-			"title": "Samba -- Denial of service - memory corruption",
-			"description": "\n\t<p>The Samba team reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2011-0719.html\">\n\t  <p>Samba is vulnerable to a denial of service, caused by a memory\n\t    corruption error related to missing range checks on file\n\t    descriptors being used in the \"FD_SET\" macro.  By performing a\n\t    select on a bad file descriptor set, a remote attacker could\n\t    exploit this vulnerability to cause the application to crash or\n\t    possibly execute arbitrary code on the system.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0719"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.samba.org/samba/security/CVE-2011-0719.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bfdbc7ec-9c3f-11e0-9bec-6c626dd55a41.html"
-				}
-			],
-			"published": "2011-06-21T00:00:00Z"
+			"content": {
+				"id": "bfdbc7ec-9c3f-11e0-9bec-6c626dd55a41",
+				"title": "Samba -- Denial of service - memory corruption",
+				"description": "\n\t<p>The Samba team reports:</p>\n\t<blockquote cite=\"http://www.samba.org/samba/security/CVE-2011-0719.html\">\n\t  <p>Samba is vulnerable to a denial of service, caused by a memory\n\t    corruption error related to missing range checks on file\n\t    descriptors being used in the \"FD_SET\" macro.  By performing a\n\t    select on a bad file descriptor set, a remote attacker could\n\t    exploit this vulnerability to cause the application to crash or\n\t    possibly execute arbitrary code on the system.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0719"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.samba.org/samba/security/CVE-2011-0719.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bfdbc7ec-9c3f-11e0-9bec-6c626dd55a41.html"
+					}
+				],
+				"published": "2011-06-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2011-0719",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-0719"
-				}
+			"content": {
+				"id": "CVE-2011-0719",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-0719"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,70 +2,100 @@
 	"id": "0c2db2aa-5584-11e7-9a7d-b499baebfeaf",
 	"advisories": [
 		{
-			"id": "0c2db2aa-5584-11e7-9a7d-b499baebfeaf",
-			"title": "Apache httpd -- several vulnerabilities",
-			"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"http://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <ul>\n\t    <li>ap_get_basic_auth_pw() Authentication Bypass (CVE-2017-3167):<br/>\n\t      Use of the ap_get_basic_auth_pw() by third-party modules outside\n\t      of the authentication phase may lead to authentication requirements\n\t      being bypassed.</li>\n\t    <li>mod_ssl Null Pointer Dereference (CVE-2017-3169):<br/>mod_ssl may\n\t      dereference a NULL pointer when third-party modules\n\t      call ap_hook_process_connection() during an HTTP request to an HTTPS\n\t      port.</li>\n\t    <li>mod_http2 Null Pointer Dereference (CVE-2017-7659):<br/> A maliciously\n\t      constructed HTTP/2 request could cause mod_http2 to dereference a NULL\n\t      pointer and crash the server process.</li>\n\t    <li>ap_find_token() Buffer Overread (CVE-2017-7668):<br/>The HTTP strict\n\t      parsing changes added in 2.2.32 and 2.4.24 introduced a bug in token\n\t      list parsing, which allows ap_find_token() to search past the end of its\n\t      input string. By maliciously crafting a sequence of request headers, an\n\t      attacker may be able to cause a segmentation fault, or to force\n\t      ap_find_token() to return an incorrect value.</li>\n\t    <li>mod_mime Buffer Overread (CVE-2017-7679):<br/>mod_mime can read one\n\t       byte past the end of a buffer when sending a malicious Content-Type\n\t       response header.</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://httpd.apache.org/security/vulnerabilities_22.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://httpd.apache.org/security/vulnerabilities_24.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0c2db2aa-5584-11e7-9a7d-b499baebfeaf.html"
-				}
-			],
-			"published": "2017-06-20T00:00:00Z"
+			"content": {
+				"id": "0c2db2aa-5584-11e7-9a7d-b499baebfeaf",
+				"title": "Apache httpd -- several vulnerabilities",
+				"description": "\n\t<p>The Apache httpd project reports:</p>\n\t<blockquote cite=\"http://httpd.apache.org/security/vulnerabilities_24.html\">\n\t  <ul>\n\t    <li>ap_get_basic_auth_pw() Authentication Bypass (CVE-2017-3167):<br/>\n\t      Use of the ap_get_basic_auth_pw() by third-party modules outside\n\t      of the authentication phase may lead to authentication requirements\n\t      being bypassed.</li>\n\t    <li>mod_ssl Null Pointer Dereference (CVE-2017-3169):<br/>mod_ssl may\n\t      dereference a NULL pointer when third-party modules\n\t      call ap_hook_process_connection() during an HTTP request to an HTTPS\n\t      port.</li>\n\t    <li>mod_http2 Null Pointer Dereference (CVE-2017-7659):<br/> A maliciously\n\t      constructed HTTP/2 request could cause mod_http2 to dereference a NULL\n\t      pointer and crash the server process.</li>\n\t    <li>ap_find_token() Buffer Overread (CVE-2017-7668):<br/>The HTTP strict\n\t      parsing changes added in 2.2.32 and 2.4.24 introduced a bug in token\n\t      list parsing, which allows ap_find_token() to search past the end of its\n\t      input string. By maliciously crafting a sequence of request headers, an\n\t      attacker may be able to cause a segmentation fault, or to force\n\t      ap_find_token() to return an incorrect value.</li>\n\t    <li>mod_mime Buffer Overread (CVE-2017-7679):<br/>mod_mime can read one\n\t       byte past the end of a buffer when sending a malicious Content-Type\n\t       response header.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://httpd.apache.org/security/vulnerabilities_22.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0c2db2aa-5584-11e7-9a7d-b499baebfeaf.html"
+					}
+				],
+				"published": "2017-06-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-3167",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3167"
-				}
+			"content": {
+				"id": "CVE-2017-3167",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-3167"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-3169",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-3169"
-				}
+			"content": {
+				"id": "CVE-2017-3169",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-3169"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-7659",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7659"
-				}
+			"content": {
+				"id": "CVE-2017-7659",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-7659"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-7668",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7668"
-				}
+			"content": {
+				"id": "CVE-2017-7668",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-7668"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-7679",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-7679"
-				}
+			"content": {
+				"id": "CVE-2017-7679",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-7679"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

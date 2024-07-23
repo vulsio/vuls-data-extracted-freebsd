@@ -2,48 +2,63 @@
 	"id": "4bae544d-06a3-4352-938c-b3bcbca89298",
 	"advisories": [
 		{
-			"id": "4bae544d-06a3-4352-938c-b3bcbca89298",
-			"title": "ffmpeg -- multiple vulnerabilities",
-			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8662\">\n\t  <p>The ff_dwt_decode function in libavcodec/jpeg2000dwt.c in\n\t    FFmpeg before 2.8.4 does not validate the number of\n\t    decomposition levels before proceeding with Discrete Wavelet\n\t    Transform decoding, which allows remote attackers to cause a\n\t    denial of service (out-of-bounds array access) or possibly\n\t    have unspecified other impact via crafted JPEG 2000\n\t    data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8663\">\n\t  <p>The ff_get_buffer function in libavcodec/utils.c in\n\t    FFmpeg before 2.8.4 preserves width and height values after\n\t    a failure, which allows remote attackers to cause a denial\n\t    of service (out-of-bounds array access) or possibly have\n\t    unspecified other impact via a crafted .mov file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://ffmpeg.org/security.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=75422280fbcdfbe9dc56bde5525b4d8b280f1bc5"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=abee0a1c60612e8638640a8a3738fffb65e16dbf"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4bae544d-06a3-4352-938c-b3bcbca89298.html"
-				}
-			],
-			"published": "2015-12-28T00:00:00Z",
-			"modified": "2018-03-25T00:00:00Z"
+			"content": {
+				"id": "4bae544d-06a3-4352-938c-b3bcbca89298",
+				"title": "ffmpeg -- multiple vulnerabilities",
+				"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8662\">\n\t  <p>The ff_dwt_decode function in libavcodec/jpeg2000dwt.c in\n\t    FFmpeg before 2.8.4 does not validate the number of\n\t    decomposition levels before proceeding with Discrete Wavelet\n\t    Transform decoding, which allows remote attackers to cause a\n\t    denial of service (out-of-bounds array access) or possibly\n\t    have unspecified other impact via crafted JPEG 2000\n\t    data.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8663\">\n\t  <p>The ff_get_buffer function in libavcodec/utils.c in\n\t    FFmpeg before 2.8.4 preserves width and height values after\n\t    a failure, which allows remote attackers to cause a denial\n\t    of service (out-of-bounds array access) or possibly have\n\t    unspecified other impact via a crafted .mov file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://ffmpeg.org/security.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=75422280fbcdfbe9dc56bde5525b4d8b280f1bc5"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=abee0a1c60612e8638640a8a3738fffb65e16dbf"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4bae544d-06a3-4352-938c-b3bcbca89298.html"
+					}
+				],
+				"published": "2015-12-28T00:00:00Z",
+				"modified": "2018-03-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-8662",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8662"
-				}
+			"content": {
+				"id": "CVE-2015-8662",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8662"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8663",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8663"
-				}
+			"content": {
+				"id": "CVE-2015-8663",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8663"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

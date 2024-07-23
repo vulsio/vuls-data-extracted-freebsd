@@ -2,35 +2,50 @@
 	"id": "ca16fd0b-5fd1-11e6-a6f2-6cc21735f730",
 	"advisories": [
 		{
-			"id": "ca16fd0b-5fd1-11e6-a6f2-6cc21735f730",
-			"title": "PostgreSQL -- Denial-of-Service and Code Injection Vulnerabilities",
-			"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1688/\">\n\t  <p>\n\t  Security Fixes nested CASE expressions +\n\t  database and role names with embedded special characters\n\t  </p>\n\t  <ul>\n\t    <li>CVE-2016-5423: certain nested CASE expressions can cause the\n\t     server to crash.\n\t    </li>\n\t    <li>CVE-2016-5424: database and role names with embedded special\n\t     characters can allow code injection during administrative operations\n\t     like pg_dumpall.\n\t    </li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ca16fd0b-5fd1-11e6-a6f2-6cc21735f730.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "ca16fd0b-5fd1-11e6-a6f2-6cc21735f730",
+				"title": "PostgreSQL -- Denial-of-Service and Code Injection Vulnerabilities",
+				"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1688/\">\n\t  <p>\n\t  Security Fixes nested CASE expressions +\n\t  database and role names with embedded special characters\n\t  </p>\n\t  <ul>\n\t    <li>CVE-2016-5423: certain nested CASE expressions can cause the\n\t     server to crash.\n\t    </li>\n\t    <li>CVE-2016-5424: database and role names with embedded special\n\t     characters can allow code injection during administrative operations\n\t     like pg_dumpall.\n\t    </li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ca16fd0b-5fd1-11e6-a6f2-6cc21735f730.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-5423",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5423"
-				}
+			"content": {
+				"id": "CVE-2016-5423",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5423"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-5424",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-5424"
-				}
+			"content": {
+				"id": "CVE-2016-5424",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-5424"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

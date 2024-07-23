@@ -2,39 +2,54 @@
 	"id": "18ed9650-a1d6-11e9-9b17-fcaa147e860e",
 	"advisories": [
 		{
-			"id": "18ed9650-a1d6-11e9-9b17-fcaa147e860e",
-			"title": "python 3.6 -- multiple vulnerabilities",
-			"description": "\n\t<p>Python changelog:</p>\n\t<blockquote cite=\"https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-9-final\">\n\t  <p>bpo-35907: CVE-2019-9948: Avoid file reading by disallowing local-file://\n\t    and local_file:// URL schemes in URLopener().open() and URLopener().retrieve()\n\t    of urllib.request.</p>\n\t  <p>bpo-36742: Fixes mishandling of pre-normalization characters in urlsplit().</p>\n\t  <p>bpo-30458: Address CVE-2019-9740 by disallowing URL paths with embedded\n\t    whitespace or control characters through into the underlying http client\n\t    request. Such potentially malicious header injection URLs now cause an\n\t    http.client.InvalidURL exception to be raised.</p>\n\t  <p>bpo-36216: Changes urlsplit() to raise ValueError when the URL contains\n\t    characters that decompose under IDNA encoding (NFKC-normalization) into\n\t    characters that affect how the URL is parsed.</p>\n\t  <p>bpo-33529: Prevent fold function used in email header encoding from\n\t    entering infinite loop when there are too many non-ASCII characters in\n\t    a header.</p>\n\t  <p>bpo-35121: Don't send cookies of domain A without Domain attribute to\n\t    domain B when domain A is a suffix match of domain B while using a cookiejar\n\t    with http.cookiejar.DefaultCookiePolicy policy. Patch by Karthikeyan\n\t    Singaravelan.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-9-final"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/18ed9650-a1d6-11e9-9b17-fcaa147e860e.html"
-				}
-			],
-			"published": "2019-07-08T00:00:00Z"
+			"content": {
+				"id": "18ed9650-a1d6-11e9-9b17-fcaa147e860e",
+				"title": "python 3.6 -- multiple vulnerabilities",
+				"description": "\n\t<p>Python changelog:</p>\n\t<blockquote cite=\"https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-9-final\">\n\t  <p>bpo-35907: CVE-2019-9948: Avoid file reading by disallowing local-file://\n\t    and local_file:// URL schemes in URLopener().open() and URLopener().retrieve()\n\t    of urllib.request.</p>\n\t  <p>bpo-36742: Fixes mishandling of pre-normalization characters in urlsplit().</p>\n\t  <p>bpo-30458: Address CVE-2019-9740 by disallowing URL paths with embedded\n\t    whitespace or control characters through into the underlying http client\n\t    request. Such potentially malicious header injection URLs now cause an\n\t    http.client.InvalidURL exception to be raised.</p>\n\t  <p>bpo-36216: Changes urlsplit() to raise ValueError when the URL contains\n\t    characters that decompose under IDNA encoding (NFKC-normalization) into\n\t    characters that affect how the URL is parsed.</p>\n\t  <p>bpo-33529: Prevent fold function used in email header encoding from\n\t    entering infinite loop when there are too many non-ASCII characters in\n\t    a header.</p>\n\t  <p>bpo-35121: Don't send cookies of domain A without Domain attribute to\n\t    domain B when domain A is a suffix match of domain B while using a cookiejar\n\t    with http.cookiejar.DefaultCookiePolicy policy. Patch by Karthikeyan\n\t    Singaravelan.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-9-final"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/18ed9650-a1d6-11e9-9b17-fcaa147e860e.html"
+					}
+				],
+				"published": "2019-07-08T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-9740",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9740"
-				}
+			"content": {
+				"id": "CVE-2019-9740",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-9740"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-9948",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-9948"
-				}
+			"content": {
+				"id": "CVE-2019-9948",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-9948"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

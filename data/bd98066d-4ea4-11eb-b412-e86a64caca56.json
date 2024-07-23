@@ -2,39 +2,54 @@
 	"id": "bd98066d-4ea4-11eb-b412-e86a64caca56",
 	"advisories": [
 		{
-			"id": "bd98066d-4ea4-11eb-b412-e86a64caca56",
-			"title": "mail/dovecot -- multiple vulnerabilities",
-			"description": "\n\t<p>Aki Tuomi reports:</p>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2021-January/000450.html\">\n\t  <p>When imap hibernation is active, an attacker can cause Dovecot to\n\t    discover file system directory structure and access other users'\n\t    emails using specially crafted command.\n\t    The attacker must have valid credentials to access the\n\t    mail server.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2021-January/000451.html\">\n\t  <p>Mail delivery / parsing crashed when the 10 000th MIME part was\n\t    message/rfc822 (or if parent was multipart/digest). This happened\n\t    due to earlier MIME parsing changes for CVE-2020-12100.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://dovecot.org/pipermail/dovecot-news/2021-January/000448.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bd98066d-4ea4-11eb-b412-e86a64caca56.html"
-				}
-			],
-			"published": "2021-01-04T00:00:00Z"
+			"content": {
+				"id": "bd98066d-4ea4-11eb-b412-e86a64caca56",
+				"title": "mail/dovecot -- multiple vulnerabilities",
+				"description": "\n\t<p>Aki Tuomi reports:</p>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2021-January/000450.html\">\n\t  <p>When imap hibernation is active, an attacker can cause Dovecot to\n\t    discover file system directory structure and access other users'\n\t    emails using specially crafted command.\n\t    The attacker must have valid credentials to access the\n\t    mail server.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://dovecot.org/pipermail/dovecot-news/2021-January/000451.html\">\n\t  <p>Mail delivery / parsing crashed when the 10 000th MIME part was\n\t    message/rfc822 (or if parent was multipart/digest). This happened\n\t    due to earlier MIME parsing changes for CVE-2020-12100.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://dovecot.org/pipermail/dovecot-news/2021-January/000448.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bd98066d-4ea4-11eb-b412-e86a64caca56.html"
+					}
+				],
+				"published": "2021-01-04T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-24386",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24386"
-				}
+			"content": {
+				"id": "CVE-2020-24386",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-24386"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-25275",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-25275"
-				}
+			"content": {
+				"id": "CVE-2020-25275",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-25275"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,25 +2,30 @@
 	"id": "562a3fdf-16d6-11d9-bc4a-000c41e2cdad",
 	"advisories": [
 		{
-			"id": "562a3fdf-16d6-11d9-bc4a-000c41e2cdad",
-			"title": "php -- vulnerability in RFC 1867 file upload processing",
-			"description": "\n\t<p>Stefano Di Paola discovered an issue with PHP that\n\t  could allow someone to upload a file to any directory\n\t  writeable by the httpd process. Any sanitizing performed on\n\t  the prepended directory path is ignored. This bug can only\n\t  be triggered if the $_FILES element name contains an\n\t  underscore.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109534848430404"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109648426331965"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/562a3fdf-16d6-11d9-bc4a-000c41e2cdad.html"
-				}
-			],
-			"published": "2004-09-15T00:00:00Z",
-			"modified": "2004-10-12T00:00:00Z"
+			"content": {
+				"id": "562a3fdf-16d6-11d9-bc4a-000c41e2cdad",
+				"title": "php -- vulnerability in RFC 1867 file upload processing",
+				"description": "\n\t<p>Stefano Di Paola discovered an issue with PHP that\n\t  could allow someone to upload a file to any directory\n\t  writeable by the httpd process. Any sanitizing performed on\n\t  the prepended directory path is ignored. This bug can only\n\t  be triggered if the $_FILES element name contains an\n\t  underscore.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109534848430404"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109648426331965"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/562a3fdf-16d6-11d9-bc4a-000c41e2cdad.html"
+					}
+				],
+				"published": "2004-09-15T00:00:00Z",
+				"modified": "2004-10-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

@@ -2,20 +2,25 @@
 	"id": "c1dc55dc-9556-11e6-b154-3065ec8fd3ec",
 	"advisories": [
 		{
-			"id": "c1dc55dc-9556-11e6-b154-3065ec8fd3ec",
-			"title": "Tor -- remote denial of service",
-			"description": "\n\t<p>The Tor Blog reports:</p>\n\t<blockquote cite=\"https://blog.torproject.org/blog/tor-0289-released-important-fixes\">\n\t  <p>Prevent a class of security bugs caused by treating the contents\n\t    of a buffer chunk as if they were a NUL-terminated string. At least\n\t    one such bug seems to be present in all currently used versions of\n\t    Tor, and would allow an attacker to remotely crash most Tor\n\t    instances, especially those compiled with extra compiler hardening.\n\t    With this defense in place, such bugs can't crash Tor, though we\n\t    should still fix them as they occur. Closes ticket 20384\n\t    (TROVE-2016-10-001).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://blog.torproject.org/blog/tor-0289-released-important-fixes"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c1dc55dc-9556-11e6-b154-3065ec8fd3ec.html"
-				}
-			],
-			"published": "2016-10-18T00:00:00Z"
+			"content": {
+				"id": "c1dc55dc-9556-11e6-b154-3065ec8fd3ec",
+				"title": "Tor -- remote denial of service",
+				"description": "\n\t<p>The Tor Blog reports:</p>\n\t<blockquote cite=\"https://blog.torproject.org/blog/tor-0289-released-important-fixes\">\n\t  <p>Prevent a class of security bugs caused by treating the contents\n\t    of a buffer chunk as if they were a NUL-terminated string. At least\n\t    one such bug seems to be present in all currently used versions of\n\t    Tor, and would allow an attacker to remotely crash most Tor\n\t    instances, especially those compiled with extra compiler hardening.\n\t    With this defense in place, such bugs can't crash Tor, though we\n\t    should still fix them as they occur. Closes ticket 20384\n\t    (TROVE-2016-10-001).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://blog.torproject.org/blog/tor-0289-released-important-fixes"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c1dc55dc-9556-11e6-b154-3065ec8fd3ec.html"
+					}
+				],
+				"published": "2016-10-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

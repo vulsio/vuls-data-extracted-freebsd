@@ -2,48 +2,63 @@
 	"id": "f1692469-45ce-11e5-adde-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "f1692469-45ce-11e5-adde-14dae9d210b8",
-			"title": "jasper -- multiple vulnerabilities",
-			"description": "\n\t<p>Martin Prpic reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=1254242#c0\">\n\t  <p>A double free flaw was found in the way JasPer's\n\t    jasper_image_stop_load() function parsed certain JPEG 2000 image files.\n\t    A specially crafted file could cause an application using JasPer to\n\t    crash.</p>\n\t</blockquote>\n\t<p>Feist Josselin reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/408\">\n\t  <p>A new use-after-free was found in Jasper JPEG-200. The\n\t    use-after-free appears in the function mif_process_cmpt of the\n\t    src/libjasper/mif/mif_cod.c file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/oss-sec/2015/q3/366"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/oss-sec/2015/q3/408"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1254242#c0"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f1692469-45ce-11e5-adde-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-08-18T00:00:00Z",
-			"modified": "2016-02-24T00:00:00Z"
+			"content": {
+				"id": "f1692469-45ce-11e5-adde-14dae9d210b8",
+				"title": "jasper -- multiple vulnerabilities",
+				"description": "\n\t<p>Martin Prpic reports:</p>\n\t<blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=1254242#c0\">\n\t  <p>A double free flaw was found in the way JasPer's\n\t    jasper_image_stop_load() function parsed certain JPEG 2000 image files.\n\t    A specially crafted file could cause an application using JasPer to\n\t    crash.</p>\n\t</blockquote>\n\t<p>Feist Josselin reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/408\">\n\t  <p>A new use-after-free was found in Jasper JPEG-200. The\n\t    use-after-free appears in the function mif_process_cmpt of the\n\t    src/libjasper/mif/mif_cod.c file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/oss-sec/2015/q3/366"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/oss-sec/2015/q3/408"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.redhat.com/show_bug.cgi?id=1254242#c0"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f1692469-45ce-11e5-adde-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-08-18T00:00:00Z",
+				"modified": "2016-02-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-5203",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5203"
-				}
+			"content": {
+				"id": "CVE-2015-5203",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5203"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-5221",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5221"
-				}
+			"content": {
+				"id": "CVE-2015-5221",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5221"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

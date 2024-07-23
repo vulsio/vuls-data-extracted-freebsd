@@ -2,370 +2,540 @@
 	"id": "380e8c56-8e32-11e1-9580-4061862b8c22",
 	"advisories": [
 		{
-			"id": "380e8c56-8e32-11e1-9580-4061862b8c22",
-			"title": "mozilla -- multiple vulnerabilities",
-			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2012-20 Miscellaneous memory safety hazards (rv:12.0/ rv:10.0.4)</p>\n\t  <p>MFSA 2012-21 Multiple security flaws fixed in FreeType v2.4.9</p>\n\t  <p>MFSA 2012-22 use-after-free in IDBKeyRange</p>\n\t  <p>MFSA 2012-23 Invalid frees causes heap corruption in gfxImageSurface</p>\n\t  <p>MFSA 2012-24 Potential XSS via multibyte content processing errors</p>\n\t  <p>MFSA 2012-25 Potential memory corruption during font rendering using cairo-dwrite</p>\n\t  <p>MFSA 2012-26 WebGL.drawElements may read illegal video memory due to FindMaxUshortElement error</p>\n\t  <p>MFSA 2012-27 Page load short-circuit can lead to XSS</p>\n\t  <p>MFSA 2012-28 Ambiguous IPv6 in Origin headers may bypass webserver access restrictions</p>\n\t  <p>MFSA 2012-29 Potential XSS through ISO-2022-KR/ISO-2022-CN decoding issues</p>\n\t  <p>MFSA 2012-30 Crash with WebGL content using textImage2D</p>\n\t  <p>MFSA 2012-31 Off-by-one error in OpenType Sanitizer</p>\n\t  <p>MFSA 2012-32 HTTP Redirections and remote content can be read by javascript errors</p>\n\t  <p>MFSA 2012-33 Potential site identity spoofing when loading RSS and Atom feeds</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-20.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-21.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-22.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-23.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-24.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-25.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-26.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-27.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-28.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-29.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-30.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-31.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-32.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-33.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/380e8c56-8e32-11e1-9580-4061862b8c22.html"
-				}
-			],
-			"published": "2012-04-24T00:00:00Z"
+			"content": {
+				"id": "380e8c56-8e32-11e1-9580-4061862b8c22",
+				"title": "mozilla -- multiple vulnerabilities",
+				"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/known-vulnerabilities/\">\n\t  <p>MFSA 2012-20 Miscellaneous memory safety hazards (rv:12.0/ rv:10.0.4)</p>\n\t  <p>MFSA 2012-21 Multiple security flaws fixed in FreeType v2.4.9</p>\n\t  <p>MFSA 2012-22 use-after-free in IDBKeyRange</p>\n\t  <p>MFSA 2012-23 Invalid frees causes heap corruption in gfxImageSurface</p>\n\t  <p>MFSA 2012-24 Potential XSS via multibyte content processing errors</p>\n\t  <p>MFSA 2012-25 Potential memory corruption during font rendering using cairo-dwrite</p>\n\t  <p>MFSA 2012-26 WebGL.drawElements may read illegal video memory due to FindMaxUshortElement error</p>\n\t  <p>MFSA 2012-27 Page load short-circuit can lead to XSS</p>\n\t  <p>MFSA 2012-28 Ambiguous IPv6 in Origin headers may bypass webserver access restrictions</p>\n\t  <p>MFSA 2012-29 Potential XSS through ISO-2022-KR/ISO-2022-CN decoding issues</p>\n\t  <p>MFSA 2012-30 Crash with WebGL content using textImage2D</p>\n\t  <p>MFSA 2012-31 Off-by-one error in OpenType Sanitizer</p>\n\t  <p>MFSA 2012-32 HTTP Redirections and remote content can be read by javascript errors</p>\n\t  <p>MFSA 2012-33 Potential site identity spoofing when loading RSS and Atom feeds</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-20.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-21.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-22.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-23.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-24.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-25.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-26.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-27.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-28.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-29.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-30.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-31.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-32.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/2012/mfsa2012-33.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/380e8c56-8e32-11e1-9580-4061862b8c22.html"
+					}
+				],
+				"published": "2012-04-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2011-1187",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-1187"
-				}
+			"content": {
+				"id": "CVE-2011-1187",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-1187"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-3062",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-3062"
-				}
+			"content": {
+				"id": "CVE-2011-3062",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-3062"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0467",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0467"
-				}
+			"content": {
+				"id": "CVE-2012-0467",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0467"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0468",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0468"
-				}
+			"content": {
+				"id": "CVE-2012-0468",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0468"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0469",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0469"
-				}
+			"content": {
+				"id": "CVE-2012-0469",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0469"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0470",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0470"
-				}
+			"content": {
+				"id": "CVE-2012-0470",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0470"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0471",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0471"
-				}
+			"content": {
+				"id": "CVE-2012-0471",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0471"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0472",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0472"
-				}
+			"content": {
+				"id": "CVE-2012-0472",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0472"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0473",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0473"
-				}
+			"content": {
+				"id": "CVE-2012-0473",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0473"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0474",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0474"
-				}
+			"content": {
+				"id": "CVE-2012-0474",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0474"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0475",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0475"
-				}
+			"content": {
+				"id": "CVE-2012-0475",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0475"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0477",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0477"
-				}
+			"content": {
+				"id": "CVE-2012-0477",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0477"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0478",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0478"
-				}
+			"content": {
+				"id": "CVE-2012-0478",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0478"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-0479",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0479"
-				}
+			"content": {
+				"id": "CVE-2012-0479",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0479"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1126",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1126"
-				}
+			"content": {
+				"id": "CVE-2012-1126",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1126"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1127",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1127"
-				}
+			"content": {
+				"id": "CVE-2012-1127",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1127"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1128",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1128"
-				}
+			"content": {
+				"id": "CVE-2012-1128",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1128"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1129",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1129"
-				}
+			"content": {
+				"id": "CVE-2012-1129",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1129"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1130",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1130"
-				}
+			"content": {
+				"id": "CVE-2012-1130",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1130"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1131",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1131"
-				}
+			"content": {
+				"id": "CVE-2012-1131",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1131"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1132",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1132"
-				}
+			"content": {
+				"id": "CVE-2012-1132",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1132"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1133",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1133"
-				}
+			"content": {
+				"id": "CVE-2012-1133",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1133"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1134",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1134"
-				}
+			"content": {
+				"id": "CVE-2012-1134",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1134"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1135",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1135"
-				}
+			"content": {
+				"id": "CVE-2012-1135",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1135"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1136",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1136"
-				}
+			"content": {
+				"id": "CVE-2012-1136",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1136"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1137",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1137"
-				}
+			"content": {
+				"id": "CVE-2012-1137",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1137"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1138",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1138"
-				}
+			"content": {
+				"id": "CVE-2012-1138",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1138"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1139",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1139"
-				}
+			"content": {
+				"id": "CVE-2012-1139",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1139"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1140",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1140"
-				}
+			"content": {
+				"id": "CVE-2012-1140",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1140"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1141",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1141"
-				}
+			"content": {
+				"id": "CVE-2012-1141",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1141"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1142",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1142"
-				}
+			"content": {
+				"id": "CVE-2012-1142",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1142"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1143",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1143"
-				}
+			"content": {
+				"id": "CVE-2012-1143",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1143"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-1144",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1144"
-				}
+			"content": {
+				"id": "CVE-2012-1144",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1144"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

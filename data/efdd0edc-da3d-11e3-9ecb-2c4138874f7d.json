@@ -2,39 +2,49 @@
 	"id": "efdd0edc-da3d-11e3-9ecb-2c4138874f7d",
 	"advisories": [
 		{
-			"id": "efdd0edc-da3d-11e3-9ecb-2c4138874f7d",
-			"title": "libxml2 -- entity substitution DoS",
-			"description": "\n\t<p>Stefan Cornelius reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2014/05/06/4\">\n\t  <p>It was discovered that libxml2, a library providing\n\t     support to read, modify and write XML files, incorrectly\n\t     performs entity substitution in the doctype prolog, even if\n\t     the application using libxml2 disabled any entity\n\t     substitution.  A remote attacker could provide a\n\t     specially-crafted XML file that, when processed, would lead\n\t     to the exhaustion of CPU and memory resources or file\n\t     descriptors.</p>\n\t  <p>This issue was discovered by Daniel Berrange of Red Hat.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0191"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2014/05/06/4"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.gnome.org/browse/libxml2/tag/?id=CVE-2014-0191"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/efdd0edc-da3d-11e3-9ecb-2c4138874f7d.html"
-				}
-			],
-			"published": "2014-05-06T00:00:00Z",
-			"modified": "2015-07-15T00:00:00Z"
+			"content": {
+				"id": "efdd0edc-da3d-11e3-9ecb-2c4138874f7d",
+				"title": "libxml2 -- entity substitution DoS",
+				"description": "\n\t<p>Stefan Cornelius reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2014/05/06/4\">\n\t  <p>It was discovered that libxml2, a library providing\n\t     support to read, modify and write XML files, incorrectly\n\t     performs entity substitution in the doctype prolog, even if\n\t     the application using libxml2 disabled any entity\n\t     substitution.  A remote attacker could provide a\n\t     specially-crafted XML file that, when processed, would lead\n\t     to the exhaustion of CPU and memory resources or file\n\t     descriptors.</p>\n\t  <p>This issue was discovered by Daniel Berrange of Red Hat.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0191"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2014/05/06/4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.gnome.org/browse/libxml2/tag/?id=CVE-2014-0191"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/efdd0edc-da3d-11e3-9ecb-2c4138874f7d.html"
+					}
+				],
+				"published": "2014-05-06T00:00:00Z",
+				"modified": "2015-07-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-0191",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-0191"
-				}
+			"content": {
+				"id": "CVE-2014-0191",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-0191"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

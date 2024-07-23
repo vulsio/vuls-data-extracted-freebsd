@@ -2,51 +2,66 @@
 	"id": "9c133aa0-12bd-11dd-bab7-0016179b2dd5",
 	"advisories": [
 		{
-			"id": "9c133aa0-12bd-11dd-bab7-0016179b2dd5",
-			"title": "serendipity -- multiple cross site scripting vulnerabilities",
-			"description": "\n\t<p>Hanno Boeck reports:</p>\n\t<blockquote cite=\"http://int21.de/cve/CVE-2008-1386-s9y.html\">\n\t  <p>The installer of serendipity 1.3 has various Cross Site Scripting\n\t    issues.  This is considered low priority, as attack scenarios are\n\t    very unlikely.</p>\n\t  <p>Various path fields are not escaped properly, thus filling them\n\t    with javascript code will lead to XSS. MySQL error messages are not\n\t    escaped, thus the database host field can also be filled with\n\t    javascript.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://int21.de/cve/CVE-2008-1385-s9y.html\">\n\t  <p>In the referrer plugin of the blog application serendipity,\n\t    the referrer string is not escaped, thus leading to a permanent\n\t    XSS.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://blog.s9y.org/archives/193-Serendipity-1.3.1-released.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://int21.de/cve/CVE-2008-1385-s9y.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://int21.de/cve/CVE-2008-1386-s9y.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/28885"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9c133aa0-12bd-11dd-bab7-0016179b2dd5.html"
-				}
-			],
-			"published": "2008-04-25T00:00:00Z"
+			"content": {
+				"id": "9c133aa0-12bd-11dd-bab7-0016179b2dd5",
+				"title": "serendipity -- multiple cross site scripting vulnerabilities",
+				"description": "\n\t<p>Hanno Boeck reports:</p>\n\t<blockquote cite=\"http://int21.de/cve/CVE-2008-1386-s9y.html\">\n\t  <p>The installer of serendipity 1.3 has various Cross Site Scripting\n\t    issues.  This is considered low priority, as attack scenarios are\n\t    very unlikely.</p>\n\t  <p>Various path fields are not escaped properly, thus filling them\n\t    with javascript code will lead to XSS. MySQL error messages are not\n\t    escaped, thus the database host field can also be filled with\n\t    javascript.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://int21.de/cve/CVE-2008-1385-s9y.html\">\n\t  <p>In the referrer plugin of the blog application serendipity,\n\t    the referrer string is not escaped, thus leading to a permanent\n\t    XSS.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://blog.s9y.org/archives/193-Serendipity-1.3.1-released.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://int21.de/cve/CVE-2008-1385-s9y.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://int21.de/cve/CVE-2008-1386-s9y.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/28885"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9c133aa0-12bd-11dd-bab7-0016179b2dd5.html"
+					}
+				],
+				"published": "2008-04-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2008-1385",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1385"
-				}
+			"content": {
+				"id": "CVE-2008-1385",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2008-1385"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2008-1386",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2008-1386"
-				}
+			"content": {
+				"id": "CVE-2008-1386",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2008-1386"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

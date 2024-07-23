@@ -2,30 +2,40 @@
 	"id": "3c10ccdf-6a09-11ea-92ab-00163e433440",
 	"advisories": [
 		{
-			"id": "3c10ccdf-6a09-11ea-92ab-00163e433440",
-			"title": "FreeBSD -- Insufficient oce(4) ioctl(2) privilege checking",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The driver-specific ioctl(2) command handlers in oce(4) failed to\n\tcheck whether the caller has sufficient privileges to perform the\n\tcorresponding operation.</p>\n\t<h1>Impact:</h1>\n\t<p>The oce(4) handler permits unprivileged users to send passthrough\n\tcommands to device firmware.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:05.if_oce_ioctl.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3c10ccdf-6a09-11ea-92ab-00163e433440.html"
-				}
-			],
-			"published": "2020-03-19T00:00:00Z"
+			"content": {
+				"id": "3c10ccdf-6a09-11ea-92ab-00163e433440",
+				"title": "FreeBSD -- Insufficient oce(4) ioctl(2) privilege checking",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The driver-specific ioctl(2) command handlers in oce(4) failed to\n\tcheck whether the caller has sufficient privileges to perform the\n\tcorresponding operation.</p>\n\t<h1>Impact:</h1>\n\t<p>The oce(4) handler permits unprivileged users to send passthrough\n\tcommands to device firmware.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:05.if_oce_ioctl.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3c10ccdf-6a09-11ea-92ab-00163e433440.html"
+					}
+				],
+				"published": "2020-03-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-15876",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15876"
-				}
+			"content": {
+				"id": "CVE-2019-15876",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-15876"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

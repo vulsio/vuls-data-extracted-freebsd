@@ -2,24 +2,29 @@
 	"id": "d022754d-8839-11d9-aa18-0001020eed82",
 	"advisories": [
 		{
-			"id": "d022754d-8839-11d9-aa18-0001020eed82",
-			"title": "mozilla -- insecure temporary directory vulnerability",
-			"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-28.html\">\n\t  <p>A predictable name is used for the plugin temporary\n\t    directory. A malicious local user could symlink this to\n\t    the victim's home directory and wait for the victim to run\n\t    Firefox. When Firefox shuts down the victim's directory\n\t    would be erased.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/mfsa2005-28.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=281284"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d022754d-8839-11d9-aa18-0001020eed82.html"
-				}
-			],
-			"published": "2005-02-26T00:00:00Z"
+			"content": {
+				"id": "d022754d-8839-11d9-aa18-0001020eed82",
+				"title": "mozilla -- insecure temporary directory vulnerability",
+				"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-28.html\">\n\t  <p>A predictable name is used for the plugin temporary\n\t    directory. A malicious local user could symlink this to\n\t    the victim's home directory and wait for the victim to run\n\t    Firefox. When Firefox shuts down the victim's directory\n\t    would be erased.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/mfsa2005-28.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=281284"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d022754d-8839-11d9-aa18-0001020eed82.html"
+					}
+				],
+				"published": "2005-02-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

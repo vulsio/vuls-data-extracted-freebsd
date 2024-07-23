@@ -2,38 +2,48 @@
 	"id": "bbc97005-b14e-11e5-9728-002590263bf5",
 	"advisories": [
 		{
-			"id": "bbc97005-b14e-11e5-9728-002590263bf5",
-			"title": "qemu -- denial of service vulnerability in IDE disk/CD/DVD-ROM emulation",
-			"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/09/10/1\">\n\t  <p>Qemu emulator built with the IDE disk and CD/DVD-ROM emulation\n\t    support is vulnerable to a divide by zero issue. It could occur\n\t    while executing an IDE command WIN_READ_NATIVE_MAX to determine\n\t    the maximum size of a drive.</p>\n\t  <p>A privileged user inside guest could use this flaw to crash the\n\t    Qemu instance resulting in DoS.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=63d761388d6fea994ca498c6e7a210851a99ad93"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/09/10/1"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/seanbruno/qemu-bsd-user/commit/d9033e1d3aa666c5071580617a57bd853c5d794a"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bbc97005-b14e-11e5-9728-002590263bf5.html"
-				}
-			],
-			"published": "2016-01-02T00:00:00Z"
+			"content": {
+				"id": "bbc97005-b14e-11e5-9728-002590263bf5",
+				"title": "qemu -- denial of service vulnerability in IDE disk/CD/DVD-ROM emulation",
+				"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/09/10/1\">\n\t  <p>Qemu emulator built with the IDE disk and CD/DVD-ROM emulation\n\t    support is vulnerable to a divide by zero issue. It could occur\n\t    while executing an IDE command WIN_READ_NATIVE_MAX to determine\n\t    the maximum size of a drive.</p>\n\t  <p>A privileged user inside guest could use this flaw to crash the\n\t    Qemu instance resulting in DoS.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=63d761388d6fea994ca498c6e7a210851a99ad93"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/09/10/1"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/seanbruno/qemu-bsd-user/commit/d9033e1d3aa666c5071580617a57bd853c5d794a"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bbc97005-b14e-11e5-9728-002590263bf5.html"
+					}
+				],
+				"published": "2016-01-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-6855",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6855"
-				}
+			"content": {
+				"id": "CVE-2015-6855",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6855"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

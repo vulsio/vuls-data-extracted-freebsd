@@ -2,39 +2,49 @@
 	"id": "ec6a2a1e-429d-11e5-9daa-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "ec6a2a1e-429d-11e5-9daa-14dae9d210b8",
-			"title": "gnutls -- double free in certificate DN decoding",
-			"description": "\n\t<p>gnutls.org reports:</p>\n\t<blockquote cite=\"http://www.gnutls.org/security.html#GNUTLS-SA-2015-3\">\n\t    <p>Kurt Roeckx reported that decoding a specific certificate with very\n\t    long DistinguishedName (DN) entries leads to double free, which may\n\t    result to a denial of service. Since the DN decoding occurs in almost\n\t    all applications using certificates it is recommended to upgrade the\n\t    latest GnuTLS version fixing the issue. Recommendation: Upgrade to\n\t    GnuTLS 3.4.4, or 3.3.17.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/oss-sec/2015/q3/308"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2015-3"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://gitlab.com/gnutls/gnutls/commit/272854367efc130fbd4f1a51840d80c630214e12"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ec6a2a1e-429d-11e5-9daa-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-08-14T00:00:00Z",
-			"modified": "2015-08-18T00:00:00Z"
+			"content": {
+				"id": "ec6a2a1e-429d-11e5-9daa-14dae9d210b8",
+				"title": "gnutls -- double free in certificate DN decoding",
+				"description": "\n\t<p>gnutls.org reports:</p>\n\t<blockquote cite=\"http://www.gnutls.org/security.html#GNUTLS-SA-2015-3\">\n\t    <p>Kurt Roeckx reported that decoding a specific certificate with very\n\t    long DistinguishedName (DN) entries leads to double free, which may\n\t    result to a denial of service. Since the DN decoding occurs in almost\n\t    all applications using certificates it is recommended to upgrade the\n\t    latest GnuTLS version fixing the issue. Recommendation: Upgrade to\n\t    GnuTLS 3.4.4, or 3.3.17.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/oss-sec/2015/q3/308"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.gnutls.org/security.html#GNUTLS-SA-2015-3"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gitlab.com/gnutls/gnutls/commit/272854367efc130fbd4f1a51840d80c630214e12"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ec6a2a1e-429d-11e5-9daa-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-08-14T00:00:00Z",
+				"modified": "2015-08-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-6251",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6251"
-				}
+			"content": {
+				"id": "CVE-2015-6251",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6251"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

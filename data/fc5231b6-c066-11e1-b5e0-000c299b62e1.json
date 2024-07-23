@@ -2,30 +2,40 @@
 	"id": "fc5231b6-c066-11e1-b5e0-000c299b62e1",
 	"advisories": [
 		{
-			"id": "fc5231b6-c066-11e1-b5e0-000c299b62e1",
-			"title": "FreeBSD -- Incorrect handling of zero-length RDATA fields in named(8)",
-			"description": "\n\t<p>Problem description:</p>\n\t<blockquote cite=\"http://security.freebsd.org/advisories/FreeBSD-SA-12:03.bind.asc\">\n\t  <p>The named(8) server does not properly handle DNS resource records where\n\t     the RDATA field is zero length, which may cause various issues for the\n\t     servers handling them.</p>\n\t  <p>Resolving servers may crash or disclose some portion of memory to the\n\t     client.  Authoritative servers may crash on restart after transferring a\n\t     zone containing records with zero-length RDATA fields.  These would\n\t     result in a denial of service, or leak of sensitive information.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-12:03.bind.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/fc5231b6-c066-11e1-b5e0-000c299b62e1.html"
-				}
-			],
-			"published": "2012-06-27T00:00:00Z"
+			"content": {
+				"id": "fc5231b6-c066-11e1-b5e0-000c299b62e1",
+				"title": "FreeBSD -- Incorrect handling of zero-length RDATA fields in named(8)",
+				"description": "\n\t<p>Problem description:</p>\n\t<blockquote cite=\"http://security.freebsd.org/advisories/FreeBSD-SA-12:03.bind.asc\">\n\t  <p>The named(8) server does not properly handle DNS resource records where\n\t     the RDATA field is zero length, which may cause various issues for the\n\t     servers handling them.</p>\n\t  <p>Resolving servers may crash or disclose some portion of memory to the\n\t     client.  Authoritative servers may crash on restart after transferring a\n\t     zone containing records with zero-length RDATA fields.  These would\n\t     result in a denial of service, or leak of sensitive information.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-12:03.bind.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fc5231b6-c066-11e1-b5e0-000c299b62e1.html"
+					}
+				],
+				"published": "2012-06-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-1667",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1667"
-				}
+			"content": {
+				"id": "CVE-2012-1667",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1667"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

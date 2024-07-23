@@ -2,30 +2,40 @@
 	"id": "79dfc135-600a-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "79dfc135-600a-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- TCP MD5 signature denial of service",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A programming error in processing a TCP connection with\n\tboth TCP_MD5SIG and TCP_NOOPT socket options may lead to\n\tkernel crash.</p>\n\t<h1>Impact:</h1>\n\t<p>A local attacker can crash the kernel, resulting in a\n\tdenial-of-service.</p>\n\t<p>A remote attack is theoretically possible, if server has\n\ta listening socket with TCP_NOOPT set, and server is either\n\tout of SYN cache entries, or SYN cache is disabled by\n\tconfiguration.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:05.tcp.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/79dfc135-600a-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "79dfc135-600a-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- TCP MD5 signature denial of service",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A programming error in processing a TCP connection with\n\tboth TCP_MD5SIG and TCP_NOOPT socket options may lead to\n\tkernel crash.</p>\n\t<h1>Impact:</h1>\n\t<p>A local attacker can crash the kernel, resulting in a\n\tdenial-of-service.</p>\n\t<p>A remote attack is theoretically possible, if server has\n\ta listening socket with TCP_NOOPT set, and server is either\n\tout of SYN cache entries, or SYN cache is disabled by\n\tconfiguration.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-16:05.tcp.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/79dfc135-600a-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-1882",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1882"
-				}
+			"content": {
+				"id": "CVE-2016-1882",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1882"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

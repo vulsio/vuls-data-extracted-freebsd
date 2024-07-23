@@ -2,30 +2,40 @@
 	"id": "719f06af-e45e-11ea-95a1-c3b8167b8026",
 	"advisories": [
 		{
-			"id": "719f06af-e45e-11ea-95a1-c3b8167b8026",
-			"title": "chrony <= 3.5.1 data corruption through symlink vulnerability writing the pidfile",
-			"description": "\n\t<p>Miroslav Lichvar reports:</p>\n\t<blockquote cite=\"https://listengine.tuxfamily.org/chrony.tuxfamily.org/chrony-announce/2020/08/msg00000.html\">\n\t  <p>chrony-3.5.1 [...] fixes a security issue in writing of the pidfile.</p>\n\t  <p>When chronyd is configured to save the pidfile in a directory where the\n\t    chrony user has write permissions (e.g. /var/run/chrony - the default\n\t    since chrony-3.4), an attacker that compromised the chrony user account\n\t    could create a symbolic link at the location of the pidfile to make\n\t    chronyd starting with root privileges follow the symlink and write its\n\t    process ID to a file for which the chrony user doesn't have write\n\t    permissions, causing a denial of service, or data loss.</p>\n\t  <p>This issue was reported by Matthias Gerstner of SUSE.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://listengine.tuxfamily.org/chrony.tuxfamily.org/chrony-announce/2020/08/msg00000.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/719f06af-e45e-11ea-95a1-c3b8167b8026.html"
-				}
-			],
-			"published": "2020-08-22T00:00:00Z"
+			"content": {
+				"id": "719f06af-e45e-11ea-95a1-c3b8167b8026",
+				"title": "chrony <= 3.5.1 data corruption through symlink vulnerability writing the pidfile",
+				"description": "\n\t<p>Miroslav Lichvar reports:</p>\n\t<blockquote cite=\"https://listengine.tuxfamily.org/chrony.tuxfamily.org/chrony-announce/2020/08/msg00000.html\">\n\t  <p>chrony-3.5.1 [...] fixes a security issue in writing of the pidfile.</p>\n\t  <p>When chronyd is configured to save the pidfile in a directory where the\n\t    chrony user has write permissions (e.g. /var/run/chrony - the default\n\t    since chrony-3.4), an attacker that compromised the chrony user account\n\t    could create a symbolic link at the location of the pidfile to make\n\t    chronyd starting with root privileges follow the symlink and write its\n\t    process ID to a file for which the chrony user doesn't have write\n\t    permissions, causing a denial of service, or data loss.</p>\n\t  <p>This issue was reported by Matthias Gerstner of SUSE.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://listengine.tuxfamily.org/chrony.tuxfamily.org/chrony-announce/2020/08/msg00000.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/719f06af-e45e-11ea-95a1-c3b8167b8026.html"
+					}
+				],
+				"published": "2020-08-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-14367",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-14367"
-				}
+			"content": {
+				"id": "CVE-2020-14367",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-14367"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

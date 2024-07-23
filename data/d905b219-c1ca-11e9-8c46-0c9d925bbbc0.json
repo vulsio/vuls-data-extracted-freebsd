@@ -2,30 +2,40 @@
 	"id": "d905b219-c1ca-11e9-8c46-0c9d925bbbc0",
 	"advisories": [
 		{
-			"id": "d905b219-c1ca-11e9-8c46-0c9d925bbbc0",
-			"title": "xdm -- remote denial of service",
-			"description": "\n\t<p>nvd.nist.gov reports</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2013-2179\">\n\t  <p>X.Org xdm 1.1.10, 1.1.11, and possibly other versions,\n\t    when performing authentication using certain implementations of\n\t    the crypt API function that can return NULL, allows remote\n\t    attackers to cause a denial of service (NULL pointer dereference\n\t    and crash) by attempting to log into an account whose password\n\t    field contains invalid characters, as demonstrated using the crypt\n\t    function from glibc 2.17 and later with (1) the \"!\" character in\n\t    the salt portion of a password field or (2) a password that has\n\t    been encrypted using DES or MD5 in FIPS-140 mode.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2179"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d905b219-c1ca-11e9-8c46-0c9d925bbbc0.html"
-				}
-			],
-			"published": "2019-08-18T00:00:00Z"
+			"content": {
+				"id": "d905b219-c1ca-11e9-8c46-0c9d925bbbc0",
+				"title": "xdm -- remote denial of service",
+				"description": "\n\t<p>nvd.nist.gov reports</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2013-2179\">\n\t  <p>X.Org xdm 1.1.10, 1.1.11, and possibly other versions,\n\t    when performing authentication using certain implementations of\n\t    the crypt API function that can return NULL, allows remote\n\t    attackers to cause a denial of service (NULL pointer dereference\n\t    and crash) by attempting to log into an account whose password\n\t    field contains invalid characters, as demonstrated using the crypt\n\t    function from glibc 2.17 and later with (1) the \"!\" character in\n\t    the salt portion of a password field or (2) a password that has\n\t    been encrypted using DES or MD5 in FIPS-140 mode.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2179"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d905b219-c1ca-11e9-8c46-0c9d925bbbc0.html"
+					}
+				],
+				"published": "2019-08-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-2179",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2179"
-				}
+			"content": {
+				"id": "CVE-2013-2179",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2179"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

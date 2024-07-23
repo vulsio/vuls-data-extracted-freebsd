@@ -2,85 +2,125 @@
 	"id": "f38187e7-2f6e-11e8-8f07-b499baebfeaf",
 	"advisories": [
 		{
-			"id": "f38187e7-2f6e-11e8-8f07-b499baebfeaf",
-			"title": "apache -- multiple vulnerabilities",
-			"description": "\n\t<p>The Apache httpd reports:</p>\n\t<blockquote cite=\"https://www.apache.org/dist/httpd/CHANGES_2.4.33\">\n\t  <p>Out of bound write in mod_authnz_ldap with AuthLDAPCharsetConfig\n\t    enabled (CVE-2017-15710)</p>\n\t  <p>mod_session: CGI-like applications that intend to read from\n\t    mod_session's 'SessionEnv ON' could be fooled into reading\n\t    user-supplied data instead. (CVE-2018-1283)</p>\n\t  <p>mod_cache_socache: Fix request headers parsing to avoid a possible\n\t    crash with specially crafted input data. (CVE-2018-1303)</p>\n\t  <p>core: Possible crash with excessively long HTTP request headers.\n\t    Impractical to exploit with a production build and production\n\t    LogLevel. (CVE-2018-1301)</p>\n\t  <p>core: Configure the regular expression engine to match '$' to the\n\t    end of the input string only, excluding matching the end of any\n\t    embedded newline characters. Behavior can be changed with new\n\t    directive 'RegexDefaultOptions'. (CVE-2017-15715)</p>\n\t  <p>mod_auth_digest: Fix generation of nonce values to prevent replay\n\t    attacks across servers using a common Digest domain. This change\n\t    may cause problems if used with round robin load balancers.\n\t    (CVE-2018-1312)</p>\n\t  <p>mod_http2: Potential crash w/ mod_http2. (CVE-2018-1302)</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.apache.org/dist/httpd/CHANGES_2.4.33"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f38187e7-2f6e-11e8-8f07-b499baebfeaf.html"
-				}
-			],
-			"published": "2018-03-24T00:00:00Z",
-			"modified": "2018-03-27T00:00:00Z"
+			"content": {
+				"id": "f38187e7-2f6e-11e8-8f07-b499baebfeaf",
+				"title": "apache -- multiple vulnerabilities",
+				"description": "\n\t<p>The Apache httpd reports:</p>\n\t<blockquote cite=\"https://www.apache.org/dist/httpd/CHANGES_2.4.33\">\n\t  <p>Out of bound write in mod_authnz_ldap with AuthLDAPCharsetConfig\n\t    enabled (CVE-2017-15710)</p>\n\t  <p>mod_session: CGI-like applications that intend to read from\n\t    mod_session's 'SessionEnv ON' could be fooled into reading\n\t    user-supplied data instead. (CVE-2018-1283)</p>\n\t  <p>mod_cache_socache: Fix request headers parsing to avoid a possible\n\t    crash with specially crafted input data. (CVE-2018-1303)</p>\n\t  <p>core: Possible crash with excessively long HTTP request headers.\n\t    Impractical to exploit with a production build and production\n\t    LogLevel. (CVE-2018-1301)</p>\n\t  <p>core: Configure the regular expression engine to match '$' to the\n\t    end of the input string only, excluding matching the end of any\n\t    embedded newline characters. Behavior can be changed with new\n\t    directive 'RegexDefaultOptions'. (CVE-2017-15715)</p>\n\t  <p>mod_auth_digest: Fix generation of nonce values to prevent replay\n\t    attacks across servers using a common Digest domain. This change\n\t    may cause problems if used with round robin load balancers.\n\t    (CVE-2018-1312)</p>\n\t  <p>mod_http2: Potential crash w/ mod_http2. (CVE-2018-1302)</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.apache.org/dist/httpd/CHANGES_2.4.33"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f38187e7-2f6e-11e8-8f07-b499baebfeaf.html"
+					}
+				],
+				"published": "2018-03-24T00:00:00Z",
+				"modified": "2018-03-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-15710",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-15710"
-				}
+			"content": {
+				"id": "CVE-2017-15710",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-15710"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-15715",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-15715"
-				}
+			"content": {
+				"id": "CVE-2017-15715",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-15715"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-1283",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1283"
-				}
+			"content": {
+				"id": "CVE-2018-1283",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-1283"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-1301",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1301"
-				}
+			"content": {
+				"id": "CVE-2018-1301",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-1301"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-1302",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1302"
-				}
+			"content": {
+				"id": "CVE-2018-1302",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-1302"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-1303",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1303"
-				}
+			"content": {
+				"id": "CVE-2018-1303",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-1303"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-1312",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-1312"
-				}
+			"content": {
+				"id": "CVE-2018-1312",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-1312"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

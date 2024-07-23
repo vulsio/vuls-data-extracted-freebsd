@@ -2,20 +2,25 @@
 	"id": "91afa94c-c452-11da-8bff-000ae42e9b93",
 	"advisories": [
 		{
-			"id": "91afa94c-c452-11da-8bff-000ae42e9b93",
-			"title": "mod_pubcookie -- cross site scripting vulnerability",
-			"description": "\n\t<p>Nathan Dors of the Pubcookie Project reports:</p>\n\t<blockquote cite=\"http://www.pubcookie.org/news/20060306-apps-secadv.html\">\n\t  <p>Non-persistent XSS vulnerabilities were found in the\n\t    Pubcookie Apache module (mod_pubcookie) and ISAPI\n\t    filter. These components mishandle untrusted data when\n\t    printing responses to the browser. This makes them\n\t    vulnerable to carefully crafted requests containing script\n\t    or HTML. If an attacker can lure an unsuspecting user to\n\t    visit carefully staged content, the attacker can use it to\n\t    redirect the user to a vulnerable Pubcookie application\n\t    server and attempt to exploit the XSS vulnerabilities.</p>\n\t  <p>These vulnerabilities are classified as *high* due to the\n\t    nature and purpose of Pubcookie application servers for user\n\t    authentication and Web Single Sign-on (SSO). An attacker\n\t    who injects malicious script through the vulnerabilities\n\t    might steal private Pubcookie data including a user's\n\t    authentication assertion (\"granting\") cookies and\n\t    application session cookies.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kb.cert.org/vuls/id/314540"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/91afa94c-c452-11da-8bff-000ae42e9b93.html"
-				}
-			],
-			"published": "2006-04-05T00:00:00Z"
+			"content": {
+				"id": "91afa94c-c452-11da-8bff-000ae42e9b93",
+				"title": "mod_pubcookie -- cross site scripting vulnerability",
+				"description": "\n\t<p>Nathan Dors of the Pubcookie Project reports:</p>\n\t<blockquote cite=\"http://www.pubcookie.org/news/20060306-apps-secadv.html\">\n\t  <p>Non-persistent XSS vulnerabilities were found in the\n\t    Pubcookie Apache module (mod_pubcookie) and ISAPI\n\t    filter. These components mishandle untrusted data when\n\t    printing responses to the browser. This makes them\n\t    vulnerable to carefully crafted requests containing script\n\t    or HTML. If an attacker can lure an unsuspecting user to\n\t    visit carefully staged content, the attacker can use it to\n\t    redirect the user to a vulnerable Pubcookie application\n\t    server and attempt to exploit the XSS vulnerabilities.</p>\n\t  <p>These vulnerabilities are classified as *high* due to the\n\t    nature and purpose of Pubcookie application servers for user\n\t    authentication and Web Single Sign-on (SSO). An attacker\n\t    who injects malicious script through the vulnerabilities\n\t    might steal private Pubcookie data including a user's\n\t    authentication assertion (\"granting\") cookies and\n\t    application session cookies.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kb.cert.org/vuls/id/314540"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/91afa94c-c452-11da-8bff-000ae42e9b93.html"
+					}
+				],
+				"published": "2006-04-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

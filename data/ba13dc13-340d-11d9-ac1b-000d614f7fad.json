@@ -2,35 +2,45 @@
 	"id": "ba13dc13-340d-11d9-ac1b-000d614f7fad",
 	"advisories": [
 		{
-			"id": "ba13dc13-340d-11d9-ac1b-000d614f7fad",
-			"title": "samba -- potential remote DoS vulnerability",
-			"description": "\n      <p>Karol Wiesek at iDEFENSE reports:</p>\n\t<blockquote cite=\"http://us4.samba.org/samba/security/CAN-2004-0930.html\">\n\t  <p>A remote attacker could cause an smbd process to consume\n\t    abnormal amounts of system resources due to an input\n\t    validation error when matching filenames containing\n\t    wildcard characters.</p>\n\t</blockquote>\n\t<p>Although samba.org classifies this as a DoS vulnerability,\n\t  several members of the security community believe it may be\n\t  exploitable for arbitrary code execution.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://us4.samba.org/samba/security/CAN-2004-0930.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=73701"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ba13dc13-340d-11d9-ac1b-000d614f7fad.html"
-				}
-			],
-			"published": "2004-11-12T00:00:00Z",
-			"modified": "2008-09-26T00:00:00Z"
+			"content": {
+				"id": "ba13dc13-340d-11d9-ac1b-000d614f7fad",
+				"title": "samba -- potential remote DoS vulnerability",
+				"description": "\n      <p>Karol Wiesek at iDEFENSE reports:</p>\n\t<blockquote cite=\"http://us4.samba.org/samba/security/CAN-2004-0930.html\">\n\t  <p>A remote attacker could cause an smbd process to consume\n\t    abnormal amounts of system resources due to an input\n\t    validation error when matching filenames containing\n\t    wildcard characters.</p>\n\t</blockquote>\n\t<p>Although samba.org classifies this as a DoS vulnerability,\n\t  several members of the security community believe it may be\n\t  exploitable for arbitrary code execution.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://us4.samba.org/samba/security/CAN-2004-0930.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=73701"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ba13dc13-340d-11d9-ac1b-000d614f7fad.html"
+					}
+				],
+				"published": "2004-11-12T00:00:00Z",
+				"modified": "2008-09-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0930",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0930"
-				}
+			"content": {
+				"id": "CVE-2004-0930",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0930"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

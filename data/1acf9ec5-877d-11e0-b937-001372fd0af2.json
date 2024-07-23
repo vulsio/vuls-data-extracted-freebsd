@@ -2,20 +2,25 @@
 	"id": "1acf9ec5-877d-11e0-b937-001372fd0af2",
 	"advisories": [
 		{
-			"id": "1acf9ec5-877d-11e0-b937-001372fd0af2",
-			"title": "drupal6 -- multiple vulnerabilities",
-			"description": "\n\t<p>Drupal Team reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/1168756\">\n\t  <p>A reflected cross site scripting vulnerability was discovered\n\t    in Drupal's error handler.  Drupal displays PHP errors in the\n\t    messages area, and a specially crafted URL can cause malicious\n\t    scripts to be injected into the message.  The issue can be\n\t    mitigated by disabling on-screen error display at admin /\n\t    settings / error-reporting.  This is the recommended setting\n\t    for production sites.</p>\n\t  <p>When using re-colorable themes, color inputs are not sanitized.\n\t    Malicious color values can be used to insert arbitrary CSS and\n\t    script code.  Successful exploitation requires the \"Administer\n\t    themes\" permission.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://drupal.org/node/1168756"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1acf9ec5-877d-11e0-b937-001372fd0af2.html"
-				}
-			],
-			"published": "2011-05-26T00:00:00Z"
+			"content": {
+				"id": "1acf9ec5-877d-11e0-b937-001372fd0af2",
+				"title": "drupal6 -- multiple vulnerabilities",
+				"description": "\n\t<p>Drupal Team reports:</p>\n\t<blockquote cite=\"http://drupal.org/node/1168756\">\n\t  <p>A reflected cross site scripting vulnerability was discovered\n\t    in Drupal's error handler.  Drupal displays PHP errors in the\n\t    messages area, and a specially crafted URL can cause malicious\n\t    scripts to be injected into the message.  The issue can be\n\t    mitigated by disabling on-screen error display at admin /\n\t    settings / error-reporting.  This is the recommended setting\n\t    for production sites.</p>\n\t  <p>When using re-colorable themes, color inputs are not sanitized.\n\t    Malicious color values can be used to insert arbitrary CSS and\n\t    script code.  Successful exploitation requires the \"Administer\n\t    themes\" permission.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://drupal.org/node/1168756"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1acf9ec5-877d-11e0-b937-001372fd0af2.html"
+					}
+				],
+				"published": "2011-05-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

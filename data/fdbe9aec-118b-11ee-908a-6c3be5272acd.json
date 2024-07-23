@@ -2,30 +2,40 @@
 	"id": "fdbe9aec-118b-11ee-908a-6c3be5272acd",
 	"advisories": [
 		{
-			"id": "fdbe9aec-118b-11ee-908a-6c3be5272acd",
-			"title": "Grafana -- Account takeover / authentication bypass",
-			"description": "\n\t<p>Grafana Labs reports:</p>\n\t<blockquote cite=\"https://grafana.com/blog/2023/06/22/grafana-security-release-for-cve-2023-3128/\">\n\t  <p>Grafana validates Azure Active Directory accounts based on the email claim.\n\t  On Azure AD, the profile email field is not unique across Azure AD tenants.\n\t  This can enable a Grafana account takeover and authentication bypass when\n\t  Azure AD OAuth is configured with a multi-tenant Azure AD OAuth application.\n\t  </p>\n\t  <p>The CVSS score for this vulnerability is 9.4 Critical.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://grafana.com/security/security-advisories/cve-2023-3128"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/fdbe9aec-118b-11ee-908a-6c3be5272acd.html"
-				}
-			],
-			"published": "2023-06-23T00:00:00Z"
+			"content": {
+				"id": "fdbe9aec-118b-11ee-908a-6c3be5272acd",
+				"title": "Grafana -- Account takeover / authentication bypass",
+				"description": "\n\t<p>Grafana Labs reports:</p>\n\t<blockquote cite=\"https://grafana.com/blog/2023/06/22/grafana-security-release-for-cve-2023-3128/\">\n\t  <p>Grafana validates Azure Active Directory accounts based on the email claim.\n\t  On Azure AD, the profile email field is not unique across Azure AD tenants.\n\t  This can enable a Grafana account takeover and authentication bypass when\n\t  Azure AD OAuth is configured with a multi-tenant Azure AD OAuth application.\n\t  </p>\n\t  <p>The CVSS score for this vulnerability is 9.4 Critical.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://grafana.com/security/security-advisories/cve-2023-3128"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fdbe9aec-118b-11ee-908a-6c3be5272acd.html"
+					}
+				],
+				"published": "2023-06-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-3128",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3128"
-				}
+			"content": {
+				"id": "CVE-2023-3128",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3128"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

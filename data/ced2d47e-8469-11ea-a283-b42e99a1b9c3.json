@@ -2,30 +2,40 @@
 	"id": "ced2d47e-8469-11ea-a283-b42e99a1b9c3",
 	"advisories": [
 		{
-			"id": "ced2d47e-8469-11ea-a283-b42e99a1b9c3",
-			"title": "malicious URLs may present credentials to wrong server",
-			"description": "\n\t<p>git security advisory reports:</p>\n\t<blockquote cite=\"https://github.com/git/git/security/advisories/GHSA-qm7j-c969-7j4q\">\n\t  <p>Git uses external \"credential helper\" programs to store and retrieve passwords or\n\t  other credentials from secure storage provided by the operating system.\n\t  Specially-crafted URLs that contain an encoded newline can inject unintended values\n\t  into the credential helper protocol stream, causing the credential helper to retrieve\n\t  the password for one server for an HTTP request being made to another\n\t  server, resulting in credentials for the former being sent to the\n\t  latter.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/git/git/security/advisories/GHSA-qm7j-c969-7j4q"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ced2d47e-8469-11ea-a283-b42e99a1b9c3.html"
-				}
-			],
-			"published": "2020-04-22T00:00:00Z"
+			"content": {
+				"id": "ced2d47e-8469-11ea-a283-b42e99a1b9c3",
+				"title": "malicious URLs may present credentials to wrong server",
+				"description": "\n\t<p>git security advisory reports:</p>\n\t<blockquote cite=\"https://github.com/git/git/security/advisories/GHSA-qm7j-c969-7j4q\">\n\t  <p>Git uses external \"credential helper\" programs to store and retrieve passwords or\n\t  other credentials from secure storage provided by the operating system.\n\t  Specially-crafted URLs that contain an encoded newline can inject unintended values\n\t  into the credential helper protocol stream, causing the credential helper to retrieve\n\t  the password for one server for an HTTP request being made to another\n\t  server, resulting in credentials for the former being sent to the\n\t  latter.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/git/git/security/advisories/GHSA-qm7j-c969-7j4q"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ced2d47e-8469-11ea-a283-b42e99a1b9c3.html"
+					}
+				],
+				"published": "2020-04-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-5260",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-5260"
-				}
+			"content": {
+				"id": "CVE-2020-5260",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-5260"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

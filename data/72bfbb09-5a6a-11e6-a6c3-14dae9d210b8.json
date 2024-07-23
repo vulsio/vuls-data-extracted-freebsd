@@ -2,31 +2,41 @@
 	"id": "72bfbb09-5a6a-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "72bfbb09-5a6a-11e6-a6c3-14dae9d210b8",
-			"title": "perl -- local arbitrary code execution",
-			"description": "\n\t<p>Sawyer X reports:</p>\n\t<blockquote cite=\"http://www.nntp.perl.org/group/perl.perl5.porters/2016/07/msg238271.html\">\n\t  <p>Perl 5.x before 5.22.3-RC2 and 5.24 before 5.24.1-RC2 do\n\t    not properly remove . (period) characters from the end of the includes\n\t    directory array, which might allow local users to gain privileges via a\n\t    Trojan horse module under the current working directory.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.nntp.perl.org/group/perl.perl5.porters/2016/07/msg238271.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/72bfbb09-5a6a-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-04T00:00:00Z",
-			"modified": "2016-08-22T00:00:00Z"
+			"content": {
+				"id": "72bfbb09-5a6a-11e6-a6c3-14dae9d210b8",
+				"title": "perl -- local arbitrary code execution",
+				"description": "\n\t<p>Sawyer X reports:</p>\n\t<blockquote cite=\"http://www.nntp.perl.org/group/perl.perl5.porters/2016/07/msg238271.html\">\n\t  <p>Perl 5.x before 5.22.3-RC2 and 5.24 before 5.24.1-RC2 do\n\t    not properly remove . (period) characters from the end of the includes\n\t    directory array, which might allow local users to gain privileges via a\n\t    Trojan horse module under the current working directory.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.nntp.perl.org/group/perl.perl5.porters/2016/07/msg238271.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/72bfbb09-5a6a-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-04T00:00:00Z",
+				"modified": "2016-08-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-1238",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1238"
-				}
+			"content": {
+				"id": "CVE-2016-1238",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1238"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

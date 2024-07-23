@@ -2,38 +2,48 @@
 	"id": "4867ae85-608d-11db-8faf-000c6ec775d9",
 	"advisories": [
 		{
-			"id": "4867ae85-608d-11db-8faf-000c6ec775d9",
-			"title": "opera -- URL parsing heap overflow vulnerability",
-			"description": "\n\t<p>iDefense Labs reports:</p>\n\t<blockquote cite=\"http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=424\">\n\t  <p>Remote exploitation of a heap overflow vulnerability\n\t    within version 9 of Opera Software's Opera Web browser\n\t    could allow an attacker to execute arbitrary code on the\n\t    affected host.</p>\n\t  <p>A flaw exists within Opera when parsing a tag that\n\t    contains a URL. A heap buffer with a constant size of 256\n\t    bytes is allocated to store the URL, and the tag's URL is\n\t    copied into this buffer without sufficient bounds checking\n\t    of its length.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=424"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/22218/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.opera.com/support/search/supsearch.dml?index=848"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4867ae85-608d-11db-8faf-000c6ec775d9.html"
-				}
-			],
-			"published": "2006-10-20T00:00:00Z"
+			"content": {
+				"id": "4867ae85-608d-11db-8faf-000c6ec775d9",
+				"title": "opera -- URL parsing heap overflow vulnerability",
+				"description": "\n\t<p>iDefense Labs reports:</p>\n\t<blockquote cite=\"http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=424\">\n\t  <p>Remote exploitation of a heap overflow vulnerability\n\t    within version 9 of Opera Software's Opera Web browser\n\t    could allow an attacker to execute arbitrary code on the\n\t    affected host.</p>\n\t  <p>A flaw exists within Opera when parsing a tag that\n\t    contains a URL. A heap buffer with a constant size of 256\n\t    bytes is allocated to store the URL, and the tag's URL is\n\t    copied into this buffer without sufficient bounds checking\n\t    of its length.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=424"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/22218/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.opera.com/support/search/supsearch.dml?index=848"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4867ae85-608d-11db-8faf-000c6ec775d9.html"
+					}
+				],
+				"published": "2006-10-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-4819",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-4819"
-				}
+			"content": {
+				"id": "CVE-2006-4819",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-4819"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

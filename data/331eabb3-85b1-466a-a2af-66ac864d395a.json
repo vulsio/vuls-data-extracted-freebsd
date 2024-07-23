@@ -2,34 +2,44 @@
 	"id": "331eabb3-85b1-466a-a2af-66ac864d395a",
 	"advisories": [
 		{
-			"id": "331eabb3-85b1-466a-a2af-66ac864d395a",
-			"title": "wolfssl -- leakage of private key information",
-			"description": "\n  <p>Florian Weimer of Redhat discovered that an optimization in\n  RSA signature validation can result in disclosure of the\n  server's private key under certain fault conditions.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://securityblog.redhat.com/2015/09/02/factoring-rsa-keys-with-tls-perfect-forward-secrecy/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/331eabb3-85b1-466a-a2af-66ac864d395a.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.wolfssl.com/wolfSSL/Blog/Entries/2015/9/17_Two_Vulnerabilities_Recently_Found%2C_An_Attack_on_RSA_using_CRT_and_DoS_Vulnerability_With_DTLS.html"
-				}
-			],
-			"published": "2016-01-05T00:00:00Z"
+			"content": {
+				"id": "331eabb3-85b1-466a-a2af-66ac864d395a",
+				"title": "wolfssl -- leakage of private key information",
+				"description": "\n  <p>Florian Weimer of Redhat discovered that an optimization in\n  RSA signature validation can result in disclosure of the\n  server's private key under certain fault conditions.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://securityblog.redhat.com/2015/09/02/factoring-rsa-keys-with-tls-perfect-forward-secrecy/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/331eabb3-85b1-466a-a2af-66ac864d395a.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.wolfssl.com/wolfSSL/Blog/Entries/2015/9/17_Two_Vulnerabilities_Recently_Found%2C_An_Attack_on_RSA_using_CRT_and_DoS_Vulnerability_With_DTLS.html"
+					}
+				],
+				"published": "2016-01-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7744",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7744"
-				}
+			"content": {
+				"id": "CVE-2015-7744",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7744"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

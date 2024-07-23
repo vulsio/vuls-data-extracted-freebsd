@@ -2,30 +2,40 @@
 	"id": "7a8a74d1-9c34-11e4-a40b-5453ed2e2b49",
 	"advisories": [
 		{
-			"id": "7a8a74d1-9c34-11e4-a40b-5453ed2e2b49",
-			"title": "kde-runtime -- incorrect CBC encryption handling",
-			"description": "\n\t<p>Valentin Rusu reports:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20150109-1.txt\">\n\t  <p>Until KDE Applications 14.12.0, kwalletd incorrectly handled CBC\n\t    encryption blocks when encrypting secrets in kwl files. The secrets\n\t    were still encrypted, but the result binary data corresponded to an\n\t    ECB encrypted block instead of CBC.</p>\n\t  <p>The ECB encryption algorithm, even if it'll scramble user data,\n\t    will produce same encrypted byte sequence for the same input text.\n\t    As a result, attackers may eventually find-out the encrypted\n\t    text.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kde.org/info/security/advisory-20150109-1.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/7a8a74d1-9c34-11e4-a40b-5453ed2e2b49.html"
-				}
-			],
-			"published": "2015-01-14T00:00:00Z"
+			"content": {
+				"id": "7a8a74d1-9c34-11e4-a40b-5453ed2e2b49",
+				"title": "kde-runtime -- incorrect CBC encryption handling",
+				"description": "\n\t<p>Valentin Rusu reports:</p>\n\t<blockquote cite=\"https://www.kde.org/info/security/advisory-20150109-1.txt\">\n\t  <p>Until KDE Applications 14.12.0, kwalletd incorrectly handled CBC\n\t    encryption blocks when encrypting secrets in kwl files. The secrets\n\t    were still encrypted, but the result binary data corresponded to an\n\t    ECB encrypted block instead of CBC.</p>\n\t  <p>The ECB encryption algorithm, even if it'll scramble user data,\n\t    will produce same encrypted byte sequence for the same input text.\n\t    As a result, attackers may eventually find-out the encrypted\n\t    text.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kde.org/info/security/advisory-20150109-1.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7a8a74d1-9c34-11e4-a40b-5453ed2e2b49.html"
+					}
+				],
+				"published": "2015-01-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-7252",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-7252"
-				}
+			"content": {
+				"id": "CVE-2013-7252",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-7252"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

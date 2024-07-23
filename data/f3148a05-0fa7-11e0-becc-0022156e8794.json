@@ -2,24 +2,29 @@
 	"id": "f3148a05-0fa7-11e0-becc-0022156e8794",
 	"advisories": [
 		{
-			"id": "f3148a05-0fa7-11e0-becc-0022156e8794",
-			"title": "php -- corruption of $GLOBALS and $this variables via extract() method",
-			"description": "\n\t<p>Off-by-one error in the sanity validator for the extract()\n\t  method allowed attackers to replace the values of $GLOBALS\n\t  and $this when mode EXTR_OVERWRITE was used.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mail-archive.com/php-cvs@lists.php.net/msg47722.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.php.net/releases/5_2_15.php"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f3148a05-0fa7-11e0-becc-0022156e8794.html"
-				}
-			],
-			"published": "2011-01-13T00:00:00Z"
+			"content": {
+				"id": "f3148a05-0fa7-11e0-becc-0022156e8794",
+				"title": "php -- corruption of $GLOBALS and $this variables via extract() method",
+				"description": "\n\t<p>Off-by-one error in the sanity validator for the extract()\n\t  method allowed attackers to replace the values of $GLOBALS\n\t  and $this when mode EXTR_OVERWRITE was used.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mail-archive.com/php-cvs@lists.php.net/msg47722.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.php.net/releases/5_2_15.php"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f3148a05-0fa7-11e0-becc-0022156e8794.html"
+					}
+				],
+				"published": "2011-01-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

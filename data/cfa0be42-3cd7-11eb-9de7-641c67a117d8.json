@@ -2,34 +2,44 @@
 	"id": "cfa0be42-3cd7-11eb-9de7-641c67a117d8",
 	"advisories": [
 		{
-			"id": "cfa0be42-3cd7-11eb-9de7-641c67a117d8",
-			"title": "py-matrix-synapse -- DoS on Federation API",
-			"description": "\n\t<p>Matrix developers reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/synapse/security/advisories/GHSA-hxmp-pqch-c8mm\">\n\t  <p>A malicious or poorly-implemented homeserver can inject malformed events\n\t    into a room by specifying a different room id in the path of a /send_join,\n\t    /send_leave, /invite or /exchange_third_party_invite request.\n\t    This can lead to a denial of service in which future events will not be\n\t    correctly sent to other servers over federation.\n\t    This affects any server which accepts federation requests from untrusted\n\t    servers.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251768"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/matrix-org/synapse/security/advisories/GHSA-hxmp-pqch-c8mm"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cfa0be42-3cd7-11eb-9de7-641c67a117d8.html"
-				}
-			],
-			"published": "2020-12-13T00:00:00Z"
+			"content": {
+				"id": "cfa0be42-3cd7-11eb-9de7-641c67a117d8",
+				"title": "py-matrix-synapse -- DoS on Federation API",
+				"description": "\n\t<p>Matrix developers reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/synapse/security/advisories/GHSA-hxmp-pqch-c8mm\">\n\t  <p>A malicious or poorly-implemented homeserver can inject malformed events\n\t    into a room by specifying a different room id in the path of a /send_join,\n\t    /send_leave, /invite or /exchange_third_party_invite request.\n\t    This can lead to a denial of service in which future events will not be\n\t    correctly sent to other servers over federation.\n\t    This affects any server which accepts federation requests from untrusted\n\t    servers.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=251768"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/matrix-org/synapse/security/advisories/GHSA-hxmp-pqch-c8mm"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cfa0be42-3cd7-11eb-9de7-641c67a117d8.html"
+					}
+				],
+				"published": "2020-12-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-26257",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-26257"
-				}
+			"content": {
+				"id": "CVE-2020-26257",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-26257"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,34 +2,44 @@
 	"id": "af065e47-5d62-11ee-bbae-1c61b4739ac9",
 	"advisories": [
 		{
-			"id": "af065e47-5d62-11ee-bbae-1c61b4739ac9",
-			"title": "xrdp -- unchecked access to font glyph info",
-			"description": "\n\t<p>xrdp team reports:</p>\n\t<blockquote cite=\"https://www.cve.org/CVERecord?id=CVE-2023-42822\">\n\t<p>Access to the font glyphs in xrdp_painter.c is not bounds-checked.\n\tSince some of this data is controllable by the user, this can result\n\tin an out-of-bounds read within the xrdp executable. The vulnerability\n\tallows an out-of-bounds read within a potentially privileged process.\n\tOn non-Debian platforms, xrdp tends to run as root. Potentially an\n\tout-of-bounds write can follow the out-of-bounds read. There is no\n\tdenial-of-service impact, providing xrdp is running in forking mode. This\n\tissue has been addressed in release 0.9.23.1. Users are advised to upgrade.\n\tThere are no known workarounds for this vulnerability.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-2hjx-rm4f-r9hw"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-42822"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/af065e47-5d62-11ee-bbae-1c61b4739ac9.html"
-				}
-			],
-			"published": "2023-09-27T00:00:00Z"
+			"content": {
+				"id": "af065e47-5d62-11ee-bbae-1c61b4739ac9",
+				"title": "xrdp -- unchecked access to font glyph info",
+				"description": "\n\t<p>xrdp team reports:</p>\n\t<blockquote cite=\"https://www.cve.org/CVERecord?id=CVE-2023-42822\">\n\t<p>Access to the font glyphs in xrdp_painter.c is not bounds-checked.\n\tSince some of this data is controllable by the user, this can result\n\tin an out-of-bounds read within the xrdp executable. The vulnerability\n\tallows an out-of-bounds read within a potentially privileged process.\n\tOn non-Debian platforms, xrdp tends to run as root. Potentially an\n\tout-of-bounds write can follow the out-of-bounds read. There is no\n\tdenial-of-service impact, providing xrdp is running in forking mode. This\n\tissue has been addressed in release 0.9.23.1. Users are advised to upgrade.\n\tThere are no known workarounds for this vulnerability.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-2hjx-rm4f-r9hw"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-42822"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/af065e47-5d62-11ee-bbae-1c61b4739ac9.html"
+					}
+				],
+				"published": "2023-09-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-42822",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-42822"
-				}
+			"content": {
+				"id": "CVE-2023-42822",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-42822"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

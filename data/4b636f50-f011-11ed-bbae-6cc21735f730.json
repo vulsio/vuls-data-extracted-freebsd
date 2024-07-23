@@ -2,30 +2,40 @@
 	"id": "4b636f50-f011-11ed-bbae-6cc21735f730",
 	"advisories": [
 		{
-			"id": "4b636f50-f011-11ed-bbae-6cc21735f730",
-			"title": "postgresql-server -- Row security policies disregard user ID changes after inlining",
-			"description": "\n\t<p>PostgreSQL Project reports</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2023-2455/\">\n\t  <p>\n\t    While CVE-2016-2193 fixed most interaction between row security and\n\t    user ID changes, it missed a scenario involving function\n\t    inlining. This leads to potentially incorrect policies being\n\t    applied in cases where role-specific policies are used and a\n\t    given query is planned under one role and then executed under\n\t    other roles. This scenario can happen under security definer\n\t    functions or when a common user and query is planned\n\t    initially and then re-used across multiple SET ROLEs.\n\t    Applying an incorrect policy may permit a user to complete\n\t    otherwise-forbidden reads and modifications. This affects\n\t    only databases that have used CREATE POLICY to define a row\n\t    security policy.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.postgresql.org/support/security/CVE-2023-2455/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4b636f50-f011-11ed-bbae-6cc21735f730.html"
-				}
-			],
-			"published": "2023-05-11T00:00:00Z"
+			"content": {
+				"id": "4b636f50-f011-11ed-bbae-6cc21735f730",
+				"title": "postgresql-server -- Row security policies disregard user ID changes after inlining",
+				"description": "\n\t<p>PostgreSQL Project reports</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2023-2455/\">\n\t  <p>\n\t    While CVE-2016-2193 fixed most interaction between row security and\n\t    user ID changes, it missed a scenario involving function\n\t    inlining. This leads to potentially incorrect policies being\n\t    applied in cases where role-specific policies are used and a\n\t    given query is planned under one role and then executed under\n\t    other roles. This scenario can happen under security definer\n\t    functions or when a common user and query is planned\n\t    initially and then re-used across multiple SET ROLEs.\n\t    Applying an incorrect policy may permit a user to complete\n\t    otherwise-forbidden reads and modifications. This affects\n\t    only databases that have used CREATE POLICY to define a row\n\t    security policy.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.postgresql.org/support/security/CVE-2023-2455/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4b636f50-f011-11ed-bbae-6cc21735f730.html"
+					}
+				],
+				"published": "2023-05-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-2455",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-2455"
-				}
+			"content": {
+				"id": "CVE-2023-2455",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-2455"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

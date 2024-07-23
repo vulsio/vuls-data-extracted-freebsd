@@ -2,30 +2,40 @@
 	"id": "b70b880f-5727-11ea-a2f3-001cc0382b2f",
 	"advisories": [
 		{
-			"id": "b70b880f-5727-11ea-a2f3-001cc0382b2f",
-			"title": "Mbed TLS -- Side channel attack on ECDSA",
-			"description": "\n\t<p>Janos Follath reports:</p>\n\t<blockquote cite=\"https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2019-12\">\n\t  <p>Our bignum implementation is not constant time/constant trace, so\n\t    side channel attacks can retrieve the blinded value, factor it (as\n\t    it is smaller than RSA keys and not guaranteed to have only large\n\t    prime factors), and then, by brute force, recover the key.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2019-12"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b70b880f-5727-11ea-a2f3-001cc0382b2f.html"
-				}
-			],
-			"published": "2020-02-24T00:00:00Z"
+			"content": {
+				"id": "b70b880f-5727-11ea-a2f3-001cc0382b2f",
+				"title": "Mbed TLS -- Side channel attack on ECDSA",
+				"description": "\n\t<p>Janos Follath reports:</p>\n\t<blockquote cite=\"https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2019-12\">\n\t  <p>Our bignum implementation is not constant time/constant trace, so\n\t    side channel attacks can retrieve the blinded value, factor it (as\n\t    it is smaller than RSA keys and not guaranteed to have only large\n\t    prime factors), and then, by brute force, recover the key.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://tls.mbed.org/tech-updates/security-advisories/mbedtls-security-advisory-2019-12"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b70b880f-5727-11ea-a2f3-001cc0382b2f.html"
+					}
+				],
+				"published": "2020-02-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-18222",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-18222"
-				}
+			"content": {
+				"id": "CVE-2019-18222",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-18222"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "526d9642-3ae7-11e9-a669-8c164582fbac",
 	"advisories": [
 		{
-			"id": "526d9642-3ae7-11e9-a669-8c164582fbac",
-			"title": "slixmpp -- improper access control",
-			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2019-1000021\">\n\t  <p>slixmpp version before commit 7cd73b594e8122dddf847953fcfc85ab4d316416\n\t    contains an incorrect Access Control vulnerability in XEP-0223 plugin\n\t    (Persistent Storage of Private Data via PubSub) options profile, used\n\t    for the configuration of default access model that can result in\n\t    all of the contacts of the victim can see private data having been\n\t    published to a PEP node. This attack appears to be exploitable\n\t    if the user of this library publishes any private data on PEP,\n\t    the node isn't configured to be private. This vulnerability appears\n\t    to have been fixed in commit 7cd73b594e8122dddf847953fcfc85ab4d316416\n\t    which is included in slixmpp 1.4.2.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000021"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/526d9642-3ae7-11e9-a669-8c164582fbac.html"
-				}
-			],
-			"published": "2019-03-05T00:00:00Z"
+			"content": {
+				"id": "526d9642-3ae7-11e9-a669-8c164582fbac",
+				"title": "slixmpp -- improper access control",
+				"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2019-1000021\">\n\t  <p>slixmpp version before commit 7cd73b594e8122dddf847953fcfc85ab4d316416\n\t    contains an incorrect Access Control vulnerability in XEP-0223 plugin\n\t    (Persistent Storage of Private Data via PubSub) options profile, used\n\t    for the configuration of default access model that can result in\n\t    all of the contacts of the victim can see private data having been\n\t    published to a PEP node. This attack appears to be exploitable\n\t    if the user of this library publishes any private data on PEP,\n\t    the node isn't configured to be private. This vulnerability appears\n\t    to have been fixed in commit 7cd73b594e8122dddf847953fcfc85ab4d316416\n\t    which is included in slixmpp 1.4.2.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000021"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/526d9642-3ae7-11e9-a669-8c164582fbac.html"
+					}
+				],
+				"published": "2019-03-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-1000021",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-1000021"
-				}
+			"content": {
+				"id": "CVE-2019-1000021",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-1000021"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

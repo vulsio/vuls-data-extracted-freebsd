@@ -2,34 +2,44 @@
 	"id": "f671c282-95ef-11eb-9c34-080027f515ea",
 	"advisories": [
 		{
-			"id": "f671c282-95ef-11eb-9c34-080027f515ea",
-			"title": "python -- Information disclosure via pydoc -p: /getfile?key=path allows to read arbitrary file on the filesystem",
-			"description": "\n\t<p>David Schwörer reports:</p>\n\t<blockquote cite=\"https://pythoninsider.blogspot.com/2021/04/python-393-and-389-are-now-available.html\">\n\t  <p>\n\t    Remove the getfile feature of the pydoc module which could be\n\t    abused to read arbitrary files on the disk (directory traversal\n\t    vulnerability). Moreover, even source code of Python modules\n\t    can contain sensitive data like passwords.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.python.org/issue42988"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://pythoninsider.blogspot.com/2021/04/python-393-and-389-are-now-available.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f671c282-95ef-11eb-9c34-080027f515ea.html"
-				}
-			],
-			"published": "2021-04-10T00:00:00Z"
+			"content": {
+				"id": "f671c282-95ef-11eb-9c34-080027f515ea",
+				"title": "python -- Information disclosure via pydoc -p: /getfile?key=path allows to read arbitrary file on the filesystem",
+				"description": "\n\t<p>David Schwörer reports:</p>\n\t<blockquote cite=\"https://pythoninsider.blogspot.com/2021/04/python-393-and-389-are-now-available.html\">\n\t  <p>\n\t    Remove the getfile feature of the pydoc module which could be\n\t    abused to read arbitrary files on the disk (directory traversal\n\t    vulnerability). Moreover, even source code of Python modules\n\t    can contain sensitive data like passwords.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.python.org/issue42988"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://pythoninsider.blogspot.com/2021/04/python-393-and-389-are-now-available.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f671c282-95ef-11eb-9c34-080027f515ea.html"
+					}
+				],
+				"published": "2021-04-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-3426",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-3426"
-				}
+			"content": {
+				"id": "CVE-2021-3426",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-3426"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

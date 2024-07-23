@@ -2,30 +2,40 @@
 	"id": "13d37672-9791-11eb-b87a-901b0ef719ab",
 	"advisories": [
 		{
-			"id": "13d37672-9791-11eb-b87a-901b0ef719ab",
-			"title": "FreeBSD -- Memory disclosure by stale virtual memory mapping",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A particular case of memory sharing is mishandled in the virtual memory\n\tsystem.  It is possible and legal to establish a relationship where\n\tmultiple descendant processes share a mapping which shadows memory of an\n\tancestor process.  In this scenario, when one process modifies memory\n\tthrough such a mapping, the copy-on-write logic fails to invalidate\n\tother mappings of the source page.  These stale mappings may remain even\n\tafter the mapped pages have been reused for another purpose.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged local user process can maintain a mapping of a page\n\tafter it is freed, allowing that process to read private data belonging\n\tto other processes or the kernel.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:08.vm.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/13d37672-9791-11eb-b87a-901b0ef719ab.html"
-				}
-			],
-			"published": "2021-04-07T00:00:00Z"
+			"content": {
+				"id": "13d37672-9791-11eb-b87a-901b0ef719ab",
+				"title": "FreeBSD -- Memory disclosure by stale virtual memory mapping",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A particular case of memory sharing is mishandled in the virtual memory\n\tsystem.  It is possible and legal to establish a relationship where\n\tmultiple descendant processes share a mapping which shadows memory of an\n\tancestor process.  In this scenario, when one process modifies memory\n\tthrough such a mapping, the copy-on-write logic fails to invalidate\n\tother mappings of the source page.  These stale mappings may remain even\n\tafter the mapped pages have been reused for another purpose.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged local user process can maintain a mapping of a page\n\tafter it is freed, allowing that process to read private data belonging\n\tto other processes or the kernel.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-21:08.vm.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/13d37672-9791-11eb-b87a-901b0ef719ab.html"
+					}
+				],
+				"published": "2021-04-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-29626",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29626"
-				}
+			"content": {
+				"id": "CVE-2021-29626",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29626"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

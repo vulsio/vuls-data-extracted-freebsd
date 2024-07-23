@@ -2,30 +2,40 @@
 	"id": "838fa84a-0e25-11e5-90e4-d050996490d0",
 	"advisories": [
 		{
-			"id": "838fa84a-0e25-11e5-90e4-d050996490d0",
-			"title": "redis -- EVAL Lua Sandbox Escape",
-			"description": "\n\t<p>Ben Murphy reports:</p>\n\t<blockquote cite=\"http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/\">\n\t  <p>It is possible to break out of the Lua sandbox in\n\t    Redis and execute arbitrary code.</p>\n\t  <p>This shouldn’t pose a threat to users under the\n\t    trusted Redis security model where only trusted\n\t    users can connect to the database. However, in real\n\t    deployments there could be databases that can be\n\t    accessed by untrusted users. The main deployments\n\t    that are vulnerable are developers machines, places\n\t    where redis servers can be reached via SSRF attacks\n\t    and cloud hosting.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/838fa84a-0e25-11e5-90e4-d050996490d0.html"
-				}
-			],
-			"published": "2015-06-08T00:00:00Z"
+			"content": {
+				"id": "838fa84a-0e25-11e5-90e4-d050996490d0",
+				"title": "redis -- EVAL Lua Sandbox Escape",
+				"description": "\n\t<p>Ben Murphy reports:</p>\n\t<blockquote cite=\"http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/\">\n\t  <p>It is possible to break out of the Lua sandbox in\n\t    Redis and execute arbitrary code.</p>\n\t  <p>This shouldn’t pose a threat to users under the\n\t    trusted Redis security model where only trusted\n\t    users can connect to the database. However, in real\n\t    deployments there could be databases that can be\n\t    accessed by untrusted users. The main deployments\n\t    that are vulnerable are developers machines, places\n\t    where redis servers can be reached via SSRF attacks\n\t    and cloud hosting.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/838fa84a-0e25-11e5-90e4-d050996490d0.html"
+					}
+				],
+				"published": "2015-06-08T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-4335",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-4335"
-				}
+			"content": {
+				"id": "CVE-2015-4335",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-4335"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

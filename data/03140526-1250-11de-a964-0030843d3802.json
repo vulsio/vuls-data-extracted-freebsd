@@ -2,25 +2,30 @@
 	"id": "03140526-1250-11de-a964-0030843d3802",
 	"advisories": [
 		{
-			"id": "03140526-1250-11de-a964-0030843d3802",
-			"title": "zabbix -- php frontend multiple vulnerabilities",
-			"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/34091/\">\n\t  <p>Some vulnerabilities have been reported in the ZABBIX PHP frontend,\n\t    which can be exploited by malicious people to conduct cross-site\n\t    request forgery attacks and malicious users to disclose sensitive\n\t    information and compromise a vulnerable system.</p>\n\t  <p>Input appended to and passed via the \"extlang\" parameter to the\n\t    \"calc_exp2()\" function in include/validate.inc.php is not properly\n\t    sanitised before being used. This can be exploited to inject and\n\t    execute arbitrary PHP code.</p>\n\t  <p>The application allows users to perform certain actions via HTTP\n\t    requests without performing any validity checks to verify the\n\t    requests. This can be exploited to e.g. create users by enticing a\n\t    logged in administrator to visit a malicious web page.</p>\n\t  <p>Input passed to the \"srclang\" parameter in locales.php (when \"next\"\n\t    is set to a non-NULL value) is not properly verified before being used\n\t    to include files. This can be exploited to include arbitrary files\n\t    from local resources via directory traversal attacks and URL-encoded\n\t    NULL bytes.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/34091/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.ush.it/team/ush/hack-zabbix_162/adv.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/03140526-1250-11de-a964-0030843d3802.html"
-				}
-			],
-			"published": "2009-03-16T00:00:00Z",
-			"modified": "2009-03-23T00:00:00Z"
+			"content": {
+				"id": "03140526-1250-11de-a964-0030843d3802",
+				"title": "zabbix -- php frontend multiple vulnerabilities",
+				"description": "\n\t<p>Secunia reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/34091/\">\n\t  <p>Some vulnerabilities have been reported in the ZABBIX PHP frontend,\n\t    which can be exploited by malicious people to conduct cross-site\n\t    request forgery attacks and malicious users to disclose sensitive\n\t    information and compromise a vulnerable system.</p>\n\t  <p>Input appended to and passed via the \"extlang\" parameter to the\n\t    \"calc_exp2()\" function in include/validate.inc.php is not properly\n\t    sanitised before being used. This can be exploited to inject and\n\t    execute arbitrary PHP code.</p>\n\t  <p>The application allows users to perform certain actions via HTTP\n\t    requests without performing any validity checks to verify the\n\t    requests. This can be exploited to e.g. create users by enticing a\n\t    logged in administrator to visit a malicious web page.</p>\n\t  <p>Input passed to the \"srclang\" parameter in locales.php (when \"next\"\n\t    is set to a non-NULL value) is not properly verified before being used\n\t    to include files. This can be exploited to include arbitrary files\n\t    from local resources via directory traversal attacks and URL-encoded\n\t    NULL bytes.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/34091/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.ush.it/team/ush/hack-zabbix_162/adv.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/03140526-1250-11de-a964-0030843d3802.html"
+					}
+				],
+				"published": "2009-03-16T00:00:00Z",
+				"modified": "2009-03-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

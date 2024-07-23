@@ -2,107 +2,157 @@
 	"id": "85eb4e46-cf16-11e5-840f-485d605f4717",
 	"advisories": [
 		{
-			"id": "85eb4e46-cf16-11e5-840f-485d605f4717",
-			"title": "php -- multiple vulnerabilities",
-			"description": "\n\t<p>PHP reports:</p>\n\t<blockquote cite=\"http://php.net/ChangeLog-5.php#5.6.18\">\n\t  <ul><li>Core:\n\t  <ul>\n\t    <li>Fixed bug #71039 (exec functions ignore length but look for NULL\n\t      termination).</li>\n\t    <li>Fixed bug #71323 (Output of stream_get_meta_data can be\n\t      falsified by its input).</li>\n\t    <li>Fixed bug #71459 (Integer overflow in iptcembed()).</li>\n\t  </ul></li>\n\t  <li>PCRE:\n\t  <ul>\n\t    <li>Upgraded bundled PCRE library to 8.38.(CVE-2015-8383,\n\t      CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390,\n\t      CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</li>\n\t  </ul></li>\n\t  <li>Phar:\n\t  <ul>\n\t    <li>Fixed bug #71354 (Heap corruption in tar/zip/phar parser).</li>\n\t    <li>Fixed bug #71391 (NULL Pointer Dereference in\n\t      phar_tar_setupmetadata()).</li>\n\t    <li>Fixed bug #71488 (Stack overflow when decompressing tar\n\t      archives). (CVE-2016-2554)</li>\n\t  </ul></li>\n\t  <li>WDDX:\n\t  <ul>\n\t    <li>Fixed bug #71335 (Type Confusion in WDDX Packet\n\t      Deserialization).</li>\n\t  </ul></li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://php.net/ChangeLog-5.php#5.5.32"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://php.net/ChangeLog-5.php#5.6.18"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/85eb4e46-cf16-11e5-840f-485d605f4717.html"
-				}
-			],
-			"published": "2016-02-09T00:00:00Z",
-			"modified": "2016-03-13T00:00:00Z"
+			"content": {
+				"id": "85eb4e46-cf16-11e5-840f-485d605f4717",
+				"title": "php -- multiple vulnerabilities",
+				"description": "\n\t<p>PHP reports:</p>\n\t<blockquote cite=\"http://php.net/ChangeLog-5.php#5.6.18\">\n\t  <ul><li>Core:\n\t  <ul>\n\t    <li>Fixed bug #71039 (exec functions ignore length but look for NULL\n\t      termination).</li>\n\t    <li>Fixed bug #71323 (Output of stream_get_meta_data can be\n\t      falsified by its input).</li>\n\t    <li>Fixed bug #71459 (Integer overflow in iptcembed()).</li>\n\t  </ul></li>\n\t  <li>PCRE:\n\t  <ul>\n\t    <li>Upgraded bundled PCRE library to 8.38.(CVE-2015-8383,\n\t      CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390,\n\t      CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</li>\n\t  </ul></li>\n\t  <li>Phar:\n\t  <ul>\n\t    <li>Fixed bug #71354 (Heap corruption in tar/zip/phar parser).</li>\n\t    <li>Fixed bug #71391 (NULL Pointer Dereference in\n\t      phar_tar_setupmetadata()).</li>\n\t    <li>Fixed bug #71488 (Stack overflow when decompressing tar\n\t      archives). (CVE-2016-2554)</li>\n\t  </ul></li>\n\t  <li>WDDX:\n\t  <ul>\n\t    <li>Fixed bug #71335 (Type Confusion in WDDX Packet\n\t      Deserialization).</li>\n\t  </ul></li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://php.net/ChangeLog-5.php#5.5.32"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://php.net/ChangeLog-5.php#5.6.18"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/85eb4e46-cf16-11e5-840f-485d605f4717.html"
+					}
+				],
+				"published": "2016-02-09T00:00:00Z",
+				"modified": "2016-03-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-8383",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8383"
-				}
+			"content": {
+				"id": "CVE-2015-8383",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8383"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8386",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8386"
-				}
+			"content": {
+				"id": "CVE-2015-8386",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8386"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8387",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8387"
-				}
+			"content": {
+				"id": "CVE-2015-8387",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8387"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8389",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8389"
-				}
+			"content": {
+				"id": "CVE-2015-8389",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8389"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8390",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8390"
-				}
+			"content": {
+				"id": "CVE-2015-8390",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8390"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8391",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8391"
-				}
+			"content": {
+				"id": "CVE-2015-8391",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8391"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8393",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8393"
-				}
+			"content": {
+				"id": "CVE-2015-8393",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8393"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8394",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8394"
-				}
+			"content": {
+				"id": "CVE-2015-8394",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8394"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2554",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2554"
-				}
+			"content": {
+				"id": "CVE-2016-2554",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2554"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

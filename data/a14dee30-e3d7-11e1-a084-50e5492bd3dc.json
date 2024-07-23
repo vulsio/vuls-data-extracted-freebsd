@@ -2,30 +2,40 @@
 	"id": "a14dee30-e3d7-11e1-a084-50e5492bd3dc",
 	"advisories": [
 		{
-			"id": "a14dee30-e3d7-11e1-a084-50e5492bd3dc",
-			"title": "libcloud -- possible SSL MITM due to invalid regexp used to validate target server hostname",
-			"description": "\n\t<p>The libcloud development team reports:</p>\n\t<blockquote cite=\"http://libcloud.apache.org/security.html\">\n\t  <p>When establishing a secure (SSL / TLS) connection to a target server an invalid regular\n\t    expression has been used for performing the hostname verification. Subset instead of the\n\t    full target server hostname has been marked an an acceptable match for the given hostname.\n\t    For example, certificate with a hostname field of \"aexample.com\" was considered a valid\n\t    certificate for domain \"example.com\".</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/fulldisclosure/2012/Aug/55"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a14dee30-e3d7-11e1-a084-50e5492bd3dc.html"
-				}
-			],
-			"published": "2012-08-11T00:00:00Z"
+			"content": {
+				"id": "a14dee30-e3d7-11e1-a084-50e5492bd3dc",
+				"title": "libcloud -- possible SSL MITM due to invalid regexp used to validate target server hostname",
+				"description": "\n\t<p>The libcloud development team reports:</p>\n\t<blockquote cite=\"http://libcloud.apache.org/security.html\">\n\t  <p>When establishing a secure (SSL / TLS) connection to a target server an invalid regular\n\t    expression has been used for performing the hostname verification. Subset instead of the\n\t    full target server hostname has been marked an an acceptable match for the given hostname.\n\t    For example, certificate with a hostname field of \"aexample.com\" was considered a valid\n\t    certificate for domain \"example.com\".</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/fulldisclosure/2012/Aug/55"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a14dee30-e3d7-11e1-a084-50e5492bd3dc.html"
+					}
+				],
+				"published": "2012-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-3446",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-3446"
-				}
+			"content": {
+				"id": "CVE-2012-3446",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-3446"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

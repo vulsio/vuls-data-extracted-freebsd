@@ -2,31 +2,41 @@
 	"id": "11c52bc6-97aa-11e5-b8df-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "11c52bc6-97aa-11e5-b8df-14dae9d210b8",
-			"title": "django -- information leak vulnerability",
-			"description": "\n\t<p>Tim Graham reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/\">\n\t  <p>If an application allows users to specify an unvalidated\n\t    format for dates and passes this format to the date filter, e.g. {{\n\t    last_updated|date:user_date_format }}, then a malicious user could\n\t    obtain any secret in the application's settings by specifying a settings\n\t    key instead of a date format. e.g. \"SECRET_KEY\" instead of \"j/m/Y\".</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/11c52bc6-97aa-11e5-b8df-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-11-30T00:00:00Z",
-			"modified": "2015-12-24T00:00:00Z"
+			"content": {
+				"id": "11c52bc6-97aa-11e5-b8df-14dae9d210b8",
+				"title": "django -- information leak vulnerability",
+				"description": "\n\t<p>Tim Graham reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/\">\n\t  <p>If an application allows users to specify an unvalidated\n\t    format for dates and passes this format to the date filter, e.g. {{\n\t    last_updated|date:user_date_format }}, then a malicious user could\n\t    obtain any secret in the application's settings by specifying a settings\n\t    key instead of a date format. e.g. \"SECRET_KEY\" instead of \"j/m/Y\".</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/11c52bc6-97aa-11e5-b8df-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-11-30T00:00:00Z",
+				"modified": "2015-12-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-8213",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8213"
-				}
+			"content": {
+				"id": "CVE-2015-8213",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8213"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

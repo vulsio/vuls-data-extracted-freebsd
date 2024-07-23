@@ -2,43 +2,58 @@
 	"id": "83a418cc-2182-11e4-802c-20cf30e32f6d",
 	"advisories": [
 		{
-			"id": "83a418cc-2182-11e4-802c-20cf30e32f6d",
-			"title": "subversion -- several vulnerabilities",
-			"description": "\n\t<p>Subversion Project reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2014-3522-advisory.txt\">\n\t  <p>Using the Serf RA layer of Subversion for HTTPS uses the apr_fnmatch API\n\t    to handle matching wildcards in certificate Common Names and Subject\n\t    Alternate Names.  However, apr_fnmatch is not designed for this purpose.\n\t    Instead it is designed to behave like common shell globbing.  In particular\n\t    this means that '*' is not limited to a single label within a hostname\n\t    (i.e. it will match '.').  But even further apr_fnmatch supports '?' and\n\t    character classes (neither of which are part of the RFCs defining how\n\t    certificate validation works).</p>\n\t  <p>Subversion stores cached credentials by an MD5 hash based on the URL and\n\t    the authentication realm of the server the credentials are cached for.\n\t    MD5 has been shown to be subject to chosen plaintext hash collisions.\n\t    This means it may be possible to generate an authentication realm which\n\t    results in the same MD5 hash for a different URL.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://subversion.apache.org/security/CVE-2014-3522-advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://subversion.apache.org/security/CVE-2014-3528-advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/83a418cc-2182-11e4-802c-20cf30e32f6d.html"
-				}
-			],
-			"published": "2014-08-11T00:00:00Z"
+			"content": {
+				"id": "83a418cc-2182-11e4-802c-20cf30e32f6d",
+				"title": "subversion -- several vulnerabilities",
+				"description": "\n\t<p>Subversion Project reports:</p>\n\t<blockquote cite=\"http://subversion.apache.org/security/CVE-2014-3522-advisory.txt\">\n\t  <p>Using the Serf RA layer of Subversion for HTTPS uses the apr_fnmatch API\n\t    to handle matching wildcards in certificate Common Names and Subject\n\t    Alternate Names.  However, apr_fnmatch is not designed for this purpose.\n\t    Instead it is designed to behave like common shell globbing.  In particular\n\t    this means that '*' is not limited to a single label within a hostname\n\t    (i.e. it will match '.').  But even further apr_fnmatch supports '?' and\n\t    character classes (neither of which are part of the RFCs defining how\n\t    certificate validation works).</p>\n\t  <p>Subversion stores cached credentials by an MD5 hash based on the URL and\n\t    the authentication realm of the server the credentials are cached for.\n\t    MD5 has been shown to be subject to chosen plaintext hash collisions.\n\t    This means it may be possible to generate an authentication realm which\n\t    results in the same MD5 hash for a different URL.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://subversion.apache.org/security/CVE-2014-3522-advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://subversion.apache.org/security/CVE-2014-3528-advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/83a418cc-2182-11e4-802c-20cf30e32f6d.html"
+					}
+				],
+				"published": "2014-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-3522",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3522"
-				}
+			"content": {
+				"id": "CVE-2014-3522",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-3522"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-3528",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3528"
-				}
+			"content": {
+				"id": "CVE-2014-3528",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-3528"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

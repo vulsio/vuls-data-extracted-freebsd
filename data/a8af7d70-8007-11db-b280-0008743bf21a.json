@@ -2,20 +2,25 @@
 	"id": "a8af7d70-8007-11db-b280-0008743bf21a",
 	"advisories": [
 		{
-			"id": "a8af7d70-8007-11db-b280-0008743bf21a",
-			"title": "kronolith -- arbitrary local file inclusion vulnerability",
-			"description": "\n\t<p>iDefense Labs reports:</p>\n\t<blockquote cite=\"http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=445\">\n\t  <p>Remote exploitation of a design error in Horde's Kronolith\n\t    could allow an authenticated web mail user to execute\n\t    arbitrary PHP code under the security context of the running\n\t    web server.</p>\n\t  <p>The vulnerability specifically exists due to a design error in the\n\t    way it includes certain files. Specifically, the 'lib/FBView.php'\n\t    file contains a function 'Kronolith_FreeBusy_View::factory' which\n\t    will include local files that are supplied via the 'view' HTTP GET\n\t    request parameter.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.horde.org/archives/announce/2006/000307.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a8af7d70-8007-11db-b280-0008743bf21a.html"
-				}
-			],
-			"published": "2006-11-30T00:00:00Z"
+			"content": {
+				"id": "a8af7d70-8007-11db-b280-0008743bf21a",
+				"title": "kronolith -- arbitrary local file inclusion vulnerability",
+				"description": "\n\t<p>iDefense Labs reports:</p>\n\t<blockquote cite=\"http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=445\">\n\t  <p>Remote exploitation of a design error in Horde's Kronolith\n\t    could allow an authenticated web mail user to execute\n\t    arbitrary PHP code under the security context of the running\n\t    web server.</p>\n\t  <p>The vulnerability specifically exists due to a design error in the\n\t    way it includes certain files. Specifically, the 'lib/FBView.php'\n\t    file contains a function 'Kronolith_FreeBusy_View::factory' which\n\t    will include local files that are supplied via the 'view' HTTP GET\n\t    request parameter.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.horde.org/archives/announce/2006/000307.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a8af7d70-8007-11db-b280-0008743bf21a.html"
+					}
+				],
+				"published": "2006-11-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

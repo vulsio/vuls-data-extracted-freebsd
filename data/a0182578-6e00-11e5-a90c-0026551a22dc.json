@@ -2,35 +2,50 @@
 	"id": "a0182578-6e00-11e5-a90c-0026551a22dc",
 	"advisories": [
 		{
-			"id": "a0182578-6e00-11e5-a90c-0026551a22dc",
-			"title": "PostgreSQL -- minor security problems.",
-			"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1615/\">\n\t  <p>\n\t\tTwo security issues have been fixed in this release which affect\n\t\tusers of specific PostgreSQL features.\n\t  </p>\n\t  <ul>\n\t    <li>CVE-2015-5289 json or jsonb input values constructed from\n\t\tarbitrary user input can crash the PostgreSQL server and cause a denial of\n\t\tservice.\n\t    </li>\n\t    <li>CVE-2015-5288: The crypt() function included with the optional pgCrypto\n\t\textension could be exploited to read a few additional bytes of memory.\n\t\tNo working exploit for this issue has been developed.\n\t    </li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a0182578-6e00-11e5-a90c-0026551a22dc.html"
-				}
-			],
-			"published": "2015-10-08T00:00:00Z"
+			"content": {
+				"id": "a0182578-6e00-11e5-a90c-0026551a22dc",
+				"title": "PostgreSQL -- minor security problems.",
+				"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"http://www.postgresql.org/about/news/1615/\">\n\t  <p>\n\t\tTwo security issues have been fixed in this release which affect\n\t\tusers of specific PostgreSQL features.\n\t  </p>\n\t  <ul>\n\t    <li>CVE-2015-5289 json or jsonb input values constructed from\n\t\tarbitrary user input can crash the PostgreSQL server and cause a denial of\n\t\tservice.\n\t    </li>\n\t    <li>CVE-2015-5288: The crypt() function included with the optional pgCrypto\n\t\textension could be exploited to read a few additional bytes of memory.\n\t\tNo working exploit for this issue has been developed.\n\t    </li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a0182578-6e00-11e5-a90c-0026551a22dc.html"
+					}
+				],
+				"published": "2015-10-08T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-5288",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5288"
-				}
+			"content": {
+				"id": "CVE-2015-5288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-5289",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5289"
-				}
+			"content": {
+				"id": "CVE-2015-5289",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5289"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

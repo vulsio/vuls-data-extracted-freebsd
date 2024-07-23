@@ -2,34 +2,44 @@
 	"id": "fbca6863-e2ad-11ea-9d39-00a09858faf5",
 	"advisories": [
 		{
-			"id": "fbca6863-e2ad-11ea-9d39-00a09858faf5",
-			"title": "textproc/elasticsearch6 -- field disclosure flaw",
-			"description": "\n\t<p>Elastic reports:</p>\n\t<blockquote cite=\"https://discuss.elastic.co/t/elastic-stack-7-9-0-and-6-8-12-security-update/245456\">\n\t<p>A field disclosure flaw was found in Elasticsearch when running\n\t  a scrolling search with Field Level Security. If a user runs\n\t  the same query another more privileged user recently ran,\n\t  the scrolling search can leak fields that should be hidden.\n\t  This could result in an attacker gaining additional permissions\n\t  against a restricted index.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://discuss.elastic.co/t/elastic-stack-7-9-0-and-6-8-12-security-update/245456"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/elastic/elasticsearch/pull/39490"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/fbca6863-e2ad-11ea-9d39-00a09858faf5.html"
-				}
-			],
-			"published": "2020-08-20T00:00:00Z"
+			"content": {
+				"id": "fbca6863-e2ad-11ea-9d39-00a09858faf5",
+				"title": "textproc/elasticsearch6 -- field disclosure flaw",
+				"description": "\n\t<p>Elastic reports:</p>\n\t<blockquote cite=\"https://discuss.elastic.co/t/elastic-stack-7-9-0-and-6-8-12-security-update/245456\">\n\t<p>A field disclosure flaw was found in Elasticsearch when running\n\t  a scrolling search with Field Level Security. If a user runs\n\t  the same query another more privileged user recently ran,\n\t  the scrolling search can leak fields that should be hidden.\n\t  This could result in an attacker gaining additional permissions\n\t  against a restricted index.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://discuss.elastic.co/t/elastic-stack-7-9-0-and-6-8-12-security-update/245456"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/elastic/elasticsearch/pull/39490"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fbca6863-e2ad-11ea-9d39-00a09858faf5.html"
+					}
+				],
+				"published": "2020-08-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-7019",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7019"
-				}
+			"content": {
+				"id": "CVE-2020-7019",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-7019"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

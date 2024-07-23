@@ -2,56 +2,76 @@
 	"id": "964c5460-9c66-11ec-ad3a-001999f8d30b",
 	"advisories": [
 		{
-			"id": "964c5460-9c66-11ec-ad3a-001999f8d30b",
-			"title": "asterisk -- multiple vulnerabilities",
-			"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories/\">\n\t  <p>AST-2022-004 - The header length on incoming STUN\n\t  messages that contain an ERROR-CODE attribute is not\n\t  properly checked. This can result in an integer underflow.\n\t  Note, this requires ICE or WebRTC support to be in use\n\t  with a malicious remote party.</p>\n\t  <p>AST-2022-005 - When acting as a UAC, and when placing\n\t  an outgoing call to a target that then forks Asterisk may\n\t  experience undefined behavior (crashes, hangs, etc) after\n\t  a dialog set is prematurely freed.</p>\n\t  <p>AST-2022-006 - If an incoming SIP message contains a\n\t  malformed multi-part body an out of bounds read access\n\t  may occur, which can result in undefined behavior. Note,\n\t  its currently uncertain if there is any externally\n\t  exploitable vector within Asterisk for this issue, but\n\t  providing this as a security issue out of caution.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://downloads.asterisk.org/pub/security/AST-2022-004.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://downloads.asterisk.org/pub/security/AST-2022-005.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://downloads.asterisk.org/pub/security/AST-2022-006.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/964c5460-9c66-11ec-ad3a-001999f8d30b.html"
-				}
-			],
-			"published": "2022-03-05T00:00:00Z"
+			"content": {
+				"id": "964c5460-9c66-11ec-ad3a-001999f8d30b",
+				"title": "asterisk -- multiple vulnerabilities",
+				"description": "\n\t<p>The Asterisk project reports:</p>\n\t<blockquote cite=\"https://www.asterisk.org/downloads/security-advisories/\">\n\t  <p>AST-2022-004 - The header length on incoming STUN\n\t  messages that contain an ERROR-CODE attribute is not\n\t  properly checked. This can result in an integer underflow.\n\t  Note, this requires ICE or WebRTC support to be in use\n\t  with a malicious remote party.</p>\n\t  <p>AST-2022-005 - When acting as a UAC, and when placing\n\t  an outgoing call to a target that then forks Asterisk may\n\t  experience undefined behavior (crashes, hangs, etc) after\n\t  a dialog set is prematurely freed.</p>\n\t  <p>AST-2022-006 - If an incoming SIP message contains a\n\t  malformed multi-part body an out of bounds read access\n\t  may occur, which can result in undefined behavior. Note,\n\t  its currently uncertain if there is any externally\n\t  exploitable vector within Asterisk for this issue, but\n\t  providing this as a security issue out of caution.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://downloads.asterisk.org/pub/security/AST-2022-004.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://downloads.asterisk.org/pub/security/AST-2022-005.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://downloads.asterisk.org/pub/security/AST-2022-006.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/964c5460-9c66-11ec-ad3a-001999f8d30b.html"
+					}
+				],
+				"published": "2022-03-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-37706",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-37706"
-				}
+			"content": {
+				"id": "CVE-2021-37706",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-37706"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-21723",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-21723"
-				}
+			"content": {
+				"id": "CVE-2022-21723",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-21723"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-23608",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23608"
-				}
+			"content": {
+				"id": "CVE-2022-23608",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-23608"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

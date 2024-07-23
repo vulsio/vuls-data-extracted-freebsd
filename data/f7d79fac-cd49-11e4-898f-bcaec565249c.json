@@ -2,49 +2,69 @@
 	"id": "f7d79fac-cd49-11e4-898f-bcaec565249c",
 	"advisories": [
 		{
-			"id": "f7d79fac-cd49-11e4-898f-bcaec565249c",
-			"title": "libXfont -- BDF parsing issues",
-			"description": "\n\t<p>Alan Coopersmith reports:</p>\n\t<blockquote cite=\"http://lists.x.org/archives/xorg-announce/2015-March/002550.html\">\n\t  <p>Ilja van Sprundel, a security researcher with IOActive, has\n\t    discovered an issue in the parsing of BDF font files by libXfont.\n\t    Additional testing by Alan Coopersmith and William Robinet with\n\t    the American Fuzzy Lop (afl) tool uncovered two more issues in\n\t    the parsing of BDF font files.</p>\n\n\t  <p>As libXfont is used by the X server to read font files, and an\n\t    unprivileged user with access to the X server can tell the X\n\t    server to read a given font file from a path of their choosing,\n\t    these vulnerabilities have the potential to allow unprivileged\n\t    users to run code with the privileges of the X server\n\t    (often root access).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.x.org/archives/xorg-announce/2015-March/002550.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f7d79fac-cd49-11e4-898f-bcaec565249c.html"
-				}
-			],
-			"published": "2015-03-18T00:00:00Z",
-			"modified": "2016-01-31T00:00:00Z"
+			"content": {
+				"id": "f7d79fac-cd49-11e4-898f-bcaec565249c",
+				"title": "libXfont -- BDF parsing issues",
+				"description": "\n\t<p>Alan Coopersmith reports:</p>\n\t<blockquote cite=\"http://lists.x.org/archives/xorg-announce/2015-March/002550.html\">\n\t  <p>Ilja van Sprundel, a security researcher with IOActive, has\n\t    discovered an issue in the parsing of BDF font files by libXfont.\n\t    Additional testing by Alan Coopersmith and William Robinet with\n\t    the American Fuzzy Lop (afl) tool uncovered two more issues in\n\t    the parsing of BDF font files.</p>\n\n\t  <p>As libXfont is used by the X server to read font files, and an\n\t    unprivileged user with access to the X server can tell the X\n\t    server to read a given font file from a path of their choosing,\n\t    these vulnerabilities have the potential to allow unprivileged\n\t    users to run code with the privileges of the X server\n\t    (often root access).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.x.org/archives/xorg-announce/2015-March/002550.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f7d79fac-cd49-11e4-898f-bcaec565249c.html"
+					}
+				],
+				"published": "2015-03-18T00:00:00Z",
+				"modified": "2016-01-31T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-1802",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1802"
-				}
+			"content": {
+				"id": "CVE-2015-1802",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-1802"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-1803",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1803"
-				}
+			"content": {
+				"id": "CVE-2015-1803",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-1803"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-1804",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1804"
-				}
+			"content": {
+				"id": "CVE-2015-1804",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-1804"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

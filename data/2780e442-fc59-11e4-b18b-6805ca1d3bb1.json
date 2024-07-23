@@ -2,51 +2,61 @@
 	"id": "2780e442-fc59-11e4-b18b-6805ca1d3bb1",
 	"advisories": [
 		{
-			"id": "2780e442-fc59-11e4-b18b-6805ca1d3bb1",
-			"title": "qemu, xen and VirtualBox OSE -- possible VM escape and code execution (\"VENOM\")",
-			"description": "\n\t<p>Jason Geffner, CrowdStrike Senior Security Researcher reports:</p>\n\t<blockquote cite=\"http://venom.crowdstrike.com/\">\n\t  <p>VENOM, CVE-2015-3456, is a security vulnerability in\n\t    the virtual floppy drive code used by many computer\n\t    virtualization platforms. This vulnerability may allow\n\t    an attacker to escape from the confines of an affected\n\t    virtual machine (VM) guest and potentially obtain\n\t    code-execution access to the host. Absent mitigation,\n\t    this VM escape could open access to the host system and\n\t    all other VMs running on that host, potentially giving\n\t    adversaries significant elevated access to the host's\n\t    local network and adjacent systems.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://venom.crowdstrike.com/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.oracle.com/technetwork/topics/security/alert-cve-2015-3456-2542656.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xenbits.xen.org/xsa/advisory-133.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200255"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200256"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200257"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2780e442-fc59-11e4-b18b-6805ca1d3bb1.html"
-				}
-			],
-			"published": "2015-05-17T00:00:00Z",
-			"modified": "2015-09-28T00:00:00Z"
+			"content": {
+				"id": "2780e442-fc59-11e4-b18b-6805ca1d3bb1",
+				"title": "qemu, xen and VirtualBox OSE -- possible VM escape and code execution (\"VENOM\")",
+				"description": "\n\t<p>Jason Geffner, CrowdStrike Senior Security Researcher reports:</p>\n\t<blockquote cite=\"http://venom.crowdstrike.com/\">\n\t  <p>VENOM, CVE-2015-3456, is a security vulnerability in\n\t    the virtual floppy drive code used by many computer\n\t    virtualization platforms. This vulnerability may allow\n\t    an attacker to escape from the confines of an affected\n\t    virtual machine (VM) guest and potentially obtain\n\t    code-execution access to the host. Absent mitigation,\n\t    this VM escape could open access to the host system and\n\t    all other VMs running on that host, potentially giving\n\t    adversaries significant elevated access to the host's\n\t    local network and adjacent systems.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://venom.crowdstrike.com/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.oracle.com/technetwork/topics/security/alert-cve-2015-3456-2542656.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xenbits.xen.org/xsa/advisory-133.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200255"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200256"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=200257"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2780e442-fc59-11e4-b18b-6805ca1d3bb1.html"
+					}
+				],
+				"published": "2015-05-17T00:00:00Z",
+				"modified": "2015-09-28T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3456",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3456"
-				}
+			"content": {
+				"id": "CVE-2015-3456",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3456"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "a5cf3ecd-38db-11e8-8b7f-a4badb2f469b",
 	"advisories": [
 		{
-			"id": "a5cf3ecd-38db-11e8-8b7f-a4badb2f469b",
-			"title": "FreeBSD -- vt console memory disclosure",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Insufficient validation of user-provided font parameters\n\tcan result in an integer overflow, leading to the use of\n\tarbitrary kernel memory as glyph data. Characters that\n\treference this data can be displayed on the screen, effectively\n\tdisclosing kernel memory.</p>\n\t<h1>Impact:</h1>\n\t<p>Unprivileged users may be able to access privileged\n\tkernel data.</p>\n\t<p>Such memory might contain sensitive information, such\n\tas portions of the file cache or terminal buffers. This\n\tinformation might be directly useful, or it might be leveraged\n\tto obtain elevated privileges in some way; for example, a\n\tterminal buffer might include a user-entered password.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-18:04.vt.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a5cf3ecd-38db-11e8-8b7f-a4badb2f469b.html"
-				}
-			],
-			"published": "2018-04-05T00:00:00Z"
+			"content": {
+				"id": "a5cf3ecd-38db-11e8-8b7f-a4badb2f469b",
+				"title": "FreeBSD -- vt console memory disclosure",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Insufficient validation of user-provided font parameters\n\tcan result in an integer overflow, leading to the use of\n\tarbitrary kernel memory as glyph data. Characters that\n\treference this data can be displayed on the screen, effectively\n\tdisclosing kernel memory.</p>\n\t<h1>Impact:</h1>\n\t<p>Unprivileged users may be able to access privileged\n\tkernel data.</p>\n\t<p>Such memory might contain sensitive information, such\n\tas portions of the file cache or terminal buffers. This\n\tinformation might be directly useful, or it might be leveraged\n\tto obtain elevated privileges in some way; for example, a\n\tterminal buffer might include a user-entered password.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-18:04.vt.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a5cf3ecd-38db-11e8-8b7f-a4badb2f469b.html"
+					}
+				],
+				"published": "2018-04-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-6917",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6917"
-				}
+			"content": {
+				"id": "CVE-2018-6917",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-6917"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

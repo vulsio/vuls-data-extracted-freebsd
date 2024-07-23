@@ -2,34 +2,44 @@
 	"id": "45a72180-a640-11ec-a08b-85298243e224",
 	"advisories": [
 		{
-			"id": "45a72180-a640-11ec-a08b-85298243e224",
-			"title": "openvpn -- Potential authentication by-pass with multiple deferred authentication plug-ins",
-			"description": "\n\t<p>David Sommerseth reports:</p>\n\t<blockquote cite=\"https://community.openvpn.net/openvpn/wiki/CVE-2022-0547\">\n\t  <p>OpenVPN 2.1 until v2.4.12 and v2.5.6 may enable authentication bypass in external authentication plug-ins when more than one of them makes use of deferred authentication replies, which allows an external user to be granted access with only partially correct credentials.  This issue is resolved in OpenVPN 2.4.12 and v2.5.6.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://community.openvpn.net/openvpn/wiki/CVE-2022-0547"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/OpenVPN/openvpn/blob/release/2.5/Changes.rst#overview-of-changes-in-256"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/45a72180-a640-11ec-a08b-85298243e224.html"
-				}
-			],
-			"published": "2022-03-17T00:00:00Z"
+			"content": {
+				"id": "45a72180-a640-11ec-a08b-85298243e224",
+				"title": "openvpn -- Potential authentication by-pass with multiple deferred authentication plug-ins",
+				"description": "\n\t<p>David Sommerseth reports:</p>\n\t<blockquote cite=\"https://community.openvpn.net/openvpn/wiki/CVE-2022-0547\">\n\t  <p>OpenVPN 2.1 until v2.4.12 and v2.5.6 may enable authentication bypass in external authentication plug-ins when more than one of them makes use of deferred authentication replies, which allows an external user to be granted access with only partially correct credentials.  This issue is resolved in OpenVPN 2.4.12 and v2.5.6.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://community.openvpn.net/openvpn/wiki/CVE-2022-0547"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/OpenVPN/openvpn/blob/release/2.5/Changes.rst#overview-of-changes-in-256"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/45a72180-a640-11ec-a08b-85298243e224.html"
+					}
+				],
+				"published": "2022-03-17T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-0547",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-0547"
-				}
+			"content": {
+				"id": "CVE-2022-0547",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-0547"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

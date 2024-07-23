@@ -2,30 +2,40 @@
 	"id": "278561d7-b261-11eb-b788-901b0e934d69",
 	"advisories": [
 		{
-			"id": "278561d7-b261-11eb-b788-901b0e934d69",
-			"title": "py-matrix-synapse -- malicious push rules may be used for a denial of service attack.",
-			"description": "\n\t<p>Matrix developers report:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/synapse/security/advisories/GHSA-x345-32rc-8h85\">\n\t  <p>\"Push rules\" can specify conditions under which they will match,\n\t    including event_match, which matches event content against a\n\t    pattern including wildcards.\n\t    Certain patterns can cause very poor performance in the matching\n\t    engine, leading to a denial-of-service when processing moderate\n\t    length events.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/matrix-org/synapse/security/advisories/GHSA-x345-32rc-8h85"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/278561d7-b261-11eb-b788-901b0e934d69.html"
-				}
-			],
-			"published": "2021-05-11T00:00:00Z"
+			"content": {
+				"id": "278561d7-b261-11eb-b788-901b0e934d69",
+				"title": "py-matrix-synapse -- malicious push rules may be used for a denial of service attack.",
+				"description": "\n\t<p>Matrix developers report:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/synapse/security/advisories/GHSA-x345-32rc-8h85\">\n\t  <p>\"Push rules\" can specify conditions under which they will match,\n\t    including event_match, which matches event content against a\n\t    pattern including wildcards.\n\t    Certain patterns can cause very poor performance in the matching\n\t    engine, leading to a denial-of-service when processing moderate\n\t    length events.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/matrix-org/synapse/security/advisories/GHSA-x345-32rc-8h85"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/278561d7-b261-11eb-b788-901b0e934d69.html"
+					}
+				],
+				"published": "2021-05-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-29471",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-29471"
-				}
+			"content": {
+				"id": "CVE-2021-29471",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-29471"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "0a5cf6d8-600a-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "0a5cf6d8-600a-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- SCTP SCTP_SS_VALUE kernel memory corruption and disclosure",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to insufficient validation of the SCTP stream ID,\n\twhich serves as an array index, a local unprivileged attacker\n\tcan read or write 16-bits of kernel memory.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged process can read or modify 16-bits of\n\tmemory which belongs to the kernel. This may lead to\n\texposure of sensitive information or allow privilege\n\tescalation.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:02.kmem.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0a5cf6d8-600a-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "0a5cf6d8-600a-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- SCTP SCTP_SS_VALUE kernel memory corruption and disclosure",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Due to insufficient validation of the SCTP stream ID,\n\twhich serves as an array index, a local unprivileged attacker\n\tcan read or write 16-bits of kernel memory.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged process can read or modify 16-bits of\n\tmemory which belongs to the kernel. This may lead to\n\texposure of sensitive information or allow privilege\n\tescalation.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:02.kmem.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0a5cf6d8-600a-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-8612",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-8612"
-				}
+			"content": {
+				"id": "CVE-2014-8612",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-8612"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "9f15c2da-947e-11ea-92ab-00163e433440",
 	"advisories": [
 		{
-			"id": "9f15c2da-947e-11ea-92ab-00163e433440",
-			"title": "FreeBSD -- Use after free in cryptodev module",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A race condition permitted a data structure in the kernel to be used\n\tafter it was freed by the cryptodev module.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged process can overwrite arbitrary kernel memory.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:15.cryptodev.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9f15c2da-947e-11ea-92ab-00163e433440.html"
-				}
-			],
-			"published": "2020-05-12T00:00:00Z"
+			"content": {
+				"id": "9f15c2da-947e-11ea-92ab-00163e433440",
+				"title": "FreeBSD -- Use after free in cryptodev module",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A race condition permitted a data structure in the kernel to be used\n\tafter it was freed by the cryptodev module.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged process can overwrite arbitrary kernel memory.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:15.cryptodev.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9f15c2da-947e-11ea-92ab-00163e433440.html"
+					}
+				],
+				"published": "2020-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-15879",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-15879"
-				}
+			"content": {
+				"id": "CVE-2019-15879",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-15879"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

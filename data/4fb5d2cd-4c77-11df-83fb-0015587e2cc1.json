@@ -2,46 +2,56 @@
 	"id": "4fb5d2cd-4c77-11df-83fb-0015587e2cc1",
 	"advisories": [
 		{
-			"id": "4fb5d2cd-4c77-11df-83fb-0015587e2cc1",
-			"title": "png -- libpng decompression denial of service",
-			"description": "\n\t<p>A vulnerability in libpng can result in denial of service\n\t  conditions when a remote attacker tricks a victim to open\n\t  a specially-crafted PNG file.</p>\n\t<p>The PNG project describes the problem in an advisory:</p>\n\t<blockquote cite=\"http://libpng.sourceforge.net/ADVISORY-1.4.1.html\">\n\t  <p>Because of the efficient compression method used in\n\t    Portable Network Graphics (PNG) files, a small PNG file\n\t    can expand tremendously, acting as a \"decompression\n\t    bomb\".</p>\n\t  <p>Malformed PNG chunks can consume a large amount of CPU\n\t    and wall-clock time and large amounts of memory, up to\n\t    all memory available on a system</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://libpng.sourceforge.net/ADVISORY-1.4.1.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/38774"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/38478"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xforce.iss.net/xforce/xfdb/56661"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kb.cert.org/vuls/id/576029"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4fb5d2cd-4c77-11df-83fb-0015587e2cc1.html"
-				}
-			],
-			"published": "2010-04-20T00:00:00Z"
+			"content": {
+				"id": "4fb5d2cd-4c77-11df-83fb-0015587e2cc1",
+				"title": "png -- libpng decompression denial of service",
+				"description": "\n\t<p>A vulnerability in libpng can result in denial of service\n\t  conditions when a remote attacker tricks a victim to open\n\t  a specially-crafted PNG file.</p>\n\t<p>The PNG project describes the problem in an advisory:</p>\n\t<blockquote cite=\"http://libpng.sourceforge.net/ADVISORY-1.4.1.html\">\n\t  <p>Because of the efficient compression method used in\n\t    Portable Network Graphics (PNG) files, a small PNG file\n\t    can expand tremendously, acting as a \"decompression\n\t    bomb\".</p>\n\t  <p>Malformed PNG chunks can consume a large amount of CPU\n\t    and wall-clock time and large amounts of memory, up to\n\t    all memory available on a system</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://libpng.sourceforge.net/ADVISORY-1.4.1.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/38774"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/38478"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xforce.iss.net/xforce/xfdb/56661"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kb.cert.org/vuls/id/576029"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4fb5d2cd-4c77-11df-83fb-0015587e2cc1.html"
+					}
+				],
+				"published": "2010-04-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2010-0205",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2010-0205"
-				}
+			"content": {
+				"id": "CVE-2010-0205",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2010-0205"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

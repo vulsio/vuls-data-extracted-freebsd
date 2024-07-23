@@ -2,57 +2,82 @@
 	"id": "70140f20-6007-11e6-a6c3-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "70140f20-6007-11e6-a6c3-14dae9d210b8",
-			"title": "FreeBSD -- Multiple vulnerabilities in file(1) and libmagic(3)",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A specifically crafted Composite Document File (CDF)\n\tfile can trigger an out-of-bounds read or an invalid pointer\n\tdereference. [CVE-2012-1571]</p>\n\t<p>A flaw in regular expression in the awk script detector\n\tmakes use of multiple wildcards with unlimited repetitions.\n\t[CVE-2013-7345]</p>\n\t<p>A malicious input file could trigger infinite recursion\n\tin libmagic(3). [CVE-2014-1943]</p>\n\t<p>A specifically crafted Portable Executable (PE) can\n\ttrigger out-of-bounds read. [CVE-2014-2270]</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can cause file(1) or any other applications\n\tusing the libmagic(3) library to be run on a maliciously\n\tconstructed input can the application to crash or consume\n\texcessive CPU resources, resulting in a denial-of-service.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:16.file.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/70140f20-6007-11e6-a6c3-14dae9d210b8.html"
-				}
-			],
-			"published": "2016-08-11T00:00:00Z"
+			"content": {
+				"id": "70140f20-6007-11e6-a6c3-14dae9d210b8",
+				"title": "FreeBSD -- Multiple vulnerabilities in file(1) and libmagic(3)",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A specifically crafted Composite Document File (CDF)\n\tfile can trigger an out-of-bounds read or an invalid pointer\n\tdereference. [CVE-2012-1571]</p>\n\t<p>A flaw in regular expression in the awk script detector\n\tmakes use of multiple wildcards with unlimited repetitions.\n\t[CVE-2013-7345]</p>\n\t<p>A malicious input file could trigger infinite recursion\n\tin libmagic(3). [CVE-2014-1943]</p>\n\t<p>A specifically crafted Portable Executable (PE) can\n\ttrigger out-of-bounds read. [CVE-2014-2270]</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker who can cause file(1) or any other applications\n\tusing the libmagic(3) library to be run on a maliciously\n\tconstructed input can the application to crash or consume\n\texcessive CPU resources, resulting in a denial-of-service.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-14:16.file.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/70140f20-6007-11e6-a6c3-14dae9d210b8.html"
+					}
+				],
+				"published": "2016-08-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-1571",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-1571"
-				}
+			"content": {
+				"id": "CVE-2012-1571",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-1571"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2013-7345",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-7345"
-				}
+			"content": {
+				"id": "CVE-2013-7345",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-7345"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-1943",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-1943"
-				}
+			"content": {
+				"id": "CVE-2014-1943",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-1943"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-2270",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-2270"
-				}
+			"content": {
+				"id": "CVE-2014-2270",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-2270"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

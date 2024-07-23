@@ -2,47 +2,62 @@
 	"id": "002432c8-ef6a-11ea-ba8f-08002728f74c",
 	"advisories": [
 		{
-			"id": "002432c8-ef6a-11ea-ba8f-08002728f74c",
-			"title": "Django -- multiple vulnerabilities",
-			"description": "\n\t<p>Django Release notes:</p>\n\t<blockquote cite=\"https://docs.djangoproject.com/en/3.1/releases/3.1.1/\">\n\t  <p>CVE-2020-24583: Incorrect permissions on intermediate-level directories\n\t    on Python 3.7+</p>\n\t  <p>On Python 3.7+, FILE_UPLOAD_DIRECTORY_PERMISSIONS mode was not applied\n\t    to intermediate-level directories created in the process of uploading\n\t    files and to intermediate-level collected static directories when using\n\t    the collectstatic management command.</p>\n\t  <p>CVE-2020-24584: Permission escalation in intermediate-level directories\n\t    of the file system cache on Python 3.7+</p>\n\t  <p>On Python 3.7+, the intermediate-level directories of the file system\n\t    cache had the system's standard umask rather than 0o077 (no group or\n\t    others permissions).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.djangoproject.com/en/2.2/releases/2.2.16/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.djangoproject.com/en/3.0/releases/3.0.10/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.djangoproject.com/en/3.1/releases/3.1.1/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/002432c8-ef6a-11ea-ba8f-08002728f74c.html"
-				}
-			],
-			"published": "2020-09-05T00:00:00Z"
+			"content": {
+				"id": "002432c8-ef6a-11ea-ba8f-08002728f74c",
+				"title": "Django -- multiple vulnerabilities",
+				"description": "\n\t<p>Django Release notes:</p>\n\t<blockquote cite=\"https://docs.djangoproject.com/en/3.1/releases/3.1.1/\">\n\t  <p>CVE-2020-24583: Incorrect permissions on intermediate-level directories\n\t    on Python 3.7+</p>\n\t  <p>On Python 3.7+, FILE_UPLOAD_DIRECTORY_PERMISSIONS mode was not applied\n\t    to intermediate-level directories created in the process of uploading\n\t    files and to intermediate-level collected static directories when using\n\t    the collectstatic management command.</p>\n\t  <p>CVE-2020-24584: Permission escalation in intermediate-level directories\n\t    of the file system cache on Python 3.7+</p>\n\t  <p>On Python 3.7+, the intermediate-level directories of the file system\n\t    cache had the system's standard umask rather than 0o077 (no group or\n\t    others permissions).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.djangoproject.com/en/2.2/releases/2.2.16/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.djangoproject.com/en/3.0/releases/3.0.10/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.djangoproject.com/en/3.1/releases/3.1.1/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/002432c8-ef6a-11ea-ba8f-08002728f74c.html"
+					}
+				],
+				"published": "2020-09-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-24583",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24583"
-				}
+			"content": {
+				"id": "CVE-2020-24583",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-24583"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2020-24584",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-24584"
-				}
+			"content": {
+				"id": "CVE-2020-24584",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-24584"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

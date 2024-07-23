@@ -2,39 +2,54 @@
 	"id": "9e2fdfc7-e237-4393-9fa5-2d50908c66b3",
 	"advisories": [
 		{
-			"id": "9e2fdfc7-e237-4393-9fa5-2d50908c66b3",
-			"title": "xorg-server -- Multiple vulnerabilities",
-			"description": "\n\t<p>The X.Org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2023-October/003430.html\">\n\t  <ul>\n\t    <li>ZDI-CAN-22153/CVE-2023-5367: X.Org server: OOB write\n\t    in XIChangeDeviceProperty/RRChangeOutputProperty\n\n\t    <p>When prepending values to an existing property an\n\t    invalid offset calculation causes the existing values to\n\t    be appended at the wrong offset. The resulting memcpy()\n\t    would write into memory outside the heap-allocated\n\t    array.</p></li>\n\n\t    <li>ZDI-CAN-21608/CVE-2023-5380: Use-after-free bug in\n\t    DestroyWindow\n\n\t    <p>This vulnerability requires a legacy multi-screen setup\n\t    with multiple protocol screens (\"Zaphod\"). If the pointer\n\t    is warped from one screen to the root window of the other\n\t    screen, the enter/leave code may retain a reference to the\n\t    previous pointer window. Destroying this window leaves\n\t    that reference in place, other windows may then trigger a\n\t    use-after-free bug when they are destroyed. </p></li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.x.org/archives/xorg-announce/2023-October/003430.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9e2fdfc7-e237-4393-9fa5-2d50908c66b3.html"
-				}
-			],
-			"published": "2023-10-25T00:00:00Z"
+			"content": {
+				"id": "9e2fdfc7-e237-4393-9fa5-2d50908c66b3",
+				"title": "xorg-server -- Multiple vulnerabilities",
+				"description": "\n\t<p>The X.Org project reports:</p>\n\t<blockquote cite=\"https://lists.x.org/archives/xorg-announce/2023-October/003430.html\">\n\t  <ul>\n\t    <li>ZDI-CAN-22153/CVE-2023-5367: X.Org server: OOB write\n\t    in XIChangeDeviceProperty/RRChangeOutputProperty\n\n\t    <p>When prepending values to an existing property an\n\t    invalid offset calculation causes the existing values to\n\t    be appended at the wrong offset. The resulting memcpy()\n\t    would write into memory outside the heap-allocated\n\t    array.</p></li>\n\n\t    <li>ZDI-CAN-21608/CVE-2023-5380: Use-after-free bug in\n\t    DestroyWindow\n\n\t    <p>This vulnerability requires a legacy multi-screen setup\n\t    with multiple protocol screens (\"Zaphod\"). If the pointer\n\t    is warped from one screen to the root window of the other\n\t    screen, the enter/leave code may retain a reference to the\n\t    previous pointer window. Destroying this window leaves\n\t    that reference in place, other windows may then trigger a\n\t    use-after-free bug when they are destroyed. </p></li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.x.org/archives/xorg-announce/2023-October/003430.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9e2fdfc7-e237-4393-9fa5-2d50908c66b3.html"
+					}
+				],
+				"published": "2023-10-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-5367",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-5367"
-				}
+			"content": {
+				"id": "CVE-2023-5367",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-5367"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-5380",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-5380"
-				}
+			"content": {
+				"id": "CVE-2023-5380",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-5380"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

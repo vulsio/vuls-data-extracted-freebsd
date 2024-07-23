@@ -2,30 +2,40 @@
 	"id": "b9837fa1-cd72-11ec-98f1-6805ca0b3d42",
 	"advisories": [
 		{
-			"id": "b9837fa1-cd72-11ec-98f1-6805ca0b3d42",
-			"title": "rsyslog8 -- heap buffer overflow on receiving TCP syslog",
-			"description": "\n\t<p>Rainer Gerhards reports:</p>\n\t<blockquote cite=\"https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8\">\n\t  <p>Modules for TCP syslog reception have a heap buffer\n\t  overflow when octet-counted framing is used. The attacker\n\t  can corrupt heap values, leading to data integrity issues\n\t  and availability impact. Remote code execution is unlikely\n\t  to happen but not impossible..</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b9837fa1-cd72-11ec-98f1-6805ca0b3d42.html"
-				}
-			],
-			"published": "2022-05-06T00:00:00Z"
+			"content": {
+				"id": "b9837fa1-cd72-11ec-98f1-6805ca0b3d42",
+				"title": "rsyslog8 -- heap buffer overflow on receiving TCP syslog",
+				"description": "\n\t<p>Rainer Gerhards reports:</p>\n\t<blockquote cite=\"https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8\">\n\t  <p>Modules for TCP syslog reception have a heap buffer\n\t  overflow when octet-counted framing is used. The attacker\n\t  can corrupt heap values, leading to data integrity issues\n\t  and availability impact. Remote code execution is unlikely\n\t  to happen but not impossible..</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b9837fa1-cd72-11ec-98f1-6805ca0b3d42.html"
+					}
+				],
+				"published": "2022-05-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-24903",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24903"
-				}
+			"content": {
+				"id": "CVE-2022-24903",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-24903"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

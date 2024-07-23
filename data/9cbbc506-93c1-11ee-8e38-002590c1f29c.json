@@ -2,31 +2,41 @@
 	"id": "9cbbc506-93c1-11ee-8e38-002590c1f29c",
 	"advisories": [
 		{
-			"id": "9cbbc506-93c1-11ee-8e38-002590c1f29c",
-			"title": "FreeBSD -- TCP spoofing vulnerability in pf(4)",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>As part of its stateful TCP connection tracking implementation,\n\tpf performs sequence number validation on inbound packets.  This\n\tmakes it difficult for a would-be attacker to spoof the sender and\n\tinject packets into a TCP stream, since crafted packets must contain\n\tsequence numbers which match the current connection state to avoid\n\tbeing rejected by the firewall.</p>\n\t<p>A bug in the implementation of sequence number validation means\n\tthat the sequence number is not in fact validated, allowing an\n\tattacker who is able to impersonate the remote host and guess the\n\tconnection's port numbers to inject packets into the TCP stream.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker can, with relatively little effort, inject packets\n\tinto a TCP stream destined to a host behind a pf firewall.  This\n\tcould be used to implement a denial-of-service attack for hosts\n\tbehind the firewall, for example by sending TCP RST packets to the\n\thost.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-23:17.pf.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9cbbc506-93c1-11ee-8e38-002590c1f29c.html"
-				}
-			],
-			"published": "2023-12-05T00:00:00Z",
-			"modified": "2023-12-14T00:00:00Z"
+			"content": {
+				"id": "9cbbc506-93c1-11ee-8e38-002590c1f29c",
+				"title": "FreeBSD -- TCP spoofing vulnerability in pf(4)",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>As part of its stateful TCP connection tracking implementation,\n\tpf performs sequence number validation on inbound packets.  This\n\tmakes it difficult for a would-be attacker to spoof the sender and\n\tinject packets into a TCP stream, since crafted packets must contain\n\tsequence numbers which match the current connection state to avoid\n\tbeing rejected by the firewall.</p>\n\t<p>A bug in the implementation of sequence number validation means\n\tthat the sequence number is not in fact validated, allowing an\n\tattacker who is able to impersonate the remote host and guess the\n\tconnection's port numbers to inject packets into the TCP stream.</p>\n\t<h1>Impact:</h1>\n\t<p>An attacker can, with relatively little effort, inject packets\n\tinto a TCP stream destined to a host behind a pf firewall.  This\n\tcould be used to implement a denial-of-service attack for hosts\n\tbehind the firewall, for example by sending TCP RST packets to the\n\thost.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-23:17.pf.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9cbbc506-93c1-11ee-8e38-002590c1f29c.html"
+					}
+				],
+				"published": "2023-12-05T00:00:00Z",
+				"modified": "2023-12-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-6534",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-6534"
-				}
+			"content": {
+				"id": "CVE-2023-6534",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-6534"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

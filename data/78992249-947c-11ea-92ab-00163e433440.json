@@ -2,30 +2,40 @@
 	"id": "78992249-947c-11ea-92ab-00163e433440",
 	"advisories": [
 		{
-			"id": "78992249-947c-11ea-92ab-00163e433440",
-			"title": "FreeBSD -- Memory disclosure vulnerability in libalias",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The FTP packet handler in libalias incorrectly calculates some packet\n\tlengths.  This may result in disclosing small amounts of memory from the\n\tkernel (for the in-kernel NAT implementation) or from the process space for\n\tnatd (for the userspace implementation).</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious attacker could send specially constructed packets that exploit the\n\terroneous calculation allowing the attacker to disclose small amount of memory\n\teither from the kernel (for the in-kernel NAT implementation) or from the\n\tprocess space for natd (for the userspace implementation).</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:13.libalias.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/78992249-947c-11ea-92ab-00163e433440.html"
-				}
-			],
-			"published": "2020-05-12T00:00:00Z"
+			"content": {
+				"id": "78992249-947c-11ea-92ab-00163e433440",
+				"title": "FreeBSD -- Memory disclosure vulnerability in libalias",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The FTP packet handler in libalias incorrectly calculates some packet\n\tlengths.  This may result in disclosing small amounts of memory from the\n\tkernel (for the in-kernel NAT implementation) or from the process space for\n\tnatd (for the userspace implementation).</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious attacker could send specially constructed packets that exploit the\n\terroneous calculation allowing the attacker to disclose small amount of memory\n\teither from the kernel (for the in-kernel NAT implementation) or from the\n\tprocess space for natd (for the userspace implementation).</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:13.libalias.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/78992249-947c-11ea-92ab-00163e433440.html"
+					}
+				],
+				"published": "2020-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-7455",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7455"
-				}
+			"content": {
+				"id": "CVE-2020-7455",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-7455"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

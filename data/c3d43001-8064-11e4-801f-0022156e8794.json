@@ -2,38 +2,48 @@
 	"id": "c3d43001-8064-11e4-801f-0022156e8794",
 	"advisories": [
 		{
-			"id": "c3d43001-8064-11e4-801f-0022156e8794",
-			"title": "mutt -- denial of service via crafted mail message",
-			"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9116\">\n\t  <p>The write_one_header function in mutt 1.5.23 does not\n\t  properly handle newline characters at the beginning of a\n\t  header, which allows remote attackers to cause a denial of\n\t  service (crash) via a header with an empty body, which\n\t  triggers a heap-based buffer overflow in the mutt_substrdup\n\t  function.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://dev.mutt.org/trac/ticket/3716"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/71334"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=771125"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c3d43001-8064-11e4-801f-0022156e8794.html"
-				}
-			],
-			"published": "2014-12-23T00:00:00Z"
+			"content": {
+				"id": "c3d43001-8064-11e4-801f-0022156e8794",
+				"title": "mutt -- denial of service via crafted mail message",
+				"description": "\n\t<p>NVD reports:</p>\n\t<blockquote cite=\"https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9116\">\n\t  <p>The write_one_header function in mutt 1.5.23 does not\n\t  properly handle newline characters at the beginning of a\n\t  header, which allows remote attackers to cause a denial of\n\t  service (crash) via a header with an empty body, which\n\t  triggers a heap-based buffer overflow in the mutt_substrdup\n\t  function.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://dev.mutt.org/trac/ticket/3716"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/71334"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=771125"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c3d43001-8064-11e4-801f-0022156e8794.html"
+					}
+				],
+				"published": "2014-12-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-9116",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-9116"
-				}
+			"content": {
+				"id": "CVE-2014-9116",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-9116"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

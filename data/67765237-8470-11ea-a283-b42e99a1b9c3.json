@@ -2,30 +2,40 @@
 	"id": "67765237-8470-11ea-a283-b42e99a1b9c3",
 	"advisories": [
 		{
-			"id": "67765237-8470-11ea-a283-b42e99a1b9c3",
-			"title": "malicious URLs can cause git to send a stored credential to wrong server",
-			"description": "\n\t<p>git security advisory reports:</p>\n\t<blockquote cite=\"https://github.com/git/git/security/advisories/GHSA-hjc9-x69f-jqj7\">\n\t  <p>Git uses external \"credential helper\" programs to store and retrieve passwords or\n\t  other credentials from secure storage provided by the operating system. Specially-crafted\n\t  URLs that are considered illegal as of the recently published Git versions can cause Git\n\t  to send a \"blank\" pattern to helpers, missing hostname and protocol fields. Many helpers\n\t  will interpret this as matching any URL, and will return some unspecified stored password,\n\t  leaking the password to an attacker's server.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/git/git/security/advisories/GHSA-hjc9-x69f-jqj7"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/67765237-8470-11ea-a283-b42e99a1b9c3.html"
-				}
-			],
-			"published": "2020-04-22T00:00:00Z"
+			"content": {
+				"id": "67765237-8470-11ea-a283-b42e99a1b9c3",
+				"title": "malicious URLs can cause git to send a stored credential to wrong server",
+				"description": "\n\t<p>git security advisory reports:</p>\n\t<blockquote cite=\"https://github.com/git/git/security/advisories/GHSA-hjc9-x69f-jqj7\">\n\t  <p>Git uses external \"credential helper\" programs to store and retrieve passwords or\n\t  other credentials from secure storage provided by the operating system. Specially-crafted\n\t  URLs that are considered illegal as of the recently published Git versions can cause Git\n\t  to send a \"blank\" pattern to helpers, missing hostname and protocol fields. Many helpers\n\t  will interpret this as matching any URL, and will return some unspecified stored password,\n\t  leaking the password to an attacker's server.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/git/git/security/advisories/GHSA-hjc9-x69f-jqj7"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/67765237-8470-11ea-a283-b42e99a1b9c3.html"
+					}
+				],
+				"published": "2020-04-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-11008",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-11008"
-				}
+			"content": {
+				"id": "CVE-2020-11008",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-11008"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

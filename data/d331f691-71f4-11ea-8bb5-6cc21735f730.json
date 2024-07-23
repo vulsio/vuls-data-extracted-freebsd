@@ -2,30 +2,40 @@
 	"id": "d331f691-71f4-11ea-8bb5-6cc21735f730",
 	"advisories": [
 		{
-			"id": "d331f691-71f4-11ea-8bb5-6cc21735f730",
-			"title": "PostgresSQL -- ALTER ... DEPENDS ON EXTENSION is missing authorization checks",
-			"description": "\n\t<p>The PostgreSQL project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/about/news/2011/\">\n\t  <p>\n\t    Versions Affected: 9.6 - 12\n\t  </p>\n\t  <p>\n\t    The ALTER ... DEPENDS ON EXTENSION sub-commands do not perform\n\t    authorization checks, which can allow an unprivileged user to drop\n\t    any function, procedure, materialized view, index, or trigger under\n\t    certain conditions. This attack is possible if an administrator has\n\t    installed an extension and an unprivileged user can CREATE, or an\n\t    extension owner either executes DROP EXTENSION predictably or can be\n\t    convinced to execute DROP EXTENSION.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.postgresql.org/about/news/1960/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d331f691-71f4-11ea-8bb5-6cc21735f730.html"
-				}
-			],
-			"published": "2020-03-29T00:00:00Z"
+			"content": {
+				"id": "d331f691-71f4-11ea-8bb5-6cc21735f730",
+				"title": "PostgresSQL -- ALTER ... DEPENDS ON EXTENSION is missing authorization checks",
+				"description": "\n\t<p>The PostgreSQL project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/about/news/2011/\">\n\t  <p>\n\t    Versions Affected: 9.6 - 12\n\t  </p>\n\t  <p>\n\t    The ALTER ... DEPENDS ON EXTENSION sub-commands do not perform\n\t    authorization checks, which can allow an unprivileged user to drop\n\t    any function, procedure, materialized view, index, or trigger under\n\t    certain conditions. This attack is possible if an administrator has\n\t    installed an extension and an unprivileged user can CREATE, or an\n\t    extension owner either executes DROP EXTENSION predictably or can be\n\t    convinced to execute DROP EXTENSION.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.postgresql.org/about/news/1960/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d331f691-71f4-11ea-8bb5-6cc21735f730.html"
+					}
+				],
+				"published": "2020-03-29T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-1720",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-1720"
-				}
+			"content": {
+				"id": "CVE-2020-1720",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-1720"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

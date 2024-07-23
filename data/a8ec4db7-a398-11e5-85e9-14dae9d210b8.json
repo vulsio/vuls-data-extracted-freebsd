@@ -2,61 +2,81 @@
 	"id": "a8ec4db7-a398-11e5-85e9-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "a8ec4db7-a398-11e5-85e9-14dae9d210b8",
-			"title": "bind -- multiple vulnerabilities",
-			"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01328/0/BIND-9.10.3-P2-Release-Notes.html\">\n\t  <p>Named is potentially vulnerable to the OpenSSL vulnerability described in CVE-2015-3193.</p>\n\t  <p>Incorrect reference counting could result in an INSIST\n\t    failure if a socket error occurred while performing a lookup. This flaw\n\t    is disclosed in CVE-2015-8461. [RT#40945]</p>\n\t  <p>Insufficient testing when parsing a message allowed records\n\t    with an incorrect class to be be accepted, triggering a REQUIRE failure\n\t    when those records were subsequently cached. This flaw is disclosed in\n\t    CVE-2015-8000. [RT #40987]</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01317/0/CVE-2015-8000%3A-Responses-with-a-malformed-class-attribute-can-trigger-an-assertion-failure-in-db.c.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01319/0/CVE-2015-8461%3A-A-race-condition-when-handling-socket-errors-can-lead-to-an-assertion-failure-in-resolver.c.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://kb.isc.org/article/AA-01328/0/BIND-9.10.3-P2-Release-Notes.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:27.bind.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a8ec4db7-a398-11e5-85e9-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-12-16T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "a8ec4db7-a398-11e5-85e9-14dae9d210b8",
+				"title": "bind -- multiple vulnerabilities",
+				"description": "\n\t<p>ISC reports:</p>\n\t<blockquote cite=\"https://kb.isc.org/article/AA-01328/0/BIND-9.10.3-P2-Release-Notes.html\">\n\t  <p>Named is potentially vulnerable to the OpenSSL vulnerability described in CVE-2015-3193.</p>\n\t  <p>Incorrect reference counting could result in an INSIST\n\t    failure if a socket error occurred while performing a lookup. This flaw\n\t    is disclosed in CVE-2015-8461. [RT#40945]</p>\n\t  <p>Insufficient testing when parsing a message allowed records\n\t    with an incorrect class to be be accepted, triggering a REQUIRE failure\n\t    when those records were subsequently cached. This flaw is disclosed in\n\t    CVE-2015-8000. [RT #40987]</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01317/0/CVE-2015-8000%3A-Responses-with-a-malformed-class-attribute-can-trigger-an-assertion-failure-in-db.c.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01319/0/CVE-2015-8461%3A-A-race-condition-when-handling-socket-errors-can-lead-to-an-assertion-failure-in-resolver.c.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://kb.isc.org/article/AA-01328/0/BIND-9.10.3-P2-Release-Notes.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:27.bind.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a8ec4db7-a398-11e5-85e9-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-12-16T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3193",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3193"
-				}
+			"content": {
+				"id": "CVE-2015-3193",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3193"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8000",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8000"
-				}
+			"content": {
+				"id": "CVE-2015-8000",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8000"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8461",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8461"
-				}
+			"content": {
+				"id": "CVE-2015-8461",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8461"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

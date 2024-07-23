@@ -2,51 +2,61 @@
 	"id": "8665ebb9-2237-11da-978e-0001020eed82",
 	"advisories": [
 		{
-			"id": "8665ebb9-2237-11da-978e-0001020eed82",
-			"title": "firefox & mozilla -- buffer overflow vulnerability",
-			"description": "\n\t<p>Tom Ferris reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=full-disclosure&amp;m=112624614008387\">\n\t  <p>A buffer overflow vulnerability exists within Firefox\n\t    version 1.0.6 and all other prior versions which allows\n\t    for an attacker to remotely execute arbitrary code on an\n\t    affected host.</p>\n\t  <p>The problem seems to be when a hostname which has all\n\t    dashes causes the NormalizeIDN call in\n\t    nsStandardURL::BuildNormalizedSpec to return true, but is\n\t    sets encHost to an empty string.  Meaning, Firefox appends\n\t    0 to approxLen and then appends the long string of dashes\n\t    to the buffer instead.</p>\n\t</blockquote>\n\t<p><strong>Note:</strong> It is possible to disable IDN\n\t  support as a workaround to protect against this buffer\n\t  overflow. How to do this is described on the <em><a href=\"http://www.mozilla.org/security/idn.html\">What Firefox\n\t  and Mozilla users should know about the IDN buffer overflow\n\t  security issue</a></em> web page.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=112624614008387"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/mfsa2005-57.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/idn.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/14784"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=307259"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kb.cert.org/vuls/id/573857"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/8665ebb9-2237-11da-978e-0001020eed82.html"
-				}
-			],
-			"published": "2005-09-10T00:00:00Z",
-			"modified": "2005-10-26T00:00:00Z"
+			"content": {
+				"id": "8665ebb9-2237-11da-978e-0001020eed82",
+				"title": "firefox & mozilla -- buffer overflow vulnerability",
+				"description": "\n\t<p>Tom Ferris reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=full-disclosure&amp;m=112624614008387\">\n\t  <p>A buffer overflow vulnerability exists within Firefox\n\t    version 1.0.6 and all other prior versions which allows\n\t    for an attacker to remotely execute arbitrary code on an\n\t    affected host.</p>\n\t  <p>The problem seems to be when a hostname which has all\n\t    dashes causes the NormalizeIDN call in\n\t    nsStandardURL::BuildNormalizedSpec to return true, but is\n\t    sets encHost to an empty string.  Meaning, Firefox appends\n\t    0 to approxLen and then appends the long string of dashes\n\t    to the buffer instead.</p>\n\t</blockquote>\n\t<p><strong>Note:</strong> It is possible to disable IDN\n\t  support as a workaround to protect against this buffer\n\t  overflow. How to do this is described on the <em><a href=\"http://www.mozilla.org/security/idn.html\">What Firefox\n\t  and Mozilla users should know about the IDN buffer overflow\n\t  security issue</a></em> web page.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=112624614008387"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/mfsa2005-57.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/idn.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/14784"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=307259"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kb.cert.org/vuls/id/573857"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8665ebb9-2237-11da-978e-0001020eed82.html"
+					}
+				],
+				"published": "2005-09-10T00:00:00Z",
+				"modified": "2005-10-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-2871",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-2871"
-				}
+			"content": {
+				"id": "CVE-2005-2871",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-2871"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

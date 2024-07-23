@@ -2,39 +2,54 @@
 	"id": "017a493f-7db6-11e5-a762-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "017a493f-7db6-11e5-a762-14dae9d210b8",
-			"title": "openafs -- information disclosure",
-			"description": "\n\t<p>The OpenAFS development team reports:</p>\n\t<blockquote cite=\"http://openafs.org/pages/security/OPENAFS-SA-2015-007.txt\">\n\t  <p>When constructing an Rx acknowledgment (ACK) packet, Andrew-derived Rx\n\t    implementations do not initialize three octets of data that are padding\n\t    in the C language structure and were inadvertently included in the wire\n\t    protocol (CVE-2015-7762).  Additionally, OpenAFS Rx in versions 1.5.75\n\t    through 1.5.78, 1.6.0 through 1.6.14, and 1.7.0 through 1.7.32 include\n\t    a variable-length padding at the end of the ACK packet, in an attempt to\n\t    detect the path MTU, but only four octets of the additional padding are\n\t    initialized (CVE-2015-7763).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://openafs.org/pages/security/OPENAFS-SA-2015-007.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/017a493f-7db6-11e5-a762-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-10-28T00:00:00Z"
+			"content": {
+				"id": "017a493f-7db6-11e5-a762-14dae9d210b8",
+				"title": "openafs -- information disclosure",
+				"description": "\n\t<p>The OpenAFS development team reports:</p>\n\t<blockquote cite=\"http://openafs.org/pages/security/OPENAFS-SA-2015-007.txt\">\n\t  <p>When constructing an Rx acknowledgment (ACK) packet, Andrew-derived Rx\n\t    implementations do not initialize three octets of data that are padding\n\t    in the C language structure and were inadvertently included in the wire\n\t    protocol (CVE-2015-7762).  Additionally, OpenAFS Rx in versions 1.5.75\n\t    through 1.5.78, 1.6.0 through 1.6.14, and 1.7.0 through 1.7.32 include\n\t    a variable-length padding at the end of the ACK packet, in an attempt to\n\t    detect the path MTU, but only four octets of the additional padding are\n\t    initialized (CVE-2015-7763).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://openafs.org/pages/security/OPENAFS-SA-2015-007.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/017a493f-7db6-11e5-a762-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-10-28T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7762",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7762"
-				}
+			"content": {
+				"id": "CVE-2015-7762",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7762"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7763",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7763"
-				}
+			"content": {
+				"id": "CVE-2015-7763",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7763"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "7ca2a709-103b-11dc-8e82-00001cd613f9",
 	"advisories": [
 		{
-			"id": "7ca2a709-103b-11dc-8e82-00001cd613f9",
-			"title": "findutils -- GNU locate heap buffer overrun",
-			"description": "\n\t<p>James Youngman reports:</p>\n\t<blockquote cite=\"http://lists.gnu.org/archive/html/bug-findutils/2007-06/msg00000.html\">\n\t  <p>When GNU locate reads filenames from an old-format locate database,\n\t    they are read into a fixed-length buffer allocated on the heap.\n\t    Filenames longer than the 1026-byte buffer can cause a buffer\n\t    overrun.  The overrunning data can be chosen by any person able to\n\t    control the names of filenames created on the local system.  This\n\t    will normally include all local users, but in many cases also remote\n\t    users (for example in the case of FTP servers allowing uploads).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.gnu.org/archive/html/bug-findutils/2007-06/msg00000.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/7ca2a709-103b-11dc-8e82-00001cd613f9.html"
-				}
-			],
-			"published": "2007-06-01T00:00:00Z"
+			"content": {
+				"id": "7ca2a709-103b-11dc-8e82-00001cd613f9",
+				"title": "findutils -- GNU locate heap buffer overrun",
+				"description": "\n\t<p>James Youngman reports:</p>\n\t<blockquote cite=\"http://lists.gnu.org/archive/html/bug-findutils/2007-06/msg00000.html\">\n\t  <p>When GNU locate reads filenames from an old-format locate database,\n\t    they are read into a fixed-length buffer allocated on the heap.\n\t    Filenames longer than the 1026-byte buffer can cause a buffer\n\t    overrun.  The overrunning data can be chosen by any person able to\n\t    control the names of filenames created on the local system.  This\n\t    will normally include all local users, but in many cases also remote\n\t    users (for example in the case of FTP servers allowing uploads).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.gnu.org/archive/html/bug-findutils/2007-06/msg00000.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7ca2a709-103b-11dc-8e82-00001cd613f9.html"
+					}
+				],
+				"published": "2007-06-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-2452",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-2452"
-				}
+			"content": {
+				"id": "CVE-2007-2452",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-2452"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,30 +2,40 @@
 	"id": "2a4bcd7d-bbb8-11e4-903c-080027ef73ec",
 	"advisories": [
 		{
-			"id": "2a4bcd7d-bbb8-11e4-903c-080027ef73ec",
-			"title": "e2fsprogs -- potential buffer overflow in closefs()",
-			"description": "\n\t<p>Theodore Ts'o reports:</p>\n\t<blockquote cite=\"http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/commit/?h=maint&amp;id=49d0fe2a14f2a23da2fe299643379b8c1d37df73\">\n\t  <p>On a carefully crafted filesystem that gets modified through\n\t    tune2fs or debugfs, it is possible to trigger a buffer overrun when\n\t    the file system is closed via closefs().</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/commit/?h=maint&id=49d0fe2a14f2a23da2fe299643379b8c1d37df73"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2a4bcd7d-bbb8-11e4-903c-080027ef73ec.html"
-				}
-			],
-			"published": "2015-02-24T00:00:00Z"
+			"content": {
+				"id": "2a4bcd7d-bbb8-11e4-903c-080027ef73ec",
+				"title": "e2fsprogs -- potential buffer overflow in closefs()",
+				"description": "\n\t<p>Theodore Ts'o reports:</p>\n\t<blockquote cite=\"http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/commit/?h=maint&amp;id=49d0fe2a14f2a23da2fe299643379b8c1d37df73\">\n\t  <p>On a carefully crafted filesystem that gets modified through\n\t    tune2fs or debugfs, it is possible to trigger a buffer overrun when\n\t    the file system is closed via closefs().</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/commit/?h=maint&id=49d0fe2a14f2a23da2fe299643379b8c1d37df73"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2a4bcd7d-bbb8-11e4-903c-080027ef73ec.html"
+					}
+				],
+				"published": "2015-02-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-1572",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-1572"
-				}
+			"content": {
+				"id": "CVE-2015-1572",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-1572"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

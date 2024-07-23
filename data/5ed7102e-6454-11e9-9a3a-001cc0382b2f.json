@@ -2,43 +2,58 @@
 	"id": "5ed7102e-6454-11e9-9a3a-001cc0382b2f",
 	"advisories": [
 		{
-			"id": "5ed7102e-6454-11e9-9a3a-001cc0382b2f",
-			"title": "Ghostscript -- Security bypass vulnerability",
-			"description": "\n\t<p>Cedric Buissart (Red Hat) reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3835\">\n\t  <p>It was found that the superexec operator was available in the\n\t    internal dictionary in ghostscript before 9.27. A specially crafted\n\t    PostScript file could use this flaw in order to, for example, have\n\t    access to the file system outside of the constrains imposed by\n\t    -dSAFER.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3838\">\n\t  <p>It was found that the forceput operator could be extracted from\n\t    the DefineResource method in ghostscript before 9.27. A specially\n\t    crafted PostScript file could use this flaw in order to, for\n\t    example, have access to the file system outside of the constrains\n\t    imposed by -dSAFER.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3835"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3838"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/5ed7102e-6454-11e9-9a3a-001cc0382b2f.html"
-				}
-			],
-			"published": "2019-04-21T00:00:00Z"
+			"content": {
+				"id": "5ed7102e-6454-11e9-9a3a-001cc0382b2f",
+				"title": "Ghostscript -- Security bypass vulnerability",
+				"description": "\n\t<p>Cedric Buissart (Red Hat) reports:</p>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3835\">\n\t  <p>It was found that the superexec operator was available in the\n\t    internal dictionary in ghostscript before 9.27. A specially crafted\n\t    PostScript file could use this flaw in order to, for example, have\n\t    access to the file system outside of the constrains imposed by\n\t    -dSAFER.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3838\">\n\t  <p>It was found that the forceput operator could be extracted from\n\t    the DefineResource method in ghostscript before 9.27. A specially\n\t    crafted PostScript file could use this flaw in order to, for\n\t    example, have access to the file system outside of the constrains\n\t    imposed by -dSAFER.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3835"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3838"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5ed7102e-6454-11e9-9a3a-001cc0382b2f.html"
+					}
+				],
+				"published": "2019-04-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-3835",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3835"
-				}
+			"content": {
+				"id": "CVE-2019-3835",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3835"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2019-3838",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-3838"
-				}
+			"content": {
+				"id": "CVE-2019-3838",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-3838"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

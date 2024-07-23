@@ -2,20 +2,25 @@
 	"id": "3e9624b3-e92b-4460-8a5a-93247c52c5a1",
 	"advisories": [
 		{
-			"id": "3e9624b3-e92b-4460-8a5a-93247c52c5a1",
-			"title": "zeek -- Remote crash vulnerability",
-			"description": "\n\t<p>Jon Siwek of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v3.0.13\">\n\t  <p>Fix ASCII Input reader's treatment of input files\n\t  containing null-bytes. An input file containing null-bytes\n\t  could lead to a buffer-over-read, crash Zeek, and be\n\t  exploited to cause Denial of Service. </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/zeek/zeek/releases/tag/v3.0.13"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3e9624b3-e92b-4460-8a5a-93247c52c5a1.html"
-				}
-			],
-			"published": "2021-02-22T00:00:00Z"
+			"content": {
+				"id": "3e9624b3-e92b-4460-8a5a-93247c52c5a1",
+				"title": "zeek -- Remote crash vulnerability",
+				"description": "\n\t<p>Jon Siwek of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v3.0.13\">\n\t  <p>Fix ASCII Input reader's treatment of input files\n\t  containing null-bytes. An input file containing null-bytes\n\t  could lead to a buffer-over-read, crash Zeek, and be\n\t  exploited to cause Denial of Service. </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/zeek/zeek/releases/tag/v3.0.13"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3e9624b3-e92b-4460-8a5a-93247c52c5a1.html"
+					}
+				],
+				"published": "2021-02-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

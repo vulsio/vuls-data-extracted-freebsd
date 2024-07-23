@@ -2,30 +2,40 @@
 	"id": "c611be81-fbc2-11da-9156-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "c611be81-fbc2-11da-9156-000e0c2e438a",
-			"title": "sendmail -- Incorrect multipart message handling",
-			"description": "\n\t<h1>Problem Description</h1>\n\t<p>A suitably malformed multipart MIME message can cause\n\t  sendmail to exceed predefined limits on its stack usage.</p>\n\t<h1>Impact</h1>\n\t<p>An attacker able to send mail to, or via, a server can cause\n\t  queued messages on the system to not be delivered, by causing\n\t  the sendmail process which handles queued messages to crash.\n\t  Note that this will not stop new messages from entering the\n\t  queue (either from local processes, or incoming via SMTP).</p>\n\t<h1>Workaround</h1>\n\t<p>No workaround is available, but systems which do not receive\n\t  email from untrusted sources are not vulnerable.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:17.sendmail.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c611be81-fbc2-11da-9156-000e0c2e438a.html"
-				}
-			],
-			"published": "2006-06-14T00:00:00Z"
+			"content": {
+				"id": "c611be81-fbc2-11da-9156-000e0c2e438a",
+				"title": "sendmail -- Incorrect multipart message handling",
+				"description": "\n\t<h1>Problem Description</h1>\n\t<p>A suitably malformed multipart MIME message can cause\n\t  sendmail to exceed predefined limits on its stack usage.</p>\n\t<h1>Impact</h1>\n\t<p>An attacker able to send mail to, or via, a server can cause\n\t  queued messages on the system to not be delivered, by causing\n\t  the sendmail process which handles queued messages to crash.\n\t  Note that this will not stop new messages from entering the\n\t  queue (either from local processes, or incoming via SMTP).</p>\n\t<h1>Workaround</h1>\n\t<p>No workaround is available, but systems which do not receive\n\t  email from untrusted sources are not vulnerable.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:17.sendmail.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c611be81-fbc2-11da-9156-000e0c2e438a.html"
+					}
+				],
+				"published": "2006-06-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-1173",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1173"
-				}
+			"content": {
+				"id": "CVE-2006-1173",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-1173"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,21 +2,26 @@
 	"id": "e500b9bf-ca3e-11df-aade-0050568f000c",
 	"advisories": [
 		{
-			"id": "e500b9bf-ca3e-11df-aade-0050568f000c",
-			"title": "FreeBSD -- BIND named(8) cache poisoning with DNSSEC validation",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>If a client requests DNSSEC records with the Checking Disabled (CD)\n\t  flag set, BIND may cache the unvalidated responses. These responses\n\t  may later be returned to another client that has not set the CD\n\t  flag.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:01.bind.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e500b9bf-ca3e-11df-aade-0050568f000c.html"
-				}
-			],
-			"published": "2010-10-24T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "e500b9bf-ca3e-11df-aade-0050568f000c",
+				"title": "FreeBSD -- BIND named(8) cache poisoning with DNSSEC validation",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>If a client requests DNSSEC records with the Checking Disabled (CD)\n\t  flag set, BIND may cache the unvalidated responses. These responses\n\t  may later be returned to another client that has not set the CD\n\t  flag.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-10:01.bind.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e500b9bf-ca3e-11df-aade-0050568f000c.html"
+					}
+				],
+				"published": "2010-10-24T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

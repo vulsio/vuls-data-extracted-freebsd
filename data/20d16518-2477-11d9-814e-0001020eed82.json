@@ -2,35 +2,45 @@
 	"id": "20d16518-2477-11d9-814e-0001020eed82",
 	"advisories": [
 		{
-			"id": "20d16518-2477-11d9-814e-0001020eed82",
-			"title": "mpg123 -- buffer overflow in URL handling",
-			"description": "\n\t<p>Carlos Barros reports that mpg123 contains two buffer\n\t  overflows.  These vulnerabilities can potentially lead to\n\t  execution of arbitrary code.</p>\n\t<p>The first buffer overflow can occur when mpg123 parses a\n\t  URL with a user-name/password field that is more than 256\n\t  characters long.  This problem can be triggered either\n\t  locally or remotely via a specially crafted play list.  The\n\t  second potential buffer overflow may be triggered locally by\n\t  a specially crafted symlink to the mpg123 binary.  This\n\t  problem is not as serious, since mpg123 is not installed\n\t  setuid by default.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109834486312407"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/11468"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/20d16518-2477-11d9-814e-0001020eed82.html"
-				}
-			],
-			"published": "2004-10-23T00:00:00Z",
-			"modified": "2004-12-30T00:00:00Z"
+			"content": {
+				"id": "20d16518-2477-11d9-814e-0001020eed82",
+				"title": "mpg123 -- buffer overflow in URL handling",
+				"description": "\n\t<p>Carlos Barros reports that mpg123 contains two buffer\n\t  overflows.  These vulnerabilities can potentially lead to\n\t  execution of arbitrary code.</p>\n\t<p>The first buffer overflow can occur when mpg123 parses a\n\t  URL with a user-name/password field that is more than 256\n\t  characters long.  This problem can be triggered either\n\t  locally or remotely via a specially crafted play list.  The\n\t  second potential buffer overflow may be triggered locally by\n\t  a specially crafted symlink to the mpg123 binary.  This\n\t  problem is not as serious, since mpg123 is not installed\n\t  setuid by default.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109834486312407"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/11468"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/20d16518-2477-11d9-814e-0001020eed82.html"
+					}
+				],
+				"published": "2004-10-23T00:00:00Z",
+				"modified": "2004-12-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0982",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0982"
-				}
+			"content": {
+				"id": "CVE-2004-0982",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0982"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

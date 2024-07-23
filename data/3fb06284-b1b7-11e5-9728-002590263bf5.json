@@ -2,38 +2,48 @@
 	"id": "3fb06284-b1b7-11e5-9728-002590263bf5",
 	"advisories": [
 		{
-			"id": "3fb06284-b1b7-11e5-9728-002590263bf5",
-			"title": "qemu -- denial of service vulnerability in MSI-X support",
-			"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/12/14/2\">\n\t  <p>Qemu emulator built with the PCI MSI-X support is vulnerable to\n\t    null pointer dereference issue. It occurs when the controller\n\t    attempts to write to the pending bit array(PBA) memory region.\n\t    Because the MSI-X MMIO support did not define the .write method.</p>\n\t  <p>A privileges used inside guest could use this flaw to crash the\n\t    Qemu process resulting in DoS issue.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=43b11a91dd861a946b231b89b7542856ade23d1b"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/12/14/2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/seanbruno/qemu-bsd-user/commit/43b11a91dd861a946b231b89b7542856ade23d1b"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3fb06284-b1b7-11e5-9728-002590263bf5.html"
-				}
-			],
-			"published": "2016-01-03T00:00:00Z"
+			"content": {
+				"id": "3fb06284-b1b7-11e5-9728-002590263bf5",
+				"title": "qemu -- denial of service vulnerability in MSI-X support",
+				"description": "\n\t<p>Prasad J Pandit, Red Hat Product Security Team, reports:</p>\n\t<blockquote cite=\"http://www.openwall.com/lists/oss-security/2015/12/14/2\">\n\t  <p>Qemu emulator built with the PCI MSI-X support is vulnerable to\n\t    null pointer dereference issue. It occurs when the controller\n\t    attempts to write to the pending bit array(PBA) memory region.\n\t    Because the MSI-X MMIO support did not define the .write method.</p>\n\t  <p>A privileges used inside guest could use this flaw to crash the\n\t    Qemu process resulting in DoS issue.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://git.qemu.org/?p=qemu.git;a=commit;h=43b11a91dd861a946b231b89b7542856ade23d1b"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/12/14/2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/seanbruno/qemu-bsd-user/commit/43b11a91dd861a946b231b89b7542856ade23d1b"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3fb06284-b1b7-11e5-9728-002590263bf5.html"
+					}
+				],
+				"published": "2016-01-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7549",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7549"
-				}
+			"content": {
+				"id": "CVE-2015-7549",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7549"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

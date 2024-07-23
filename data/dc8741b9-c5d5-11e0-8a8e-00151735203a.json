@@ -2,108 +2,148 @@
 	"id": "dc8741b9-c5d5-11e0-8a8e-00151735203a",
 	"advisories": [
 		{
-			"id": "dc8741b9-c5d5-11e0-8a8e-00151735203a",
-			"title": "bugzilla -- multiple vulnerabilities",
-			"description": "\n\t<p>A Bugzilla Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.bugzilla.org/security/3.4.11/\">\n\t  <p>The following security issues have been discovered in Bugzilla:</p>\n\t  <ul>\n\t    <li>Internet Explorer 8 and older, and Safari before 5.0.6 do\n\t      content sniffing when viewing a patch in \"Raw Unified\" mode,\n\t      which could trigger a cross-site scripting attack due to\n\t      the execution of malicious code in the attachment.</li>\n\t    <li>It is possible to determine whether or not certain group\n\t      names exist while creating or updating bugs.</li>\n\t    <li>Attachment descriptions with a newline in them could lead\n\t      to the injection of crafted headers in email notifications sent\n\t      to the requestee or the requester when editing an attachment\n\t      flag.</li>\n\t    <li>If an attacker has access to a user's session, he can modify\n\t      that user's email address without that user being notified\n\t      of the change.</li>\n\t    <li>Temporary files for uploaded attachments are not deleted\n\t      on Windows, which could let a user with local access to\n\t      the server read them.</li>\n\t    <li>Up to Bugzilla 3.4.11, if a BUGLIST cookie is compromised,\n\t      it can be used to inject HTML code when viewing a bug report,\n\t      leading to a cross-site scripting attack.</li>\n\t  </ul>\n\t  <p>All affected installations are encouraged to upgrade as soon as\n\t    possible.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=637981"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=653477"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=657158"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=660053"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=660502"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=670868"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=674497"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/dc8741b9-c5d5-11e0-8a8e-00151735203a.html"
-				}
-			],
-			"published": "2011-08-13T00:00:00Z"
+			"content": {
+				"id": "dc8741b9-c5d5-11e0-8a8e-00151735203a",
+				"title": "bugzilla -- multiple vulnerabilities",
+				"description": "\n\t<p>A Bugzilla Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.bugzilla.org/security/3.4.11/\">\n\t  <p>The following security issues have been discovered in Bugzilla:</p>\n\t  <ul>\n\t    <li>Internet Explorer 8 and older, and Safari before 5.0.6 do\n\t      content sniffing when viewing a patch in \"Raw Unified\" mode,\n\t      which could trigger a cross-site scripting attack due to\n\t      the execution of malicious code in the attachment.</li>\n\t    <li>It is possible to determine whether or not certain group\n\t      names exist while creating or updating bugs.</li>\n\t    <li>Attachment descriptions with a newline in them could lead\n\t      to the injection of crafted headers in email notifications sent\n\t      to the requestee or the requester when editing an attachment\n\t      flag.</li>\n\t    <li>If an attacker has access to a user's session, he can modify\n\t      that user's email address without that user being notified\n\t      of the change.</li>\n\t    <li>Temporary files for uploaded attachments are not deleted\n\t      on Windows, which could let a user with local access to\n\t      the server read them.</li>\n\t    <li>Up to Bugzilla 3.4.11, if a BUGLIST cookie is compromised,\n\t      it can be used to inject HTML code when viewing a bug report,\n\t      leading to a cross-site scripting attack.</li>\n\t  </ul>\n\t  <p>All affected installations are encouraged to upgrade as soon as\n\t    possible.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=637981"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=653477"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=657158"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=660053"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=660502"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=670868"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.mozilla.org/show_bug.cgi?id=674497"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/dc8741b9-c5d5-11e0-8a8e-00151735203a.html"
+					}
+				],
+				"published": "2011-08-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2011-2379",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2379"
-				}
+			"content": {
+				"id": "CVE-2011-2379",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2379"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-2380",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2380"
-				}
+			"content": {
+				"id": "CVE-2011-2380",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2380"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-2381",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2381"
-				}
+			"content": {
+				"id": "CVE-2011-2381",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2381"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-2976",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2976"
-				}
+			"content": {
+				"id": "CVE-2011-2976",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2976"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-2977",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2977"
-				}
+			"content": {
+				"id": "CVE-2011-2977",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2977"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-2978",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2978"
-				}
+			"content": {
+				"id": "CVE-2011-2978",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2978"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2011-2979",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2011-2979"
-				}
+			"content": {
+				"id": "CVE-2011-2979",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2011-2979"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,31 +2,41 @@
 	"id": "ffcbd42d-a8c5-11dc-bec2-02e0185f8d72",
 	"advisories": [
 		{
-			"id": "ffcbd42d-a8c5-11dc-bec2-02e0185f8d72",
-			"title": "samba -- buffer overflow vulnerability",
-			"description": "\n\t<p>Secuna Research reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/27760/\">\n\t  <p>Secunia Research has discovered a vulnerability in Samba, which\n\t    can be exploited by malicious people to compromise a vulnerable\n\t    system.  The vulnerability is caused due to a boundary error within\n\t    the \"send_mailslot()\" function.  This can be exploited to cause a\n\t    stack-based buffer overflow with zero bytes via a specially crafted\n\t    \"SAMLOGON\" domain logon packet containing a username string placed\n\t    at an odd offset followed by an overly long GETDC string.\n\t    Successful exploitation allows execution of arbitrary code, but\n\t    requires that the \"domain logons\" option is enabled.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/27760/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ffcbd42d-a8c5-11dc-bec2-02e0185f8d72.html"
-				}
-			],
-			"published": "2007-12-12T00:00:00Z",
-			"modified": "2008-09-26T00:00:00Z"
+			"content": {
+				"id": "ffcbd42d-a8c5-11dc-bec2-02e0185f8d72",
+				"title": "samba -- buffer overflow vulnerability",
+				"description": "\n\t<p>Secuna Research reports:</p>\n\t<blockquote cite=\"http://secunia.com/advisories/27760/\">\n\t  <p>Secunia Research has discovered a vulnerability in Samba, which\n\t    can be exploited by malicious people to compromise a vulnerable\n\t    system.  The vulnerability is caused due to a boundary error within\n\t    the \"send_mailslot()\" function.  This can be exploited to cause a\n\t    stack-based buffer overflow with zero bytes via a specially crafted\n\t    \"SAMLOGON\" domain logon packet containing a username string placed\n\t    at an odd offset followed by an overly long GETDC string.\n\t    Successful exploitation allows execution of arbitrary code, but\n\t    requires that the \"domain logons\" option is enabled.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/27760/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ffcbd42d-a8c5-11dc-bec2-02e0185f8d72.html"
+					}
+				],
+				"published": "2007-12-12T00:00:00Z",
+				"modified": "2008-09-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-6015",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-6015"
-				}
+			"content": {
+				"id": "CVE-2007-6015",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-6015"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

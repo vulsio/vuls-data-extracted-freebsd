@@ -2,129 +2,194 @@
 	"id": "95a74a48-2691-11e7-9e2d-e8e0b747a45a",
 	"advisories": [
 		{
-			"id": "95a74a48-2691-11e7-9e2d-e8e0b747a45a",
-			"title": "chromium -- multiple vulnerabilities",
-			"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"https://chromereleases.googleblog.com/2017/04/stable-channel-update-for-desktop.html\">\n\t  <p>29 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[695826] High CVE-2017-5057: Type confusion in PDFium. Credit to\n\t      Guang Gong of Alpha Team, Qihoo 360</li>\n\t    <li>[694382] High CVE-2017-5058: Heap use after free in Print Preview.\n\t      Credit to Khalil Zhani</li>\n\t    <li>[684684] High CVE-2017-5059: Type confusion in Blink. Credit to\n\t      SkyLined working with Trend Micro's Zero Day Initiative</li>\n\t    <li>[683314] Medium CVE-2017-5060: URL spoofing in Omnibox. Credit to\n\t      Xudong Zheng</li>\n\t    <li>[672847] Medium CVE-2017-5061: URL spoofing in Omnibox. Credit to\n\t      Haosheng Wang (@gnehsoah)</li>\n\t    <li>[702896] Medium CVE-2017-5062: Use after free in Chrome Apps.\n\t      Credit to anonymous</li>\n\t    <li>[700836] Medium CVE-2017-5063: Heap overflow in Skia. Credit to\n\t      Sweetchip</li>\n\t    <li>[693974] Medium CVE-2017-5064: Use after free in Blink. Credit to\n\t      Wadih Matar</li>\n\t    <li>[704560] Medium CVE-2017-5065: Incorrect UI in Blink. Credit to\n\t      Khalil Zhani</li>\n\t    <li>[690821] Medium CVE-2017-5066: Incorrect signature handing in Networking.\n\t      Credit to Prof. Zhenhua Duan, Prof. Cong Tian, and Ph.D candidate Chu Chen\n\t      (ICTT, Xidian University)</li>\n\t    <li>[648117] Medium CVE-2017-5067: URL spoofing in Omnibox. Credit to\n\t      Khalil Zhani</li>\n\t    <li>[691726] Low CVE-2017-5069: Cross-origin bypass in Blink. Credit to\n\t      Michael Reizelman</li>\n\t    <li>[713205] Various fixes from internal audits, fuzzing and other initiatives</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://chromereleases.googleblog.com/2017/04/stable-channel-update-for-desktop.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/95a74a48-2691-11e7-9e2d-e8e0b747a45a.html"
-				}
-			],
-			"published": "2017-04-21T00:00:00Z"
+			"content": {
+				"id": "95a74a48-2691-11e7-9e2d-e8e0b747a45a",
+				"title": "chromium -- multiple vulnerabilities",
+				"description": "\n\t<p>Google Chrome Releases reports:</p>\n\t<blockquote cite=\"https://chromereleases.googleblog.com/2017/04/stable-channel-update-for-desktop.html\">\n\t  <p>29 security fixes in this release, including:</p>\n\t  <ul>\n\t    <li>[695826] High CVE-2017-5057: Type confusion in PDFium. Credit to\n\t      Guang Gong of Alpha Team, Qihoo 360</li>\n\t    <li>[694382] High CVE-2017-5058: Heap use after free in Print Preview.\n\t      Credit to Khalil Zhani</li>\n\t    <li>[684684] High CVE-2017-5059: Type confusion in Blink. Credit to\n\t      SkyLined working with Trend Micro's Zero Day Initiative</li>\n\t    <li>[683314] Medium CVE-2017-5060: URL spoofing in Omnibox. Credit to\n\t      Xudong Zheng</li>\n\t    <li>[672847] Medium CVE-2017-5061: URL spoofing in Omnibox. Credit to\n\t      Haosheng Wang (@gnehsoah)</li>\n\t    <li>[702896] Medium CVE-2017-5062: Use after free in Chrome Apps.\n\t      Credit to anonymous</li>\n\t    <li>[700836] Medium CVE-2017-5063: Heap overflow in Skia. Credit to\n\t      Sweetchip</li>\n\t    <li>[693974] Medium CVE-2017-5064: Use after free in Blink. Credit to\n\t      Wadih Matar</li>\n\t    <li>[704560] Medium CVE-2017-5065: Incorrect UI in Blink. Credit to\n\t      Khalil Zhani</li>\n\t    <li>[690821] Medium CVE-2017-5066: Incorrect signature handing in Networking.\n\t      Credit to Prof. Zhenhua Duan, Prof. Cong Tian, and Ph.D candidate Chu Chen\n\t      (ICTT, Xidian University)</li>\n\t    <li>[648117] Medium CVE-2017-5067: URL spoofing in Omnibox. Credit to\n\t      Khalil Zhani</li>\n\t    <li>[691726] Low CVE-2017-5069: Cross-origin bypass in Blink. Credit to\n\t      Michael Reizelman</li>\n\t    <li>[713205] Various fixes from internal audits, fuzzing and other initiatives</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://chromereleases.googleblog.com/2017/04/stable-channel-update-for-desktop.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/95a74a48-2691-11e7-9e2d-e8e0b747a45a.html"
+					}
+				],
+				"published": "2017-04-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-5057",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5057"
-				}
+			"content": {
+				"id": "CVE-2017-5057",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5057"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5058",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5058"
-				}
+			"content": {
+				"id": "CVE-2017-5058",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5058"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5059",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5059"
-				}
+			"content": {
+				"id": "CVE-2017-5059",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5059"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5060",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5060"
-				}
+			"content": {
+				"id": "CVE-2017-5060",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5060"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5061",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5061"
-				}
+			"content": {
+				"id": "CVE-2017-5061",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5061"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5062",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5062"
-				}
+			"content": {
+				"id": "CVE-2017-5062",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5062"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5063",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5063"
-				}
+			"content": {
+				"id": "CVE-2017-5063",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5063"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5064",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5064"
-				}
+			"content": {
+				"id": "CVE-2017-5064",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5064"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5065",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5065"
-				}
+			"content": {
+				"id": "CVE-2017-5065",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5065"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5066",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5066"
-				}
+			"content": {
+				"id": "CVE-2017-5066",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5066"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5067",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5067"
-				}
+			"content": {
+				"id": "CVE-2017-5067",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5067"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5069",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5069"
-				}
+			"content": {
+				"id": "CVE-2017-5069",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5069"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

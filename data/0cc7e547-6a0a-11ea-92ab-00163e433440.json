@@ -2,30 +2,40 @@
 	"id": "0cc7e547-6a0a-11ea-92ab-00163e433440",
 	"advisories": [
 		{
-			"id": "0cc7e547-6a0a-11ea-92ab-00163e433440",
-			"title": "FreeBSD -- Incorrect user-controlled pointer use in epair",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Incorrect use of a potentially user-controlled pointer in the kernel\n\tallowed vnet jailed users to panic the system and potentially execute\n\taribitrary code in the kernel.</p>\n\t<h1>Impact:</h1>\n\t<p>Users with root level access (or the PRIV_NET_IFCREATE privilege)\n\tcan panic the system, or potentially escape the jail or execute\n\tarbitrary code with kernel priviliges.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:07.epair.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0cc7e547-6a0a-11ea-92ab-00163e433440.html"
-				}
-			],
-			"published": "2020-03-19T00:00:00Z"
+			"content": {
+				"id": "0cc7e547-6a0a-11ea-92ab-00163e433440",
+				"title": "FreeBSD -- Incorrect user-controlled pointer use in epair",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Incorrect use of a potentially user-controlled pointer in the kernel\n\tallowed vnet jailed users to panic the system and potentially execute\n\taribitrary code in the kernel.</p>\n\t<h1>Impact:</h1>\n\t<p>Users with root level access (or the PRIV_NET_IFCREATE privilege)\n\tcan panic the system, or potentially escape the jail or execute\n\tarbitrary code with kernel priviliges.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-20:07.epair.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0cc7e547-6a0a-11ea-92ab-00163e433440.html"
+					}
+				],
+				"published": "2020-03-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-7452",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-7452"
-				}
+			"content": {
+				"id": "CVE-2020-7452",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-7452"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

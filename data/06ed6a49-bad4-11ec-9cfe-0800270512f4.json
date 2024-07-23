@@ -2,30 +2,40 @@
 	"id": "06ed6a49-bad4-11ec-9cfe-0800270512f4",
 	"advisories": [
 		{
-			"id": "06ed6a49-bad4-11ec-9cfe-0800270512f4",
-			"title": "Ruby -- Buffer overrun in String-to-Float conversion",
-			"description": "\n\t<p>piao reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2022/04/12/buffer-overrun-in-string-to-float-cve-2022-28739/\">\n\t  <p>\n\t    Due to a bug in an internal function that converts a String\n\t    to a Float, some convertion methods like <code>Kernel#Float</code>\n\t    and <code>String#to_f</code> could cause buffer over-read.\n\t    A typical consequence is a process termination due to\n\t    segmentation fault, but in a limited circumstances, it may\n\t    be exploitable for illegal memory read.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.ruby-lang.org/en/news/2022/04/12/buffer-overrun-in-string-to-float-cve-2022-28739/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/06ed6a49-bad4-11ec-9cfe-0800270512f4.html"
-				}
-			],
-			"published": "2022-04-13T00:00:00Z"
+			"content": {
+				"id": "06ed6a49-bad4-11ec-9cfe-0800270512f4",
+				"title": "Ruby -- Buffer overrun in String-to-Float conversion",
+				"description": "\n\t<p>piao reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2022/04/12/buffer-overrun-in-string-to-float-cve-2022-28739/\">\n\t  <p>\n\t    Due to a bug in an internal function that converts a String\n\t    to a Float, some convertion methods like <code>Kernel#Float</code>\n\t    and <code>String#to_f</code> could cause buffer over-read.\n\t    A typical consequence is a process termination due to\n\t    segmentation fault, but in a limited circumstances, it may\n\t    be exploitable for illegal memory read.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.ruby-lang.org/en/news/2022/04/12/buffer-overrun-in-string-to-float-cve-2022-28739/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/06ed6a49-bad4-11ec-9cfe-0800270512f4.html"
+					}
+				],
+				"published": "2022-04-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-28739",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-28739"
-				}
+			"content": {
+				"id": "CVE-2022-28739",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-28739"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

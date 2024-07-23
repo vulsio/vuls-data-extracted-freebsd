@@ -2,30 +2,40 @@
 	"id": "c97219b6-843d-11e2-b131-000c299b62e1",
 	"advisories": [
 		{
-			"id": "c97219b6-843d-11e2-b131-000c299b62e1",
-			"title": "stunnel -- Remote Code Execution",
-			"description": "\n\t<p>Michal Trojnara reports:</p>\n\t<blockquote cite=\"https://www.stunnel.org/CVE-2013-1762.html\">\n\t  <p>64-bit versions of stunnel with the following conditions:\n\t     * NTLM authentication enabled\n\t     * CONNECT protocol negotiation enabled\n\t     * Configured in SSL client mode\n\t     * An attacker that can either control the proxy server specified in\n\t       the \"connect\" option or execute MITM attacks on the TCP session\n\t       between stunnel and the proxy</p>\n\t  <p>Can be exploited for remote code execution.  The code is executed\n\t     within the configured chroot directory, with privileges of the\n\t     configured user and group.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.stunnel.org/CVE-2013-1762.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c97219b6-843d-11e2-b131-000c299b62e1.html"
-				}
-			],
-			"published": "2013-03-03T00:00:00Z"
+			"content": {
+				"id": "c97219b6-843d-11e2-b131-000c299b62e1",
+				"title": "stunnel -- Remote Code Execution",
+				"description": "\n\t<p>Michal Trojnara reports:</p>\n\t<blockquote cite=\"https://www.stunnel.org/CVE-2013-1762.html\">\n\t  <p>64-bit versions of stunnel with the following conditions:\n\t     * NTLM authentication enabled\n\t     * CONNECT protocol negotiation enabled\n\t     * Configured in SSL client mode\n\t     * An attacker that can either control the proxy server specified in\n\t       the \"connect\" option or execute MITM attacks on the TCP session\n\t       between stunnel and the proxy</p>\n\t  <p>Can be exploited for remote code execution.  The code is executed\n\t     within the configured chroot directory, with privileges of the\n\t     configured user and group.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.stunnel.org/CVE-2013-1762.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c97219b6-843d-11e2-b131-000c299b62e1.html"
+					}
+				],
+				"published": "2013-03-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-1762",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-1762"
-				}
+			"content": {
+				"id": "CVE-2013-1762",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-1762"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

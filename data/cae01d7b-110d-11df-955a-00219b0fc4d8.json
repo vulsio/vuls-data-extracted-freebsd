@@ -2,33 +2,38 @@
 	"id": "cae01d7b-110d-11df-955a-00219b0fc4d8",
 	"advisories": [
 		{
-			"id": "cae01d7b-110d-11df-955a-00219b0fc4d8",
-			"title": "apache -- Prevent chunk-size integer overflow on platforms where sizeof(int) < sizeof(long)",
-			"description": "\n\t<p>Apache ChangeLog reports:</p>\n\t<blockquote cite=\"http://www.apache.org/dist/httpd/CHANGES_1.3.42\">\n\t  <p>Integer overflow in the ap_proxy_send_fb function in\n\t    proxy/proxy_util.c in mod_proxy in the Apache HTTP Server before\n\t    1.3.42 on 64-bit platforms allows remote origin servers to cause a\n\t    denial of service (daemon crash) or possibly execute arbitrary code\n\t    via a large chunk size that triggers a heap-based buffer overflow.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://security-tracker.debian.org/tracker/CVE-2010-0010"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0010"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.security-database.com/detail.php?alert=CVE-2010-0010"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.vupen.com/english/Reference-CVE-2010-0010.php"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cae01d7b-110d-11df-955a-00219b0fc4d8.html"
-				}
-			],
-			"published": "2010-02-03T00:00:00Z",
-			"modified": "2010-02-03T00:00:00Z"
+			"content": {
+				"id": "cae01d7b-110d-11df-955a-00219b0fc4d8",
+				"title": "apache -- Prevent chunk-size integer overflow on platforms where sizeof(int) < sizeof(long)",
+				"description": "\n\t<p>Apache ChangeLog reports:</p>\n\t<blockquote cite=\"http://www.apache.org/dist/httpd/CHANGES_1.3.42\">\n\t  <p>Integer overflow in the ap_proxy_send_fb function in\n\t    proxy/proxy_util.c in mod_proxy in the Apache HTTP Server before\n\t    1.3.42 on 64-bit platforms allows remote origin servers to cause a\n\t    denial of service (daemon crash) or possibly execute arbitrary code\n\t    via a large chunk size that triggers a heap-based buffer overflow.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://security-tracker.debian.org/tracker/CVE-2010-0010"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0010"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.security-database.com/detail.php?alert=CVE-2010-0010"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.vupen.com/english/Reference-CVE-2010-0010.php"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cae01d7b-110d-11df-955a-00219b0fc4d8.html"
+					}
+				],
+				"published": "2010-02-03T00:00:00Z",
+				"modified": "2010-02-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

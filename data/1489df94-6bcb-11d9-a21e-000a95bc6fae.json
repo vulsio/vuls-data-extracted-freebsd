@@ -2,20 +2,25 @@
 	"id": "1489df94-6bcb-11d9-a21e-000a95bc6fae",
 	"advisories": [
 		{
-			"id": "1489df94-6bcb-11d9-a21e-000a95bc6fae",
-			"title": "opera -- multiple vulnerabilities in Java implementation",
-			"description": "\n\t<p>Marc Schoenefeld reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=110088923127820\">\n\t  <p>Opera 7.54 is vulnerable to leakage of the java sandbox,\n\t    allowing malicious applets to gain unacceptable\n\t    privileges. This allows them to be used for information\n\t    gathering (spying) of local identity information and\n\t    system configurations as well as causing annoying crash\n\t    effects.</p>\n\t  <p>Opera 754 <em>[sic]</em> which was released Aug 5,2004 is\n\t    vulnerable to the XSLT processor covert channel attack,\n\t    which was corrected with JRE 1.4.2_05 [released in July\n\t    04], but in disadvantage to the users the opera packaging\n\t    guys chose to bundle the JRE 1.4.2_04 <em>[...]</em></p>\n\t  <p>Internal pointer DoS exploitation: Opera.jar contains the\n\t    opera replacement of the java plugin. It therefore handles\n\t    communication between javascript and the Java VM via the\n\t    liveconnect protocol. The public class EcmaScriptObject\n\t    exposes a system memory pointer to the java address space,\n\t    by constructing a special variant of this type an internal\n\t    cache table can be polluted by false entries that infer\n\t    proper function of the JSObject class and in the following\n\t    proof-of-concept crash the browser.</p>\n\t  <p>Exposure of location of local java installation Sniffing\n\t    the URL classpath allows to retrieve the URLs of the\n\t    bootstrap class path and therefore the JDK installation\n\t    directory.</p>\n\t  <p>Exposure of local user name to an untrusted applet An\n\t    attacker could use the sun.security.krb5.Credentials class\n\t    to retrieve the name of the currently logged in user and\n\t    parse his home directory from the information which is\n\t    provided by the thrown\n\t    java.security.AccessControlException.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110088923127820"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1489df94-6bcb-11d9-a21e-000a95bc6fae.html"
-				}
-			],
-			"published": "2005-01-24T00:00:00Z"
+			"content": {
+				"id": "1489df94-6bcb-11d9-a21e-000a95bc6fae",
+				"title": "opera -- multiple vulnerabilities in Java implementation",
+				"description": "\n\t<p>Marc Schoenefeld reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=110088923127820\">\n\t  <p>Opera 7.54 is vulnerable to leakage of the java sandbox,\n\t    allowing malicious applets to gain unacceptable\n\t    privileges. This allows them to be used for information\n\t    gathering (spying) of local identity information and\n\t    system configurations as well as causing annoying crash\n\t    effects.</p>\n\t  <p>Opera 754 <em>[sic]</em> which was released Aug 5,2004 is\n\t    vulnerable to the XSLT processor covert channel attack,\n\t    which was corrected with JRE 1.4.2_05 [released in July\n\t    04], but in disadvantage to the users the opera packaging\n\t    guys chose to bundle the JRE 1.4.2_04 <em>[...]</em></p>\n\t  <p>Internal pointer DoS exploitation: Opera.jar contains the\n\t    opera replacement of the java plugin. It therefore handles\n\t    communication between javascript and the Java VM via the\n\t    liveconnect protocol. The public class EcmaScriptObject\n\t    exposes a system memory pointer to the java address space,\n\t    by constructing a special variant of this type an internal\n\t    cache table can be polluted by false entries that infer\n\t    proper function of the JSObject class and in the following\n\t    proof-of-concept crash the browser.</p>\n\t  <p>Exposure of location of local java installation Sniffing\n\t    the URL classpath allows to retrieve the URLs of the\n\t    bootstrap class path and therefore the JDK installation\n\t    directory.</p>\n\t  <p>Exposure of local user name to an untrusted applet An\n\t    attacker could use the sun.security.krb5.Credentials class\n\t    to retrieve the name of the currently logged in user and\n\t    parse his home directory from the information which is\n\t    provided by the thrown\n\t    java.security.AccessControlException.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110088923127820"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1489df94-6bcb-11d9-a21e-000a95bc6fae.html"
+					}
+				],
+				"published": "2005-01-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

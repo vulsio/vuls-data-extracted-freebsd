@@ -2,61 +2,81 @@
 	"id": "a35f415d-572a-11e5-b0a4-f8b156b6dcc8",
 	"advisories": [
 		{
-			"id": "a35f415d-572a-11e5-b0a4-f8b156b6dcc8",
-			"title": "vorbis-tools, opus-tools -- multiple vulnerabilities",
-			"description": "\n\t<p>Paris Zoumpouloglou reports:</p>\n\t<blockquote cite=\"https://trac.xiph.org/ticket/2136\">\n\t  <p>I discovered an integer overflow issue in oggenc,\n\t    related to the number of channels in the input WAV file.\n\t    The issue triggers an out-of-bounds memory access which\n\t    causes oggenc to crash.</p>\n\t</blockquote>\n\t<p>Paris Zoumpouloglou reports:</p>\n\t<blockquote cite=\"https://trac.xiph.org/ticket/2136\">\n\t  <p>A crafted WAV file with number of channels set to 0\n\t    will cause oggenc to crash due to a division by zero\n\t    issue.</p>\n\t</blockquote>\n\t<p>pengsu reports:</p>\n\t<blockquote cite=\"https://trac.xiph.org/ticket/2212\">\n\t  <p>I discovered an buffer overflow issue in oggenc/audio.c\n\t    when it tries to open invalid aiff file.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=202941"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://trac.xiph.org/ticket/2136"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://trac.xiph.org/ticket/2137"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://trac.xiph.org/ticket/2212"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a35f415d-572a-11e5-b0a4-f8b156b6dcc8.html"
-				}
-			],
-			"published": "2015-09-09T00:00:00Z",
-			"modified": "2015-09-09T00:00:00Z"
+			"content": {
+				"id": "a35f415d-572a-11e5-b0a4-f8b156b6dcc8",
+				"title": "vorbis-tools, opus-tools -- multiple vulnerabilities",
+				"description": "\n\t<p>Paris Zoumpouloglou reports:</p>\n\t<blockquote cite=\"https://trac.xiph.org/ticket/2136\">\n\t  <p>I discovered an integer overflow issue in oggenc,\n\t    related to the number of channels in the input WAV file.\n\t    The issue triggers an out-of-bounds memory access which\n\t    causes oggenc to crash.</p>\n\t</blockquote>\n\t<p>Paris Zoumpouloglou reports:</p>\n\t<blockquote cite=\"https://trac.xiph.org/ticket/2136\">\n\t  <p>A crafted WAV file with number of channels set to 0\n\t    will cause oggenc to crash due to a division by zero\n\t    issue.</p>\n\t</blockquote>\n\t<p>pengsu reports:</p>\n\t<blockquote cite=\"https://trac.xiph.org/ticket/2212\">\n\t  <p>I discovered an buffer overflow issue in oggenc/audio.c\n\t    when it tries to open invalid aiff file.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=202941"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://trac.xiph.org/ticket/2136"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://trac.xiph.org/ticket/2137"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://trac.xiph.org/ticket/2212"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a35f415d-572a-11e5-b0a4-f8b156b6dcc8.html"
+					}
+				],
+				"published": "2015-09-09T00:00:00Z",
+				"modified": "2015-09-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-9638",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-9638"
-				}
+			"content": {
+				"id": "CVE-2014-9638",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-9638"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2014-9639",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-9639"
-				}
+			"content": {
+				"id": "CVE-2014-9639",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-9639"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-6749",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-6749"
-				}
+			"content": {
+				"id": "CVE-2015-6749",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-6749"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

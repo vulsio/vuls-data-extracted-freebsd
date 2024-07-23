@@ -2,20 +2,25 @@
 	"id": "e1de77e8-c45e-48d7-8866-5a6f943046de",
 	"advisories": [
 		{
-			"id": "e1de77e8-c45e-48d7-8866-5a6f943046de",
-			"title": "SquirrelMail -- post-authentication remote code execution",
-			"description": "\n\t<p>SquirrelMail developers report:</p>\n\t<blockquote cite=\"http://seclists.org/fulldisclosure/2017/Apr/81\">\n\t  <p>SquirrelMail 1.4.22 (and other versions before 20170427_0200-SVN)\n\t  allows post-authentication remote code execution via a sendmail.cf\n\t  file that is mishandled in a popen call. It's possible to exploit this\n\t  vulnerability to execute arbitrary shell commands on the remote\n\t  server.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7692"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e1de77e8-c45e-48d7-8866-5a6f943046de.html"
-				}
-			],
-			"published": "2017-08-22T00:00:00Z"
+			"content": {
+				"id": "e1de77e8-c45e-48d7-8866-5a6f943046de",
+				"title": "SquirrelMail -- post-authentication remote code execution",
+				"description": "\n\t<p>SquirrelMail developers report:</p>\n\t<blockquote cite=\"http://seclists.org/fulldisclosure/2017/Apr/81\">\n\t  <p>SquirrelMail 1.4.22 (and other versions before 20170427_0200-SVN)\n\t  allows post-authentication remote code execution via a sendmail.cf\n\t  file that is mishandled in a popen call. It's possible to exploit this\n\t  vulnerability to execute arbitrary shell commands on the remote\n\t  server.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7692"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e1de77e8-c45e-48d7-8866-5a6f943046de.html"
+					}
+				],
+				"published": "2017-08-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

@@ -2,39 +2,49 @@
 	"id": "b4f8be9e-56b2-11e1-9fb7-003067b2972c",
 	"advisories": [
 		{
-			"id": "b4f8be9e-56b2-11e1-9fb7-003067b2972c",
-			"title": "Python -- DoS via malformed XML-RPC / HTTP POST request",
-			"description": "\n\t<p>Jan Lieskovsky reports,</p>\n\t<blockquote cite=\"http://bugs.python.org/issue14001\">\n\t  <p>A denial of service flaw was found in the way Simple XML-RPC\n\t    Server module of Python processed client connections, that were\n\t    closed prior the complete request body has been received.  A\n\t    remote attacker could use this flaw to cause Python Simple\n\t    XML-RPC based server process to consume excessive amount of\n\t    CPU.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.python.org/issue14001"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.pypy.org/issue1047"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugzilla.redhat.com/show_bug.cgi?id=789790"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b4f8be9e-56b2-11e1-9fb7-003067b2972c.html"
-				}
-			],
-			"published": "2012-02-14T00:00:00Z",
-			"modified": "2012-02-26T00:00:00Z"
+			"content": {
+				"id": "b4f8be9e-56b2-11e1-9fb7-003067b2972c",
+				"title": "Python -- DoS via malformed XML-RPC / HTTP POST request",
+				"description": "\n\t<p>Jan Lieskovsky reports,</p>\n\t<blockquote cite=\"http://bugs.python.org/issue14001\">\n\t  <p>A denial of service flaw was found in the way Simple XML-RPC\n\t    Server module of Python processed client connections, that were\n\t    closed prior the complete request body has been received.  A\n\t    remote attacker could use this flaw to cause Python Simple\n\t    XML-RPC based server process to consume excessive amount of\n\t    CPU.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.python.org/issue14001"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.pypy.org/issue1047"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugzilla.redhat.com/show_bug.cgi?id=789790"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b4f8be9e-56b2-11e1-9fb7-003067b2972c.html"
+					}
+				],
+				"published": "2012-02-14T00:00:00Z",
+				"modified": "2012-02-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-0845",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0845"
-				}
+			"content": {
+				"id": "CVE-2012-0845",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0845"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,34 +2,44 @@
 	"id": "f161a5ad-c9bd-11ee-b7a7-353f1e043d9a",
 	"advisories": [
 		{
-			"id": "f161a5ad-c9bd-11ee-b7a7-353f1e043d9a",
-			"title": "openexr -- Heap Overflow in Scanline Deep Data Parsing",
-			"description": "\n\t<p>Austin Hackers Anonymous report:</p>\n\t<blockquote cite=\"https://takeonme.org/cves/CVE-2023-5841.html\">\n\t  <p>Due to a failure in validating the number of scanline samples of a OpenEXR file containing deep scanline data, Academy Software Foundation OpenEXR image parsing library version 3.2.1 and prior is susceptible to a heap-based buffer overflow vulnerability.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.2.2\">\n\t  <p>[...] it is in a routine that is predominantly used for development and\n\t    testing. It is not likely to appear in production code.</p>\n\t</blockquote>\n\t",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.2.2"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://takeonme.org/cves/CVE-2023-5841.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f161a5ad-c9bd-11ee-b7a7-353f1e043d9a.html"
-				}
-			],
-			"published": "2024-02-12T00:00:00Z"
+			"content": {
+				"id": "f161a5ad-c9bd-11ee-b7a7-353f1e043d9a",
+				"title": "openexr -- Heap Overflow in Scanline Deep Data Parsing",
+				"description": "\n\t<p>Austin Hackers Anonymous report:</p>\n\t<blockquote cite=\"https://takeonme.org/cves/CVE-2023-5841.html\">\n\t  <p>Due to a failure in validating the number of scanline samples of a OpenEXR file containing deep scanline data, Academy Software Foundation OpenEXR image parsing library version 3.2.1 and prior is susceptible to a heap-based buffer overflow vulnerability.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.2.2\">\n\t  <p>[...] it is in a routine that is predominantly used for development and\n\t    testing. It is not likely to appear in production code.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.2.2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://takeonme.org/cves/CVE-2023-5841.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f161a5ad-c9bd-11ee-b7a7-353f1e043d9a.html"
+					}
+				],
+				"published": "2024-02-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-5841",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-5841"
-				}
+			"content": {
+				"id": "CVE-2023-5841",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-5841"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

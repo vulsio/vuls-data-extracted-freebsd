@@ -2,35 +2,45 @@
 	"id": "b4d94fa0-6e38-11d9-9e1e-c296ac722cb3",
 	"advisories": [
 		{
-			"id": "b4d94fa0-6e38-11d9-9e1e-c296ac722cb3",
-			"title": "squid -- possible cache-poisoning via malformed HTTP responses",
-			"description": "\n\t<p>The squid patches page notes:</p>\n\t<blockquote cite=\"http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-header_parsing\">\n\t  <p>This patch makes Squid considerably stricter while\n\t    parsing the HTTP protocol.</p>\n\t  <ol>\n\t    <li>A Content-length header should only appear once in a\n\t      valid request or response. Multiple Content-length\n\t      headers, in conjunction with specially crafted requests,\n\t      may allow Squid's cache to be poisoned with bad content\n\t      in certain situations.</li>\n\t    <li>CR characters is only allowed as part of the CR NL\n\t      line terminator, not alone. This to ensure that all\n\t      involved agrees on the structure of HTTP headers.</li>\n\t    <li>Rejects requests/responses that have whitespace in an\n\t      HTTP header name.</li>\n\t  </ol>\n\t</blockquote>\n\t<p>To enable these strict parsing rules, update to at least\n\t  squid-2.5.7_9 and specify <code>relaxed_header_parser\n\t  off</code> in squid.conf.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-header_parsing"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.kb.cert.org/vuls/id/768702"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b4d94fa0-6e38-11d9-9e1e-c296ac722cb3.html"
-				}
-			],
-			"published": "2005-01-24T00:00:00Z",
-			"modified": "2006-01-02T00:00:00Z"
+			"content": {
+				"id": "b4d94fa0-6e38-11d9-9e1e-c296ac722cb3",
+				"title": "squid -- possible cache-poisoning via malformed HTTP responses",
+				"description": "\n\t<p>The squid patches page notes:</p>\n\t<blockquote cite=\"http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-header_parsing\">\n\t  <p>This patch makes Squid considerably stricter while\n\t    parsing the HTTP protocol.</p>\n\t  <ol>\n\t    <li>A Content-length header should only appear once in a\n\t      valid request or response. Multiple Content-length\n\t      headers, in conjunction with specially crafted requests,\n\t      may allow Squid's cache to be poisoned with bad content\n\t      in certain situations.</li>\n\t    <li>CR characters is only allowed as part of the CR NL\n\t      line terminator, not alone. This to ensure that all\n\t      involved agrees on the structure of HTTP headers.</li>\n\t    <li>Rejects requests/responses that have whitespace in an\n\t      HTTP header name.</li>\n\t  </ol>\n\t</blockquote>\n\t<p>To enable these strict parsing rules, update to at least\n\t  squid-2.5.7_9 and specify <code>relaxed_header_parser\n\t  off</code> in squid.conf.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.squid-cache.org/Versions/v2/2.5/bugs/#squid-2.5.STABLE7-header_parsing"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.kb.cert.org/vuls/id/768702"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b4d94fa0-6e38-11d9-9e1e-c296ac722cb3.html"
+					}
+				],
+				"published": "2005-01-24T00:00:00Z",
+				"modified": "2006-01-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-0174",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-0174"
-				}
+			"content": {
+				"id": "CVE-2005-0174",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-0174"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,20 +2,25 @@
 	"id": "a81746a1-c2c7-11d9-89f7-02061b08fc24",
 	"advisories": [
 		{
-			"id": "a81746a1-c2c7-11d9-89f7-02061b08fc24",
-			"title": "mozilla -- \"Wrapped\" javascript: urls bypass security checks",
-			"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-43.html\">\n\t  <p>Some security checks intended to prevent script injection\n\t    were incorrect and could be bypassed by wrapping a\n\t    javascript: url in the view-source:\n\t    pseudo-protocol. Michael Krax demonstrated that a variant\n\t    of his <a href=\"http://www.mozilla.org/security/announce/mfsa2005-37.html\">favicon</a>\n\t    exploit could still execute arbitrary code, and the same\n\t    technique could also be used to perform cross-site\n\t    scripting.</p>\n\t  <p>Georgi Guninski demonstrated the same flaw wrapping\n\t    javascript: urls with the jar: pseudo-protocol.</p>\n\t  <p>L. David Baron discovered a nested variant that defeated\n\t    checks in the script security manager.</p>\n\t  <p><strong>Workaround:</strong> Disable Javascript</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.mozilla.org/security/announce/mfsa2005-43.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/a81746a1-c2c7-11d9-89f7-02061b08fc24.html"
-				}
-			],
-			"published": "2005-05-12T00:00:00Z"
+			"content": {
+				"id": "a81746a1-c2c7-11d9-89f7-02061b08fc24",
+				"title": "mozilla -- \"Wrapped\" javascript: urls bypass security checks",
+				"description": "\n\t<p>A Mozilla Foundation Security Advisory reports:</p>\n\t<blockquote cite=\"http://www.mozilla.org/security/announce/mfsa2005-43.html\">\n\t  <p>Some security checks intended to prevent script injection\n\t    were incorrect and could be bypassed by wrapping a\n\t    javascript: url in the view-source:\n\t    pseudo-protocol. Michael Krax demonstrated that a variant\n\t    of his <a href=\"http://www.mozilla.org/security/announce/mfsa2005-37.html\">favicon</a>\n\t    exploit could still execute arbitrary code, and the same\n\t    technique could also be used to perform cross-site\n\t    scripting.</p>\n\t  <p>Georgi Guninski demonstrated the same flaw wrapping\n\t    javascript: urls with the jar: pseudo-protocol.</p>\n\t  <p>L. David Baron discovered a nested variant that defeated\n\t    checks in the script security manager.</p>\n\t  <p><strong>Workaround:</strong> Disable Javascript</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.mozilla.org/security/announce/mfsa2005-43.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a81746a1-c2c7-11d9-89f7-02061b08fc24.html"
+					}
+				],
+				"published": "2005-05-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

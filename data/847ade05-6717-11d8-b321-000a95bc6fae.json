@@ -2,34 +2,44 @@
 	"id": "847ade05-6717-11d8-b321-000a95bc6fae",
 	"advisories": [
 		{
-			"id": "847ade05-6717-11d8-b321-000a95bc6fae",
-			"title": "libxml2 stack buffer overflow in URI parsing",
-			"description": "\n\t<p>Yuuichi Teranishi reported a crash in libxml2's URI handling\n\t  when a long URL is supplied.\tThe implementation in nanohttp.c\n\t  and nanoftp.c uses a 4K stack buffer, and longer URLs will\n\t  overwrite the stack.\tThis could result in denial-of-service\n\t  or arbitrary code execution in applications using libxml2\n\t  to parse documents.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://mail.gnome.org/archives/xml/2004-February/msg00070.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.xmlsoft.org/news.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/847ade05-6717-11d8-b321-000a95bc6fae.html"
-				}
-			],
-			"published": "2004-02-25T00:00:00Z"
+			"content": {
+				"id": "847ade05-6717-11d8-b321-000a95bc6fae",
+				"title": "libxml2 stack buffer overflow in URI parsing",
+				"description": "\n\t<p>Yuuichi Teranishi reported a crash in libxml2's URI handling\n\t  when a long URL is supplied.\tThe implementation in nanohttp.c\n\t  and nanoftp.c uses a 4K stack buffer, and longer URLs will\n\t  overwrite the stack.\tThis could result in denial-of-service\n\t  or arbitrary code execution in applications using libxml2\n\t  to parse documents.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://mail.gnome.org/archives/xml/2004-February/msg00070.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.xmlsoft.org/news.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/847ade05-6717-11d8-b321-000a95bc6fae.html"
+					}
+				],
+				"published": "2004-02-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0110",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0110"
-				}
+			"content": {
+				"id": "CVE-2004-0110",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0110"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

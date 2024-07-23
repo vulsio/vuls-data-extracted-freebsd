@@ -2,34 +2,44 @@
 	"id": "10f7bc76-0335-4a88-b391-0b05b3a8ce1c",
 	"advisories": [
 		{
-			"id": "10f7bc76-0335-4a88-b391-0b05b3a8ce1c",
-			"title": "NSS -- MD5 downgrade in TLS 1.2 signatures",
-			"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2015-150/\">\n\t  <p>Security researcher Karthikeyan Bhargavan reported an\n\t    issue in Network Security Services (NSS) where MD5\n\t    signatures in the server signature within the TLS 1.2\n\t    ServerKeyExchange message are still accepted. This is an\n\t    issue since NSS has officially disallowed the accepting MD5\n\t    as a hash algorithm in signatures since 2011. This issues\n\t    exposes NSS based clients such as Firefox to theoretical\n\t    collision-based forgery attacks.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://hg.mozilla.org/projects/nss/rev/94e1157f3fbb"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2015-150/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/10f7bc76-0335-4a88-b391-0b05b3a8ce1c.html"
-				}
-			],
-			"published": "2015-12-28T00:00:00Z"
+			"content": {
+				"id": "10f7bc76-0335-4a88-b391-0b05b3a8ce1c",
+				"title": "NSS -- MD5 downgrade in TLS 1.2 signatures",
+				"description": "\n\t<p>The Mozilla Project reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2015-150/\">\n\t  <p>Security researcher Karthikeyan Bhargavan reported an\n\t    issue in Network Security Services (NSS) where MD5\n\t    signatures in the server signature within the TLS 1.2\n\t    ServerKeyExchange message are still accepted. This is an\n\t    issue since NSS has officially disallowed the accepting MD5\n\t    as a hash algorithm in signatures since 2011. This issues\n\t    exposes NSS based clients such as Firefox to theoretical\n\t    collision-based forgery attacks.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://hg.mozilla.org/projects/nss/rev/94e1157f3fbb"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2015-150/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/10f7bc76-0335-4a88-b391-0b05b3a8ce1c.html"
+					}
+				],
+				"published": "2015-12-28T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7575",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7575"
-				}
+			"content": {
+				"id": "CVE-2015-7575",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7575"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

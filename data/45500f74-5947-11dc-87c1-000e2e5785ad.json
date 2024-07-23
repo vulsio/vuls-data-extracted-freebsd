@@ -2,30 +2,40 @@
 	"id": "45500f74-5947-11dc-87c1-000e2e5785ad",
 	"advisories": [
 		{
-			"id": "45500f74-5947-11dc-87c1-000e2e5785ad",
-			"title": "fetchmail -- denial of service on reject of local warning message",
-			"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2007-02.txt\">\n\t  <p>fetchmail will generate warning messages in certain\n\t    circumstances (for instance, when leaving oversized messages\n\t    on the server or login to the upstream fails) and send them\n\t    to the local postmaster or the user running it.</p>\n\t  <p>If this warning message is then refused by the SMTP listener\n\t    that fetchmail is forwarding the message to, fetchmail\n\t    crashes and does not collect further messages until it is\n\t    restarted.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.fetchmail.info/fetchmail-SA-2007-02.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/45500f74-5947-11dc-87c1-000e2e5785ad.html"
-				}
-			],
-			"published": "2007-09-02T00:00:00Z"
+			"content": {
+				"id": "45500f74-5947-11dc-87c1-000e2e5785ad",
+				"title": "fetchmail -- denial of service on reject of local warning message",
+				"description": "\n\t<p>Matthias Andree reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2007-02.txt\">\n\t  <p>fetchmail will generate warning messages in certain\n\t    circumstances (for instance, when leaving oversized messages\n\t    on the server or login to the upstream fails) and send them\n\t    to the local postmaster or the user running it.</p>\n\t  <p>If this warning message is then refused by the SMTP listener\n\t    that fetchmail is forwarding the message to, fetchmail\n\t    crashes and does not collect further messages until it is\n\t    restarted.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.fetchmail.info/fetchmail-SA-2007-02.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/45500f74-5947-11dc-87c1-000e2e5785ad.html"
+					}
+				],
+				"published": "2007-09-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2007-4565",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-4565"
-				}
+			"content": {
+				"id": "CVE-2007-4565",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-4565"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

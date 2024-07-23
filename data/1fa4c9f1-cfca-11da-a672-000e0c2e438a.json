@@ -2,31 +2,41 @@
 	"id": "1fa4c9f1-cfca-11da-a672-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "1fa4c9f1-cfca-11da-a672-000e0c2e438a",
-			"title": "FreeBSD -- FPU information disclosure",
-			"description": "\n\t<h1>Problem Description</h1>\n\t<p>On \"7th generation\" and \"8th generation\" processors\n\t  manufactured by AMD, including the AMD Athlon, Duron, Athlon\n\t  MP, Athlon XP, Athlon64, Athlon64 FX, Opteron, Turion, and\n\t  Sempron, the fxsave and fxrstor instructions do not save and\n\t  restore the FOP, FIP, and FDP registers unless the exception\n\t  summary bit (ES) in the x87 status word is set to 1,\n\t  indicating that an unmasked x87 exception has occurred.</p>\n\t<p>This behaviour is consistent with documentation provided by\n\t  AMD, but is different from processors from other vendors,\n\t  which save and restore the FOP, FIP, and FDP registers\n\t  regardless of the value of the ES bit.  As a result of this\n\t  discrepancy remaining unnoticed until now, the FreeBSD kernel\n\t  does not restore the contents of the FOP, FIP, and FDP\n\t  registers between context switches.</p>\n\t<h1>Impact</h1>\n\t<p>On affected processors, a local attacker can monitor the\n\t  execution path of a process which uses floating-point\n\t  operations.  This may allow an attacker to steal\n\t  cryptographic keys or other sensitive information.</p>\n\t<h1>Workaround</h1>\n\t<p>No workaround is available, but systems which do not use AMD\n\t  Athlon, Duron, Athlon MP, Athlon XP, Athlon64, Athlon64 FX,\n\t  Opteron, Turion, or Sempron processors are not vulnerable.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:14.fpu.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1fa4c9f1-cfca-11da-a672-000e0c2e438a.html"
-				}
-			],
-			"published": "2006-04-19T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "1fa4c9f1-cfca-11da-a672-000e0c2e438a",
+				"title": "FreeBSD -- FPU information disclosure",
+				"description": "\n\t<h1>Problem Description</h1>\n\t<p>On \"7th generation\" and \"8th generation\" processors\n\t  manufactured by AMD, including the AMD Athlon, Duron, Athlon\n\t  MP, Athlon XP, Athlon64, Athlon64 FX, Opteron, Turion, and\n\t  Sempron, the fxsave and fxrstor instructions do not save and\n\t  restore the FOP, FIP, and FDP registers unless the exception\n\t  summary bit (ES) in the x87 status word is set to 1,\n\t  indicating that an unmasked x87 exception has occurred.</p>\n\t<p>This behaviour is consistent with documentation provided by\n\t  AMD, but is different from processors from other vendors,\n\t  which save and restore the FOP, FIP, and FDP registers\n\t  regardless of the value of the ES bit.  As a result of this\n\t  discrepancy remaining unnoticed until now, the FreeBSD kernel\n\t  does not restore the contents of the FOP, FIP, and FDP\n\t  registers between context switches.</p>\n\t<h1>Impact</h1>\n\t<p>On affected processors, a local attacker can monitor the\n\t  execution path of a process which uses floating-point\n\t  operations.  This may allow an attacker to steal\n\t  cryptographic keys or other sensitive information.</p>\n\t<h1>Workaround</h1>\n\t<p>No workaround is available, but systems which do not use AMD\n\t  Athlon, Duron, Athlon MP, Athlon XP, Athlon64, Athlon64 FX,\n\t  Opteron, Turion, or Sempron processors are not vulnerable.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-06:14.fpu.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1fa4c9f1-cfca-11da-a672-000e0c2e438a.html"
+					}
+				],
+				"published": "2006-04-19T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-1056",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-1056"
-				}
+			"content": {
+				"id": "CVE-2006-1056",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-1056"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

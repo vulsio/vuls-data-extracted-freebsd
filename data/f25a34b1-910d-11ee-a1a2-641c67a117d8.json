@@ -2,30 +2,40 @@
 	"id": "f25a34b1-910d-11ee-a1a2-641c67a117d8",
 	"advisories": [
 		{
-			"id": "f25a34b1-910d-11ee-a1a2-641c67a117d8",
-			"title": "varnish -- HTTP/2 Rapid Reset Attack",
-			"description": "\n\t<p>Varnish Cache Project reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00013.html\">\n\t  <p>A denial of service attack can be performed on Varnish Cache servers\n\tthat have the HTTP/2 protocol turned on. An attacker can create a large\n\tvolume of streams and immediately reset them without ever reaching the\n\tmaximum number of concurrent streams allowed for the session, causing\n\tthe Varnish server to consume unnecessary resources processing requests\n\tfor which the response will not be delivered.</p>\n\t</blockquote>\n\t",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://varnish-cache.org/security/VSV00013.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f25a34b1-910d-11ee-a1a2-641c67a117d8.html"
-				}
-			],
-			"published": "2023-12-02T00:00:00Z"
+			"content": {
+				"id": "f25a34b1-910d-11ee-a1a2-641c67a117d8",
+				"title": "varnish -- HTTP/2 Rapid Reset Attack",
+				"description": "\n\t<p>Varnish Cache Project reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00013.html\">\n\t  <p>A denial of service attack can be performed on Varnish Cache servers\n\tthat have the HTTP/2 protocol turned on. An attacker can create a large\n\tvolume of streams and immediately reset them without ever reaching the\n\tmaximum number of concurrent streams allowed for the session, causing\n\tthe Varnish server to consume unnecessary resources processing requests\n\tfor which the response will not be delivered.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://varnish-cache.org/security/VSV00013.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f25a34b1-910d-11ee-a1a2-641c67a117d8.html"
+					}
+				],
+				"published": "2023-12-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-44487",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-44487"
-				}
+			"content": {
+				"id": "CVE-2023-44487",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-44487"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

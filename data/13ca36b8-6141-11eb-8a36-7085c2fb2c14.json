@@ -2,20 +2,25 @@
 	"id": "13ca36b8-6141-11eb-8a36-7085c2fb2c14",
 	"advisories": [
 		{
-			"id": "13ca36b8-6141-11eb-8a36-7085c2fb2c14",
-			"title": "pngcheck -- Buffer-overrun vulnerability",
-			"description": "\n\t<p>The libpng project reports:</p>\n\t<blockquote cite=\"http://www.libpng.org/pub/png/apps/pngcheck.html\">\n\t  <p>pngcheck versions 3.0.0 and earlier have a pair of buffer-overrun\n\t    bugs related to the sPLT and PPLT chunks (the latter is a MNG-only\n\t    chunk, but it gets noticed even in PNG files if the -s option is used).\n\t    Both bugs are fixed in version 3.0.1, released on 24 January 2021.\n\t    Again, while all known vulnerabilities are fixed in this version,\n\t    the code is quite crufty, so it would be safest to assume there are\n\t    still some problems hidden in there. As always, use at your own risk.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.libpng.org/pub/png/apps/pngcheck.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/13ca36b8-6141-11eb-8a36-7085c2fb2c14.html"
-				}
-			],
-			"published": "2021-01-28T00:00:00Z"
+			"content": {
+				"id": "13ca36b8-6141-11eb-8a36-7085c2fb2c14",
+				"title": "pngcheck -- Buffer-overrun vulnerability",
+				"description": "\n\t<p>The libpng project reports:</p>\n\t<blockquote cite=\"http://www.libpng.org/pub/png/apps/pngcheck.html\">\n\t  <p>pngcheck versions 3.0.0 and earlier have a pair of buffer-overrun\n\t    bugs related to the sPLT and PPLT chunks (the latter is a MNG-only\n\t    chunk, but it gets noticed even in PNG files if the -s option is used).\n\t    Both bugs are fixed in version 3.0.1, released on 24 January 2021.\n\t    Again, while all known vulnerabilities are fixed in this version,\n\t    the code is quite crufty, so it would be safest to assume there are\n\t    still some problems hidden in there. As always, use at your own risk.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.libpng.org/pub/png/apps/pngcheck.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/13ca36b8-6141-11eb-8a36-7085c2fb2c14.html"
+					}
+				],
+				"published": "2021-01-28T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

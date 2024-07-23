@@ -2,30 +2,40 @@
 	"id": "8fafbef4-b1d9-11ed-b0f4-002590f2a714",
 	"advisories": [
 		{
-			"id": "8fafbef4-b1d9-11ed-b0f4-002590f2a714",
-			"title": "git -- gitattributes parsing integer overflow",
-			"description": "\n\t<p>git team reports:</p>\n\t<blockquote cite=\"https://github.com/git/git/security/advisories/GHSA-c738-c5qq-xg89\">\n\t  <p>gitattributes are used to define unique attributes corresponding\n\t    to paths in your repository. These attributes are defined by\n\t    .gitattributes file(s) within your repository.</p>\n\n\t  <p>The parser used to read these files has multiple integer\n\t    overflows, which can occur when parsing either a large number\n\t    of patterns, a large number of attributes, or attributes with\n\t    overly-long names.</p>\n\n\t  <p>These overflows may be triggered via a malicious\n\t    .gitattributes file. However, Git automatically splits lines at\n\t    2KB when reading .gitattributes from a file, but not when parsing\n\t    it from the index. Successfully exploiting this vulnerability\n\t    depends on the location of the .gitattributes file in question.</p>\n\n\t  <p>This integer overflow can result in arbitrary heap reads\n\t    and writes, which may result in remote code execution.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/#cve-2022-23521"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/8fafbef4-b1d9-11ed-b0f4-002590f2a714.html"
-				}
-			],
-			"published": "2023-02-21T00:00:00Z"
+			"content": {
+				"id": "8fafbef4-b1d9-11ed-b0f4-002590f2a714",
+				"title": "git -- gitattributes parsing integer overflow",
+				"description": "\n\t<p>git team reports:</p>\n\t<blockquote cite=\"https://github.com/git/git/security/advisories/GHSA-c738-c5qq-xg89\">\n\t  <p>gitattributes are used to define unique attributes corresponding\n\t    to paths in your repository. These attributes are defined by\n\t    .gitattributes file(s) within your repository.</p>\n\n\t  <p>The parser used to read these files has multiple integer\n\t    overflows, which can occur when parsing either a large number\n\t    of patterns, a large number of attributes, or attributes with\n\t    overly-long names.</p>\n\n\t  <p>These overflows may be triggered via a malicious\n\t    .gitattributes file. However, Git automatically splits lines at\n\t    2KB when reading .gitattributes from a file, but not when parsing\n\t    it from the index. Successfully exploiting this vulnerability\n\t    depends on the location of the .gitattributes file in question.</p>\n\n\t  <p>This integer overflow can result in arbitrary heap reads\n\t    and writes, which may result in remote code execution.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/#cve-2022-23521"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8fafbef4-b1d9-11ed-b0f4-002590f2a714.html"
+					}
+				],
+				"published": "2023-02-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-23521",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-23521"
-				}
+			"content": {
+				"id": "CVE-2022-23521",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-23521"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,205 +2,310 @@
 	"id": "e3445736-fd01-11e7-ac58-b499baebfeaf",
 	"advisories": [
 		{
-			"id": "e3445736-fd01-11e7-ac58-b499baebfeaf",
-			"title": "MySQL -- multiple vulnerabilities",
-			"description": "\n\t<p>Oracle reports:</p>\n\t<blockquote cite=\"http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html#AppendixMSQL\">\n\t  <p>Not all vulnerabilities are relevant for all flavors/versions of the\n\t     servers and clients</p>\n\t  <ul>\n\t    <li>Vulnerability allows low privileged attacker with network access\n\t      via multiple protocols to compromise MySQL Server. Successful attacks\n\t      of this vulnerability can result in unauthorized ability to cause a\n\t      hang or frequently repeatable crash (complete DOS) of MySQL Server.\n\t      GIS: CVE-2018-2573, DDL CVE-2018-2622, Optimizer: CVE-2018-2640,\n\t      CVE-2018-2665, CVE-2018-2668, Security:Privileges: CVE-2018-2703,\n\t      Partition: CVE-2018-2562.</li>\n\t    <li>Vulnerability allows high privileged attacker with network access\n\t      via multiple protocols to compromise MySQL Server. Successful attacks\n\t      of this vulnerability can result in unauthorized ability to cause a\n\t      hang or frequently repeatable crash (complete DOS) of MySQL Server.\n\t      InnoDB: CVE-2018-2565, CVE-2018-2612 DML: CVE-2018-2576,\n\t      CVE-2018-2646, Stored Procedure: CVE-2018-2583, Performance Schema:\n\t      CVE-2018-2590, Partition: CVE-2018-2591, Optimizer: CVE-2018-2600,\n\t      CVE-2018-2667, Security:Privileges: CVE-2018-2696, Replication:\n\t      CVE-2018-2647.</li>\n\t    <li>Vulnerability allows a low or high privileged attacker with network\n\t      access via multiple protocols to compromise MySQL Server with\n\t      unauthorized creation, deletion, modification or access to data/\n\t      critical data. InnoDB: CVE-2018-2612, Performance Schema:\n\t      CVE-2018-2645, Replication: CVE-2018-2647, Partition: CVE-2018-2562.\n\t     </li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html#AppendixMSQL"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://mariadb.com/kb/en/library/mariadb-5559-release-notes/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e3445736-fd01-11e7-ac58-b499baebfeaf.html"
-				}
-			],
-			"published": "2018-01-19T00:00:00Z"
+			"content": {
+				"id": "e3445736-fd01-11e7-ac58-b499baebfeaf",
+				"title": "MySQL -- multiple vulnerabilities",
+				"description": "\n\t<p>Oracle reports:</p>\n\t<blockquote cite=\"http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html#AppendixMSQL\">\n\t  <p>Not all vulnerabilities are relevant for all flavors/versions of the\n\t     servers and clients</p>\n\t  <ul>\n\t    <li>Vulnerability allows low privileged attacker with network access\n\t      via multiple protocols to compromise MySQL Server. Successful attacks\n\t      of this vulnerability can result in unauthorized ability to cause a\n\t      hang or frequently repeatable crash (complete DOS) of MySQL Server.\n\t      GIS: CVE-2018-2573, DDL CVE-2018-2622, Optimizer: CVE-2018-2640,\n\t      CVE-2018-2665, CVE-2018-2668, Security:Privileges: CVE-2018-2703,\n\t      Partition: CVE-2018-2562.</li>\n\t    <li>Vulnerability allows high privileged attacker with network access\n\t      via multiple protocols to compromise MySQL Server. Successful attacks\n\t      of this vulnerability can result in unauthorized ability to cause a\n\t      hang or frequently repeatable crash (complete DOS) of MySQL Server.\n\t      InnoDB: CVE-2018-2565, CVE-2018-2612 DML: CVE-2018-2576,\n\t      CVE-2018-2646, Stored Procedure: CVE-2018-2583, Performance Schema:\n\t      CVE-2018-2590, Partition: CVE-2018-2591, Optimizer: CVE-2018-2600,\n\t      CVE-2018-2667, Security:Privileges: CVE-2018-2696, Replication:\n\t      CVE-2018-2647.</li>\n\t    <li>Vulnerability allows a low or high privileged attacker with network\n\t      access via multiple protocols to compromise MySQL Server with\n\t      unauthorized creation, deletion, modification or access to data/\n\t      critical data. InnoDB: CVE-2018-2612, Performance Schema:\n\t      CVE-2018-2645, Replication: CVE-2018-2647, Partition: CVE-2018-2562.\n\t     </li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html#AppendixMSQL"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://mariadb.com/kb/en/library/mariadb-5559-release-notes/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e3445736-fd01-11e7-ac58-b499baebfeaf.html"
+					}
+				],
+				"published": "2018-01-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-2562",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2562"
-				}
+			"content": {
+				"id": "CVE-2018-2562",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2562"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2565",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2565"
-				}
+			"content": {
+				"id": "CVE-2018-2565",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2565"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2573",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2573"
-				}
+			"content": {
+				"id": "CVE-2018-2573",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2573"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2576",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2576"
-				}
+			"content": {
+				"id": "CVE-2018-2576",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2576"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2583",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2583"
-				}
+			"content": {
+				"id": "CVE-2018-2583",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2583"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2586",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2586"
-				}
+			"content": {
+				"id": "CVE-2018-2586",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2586"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2590",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2590"
-				}
+			"content": {
+				"id": "CVE-2018-2590",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2590"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2591",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2591"
-				}
+			"content": {
+				"id": "CVE-2018-2591",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2591"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2600",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2600"
-				}
+			"content": {
+				"id": "CVE-2018-2600",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2600"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2612",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2612"
-				}
+			"content": {
+				"id": "CVE-2018-2612",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2612"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2622",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2622"
-				}
+			"content": {
+				"id": "CVE-2018-2622",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2622"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2640",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2640"
-				}
+			"content": {
+				"id": "CVE-2018-2640",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2640"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2645",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2645"
-				}
+			"content": {
+				"id": "CVE-2018-2645",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2645"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2646",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2646"
-				}
+			"content": {
+				"id": "CVE-2018-2646",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2646"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2647",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2647"
-				}
+			"content": {
+				"id": "CVE-2018-2647",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2647"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2665",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2665"
-				}
+			"content": {
+				"id": "CVE-2018-2665",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2665"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2667",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2667"
-				}
+			"content": {
+				"id": "CVE-2018-2667",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2667"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2668",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2668"
-				}
+			"content": {
+				"id": "CVE-2018-2668",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2668"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2696",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2696"
-				}
+			"content": {
+				"id": "CVE-2018-2696",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2696"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2018-2703",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-2703"
-				}
+			"content": {
+				"id": "CVE-2018-2703",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-2703"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

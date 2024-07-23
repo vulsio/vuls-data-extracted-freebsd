@@ -2,30 +2,40 @@
 	"id": "cfd2a634-3785-11ee-94b4-6cc21735f730",
 	"advisories": [
 		{
-			"id": "cfd2a634-3785-11ee-94b4-6cc21735f730",
-			"title": "postgresql-server -- Extension script @substitutions@ within quoting allow SQL injection",
-			"description": "\n\t<p>PostgreSQL Project reports</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2023-39417/\">\n\t  <p>\n\t    An extension script is vulnerable if it uses @extowner@,\n\t    @extschema@, or @extschema:...@ inside a quoting construct\n\t    (dollar quoting, '', or \"\"). No bundled extension is\n\t    vulnerable. Vulnerable uses do appear in a documentation\n\t    example and in non-bundled extensions. Hence, the attack\n\t    prerequisite is an administrator having installed files of a\n\t    vulnerable, trusted, non-bundled extension. Subject to that\n\t    prerequisite, this enables an attacker having database-level\n\t    CREATE privilege to execute arbitrary code as the bootstrap\n\t    superuser. PostgreSQL will block this attack in the core\n\t    server, so there's no need to modify individual extensions.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.postgresql.org/support/security/CVE-2023-39417/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/cfd2a634-3785-11ee-94b4-6cc21735f730.html"
-				}
-			],
-			"published": "2023-08-10T00:00:00Z"
+			"content": {
+				"id": "cfd2a634-3785-11ee-94b4-6cc21735f730",
+				"title": "postgresql-server -- Extension script @substitutions@ within quoting allow SQL injection",
+				"description": "\n\t<p>PostgreSQL Project reports</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2023-39417/\">\n\t  <p>\n\t    An extension script is vulnerable if it uses @extowner@,\n\t    @extschema@, or @extschema:...@ inside a quoting construct\n\t    (dollar quoting, '', or \"\"). No bundled extension is\n\t    vulnerable. Vulnerable uses do appear in a documentation\n\t    example and in non-bundled extensions. Hence, the attack\n\t    prerequisite is an administrator having installed files of a\n\t    vulnerable, trusted, non-bundled extension. Subject to that\n\t    prerequisite, this enables an attacker having database-level\n\t    CREATE privilege to execute arbitrary code as the bootstrap\n\t    superuser. PostgreSQL will block this attack in the core\n\t    server, so there's no need to modify individual extensions.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.postgresql.org/support/security/CVE-2023-39417/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cfd2a634-3785-11ee-94b4-6cc21735f730.html"
+					}
+				],
+				"published": "2023-08-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-39417",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-39417"
-				}
+			"content": {
+				"id": "CVE-2023-39417",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-39417"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

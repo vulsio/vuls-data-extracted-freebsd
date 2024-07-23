@@ -2,76 +2,111 @@
 	"id": "6876b163-8708-11e7-8568-e8e0b747a45a",
 	"advisories": [
 		{
-			"id": "6876b163-8708-11e7-8568-e8e0b747a45a",
-			"title": "pspp -- multiple vulnerabilities",
-			"description": "\n\t<p>CVE Details reports:</p>\n\t<blockquote cite=\"https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-38732/year-2017/GNU-Pspp.html\">\n\t  <ul>\n\t    <li>There is an Integer overflow in the hash_int function of the libpspp library\n\t      in GNU PSPP 0.10.5-pre2 (CVE-2017-10791).</li>\n\t    <li>There is a NULL Pointer Dereference in the function ll_insert() of the libpspp\n\t      library in GNU PSPP 0.10.5-pre2 (CVE-2017-10792).</li>\n\t    <li>There is an illegal address access in the function output_hex() in data/data-out.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to remote denial of service (CVE-2017-12958).</li>\n\t    <li>There is a reachable assertion abort in the function dict_add_mrset() in data/dictionary.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to a remote denial of service attack (CVE-2017-12959).</li>\n\t    <li>There is a reachable assertion abort in the function dict_rename_var() in data/dictionary.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to remote denial of service (CVE-2017-12960).</li>\n\t    <li>There is an assertion abort in the function parse_attributes() in data/sys-file-reader.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to remote denial of service (CVE-2017-12961).</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-38732/year-2017/GNU-Pspp.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6876b163-8708-11e7-8568-e8e0b747a45a.html"
-				}
-			],
-			"published": "2017-08-22T00:00:00Z",
-			"modified": "2017-08-30T00:00:00Z"
+			"content": {
+				"id": "6876b163-8708-11e7-8568-e8e0b747a45a",
+				"title": "pspp -- multiple vulnerabilities",
+				"description": "\n\t<p>CVE Details reports:</p>\n\t<blockquote cite=\"https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-38732/year-2017/GNU-Pspp.html\">\n\t  <ul>\n\t    <li>There is an Integer overflow in the hash_int function of the libpspp library\n\t      in GNU PSPP 0.10.5-pre2 (CVE-2017-10791).</li>\n\t    <li>There is a NULL Pointer Dereference in the function ll_insert() of the libpspp\n\t      library in GNU PSPP 0.10.5-pre2 (CVE-2017-10792).</li>\n\t    <li>There is an illegal address access in the function output_hex() in data/data-out.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to remote denial of service (CVE-2017-12958).</li>\n\t    <li>There is a reachable assertion abort in the function dict_add_mrset() in data/dictionary.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to a remote denial of service attack (CVE-2017-12959).</li>\n\t    <li>There is a reachable assertion abort in the function dict_rename_var() in data/dictionary.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to remote denial of service (CVE-2017-12960).</li>\n\t    <li>There is an assertion abort in the function parse_attributes() in data/sys-file-reader.c\n\t      of the libpspp library in GNU PSPP 0.11.0 that will lead to remote denial of service (CVE-2017-12961).</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-38732/year-2017/GNU-Pspp.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6876b163-8708-11e7-8568-e8e0b747a45a.html"
+					}
+				],
+				"published": "2017-08-22T00:00:00Z",
+				"modified": "2017-08-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-10791",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-10791"
-				}
+			"content": {
+				"id": "CVE-2017-10791",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-10791"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-10792",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-10792"
-				}
+			"content": {
+				"id": "CVE-2017-10792",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-10792"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-12958",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12958"
-				}
+			"content": {
+				"id": "CVE-2017-12958",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-12958"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-12959",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12959"
-				}
+			"content": {
+				"id": "CVE-2017-12959",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-12959"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-12960",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12960"
-				}
+			"content": {
+				"id": "CVE-2017-12960",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-12960"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-12961",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-12961"
-				}
+			"content": {
+				"id": "CVE-2017-12961",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-12961"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

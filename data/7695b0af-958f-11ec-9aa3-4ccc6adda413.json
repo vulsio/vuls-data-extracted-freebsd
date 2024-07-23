@@ -2,30 +2,40 @@
 	"id": "7695b0af-958f-11ec-9aa3-4ccc6adda413",
 	"advisories": [
 		{
-			"id": "7695b0af-958f-11ec-9aa3-4ccc6adda413",
-			"title": "cryptopp -- ElGamal implementation allows plaintext recovery",
-			"description": "\n\t<p>Crypto++ 8.6 release notes reports:</p>\n\t<blockquote cite=\"https://www.cryptopp.com/release860.html\">\n\t  <p>The ElGamal implementation in Crypto++ through 8.5 allows plaintext\n\t    recovery because, during interaction between two cryptographic\n\t    libraries, a certain dangerous combination of the prime defined by\n\t    the receiver's public key, the generator defined by the receiver's\n\t    public key, and the sender's ephemeral exponents can lead to a\n\t    cross-configuration attack against OpenPGP.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40530"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/7695b0af-958f-11ec-9aa3-4ccc6adda413.html"
-				}
-			],
-			"published": "2022-02-24T00:00:00Z"
+			"content": {
+				"id": "7695b0af-958f-11ec-9aa3-4ccc6adda413",
+				"title": "cryptopp -- ElGamal implementation allows plaintext recovery",
+				"description": "\n\t<p>Crypto++ 8.6 release notes reports:</p>\n\t<blockquote cite=\"https://www.cryptopp.com/release860.html\">\n\t  <p>The ElGamal implementation in Crypto++ through 8.5 allows plaintext\n\t    recovery because, during interaction between two cryptographic\n\t    libraries, a certain dangerous combination of the prime defined by\n\t    the receiver's public key, the generator defined by the receiver's\n\t    public key, and the sender's ephemeral exponents can lead to a\n\t    cross-configuration attack against OpenPGP.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40530"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7695b0af-958f-11ec-9aa3-4ccc6adda413.html"
+					}
+				],
+				"published": "2022-02-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-40530",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-40530"
-				}
+			"content": {
+				"id": "CVE-2021-40530",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-40530"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

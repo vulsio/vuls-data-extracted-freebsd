@@ -2,30 +2,40 @@
 	"id": "0e254b4a-1f37-11ee-a475-080027f5fec9",
 	"advisories": [
 		{
-			"id": "0e254b4a-1f37-11ee-a475-080027f5fec9",
-			"title": "redis -- Heap overflow in the cjson and cmsgpack libraries",
-			"description": "\n\t<p>Redis core team reports:</p>\n\t<blockquote cite=\"https://groups.google.com/g/redis-db/c/JDjKS0GubsQ\">\n\t  <p>\n\t     A specially crafted Lua script executing in Redis can\n\t     trigger a heap overflow in the cjson and cmsgpack\n\t     libraries, and result in heap corruption and potentially\n\t     remote code execution.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://groups.google.com/g/redis-db/c/JDjKS0GubsQ"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/0e254b4a-1f37-11ee-a475-080027f5fec9.html"
-				}
-			],
-			"published": "2023-07-10T00:00:00Z"
+			"content": {
+				"id": "0e254b4a-1f37-11ee-a475-080027f5fec9",
+				"title": "redis -- Heap overflow in the cjson and cmsgpack libraries",
+				"description": "\n\t<p>Redis core team reports:</p>\n\t<blockquote cite=\"https://groups.google.com/g/redis-db/c/JDjKS0GubsQ\">\n\t  <p>\n\t     A specially crafted Lua script executing in Redis can\n\t     trigger a heap overflow in the cjson and cmsgpack\n\t     libraries, and result in heap corruption and potentially\n\t     remote code execution.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://groups.google.com/g/redis-db/c/JDjKS0GubsQ"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0e254b4a-1f37-11ee-a475-080027f5fec9.html"
+					}
+				],
+				"published": "2023-07-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-24834",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-24834"
-				}
+			"content": {
+				"id": "CVE-2022-24834",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-24834"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

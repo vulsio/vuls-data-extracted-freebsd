@@ -2,38 +2,48 @@
 	"id": "f7eb0b23-7099-11da-a15c-0060084a00e5",
 	"advisories": [
 		{
-			"id": "f7eb0b23-7099-11da-a15c-0060084a00e5",
-			"title": "fetchmail -- null pointer dereference in multidrop mode with headerless email",
-			"description": "\n\t<p>The fetchmail team reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2005-03.txt\">\n\t  <p>Fetchmail contains a bug that causes an application crash\n\t    when fetchmail is configured for multidrop mode and the\n\t    upstream mail server sends a message without headers.  As\n\t    fetchmail does not record this message as \"previously fetched\",\n\t    it will crash with the same message if it is re-executed, so it\n\t    cannot make progress. A malicious or broken-into upstream server\n\t    could thus cause a denial of service in fetchmail clients.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://article.gmane.org/gmane.mail.fetchmail.user/7573"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://bugs.debian.org/343836"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.fetchmail.info/fetchmail-SA-2005-03.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f7eb0b23-7099-11da-a15c-0060084a00e5.html"
-				}
-			],
-			"published": "2005-12-19T00:00:00Z"
+			"content": {
+				"id": "f7eb0b23-7099-11da-a15c-0060084a00e5",
+				"title": "fetchmail -- null pointer dereference in multidrop mode with headerless email",
+				"description": "\n\t<p>The fetchmail team reports:</p>\n\t<blockquote cite=\"http://www.fetchmail.info/fetchmail-SA-2005-03.txt\">\n\t  <p>Fetchmail contains a bug that causes an application crash\n\t    when fetchmail is configured for multidrop mode and the\n\t    upstream mail server sends a message without headers.  As\n\t    fetchmail does not record this message as \"previously fetched\",\n\t    it will crash with the same message if it is re-executed, so it\n\t    cannot make progress. A malicious or broken-into upstream server\n\t    could thus cause a denial of service in fetchmail clients.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://article.gmane.org/gmane.mail.fetchmail.user/7573"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://bugs.debian.org/343836"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.fetchmail.info/fetchmail-SA-2005-03.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f7eb0b23-7099-11da-a15c-0060084a00e5.html"
+					}
+				],
+				"published": "2005-12-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-4348",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-4348"
-				}
+			"content": {
+				"id": "CVE-2005-4348",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-4348"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,28 +2,33 @@
 	"id": "f5abafc0-fcf6-11ea-8758-e0d55e2a8bf9",
 	"advisories": [
 		{
-			"id": "f5abafc0-fcf6-11ea-8758-e0d55e2a8bf9",
-			"title": "libxml -- multiple vulnerabilities",
-			"description": "\n\t<p>CVE mitre reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2019-20388\">\n\t    <h3>CVE-2019-20388</h3>\n\t    <p>\n\t      xmlSchemaPreRun in xmlschemas.c in libxml2 2.9.10 allows an xmlSchemaValidateStream memory leak.\n\t    </p>\n\t    <h3>CVE-2020-7595</h3>\n\t    <p>\n\t      xmlStringLenDecodeEntities in parser.c in libxml2 2.9.10 has an infinite loop in a certain end-of-file situation.\n\t    </p>\n\t  <h3>CVE-2020-24977</h3>\n\t  <p>\n\t    GNOME project libxml2 v2.9.10 and earlier have a global buffer over-read vulnerability in xmlEncodeEntitiesInternal\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20388"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-24977"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7595"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f5abafc0-fcf6-11ea-8758-e0d55e2a8bf9.html"
-				}
-			],
-			"published": "2020-09-22T00:00:00Z"
+			"content": {
+				"id": "f5abafc0-fcf6-11ea-8758-e0d55e2a8bf9",
+				"title": "libxml -- multiple vulnerabilities",
+				"description": "\n\t<p>CVE mitre reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2019-20388\">\n\t    <h3>CVE-2019-20388</h3>\n\t    <p>\n\t      xmlSchemaPreRun in xmlschemas.c in libxml2 2.9.10 allows an xmlSchemaValidateStream memory leak.\n\t    </p>\n\t    <h3>CVE-2020-7595</h3>\n\t    <p>\n\t      xmlStringLenDecodeEntities in parser.c in libxml2 2.9.10 has an infinite loop in a certain end-of-file situation.\n\t    </p>\n\t  <h3>CVE-2020-24977</h3>\n\t  <p>\n\t    GNOME project libxml2 v2.9.10 and earlier have a global buffer over-read vulnerability in xmlEncodeEntitiesInternal\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20388"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-24977"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7595"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f5abafc0-fcf6-11ea-8758-e0d55e2a8bf9.html"
+					}
+				],
+				"published": "2020-09-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

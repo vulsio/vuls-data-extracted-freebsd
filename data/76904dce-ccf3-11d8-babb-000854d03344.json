@@ -2,34 +2,44 @@
 	"id": "76904dce-ccf3-11d8-babb-000854d03344",
 	"advisories": [
 		{
-			"id": "76904dce-ccf3-11d8-babb-000854d03344",
-			"title": "Pavuk HTTP Location header overflow",
-			"description": "\n\t<p>When pavuk sends a request to a web server and the server\n\t  sends back the HTTP status code 305 (Use Proxy), pavuk\n\t  copies data from the HTTP Location header in an unsafe\n\t  manner. This leads to a stack-based buffer overflow with\n\t  control over EIP.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://lists.netsys.com/pipermail/full-disclosure/2004-July/023322.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.osvdb.org/7319"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/76904dce-ccf3-11d8-babb-000854d03344.html"
-				}
-			],
-			"published": "2004-07-03T00:00:00Z"
+			"content": {
+				"id": "76904dce-ccf3-11d8-babb-000854d03344",
+				"title": "Pavuk HTTP Location header overflow",
+				"description": "\n\t<p>When pavuk sends a request to a web server and the server\n\t  sends back the HTTP status code 305 (Use Proxy), pavuk\n\t  copies data from the HTTP Location header in an unsafe\n\t  manner. This leads to a stack-based buffer overflow with\n\t  control over EIP.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://lists.netsys.com/pipermail/full-disclosure/2004-July/023322.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.osvdb.org/7319"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/76904dce-ccf3-11d8-babb-000854d03344.html"
+					}
+				],
+				"published": "2004-07-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0456",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0456"
-				}
+			"content": {
+				"id": "CVE-2004-0456",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0456"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

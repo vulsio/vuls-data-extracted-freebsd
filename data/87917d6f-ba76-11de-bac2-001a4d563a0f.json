@@ -2,31 +2,41 @@
 	"id": "87917d6f-ba76-11de-bac2-001a4d563a0f",
 	"advisories": [
 		{
-			"id": "87917d6f-ba76-11de-bac2-001a4d563a0f",
-			"title": "django -- denial-of-service attack",
-			"description": "\n\t<p>Django project reports:</p>\n\t<blockquote cite=\"http://www.djangoproject.com/weblog/2009/oct/09/security/\">\n\t  <p>Django's forms library includes field types which perform\n\t    regular-expression-based validation of email addresses and\n\t    URLs. Certain addresses/URLs could trigger a pathological\n\t    performance case in these regular expression, resulting in\n\t    the server process/thread becoming unresponsive, and consuming\n\t    excessive CPU over an extended period of time. If deliberately\n\t    triggered, this could result in an effectively\n\t    denial-of-service attack.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.djangoproject.com/weblog/2009/oct/09/security/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/87917d6f-ba76-11de-bac2-001a4d563a0f.html"
-				}
-			],
-			"published": "2009-10-16T00:00:00Z",
-			"modified": "2010-05-02T00:00:00Z"
+			"content": {
+				"id": "87917d6f-ba76-11de-bac2-001a4d563a0f",
+				"title": "django -- denial-of-service attack",
+				"description": "\n\t<p>Django project reports:</p>\n\t<blockquote cite=\"http://www.djangoproject.com/weblog/2009/oct/09/security/\">\n\t  <p>Django's forms library includes field types which perform\n\t    regular-expression-based validation of email addresses and\n\t    URLs. Certain addresses/URLs could trigger a pathological\n\t    performance case in these regular expression, resulting in\n\t    the server process/thread becoming unresponsive, and consuming\n\t    excessive CPU over an extended period of time. If deliberately\n\t    triggered, this could result in an effectively\n\t    denial-of-service attack.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.djangoproject.com/weblog/2009/oct/09/security/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/87917d6f-ba76-11de-bac2-001a4d563a0f.html"
+					}
+				],
+				"published": "2009-10-16T00:00:00Z",
+				"modified": "2010-05-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2009-3695",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2009-3695"
-				}
+			"content": {
+				"id": "CVE-2009-3695",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2009-3695"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,44 +2,59 @@
 	"id": "748aa89f-d529-11e1-82ab-001fd0af1a4c",
 	"advisories": [
 		{
-			"id": "748aa89f-d529-11e1-82ab-001fd0af1a4c",
-			"title": "rubygem-activerecord -- multiple vulnerabilities",
-			"description": "\n\t   <p>rubygem-activerecord -- multiple vulernabilities</p>\n\t   <blockquote>\n\t      <p>Due to the way Active Record interprets parameters in\n\t\t combination with the way that Rack parses query parameters, it\n\t\t is possible for an attacker to issue unexpected database\n\t\t queries with \"IS NULL\" where clauses.  This issue does *not*\n\t\t let an attacker insert arbitrary values into an SQL query,\n\t\t however they can cause the query to check for NULL where most\n\t\t users wouldn't expect it.</p>\n\t      <p>Due to the way Active Record handles nested query parameters,\n\t\t an attacker can use a specially crafted request to inject some\n\t\t forms of SQL into your application's SQL queries.</p>\n\t   </blockquote>\n\t",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://groups.google.com/forum/?fromgroups#!topic/rubyonrails-security/8SA-M3as7A8"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://groups.google.com/forum/?fromgroups#!topic/rubyonrails-security/dUaiOOGWL1k"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/748aa89f-d529-11e1-82ab-001fd0af1a4c.html"
-				}
-			],
-			"published": "2012-07-23T00:00:00Z",
-			"modified": "2012-07-23T00:00:00Z"
+			"content": {
+				"id": "748aa89f-d529-11e1-82ab-001fd0af1a4c",
+				"title": "rubygem-activerecord -- multiple vulnerabilities",
+				"description": "\n\t   <p>rubygem-activerecord -- multiple vulernabilities</p>\n\t   <blockquote>\n\t      <p>Due to the way Active Record interprets parameters in\n\t\t combination with the way that Rack parses query parameters, it\n\t\t is possible for an attacker to issue unexpected database\n\t\t queries with \"IS NULL\" where clauses.  This issue does *not*\n\t\t let an attacker insert arbitrary values into an SQL query,\n\t\t however they can cause the query to check for NULL where most\n\t\t users wouldn't expect it.</p>\n\t      <p>Due to the way Active Record handles nested query parameters,\n\t\t an attacker can use a specially crafted request to inject some\n\t\t forms of SQL into your application's SQL queries.</p>\n\t   </blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://groups.google.com/forum/?fromgroups#!topic/rubyonrails-security/8SA-M3as7A8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://groups.google.com/forum/?fromgroups#!topic/rubyonrails-security/dUaiOOGWL1k"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/748aa89f-d529-11e1-82ab-001fd0af1a4c.html"
+					}
+				],
+				"published": "2012-07-23T00:00:00Z",
+				"modified": "2012-07-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-2660",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2660"
-				}
+			"content": {
+				"id": "CVE-2012-2660",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-2660"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2012-2661",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-2661"
-				}
+			"content": {
+				"id": "CVE-2012-2661",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-2661"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

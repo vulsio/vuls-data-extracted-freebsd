@@ -2,38 +2,48 @@
 	"id": "df333ede-a8ce-11d8-9c6d-0020ed76ef5a",
 	"advisories": [
 		{
-			"id": "df333ede-a8ce-11d8-9c6d-0020ed76ef5a",
-			"title": "URI handler vulnerabilities in several browsers",
-			"description": "\n\t<p>Karol Wiesek and Greg MacManus reported via iDEFENSE that the\n\t  Opera web browser contains a flaw in the handling of\n\t  certain URIs.  When presented with these URIs, Opera would\n\t  invoke external commands to process them after some\n\t  validation.  However, if the hostname component of a URI\n\t  begins with a `-', it may be treated as an option by an external\n\t  command.  This could have undesirable side-effects, from\n\t  denial-of-service to code execution.\tThe impact is very\n\t  dependent on local configuration.</p>\n\t<p>After the iDEFENSE advisory was published, the KDE team\n\t  discovered similar problems in KDE's URI handlers.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://freebsd.kde.org/index.php#n20040517"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.idefense.com/application/poi/display?id=104&type=vulnerabilities"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.kde.org/info/security/advisory-20040517-1.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/df333ede-a8ce-11d8-9c6d-0020ed76ef5a.html"
-				}
-			],
-			"published": "2004-05-18T00:00:00Z"
+			"content": {
+				"id": "df333ede-a8ce-11d8-9c6d-0020ed76ef5a",
+				"title": "URI handler vulnerabilities in several browsers",
+				"description": "\n\t<p>Karol Wiesek and Greg MacManus reported via iDEFENSE that the\n\t  Opera web browser contains a flaw in the handling of\n\t  certain URIs.  When presented with these URIs, Opera would\n\t  invoke external commands to process them after some\n\t  validation.  However, if the hostname component of a URI\n\t  begins with a `-', it may be treated as an option by an external\n\t  command.  This could have undesirable side-effects, from\n\t  denial-of-service to code execution.\tThe impact is very\n\t  dependent on local configuration.</p>\n\t<p>After the iDEFENSE advisory was published, the KDE team\n\t  discovered similar problems in KDE's URI handlers.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://freebsd.kde.org/index.php#n20040517"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.idefense.com/application/poi/display?id=104&type=vulnerabilities"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.kde.org/info/security/advisory-20040517-1.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/df333ede-a8ce-11d8-9c6d-0020ed76ef5a.html"
+					}
+				],
+				"published": "2004-05-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0411",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0411"
-				}
+			"content": {
+				"id": "CVE-2004-0411",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0411"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,24 +2,29 @@
 	"id": "9c9023ff-9057-11e9-b764-00505632d232",
 	"advisories": [
 		{
-			"id": "9c9023ff-9057-11e9-b764-00505632d232",
-			"title": "netatalk3 -- remote code execution vulnerability",
-			"description": "\n\t<p>NIST reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2018-1160\">\n\t  <p>Netatalk before 3.1.12 is vulnerable to an out of bounds write in dsi_opensess.c. This is due to lack of bounds checking on attacker controlled data. A remote unauthenticated attacker can leverage this vulnerability to achieve arbitrary code execution.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://medium.com/tenable-techblog/exploiting-an-18-year-old-bug-b47afe54172"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1160"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/9c9023ff-9057-11e9-b764-00505632d232.html"
-				}
-			],
-			"published": "2019-06-16T00:00:00Z"
+			"content": {
+				"id": "9c9023ff-9057-11e9-b764-00505632d232",
+				"title": "netatalk3 -- remote code execution vulnerability",
+				"description": "\n\t<p>NIST reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2018-1160\">\n\t  <p>Netatalk before 3.1.12 is vulnerable to an out of bounds write in dsi_opensess.c. This is due to lack of bounds checking on attacker controlled data. A remote unauthenticated attacker can leverage this vulnerability to achieve arbitrary code execution.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://medium.com/tenable-techblog/exploiting-an-18-year-old-bug-b47afe54172"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1160"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/9c9023ff-9057-11e9-b764-00505632d232.html"
+					}
+				],
+				"published": "2019-06-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

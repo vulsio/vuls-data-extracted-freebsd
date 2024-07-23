@@ -2,46 +2,56 @@
 	"id": "080936ba-fbb7-11ee-abc8-6960f2492b1d",
 	"advisories": [
 		{
-			"id": "080936ba-fbb7-11ee-abc8-6960f2492b1d",
-			"title": "PuTTY and embedders (f.i., filezilla) -- biased RNG with NIST P521/ecdsa-sha2-nistp521 signatures permits recovering private key",
-			"description": "\n\t<p>Simon Tatham reports:</p>\n\t<blockquote cite=\"https://lists.tartarus.org/pipermail/putty-announce/2024/000038.html\">\n\t  <p>ECDSA signatures using 521-bit keys (the NIST P521 curve,\n\t    otherwise known as ecdsa-sha2-nistp521) were generated with biased\n\t    random numbers. This permits an attacker in possession of a few\n\t    dozen signatures to RECOVER THE PRIVATE KEY.</p>\n\t  <p>Any 521-bit ECDSA private key that PuTTY or Pageant has used to\n\t    sign anything should be considered compromised.</p>\n\t  <p>Additionally, if you have any 521-bit ECDSA private keys that\n\t    you've used with PuTTY, you should consider them to be\n\t    compromised: generate new keys, and remove the old public keys\n\t    from any authorized_keys files.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2024-31497\">\n\t  <p>\n\t    A second, independent scenario is that the adversary is an operator\n\t    of an SSH server to which the victim authenticates (for remote login\n\t    or file copy), [...] and the victim uses the same private key for\n\t    SSH connections to other services operated by other entities. Here,\n\t    the rogue server operator (who would otherwise have no way to\n\t    determine the victim's private key) can derive the victim's private\n\t    key, and then use it for unauthorized access to those other\n\t    services. If the other services include Git services, then again it\n\t    may be possible to conduct supply-chain attacks on software\n\t    maintained in Git. This also affects, for example, FileZilla before\n\t    3.67.0, WinSCP before 6.3.3, TortoiseGit before 2.15.0.1, and\n\t    TortoiseSVN through 1.14.6.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://filezilla-project.org/versions.php"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://git.tartarus.org/?h=c193fe9848f50a88a4089aac647fecc31ae96d27&p=simon/putty.git"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://lists.tartarus.org/pipermail/putty-announce/2024/000038.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-31497"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-p521-bias.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/080936ba-fbb7-11ee-abc8-6960f2492b1d.html"
-				}
-			],
-			"published": "2024-04-16T00:00:00Z"
+			"content": {
+				"id": "080936ba-fbb7-11ee-abc8-6960f2492b1d",
+				"title": "PuTTY and embedders (f.i., filezilla) -- biased RNG with NIST P521/ecdsa-sha2-nistp521 signatures permits recovering private key",
+				"description": "\n\t<p>Simon Tatham reports:</p>\n\t<blockquote cite=\"https://lists.tartarus.org/pipermail/putty-announce/2024/000038.html\">\n\t  <p>ECDSA signatures using 521-bit keys (the NIST P521 curve,\n\t    otherwise known as ecdsa-sha2-nistp521) were generated with biased\n\t    random numbers. This permits an attacker in possession of a few\n\t    dozen signatures to RECOVER THE PRIVATE KEY.</p>\n\t  <p>Any 521-bit ECDSA private key that PuTTY or Pageant has used to\n\t    sign anything should be considered compromised.</p>\n\t  <p>Additionally, if you have any 521-bit ECDSA private keys that\n\t    you've used with PuTTY, you should consider them to be\n\t    compromised: generate new keys, and remove the old public keys\n\t    from any authorized_keys files.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2024-31497\">\n\t  <p>\n\t    A second, independent scenario is that the adversary is an operator\n\t    of an SSH server to which the victim authenticates (for remote login\n\t    or file copy), [...] and the victim uses the same private key for\n\t    SSH connections to other services operated by other entities. Here,\n\t    the rogue server operator (who would otherwise have no way to\n\t    determine the victim's private key) can derive the victim's private\n\t    key, and then use it for unauthorized access to those other\n\t    services. If the other services include Git services, then again it\n\t    may be possible to conduct supply-chain attacks on software\n\t    maintained in Git. This also affects, for example, FileZilla before\n\t    3.67.0, WinSCP before 6.3.3, TortoiseGit before 2.15.0.1, and\n\t    TortoiseSVN through 1.14.6.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://filezilla-project.org/versions.php"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://git.tartarus.org/?h=c193fe9848f50a88a4089aac647fecc31ae96d27&p=simon/putty.git"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://lists.tartarus.org/pipermail/putty-announce/2024/000038.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-31497"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-p521-bias.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/080936ba-fbb7-11ee-abc8-6960f2492b1d.html"
+					}
+				],
+				"published": "2024-04-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2024-31497",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-31497"
-				}
+			"content": {
+				"id": "CVE-2024-31497",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-31497"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

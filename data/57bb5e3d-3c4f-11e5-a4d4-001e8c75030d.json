@@ -2,43 +2,58 @@
 	"id": "57bb5e3d-3c4f-11e5-a4d4-001e8c75030d",
 	"advisories": [
 		{
-			"id": "57bb5e3d-3c4f-11e5-a4d4-001e8c75030d",
-			"title": "subversion -- multiple vulnerabilities",
-			"description": "\n\t<p>Subversion reports:</p>\n\t<blockquote cite=\"http://svn.haxx.se/dev/archive-2015-08/0024.shtml\">\n\t  <p>CVE-2015-3184:<br/>\n\t     Subversion's mod_authz_svn does not properly restrict anonymous access\n\t     in some mixed anonymous/authenticated environments when\n\t     using Apache httpd 2.4.</p>\n\t  <p>CVE-2015-3187:<br/>\n\t     Subversion servers, both httpd and svnserve, will reveal some\n\t     paths that should be hidden by path-based authz.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://subversion.apache.org/security/CVE-2015-3184-advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://subversion.apache.org/security/CVE-2015-3187-advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/57bb5e3d-3c4f-11e5-a4d4-001e8c75030d.html"
-				}
-			],
-			"published": "2015-08-06T00:00:00Z"
+			"content": {
+				"id": "57bb5e3d-3c4f-11e5-a4d4-001e8c75030d",
+				"title": "subversion -- multiple vulnerabilities",
+				"description": "\n\t<p>Subversion reports:</p>\n\t<blockquote cite=\"http://svn.haxx.se/dev/archive-2015-08/0024.shtml\">\n\t  <p>CVE-2015-3184:<br/>\n\t     Subversion's mod_authz_svn does not properly restrict anonymous access\n\t     in some mixed anonymous/authenticated environments when\n\t     using Apache httpd 2.4.</p>\n\t  <p>CVE-2015-3187:<br/>\n\t     Subversion servers, both httpd and svnserve, will reveal some\n\t     paths that should be hidden by path-based authz.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://subversion.apache.org/security/CVE-2015-3184-advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://subversion.apache.org/security/CVE-2015-3187-advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/57bb5e3d-3c4f-11e5-a4d4-001e8c75030d.html"
+					}
+				],
+				"published": "2015-08-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-3184",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3184"
-				}
+			"content": {
+				"id": "CVE-2015-3184",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3184"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-3187",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-3187"
-				}
+			"content": {
+				"id": "CVE-2015-3187",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-3187"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

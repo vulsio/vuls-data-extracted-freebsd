@@ -2,30 +2,40 @@
 	"id": "e800cd4b-4212-11e6-942d-bc5ff45d0f28",
 	"advisories": [
 		{
-			"id": "e800cd4b-4212-11e6-942d-bc5ff45d0f28",
-			"title": "xen-tools -- Unrestricted qemu logging",
-			"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-180.html\">\n\t  <p>When the libxl toolstack launches qemu for HVM guests, it pipes the\n\t    output of stderr to a file in /var/log/xen.  This output is not\n\t    rate-limited in any way.  The guest can easily cause qemu to print\n\t    messages to stderr, causing this file to become arbitrarily large.\n\t    </p>\n\t  <p>The disk containing the logfile can be exhausted, possibly causing a\n\t    denial-of-service (DoS).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xenbits.xen.org/xsa/advisory-180.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e800cd4b-4212-11e6-942d-bc5ff45d0f28.html"
-				}
-			],
-			"published": "2016-07-04T00:00:00Z"
+			"content": {
+				"id": "e800cd4b-4212-11e6-942d-bc5ff45d0f28",
+				"title": "xen-tools -- Unrestricted qemu logging",
+				"description": "\n\t<p>The Xen Project reports:</p>\n\t<blockquote cite=\"http://xenbits.xen.org/xsa/advisory-180.html\">\n\t  <p>When the libxl toolstack launches qemu for HVM guests, it pipes the\n\t    output of stderr to a file in /var/log/xen.  This output is not\n\t    rate-limited in any way.  The guest can easily cause qemu to print\n\t    messages to stderr, causing this file to become arbitrarily large.\n\t    </p>\n\t  <p>The disk containing the logfile can be exhausted, possibly causing a\n\t    denial-of-service (DoS).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xenbits.xen.org/xsa/advisory-180.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e800cd4b-4212-11e6-942d-bc5ff45d0f28.html"
+					}
+				],
+				"published": "2016-07-04T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-3672",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2014-3672"
-				}
+			"content": {
+				"id": "CVE-2014-3672",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2014-3672"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

@@ -2,24 +2,29 @@
 	"id": "2be7c122-0614-11db-9156-000e0c2e438a",
 	"advisories": [
 		{
-			"id": "2be7c122-0614-11db-9156-000e0c2e438a",
-			"title": "hashcash -- heap overflow vulnerability",
-			"description": "\n\t<p>Andreas Seltenreich reports that hashcash is prone to a heap\n\t  overflow vulnerability.  This vulnerability is caused by\n\t  improper checking of memory allocations within the\n\t  \"array_push()\" function.  An attacker could trigger this\n\t  vulnerability by passing a lot of \"-r\" or \"-j\" flags from\n\t  the command line, this only applies when the application is\n\t  configured to allow command line options, or by passing a lot\n\t  of resource names when the application was started with the\n\t  \"-m\" flag set.  This could lead to a Denial or Service or\n\t  could allow remote access to the targeted system.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/20800/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.hashcash.org/source/CHANGELOG"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2be7c122-0614-11db-9156-000e0c2e438a.html"
-				}
-			],
-			"published": "2006-06-27T00:00:00Z"
+			"content": {
+				"id": "2be7c122-0614-11db-9156-000e0c2e438a",
+				"title": "hashcash -- heap overflow vulnerability",
+				"description": "\n\t<p>Andreas Seltenreich reports that hashcash is prone to a heap\n\t  overflow vulnerability.  This vulnerability is caused by\n\t  improper checking of memory allocations within the\n\t  \"array_push()\" function.  An attacker could trigger this\n\t  vulnerability by passing a lot of \"-r\" or \"-j\" flags from\n\t  the command line, this only applies when the application is\n\t  configured to allow command line options, or by passing a lot\n\t  of resource names when the application was started with the\n\t  \"-m\" flag set.  This could lead to a Denial or Service or\n\t  could allow remote access to the targeted system.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/20800/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.hashcash.org/source/CHANGELOG"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2be7c122-0614-11db-9156-000e0c2e438a.html"
+					}
+				],
+				"published": "2006-06-27T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

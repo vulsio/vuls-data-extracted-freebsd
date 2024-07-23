@@ -2,43 +2,58 @@
 	"id": "ae132c6c-d716-11ed-956f-7054d21a9e2a",
 	"advisories": [
 		{
-			"id": "ae132c6c-d716-11ed-956f-7054d21a9e2a",
-			"title": "py-tensorflow -- denial of service vulnerability",
-			"description": "\n    <p>Kang Hong Jin, Neophytos Christou, 刘力源 and Pattarakrit Rattankul report:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-cqvq-fvhr-v6hc\">\n      <p>Another instance of CVE-2022-35935, where `SobolSample` is vulnerable to a denial of service via assumed scalar inputs, was found and fixed.</p>\n    </blockquote>\n    <p>Pattarakrit Rattankul reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-xf83-q765-xm6m\">\n      <p>Another instance of CVE-2022-35991, where `TensorListScatter` and `TensorListScatterV2` crash via non scalar inputs in`element_shape`, was found in eager mode and fixed.</p>\n    </blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://osv.dev/vulnerability/GHSA-cqvq-fvhr-v6hc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://osv.dev/vulnerability/GHSA-xf83-q765-xm6m"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/ae132c6c-d716-11ed-956f-7054d21a9e2a.html"
-				}
-			],
-			"published": "2023-04-09T00:00:00Z"
+			"content": {
+				"id": "ae132c6c-d716-11ed-956f-7054d21a9e2a",
+				"title": "py-tensorflow -- denial of service vulnerability",
+				"description": "\n    <p>Kang Hong Jin, Neophytos Christou, 刘力源 and Pattarakrit Rattankul report:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-cqvq-fvhr-v6hc\">\n      <p>Another instance of CVE-2022-35935, where `SobolSample` is vulnerable to a denial of service via assumed scalar inputs, was found and fixed.</p>\n    </blockquote>\n    <p>Pattarakrit Rattankul reports:</p>\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-xf83-q765-xm6m\">\n      <p>Another instance of CVE-2022-35991, where `TensorListScatter` and `TensorListScatterV2` crash via non scalar inputs in`element_shape`, was found in eager mode and fixed.</p>\n    </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://osv.dev/vulnerability/GHSA-cqvq-fvhr-v6hc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://osv.dev/vulnerability/GHSA-xf83-q765-xm6m"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ae132c6c-d716-11ed-956f-7054d21a9e2a.html"
+					}
+				],
+				"published": "2023-04-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-35935",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-35935"
-				}
+			"content": {
+				"id": "CVE-2022-35935",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-35935"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2022-35991",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2022-35991"
-				}
+			"content": {
+				"id": "CVE-2022-35991",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2022-35991"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

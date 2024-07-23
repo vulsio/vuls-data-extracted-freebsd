@@ -2,20 +2,25 @@
 	"id": "c3610f39-18f1-11ed-9854-641c67a117d8",
 	"advisories": [
 		{
-			"id": "c3610f39-18f1-11ed-9854-641c67a117d8",
-			"title": "varnish -- Denial of Service Vulnerability",
-			"description": "\n\t<p>Varnish Cache Project reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00009.html\">\n\t<p>A denial of service attack can be performed against Varnish Cache\n\t  servers by specially formatting the reason phrase of the backend response\n\t  status line. In order to execute an attack, the attacker would have to\n\t  be able to influence the HTTP/1 responses that the Varnish Server\n\t  receives from its configured backends. A successful attack would cause\n\t  the Varnish Server to assert and automatically restart.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://varnish-cache.org/security/VSV00009.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c3610f39-18f1-11ed-9854-641c67a117d8.html"
-				}
-			],
-			"published": "2022-08-10T00:00:00Z"
+			"content": {
+				"id": "c3610f39-18f1-11ed-9854-641c67a117d8",
+				"title": "varnish -- Denial of Service Vulnerability",
+				"description": "\n\t<p>Varnish Cache Project reports:</p>\n\t<blockquote cite=\"https://varnish-cache.org/security/VSV00009.html\">\n\t<p>A denial of service attack can be performed against Varnish Cache\n\t  servers by specially formatting the reason phrase of the backend response\n\t  status line. In order to execute an attack, the attacker would have to\n\t  be able to influence the HTTP/1 responses that the Varnish Server\n\t  receives from its configured backends. A successful attack would cause\n\t  the Varnish Server to assert and automatically restart.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://varnish-cache.org/security/VSV00009.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c3610f39-18f1-11ed-9854-641c67a117d8.html"
+					}
+				],
+				"published": "2022-08-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

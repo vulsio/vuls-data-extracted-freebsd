@@ -2,43 +2,58 @@
 	"id": "4cb165f0-6e48-423e-8147-92255d35c0f7",
 	"advisories": [
 		{
-			"id": "4cb165f0-6e48-423e-8147-92255d35c0f7",
-			"title": "NSS -- multiple vulnerabilities",
-			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2017-10/\">\n\t  <p>An out-of-bounds write during Base64 decoding operation\n\t    in the Network Security Services (NSS) library due to\n\t    insufficient memory being allocated to the buffer. This\n\t    results in a potentially exploitable crash. The NSS library\n\t    has been updated to fix this issue to address this issue and\n\t    Firefox 53 has been updated with NSS version 3.29.5.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2017-10/\">\n\t  <p>A flaw in DRBG number generation within the Network\n\t    Security Services (NSS) library where the internal state V\n\t    does not correctly carry bits over. The NSS library has been\n\t    updated to fix this issue to address this issue and Firefox\n\t    53 has been updated with NSS version 3.29.5.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://hg.mozilla.org/projects/nss/rev/99a86619eac9"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://hg.mozilla.org/projects/nss/rev/e126381a3c29"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/4cb165f0-6e48-423e-8147-92255d35c0f7.html"
-				}
-			],
-			"published": "2017-04-19T00:00:00Z"
+			"content": {
+				"id": "4cb165f0-6e48-423e-8147-92255d35c0f7",
+				"title": "NSS -- multiple vulnerabilities",
+				"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2017-10/\">\n\t  <p>An out-of-bounds write during Base64 decoding operation\n\t    in the Network Security Services (NSS) library due to\n\t    insufficient memory being allocated to the buffer. This\n\t    results in a potentially exploitable crash. The NSS library\n\t    has been updated to fix this issue to address this issue and\n\t    Firefox 53 has been updated with NSS version 3.29.5.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2017-10/\">\n\t  <p>A flaw in DRBG number generation within the Network\n\t    Security Services (NSS) library where the internal state V\n\t    does not correctly carry bits over. The NSS library has been\n\t    updated to fix this issue to address this issue and Firefox\n\t    53 has been updated with NSS version 3.29.5.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://hg.mozilla.org/projects/nss/rev/99a86619eac9"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://hg.mozilla.org/projects/nss/rev/e126381a3c29"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/4cb165f0-6e48-423e-8147-92255d35c0f7.html"
+					}
+				],
+				"published": "2017-04-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-5461",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5461"
-				}
+			"content": {
+				"id": "CVE-2017-5461",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5461"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-5462",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-5462"
-				}
+			"content": {
+				"id": "CVE-2017-5462",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-5462"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

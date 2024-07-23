@@ -2,30 +2,40 @@
 	"id": "6601127c-9e09-11e1-b5e0-000c299b62e1",
 	"advisories": [
 		{
-			"id": "6601127c-9e09-11e1-b5e0-000c299b62e1",
-			"title": "socat -- Heap-based buffer overflow",
-			"description": "\n\t<p>The socat development team reports:</p>\n\t<blockquote cite=\"http://www.dest-unreach.org/socat/contrib/socat-secadv3.html\">\n\t  <p>This vulnerability can be exploited when socat is invoked with the\n\t    READLINE address (this is usually only used interactively) without\n\t    option \"prompt\" and without option \"noprompt\" and an attacker succeeds\n\t    to provide malicious data to the other (arbitrary) address that is then\n\t    transferred by socat to the READLINE address for output.</p>\n\t  <p>Successful exploitation may allow an attacker to execute arbitrary\n\t    code with the privileges of the socat process.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6601127c-9e09-11e1-b5e0-000c299b62e1.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "www.dest-unreach.org/socat/contrib/socat-secadv3.html"
-				}
-			],
-			"published": "2012-05-14T00:00:00Z"
+			"content": {
+				"id": "6601127c-9e09-11e1-b5e0-000c299b62e1",
+				"title": "socat -- Heap-based buffer overflow",
+				"description": "\n\t<p>The socat development team reports:</p>\n\t<blockquote cite=\"http://www.dest-unreach.org/socat/contrib/socat-secadv3.html\">\n\t  <p>This vulnerability can be exploited when socat is invoked with the\n\t    READLINE address (this is usually only used interactively) without\n\t    option \"prompt\" and without option \"noprompt\" and an attacker succeeds\n\t    to provide malicious data to the other (arbitrary) address that is then\n\t    transferred by socat to the READLINE address for output.</p>\n\t  <p>Successful exploitation may allow an attacker to execute arbitrary\n\t    code with the privileges of the socat process.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6601127c-9e09-11e1-b5e0-000c299b62e1.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "www.dest-unreach.org/socat/contrib/socat-secadv3.html"
+					}
+				],
+				"published": "2012-05-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-0219",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-0219"
-				}
+			"content": {
+				"id": "CVE-2012-0219",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-0219"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

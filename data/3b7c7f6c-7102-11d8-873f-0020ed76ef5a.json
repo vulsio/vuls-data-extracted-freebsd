@@ -2,31 +2,41 @@
 	"id": "3b7c7f6c-7102-11d8-873f-0020ed76ef5a",
 	"advisories": [
 		{
-			"id": "3b7c7f6c-7102-11d8-873f-0020ed76ef5a",
-			"title": "wu-ftpd ftpaccess `restricted-uid'/`restricted-gid' directive may be bypassed",
-			"description": "\n\t<p>Glenn Stewart reports a bug in wu-ftpd's ftpaccess\n\t  `restricted-uid'/`restricted-gid' directives:</p>\n\t<blockquote>\n\t  <p>Users can get around the restriction to their home\n\t    directory by issuing a simple chmod command on their home\n\t    directory. On the next ftp log in, the user will have '/'\n\t    as their root directory.</p>\n\t</blockquote>\n\t<p>Matt Zimmerman discovered that the cause of the bug was a\n\t  missing check for a restricted user within a code path that\n\t  is executed only when a certain error is encountered.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/9832"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/3b7c7f6c-7102-11d8-873f-0020ed76ef5a.html"
-				}
-			],
-			"published": "2004-03-08T00:00:00Z",
-			"modified": "2004-03-29T00:00:00Z"
+			"content": {
+				"id": "3b7c7f6c-7102-11d8-873f-0020ed76ef5a",
+				"title": "wu-ftpd ftpaccess `restricted-uid'/`restricted-gid' directive may be bypassed",
+				"description": "\n\t<p>Glenn Stewart reports a bug in wu-ftpd's ftpaccess\n\t  `restricted-uid'/`restricted-gid' directives:</p>\n\t<blockquote>\n\t  <p>Users can get around the restriction to their home\n\t    directory by issuing a simple chmod command on their home\n\t    directory. On the next ftp log in, the user will have '/'\n\t    as their root directory.</p>\n\t</blockquote>\n\t<p>Matt Zimmerman discovered that the cause of the bug was a\n\t  missing check for a restricted user within a code path that\n\t  is executed only when a certain error is encountered.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/9832"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3b7c7f6c-7102-11d8-873f-0020ed76ef5a.html"
+					}
+				],
+				"published": "2004-03-08T00:00:00Z",
+				"modified": "2004-03-29T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-0148",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-0148"
-				}
+			"content": {
+				"id": "CVE-2004-0148",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-0148"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

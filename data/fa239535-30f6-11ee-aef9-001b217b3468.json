@@ -2,147 +2,222 @@
 	"id": "fa239535-30f6-11ee-aef9-001b217b3468",
 	"advisories": [
 		{
-			"id": "fa239535-30f6-11ee-aef9-001b217b3468",
-			"title": "Gitlab -- Vulnerabilities",
-			"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/\">\n\t  <p>ReDoS via ProjectReferenceFilter in any Markdown fields</p>\n\t  <p>ReDoS via AutolinkFilter in any Markdown fields</p>\n\t  <p>Regex DoS in Harbor Registry search</p>\n\t  <p>Arbitrary read of files owned by the \"git\" user via malicious tar.gz file upload using GitLab export functionality</p>\n\t  <p>Stored XSS in Web IDE Beta via crafted URL</p>\n\t  <p>securityPolicyProjectAssign mutation does not authorize security policy project ID</p>\n\t  <p>An attacker can run pipeline jobs as arbitrary user</p>\n\t  <p>Possible Pages Unique Domain Overwrite</p>\n\t  <p>Access tokens may have been logged when a query was made to an endpoint</p>\n\t  <p>Reflected XSS via PlantUML diagram</p>\n\t  <p>The main branch of a repository with a specially designed name may allow an attacker to create repositories with malicious code</p>\n\t  <p>Invalid 'start_sha' value on merge requests page may lead to Denial of Service</p>\n\t  <p>Developers can create pipeline schedules on protected branches even if they don't have access to merge</p>\n\t  <p>Potential DOS due to lack of pagination while loading license data</p>\n\t  <p>Leaking emails of newly created users</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/fa239535-30f6-11ee-aef9-001b217b3468.html"
-				}
-			],
-			"published": "2023-08-02T00:00:00Z"
+			"content": {
+				"id": "fa239535-30f6-11ee-aef9-001b217b3468",
+				"title": "Gitlab -- Vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/\">\n\t  <p>ReDoS via ProjectReferenceFilter in any Markdown fields</p>\n\t  <p>ReDoS via AutolinkFilter in any Markdown fields</p>\n\t  <p>Regex DoS in Harbor Registry search</p>\n\t  <p>Arbitrary read of files owned by the \"git\" user via malicious tar.gz file upload using GitLab export functionality</p>\n\t  <p>Stored XSS in Web IDE Beta via crafted URL</p>\n\t  <p>securityPolicyProjectAssign mutation does not authorize security policy project ID</p>\n\t  <p>An attacker can run pipeline jobs as arbitrary user</p>\n\t  <p>Possible Pages Unique Domain Overwrite</p>\n\t  <p>Access tokens may have been logged when a query was made to an endpoint</p>\n\t  <p>Reflected XSS via PlantUML diagram</p>\n\t  <p>The main branch of a repository with a specially designed name may allow an attacker to create repositories with malicious code</p>\n\t  <p>Invalid 'start_sha' value on merge requests page may lead to Denial of Service</p>\n\t  <p>Developers can create pipeline schedules on protected branches even if they don't have access to merge</p>\n\t  <p>Potential DOS due to lack of pagination while loading license data</p>\n\t  <p>Leaking emails of newly created users</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fa239535-30f6-11ee-aef9-001b217b3468.html"
+					}
+				],
+				"published": "2023-08-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-0632",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-0632"
-				}
+			"content": {
+				"id": "CVE-2023-0632",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-0632"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-1210",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-1210"
-				}
+			"content": {
+				"id": "CVE-2023-1210",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-1210"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-2022",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-2022"
-				}
+			"content": {
+				"id": "CVE-2023-2022",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-2022"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-2164",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-2164"
-				}
+			"content": {
+				"id": "CVE-2023-2164",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-2164"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3364",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3364"
-				}
+			"content": {
+				"id": "CVE-2023-3364",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3364"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3385",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3385"
-				}
+			"content": {
+				"id": "CVE-2023-3385",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3385"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3401",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3401"
-				}
+			"content": {
+				"id": "CVE-2023-3401",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3401"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3500",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3500"
-				}
+			"content": {
+				"id": "CVE-2023-3500",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3500"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3900",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3900"
-				}
+			"content": {
+				"id": "CVE-2023-3900",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3900"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3993",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3993"
-				}
+			"content": {
+				"id": "CVE-2023-3993",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3993"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-3994",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-3994"
-				}
+			"content": {
+				"id": "CVE-2023-3994",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-3994"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-4002",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4002"
-				}
+			"content": {
+				"id": "CVE-2023-4002",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-4002"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-4008",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4008"
-				}
+			"content": {
+				"id": "CVE-2023-4008",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-4008"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2023-4011",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-4011"
-				}
+			"content": {
+				"id": "CVE-2023-4011",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-4011"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

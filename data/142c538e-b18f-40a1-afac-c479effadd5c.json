@@ -2,39 +2,54 @@
 	"id": "142c538e-b18f-40a1-afac-c479effadd5c",
 	"advisories": [
 		{
-			"id": "142c538e-b18f-40a1-afac-c479effadd5c",
-			"title": "openvpn -- two security fixes",
-			"description": "\n\t<p>Gert Doering reports that OpenVPN 2.6.11 fixes two security bugs (three on Windows):</p>\n\t<blockquote cite=\"https://github.com/OpenVPN/openvpn/blob/v2.6.11/Changes.rst#security-fixes\">\n\t  <p>CVE-2024-5594: control channel: refuse control channel messages with nonprintable characters in them. Security scope: a malicious openvpn peer can send garbage to openvpn log, or cause high CPU load. (Reynir Björnsson)</p>\n\t  <p>CVE-2024-28882: only call schedule_exit() once (on a given peer). Security scope: an authenticated client can make the server \"keep the session\" even when the server has been told to disconnect this client. (Reynir Björnsson)</p>\n\t</blockquote>\n\t",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/OpenVPN/openvpn/blob/v2.6.11/Changes.rst#security-fixes"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/142c538e-b18f-40a1-afac-c479effadd5c.html"
-				}
-			],
-			"published": "2024-06-20T00:00:00Z"
+			"content": {
+				"id": "142c538e-b18f-40a1-afac-c479effadd5c",
+				"title": "openvpn -- two security fixes",
+				"description": "\n\t<p>Gert Doering reports that OpenVPN 2.6.11 fixes two security bugs (three on Windows):</p>\n\t<blockquote cite=\"https://github.com/OpenVPN/openvpn/blob/v2.6.11/Changes.rst#security-fixes\">\n\t  <p>CVE-2024-5594: control channel: refuse control channel messages with nonprintable characters in them. Security scope: a malicious openvpn peer can send garbage to openvpn log, or cause high CPU load. (Reynir Björnsson)</p>\n\t  <p>CVE-2024-28882: only call schedule_exit() once (on a given peer). Security scope: an authenticated client can make the server \"keep the session\" even when the server has been told to disconnect this client. (Reynir Björnsson)</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/OpenVPN/openvpn/blob/v2.6.11/Changes.rst#security-fixes"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/142c538e-b18f-40a1-afac-c479effadd5c.html"
+					}
+				],
+				"published": "2024-06-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2024-28882",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-28882"
-				}
+			"content": {
+				"id": "CVE-2024-28882",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-28882"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2024-5594",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2024-5594"
-				}
+			"content": {
+				"id": "CVE-2024-5594",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5594"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

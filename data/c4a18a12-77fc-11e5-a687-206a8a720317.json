@@ -2,170 +2,255 @@
 	"id": "c4a18a12-77fc-11e5-a687-206a8a720317",
 	"advisories": [
 		{
-			"id": "c4a18a12-77fc-11e5-a687-206a8a720317",
-			"title": "ntp -- 13 low- and medium-severity vulnerabilities",
-			"description": "\n\t<p>ntp.org reports:</p>\n\t<blockquote cite=\"http://support.ntp.org/bin/view/Main/SecurityNotice#Recent_Vulnerabilities\">\n\t  <p>NTF's NTP Project has been notified of the following 13 low-\n\t     and medium-severity vulnerabilities that are fixed in\n\t     ntp-4.2.8p4, released on Wednesday, 21 October 2015:</p>\n\t  <ul>\n\t    <li>Bug 2941 CVE-2015-7871 NAK to the Future: Symmetric\n\t\tassociation authentication bypass via crypto-NAK\n\t\t(Cisco ASIG)</li>\n\t    <li>Bug 2922 CVE-2015-7855 decodenetnum() will ASSERT botch\n\t\tinstead of returning FAIL on some bogus values (IDA)</li>\n\t    <li>Bug 2921 CVE-2015-7854 Password Length Memory Corruption\n\t\tVulnerability. (Cisco TALOS)</li>\n\t    <li>Bug 2920 CVE-2015-7853 Invalid length data provided by a\n\t\tcustom refclock driver could cause a buffer overflow.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2919 CVE-2015-7852 ntpq atoascii() Memory Corruption\n\t\tVulnerability. (Cisco TALOS)</li>\n\t    <li>Bug 2918 CVE-2015-7851 saveconfig Directory Traversal\n\t\tVulnerability. (OpenVMS) (Cisco TALOS)</li>\n\t    <li>Bug 2917 CVE-2015-7850 remote config logfile-keyfile.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2916 CVE-2015-7849 trusted key use-after-free.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2913 CVE-2015-7848 mode 7 loop counter underrun.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2909 CVE-2015-7701 Slow memory leak in CRYPTO_ASSOC.\n\t\t(Tenable)</li>\n\t    <li>Bug 2902 : CVE-2015-7703 configuration directives \"pidfile\"\n\t\tand \"driftfile\" should only be allowed locally. (RedHat)</li>\n\t    <li>Bug 2901 : CVE-2015-7704, CVE-2015-7705 Clients that\n\t\treceive a KoD should validate the origin timestamp field.\n\t\t(Boston University)</li>\n\t    <li>Bug 2899 : CVE-2015-7691, CVE-2015-7692, CVE-2015-7702\n\t\tIncomplete autokey data packet length checks. (Tenable)</li>\n\t  </ul>\n\t  <p>The only generally-exploitable bug in the above list is the\n\t     crypto-NAK bug, which has a CVSS2 score of 6.4.</p>\n\t  <p>Additionally, three bugs that have already been fixed in\n\t     ntp-4.2.8 but were not fixed in ntp-4.2.6 as it was EOL'd\n\t     have a security component, but are all below 1.8 CVSS score,\n\t     so we're reporting them here:</p>\n\t  <ul>\n\t    <li>Bug 2382 : Peer precision &lt; -31 gives division by zero</li>\n\t    <li>Bug 1774 : Segfaults if cryptostats enabled when built\n\t\twithout OpenSSL</li>\n\t    <li>Bug 1593 : ntpd abort in free() with logconfig syntax error</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://support.ntp.org/bin/view/Main/SecurityNotice#Recent_Vulnerabilities"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:25.ntp.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c4a18a12-77fc-11e5-a687-206a8a720317.html"
-				}
-			],
-			"published": "2015-10-21T00:00:00Z",
-			"modified": "2016-08-09T00:00:00Z"
+			"content": {
+				"id": "c4a18a12-77fc-11e5-a687-206a8a720317",
+				"title": "ntp -- 13 low- and medium-severity vulnerabilities",
+				"description": "\n\t<p>ntp.org reports:</p>\n\t<blockquote cite=\"http://support.ntp.org/bin/view/Main/SecurityNotice#Recent_Vulnerabilities\">\n\t  <p>NTF's NTP Project has been notified of the following 13 low-\n\t     and medium-severity vulnerabilities that are fixed in\n\t     ntp-4.2.8p4, released on Wednesday, 21 October 2015:</p>\n\t  <ul>\n\t    <li>Bug 2941 CVE-2015-7871 NAK to the Future: Symmetric\n\t\tassociation authentication bypass via crypto-NAK\n\t\t(Cisco ASIG)</li>\n\t    <li>Bug 2922 CVE-2015-7855 decodenetnum() will ASSERT botch\n\t\tinstead of returning FAIL on some bogus values (IDA)</li>\n\t    <li>Bug 2921 CVE-2015-7854 Password Length Memory Corruption\n\t\tVulnerability. (Cisco TALOS)</li>\n\t    <li>Bug 2920 CVE-2015-7853 Invalid length data provided by a\n\t\tcustom refclock driver could cause a buffer overflow.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2919 CVE-2015-7852 ntpq atoascii() Memory Corruption\n\t\tVulnerability. (Cisco TALOS)</li>\n\t    <li>Bug 2918 CVE-2015-7851 saveconfig Directory Traversal\n\t\tVulnerability. (OpenVMS) (Cisco TALOS)</li>\n\t    <li>Bug 2917 CVE-2015-7850 remote config logfile-keyfile.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2916 CVE-2015-7849 trusted key use-after-free.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2913 CVE-2015-7848 mode 7 loop counter underrun.\n\t\t(Cisco TALOS)</li>\n\t    <li>Bug 2909 CVE-2015-7701 Slow memory leak in CRYPTO_ASSOC.\n\t\t(Tenable)</li>\n\t    <li>Bug 2902 : CVE-2015-7703 configuration directives \"pidfile\"\n\t\tand \"driftfile\" should only be allowed locally. (RedHat)</li>\n\t    <li>Bug 2901 : CVE-2015-7704, CVE-2015-7705 Clients that\n\t\treceive a KoD should validate the origin timestamp field.\n\t\t(Boston University)</li>\n\t    <li>Bug 2899 : CVE-2015-7691, CVE-2015-7692, CVE-2015-7702\n\t\tIncomplete autokey data packet length checks. (Tenable)</li>\n\t  </ul>\n\t  <p>The only generally-exploitable bug in the above list is the\n\t     crypto-NAK bug, which has a CVSS2 score of 6.4.</p>\n\t  <p>Additionally, three bugs that have already been fixed in\n\t     ntp-4.2.8 but were not fixed in ntp-4.2.6 as it was EOL'd\n\t     have a security component, but are all below 1.8 CVSS score,\n\t     so we're reporting them here:</p>\n\t  <ul>\n\t    <li>Bug 2382 : Peer precision &lt; -31 gives division by zero</li>\n\t    <li>Bug 1774 : Segfaults if cryptostats enabled when built\n\t\twithout OpenSSL</li>\n\t    <li>Bug 1593 : ntpd abort in free() with logconfig syntax error</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://support.ntp.org/bin/view/Main/SecurityNotice#Recent_Vulnerabilities"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:25.ntp.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c4a18a12-77fc-11e5-a687-206a8a720317.html"
+					}
+				],
+				"published": "2015-10-21T00:00:00Z",
+				"modified": "2016-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-7691",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7691"
-				}
+			"content": {
+				"id": "CVE-2015-7691",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7691"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7692",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7692"
-				}
+			"content": {
+				"id": "CVE-2015-7692",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7692"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7701",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7701"
-				}
+			"content": {
+				"id": "CVE-2015-7701",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7701"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7702",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7702"
-				}
+			"content": {
+				"id": "CVE-2015-7702",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7702"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7703",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7703"
-				}
+			"content": {
+				"id": "CVE-2015-7703",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7703"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7704",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7704"
-				}
+			"content": {
+				"id": "CVE-2015-7704",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7704"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7705",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7705"
-				}
+			"content": {
+				"id": "CVE-2015-7705",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7705"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7848",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7848"
-				}
+			"content": {
+				"id": "CVE-2015-7848",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7848"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7849",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7849"
-				}
+			"content": {
+				"id": "CVE-2015-7849",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7849"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7850",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7850"
-				}
+			"content": {
+				"id": "CVE-2015-7850",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7850"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7851",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7851"
-				}
+			"content": {
+				"id": "CVE-2015-7851",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7851"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7852",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7852"
-				}
+			"content": {
+				"id": "CVE-2015-7852",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7852"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7853",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7853"
-				}
+			"content": {
+				"id": "CVE-2015-7853",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7853"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7854",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7854"
-				}
+			"content": {
+				"id": "CVE-2015-7854",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7854"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7855",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7855"
-				}
+			"content": {
+				"id": "CVE-2015-7855",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7855"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7871",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7871"
-				}
+			"content": {
+				"id": "CVE-2015-7871",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7871"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

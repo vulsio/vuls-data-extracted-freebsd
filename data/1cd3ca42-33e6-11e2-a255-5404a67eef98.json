@@ -2,26 +2,36 @@
 	"id": "1cd3ca42-33e6-11e2-a255-5404a67eef98",
 	"advisories": [
 		{
-			"id": "1cd3ca42-33e6-11e2-a255-5404a67eef98",
-			"title": "lighttpd -- remote DoS in header parsing",
-			"description": "\n\t<p>Lighttpd security advisory reports:</p>\n\t<blockquote cite=\"http://download.lighttpd.net/lighttpd/security/lighttpd_sa_2012_01.txt\">\n\t  <p>Certain Connection header values will trigger an endless loop, for example:\n\t    \"Connection: TE,,Keep-Alive\"</p>\n\t  <p>On receiving such value, lighttpd will enter an endless loop,\n\t    detecting an empty token but not incrementing the current string\n\t    position, and keep reading the ',' again and again.</p>\n\t  <p>This bug was introduced in 1.4.31, when we fixed an \"invalid read\"\n\t    bug (it would try to read the byte before the string if it started\n\t    with ',', although the value wasn't actually used).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1cd3ca42-33e6-11e2-a255-5404a67eef98.html"
-				}
-			],
-			"published": "2012-11-21T00:00:00Z"
+			"content": {
+				"id": "1cd3ca42-33e6-11e2-a255-5404a67eef98",
+				"title": "lighttpd -- remote DoS in header parsing",
+				"description": "\n\t<p>Lighttpd security advisory reports:</p>\n\t<blockquote cite=\"http://download.lighttpd.net/lighttpd/security/lighttpd_sa_2012_01.txt\">\n\t  <p>Certain Connection header values will trigger an endless loop, for example:\n\t    \"Connection: TE,,Keep-Alive\"</p>\n\t  <p>On receiving such value, lighttpd will enter an endless loop,\n\t    detecting an empty token but not incrementing the current string\n\t    position, and keep reading the ',' again and again.</p>\n\t  <p>This bug was introduced in 1.4.31, when we fixed an \"invalid read\"\n\t    bug (it would try to read the byte before the string if it started\n\t    with ',', although the value wasn't actually used).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1cd3ca42-33e6-11e2-a255-5404a67eef98.html"
+					}
+				],
+				"published": "2012-11-21T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-5533",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2012-5533"
-				}
+			"content": {
+				"id": "CVE-2012-5533",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2012-5533"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

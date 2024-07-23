@@ -2,30 +2,40 @@
 	"id": "2c6af5c3-4d36-11ec-a539-0800270512f4",
 	"advisories": [
 		{
-			"id": "2c6af5c3-4d36-11ec-a539-0800270512f4",
-			"title": "rubygem-cgi -- buffer overrun in CGI.escape_html",
-			"description": "\n\t<p>chamal reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/\">\n\t  <p>\n\t    A security vulnerability that causes buffer overflow when\n\t    you pass a very large string (&gt; 700 MB) to\n\t    <code>CGI.escape_html</code> on a platform where\n\t    <code>long</code> type takes 4 bytes, typically, Windows.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2c6af5c3-4d36-11ec-a539-0800270512f4.html"
-				}
-			],
-			"published": "2021-11-24T00:00:00Z"
+			"content": {
+				"id": "2c6af5c3-4d36-11ec-a539-0800270512f4",
+				"title": "rubygem-cgi -- buffer overrun in CGI.escape_html",
+				"description": "\n\t<p>chamal reports:</p>\n\t<blockquote cite=\"https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/\">\n\t  <p>\n\t    A security vulnerability that causes buffer overflow when\n\t    you pass a very large string (&gt; 700 MB) to\n\t    <code>CGI.escape_html</code> on a platform where\n\t    <code>long</code> type takes 4 bytes, typically, Windows.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2c6af5c3-4d36-11ec-a539-0800270512f4.html"
+					}
+				],
+				"published": "2021-11-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-41816",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2021-41816"
-				}
+			"content": {
+				"id": "CVE-2021-41816",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-41816"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

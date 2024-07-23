@@ -2,26 +2,36 @@
 	"id": "58c15292-7b61-11e2-95da-001e8c1a8a0e",
 	"advisories": [
 		{
-			"id": "58c15292-7b61-11e2-95da-001e8c1a8a0e",
-			"title": "nss-pam-ldapd -- file descriptor buffer overflow",
-			"description": "\n\t<p>Garth Mollett reports:</p>\n\t<blockquote cite=\"http://arthurdejong.org/nss-pam-ldapd/CVE-2013-0288\">\n\t  <p>A file descriptor overflow issue in the use of FD_SET()\n\t    in nss-pam-ldapd can lead to a stack-based buffer overflow.\n\t    An attacker could, under some circumstances, use this flaw\n\t    to cause a process that has the NSS or PAM module loaded to\n\t    crash or potentially execute arbitrary code.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/58c15292-7b61-11e2-95da-001e8c1a8a0e.html"
-				}
-			],
-			"published": "2013-02-20T00:00:00Z"
+			"content": {
+				"id": "58c15292-7b61-11e2-95da-001e8c1a8a0e",
+				"title": "nss-pam-ldapd -- file descriptor buffer overflow",
+				"description": "\n\t<p>Garth Mollett reports:</p>\n\t<blockquote cite=\"http://arthurdejong.org/nss-pam-ldapd/CVE-2013-0288\">\n\t  <p>A file descriptor overflow issue in the use of FD_SET()\n\t    in nss-pam-ldapd can lead to a stack-based buffer overflow.\n\t    An attacker could, under some circumstances, use this flaw\n\t    to cause a process that has the NSS or PAM module loaded to\n\t    crash or potentially execute arbitrary code.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/58c15292-7b61-11e2-95da-001e8c1a8a0e.html"
+					}
+				],
+				"published": "2013-02-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-0288",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-0288"
-				}
+			"content": {
+				"id": "CVE-2013-0288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-0288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

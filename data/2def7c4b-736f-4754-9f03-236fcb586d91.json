@@ -2,30 +2,40 @@
 	"id": "2def7c4b-736f-4754-9f03-236fcb586d91",
 	"advisories": [
 		{
-			"id": "2def7c4b-736f-4754-9f03-236fcb586d91",
-			"title": "py-wagtail -- DoS vulnerability",
-			"description": "\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-33pv-vcgh-jfg9\">\n      <p>A memory exhaustion bug exists in Wagtail's handling of uploaded images and documents.</p>\n      <p>For both images and documents, files are loaded into memory during upload for additional processing.</p>\n      <p>A user with access to upload images or documents through the Wagtail admin interface could upload a file so large that it results in a crash or denial of service.</p>\n      <p>The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin.</p>\n      <p>It can only be exploited by admin users with permission to upload images or documents.</p>\n      <p>Image uploads are restricted to 10MB by default, however this validation only happens on the frontend and on the backend after the vulnerable code.</p>\n    </blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://osv.dev/vulnerability/GHSA-33pv-vcgh-jfg9"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/2def7c4b-736f-4754-9f03-236fcb586d91.html"
-				}
-			],
-			"published": "2023-08-31T00:00:00Z"
+			"content": {
+				"id": "2def7c4b-736f-4754-9f03-236fcb586d91",
+				"title": "py-wagtail -- DoS vulnerability",
+				"description": "\n    <blockquote cite=\"https://osv.dev/vulnerability/GHSA-33pv-vcgh-jfg9\">\n      <p>A memory exhaustion bug exists in Wagtail's handling of uploaded images and documents.</p>\n      <p>For both images and documents, files are loaded into memory during upload for additional processing.</p>\n      <p>A user with access to upload images or documents through the Wagtail admin interface could upload a file so large that it results in a crash or denial of service.</p>\n      <p>The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin.</p>\n      <p>It can only be exploited by admin users with permission to upload images or documents.</p>\n      <p>Image uploads are restricted to 10MB by default, however this validation only happens on the frontend and on the backend after the vulnerable code.</p>\n    </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://osv.dev/vulnerability/GHSA-33pv-vcgh-jfg9"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2def7c4b-736f-4754-9f03-236fcb586d91.html"
+					}
+				],
+				"published": "2023-08-31T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-28837",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-28837"
-				}
+			"content": {
+				"id": "CVE-2023-28837",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-28837"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

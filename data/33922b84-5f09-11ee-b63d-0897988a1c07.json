@@ -2,31 +2,41 @@
 	"id": "33922b84-5f09-11ee-b63d-0897988a1c07",
 	"advisories": [
 		{
-			"id": "33922b84-5f09-11ee-b63d-0897988a1c07",
-			"title": "Remote Code Execution via web-accessible composer",
-			"description": "\n\t<p>Composer project reports:</p>\n\t<blockquote cite=\"https://github.com/composer/composer/security/advisories/GHSA-jm6m-4632-36hf\">\n\t  <p>Description: Users publishing a composer.phar to a\n\t  public web-accessible server where the composer.phar can\n\t  be executed as a php file may be impacted if PHP also has\n\t  register_argc_argv enabled in php.ini.</p>\n\t  <p>Workaround: Make sure register_argc_argv is disabled\n\t  in php.ini, and avoid publishing composer.phar to the web\n\t  as this really should not happen.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/composer/composer/security/advisories/GHSA-jm6m-4632-36hf"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/33922b84-5f09-11ee-b63d-0897988a1c07.html"
-				}
-			],
-			"published": "2023-09-29T00:00:00Z",
-			"modified": "2023-09-30T00:00:00Z"
+			"content": {
+				"id": "33922b84-5f09-11ee-b63d-0897988a1c07",
+				"title": "Remote Code Execution via web-accessible composer",
+				"description": "\n\t<p>Composer project reports:</p>\n\t<blockquote cite=\"https://github.com/composer/composer/security/advisories/GHSA-jm6m-4632-36hf\">\n\t  <p>Description: Users publishing a composer.phar to a\n\t  public web-accessible server where the composer.phar can\n\t  be executed as a php file may be impacted if PHP also has\n\t  register_argc_argv enabled in php.ini.</p>\n\t  <p>Workaround: Make sure register_argc_argv is disabled\n\t  in php.ini, and avoid publishing composer.phar to the web\n\t  as this really should not happen.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/composer/composer/security/advisories/GHSA-jm6m-4632-36hf"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/33922b84-5f09-11ee-b63d-0897988a1c07.html"
+					}
+				],
+				"published": "2023-09-29T00:00:00Z",
+				"modified": "2023-09-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-43655",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2023-43655"
-				}
+			"content": {
+				"id": "CVE-2023-43655",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-43655"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

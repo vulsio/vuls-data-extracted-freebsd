@@ -2,20 +2,25 @@
 	"id": "f66e011d-13ff-11da-af41-0004614cc33d",
 	"advisories": [
 		{
-			"id": "f66e011d-13ff-11da-af41-0004614cc33d",
-			"title": "elm -- remote buffer overflow in Expires header",
-			"description": "\n\t<p>Ulf Harnhammar has discovered a remotely exploitable buffer\n\t  overflow in Elm e-mail client when parsing the Expires header\n\t  of an e-mail message:</p>\n\t<blockquote cite=\"http://archives.neohapsis.com/archives/fulldisclosure/2005-08/0688.html\">\n\t  <p>The attacker only needs to send the victim an e-mail\n\t    message. When the victim with that message in his or her\n\t    inbox starts Elm or simply views the inbox in an already\n\t    started copy of Elm, the buffer overflow will happen\n\t    immediately. The overflow is stack-based, and it gives full\n\t    control over EIP, EBP and EBX. It is caused by a bad\n\t    sscanf(3) call, using a format string containing \"%s\"\n\t    to copy from a long char array to a shorter array.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://archives.neohapsis.com/archives/fulldisclosure/2005-08/0688.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/f66e011d-13ff-11da-af41-0004614cc33d.html"
-				}
-			],
-			"published": "2005-08-23T00:00:00Z"
+			"content": {
+				"id": "f66e011d-13ff-11da-af41-0004614cc33d",
+				"title": "elm -- remote buffer overflow in Expires header",
+				"description": "\n\t<p>Ulf Harnhammar has discovered a remotely exploitable buffer\n\t  overflow in Elm e-mail client when parsing the Expires header\n\t  of an e-mail message:</p>\n\t<blockquote cite=\"http://archives.neohapsis.com/archives/fulldisclosure/2005-08/0688.html\">\n\t  <p>The attacker only needs to send the victim an e-mail\n\t    message. When the victim with that message in his or her\n\t    inbox starts Elm or simply views the inbox in an already\n\t    started copy of Elm, the buffer overflow will happen\n\t    immediately. The overflow is stack-based, and it gives full\n\t    control over EIP, EBP and EBX. It is caused by a bad\n\t    sscanf(3) call, using a format string containing \"%s\"\n\t    to copy from a long char array to a shorter array.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://archives.neohapsis.com/archives/fulldisclosure/2005-08/0688.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f66e011d-13ff-11da-af41-0004614cc33d.html"
+					}
+				],
+				"published": "2005-08-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

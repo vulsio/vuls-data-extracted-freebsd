@@ -2,34 +2,44 @@
 	"id": "8a3ece40-3315-11da-a263-0001020eed82",
 	"advisories": [
 		{
-			"id": "8a3ece40-3315-11da-a263-0001020eed82",
-			"title": "picasm -- buffer overflow vulnerability",
-			"description": "\n\t<p>Shaun Colley reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=111661253517089\">\n\t  <p>When generating error and warning messages, picasm copies\n\t    strings into fixed length buffers without bounds\n\t    checking.</p>\n\t  <p>If an attacker could trick a user into assembling a\n\t    source file with a malformed 'error' directive, arbitrary\n\t    code could be executed with the privileges of the user.\n\t    This could result in full system compromise.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111661253517089"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.securityfocus.com/bid/13698"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/8a3ece40-3315-11da-a263-0001020eed82.html"
-				}
-			],
-			"published": "2005-10-02T00:00:00Z"
+			"content": {
+				"id": "8a3ece40-3315-11da-a263-0001020eed82",
+				"title": "picasm -- buffer overflow vulnerability",
+				"description": "\n\t<p>Shaun Colley reports:</p>\n\t<blockquote cite=\"http://marc.theaimsgroup.com/?l=bugtraq&amp;m=111661253517089\">\n\t  <p>When generating error and warning messages, picasm copies\n\t    strings into fixed length buffers without bounds\n\t    checking.</p>\n\t  <p>If an attacker could trick a user into assembling a\n\t    source file with a malformed 'error' directive, arbitrary\n\t    code could be executed with the privileges of the user.\n\t    This could result in full system compromise.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111661253517089"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.securityfocus.com/bid/13698"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8a3ece40-3315-11da-a263-0001020eed82.html"
+					}
+				],
+				"published": "2005-10-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2005-1679",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2005-1679"
-				}
+			"content": {
+				"id": "CVE-2005-1679",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2005-1679"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

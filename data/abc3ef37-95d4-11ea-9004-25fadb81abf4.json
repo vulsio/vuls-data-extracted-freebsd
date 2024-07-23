@@ -2,35 +2,45 @@
 	"id": "abc3ef37-95d4-11ea-9004-25fadb81abf4",
 	"advisories": [
 		{
-			"id": "abc3ef37-95d4-11ea-9004-25fadb81abf4",
-			"title": "json-c -- integer overflow and out-of-bounds write via a large JSON file",
-			"description": "\n\t<p>Tobias Stöckmann reports:</p>\n\t<blockquote cite=\"https://github.com/json-c/json-c/pull/592\">\n\t  <p>\n\t    I have discovered a way to trigger an out of boundary write while\n\t    parsing a huge json file through a malicious input source. It can be\n\t    triggered if an attacker has control over the input stream or if a\n\t    huge load during filesystem operations can be triggered.\n\t  </p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/json-c/json-c/pull/592"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://github.com/json-c/json-c/pull/599"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/abc3ef37-95d4-11ea-9004-25fadb81abf4.html"
-				}
-			],
-			"published": "2020-05-14T00:00:00Z",
-			"modified": "2020-05-17T00:00:00Z"
+			"content": {
+				"id": "abc3ef37-95d4-11ea-9004-25fadb81abf4",
+				"title": "json-c -- integer overflow and out-of-bounds write via a large JSON file",
+				"description": "\n\t<p>Tobias Stöckmann reports:</p>\n\t<blockquote cite=\"https://github.com/json-c/json-c/pull/592\">\n\t  <p>\n\t    I have discovered a way to trigger an out of boundary write while\n\t    parsing a huge json file through a malicious input source. It can be\n\t    triggered if an attacker has control over the input stream or if a\n\t    huge load during filesystem operations can be triggered.\n\t  </p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/json-c/json-c/pull/592"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/json-c/json-c/pull/599"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/abc3ef37-95d4-11ea-9004-25fadb81abf4.html"
+					}
+				],
+				"published": "2020-05-14T00:00:00Z",
+				"modified": "2020-05-17T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-12762",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2020-12762"
-				}
+			"content": {
+				"id": "CVE-2020-12762",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2020-12762"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

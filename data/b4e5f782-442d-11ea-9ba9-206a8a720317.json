@@ -2,30 +2,40 @@
 	"id": "b4e5f782-442d-11ea-9ba9-206a8a720317",
 	"advisories": [
 		{
-			"id": "b4e5f782-442d-11ea-9ba9-206a8a720317",
-			"title": "sudo -- Potential bypass of Runas user restrictions",
-			"description": "\n       <p>Todd C. Miller reports:</p>\n       <blockquote cite=\"https://www.sudo.ws/alerts/pwfeedback.html\">\n\t <p>Sudo's pwfeedback option can be used to provide visual feedback\n\t    when the user is inputting their password. For each key press,\n\t    an asterisk is printed. This option was added in response to\n\t    user confusion over how the standard Password: prompt disables\n\t    the echoing of key presses. While pwfeedback is not enabled by\n\t    default in the upstream version of sudo, some systems, such as\n\t    Linux Mint and Elementary OS, do enable it in their default\n\t    sudoers files.</p>\n\t <p>Due to a bug, when the pwfeedback option is enabled in the\n\t    sudoers file, a user may be able to trigger a stack-based buffer\n\t    overflow. This bug can be triggered even by users not listed in\n\t    the sudoers file. There is no impact unless pwfeedback has been\n\t    enabled.</p>\n       </blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.sudo.ws/alerts/pwfeedback.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b4e5f782-442d-11ea-9ba9-206a8a720317.html"
-				}
-			],
-			"published": "2020-01-30T00:00:00Z"
+			"content": {
+				"id": "b4e5f782-442d-11ea-9ba9-206a8a720317",
+				"title": "sudo -- Potential bypass of Runas user restrictions",
+				"description": "\n       <p>Todd C. Miller reports:</p>\n       <blockquote cite=\"https://www.sudo.ws/alerts/pwfeedback.html\">\n\t <p>Sudo's pwfeedback option can be used to provide visual feedback\n\t    when the user is inputting their password. For each key press,\n\t    an asterisk is printed. This option was added in response to\n\t    user confusion over how the standard Password: prompt disables\n\t    the echoing of key presses. While pwfeedback is not enabled by\n\t    default in the upstream version of sudo, some systems, such as\n\t    Linux Mint and Elementary OS, do enable it in their default\n\t    sudoers files.</p>\n\t <p>Due to a bug, when the pwfeedback option is enabled in the\n\t    sudoers file, a user may be able to trigger a stack-based buffer\n\t    overflow. This bug can be triggered even by users not listed in\n\t    the sudoers file. There is no impact unless pwfeedback has been\n\t    enabled.</p>\n       </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.sudo.ws/alerts/pwfeedback.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b4e5f782-442d-11ea-9ba9-206a8a720317.html"
+					}
+				],
+				"published": "2020-01-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2019-18634",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2019-18634"
-				}
+			"content": {
+				"id": "CVE-2019-18634",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-18634"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

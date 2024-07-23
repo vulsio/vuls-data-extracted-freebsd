@@ -2,31 +2,41 @@
 	"id": "bce1f76d-82d0-11de-88ea-001a4d49522b",
 	"advisories": [
 		{
-			"id": "bce1f76d-82d0-11de-88ea-001a4d49522b",
-			"title": "subversion -- heap overflow vulnerability",
-			"description": "\n\t<p>A Subversion Security Advisory reports:</p>\n\t<blockquote cite=\"http://subversion.tigris.org/security/CVE-2009-2411-advisory.txt\">\n\t  <p>Subversion clients and servers have multiple heap\n\t    overflow issues in the parsing of binary deltas.  This is\n\t    related to an allocation vulnerability in the APR library\n\t    used by Subversion.</p>\n\t  <p>Clients with commit access to a vulnerable server can\n\t    cause a remote heap overflow; servers can cause a heap\n\t    overflow on vulnerable clients that try to do a checkout\n\t    or update.</p>\n\t  <p>This can lead to a DoS (an exploit has been tested) and\n\t    to arbitrary code execution (no exploit tested, but the\n\t    possibility is clear).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://subversion.tigris.org/security/CVE-2009-2411-advisory.txt"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/bce1f76d-82d0-11de-88ea-001a4d49522b.html"
-				}
-			],
-			"published": "2009-08-06T00:00:00Z",
-			"modified": "2009-08-07T00:00:00Z"
+			"content": {
+				"id": "bce1f76d-82d0-11de-88ea-001a4d49522b",
+				"title": "subversion -- heap overflow vulnerability",
+				"description": "\n\t<p>A Subversion Security Advisory reports:</p>\n\t<blockquote cite=\"http://subversion.tigris.org/security/CVE-2009-2411-advisory.txt\">\n\t  <p>Subversion clients and servers have multiple heap\n\t    overflow issues in the parsing of binary deltas.  This is\n\t    related to an allocation vulnerability in the APR library\n\t    used by Subversion.</p>\n\t  <p>Clients with commit access to a vulnerable server can\n\t    cause a remote heap overflow; servers can cause a heap\n\t    overflow on vulnerable clients that try to do a checkout\n\t    or update.</p>\n\t  <p>This can lead to a DoS (an exploit has been tested) and\n\t    to arbitrary code execution (no exploit tested, but the\n\t    possibility is clear).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://subversion.tigris.org/security/CVE-2009-2411-advisory.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bce1f76d-82d0-11de-88ea-001a4d49522b.html"
+					}
+				],
+				"published": "2009-08-06T00:00:00Z",
+				"modified": "2009-08-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2009-2411",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2009-2411"
-				}
+			"content": {
+				"id": "CVE-2009-2411",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2009-2411"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

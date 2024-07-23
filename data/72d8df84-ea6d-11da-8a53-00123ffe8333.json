@@ -2,34 +2,44 @@
 	"id": "72d8df84-ea6d-11da-8a53-00123ffe8333",
 	"advisories": [
 		{
-			"id": "72d8df84-ea6d-11da-8a53-00123ffe8333",
-			"title": "cscope -- buffer overflow vulnerabilities",
-			"description": "\n\t<p>Jason Duell reports:</p>\n\t<blockquote cite=\"http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1064875&amp;group_id=4664&amp;atid=104664\">\n\t  <p>Cscope contains an alarming number of buffer overflow\n\t    vulnerabilities. By a rough count, there are at least 48 places\n\t    where we blindly sprintf() a file name into a fixed-length buffer\n\t    of size PATHLEN without checking to see if the file's name\n\t    is &lt;= PATHLEN. We do similar things with environment variable\n\t    values.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://secunia.com/advisories/13237"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://sourceforge.net/tracker/index.php?func=detail&aid=1064875&group_id=4664&atid=104664"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/72d8df84-ea6d-11da-8a53-00123ffe8333.html"
-				}
-			],
-			"published": "2006-05-23T00:00:00Z"
+			"content": {
+				"id": "72d8df84-ea6d-11da-8a53-00123ffe8333",
+				"title": "cscope -- buffer overflow vulnerabilities",
+				"description": "\n\t<p>Jason Duell reports:</p>\n\t<blockquote cite=\"http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1064875&amp;group_id=4664&amp;atid=104664\">\n\t  <p>Cscope contains an alarming number of buffer overflow\n\t    vulnerabilities. By a rough count, there are at least 48 places\n\t    where we blindly sprintf() a file name into a fixed-length buffer\n\t    of size PATHLEN without checking to see if the file's name\n\t    is &lt;= PATHLEN. We do similar things with environment variable\n\t    values.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://secunia.com/advisories/13237"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://sourceforge.net/tracker/index.php?func=detail&aid=1064875&group_id=4664&atid=104664"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/72d8df84-ea6d-11da-8a53-00123ffe8333.html"
+					}
+				],
+				"published": "2006-05-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-2541",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-2541"
-				}
+			"content": {
+				"id": "CVE-2004-2541",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-2541"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

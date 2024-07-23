@@ -2,26 +2,36 @@
 	"id": "6ff570cb-b418-11e2-b279-20cf30e32f6d",
 	"advisories": [
 		{
-			"id": "6ff570cb-b418-11e2-b279-20cf30e32f6d",
-			"title": "strongSwan -- ECDSA signature verification issue",
-			"description": "\n\t<p>strongSwan security team reports:</p>\n\t<blockquote cite=\"http://www.strongswan.org/blog/2013/04/30/strongswan-5.0.4-released-%28cve-2013-2944%29.html\">\n\t  <p>If the openssl plugin is used for ECDSA signature verification an empty,\n\t    zeroed or otherwise invalid signature is handled as a legitimate one.\n\t    Both IKEv1 and IKEv2 are affected.</p>\n\t  <p>Affected are only installations that have enabled and loaded the OpenSSL\n\t    crypto backend (--enable-openssl). Builds using the default crypto backends\n\t    are not affected.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6ff570cb-b418-11e2-b279-20cf30e32f6d.html"
-				}
-			],
-			"published": "2013-05-03T00:00:00Z"
+			"content": {
+				"id": "6ff570cb-b418-11e2-b279-20cf30e32f6d",
+				"title": "strongSwan -- ECDSA signature verification issue",
+				"description": "\n\t<p>strongSwan security team reports:</p>\n\t<blockquote cite=\"http://www.strongswan.org/blog/2013/04/30/strongswan-5.0.4-released-%28cve-2013-2944%29.html\">\n\t  <p>If the openssl plugin is used for ECDSA signature verification an empty,\n\t    zeroed or otherwise invalid signature is handled as a legitimate one.\n\t    Both IKEv1 and IKEv2 are affected.</p>\n\t  <p>Affected are only installations that have enabled and loaded the OpenSSL\n\t    crypto backend (--enable-openssl). Builds using the default crypto backends\n\t    are not affected.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6ff570cb-b418-11e2-b279-20cf30e32f6d.html"
+					}
+				],
+				"published": "2013-05-03T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-2944",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2013-2944"
-				}
+			"content": {
+				"id": "CVE-2013-2944",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2013-2944"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

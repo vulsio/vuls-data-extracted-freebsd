@@ -2,115 +2,170 @@
 	"id": "e5423caf-8fb8-11e5-918c-bcaec565249c",
 	"advisories": [
 		{
-			"id": "e5423caf-8fb8-11e5-918c-bcaec565249c",
-			"title": "libxml2 -- multiple vulnerabilities",
-			"description": "\n\t<p>reports:</p>\n\t<blockquote cite=\"http://xmlsoft.org/news.html\">\n\t  <p>CVE-2015-5312 Another entity expansion issue (David Drysdale).</p>\n\t  <p>CVE-2015-7497 Avoid an heap buffer overflow in\n\t    xmlDictComputeFastQKey (David Drysdale).</p>\n\t  <p>CVE-2015-7498 Avoid processing entities after encoding\n\t    conversion failures (Daniel Veillard).</p>\n\t  <p>CVE-2015-7499 (1) Add xmlHaltParser() to stop the parser\n\t    (Daniel Veillard).</p>\n\t  <p>CVE-2015-7499 (2) Detect incoherency on GROW (Daniel\n\t    Veillard).</p>\n\t  <p>CVE-2015-7500 Fix memory access error due to incorrect\n\t    entities boundaries (Daniel Veillard).</p>\n\t  <p>CVE-2015-7941 (1) Stop parsing on entities boundaries\n\t    errors (Daniel Veillard).</p>\n\t  <p>CVE-2015-7941 (2) Cleanup conditional section error\n\t    handling (Daniel Veillard).</p>\n\t  <p>CVE-2015-7942 Another variation of overflow in\n\t    Conditional sections (Daniel Veillard).</p>\n\t  <p>CVE-2015-7942 (2) Fix an error in previous Conditional\n\t    section patch (Daniel Veillard).</p>\n\t  <p>CVE-2015-8035 Fix XZ compression support loop\n\t    (Daniel Veillard).</p>\n\t  <p>CVE-2015-8242 Buffer overead with HTML parser in push\n\t    mode (Hugh Davenport)</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://www.openwall.com/lists/oss-security/2015/11/18/23"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://xmlsoft.org/news.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/e5423caf-8fb8-11e5-918c-bcaec565249c.html"
-				}
-			],
-			"published": "2015-11-20T00:00:00Z"
+			"content": {
+				"id": "e5423caf-8fb8-11e5-918c-bcaec565249c",
+				"title": "libxml2 -- multiple vulnerabilities",
+				"description": "\n\t<p>reports:</p>\n\t<blockquote cite=\"http://xmlsoft.org/news.html\">\n\t  <p>CVE-2015-5312 Another entity expansion issue (David Drysdale).</p>\n\t  <p>CVE-2015-7497 Avoid an heap buffer overflow in\n\t    xmlDictComputeFastQKey (David Drysdale).</p>\n\t  <p>CVE-2015-7498 Avoid processing entities after encoding\n\t    conversion failures (Daniel Veillard).</p>\n\t  <p>CVE-2015-7499 (1) Add xmlHaltParser() to stop the parser\n\t    (Daniel Veillard).</p>\n\t  <p>CVE-2015-7499 (2) Detect incoherency on GROW (Daniel\n\t    Veillard).</p>\n\t  <p>CVE-2015-7500 Fix memory access error due to incorrect\n\t    entities boundaries (Daniel Veillard).</p>\n\t  <p>CVE-2015-7941 (1) Stop parsing on entities boundaries\n\t    errors (Daniel Veillard).</p>\n\t  <p>CVE-2015-7941 (2) Cleanup conditional section error\n\t    handling (Daniel Veillard).</p>\n\t  <p>CVE-2015-7942 Another variation of overflow in\n\t    Conditional sections (Daniel Veillard).</p>\n\t  <p>CVE-2015-7942 (2) Fix an error in previous Conditional\n\t    section patch (Daniel Veillard).</p>\n\t  <p>CVE-2015-8035 Fix XZ compression support loop\n\t    (Daniel Veillard).</p>\n\t  <p>CVE-2015-8242 Buffer overead with HTML parser in push\n\t    mode (Hugh Davenport)</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://www.openwall.com/lists/oss-security/2015/11/18/23"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://xmlsoft.org/news.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e5423caf-8fb8-11e5-918c-bcaec565249c.html"
+					}
+				],
+				"published": "2015-11-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2015-5312",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-5312"
-				}
+			"content": {
+				"id": "CVE-2015-5312",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-5312"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7497",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7497"
-				}
+			"content": {
+				"id": "CVE-2015-7497",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7497"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7498",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7498"
-				}
+			"content": {
+				"id": "CVE-2015-7498",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7498"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7499",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7499"
-				}
+			"content": {
+				"id": "CVE-2015-7499",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7499"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7500",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7500"
-				}
+			"content": {
+				"id": "CVE-2015-7500",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7500"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7941",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7941"
-				}
+			"content": {
+				"id": "CVE-2015-7941",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7941"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-7942",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-7942"
-				}
+			"content": {
+				"id": "CVE-2015-7942",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-7942"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8035",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8035"
-				}
+			"content": {
+				"id": "CVE-2015-8035",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8035"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8241",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8241"
-				}
+			"content": {
+				"id": "CVE-2015-8241",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8241"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2015-8242",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2015-8242"
-				}
+			"content": {
+				"id": "CVE-2015-8242",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2015-8242"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

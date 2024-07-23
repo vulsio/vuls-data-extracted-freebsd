@@ -2,24 +2,29 @@
 	"id": "6900e6f1-4a79-11e5-9ad8-14dae9d210b8",
 	"advisories": [
 		{
-			"id": "6900e6f1-4a79-11e5-9ad8-14dae9d210b8",
-			"title": "pcre -- heap overflow vulnerability",
-			"description": "\n\t<p>Guanxing Wen reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/295\">\n\t  <p>PCRE library is prone to a vulnerability which leads to\n\t    Heap Overflow.\n\t    During the compilation of a malformed regular expression, more data is\n\t    written on the malloced block than the expected size output by\n\t    compile_regex().\n\t    The Heap Overflow vulnerability is caused by the following regular\n\t    expression.</p>\n\t    <p>/(?J:(?|(:(?|(?'R')(\\z(?|(?'R')(\\k'R')|((?'R')))k'R')|((?'R')))H'Ak'Rf)|s(?'R')))/</p>\n\t    <p>A dry run of this particular regular expression with pcretest will\n\t    reports \"double free or corruption (!prev)\".\n\t    But it is actually a heap overflow problem.\n\t    The overflow only affects pcre 8.x branch, pcre2 branch is not affected.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://seclists.org/oss-sec/2015/q3/295"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://bugs.exim.org/show_bug.cgi?id=1672"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/6900e6f1-4a79-11e5-9ad8-14dae9d210b8.html"
-				}
-			],
-			"published": "2015-08-24T00:00:00Z"
+			"content": {
+				"id": "6900e6f1-4a79-11e5-9ad8-14dae9d210b8",
+				"title": "pcre -- heap overflow vulnerability",
+				"description": "\n\t<p>Guanxing Wen reports:</p>\n\t<blockquote cite=\"http://seclists.org/oss-sec/2015/q3/295\">\n\t  <p>PCRE library is prone to a vulnerability which leads to\n\t    Heap Overflow.\n\t    During the compilation of a malformed regular expression, more data is\n\t    written on the malloced block than the expected size output by\n\t    compile_regex().\n\t    The Heap Overflow vulnerability is caused by the following regular\n\t    expression.</p>\n\t    <p>/(?J:(?|(:(?|(?'R')(\\z(?|(?'R')(\\k'R')|((?'R')))k'R')|((?'R')))H'Ak'Rf)|s(?'R')))/</p>\n\t    <p>A dry run of this particular regular expression with pcretest will\n\t    reports \"double free or corruption (!prev)\".\n\t    But it is actually a heap overflow problem.\n\t    The overflow only affects pcre 8.x branch, pcre2 branch is not affected.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://seclists.org/oss-sec/2015/q3/295"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://bugs.exim.org/show_bug.cgi?id=1672"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6900e6f1-4a79-11e5-9ad8-14dae9d210b8.html"
+					}
+				],
+				"published": "2015-08-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"detection": [

@@ -2,39 +2,54 @@
 	"id": "1f8de723-dab3-11e7-b5af-a4badb2f4699",
 	"advisories": [
 		{
-			"id": "1f8de723-dab3-11e7-b5af-a4badb2f4699",
-			"title": "FreeBSD -- WPA2 protocol vulnerability",
-			"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A vulnerability was found in how a number of implementations\n\tcan be triggered to reconfigure WPA/WPA2/RSN keys (TK, GTK,\n\tor IGTK) by replaying a specific frame that is used to\n\tmanage the keys.</p>\n\t<h1>Impact:</h1>\n\t<p>Such reinstallation of the encryption key can result in\n\ttwo different types of vulnerabilities: disabling replay\n\tprotection and significantly reducing the security of\n\tencryption to the point of allowing frames to be decrypted\n\tor some parts of the keys to be determined by an attacker\n\tdepending on which cipher is used.</p>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-17:07.wpa.asc"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/1f8de723-dab3-11e7-b5af-a4badb2f4699.html"
-				}
-			],
-			"published": "2017-12-06T00:00:00Z"
+			"content": {
+				"id": "1f8de723-dab3-11e7-b5af-a4badb2f4699",
+				"title": "FreeBSD -- WPA2 protocol vulnerability",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A vulnerability was found in how a number of implementations\n\tcan be triggered to reconfigure WPA/WPA2/RSN keys (TK, GTK,\n\tor IGTK) by replaying a specific frame that is used to\n\tmanage the keys.</p>\n\t<h1>Impact:</h1>\n\t<p>Such reinstallation of the encryption key can result in\n\ttwo different types of vulnerabilities: disabling replay\n\tprotection and significantly reducing the security of\n\tencryption to the point of allowing frames to be decrypted\n\tor some parts of the keys to be determined by an attacker\n\tdepending on which cipher is used.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-17:07.wpa.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1f8de723-dab3-11e7-b5af-a4badb2f4699.html"
+					}
+				],
+				"published": "2017-12-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-1307",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1307"
-				}
+			"content": {
+				"id": "CVE-2017-1307",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-1307"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2017-1308",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2017-1308"
-				}
+			"content": {
+				"id": "CVE-2017-1308",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-1308"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

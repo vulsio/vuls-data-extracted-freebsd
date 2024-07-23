@@ -2,53 +2,78 @@
 	"id": "c115271d-602b-11dc-898c-001921ab2fa4",
 	"advisories": [
 		{
-			"id": "c115271d-602b-11dc-898c-001921ab2fa4",
-			"title": "apache -- multiple vulnerabilities",
-			"description": "\n\t<p>Apache HTTP server project reports:</p>\n\t<blockquote cite=\"http://www.apache.org/dist/httpd/Announcement2.2.html\">\n\t  <p>The following potential security flaws are addressed:</p>\n\t  <ul>\n\t    <li>CVE-2007-3847: mod_proxy: Prevent reading past the end of a\n\t      buffer when parsing date-related headers.</li>\n\t    <li>CVE-2007-1863: mod_cache: Prevent a segmentation fault if\n\t      attributes are listed in a Cache-Control header without any\n\t      value.</li>\n\t    <li>CVE-2007-3304: prefork, worker, event MPMs: Ensure that the\n\t      parent process cannot be forced to kill processes outside its\n\t      process group.</li>\n\t    <li>CVE-2006-5752: mod_status: Fix a possible XSS attack against\n\t      a site with a public server-status page and ExtendedStatus\n\t      enabled, for browsers which perform charset \"detection\".\n\t      Reported by Stefan Esser.</li>\n\t    <li>CVE-2006-1862: mod_mem_cache: Copy headers into longer lived\n\t      storage; header names and values could previously point to\n\t      cleaned up storage.</li>\n\t  </ul>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/c115271d-602b-11dc-898c-001921ab2fa4.html"
-				}
-			],
-			"published": "2007-09-11T00:00:00Z"
+			"content": {
+				"id": "c115271d-602b-11dc-898c-001921ab2fa4",
+				"title": "apache -- multiple vulnerabilities",
+				"description": "\n\t<p>Apache HTTP server project reports:</p>\n\t<blockquote cite=\"http://www.apache.org/dist/httpd/Announcement2.2.html\">\n\t  <p>The following potential security flaws are addressed:</p>\n\t  <ul>\n\t    <li>CVE-2007-3847: mod_proxy: Prevent reading past the end of a\n\t      buffer when parsing date-related headers.</li>\n\t    <li>CVE-2007-1863: mod_cache: Prevent a segmentation fault if\n\t      attributes are listed in a Cache-Control header without any\n\t      value.</li>\n\t    <li>CVE-2007-3304: prefork, worker, event MPMs: Ensure that the\n\t      parent process cannot be forced to kill processes outside its\n\t      process group.</li>\n\t    <li>CVE-2006-5752: mod_status: Fix a possible XSS attack against\n\t      a site with a public server-status page and ExtendedStatus\n\t      enabled, for browsers which perform charset \"detection\".\n\t      Reported by Stefan Esser.</li>\n\t    <li>CVE-2006-1862: mod_mem_cache: Copy headers into longer lived\n\t      storage; header names and values could previously point to\n\t      cleaned up storage.</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c115271d-602b-11dc-898c-001921ab2fa4.html"
+					}
+				],
+				"published": "2007-09-11T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2006-5752",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2006-5752"
-				}
+			"content": {
+				"id": "CVE-2006-5752",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2006-5752"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2007-1863",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-1863"
-				}
+			"content": {
+				"id": "CVE-2007-1863",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-1863"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2007-3304",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3304"
-				}
+			"content": {
+				"id": "CVE-2007-3304",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-3304"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2007-3847",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2007-3847"
-				}
+			"content": {
+				"id": "CVE-2007-3847",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2007-3847"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

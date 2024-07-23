@@ -2,34 +2,44 @@
 	"id": "d696473f-9f32-42c5-a106-bf4536fb1f74",
 	"advisories": [
 		{
-			"id": "d696473f-9f32-42c5-a106-bf4536fb1f74",
-			"title": "Django -- information leakage",
-			"description": "\n\t<p>Django release notes:</p>\n\t<blockquote cite=\"https://docs.djangoproject.com/en/1.11/releases/1.11.10/\">\n\t  <p>CVE-2018-6188: Information leakage in AuthenticationForm</p>\n\t  <p>A regression in Django 1.11.8 made AuthenticationForm run its\n\t    confirm_login_allowed() method even if an incorrect password is entered.\n\t    This can leak information about a user, depending on what messages\n\t    confirm_login_allowed() raises. If confirm_login_allowed() isn't\n\t    overridden, an attacker enter an arbitrary username and see if that user\n\t    has been set to is_active=False. If confirm_login_allowed() is\n\t    overridden, more sensitive details could be leaked.</p>\n\t  <p>This issue is fixed with the caveat that AuthenticationForm can no\n\t    longer raise the \"This account is inactive.\" error if the authentication\n\t    backend rejects inactive users (the default authentication backend,\n\t    ModelBackend, has done that since Django 1.10). This issue will be\n\t    revisited for Django 2.1 as a fix to address the caveat will likely be too\n\t    invasive for inclusion in older versions.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.djangoproject.com/en/1.11/releases/1.11.10/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://docs.djangoproject.com/en/2.0/releases/2.0.2/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/d696473f-9f32-42c5-a106-bf4536fb1f74.html"
-				}
-			],
-			"published": "2018-02-02T00:00:00Z"
+			"content": {
+				"id": "d696473f-9f32-42c5-a106-bf4536fb1f74",
+				"title": "Django -- information leakage",
+				"description": "\n\t<p>Django release notes:</p>\n\t<blockquote cite=\"https://docs.djangoproject.com/en/1.11/releases/1.11.10/\">\n\t  <p>CVE-2018-6188: Information leakage in AuthenticationForm</p>\n\t  <p>A regression in Django 1.11.8 made AuthenticationForm run its\n\t    confirm_login_allowed() method even if an incorrect password is entered.\n\t    This can leak information about a user, depending on what messages\n\t    confirm_login_allowed() raises. If confirm_login_allowed() isn't\n\t    overridden, an attacker enter an arbitrary username and see if that user\n\t    has been set to is_active=False. If confirm_login_allowed() is\n\t    overridden, more sensitive details could be leaked.</p>\n\t  <p>This issue is fixed with the caveat that AuthenticationForm can no\n\t    longer raise the \"This account is inactive.\" error if the authentication\n\t    backend rejects inactive users (the default authentication backend,\n\t    ModelBackend, has done that since Django 1.10). This issue will be\n\t    revisited for Django 2.1 as a fix to address the caveat will likely be too\n\t    invasive for inclusion in older versions.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.djangoproject.com/en/1.11/releases/1.11.10/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://docs.djangoproject.com/en/2.0/releases/2.0.2/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d696473f-9f32-42c5-a106-bf4536fb1f74.html"
+					}
+				],
+				"published": "2018-02-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-6188",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2018-6188"
-				}
+			"content": {
+				"id": "CVE-2018-6188",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-6188"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

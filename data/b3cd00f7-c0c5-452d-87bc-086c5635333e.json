@@ -2,34 +2,44 @@
 	"id": "b3cd00f7-c0c5-452d-87bc-086c5635333e",
 	"advisories": [
 		{
-			"id": "b3cd00f7-c0c5-452d-87bc-086c5635333e",
-			"title": "mailman -- generated passwords are poor quality",
-			"description": "\n\t<p>Florian Weimer wrote:</p>\n\t<blockquote cite=\"http://mail.python.org/pipermail/mailman-developers/attachments/20041215/be238297/attachment.mht\">\n\t  <p>Mailman 2.1.5 uses weak auto-generated passwords for new\n\t    subscribers.  These passwords are assigned when members\n\t    subscribe without specifying their own password (either by\n\t    email or the web frontend).  Knowledge of this password\n\t    allows an attacker to gain access to the list archive even\n\t    though she's not a member and the archive is restricted to\n\t    members only.  [...]</p>\n\t  <p>This means that only about 5 million different passwords\n\t    are ever generated, a number that is in the range of brute\n\t    force attacks -- you only have to guess one subscriber\n\t    address (which is usually not that hard).</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://mail.python.org/pipermail/mailman-developers/2004-December/017553.html"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "http://mail.python.org/pipermail/mailman-developers/attachments/20041215/be238297/attachment.mht"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/b3cd00f7-c0c5-452d-87bc-086c5635333e.html"
-				}
-			],
-			"published": "2005-06-01T00:00:00Z"
+			"content": {
+				"id": "b3cd00f7-c0c5-452d-87bc-086c5635333e",
+				"title": "mailman -- generated passwords are poor quality",
+				"description": "\n\t<p>Florian Weimer wrote:</p>\n\t<blockquote cite=\"http://mail.python.org/pipermail/mailman-developers/attachments/20041215/be238297/attachment.mht\">\n\t  <p>Mailman 2.1.5 uses weak auto-generated passwords for new\n\t    subscribers.  These passwords are assigned when members\n\t    subscribe without specifying their own password (either by\n\t    email or the web frontend).  Knowledge of this password\n\t    allows an attacker to gain access to the list archive even\n\t    though she's not a member and the archive is restricted to\n\t    members only.  [...]</p>\n\t  <p>This means that only about 5 million different passwords\n\t    are ever generated, a number that is in the range of brute\n\t    force attacks -- you only have to guess one subscriber\n\t    address (which is usually not that hard).</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://mail.python.org/pipermail/mailman-developers/2004-December/017553.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "http://mail.python.org/pipermail/mailman-developers/attachments/20041215/be238297/attachment.mht"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/b3cd00f7-c0c5-452d-87bc-086c5635333e.html"
+					}
+				],
+				"published": "2005-06-01T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2004-1143",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2004-1143"
-				}
+			"content": {
+				"id": "CVE-2004-1143",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2004-1143"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],

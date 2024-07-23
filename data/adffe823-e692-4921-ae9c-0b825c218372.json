@@ -2,161 +2,241 @@
 	"id": "adffe823-e692-4921-ae9c-0b825c218372",
 	"advisories": [
 		{
-			"id": "adffe823-e692-4921-ae9c-0b825c218372",
-			"title": "graphite2 -- multiple vulnerabilities",
-			"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2016-37/\">\n\t  <p>Security researcher Holger Fuhrmannek and Mozilla\n\t    security engineer Tyson Smith reported a number of security\n\t    vulnerabilities in the Graphite 2 library affecting version\n\t    1.3.5.\n\n\t    The issue reported by Holger Fuhrmannek is a mechanism to\n\t    induce stack corruption with a malicious graphite font. This\n\t    leads to a potentially exploitable crash when the font is\n\t    loaded.\n\n\t    Tyson Smith used the Address Sanitizer tool in concert with\n\t    a custom software fuzzer to find a series of uninitialized\n\t    memory, out-of-bounds read, and out-of-bounds write errors\n\t    when working with fuzzed graphite fonts.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2016-38/\">\n\t  <p>Security researcher James Clawson used the Address\n\t    Sanitizer tool to discover an out-of-bounds write in the\n\t    Graphite 2 library when loading a crafted Graphite font\n\t    file. This results in a potentially exploitable crash.</p>\n\t</blockquote>\n      ",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2016-37/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.mozilla.org/security/advisories/mfsa2016-38/"
-				},
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.vuxml.org/freebsd/adffe823-e692-4921-ae9c-0b825c218372.html"
-				}
-			],
-			"published": "2016-03-08T00:00:00Z",
-			"modified": "2016-03-14T00:00:00Z"
+			"content": {
+				"id": "adffe823-e692-4921-ae9c-0b825c218372",
+				"title": "graphite2 -- multiple vulnerabilities",
+				"description": "\n\t<p>Mozilla Foundation reports:</p>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2016-37/\">\n\t  <p>Security researcher Holger Fuhrmannek and Mozilla\n\t    security engineer Tyson Smith reported a number of security\n\t    vulnerabilities in the Graphite 2 library affecting version\n\t    1.3.5.\n\n\t    The issue reported by Holger Fuhrmannek is a mechanism to\n\t    induce stack corruption with a malicious graphite font. This\n\t    leads to a potentially exploitable crash when the font is\n\t    loaded.\n\n\t    Tyson Smith used the Address Sanitizer tool in concert with\n\t    a custom software fuzzer to find a series of uninitialized\n\t    memory, out-of-bounds read, and out-of-bounds write errors\n\t    when working with fuzzed graphite fonts.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.mozilla.org/en-US/security/advisories/mfsa2016-38/\">\n\t  <p>Security researcher James Clawson used the Address\n\t    Sanitizer tool to discover an out-of-bounds write in the\n\t    Graphite 2 library when loading a crafted Graphite font\n\t    file. This results in a potentially exploitable crash.</p>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2016-37/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.mozilla.org/security/advisories/mfsa2016-38/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/adffe823-e692-4921-ae9c-0b825c218372.html"
+					}
+				],
+				"published": "2016-03-08T00:00:00Z",
+				"modified": "2016-03-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-1969",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1969"
-				}
+			"content": {
+				"id": "CVE-2016-1969",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1969"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-1977",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-1977"
-				}
+			"content": {
+				"id": "CVE-2016-1977",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-1977"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2790",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2790"
-				}
+			"content": {
+				"id": "CVE-2016-2790",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2790"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2791",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2791"
-				}
+			"content": {
+				"id": "CVE-2016-2791",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2791"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2792",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2792"
-				}
+			"content": {
+				"id": "CVE-2016-2792",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2792"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2793",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2793"
-				}
+			"content": {
+				"id": "CVE-2016-2793",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2793"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2794",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2794"
-				}
+			"content": {
+				"id": "CVE-2016-2794",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2794"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2795",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2795"
-				}
+			"content": {
+				"id": "CVE-2016-2795",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2795"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2796",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2796"
-				}
+			"content": {
+				"id": "CVE-2016-2796",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2796"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2797",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2797"
-				}
+			"content": {
+				"id": "CVE-2016-2797",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2797"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2798",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2798"
-				}
+			"content": {
+				"id": "CVE-2016-2798",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2798"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2799",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2799"
-				}
+			"content": {
+				"id": "CVE-2016-2799",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2799"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2800",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2800"
-				}
+			"content": {
+				"id": "CVE-2016-2800",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2800"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2801",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2801"
-				}
+			"content": {
+				"id": "CVE-2016-2801",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2801"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		},
 		{
-			"id": "CVE-2016-2802",
-			"references": [
-				{
-					"source": "vuxml.freebsd.org",
-					"url": "https://www.cve.org/CVERecord?id=CVE-2016-2802"
-				}
+			"content": {
+				"id": "CVE-2016-2802",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2016-2802"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
 			]
 		}
 	],
