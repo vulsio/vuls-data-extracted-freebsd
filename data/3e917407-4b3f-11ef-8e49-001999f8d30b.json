@@ -1,0 +1,51 @@
+{
+	"id": "3e917407-4b3f-11ef-8e49-001999f8d30b",
+	"advisories": [
+		{
+			"content": {
+				"id": "3e917407-4b3f-11ef-8e49-001999f8d30b",
+				"title": "Mailpit -- Content Security Policy XSS",
+				"description": "\n\t<p>Mailpit developer reports:</p>\n\t<blockquote cite=\"https://github.com/axllent/mailpit/releases/tag/v1.19.3\">\n\t  <p>A vulnerability was discovered which allowed a bad\n\t  actor with SMTP access to Mailpit to bypass the Content\n\t  Security Policy headers using a series of crafted HTML\n\t  messages which could result in a stored XSS attack via\n\t  the web UI.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/axllent/mailpit/releases/tag/v1.19.3"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/3e917407-4b3f-11ef-8e49-001999f8d30b.html"
+					}
+				],
+				"published": "2024-07-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mailpit"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.19.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
