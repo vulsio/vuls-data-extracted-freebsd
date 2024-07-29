@@ -1,0 +1,107 @@
+{
+	"id": "6091d1d8-4347-11ef-a4d4-080027957747",
+	"advisories": [
+		{
+			"content": {
+				"id": "6091d1d8-4347-11ef-a4d4-080027957747",
+				"title": "GLPI -- multiple vulnerabilities",
+				"description": "\n\t<p>GLPI team reports:</p>\n\t<blockquote cite=\"https://github.com/glpi-project/glpi/releases/tag/10.0.16\">\n\t  <p>GLPI 10.0.16 Changelog</p>\n\t  <ul>\n\t    <li>[SECURITY - high] Account takeover via SQL Injection in AJAX scripts (CVE-2024-37148)</li>\n\t    <li>[SECURITY - high] Remote code execution through the plugin loader (CVE-2024-37149)</li>\n\t    <li>[SECURITY - moderate] Authenticated file upload to restricted tickets (CVE-2024-37147)</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37147"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37148"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37149"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/glpi-project/glpi/releases/tag/10.0.16"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6091d1d8-4347-11ef-a4d4-080027957747.html"
+					}
+				],
+				"published": "2024-07-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-37147",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-37147"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-37148",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-37148"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-37149",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-37149"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "glpi"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "10.0.16,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
