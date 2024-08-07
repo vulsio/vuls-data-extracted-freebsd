@@ -1,0 +1,239 @@
+{
+	"id": "729008b9-54bf-11ef-a61b-2cf05da270f3",
+	"advisories": [
+		{
+			"content": {
+				"id": "729008b9-54bf-11ef-a61b-2cf05da270f3",
+				"title": "Gitlab -- Vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/\">\n\t  <p>Privilege Escalation via LFS Tokens Granting Unrestricted Repository Access</p>\n\t  <p>Cross project access of Security policy bot</p>\n\t  <p>Advanced search ReDOS in highlight for code results</p>\n\t  <p>Denial of Service via banzai pipeline</p>\n\t  <p>Denial of service using adoc files</p>\n\t  <p>ReDoS in RefMatcher when matching branch names using wildcards</p>\n\t  <p>Path encoding can cause the Web interface to not render diffs correctly</p>\n\t  <p>XSS while viewing raw XHTML files through API</p>\n\t  <p>Ambiguous tag name exploitation</p>\n\t  <p>Logs disclosings potentially sensitive data in query params</p>\n\t  <p>Password bypass on approvals using policy projects</p>\n\t  <p>ReDoS when parsing git push</p>\n\t  <p>Webhook deletion audit log can preserve auth credentials</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/729008b9-54bf-11ef-a61b-2cf05da270f3.html"
+					}
+				],
+				"published": "2024-08-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-2800",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-2800"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-3035",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-3035"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-3114",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-3114"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-3958",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-3958"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-4207",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-4207"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-4210",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-4210"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-4784",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-4784"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-5423",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5423"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6329",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6329"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6356",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6356"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7586",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7586"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.0.6",
+									"ge": "12.0.0"
+								},
+								{
+									"lt": "17.1.4",
+									"ge": "17.1.0"
+								},
+								{
+									"lt": "17.2.2",
+									"ge": "17.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ee"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.0.6",
+									"ge": "12.0.0"
+								},
+								{
+									"lt": "17.1.4",
+									"ge": "17.1.0"
+								},
+								{
+									"lt": "17.2.2",
+									"ge": "17.2.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

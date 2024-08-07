@@ -1,0 +1,165 @@
+{
+	"id": "94d441d2-5497-11ef-9d2f-080027836e8b",
+	"advisories": [
+		{
+			"content": {
+				"id": "94d441d2-5497-11ef-9d2f-080027836e8b",
+				"title": "Django -- multiple vulnerabilities",
+				"description": "\n\t<p>Django reports:</p>\n\t<blockquote cite=\"https://www.djangoproject.com/weblog/2024/aug/06/security-releases/\">\n\t  <p>CVE-2024-41989: Memory exhaustion in django.utils.numberformat.floatformat().</p>\n\t  <p>CVE-2024-41990: Potential denial-of-service in django.utils.html.urlize().</p>\n\t  <p>CVE-2024-41991: Potential denial-of-service vulnerability in\n\t    django.utils.html.urlize() and AdminURLFieldWidget.</p>\n\t  <p>CVE-2024-42005: Potential SQL injection in QuerySet.values() and values_list().</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/94d441d2-5497-11ef-9d2f-080027836e8b.html"
+					}
+				],
+				"published": "2024-08-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-41989",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-41989"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41990",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-41990"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41991",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-41991"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42005",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-42005"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-django42"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.15"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-django50"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-django42"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.15"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-django50"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.0.8"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-django42"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.15"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

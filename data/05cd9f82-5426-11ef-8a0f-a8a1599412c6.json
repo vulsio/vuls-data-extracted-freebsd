@@ -1,0 +1,137 @@
+{
+	"id": "05cd9f82-5426-11ef-8a0f-a8a1599412c6",
+	"advisories": [
+		{
+			"content": {
+				"id": "05cd9f82-5426-11ef-8a0f-a8a1599412c6",
+				"title": "chromium -- multiple security fixes",
+				"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html\">\n\t <p>This update includes 5 security fixes:</p>\n\t <ul>\n\t    <li>[350528343] Critical CVE-2024-7532: Out of bounds memory access in ANGLE. Reported by wgslfuzz on 2024-07-02</li>\n\t    <li>[353552540] High CVE-2024-7533: Use after free in Sharing. Reported by lime(@limeSec_) from TIANGONG Team of Legendsec at QI-ANXIN Group on 2024-07-17</li>\n\t    <li>[355256380] High CVE-2024-7550: Type Confusion in V8. Reported by Zhenghang Xiao (@Kipreyyy) on 2024-07-25</li>\n\t    <li>[352467338] High CVE-2024-7534: Heap buffer overflow in Layout. Reported by Tashita Software Security on 2024-07-11</li>\n\t    <li>[352690885] High CVE-2024-7535: Inappropriate implementation in V8. Reported by Tashita Software Security on 2024-07-12</li>\n\t    <li>[354847246] High CVE-2024-7536: Use after free in WebAudio. Reported by Cassidy Kim(@cassidy6564) on 2024-07-23</li>\n\t </ul>\n       </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/05cd9f82-5426-11ef-8a0f-a8a1599412c6.html"
+					}
+				],
+				"published": "2024-08-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-7532",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7532"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7534",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7534"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7535",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7535"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7536",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7536"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7550",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7550"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "127.0.6533.99"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ungoogled-chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "127.0.6533.99"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
