@@ -1,0 +1,67 @@
+{
+	"id": "8c342a6c-563f-11ef-a77e-901b0e9408dc",
+	"advisories": [
+		{
+			"content": {
+				"id": "8c342a6c-563f-11ef-a77e-901b0e9408dc",
+				"title": "soft-serve -- Remote code execution vulnerability",
+				"description": "\n\t<p>soft-serve team reports:</p>\n\t<blockquote cite=\"https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-m445-w3xr-vp2f\">\n\t  <p>Arbitrary code execution by crafting git ssh requests</p>\n\t  <p>It is possible for a user who can commit files to a\n\t  repository hosted by Soft Serve to execute arbitrary code\n\t  via environment manipulation and Git.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-m445-w3xr-vp2f"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8c342a6c-563f-11ef-a77e-901b0e9408dc.html"
+					}
+				],
+				"published": "2024-08-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-41956",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-41956"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "soft-serve"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.7.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
