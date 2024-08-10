@@ -1,0 +1,95 @@
+{
+	"id": "5776cc4f-5717-11ef-b611-84a93843eb75",
+	"advisories": [
+		{
+			"content": {
+				"id": "5776cc4f-5717-11ef-b611-84a93843eb75",
+				"title": "Roundcube -- Multiple vulnerabilities",
+				"description": "\n\t<p>The Roundcube project reports:</p>\n\t<blockquote cite=\"https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8\">\n\t  <p>XSS vulnerability in post-processing of sanitized HTML content [CVE-2024-42009]</p>\n\t  <p>XSS vulnerability in serving of attachments other than HTML or SVG [CVE-2024-42008]</p>\n\t  <p>information leak (access to remote content) via insufficient CSS filtering [CVE-2024-42010]</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5776cc4f-5717-11ef-b611-84a93843eb75.html"
+					}
+				],
+				"published": "2024-08-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-42008",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-42008"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42009",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-42009"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42010",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-42010"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "roundcube"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.6.8,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
