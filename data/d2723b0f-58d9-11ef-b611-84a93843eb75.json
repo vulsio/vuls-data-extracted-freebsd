@@ -1,0 +1,95 @@
+{
+	"id": "d2723b0f-58d9-11ef-b611-84a93843eb75",
+	"advisories": [
+		{
+			"content": {
+				"id": "d2723b0f-58d9-11ef-b611-84a93843eb75",
+				"title": "Vaultwarden -- Multiple vulnerabilities",
+				"description": "\n\t<p>SO-AND-SO reports:</p>\n\t<blockquote cite=\"https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.0\">\n\t  <p>This release has several CVE Reports fixed and we recommend\n\t    everybody to update to the latest version as soon as possible.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.0"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d2723b0f-58d9-11ef-b611-84a93843eb75.html"
+					}
+				],
+				"published": "2024-08-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-39924",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-39924"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-39925",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-39925"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-39926",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-39926"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vaultwarden"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.32.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
