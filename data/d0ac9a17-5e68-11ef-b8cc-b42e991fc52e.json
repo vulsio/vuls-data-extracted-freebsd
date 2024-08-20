@@ -1,0 +1,67 @@
+{
+	"id": "d0ac9a17-5e68-11ef-b8cc-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "d0ac9a17-5e68-11ef-b8cc-b42e991fc52e",
+				"title": "mozilla products -- spoofing attack",
+				"description": "\n\t<p>security@mozilla.org reports:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1875354\">\n\t  <p>Select options could obscure the fullscreen notification dialog.\n\tThis could be used by a malicious site to perform a spoofing attack.\n\tThis vulnerability affects Firefox &lt; 129, Firefox ESR &lt; 128.1,\n\tand Thunderbird &lt; 128.1.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7518"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d0ac9a17-5e68-11ef-b8cc-b42e991fc52e.html"
+					}
+				],
+				"published": "2024-08-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-7518",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7518"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "129"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

@@ -1,0 +1,109 @@
+{
+	"id": "04c9c3f8-5ed3-11ef-8262-b0416f0c4c67",
+	"advisories": [
+		{
+			"content": {
+				"id": "04c9c3f8-5ed3-11ef-8262-b0416f0c4c67",
+				"title": "Jinja2 -- Vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+				"description": "\n\t<p>security-advisories@github.com reports:</p>\n\t<blockquote cite=\"https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb\">\n\t  <p>Jinja is an extensible templating engine.  The `xmlattr` filter in\n\taffected versions of Jinja accepts keys containing non-attribute\n\tcharacters.  XML/HTML attributes cannot contain spaces, `/`, `&gt;`,\n\tor `=`, as each would then be interpreted as starting a separate\n\tattribute.  If an application accepts keys (as opposed to only\n\tvalues) as user input, and renders these in pages that other users\n\tsee as well, an attacker could use this to inject other attributes\n\tand perform XSS.  The fix for CVE-2024-22195 only addressed spaces\n\tbut not other characters.  Accepting keys as user input is now\n\texplicitly considered an unintended use case of the `xmlattr` filter,\n\tand code that does so without otherwise validating the input should\n\tbe flagged as insecure, regardless of Jinja version.  Accepting\n\t_values_ as user input continues to be safe.  This vulnerability\n\tis fixed in 3.1.4.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/04c9c3f8-5ed3-11ef-8262-b0416f0c4c67.html"
+					}
+				],
+				"published": "2024-08-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-34064",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-34064"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py310-Jinja2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py311-Jinja2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py38-Jinja2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "py39-Jinja2"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
