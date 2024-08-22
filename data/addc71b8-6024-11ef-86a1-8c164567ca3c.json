@@ -1,0 +1,79 @@
+{
+	"id": "addc71b8-6024-11ef-86a1-8c164567ca3c",
+	"advisories": [
+		{
+			"content": {
+				"id": "addc71b8-6024-11ef-86a1-8c164567ca3c",
+				"title": "nginx -- Vulnerability in the ngx_http_mp4_module",
+				"description": "\n\t<p>The nginx development team reports:</p>\n\t<blockquote cite=\"http://nginx.org/en/security_advisories.html\">\n\t  <p>This update fixes the buffer overread vulnerability in the\n\tngx_http_mp4_module.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/addc71b8-6024-11ef-86a1-8c164567ca3c.html"
+					}
+				],
+				"published": "2024-08-22T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-7347",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7347"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.26.2",
+									"ge": "1.6.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-devel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.27.1",
+									"ge": "1.5.13"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
