@@ -1,0 +1,85 @@
+{
+	"id": "7e6e932f-617b-11ef-8a7d-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "7e6e932f-617b-11ef-8a7d-b42e991fc52e",
+				"title": "firefox -- Multiple vulnerabilities",
+				"description": "\n\t<p>security@mozilla.org reports:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1414937\">\n\t  <ul>\n\t    <li>CVE-2024-5697: A website was able to detect when a\n\t      user took a screenshot of a page using the built-in\n\t      Screenshot functionality in Firefox.</li>\n\t    <li>CVE-2024-5698: By manipulating the fullscreen\n\t      feature while opening a data-list, an attacker could\n\t      have overlaid a text box over the address bar. This\n\t      could have led to user confusion and possible spoofing\n\t      attacks.\n\t    </li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5697"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5698"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7e6e932f-617b-11ef-8a7d-b42e991fc52e.html"
+					}
+				],
+				"published": "2024-08-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-5697",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5697"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-5698",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5698"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "127"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}

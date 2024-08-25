@@ -1,0 +1,67 @@
+{
+	"id": "f2b1da2e-6178-11ef-8a7d-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "f2b1da2e-6178-11ef-8a7d-b42e991fc52e",
+				"title": "md4c -- DoS attack",
+				"description": "\n\t<p>cve@mitre.org reports:</p>\n\t<blockquote cite=\"https://github.com/mity/md4c/commit/4fc808d8fe8d8904f8525bb4231d854f45e23a19\">\n\t  <p>md_analyze_line in md4c.c in md4c 0.4.7 allows attackers\n\t  to trigger use of uninitialized memory, and cause a denial\n\t  of service via a malformed Markdown document.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2021-30027"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f2b1da2e-6178-11ef-8a7d-b42e991fc52e.html"
+					}
+				],
+				"published": "2024-08-23T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2021-30027",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-30027"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "md4c"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "0.4.7"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
