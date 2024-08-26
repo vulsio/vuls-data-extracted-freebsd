@@ -1,0 +1,141 @@
+{
+	"id": "49ef501c-62b6-11ef-bba5-2cf05da270f3",
+	"advisories": [
+		{
+			"content": {
+				"id": "49ef501c-62b6-11ef-bba5-2cf05da270f3",
+				"title": "Gitlab -- vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/08/21/patch-release-gitlab-17-3-1-released/\">\n\t  <p>The GitLab Web Interface Does Not Guarantee Information Integrity When Downloading Source Code from Releases</p>\n\t  <p>Denial of Service by importing maliciously crafted GitHub repository</p>\n\t  <p>Prompt injection in \"Resolve Vulnerabilty\" results in arbitrary command execution in victim's pipeline</p>\n\t  <p>An unauthorized user can perform certain actions through GraphQL after a group owner enables IP restrictions</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2024/08/21/patch-release-gitlab-17-3-1-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/49ef501c-62b6-11ef-bba5-2cf05da270f3.html"
+					}
+				],
+				"published": "2024-08-25T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-3127",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-3127"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6502",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6502"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7110",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7110"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-8041",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-8041"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.1.6",
+									"ge": "8.2.0"
+								},
+								{
+									"lt": "17.2.4",
+									"ge": "17.2.0"
+								},
+								{
+									"lt": "17.3.1",
+									"ge": "17.3.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ee"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.1.6",
+									"ge": "8.2.0"
+								},
+								{
+									"lt": "17.2.4",
+									"ge": "17.2.0"
+								},
+								{
+									"lt": "17.3.1",
+									"ge": "17.3.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
