@@ -1,0 +1,103 @@
+{
+	"id": "44de1b82-662d-11ef-a51b-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "44de1b82-662d-11ef-a51b-b42e991fc52e",
+				"title": "firefox -- multiple vulnerabilities",
+				"description": "\n\t<p>security@mozilla.org reports:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1874964\">\n\t  <p>This update includes 3 CVEs:</p>\n\t    <ul>\n\t      <li>The contextual menu for links could provide an\n\t\topportunity for cross-site scripting attacks.</li>\n\t      <li>Long pressing on a download link could potentially\n\t\tprovide a means for cross-site scripting.</li>\n\t      <li>Long pressing on a download link could potentially\n\t\tallow Javascript commands to be executed within the\n\t\tbrowser.</li>\n\t</ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43111"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43112"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43113"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/44de1b82-662d-11ef-a51b-b42e991fc52e.html"
+					}
+				],
+				"published": "2024-08-29T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-43111",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-43111"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-43112",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-43112"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-43113",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-43113"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "129"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
