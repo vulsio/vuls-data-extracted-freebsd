@@ -1,0 +1,51 @@
+{
+	"id": "eb437e17-66a1-11ef-ac08-75165d18d8d2",
+	"advisories": [
+		{
+			"content": {
+				"id": "eb437e17-66a1-11ef-ac08-75165d18d8d2",
+				"title": "forgejo -- The scope of application tokens was not verified when writing containers or Conan packages.",
+				"description": "\n\t<p>The forgejo team reports:</p>\n\t<blockquote cite=\"https://codeberg.org/forgejo/forgejo/milestone/7728\">\n        <p>The scope of application tokens was not verified when writing\n        containers or Conan packages.  This is of no consequence when the\n        user associated with the application token does not have write\n        access to packages.  If the user has write access to packages, such\n        a token can be used to write containers and Conan packages.  An\n        application token that was used to write containers or Conan\n        packages without the package:write scope will now fail with an\n        unauthorized error.  It must be re-created to include the\n        package:write scope.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://codeberg.org/forgejo/forgejo/pulls/5149"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/eb437e17-66a1-11ef-ac08-75165d18d8d2.html"
+					}
+				],
+				"published": "2024-08-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "forgejo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "freebsd"
+}
