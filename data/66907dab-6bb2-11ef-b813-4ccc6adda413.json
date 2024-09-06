@@ -1,0 +1,142 @@
+{
+	"id": "66907dab-6bb2-11ef-b813-4ccc6adda413",
+	"advisories": [
+		{
+			"content": {
+				"id": "66907dab-6bb2-11ef-b813-4ccc6adda413",
+				"title": "qt5-webengine -- Multiple vulnerabilities",
+				"description": "\n\t<blockquote cite=\"https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based\">\n\t  <p>Backports for 6 security bugs in Chromium:</p>\n\t  <ul>\n\t    <li>CVE-2024-5496: Use after free in Media Session</li>\n\t    <li>CVE-2024-5846: Use after free in PDFium</li>\n\t    <li>CVE-2024-6291: Use after free in Swiftshader</li>\n\t    <li>CVE-2024-6989: Use after free in Loader</li>\n\t    <li>CVE-2024-6996: Race in Frames</li>\n\t    <li>CVE-2024-7536: Use after free in WebAudio</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/66907dab-6bb2-11ef-b813-4ccc6adda413.html"
+					}
+				],
+				"published": "2024-09-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-5496",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5496"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-5846",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5846"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6291",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6291"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6989",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6989"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6996",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6996"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7536",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-7536"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-webengine"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.15.17.p3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/66907dab-6bb2-11ef-b813-4ccc6adda413.json"
+		]
+	}
+}

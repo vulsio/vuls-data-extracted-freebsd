@@ -1,0 +1,81 @@
+{
+	"id": "7e079ce2-6b51-11ef-9a62-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "7e079ce2-6b51-11ef-9a62-002590c1f29c",
+				"title": "FreeBSD -- umtx Kernel panic or Use-After-Free",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>Concurrent removals of such a mapping by using the UMTX_SHM_DESTROY\n\tsub-request of UMTX_OP_SHM can lead to decreasing the reference\n\tcount of the object representing the mapping too many times, causing\n\tit to be freed too early.</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious code exercizing the UMTX_SHM_DESTROY sub-request\n\tin parallel can panic the kernel or enable further Use-After-Free\n\tattacks, potentially including code execution or Capsicum sandbox\n\tescape.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-24:14.umtx.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7e079ce2-6b51-11ef-9a62-002590c1f29c.html"
+					}
+				],
+				"published": "2024-09-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-43102",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-43102"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3_6",
+									"ge": "13.3"
+								},
+								{
+									"lt": "14.0_10",
+									"ge": "14.0"
+								},
+								{
+									"lt": "14.1_4",
+									"ge": "14.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/7e079ce2-6b51-11ef-9a62-002590c1f29c.json"
+		]
+	}
+}
