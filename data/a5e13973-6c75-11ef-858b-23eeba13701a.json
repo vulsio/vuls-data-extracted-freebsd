@@ -1,0 +1,86 @@
+{
+	"id": "a5e13973-6c75-11ef-858b-23eeba13701a",
+	"advisories": [
+		{
+			"content": {
+				"id": "a5e13973-6c75-11ef-858b-23eeba13701a",
+				"title": "forgejo -- multiple vulnerabilities",
+				"description": "\n       <h1>Problem Description:</h1>\n       <ul>\n       <li>Replace v-html with v-text in search inputbox</li>\n       <li>Upgrade webpack to v5.94.0 as a precaution to mitigate\n       CVE-2024-43788, although we were not yet able to confirm that this\n       can be exploited in Forgejo.</li>\n       </ul>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://codeberg.org/forgejo/forgejo/milestone/8231"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a5e13973-6c75-11ef-858b-23eeba13701a.html"
+					}
+				],
+				"published": "2024-09-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-43788",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-43788"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "forgejo"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.0.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "forgejo7"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.9"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/a5e13973-6c75-11ef-858b-23eeba13701a.json"
+		]
+	}
+}

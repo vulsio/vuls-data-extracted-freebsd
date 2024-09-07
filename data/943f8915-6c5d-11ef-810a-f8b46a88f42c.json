@@ -1,0 +1,110 @@
+{
+	"id": "943f8915-6c5d-11ef-810a-f8b46a88f42c",
+	"advisories": [
+		{
+			"content": {
+				"id": "943f8915-6c5d-11ef-810a-f8b46a88f42c",
+				"title": " -- ",
+				"description": "\n\t<p>alster@vinterdalen.se reports PR/281070:</p>\n\t<blockquote cite=\"https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=281070\">\n\t  <p>A new version of devel/binutils has been released fixing\n\t     CVE-2023-1972, CVE-2023-25585, CVE-2023-25586, and\n\t     CVE-2023-25588.\n\t  </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/943f8915-6c5d-11ef-810a-f8b46a88f42c.html"
+					}
+				],
+				"published": "2024-09-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-1972",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-1972"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-25585",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-25585"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-25586",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-25586"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2023-25588",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2023-25588"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.43,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/943f8915-6c5d-11ef-810a-f8b46a88f42c.json"
+		]
+	}
+}

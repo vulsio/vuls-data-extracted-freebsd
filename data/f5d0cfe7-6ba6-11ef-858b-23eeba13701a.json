@@ -1,0 +1,56 @@
+{
+	"id": "f5d0cfe7-6ba6-11ef-858b-23eeba13701a",
+	"advisories": [
+		{
+			"content": {
+				"id": "f5d0cfe7-6ba6-11ef-858b-23eeba13701a",
+				"title": "gitea -- multiple issues",
+				"description": "\n       <h1>Problem Description:</h1>\n       <ul>\n       <li>Replace v-html with v-text in search inputbox</li>\n       <li>Fix nuget/conan/container packages upload bugs</li>\n       </ul>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/go-gitea/gitea/releases/tag/v1.22.2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/f5d0cfe7-6ba6-11ef-858b-23eeba13701a.html"
+					}
+				],
+				"published": "2024-09-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.22.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/f5d0cfe7-6ba6-11ef-858b-23eeba13701a.json"
+		]
+	}
+}
