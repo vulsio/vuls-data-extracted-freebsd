@@ -1,0 +1,72 @@
+{
+	"id": "80fbe184-2358-11ef-996e-40b034455553",
+	"advisories": [
+		{
+			"content": {
+				"id": "80fbe184-2358-11ef-996e-40b034455553",
+				"title": "minio -- unintentional information disclosure",
+				"description": "\n\t<p>Minio security advisory GHSA-95fr-cm4m-q5p9 reports:</p>\n\t<blockquote cite=\"https://github.com/minio/minio/security/advisories/GHSA-95fr-cm4m-q5p9\">\n\t  <p>when used with anonymous requests by sending a random\n\t    object name requests you can figure out if the object\n\t  exists or not on the server on a specific bucket and also\n\t  gain access to some amount of information.\n\t</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36107"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/80fbe184-2358-11ef-996e-40b034455553.html"
+					}
+				],
+				"published": "2024-06-05T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-36107",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-36107"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "minio"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2024.05.27.19.17.46"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/80fbe184-2358-11ef-996e-40b034455553.json"
+		]
+	}
+}
