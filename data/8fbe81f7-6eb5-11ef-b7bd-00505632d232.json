@@ -1,0 +1,110 @@
+{
+	"id": "8fbe81f7-6eb5-11ef-b7bd-00505632d232",
+	"advisories": [
+		{
+			"content": {
+				"id": "8fbe81f7-6eb5-11ef-b7bd-00505632d232",
+				"title": "netatalk3 -- multiple WolfSSL vulnerabilities",
+				"description": "\n\t<p>Netatalk release reports:</p>\n\t<blockquote cite=\"https://github.com/Netatalk/netatalk/releases/tag/netatalk-3-2-8\">\n\t  <p>WolfSSL 5.7.0 (included in netatalk) includes multiple security vulnerabilities.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8fbe81f7-6eb5-11ef-b7bd-00505632d232.html"
+					}
+				],
+				"published": "2024-09-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-1544",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-1544"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-5288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-5814",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5814"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-5991",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5991"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "netatalk3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.8,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/8fbe81f7-6eb5-11ef-b7bd-00505632d232.json"
+		]
+	}
+}
