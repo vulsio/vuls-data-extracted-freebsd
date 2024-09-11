@@ -1,0 +1,86 @@
+{
+	"id": "d5026193-6fa2-11ef-99bc-1c697a616631",
+	"advisories": [
+		{
+			"content": {
+				"id": "d5026193-6fa2-11ef-99bc-1c697a616631",
+				"title": "Intel CPUs -- multiple vulnerabilities",
+				"description": "\n\t<p>Intel reports:</p>\n\t<blockquote cite=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01103.html\">\n\t <p>\n\t  A potential security vulnerability in the Running Average Power Limit\n\t  (RAPL) interface for some Intel Processors may allow information\n\t  disclosure.  Intel has released firmware updates to mitigate this\n\t  potential vulnerability.\n\t </p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01097.html\">\n\t <p>\n\t  A potential security vulnerability in some Intel Processors may allow\n\t  denial of service.  Intel has released firmware updates to mitigate\n\t  this potential vulnerability.\n\t </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20240910"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d5026193-6fa2-11ef-99bc-1c697a616631.html"
+					}
+				],
+				"published": "2024-09-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-23984",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-23984"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24968",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-24968"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "cpu-microcode-intel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20240910"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/d5026193-6fa2-11ef-99bc-1c697a616631.json"
+		]
+	}
+}
