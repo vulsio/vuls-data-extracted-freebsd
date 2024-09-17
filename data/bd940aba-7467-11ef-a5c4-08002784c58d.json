@@ -1,0 +1,114 @@
+{
+	"id": "bd940aba-7467-11ef-a5c4-08002784c58d",
+	"advisories": [
+		{
+			"content": {
+				"id": "bd940aba-7467-11ef-a5c4-08002784c58d",
+				"title": "SnappyMail -- multiple mXSS in HTML sanitizer",
+				"description": "\n\t<p>Oskar reports:</p>\n\t<blockquote cite=\"https://github.com/the-djmaze/snappymail/security/advisories/GHSA-2rq7-79vp-ffxm\">\n\t  <p>\n\t    SnappyMail uses the `cleanHtml()` function to cleanup HTML\n\t    and CSS in emails. Research discovered that the function\n\t    has a few bugs which cause an mXSS exploit. Because the\n\t    function allowed too many (invalid) HTML elements, it was\n\t    possible (with incorrect markup) to trick the browser to\n\t    \"fix\" the broken markup into valid markup. As a result a\n\t    motivated attacker may be able to inject javascript.\n\t  </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/the-djmaze/snappymail/security/advisories/GHSA-2rq7-79vp-ffxm"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/bd940aba-7467-11ef-a5c4-08002784c58d.html"
+					}
+				],
+				"published": "2024-09-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-45800",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45800"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "snappymail-php81"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.38.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "snappymail-php82"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.38.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "snappymail-php83"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.38.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "snappymail-php84"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "2.38.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/bd940aba-7467-11ef-a5c4-08002784c58d.json"
+		]
+	}
+}
