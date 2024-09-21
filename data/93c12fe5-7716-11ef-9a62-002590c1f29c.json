@@ -1,0 +1,112 @@
+{
+	"id": "93c12fe5-7716-11ef-9a62-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "93c12fe5-7716-11ef-9a62-002590c1f29c",
+				"title": "FreeBSD -- Integer overflow in libnv",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A malicious value of size in a structure of packed libnv can\n\tcause an integer overflow, leading to the allocation of a smaller\n\tbuffer than required for the parsed data.  The introduced check was\n\tincorrect, as it took into account the size of the pointer, not the\n\tstructure.  This vulnerability affects both kernel and userland.</p>\n\t<p>This issue was originally intended to be addressed as part of\n\tFreeBSD-SA-24:09.libnv, but due to a logic issue, this issue was\n\tnot properly addressed.</p>\n\t<h1>Impact:</h1>\n\t<p>It is possible for an attacker to overwrite portions of memory\n\t(in userland or the kernel) as the allocated buffer might be smaller\n\tthan the data received from a malicious process.  This vulnerability\n\tcould result in privilege escalation or cause a system panic.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-24:16.libnv.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/93c12fe5-7716-11ef-9a62-002590c1f29c.html"
+					}
+				],
+				"published": "2024-09-20T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-45287",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45287"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3_7",
+									"ge": "13.3"
+								},
+								{
+									"lt": "13.4_1",
+									"ge": "13.4"
+								},
+								{
+									"lt": "14.0_11",
+									"ge": "14.0"
+								},
+								{
+									"lt": "14.1_5",
+									"ge": "14.1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3_7",
+									"ge": "13.3"
+								},
+								{
+									"lt": "13.4_1",
+									"ge": "13.4"
+								},
+								{
+									"lt": "14.0_11",
+									"ge": "14.0"
+								},
+								{
+									"lt": "14.1_5",
+									"ge": "14.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/93c12fe5-7716-11ef-9a62-002590c1f29c.json"
+		]
+	}
+}

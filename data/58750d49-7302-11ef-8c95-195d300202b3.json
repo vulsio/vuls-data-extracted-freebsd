@@ -5,7 +5,7 @@
 			"content": {
 				"id": "58750d49-7302-11ef-8c95-195d300202b3",
 				"title": "OpenSSH -- Pre-authentication async signal safety issue",
-				"description": "\n\t<p>The FreeBSD Project reports:</p>\n\t<blockquote cite=\"https://www.freebsd.org/security/advisories/FreeBSD-SA-24:08.openssh.asc\">\n\t  <p>\n\t    A signal handler in sshd(8) may call a logging function that is not async-\n\t    signal-safe. The signal handler is invoked when a client does not\n\t    authenticate within the LoginGraceTime seconds (120 by default).\n\t    This signal handler executes in the context of the sshd(8)'s privileged\n\t    code, which is not sandboxed and runs with full root privileges.\n\n\t    This issue is another instance of the problem in CVE-2024-6387 addressed by\n\t    FreeBSD-SA-24:04.openssh.  The faulty code in this case is from the\n\t    integration of blacklistd in OpenSSH in FreeBSD.\n\t  </p>\n\t</blockquote>\n\t",
+				"description": "\n\t<p>The FreeBSD Project reports:</p>\n\t<blockquote cite=\"https://www.freebsd.org/security/advisories/FreeBSD-SA-24:08.openssh.asc\">\n\t  <p>\n\t    A signal handler in sshd(8) may call a logging function that is not async-\n\t    signal-safe. The signal handler is invoked when a client does not\n\t    authenticate within the LoginGraceTime seconds (120 by default).\n\t    This signal handler executes in the context of the sshd(8)'s privileged\n\t    code, which is not sandboxed and runs with full root privileges.</p>\n\t    <p>This issue is another instance of the problem in CVE-2024-6387 addressed by\n\t    FreeBSD-SA-24:04.openssh.  The faulty code in this case is from the\n\t    integration of blacklistd in OpenSSH in FreeBSD.\n\t  </p>\n\t</blockquote>\n\t",
 				"references": [
 					{
 						"source": "vuxml.freebsd.org",
@@ -20,7 +20,8 @@
 						"url": "https://www.vuxml.org/freebsd/58750d49-7302-11ef-8c95-195d300202b3.html"
 					}
 				],
-				"published": "2024-09-15T00:00:00Z"
+				"published": "2024-09-15T00:00:00Z",
+				"modified": "2024-09-20T00:00:00Z"
 			},
 			"ecosystems": [
 				"freebsd"
@@ -49,6 +50,29 @@
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3_5",
+									"ge": "13.3"
+								},
+								{
+									"lt": "14.0_9",
+									"ge": "14.0"
+								},
+								{
+									"lt": "14.1_3",
+									"ge": "14.1"
+								}
+							]
+						}
+					},
 					{
 						"vulnerable": true,
 						"package": {
