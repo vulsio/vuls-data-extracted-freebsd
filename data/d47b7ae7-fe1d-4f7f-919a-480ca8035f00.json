@@ -1,0 +1,56 @@
+{
+	"id": "d47b7ae7-fe1d-4f7f-919a-480ca8035f00",
+	"advisories": [
+		{
+			"content": {
+				"id": "d47b7ae7-fe1d-4f7f-919a-480ca8035f00",
+				"title": "zeek -- potential DoS vulnerability",
+				"description": "\n\t<p>Tim Wojtulewicz of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v7.0.2\">\n\t  <p> The POP3 parser has been hardened to avoid unbounded\n\t  state growth in the face of one-sided traffic capture or\n\t  when enabled for non-POP3 traffic. </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/zeek/zeek/releases/tag/v7.0.2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d47b7ae7-fe1d-4f7f-919a-480ca8035f00.html"
+					}
+				],
+				"published": "2024-09-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zeek"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.0.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/d47b7ae7-fe1d-4f7f-919a-480ca8035f00.json"
+		]
+	}
+}
