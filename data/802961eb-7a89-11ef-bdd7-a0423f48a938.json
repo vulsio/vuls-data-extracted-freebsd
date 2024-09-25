@@ -1,0 +1,86 @@
+{
+	"id": "802961eb-7a89-11ef-bdd7-a0423f48a938",
+	"advisories": [
+		{
+			"content": {
+				"id": "802961eb-7a89-11ef-bdd7-a0423f48a938",
+				"title": "frr - BGP",
+				"description": "\n\t<p>cve@mitre.org reports:</p>\n\t<blockquote cite=\"https://github.com/FRRouting/frr/pull/16497\">\n\t  <p>An issue was discovered in FRRouting (FRR). bgp_attr_encap\n\tin bgpd/bgp_attr.c does not check the actual remaining stream length\n\tbefore taking the TLV value.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-44070"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/802961eb-7a89-11ef-bdd7-a0423f48a938.html"
+					}
+				],
+				"published": "2024-09-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-44070",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-44070"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "frr8"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "8.5.6"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "frr9"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "9.1.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/802961eb-7a89-11ef-bdd7-a0423f48a938.json"
+		]
+	}
+}
