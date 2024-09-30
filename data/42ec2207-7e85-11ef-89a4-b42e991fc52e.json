@@ -1,0 +1,100 @@
+{
+	"id": "42ec2207-7e85-11ef-89a4-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "42ec2207-7e85-11ef-89a4-b42e991fc52e",
+				"title": "sqlite -- use-after-free bug in jsonparseaddnodearray",
+				"description": "\n\t<p>secalert@redhat.com reports:</p>\n\t<blockquote cite=\"https://access.redhat.com/security/cve/CVE-2024-0232\">\n\t  <p>A heap use-after-free issue has been identified in SQLite in the\n\tjsonParseAddNodeArray() function in sqlite3.c.  This flaw allows a\n\tlocal attacker to leverage a victim to pass specially crafted\n\tmalicious input to the application, potentially causing a crash and\n\tleading to a denial of service.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0232"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/42ec2207-7e85-11ef-89a4-b42e991fc52e.html"
+					}
+				],
+				"published": "2024-09-29T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-0232",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-0232"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-c7-sqlite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.43.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "linux-rl9-sqlite"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.43.2"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "sqlite3"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.43.2,1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/42ec2207-7e85-11ef-89a4-b42e991fc52e.json"
+		]
+	}
+}
