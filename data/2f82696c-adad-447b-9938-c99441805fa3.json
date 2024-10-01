@@ -1,0 +1,128 @@
+{
+	"id": "2f82696c-adad-447b-9938-c99441805fa3",
+	"advisories": [
+		{
+			"content": {
+				"id": "2f82696c-adad-447b-9938-c99441805fa3",
+				"title": "chromium -- multiple security fixes",
+				"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2024/09/stable-channel-update-for-desktop_24.html\">\n\t <p>This update includes 5 security fixes:</p>\n\t <ul>\n\t    <li>[365254285] High CVE-2024-9120: Use after free in Dawn. Reported by Anonymous on 2024-09-08</li>\n\t    <li>[363538434] High CVE-2024-9121: Inappropriate implementation in V8. Reported by Tashita Software Security on 2024-09-01</li>\n\t    <li>[365802567] High CVE-2024-9122: Type Confusion in V8. Reported by Seunghyun Lee (@0x10n) on 2024-09-10</li>\n\t    <li>[365884464] High CVE-2024-9123: Integer overflow in Skia. Reported by raven at KunLun lab on 2024-09-11</li>\n\t </ul>\n       </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://chromereleases.googleblog.com/2024/09/stable-channel-update-for-desktop_24.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2f82696c-adad-447b-9938-c99441805fa3.html"
+					}
+				],
+				"published": "2024-09-30T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-9120",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9120"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9121",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9121"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9122",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9122"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9123",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9123"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "129.0.6668.70"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ungoogled-chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "129.0.6668.70"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/2f82696c-adad-447b-9938-c99441805fa3.json"
+		]
+	}
+}
