@@ -1,0 +1,150 @@
+{
+	"id": "8b20f21a-8113-11ef-b988-08002784c58d",
+	"advisories": [
+		{
+			"content": {
+				"id": "8b20f21a-8113-11ef-b988-08002784c58d",
+				"title": "redis,valkey -- Multiple vulnerabilities",
+				"description": "\n\t<p>Redis core team reports:</p>\n\t<blockquote cite=\"https://github.com/redis/redis/releases/tag/7.4.1\">\n\t  <dl>\n\t    <dt>CVE-2024-31449</dt>\n\t    <dd>Lua library commands may lead to stack overflow and potential RCE.</dd>\n\t    <dt>CVE-2024-31227</dt>\n\t    <dd>Potential Denial-of-service due to malformed ACL selectors.</dd>\n\t    <dt>CVE-2024-31228</dt>\n\t    <dd>Potential Denial-of-service due to unbounded pattern matching.</dd>\n\t  </dl>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/redis/redis/releases/tag/7.4.1"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8b20f21a-8113-11ef-b988-08002784c58d.html"
+					}
+				],
+				"published": "2024-10-02T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-31227",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-31227"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-31228",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-31228"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-31449",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-31449"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.4.1",
+									"ge": "7.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis62"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "6.2.16",
+									"ge": "6.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis72"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2.6",
+									"ge": "7.2.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "valkey"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.2.7",
+									"ge": "7.2.0"
+								},
+								{
+									"lt": "8.0.1",
+									"ge": "8,0,0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/8b20f21a-8113-11ef-b988-08002784c58d.json"
+		]
+	}
+}
