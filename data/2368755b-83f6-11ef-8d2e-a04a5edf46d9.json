@@ -1,0 +1,72 @@
+{
+	"id": "2368755b-83f6-11ef-8d2e-a04a5edf46d9",
+	"advisories": [
+		{
+			"content": {
+				"id": "2368755b-83f6-11ef-8d2e-a04a5edf46d9",
+				"title": "Unbound -- Denial of service attack",
+				"description": "\n\t<p>NLnet labs report:</p>\n\t<blockquote cite=\"https://nlnetlabs.nl/news/2024/Oct/03/unbound-1.21.1-released/\">\n\t  <p>A vulnerability has been discovered in Unbound when handling\n\t    replies with very large RRsets that Unbound needs to perform name\n\t    compression for.</p>\n\t  <p>Malicious upstreams responses with very large RRsets can cause\n\t    Unbound to spend a considerable time applying name compression to\n\t    downstream replies. This can lead to degraded performance and\n\t    eventually denial of service in well orchestrated attacks.</p>\n\t  <p>Unbound version 1.21.1 introduces a hard limit on the number of\n\t    name compression calculations it is willing to do per packet.\n\t    Packets that need more compression will result in semi-compressed\n\t    packets or truncated packets, even on TCP for huge messages, to\n\t    avoid locking the CPU for long.</p>\n\t  <p>This change should not affect normal DNS traffic.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nlnetlabs.nl/news/2024/Oct/03/unbound-1.21.1-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2368755b-83f6-11ef-8d2e-a04a5edf46d9.html"
+					}
+				],
+				"published": "2024-10-06T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-8508",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-8508"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "unbound"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.21.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/2368755b-83f6-11ef-8d2e-a04a5edf46d9.json"
+		]
+	}
+}
