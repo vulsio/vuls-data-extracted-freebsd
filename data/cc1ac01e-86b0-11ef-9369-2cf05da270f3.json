@@ -1,0 +1,202 @@
+{
+	"id": "cc1ac01e-86b0-11ef-9369-2cf05da270f3",
+	"advisories": [
+		{
+			"content": {
+				"id": "cc1ac01e-86b0-11ef-9369-2cf05da270f3",
+				"title": "Gitlab -- vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/10/09/patch-release-gitlab-17-4-2-released/\">\n\t  <p>Run pipelines on arbitrary branches</p>\n\t  <p>An attacker can impersonate arbitrary user</p>\n\t  <p>SSRF in Analytics Dashboard</p>\n\t  <p>Viewing diffs of MR with conflicts can be slow</p>\n\t  <p>HTMLi in OAuth page</p>\n\t  <p>Deploy Keys can push changes to an archived repository</p>\n\t  <p>Guests can disclose project templates</p>\n\t  <p>GitLab instance version disclosed to unauthorized users</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2024/10/09/patch-release-gitlab-17-4-2-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cc1ac01e-86b0-11ef-9369-2cf05da270f3.html"
+					}
+				],
+				"published": "2024-10-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-5005",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-5005"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6530",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6530"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-8970",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-8970"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-8977",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-8977"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9164",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9164"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9596",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9596"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9623",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9623"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9631",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9631"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.2.9",
+									"ge": "8.16"
+								},
+								{
+									"lt": "17.3.5",
+									"ge": "17.3.0"
+								},
+								{
+									"lt": "17.4.2",
+									"ge": "17.4.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ee"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.2.9",
+									"ge": "8.16"
+								},
+								{
+									"lt": "17.3.5",
+									"ge": "17.3.0"
+								},
+								{
+									"lt": "17.4.2",
+									"ge": "17.4.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/cc1ac01e-86b0-11ef-9369-2cf05da270f3.json"
+		]
+	}
+}

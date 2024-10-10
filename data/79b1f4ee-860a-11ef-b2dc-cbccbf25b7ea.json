@@ -1,0 +1,56 @@
+{
+	"id": "79b1f4ee-860a-11ef-b2dc-cbccbf25b7ea",
+	"advisories": [
+		{
+			"content": {
+				"id": "79b1f4ee-860a-11ef-b2dc-cbccbf25b7ea",
+				"title": "gitea -- token missing access control for packages",
+				"description": "\n       <h1>Problem Description:</h1>\n       <ul>\n       <li>Fix bug when a token is given public only</li>\n       </ul>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/go-gitea/gitea/pull/32204"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/79b1f4ee-860a-11ef-b2dc-cbccbf25b7ea.html"
+					}
+				],
+				"published": "2024-10-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitea"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.22.3"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/79b1f4ee-860a-11ef-b2dc-cbccbf25b7ea.json"
+		]
+	}
+}

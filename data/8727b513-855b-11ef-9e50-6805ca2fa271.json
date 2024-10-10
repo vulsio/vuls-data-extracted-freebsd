@@ -1,0 +1,72 @@
+{
+	"id": "8727b513-855b-11ef-9e50-6805ca2fa271",
+	"advisories": [
+		{
+			"content": {
+				"id": "8727b513-855b-11ef-9e50-6805ca2fa271",
+				"title": "powerdns-recursor -- denial of service",
+				"description": "\n\t<p>PowerDNS Team reports:</p>\n\t<blockquote cite=\"https://blog.powerdns.com/2024/10/03/powerdns-recursor-4-9-9-5-0-9-5-1-2-released\">\n\t  <p>PowerDNS Security Advisory 2024-04: Crafted responses can lead to\n\t   a denial of service due to cache inefficiencies in the Recursor</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-04.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8727b513-855b-11ef-9e50-6805ca2fa271.html"
+					}
+				],
+				"published": "2024-10-09T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-25590",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-25590"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "powerdns-recursor"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "5.1.2"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/8727b513-855b-11ef-9e50-6805ca2fa271.json"
+		]
+	}
+}
