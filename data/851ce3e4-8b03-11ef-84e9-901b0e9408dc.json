@@ -1,0 +1,73 @@
+{
+	"id": "851ce3e4-8b03-11ef-84e9-901b0e9408dc",
+	"advisories": [
+		{
+			"content": {
+				"id": "851ce3e4-8b03-11ef-84e9-901b0e9408dc",
+				"title": "element-web -- Potential exposure of access token via authenticated media",
+				"description": "\n\t<p>Element team reports:</p>\n\t<blockquote cite=\"https://github.com/element-hq/element-web/security/advisories/GHSA-3jm3-x98c-r34x\">\n\t  <p>Element Web versions 1.11.70 through 1.11.80 contain a\n\t  vulnerability which can, under specially crafted conditions,\n\t  lead to the access token becoming exposed to third\n\t  parties. At least one vector has been identified internally,\n\t  involving malicious widgets, but other vectors may\n\t  exist. Users are strongly advised to upgrade to version\n\t  1.11.81 to remediate the issue.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/element-hq/element-web/security/advisories/GHSA-3jm3-x98c-r34x"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/851ce3e4-8b03-11ef-84e9-901b0e9408dc.html"
+					}
+				],
+				"published": "2024-10-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-47779",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-47779"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "element-web"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.11.81",
+									"ge": "1.11.70"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/851ce3e4-8b03-11ef-84e9-901b0e9408dc.json"
+		]
+	}
+}
