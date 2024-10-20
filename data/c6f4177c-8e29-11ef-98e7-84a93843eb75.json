@@ -1,0 +1,142 @@
+{
+	"id": "c6f4177c-8e29-11ef-98e7-84a93843eb75",
+	"advisories": [
+		{
+			"content": {
+				"id": "c6f4177c-8e29-11ef-98e7-84a93843eb75",
+				"title": "OpenSSL -- OOB memory access vulnerability",
+				"description": "\n\t<p>The OpenSSL project reports:</p>\n\t<blockquote cite=\"https://openssl-library.org/news/secadv/20241016.txt\">\n\t  <p>Low-level invalid GF(2^m) parameters lead to OOB memory access\n\t   (CVE-2024-9143) (Low)</p>\n\t  <p> Use of the low-level GF(2^m) elliptic curve APIs with untrusted\n\t    explicit values for the field polynomial can lead to out-of-bounds\n\t    memory reads or writes.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://openssl-library.org/news/secadv/20241016.txt"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c6f4177c-8e29-11ef-98e7-84a93843eb75.html"
+					}
+				],
+				"published": "2024-10-19T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-9143",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9143"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.15_1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-quictls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.0.15_1,1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl31"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.7_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl31-quictls"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.1.7_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl32"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.2.3_1"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl33"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "3.3.2_1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/c6f4177c-8e29-11ef-98e7-84a93843eb75.json"
+		]
+	}
+}
