@@ -1,0 +1,142 @@
+{
+	"id": "dbe8c5bd-8d3f-11ef-8d2e-a04a5edf46d9",
+	"advisories": [
+		{
+			"content": {
+				"id": "dbe8c5bd-8d3f-11ef-8d2e-a04a5edf46d9",
+				"title": "oauth2-proxy -- multiple vulnerabilities",
+				"description": "\n\t<p>The oauth2-proxy project reports:</p>\n\t<blockquote cite=\"https://github.com/oauth2-proxy/oauth2-proxy/releases/tag/v7.7.0\">\n\t  <p>Vulnerabilities have been addressed:</p>\n\t  <ul>\n\t    <li>CVE-2024-24786</li>\n\t    <li>CVE-2024-24791</li>\n\t    <li>CVE-2024-24790</li>\n\t    <li>CVE-2024-24784</li>\n\t    <li>CVE-2024-28180</li>\n\t    <li>CVE-2023-45288</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/oauth2-proxy/oauth2-proxy/releases/tag/v7.7.0"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/dbe8c5bd-8d3f-11ef-8d2e-a04a5edf46d9.html"
+					}
+				],
+				"published": "2024-10-18T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-24784",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-24784"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24786",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-24786"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24790",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-24790"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24791",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-24791"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-28180",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-28180"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-45288",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45288"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "oauth2-proxy"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "7.7.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/dbe8c5bd-8d3f-11ef-8d2e-a04a5edf46d9.json"
+		]
+	}
+}
