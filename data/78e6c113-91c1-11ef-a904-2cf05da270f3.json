@@ -1,0 +1,118 @@
+{
+	"id": "78e6c113-91c1-11ef-a904-2cf05da270f3",
+	"advisories": [
+		{
+			"content": {
+				"id": "78e6c113-91c1-11ef-a904-2cf05da270f3",
+				"title": "Gitlab -- vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/\">\n\t  <p>HTML injection in Global Search may lead to XSS</p>\n\t  <p>DoS via XML manifest file import</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/78e6c113-91c1-11ef-a904-2cf05da270f3.html"
+					}
+				],
+				"published": "2024-10-24T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-6826",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6826"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-8312",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-8312"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ce"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.3.6",
+									"ge": "11.2.0"
+								},
+								{
+									"lt": "17.4.3",
+									"ge": "17.4.0"
+								},
+								{
+									"lt": "17.5.1",
+									"ge": "17.5.0"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitlab-ee"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.3.6",
+									"ge": "11.2.0"
+								},
+								{
+									"lt": "17.4.3",
+									"ge": "17.4.0"
+								},
+								{
+									"lt": "17.5.1",
+									"ge": "17.5.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/78e6c113-91c1-11ef-a904-2cf05da270f3.json"
+		]
+	}
+}
