@@ -1,0 +1,114 @@
+{
+	"id": "fafaef4d-f364-4a07-bbdd-bf53448c593c",
+	"advisories": [
+		{
+			"content": {
+				"id": "fafaef4d-f364-4a07-bbdd-bf53448c593c",
+				"title": "chromium -- multiple security fixes",
+				"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_22.html\">\n\t <p>This update includes 3 security fixes:</p>\n\t <ul>\n\t    <li>[371011220] High CVE-2024-10229: Inappropriate implementation in Extensions. Reported by Vsevolod Kokorin (Slonser) of Solidlab on 2024-10-02</li>\n\t    <li>[371565065] High CVE-2024-10230: Type Confusion in V8. Reported by Seunghyun Lee (@0x10n) on 2024-10-05</li>\n\t    <li>[372269618] High CVE-2024-10231: Type Confusion in V8. Reported by Seunghyun Lee (@0x10n) on 2024-10-09</li>\n\t </ul>\n       </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_22.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fafaef4d-f364-4a07-bbdd-bf53448c593c.html"
+					}
+				],
+				"published": "2024-10-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10229",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10229"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10230",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10230"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10231",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10231"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "130.0.6723.69"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ungoogled-chromium"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "130.0.6723.69"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/fafaef4d-f364-4a07-bbdd-bf53448c593c.json"
+		]
+	}
+}
