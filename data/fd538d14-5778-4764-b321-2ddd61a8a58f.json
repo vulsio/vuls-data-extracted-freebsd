@@ -1,0 +1,72 @@
+{
+	"id": "fd538d14-5778-4764-b321-2ddd61a8a58f",
+	"advisories": [
+		{
+			"content": {
+				"id": "fd538d14-5778-4764-b321-2ddd61a8a58f",
+				"title": "keycloak -- Missing server identity checks when sending mails via SMTPS",
+				"description": "\n        <p>Red Hat reports:</p>\n        <blockquote cite=\"https://bugzilla.redhat.com/show_bug.cgi?id=2315808\">\n            <p>A vulnerability was found in Apache Sling Commons Messaging\n              Mail(angus-mail), which provides a simple interface for sending\n              emails via SMTPS in OSGi, does not offer an option to enable\n              server identity checks, leaving connections vulnerable to\n              \"man-in-the-middle\" attacks and can allow insecure email\n              communication.</p>\n        </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-44549"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fd538d14-5778-4764-b321-2ddd61a8a58f.html"
+					}
+				],
+				"published": "2024-10-31T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2021-44549",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-44549"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "keycloak"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "26.0.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/fd538d14-5778-4764-b321-2ddd61a8a58f.json"
+		]
+	}
+}
