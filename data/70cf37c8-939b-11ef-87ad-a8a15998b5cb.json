@@ -1,0 +1,129 @@
+{
+	"id": "70cf37c8-939b-11ef-87ad-a8a15998b5cb",
+	"advisories": [
+		{
+			"content": {
+				"id": "70cf37c8-939b-11ef-87ad-a8a15998b5cb",
+				"title": "tnef -- Invalid read and write operations, controlled by an attacker",
+				"description": "\n\t<p>cve@mitre.org reports:</p>\n\t<blockquote cite=\"http://www.debian.org/security/2017/dsa-3798\">\n\t  <p>CVE-2017-6307: An issue was discovered in tnef before\n\t  1.4.13.  Two OOB Writes have been identified in\n\t  src/mapi_attr.c:mapi_attr_read().  These might lead to\n\t  invalid read and write operations, controlled by an\n\t  attacker.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.debian.org/security/2017/dsa-3798\">\n\t  <p>CVE-2017-6308: An issue was discovered in tnef before\n\t  1.4.13.  Several Integer Overflows, which can lead to Heap\n\t  Overflows, have been identified in the functions that wrap\n\t  memory allocation.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.debian.org/security/2017/dsa-3798\">\n\t  <p>CVE-2017-6309: An issue was discovered in tnef before\n\t  1.4.13.  Two type confusions have been identified in the\n\t  parse_file() function.  These might lead to invalid read and\n\t  write operations, controlled by an attacker.</p>\n\t</blockquote>\n\t<blockquote cite=\"http://www.debian.org/security/2017/dsa-3798\">\n\t  <p>CVE-2017-6310: An issue was discovered in tnef before\n\t  1.4.13.  Four type confusions have been identified in the\n\t  file_add_mapi_attrs() function.  These might lead to invalid\n\t  read and write operations, controlled by an attacker.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6307"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6308"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6309"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6310"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/70cf37c8-939b-11ef-87ad-a8a15998b5cb.html"
+					}
+				],
+				"published": "2024-10-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2017-6307",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-6307"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2017-6308",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-6308"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2017-6309",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-6309"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2017-6310",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2017-6310"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "tnef"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"le": "1.4.12"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/70cf37c8-939b-11ef-87ad-a8a15998b5cb.json"
+		]
+	}
+}

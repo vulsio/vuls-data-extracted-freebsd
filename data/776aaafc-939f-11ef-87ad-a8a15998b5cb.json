@@ -1,0 +1,75 @@
+{
+	"id": "776aaafc-939f-11ef-87ad-a8a15998b5cb",
+	"advisories": [
+		{
+			"content": {
+				"id": "776aaafc-939f-11ef-87ad-a8a15998b5cb",
+				"title": "tnef -- An attacker may be able to write to the victim's .ssh/authorized_keys file via an e-mail message",
+				"description": "\n\t<p>cve@mitre.org reports:</p>\n\t<blockquote cite=\"https://github.com/verdammelt/tnef/compare/1.4.17...1.4.18\">\n\t  <p>In tnef before 1.4.18, an attacker may be able to write to the\n\tvictim's .ssh/authorized_keys file via an e-mail message with\n\ta crafted winmail.dat application/ms-tnef attachment, because of a\n\theap-based buffer over-read involving strdup.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18849"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/776aaafc-939f-11ef-87ad-a8a15998b5cb.html"
+					}
+				],
+				"published": "2024-10-26T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2019-18849",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2019-18849"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "tnef"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.4.18"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/776aaafc-939f-11ef-87ad-a8a15998b5cb.json"
+		]
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"id": "d48a2224-9b4c-11ef-bdd9-4ccc6adda413",
+	"advisories": [
+		{
+			"content": {
+				"id": "d48a2224-9b4c-11ef-bdd9-4ccc6adda413",
+				"title": "gstreamer1-rtsp-server -- Potential Denial-of-Service (DoS) with specially crafted client requests",
+				"description": "\n\t<p>Qingpeng Du reports:</p>\n\t<blockquote cite=\"https://gstreamer.freedesktop.org/security/sa-2024-0004.html\">\n\t  <p>A series of specially crafted client requests during streaming setup\n\t   (post client authentication, if any) can cause the RTSP server library\n\t   to abort, if it has been compiled with assertions enabled.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gstreamer.freedesktop.org/security/sa-2024-0004.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d48a2224-9b4c-11ef-bdd9-4ccc6adda413.html"
+					}
+				],
+				"published": "2024-11-07T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-44331",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-44331"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "gstreamer1-rtsp-server"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.24.9",
+									"ge": "1.18.0"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/d48a2224-9b4c-11ef-bdd9-4ccc6adda413.json"
+		]
+	}
+}
