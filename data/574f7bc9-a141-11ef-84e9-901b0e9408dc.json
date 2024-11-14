@@ -1,0 +1,92 @@
+{
+	"id": "574f7bc9-a141-11ef-84e9-901b0e9408dc",
+	"advisories": [
+		{
+			"content": {
+				"id": "574f7bc9-a141-11ef-84e9-901b0e9408dc",
+				"title": "Matrix clients -- mxc uri validation in js sdk",
+				"description": "\n\t<p>matrix-js-sdk upstream reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/matrix-js-sdk/security/advisories/GHSA-xvg8-m4x3-w6xr\">\n\t  <p>matrix-js-sdk before 34.11.0 is vulnerable to client-side\n\t  path traversal via crafted MXC URIs. A malicious room member\n\t  can trigger clients based on the matrix-js-sdk to issue\n\t  arbitrary authenticated GET requests to the client's\n\t  homeserver.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/matrix-org/matrix-js-sdk/security/advisories/GHSA-xvg8-m4x3-w6xr"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/574f7bc9-a141-11ef-84e9-901b0e9408dc.html"
+					}
+				],
+				"published": "2024-11-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-50336",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-50336"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "cinny"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "4.2.3"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "element-web"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.11.85"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/574f7bc9-a141-11ef-84e9-901b0e9408dc.json"
+		]
+	}
+}

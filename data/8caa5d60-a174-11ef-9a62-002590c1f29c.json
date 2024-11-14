@@ -1,0 +1,84 @@
+{
+	"id": "8caa5d60-a174-11ef-9a62-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "8caa5d60-a174-11ef-9a62-002590c1f29c",
+				"title": "FreeBSD -- Unbounded allocation in ctl(4) CAM Target Layer",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The command ctl_persistent_reserve_out allows the caller to\n\tspecify an arbitrary size which will be passed to the kernel's\n\tmemory allocator.</p>\n\t<h1>Impact:</h1>\n\t<p>A malicious guest could cause a Denial of Service (DoS) on the\n\thost.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-24:18.ctl.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/8caa5d60-a174-11ef-9a62-002590c1f29c.html"
+					}
+				],
+				"published": "2024-11-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-39281",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-39281"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "FreeBSD-kernel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3_8",
+									"ge": "13.3"
+								},
+								{
+									"lt": "13.4_2",
+									"ge": "13.4"
+								},
+								{
+									"lt": "14.1_6",
+									"ge": "14.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/8caa5d60-a174-11ef-9a62-002590c1f29c.json"
+		]
+	}
+}

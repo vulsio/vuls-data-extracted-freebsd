@@ -1,0 +1,93 @@
+{
+	"id": "ab4e6f65-a142-11ef-84e9-901b0e9408dc",
+	"advisories": [
+		{
+			"content": {
+				"id": "ab4e6f65-a142-11ef-84e9-901b0e9408dc",
+				"title": "element-web -- several vulnerabilities",
+				"description": "\n\t<p>Element team reports:</p>\n\t<blockquote cite=\"https://github.com/element-hq/element-web/security/advisories/GHSA-5486-384g-mcx2\">\n\t  <p>Versions of Element Web and Desktop earlier than 1.11.85 do\n\t  not check if thumbnails for attachments, stickers and images\n\t  are coherent. It is possible to add thumbnails to events\n\t  trigger a file download once clicked.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://github.com/element-hq/element-web/security/advisories/GHSA-w36j-v56h-q9pc\">\n\t  <p>A malicious homeserver can send invalid messages over\n\t  federation which can prevent Element Web and Desktop from\n\t  rendering single messages or the entire room containing\n\t  them.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/element-hq/element-web/security/advisories/GHSA-5486-384g-mcx2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/element-hq/element-web/security/advisories/GHSA-w36j-v56h-q9pc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ab4e6f65-a142-11ef-84e9-901b0e9408dc.html"
+					}
+				],
+				"published": "2024-11-12T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-51749",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-51749"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-51750",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-51750"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "element-web"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.11.85"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/ab4e6f65-a142-11ef-84e9-901b0e9408dc.json"
+		]
+	}
+}

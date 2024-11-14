@@ -1,0 +1,84 @@
+{
+	"id": "ce0f52e1-a174-11ef-9a62-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "ce0f52e1-a174-11ef-9a62-002590c1f29c",
+				"title": "FreeBSD -- Certificate revocation list fetch(1) option fails",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>The fetch(3) library uses environment variables for passing\n\tcertain information, including the revocation file pathname.  The\n\tenvironment variable name used by fetch(1) to pass the filename to\n\tthe library was incorrect, in effect ignoring the option.</p>\n\t<h1>Impact:</h1>\n\t<p>Fetch would still connect to a host presenting a certificate\n\tincluded in the revocation file passed to the --crl option.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-24:19.fetch.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ce0f52e1-a174-11ef-9a62-002590c1f29c.html"
+					}
+				],
+				"published": "2024-11-13T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-45289",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45289"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "FreeBSD"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.3_8",
+									"ge": "13.3"
+								},
+								{
+									"lt": "13.4_2",
+									"ge": "13.4"
+								},
+								{
+									"lt": "14.1_6",
+									"ge": "14.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/ce0f52e1-a174-11ef-9a62-002590c1f29c.json"
+		]
+	}
+}

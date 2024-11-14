@@ -1,0 +1,103 @@
+{
+	"id": "33236f80-a11d-11ef-a964-1c697a616631",
+	"advisories": [
+		{
+			"content": {
+				"id": "33236f80-a11d-11ef-a964-1c697a616631",
+				"title": "Intel CPUs -- multiple vulnerabilities",
+				"description": "\n\t<p>Intel reports:</p>\n\t<blockquote cite=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01101.html\">\n\t <p>\n\t  A potential security vulnerability in some 4th and 5th Generation\n\t  Intel Xeon Processors may allow denial of service. Intel released\n\t  microcode updates to mitigate this potential vulnerability.\n\t </p>\n\t</blockquote>\n\t<blockquote cite=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01079.html\">\n\t <p>\n\t  Potential security vulnerabilities in some Intel Xeon processors using\n\t  Intel Software Guard Extensions (Intel SGX) may allow escalation of\n\t  privilege.  Intel released firmware updates to mitigate these\n\t  potential vulnerabilities.\n\t </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20241112"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/33236f80-a11d-11ef-a964-1c697a616631.html"
+					}
+				],
+				"published": "2024-09-10T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-21820",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-21820"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-21853",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-21853"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-23918",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-23918"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "cpu-microcode-intel"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "20241112"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/33236f80-a11d-11ef-a964-1c697a616631.json"
+		]
+	}
+}
