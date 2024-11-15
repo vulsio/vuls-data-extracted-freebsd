@@ -1,0 +1,160 @@
+{
+	"id": "a61ef21b-a29e-11ef-af48-6cc21735f730",
+	"advisories": [
+		{
+			"content": {
+				"id": "a61ef21b-a29e-11ef-af48-6cc21735f730",
+				"title": "PostgreSQL -- libpq retains an error message from man-in-the-middle",
+				"description": "\n\t<p>PostgreSQL project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2024-10977/\">\n\t<p>\n\tClient use of server error message in PostgreSQL allows\n\ta server not trusted under current SSL or GSS settings\n\tto furnish arbitrary non-NUL bytes to the libpq\n\tapplication. For example, a man-in-the-middle attacker\n\tcould send a long error message that a human or\n\tscreen-scraper user of psql mistakes for valid query\n\tresults. This is probably not a concern for clients\n\twhere the user interface unambiguously indicates the\n\tboundary between one error message and other text.\n\t</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.postgresql.org/support/security/CVE-2024-10977/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/a61ef21b-a29e-11ef-af48-6cc21735f730.html"
+					}
+				],
+				"published": "2024-11-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10977",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10977"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "postgresql12-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "12.21"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "postgresql13-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "13.17"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "postgresql14-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "14.14"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "postgresql15-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "15.9"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "postgresql16-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "16.5"
+								}
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "postgresql17-client"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "17.1"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/a61ef21b-a29e-11ef-af48-6cc21735f730.json"
+		]
+	}
+}

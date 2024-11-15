@@ -1,0 +1,111 @@
+{
+	"id": "6b591e05-971c-4077-8ae4-1310554971b7",
+	"advisories": [
+		{
+			"content": {
+				"id": "6b591e05-971c-4077-8ae4-1310554971b7",
+				"title": "electron31 -- multiple vulnerabilities",
+				"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v31.7.4\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2024-10231.</li>\n\t    <li>Security: backported fix for CVE-2024-10229.</li>\n\t    <li>Security: backported fix for CVE-2024-10487.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-3hjp-j522-245f"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-3wfx-mj93-vf8v"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-h72p-7xmw-gpp8"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/6b591e05-971c-4077-8ae4-1310554971b7.html"
+					}
+				],
+				"published": "2024-11-14T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10229",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10229"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10231",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10231"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10487",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10487"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "electron31"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "31.7.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/6b591e05-971c-4077-8ae4-1310554971b7.json"
+		]
+	}
+}
