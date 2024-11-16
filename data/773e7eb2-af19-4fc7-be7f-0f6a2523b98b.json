@@ -1,0 +1,93 @@
+{
+	"id": "773e7eb2-af19-4fc7-be7f-0f6a2523b98b",
+	"advisories": [
+		{
+			"content": {
+				"id": "773e7eb2-af19-4fc7-be7f-0f6a2523b98b",
+				"title": "electron31 -- multiple vulnerabilities",
+				"description": "\n\t<p>Electron developers report:</p>\n\t<blockquote cite=\"https://github.com/electron/electron/releases/tag/v31.7.5\">\n\t  <p>This update fixes the following vulnerabilities:</p>\n\t  <ul>\n\t    <li>Security: backported fix for CVE-2024-10827.</li>\n\t    <li>Security: backported fix for CVE-2024-11110.</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-4mww-gp9h-h59m"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-58wv-w3hc-2c76"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/773e7eb2-af19-4fc7-be7f-0f6a2523b98b.html"
+					}
+				],
+				"published": "2024-11-15T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10827",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-10827"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-11110",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-11110"
+					}
+				]
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "electron31"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "31.7.5"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/773e7eb2-af19-4fc7-be7f-0f6a2523b98b.json"
+		]
+	}
+}
