@@ -1,0 +1,59 @@
+{
+	"id": "aba28514-a414-11ef-98e7-84a93843eb75",
+	"advisories": [
+		{
+			"content": {
+				"id": "aba28514-a414-11ef-98e7-84a93843eb75",
+				"title": "Vaultwarden -- Multiple vulnerabilities",
+				"description": "\n\t<p>The Vaultwarden project reports:</p>\n\t<blockquote cite=\"https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.4\">\n\t  <p>This release has fixed some CVE Reports reported by a third party\n\t    security auditor and we recommend everybody to update to the\n\t    latest version as soon as possible.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/aba28514-a414-11ef-98e7-84a93843eb75.html"
+					}
+				],
+				"published": "2024-11-16T00:00:00Z"
+			},
+			"ecosystems": [
+				"freebsd"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "freebsd",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "unknown"
+						},
+						"package": {
+							"name": "vaultwarden"
+						},
+						"affected": {
+							"type": "freebsd-pkg",
+							"range": [
+								{
+									"lt": "1.32.4"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/aba28514-a414-11ef-98e7-84a93843eb75.json"
+		]
+	}
+}
