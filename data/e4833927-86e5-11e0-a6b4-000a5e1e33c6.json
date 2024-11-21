@@ -22,8 +22,10 @@
 				],
 				"published": "2011-05-25T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -38,36 +40,42 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "erlang"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "r14b03"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "erlang"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "r14b03"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

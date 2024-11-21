@@ -22,8 +22,10 @@
 				],
 				"published": "2015-12-28T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -38,112 +40,118 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "linux-c6-nss"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "3.19.2.2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "3.20.2",
-									"ge": "3.20"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "linux-firefox"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "43.0.2,1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "linux-seamonkey"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.40"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "linux-thunderbird"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "38.5.1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "nss"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "3.19.2.2"
+								"package": {
+									"name": "linux-c6-nss"
 								},
-								{
-									"lt": "3.20.2",
-									"ge": "3.20"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "3.19.2.2"
+										},
+										{
+											"lt": "3.20.2",
+											"ge": "3.20"
+										}
+									]
 								}
-							]
-						}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "linux-firefox"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "43.0.2,1"
+										}
+									]
+								}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "linux-seamonkey"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.40"
+										}
+									]
+								}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "linux-thunderbird"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "38.5.1"
+										}
+									]
+								}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "nss"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "3.19.2.2"
+										},
+										{
+											"lt": "3.20.2",
+											"ge": "3.20"
+										}
+									]
+								}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

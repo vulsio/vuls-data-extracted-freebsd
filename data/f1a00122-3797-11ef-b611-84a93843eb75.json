@@ -23,8 +23,10 @@
 				"published": "2024-07-01T00:00:00Z",
 				"modified": "2024-09-20T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -39,66 +41,72 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "FreeBSD"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "13.2_12",
-									"ge": "13.2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "13.3_4",
-									"ge": "13.3"
+								"package": {
+									"name": "FreeBSD"
 								},
-								{
-									"lt": "14.0_8",
-									"ge": "14.0"
-								},
-								{
-									"lt": "14.1_2",
-									"ge": "14.1"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "13.2_12",
+											"ge": "13.2"
+										},
+										{
+											"lt": "13.3_4",
+											"ge": "13.3"
+										},
+										{
+											"lt": "14.0_8",
+											"ge": "14.0"
+										},
+										{
+											"lt": "14.1_2",
+											"ge": "14.1"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "openssh-portable"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "9.7.p1_2,1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "openssh-portable"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "9.7.p1_2,1"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

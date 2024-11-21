@@ -23,36 +23,42 @@
 				"published": "2009-08-07T00:00:00Z",
 				"modified": "2009-08-11T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "joomla15"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "1.5.14"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "joomla15"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "1.5.14"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

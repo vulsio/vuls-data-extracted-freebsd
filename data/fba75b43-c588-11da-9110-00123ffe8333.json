@@ -23,36 +23,42 @@
 				"published": "2006-04-06T00:00:00Z",
 				"modified": "2006-04-07T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "phpMyAdmin"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.8.0.3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "phpMyAdmin"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.8.0.3"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

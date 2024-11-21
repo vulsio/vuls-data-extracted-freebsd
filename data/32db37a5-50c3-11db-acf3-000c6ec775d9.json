@@ -26,8 +26,10 @@
 				],
 				"published": "2006-09-30T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -42,8 +44,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -56,90 +60,96 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "FreeBSD"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.11_25"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "5.3_37",
-									"ge": "5.0"
+								"package": {
+									"name": "FreeBSD"
 								},
-								{
-									"lt": "5.4_22",
-									"ge": "5.4"
-								},
-								{
-									"lt": "5.5_8",
-									"ge": "5.5"
-								},
-								{
-									"lt": "6.0_15",
-									"ge": "6.0"
-								},
-								{
-									"lt": "6.1_10",
-									"ge": "6.1"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "4.11_25"
+										},
+										{
+											"lt": "5.3_37",
+											"ge": "5.0"
+										},
+										{
+											"lt": "5.4_22",
+											"ge": "5.4"
+										},
+										{
+											"lt": "5.5_8",
+											"ge": "5.5"
+										},
+										{
+											"lt": "6.0_15",
+											"ge": "6.0"
+										},
+										{
+											"lt": "6.1_10",
+											"ge": "6.1"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "openssh"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.4,1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "openssh"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "4.4,1"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "openssh-portable"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.4.p1,1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "openssh-portable"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "4.4.p1,1"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

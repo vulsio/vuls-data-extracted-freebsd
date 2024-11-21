@@ -23,8 +23,10 @@
 				"published": "2007-10-05T00:00:00Z",
 				"modified": "2011-09-04T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -39,71 +41,77 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "tk"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "8.2.3_11",
-									"gt": "8.2.*"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "8.3.5_10",
-									"gt": "8.3.*"
+								"package": {
+									"name": "tk"
 								},
-								{
-									"lt": "8.4.16,2",
-									"gt": "8.4.*,2"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "8.2.3_11",
+											"gt": "8.2.*"
+										},
+										{
+											"lt": "8.3.5_10",
+											"gt": "8.3.*"
+										},
+										{
+											"lt": "8.4.16,2",
+											"gt": "8.4.*,2"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "tk-threads"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "8.2.3_11",
-									"gt": "8.2.*"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "8.3.5_10",
-									"gt": "8.3.*"
+								"package": {
+									"name": "tk-threads"
 								},
-								{
-									"lt": "8.4.16,2",
-									"gt": "8.4.*,2"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "8.2.3_11",
+											"gt": "8.2.*"
+										},
+										{
+											"lt": "8.3.5_10",
+											"gt": "8.3.*"
+										},
+										{
+											"lt": "8.4.16,2",
+											"gt": "8.4.*,2"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

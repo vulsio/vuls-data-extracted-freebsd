@@ -19,36 +19,42 @@
 				"published": "2004-10-19T00:00:00Z",
 				"modified": "2015-05-01T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "ifmail"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2.15_4"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "ifmail"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "2.15_4"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

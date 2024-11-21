@@ -18,8 +18,10 @@
 				],
 				"published": "2023-04-09T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -34,104 +36,110 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py310-pymatgen"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2022.9.21"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "py310-pymatgen"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "2022.9.21"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py311-pymatgen"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2022.9.21"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "py311-pymatgen"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "2022.9.21"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py37-pymatgen"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2022.9.21"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "py37-pymatgen"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "2022.9.21"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py38-pymatgen"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2022.9.21"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "py38-pymatgen"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "2022.9.21"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py39-pymatgen"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "2022.9.21"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "py39-pymatgen"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "2022.9.21"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

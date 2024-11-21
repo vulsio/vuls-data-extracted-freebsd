@@ -23,8 +23,10 @@
 				"published": "2013-05-07T00:00:00Z",
 				"modified": "2013-05-16T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -39,8 +41,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -53,63 +57,69 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "nginx"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "1.2.8,1",
-									"ge": "1.2.0,1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "1.4.1,1",
-									"ge": "1.3.0,1"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "nginx-devel"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "1.2.8",
-									"ge": "1.1.4"
+								"package": {
+									"name": "nginx"
 								},
-								{
-									"lt": "1.5.0",
-									"ge": "1.3.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "1.2.8,1",
+											"ge": "1.2.0,1"
+										},
+										{
+											"lt": "1.4.1,1",
+											"ge": "1.3.0,1"
+										}
+									]
 								}
-							]
-						}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "nginx-devel"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "1.2.8",
+											"ge": "1.1.4"
+										},
+										{
+											"lt": "1.5.0",
+											"ge": "1.3.0"
+										}
+									]
+								}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

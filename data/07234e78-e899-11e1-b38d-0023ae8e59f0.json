@@ -18,8 +18,10 @@
 				],
 				"published": "2012-08-17T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -34,8 +36,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -48,49 +52,55 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "postgresql-server"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "8.3.20",
-									"gt": "8.3.*"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "8.4.13",
-									"gt": "8.4.*"
+								"package": {
+									"name": "postgresql-server"
 								},
-								{
-									"lt": "9.0.9",
-									"gt": "9.0.*"
-								},
-								{
-									"lt": "9.1.5",
-									"gt": "9.1.*"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "8.3.20",
+											"gt": "8.3.*"
+										},
+										{
+											"lt": "8.4.13",
+											"gt": "8.4.*"
+										},
+										{
+											"lt": "9.0.9",
+											"gt": "9.0.*"
+										},
+										{
+											"lt": "9.1.5",
+											"gt": "9.1.*"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

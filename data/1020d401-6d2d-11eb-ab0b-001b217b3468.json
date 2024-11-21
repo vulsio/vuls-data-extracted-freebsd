@@ -18,45 +18,51 @@
 				],
 				"published": "2021-02-12T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "gitlab-ce"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "13.6.7",
-									"ge": "10.5"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "13.7.7",
-									"ge": "13.7.0"
+								"package": {
+									"name": "gitlab-ce"
 								},
-								{
-									"lt": "13.8.4",
-									"ge": "13.8.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "13.6.7",
+											"ge": "10.5"
+										},
+										{
+											"lt": "13.7.7",
+											"ge": "13.7.0"
+										},
+										{
+											"lt": "13.8.4",
+											"ge": "13.8.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

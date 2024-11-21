@@ -18,49 +18,55 @@
 				],
 				"published": "2013-03-06T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "typo3"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.5.23",
-									"ge": "4.5.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "4.6.16",
-									"ge": "4.6.0"
+								"package": {
+									"name": "typo3"
 								},
-								{
-									"lt": "4.7.8",
-									"ge": "4.7.0"
-								},
-								{
-									"lt": "6.0.2",
-									"ge": "6.0.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "4.5.23",
+											"ge": "4.5.0"
+										},
+										{
+											"lt": "4.6.16",
+											"ge": "4.6.0"
+										},
+										{
+											"lt": "4.7.8",
+											"ge": "4.7.0"
+										},
+										{
+											"lt": "6.0.2",
+											"ge": "6.0.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

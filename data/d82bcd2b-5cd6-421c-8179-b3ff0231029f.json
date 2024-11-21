@@ -18,8 +18,10 @@
 				],
 				"published": "2023-04-09T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -34,144 +36,150 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py310-tflite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.3.4"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.3",
-									"ge": "2.4.0"
+								"package": {
+									"name": "py310-tflite"
 								},
-								{
-									"lt": "2.5.1",
-									"ge": "2.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.3.4"
+										},
+										{
+											"lt": "2.4.3",
+											"ge": "2.4.0"
+										},
+										{
+											"lt": "2.5.1",
+											"ge": "2.5.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py311-tflite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.3.4"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.3",
-									"ge": "2.4.0"
+								"package": {
+									"name": "py311-tflite"
 								},
-								{
-									"lt": "2.5.1",
-									"ge": "2.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.3.4"
+										},
+										{
+											"lt": "2.4.3",
+											"ge": "2.4.0"
+										},
+										{
+											"lt": "2.5.1",
+											"ge": "2.5.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py37-tflite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.3.4"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.3",
-									"ge": "2.4.0"
+								"package": {
+									"name": "py37-tflite"
 								},
-								{
-									"lt": "2.5.1",
-									"ge": "2.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.3.4"
+										},
+										{
+											"lt": "2.4.3",
+											"ge": "2.4.0"
+										},
+										{
+											"lt": "2.5.1",
+											"ge": "2.5.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py38-tflite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.3.4"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.3",
-									"ge": "2.4.0"
+								"package": {
+									"name": "py38-tflite"
 								},
-								{
-									"lt": "2.5.1",
-									"ge": "2.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.3.4"
+										},
+										{
+											"lt": "2.4.3",
+											"ge": "2.4.0"
+										},
+										{
+											"lt": "2.5.1",
+											"ge": "2.5.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py39-tflite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.3.4"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.3",
-									"ge": "2.4.0"
+								"package": {
+									"name": "py39-tflite"
 								},
-								{
-									"lt": "2.5.1",
-									"ge": "2.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.3.4"
+										},
+										{
+											"lt": "2.4.3",
+											"ge": "2.4.0"
+										},
+										{
+											"lt": "2.5.1",
+											"ge": "2.5.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

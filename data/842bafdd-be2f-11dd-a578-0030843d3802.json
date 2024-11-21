@@ -22,8 +22,10 @@
 				],
 				"published": "2008-11-29T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -38,8 +40,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -52,82 +56,88 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "openoffice.org-2"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"ge": "2.4.20040402"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.2",
-									"ge": "2.4"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "openoffice.org-2-RC"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"ge": "2.4.20040402"
+								"package": {
+									"name": "openoffice.org-2"
 								},
-								{
-									"lt": "2.4.2",
-									"ge": "2.4"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"ge": "2.4.20040402"
+										},
+										{
+											"lt": "2.4.2",
+											"ge": "2.4"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "openoffice.org-2-devel"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"ge": "2.4.20040402"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.4.2",
-									"ge": "2.4"
+								"package": {
+									"name": "openoffice.org-2-RC"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"ge": "2.4.20040402"
+										},
+										{
+											"lt": "2.4.2",
+											"ge": "2.4"
+										}
+									]
 								}
-							]
-						}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "openoffice.org-2-devel"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"ge": "2.4.20040402"
+										},
+										{
+											"lt": "2.4.2",
+											"ge": "2.4"
+										}
+									]
+								}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

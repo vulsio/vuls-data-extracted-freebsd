@@ -22,45 +22,51 @@
 				],
 				"published": "2004-02-13T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "libtool"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "1.3.5_2",
-									"ge": "1.3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "1.4.3_3",
-									"ge": "1.4"
+								"package": {
+									"name": "libtool"
 								},
-								{
-									"lt": "1.5.2",
-									"ge": "1.5"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "1.3.5_2",
+											"ge": "1.3"
+										},
+										{
+											"lt": "1.4.3_3",
+											"ge": "1.4"
+										},
+										{
+											"lt": "1.5.2",
+											"ge": "1.5"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

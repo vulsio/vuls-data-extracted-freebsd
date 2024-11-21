@@ -23,8 +23,10 @@
 				"published": "2016-11-09T00:00:00Z",
 				"modified": "2017-05-18T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -39,49 +41,55 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "gitlab"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "8.10.12",
-									"ge": "8.10.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"le": "8.11.9",
-									"ge": "8.11.0"
+								"package": {
+									"name": "gitlab"
 								},
-								{
-									"le": "8.12.7",
-									"ge": "8.12.0"
-								},
-								{
-									"le": "8.13.2",
-									"ge": "8.13.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "8.10.12",
+											"ge": "8.10.0"
+										},
+										{
+											"le": "8.11.9",
+											"ge": "8.11.0"
+										},
+										{
+											"le": "8.12.7",
+											"ge": "8.12.0"
+										},
+										{
+											"le": "8.13.2",
+											"ge": "8.13.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

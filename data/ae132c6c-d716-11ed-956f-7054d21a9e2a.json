@@ -22,8 +22,10 @@
 				],
 				"published": "2023-04-09T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -38,8 +40,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -52,144 +56,150 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py310-tensorflow"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.10.1",
-									"ge": "2.10.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.8.4"
+								"package": {
+									"name": "py310-tensorflow"
 								},
-								{
-									"lt": "2.9.3",
-									"ge": "2.9.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.10.1",
+											"ge": "2.10.0"
+										},
+										{
+											"lt": "2.8.4"
+										},
+										{
+											"lt": "2.9.3",
+											"ge": "2.9.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py311-tensorflow"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.10.1",
-									"ge": "2.10.0"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.8.4"
+								"package": {
+									"name": "py311-tensorflow"
 								},
-								{
-									"lt": "2.9.3",
-									"ge": "2.9.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.10.1",
+											"ge": "2.10.0"
+										},
+										{
+											"lt": "2.8.4"
+										},
+										{
+											"lt": "2.9.3",
+											"ge": "2.9.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py37-tensorflow"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.10.1",
-									"ge": "2.10.0"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.8.4"
+								"package": {
+									"name": "py37-tensorflow"
 								},
-								{
-									"lt": "2.9.3",
-									"ge": "2.9.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.10.1",
+											"ge": "2.10.0"
+										},
+										{
+											"lt": "2.8.4"
+										},
+										{
+											"lt": "2.9.3",
+											"ge": "2.9.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py38-tensorflow"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.10.1",
-									"ge": "2.10.0"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.8.4"
+								"package": {
+									"name": "py38-tensorflow"
 								},
-								{
-									"lt": "2.9.3",
-									"ge": "2.9.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.10.1",
+											"ge": "2.10.0"
+										},
+										{
+											"lt": "2.8.4"
+										},
+										{
+											"lt": "2.9.3",
+											"ge": "2.9.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "py39-tensorflow"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.10.1",
-									"ge": "2.10.0"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.8.4"
+								"package": {
+									"name": "py39-tensorflow"
 								},
-								{
-									"lt": "2.9.3",
-									"ge": "2.9.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.10.1",
+											"ge": "2.10.0"
+										},
+										{
+											"lt": "2.8.4"
+										},
+										{
+											"lt": "2.9.3",
+											"ge": "2.9.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

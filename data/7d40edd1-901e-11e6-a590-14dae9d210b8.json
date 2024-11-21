@@ -23,8 +23,10 @@
 				"published": "2016-10-12T00:00:00Z",
 				"modified": "2016-10-18T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -39,8 +41,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -53,53 +57,59 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "virtualbox-ose"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "4.0.34",
-									"ge": "4.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "4.1.42",
-									"ge": "4.1"
+								"package": {
+									"name": "virtualbox-ose"
 								},
-								{
-									"lt": "4.2.34",
-									"ge": "4.2"
-								},
-								{
-									"lt": "4.3.32",
-									"ge": "4.3"
-								},
-								{
-									"lt": "5.0.8",
-									"ge": "5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "4.0.34",
+											"ge": "4.0"
+										},
+										{
+											"lt": "4.1.42",
+											"ge": "4.1"
+										},
+										{
+											"lt": "4.2.34",
+											"ge": "4.2"
+										},
+										{
+											"lt": "4.3.32",
+											"ge": "4.3"
+										},
+										{
+											"lt": "5.0.8",
+											"ge": "5.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

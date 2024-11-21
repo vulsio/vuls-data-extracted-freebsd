@@ -22,8 +22,10 @@
 				],
 				"published": "2018-06-02T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -38,8 +40,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -52,85 +56,91 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "git"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.13.7"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.14.4",
-									"ge": "2.14"
+								"package": {
+									"name": "git"
 								},
-								{
-									"lt": "2.15.2",
-									"ge": "2.15"
-								},
-								{
-									"lt": "2.16.4",
-									"ge": "2.16"
-								},
-								{
-									"lt": "2.17.1",
-									"ge": "2.17"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.13.7"
+										},
+										{
+											"lt": "2.14.4",
+											"ge": "2.14"
+										},
+										{
+											"lt": "2.15.2",
+											"ge": "2.15"
+										},
+										{
+											"lt": "2.16.4",
+											"ge": "2.16"
+										},
+										{
+											"lt": "2.17.1",
+											"ge": "2.17"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "git-lite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.13.7"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.14.4",
-									"ge": "2.14"
+								"package": {
+									"name": "git-lite"
 								},
-								{
-									"lt": "2.15.2",
-									"ge": "2.15"
-								},
-								{
-									"lt": "2.16.4",
-									"ge": "2.16"
-								},
-								{
-									"lt": "2.17.1",
-									"ge": "2.17"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.13.7"
+										},
+										{
+											"lt": "2.14.4",
+											"ge": "2.14"
+										},
+										{
+											"lt": "2.15.2",
+											"ge": "2.15"
+										},
+										{
+											"lt": "2.16.4",
+											"ge": "2.16"
+										},
+										{
+											"lt": "2.17.1",
+											"ge": "2.17"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

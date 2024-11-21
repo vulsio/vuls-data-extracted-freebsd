@@ -18,8 +18,10 @@
 				],
 				"published": "2024-10-24T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -34,8 +36,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -48,71 +52,77 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "gitlab-ce"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "17.3.6",
-									"ge": "11.2.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "17.4.3",
-									"ge": "17.4.0"
+								"package": {
+									"name": "gitlab-ce"
 								},
-								{
-									"lt": "17.5.1",
-									"ge": "17.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "17.3.6",
+											"ge": "11.2.0"
+										},
+										{
+											"lt": "17.4.3",
+											"ge": "17.4.0"
+										},
+										{
+											"lt": "17.5.1",
+											"ge": "17.5.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "gitlab-ee"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "17.3.6",
-									"ge": "11.2.0"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "17.4.3",
-									"ge": "17.4.0"
+								"package": {
+									"name": "gitlab-ee"
 								},
-								{
-									"lt": "17.5.1",
-									"ge": "17.5.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "17.3.6",
+											"ge": "11.2.0"
+										},
+										{
+											"lt": "17.4.3",
+											"ge": "17.4.0"
+										},
+										{
+											"lt": "17.5.1",
+											"ge": "17.5.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

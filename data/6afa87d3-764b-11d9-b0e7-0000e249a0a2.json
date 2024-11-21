@@ -19,8 +19,10 @@
 				"published": "2005-02-03T00:00:00Z",
 				"modified": "2006-10-08T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -35,79 +37,85 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "python"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.2.3_7",
-									"ge": "2.2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.3.4_4",
-									"ge": "2.3"
+								"package": {
+									"name": "python"
 								},
-								{
-									"lt": "2.4_1",
-									"ge": "2.4"
-								},
-								{
-									"lt": "2.5.a0.20050129_1",
-									"ge": "2.5.a0.20050129"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.2.3_7",
+											"ge": "2.2"
+										},
+										{
+											"lt": "2.3.4_4",
+											"ge": "2.3"
+										},
+										{
+											"lt": "2.4_1",
+											"ge": "2.4"
+										},
+										{
+											"lt": "2.5.a0.20050129_1",
+											"ge": "2.5.a0.20050129"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "python+ipv6"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.2.3_7",
-									"ge": "2.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.3.4_4",
-									"ge": "2.3"
+								"package": {
+									"name": "python+ipv6"
 								},
-								{
-									"lt": "2.4_1",
-									"ge": "2.4"
-								},
-								{
-									"lt": "2.5.a0.20050129_1",
-									"ge": "2.5.a0.20050129"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.2.3_7",
+											"ge": "2.2"
+										},
+										{
+											"lt": "2.3.4_4",
+											"ge": "2.3"
+										},
+										{
+											"lt": "2.4_1",
+											"ge": "2.4"
+										},
+										{
+											"lt": "2.5.a0.20050129_1",
+											"ge": "2.5.a0.20050129"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

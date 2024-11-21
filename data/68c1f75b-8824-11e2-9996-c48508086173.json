@@ -19,8 +19,10 @@
 				"published": "2013-03-10T00:00:00Z",
 				"modified": "2016-08-22T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -35,69 +37,75 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "perl"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "5.12.4_5"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "5.14.2_3",
-									"ge": "5.14.0"
+								"package": {
+									"name": "perl"
 								},
-								{
-									"lt": "5.16.2_1",
-									"ge": "5.16.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "5.12.4_5"
+										},
+										{
+											"lt": "5.14.2_3",
+											"ge": "5.14.0"
+										},
+										{
+											"lt": "5.16.2_1",
+											"ge": "5.16.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "perl-threaded"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "5.12.4_5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "5.14.2_3",
-									"ge": "5.14.0"
+								"package": {
+									"name": "perl-threaded"
 								},
-								{
-									"lt": "5.16.2_1",
-									"ge": "5.16.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "5.12.4_5"
+										},
+										{
+											"lt": "5.14.2_3",
+											"ge": "5.14.0"
+										},
+										{
+											"lt": "5.16.2_1",
+											"ge": "5.16.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

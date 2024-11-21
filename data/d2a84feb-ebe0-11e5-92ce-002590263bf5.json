@@ -22,8 +22,10 @@
 				],
 				"published": "2016-03-18T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -38,135 +40,141 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "git"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.4.11"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.5.5",
-									"ge": "2.5.0"
+								"package": {
+									"name": "git"
 								},
-								{
-									"lt": "2.6.6",
-									"ge": "2.6.0"
-								},
-								{
-									"lt": "2.7.4",
-									"ge": "2.7.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.4.11"
+										},
+										{
+											"lt": "2.5.5",
+											"ge": "2.5.0"
+										},
+										{
+											"lt": "2.6.6",
+											"ge": "2.6.0"
+										},
+										{
+											"lt": "2.7.4",
+											"ge": "2.7.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "git-gui"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.4.11"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.5.5",
-									"ge": "2.5.0"
+								"package": {
+									"name": "git-gui"
 								},
-								{
-									"lt": "2.6.6",
-									"ge": "2.6.0"
-								},
-								{
-									"lt": "2.7.4",
-									"ge": "2.7.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.4.11"
+										},
+										{
+											"lt": "2.5.5",
+											"ge": "2.5.0"
+										},
+										{
+											"lt": "2.6.6",
+											"ge": "2.6.0"
+										},
+										{
+											"lt": "2.7.4",
+											"ge": "2.7.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "git-lite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.4.11"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.5.5",
-									"ge": "2.5.0"
+								"package": {
+									"name": "git-lite"
 								},
-								{
-									"lt": "2.6.6",
-									"ge": "2.6.0"
-								},
-								{
-									"lt": "2.7.4",
-									"ge": "2.7.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.4.11"
+										},
+										{
+											"lt": "2.5.5",
+											"ge": "2.5.0"
+										},
+										{
+											"lt": "2.6.6",
+											"ge": "2.6.0"
+										},
+										{
+											"lt": "2.7.4",
+											"ge": "2.7.0"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "git-subversion"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "2.4.11"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "2.5.5",
-									"ge": "2.5.0"
+								"package": {
+									"name": "git-subversion"
 								},
-								{
-									"lt": "2.6.6",
-									"ge": "2.6.0"
-								},
-								{
-									"lt": "2.7.4",
-									"ge": "2.7.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "2.4.11"
+										},
+										{
+											"lt": "2.5.5",
+											"ge": "2.5.0"
+										},
+										{
+											"lt": "2.6.6",
+											"ge": "2.6.0"
+										},
+										{
+											"lt": "2.7.4",
+											"ge": "2.7.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

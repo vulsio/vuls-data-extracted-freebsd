@@ -18,8 +18,10 @@
 				],
 				"published": "2018-11-28T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -34,45 +36,51 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "payara"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"eq": "4.1.2.181.3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"eq": "4.1.2.182"
+								"package": {
+									"name": "payara"
 								},
-								{
-									"eq": "5.181.3"
-								},
-								{
-									"eq": "5.182"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"eq": "4.1.2.181.3"
+										},
+										{
+											"eq": "4.1.2.182"
+										},
+										{
+											"eq": "5.181.3"
+										},
+										{
+											"eq": "5.182"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

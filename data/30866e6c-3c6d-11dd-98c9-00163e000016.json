@@ -18,8 +18,10 @@
 				],
 				"published": "2008-06-21T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -34,151 +36,157 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "vim"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "6.4.10",
-									"gt": "6"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "7.1.315",
-									"gt": "7"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "vim-console"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "6.4.10",
-									"gt": "6"
+								"package": {
+									"name": "vim"
 								},
-								{
-									"lt": "7.1.315",
-									"gt": "7"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "6.4.10",
+											"gt": "6"
+										},
+										{
+											"lt": "7.1.315",
+											"gt": "7"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "vim-lite"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "6.4.10",
-									"gt": "6"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "7.1.315",
-									"gt": "7"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "vim-ruby"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "6.4.10",
-									"gt": "6"
+								"package": {
+									"name": "vim-console"
 								},
-								{
-									"lt": "7.1.315",
-									"gt": "7"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "6.4.10",
+											"gt": "6"
+										},
+										{
+											"lt": "7.1.315",
+											"gt": "7"
+										}
+									]
 								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "vim6"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "6.4.10",
-									"gt": "6"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "7.1.315",
-									"gt": "7"
-								}
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "vim6-ruby"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "6.4.10",
-									"gt": "6"
+								"package": {
+									"name": "vim-lite"
 								},
-								{
-									"lt": "7.1.315",
-									"gt": "7"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "6.4.10",
+											"gt": "6"
+										},
+										{
+											"lt": "7.1.315",
+											"gt": "7"
+										}
+									]
 								}
-							]
-						}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "vim-ruby"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "6.4.10",
+											"gt": "6"
+										},
+										{
+											"lt": "7.1.315",
+											"gt": "7"
+										}
+									]
+								}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "vim6"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "6.4.10",
+											"gt": "6"
+										},
+										{
+											"lt": "7.1.315",
+											"gt": "7"
+										}
+									]
+								}
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
+								},
+								"package": {
+									"name": "vim6-ruby"
+								},
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "6.4.10",
+											"gt": "6"
+										},
+										{
+											"lt": "7.1.315",
+											"gt": "7"
+										}
+									]
+								}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

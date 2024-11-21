@@ -26,8 +26,10 @@
 				],
 				"published": "2018-02-23T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -42,8 +44,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -56,49 +60,55 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "tomcat"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"le": "7.0.84",
-									"ge": "7.0.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"le": "8.0.49",
-									"ge": "8.0.0"
+								"package": {
+									"name": "tomcat"
 								},
-								{
-									"le": "8.5.27",
-									"ge": "8.5.0"
-								},
-								{
-									"le": "9.0.4",
-									"ge": "9.0.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"le": "7.0.84",
+											"ge": "7.0.0"
+										},
+										{
+											"le": "8.0.49",
+											"ge": "8.0.0"
+										},
+										{
+											"le": "8.5.27",
+											"ge": "8.5.0"
+										},
+										{
+											"le": "9.0.4",
+											"ge": "9.0.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

@@ -15,8 +15,10 @@
 				"published": "2012-05-10T00:00:00Z",
 				"modified": "2012-09-12T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -31,8 +33,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -45,48 +49,54 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "nvidia-driver"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "173.14.35",
-									"gt": "96.43.20_3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "295.71",
-									"gt": "173.14.35_2"
+								"package": {
+									"name": "nvidia-driver"
 								},
-								{
-									"lt": "71.86.15_2"
-								},
-								{
-									"lt": "96.43.20_2",
-									"gt": "71.86.15_3"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "173.14.35",
+											"gt": "96.43.20_3"
+										},
+										{
+											"lt": "295.71",
+											"gt": "173.14.35_2"
+										},
+										{
+											"lt": "71.86.15_2"
+										},
+										{
+											"lt": "96.43.20_2",
+											"gt": "71.86.15_3"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

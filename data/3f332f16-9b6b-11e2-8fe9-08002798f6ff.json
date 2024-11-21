@@ -14,8 +14,10 @@
 				],
 				"published": "2013-04-04T00:00:00Z"
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
@@ -30,8 +32,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -44,8 +48,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		},
 		{
@@ -58,53 +64,59 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"freebsd"
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "freebsd",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "unknown"
-						},
-						"package": {
-							"name": "postgresql-server"
-						},
-						"affected": {
-							"type": "freebsd-pkg",
-							"range": [
-								{
-									"lt": "8.3.21_1",
-									"ge": "8.3.0"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "unknown"
 								},
-								{
-									"lt": "8.4.17",
-									"ge": "8.4.0"
+								"package": {
+									"name": "postgresql-server"
 								},
-								{
-									"lt": "9.0.13",
-									"ge": "9.0.0"
-								},
-								{
-									"lt": "9.1.9",
-									"ge": "9.1.0"
-								},
-								{
-									"lt": "9.2.4",
-									"ge": "9.2.0"
+								"affected": {
+									"type": "freebsd-pkg",
+									"range": [
+										{
+											"lt": "8.3.21_1",
+											"ge": "8.3.0"
+										},
+										{
+											"lt": "8.4.17",
+											"ge": "8.4.0"
+										},
+										{
+											"lt": "9.0.13",
+											"ge": "9.0.0"
+										},
+										{
+											"lt": "9.1.9",
+											"ge": "9.1.0"
+										},
+										{
+											"lt": "9.2.4",
+											"ge": "9.2.0"
+										}
+									]
 								}
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {
