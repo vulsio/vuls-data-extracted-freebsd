@@ -52,21 +52,24 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "bouncycastle15"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.67",
-											"ge": "1.65"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "bouncycastle15"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.67",
+												"ge": "1.65"
+											}
+										]
+									}
 								}
 							}
 						]

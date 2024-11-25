@@ -173,28 +173,31 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "openoffice.org"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "3.2.0"
-										},
-										{
-											"lt": "3.2.20100203",
-											"ge": "3.2.20010101"
-										},
-										{
-											"lt": "3.3.20100207",
-											"ge": "3.3.20010101"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "openoffice.org"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.2.0"
+											},
+											{
+												"lt": "3.2.20100203",
+												"ge": "3.2.20010101"
+											},
+											{
+												"lt": "3.3.20100207",
+												"ge": "3.3.20010101"
+											}
+										]
+									}
 								}
 							}
 						]

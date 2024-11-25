@@ -68,20 +68,23 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "quiche"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "0.20.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "quiche"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "0.20.1"
+											}
+										]
+									}
 								}
 							}
 						]

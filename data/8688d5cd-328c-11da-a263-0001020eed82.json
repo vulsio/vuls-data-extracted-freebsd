@@ -61,37 +61,43 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "cfengine"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.1.6_1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "cfengine"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.1.6_1"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "cfengine2"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"gt": "0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "cfengine2"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"gt": "0"
+											}
+										]
+									}
 								}
 							}
 						]

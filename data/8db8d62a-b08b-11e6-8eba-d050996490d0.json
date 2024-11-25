@@ -200,37 +200,43 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ntp"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.2.8p9"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ntp"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.2.8p9"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ntp-devel"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"gt": "0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ntp-devel"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"gt": "0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -52,28 +52,31 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "openvpn"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.0.11"
-										},
-										{
-											"lt": "2.2.3",
-											"ge": "2.1.0"
-										},
-										{
-											"lt": "2.3.6",
-											"ge": "2.3.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "openvpn"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.0.11"
+											},
+											{
+												"lt": "2.2.3",
+												"ge": "2.1.0"
+											},
+											{
+												"lt": "2.3.6",
+												"ge": "2.3.0"
+											}
+										]
+									}
 								}
 							}
 						]

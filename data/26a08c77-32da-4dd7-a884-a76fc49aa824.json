@@ -39,25 +39,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "jakarta-tomcat"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "5.0.30_5",
-											"ge": "5.0.*"
-										},
-										{
-											"lt": "5.5.7",
-											"ge": "5.5.*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "jakarta-tomcat"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "5.0.30_5",
+												"ge": "5.0.*"
+											},
+											{
+												"lt": "5.5.7",
+												"ge": "5.5.*"
+											}
+										]
+									}
 								}
 							}
 						]

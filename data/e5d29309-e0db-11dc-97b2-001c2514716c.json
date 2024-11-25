@@ -52,24 +52,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "openldap-server"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.3.41"
-										},
-										{
-											"lt": "2.4.8",
-											"gt": "2.4.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "openldap-server"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.3.41"
+											},
+											{
+												"lt": "2.4.8",
+												"gt": "2.4.0"
+											}
+										]
+									}
 								}
 							}
 						]

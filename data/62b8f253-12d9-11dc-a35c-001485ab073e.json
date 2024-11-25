@@ -56,25 +56,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "typo3"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.0.5",
-											"gt": "3.0"
-										},
-										{
-											"lt": "4.1.1",
-											"gt": "4.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "typo3"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.0.5",
+												"gt": "3.0"
+											},
+											{
+												"lt": "4.1.1",
+												"gt": "4.1"
+											}
+										]
+									}
 								}
 							}
 						]

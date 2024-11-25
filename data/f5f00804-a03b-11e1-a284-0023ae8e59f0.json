@@ -53,25 +53,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "inspircd"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.2.9",
-											"ge": "1.2"
-										},
-										{
-											"lt": "2.0.5_2",
-											"ge": "2.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "inspircd"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.2.9",
+												"ge": "1.2"
+											},
+											{
+												"lt": "2.0.5_2",
+												"ge": "2.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -69,21 +69,24 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "apache"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "2.0.48_3",
-											"ge": "2.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "apache"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "2.0.48_3",
+												"ge": "2.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -76,28 +76,31 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "redmine"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.6.8"
-										},
-										{
-											"lt": "3.0.6",
-											"ge": "3.0.0"
-										},
-										{
-											"lt": "3.1.2",
-											"ge": "3.1.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "redmine"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.6.8"
+											},
+											{
+												"lt": "3.0.6",
+												"ge": "3.0.0"
+											},
+											{
+												"lt": "3.1.2",
+												"ge": "3.1.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -196,29 +196,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "gitlab-ce"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "15.4.6",
-											"ge": "9.3.0"
-										},
-										{
-											"lt": "15.5.5",
-											"ge": "15.5.0"
-										},
-										{
-											"lt": "15.6.1",
-											"ge": "15.6.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "gitlab-ce"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "15.4.6",
+												"ge": "9.3.0"
+											},
+											{
+												"lt": "15.5.5",
+												"ge": "15.5.0"
+											},
+											{
+												"lt": "15.6.1",
+												"ge": "15.6.0"
+											}
+										]
+									}
 								}
 							}
 						]

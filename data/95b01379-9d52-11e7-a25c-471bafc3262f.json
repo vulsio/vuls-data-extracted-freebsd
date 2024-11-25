@@ -116,29 +116,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ruby"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.2.8",
-											"ge": "2.2.0"
-										},
-										{
-											"lt": "2.3.5",
-											"ge": "2.3.0"
-										},
-										{
-											"lt": "2.4.2",
-											"ge": "2.4.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ruby"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.2.8",
+												"ge": "2.2.0"
+											},
+											{
+												"lt": "2.3.5",
+												"ge": "2.3.0"
+											},
+											{
+												"lt": "2.4.2",
+												"ge": "2.4.0"
+											}
+										]
+									}
 								}
 							}
 						]

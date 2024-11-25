@@ -57,25 +57,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "apache-solr"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "6.6.1",
-											"ge": "5.1"
-										},
-										{
-											"lt": "7.1",
-											"ge": "7.0.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "apache-solr"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "6.6.1",
+												"ge": "5.1"
+											},
+											{
+												"lt": "7.1",
+												"ge": "7.0.0"
+											}
+										]
+									}
 								}
 							}
 						]

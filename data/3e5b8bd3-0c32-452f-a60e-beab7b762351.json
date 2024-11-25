@@ -38,20 +38,23 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "transmission-daemon"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "2.92_3"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "transmission-daemon"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "2.92_3"
+											}
+										]
+									}
 								}
 							}
 						]

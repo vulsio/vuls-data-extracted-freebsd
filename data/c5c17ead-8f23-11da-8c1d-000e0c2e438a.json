@@ -53,50 +53,56 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.10_18",
-											"ge": "4.10"
-										},
-										{
-											"lt": "4.11_12",
-											"ge": "4.11"
-										},
-										{
-											"lt": "5.3_22",
-											"ge": "5.3"
-										},
-										{
-											"lt": "5.4_7",
-											"ge": "5.4"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.10_18",
+												"ge": "4.10"
+											},
+											{
+												"lt": "4.11_12",
+												"ge": "4.11"
+											},
+											{
+												"lt": "5.3_22",
+												"ge": "5.3"
+											},
+											{
+												"lt": "5.4_7",
+												"ge": "5.4"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "cvs+ipv6"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.11.17_1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "cvs+ipv6"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.11.17_1"
+											}
+										]
+									}
 								}
 							}
 						]

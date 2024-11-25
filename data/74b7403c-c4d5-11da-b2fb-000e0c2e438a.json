@@ -56,25 +56,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "mediawiki"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.4.14",
-											"ge": "1.4"
-										},
-										{
-											"lt": "1.5.7",
-											"ge": "1.5"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "mediawiki"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.4.14",
+												"ge": "1.4"
+											},
+											{
+												"lt": "1.5.7",
+												"ge": "1.5"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -72,24 +72,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "roundcube"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.0.6,1"
-										},
-										{
-											"lt": "1.1.2,1",
-											"ge": "1.1.0,1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "roundcube"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.0.6,1"
+											},
+											{
+												"lt": "1.1.2,1",
+												"ge": "1.1.0,1"
+											}
+										]
+									}
 								}
 							}
 						]

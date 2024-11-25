@@ -69,21 +69,24 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "leafnode"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "1.9.41",
-											"ge": "1.9.3"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "leafnode"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "1.9.41",
+												"ge": "1.9.3"
+											}
+										]
+									}
 								}
 							}
 						]

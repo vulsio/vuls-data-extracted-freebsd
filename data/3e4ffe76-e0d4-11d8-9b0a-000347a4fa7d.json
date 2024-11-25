@@ -60,21 +60,24 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "sox"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "12.17.4_1",
-											"gt": "12.17.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "sox"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "12.17.4_1",
+												"gt": "12.17.1"
+											}
+										]
+									}
 								}
 							}
 						]

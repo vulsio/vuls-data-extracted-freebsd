@@ -57,36 +57,39 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.7_26"
-										},
-										{
-											"lt": "4.8_16",
-											"ge": "4.8"
-										},
-										{
-											"lt": "4.9_3",
-											"ge": "4.9"
-										},
-										{
-											"lt": "5.1_15",
-											"ge": "5.0"
-										},
-										{
-											"lt": "5.2.1_2",
-											"ge": "5.2"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.7_26"
+											},
+											{
+												"lt": "4.8_16",
+												"ge": "4.8"
+											},
+											{
+												"lt": "4.9_3",
+												"ge": "4.9"
+											},
+											{
+												"lt": "5.1_15",
+												"ge": "5.0"
+											},
+											{
+												"lt": "5.2.1_2",
+												"ge": "5.2"
+											}
+										]
+									}
 								}
 							}
 						]

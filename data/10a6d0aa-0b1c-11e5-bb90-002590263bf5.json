@@ -61,25 +61,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "libzmq4"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.0.6",
-											"ge": "4.0.0"
-										},
-										{
-											"lt": "4.1.1",
-											"ge": "4.1.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "libzmq4"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.0.6",
+												"ge": "4.0.0"
+											},
+											{
+												"lt": "4.1.1",
+												"ge": "4.1.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -61,50 +61,56 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "7.3_9",
-											"ge": "7.3"
-										},
-										{
-											"lt": "7.4_5",
-											"ge": "7.4"
-										},
-										{
-											"lt": "8.1_7",
-											"ge": "8.1"
-										},
-										{
-											"lt": "8.2_5",
-											"ge": "8.2"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.3_9",
+												"ge": "7.3"
+											},
+											{
+												"lt": "7.4_5",
+												"ge": "7.4"
+											},
+											{
+												"lt": "8.1_7",
+												"ge": "8.1"
+											},
+											{
+												"lt": "8.2_5",
+												"ge": "8.2"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "krb5-appl"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.0.2_1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "krb5-appl"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.0.2_1"
+											}
+										]
+									}
 								}
 							}
 						]

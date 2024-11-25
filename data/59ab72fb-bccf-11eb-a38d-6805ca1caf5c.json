@@ -52,24 +52,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "prometheus2"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.26.1",
-											"ge": "2.23.0"
-										},
-										{
-											"eq": "2.27.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "prometheus2"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.26.1",
+												"ge": "2.23.0"
+											},
+											{
+												"eq": "2.27.0"
+											}
+										]
+									}
 								}
 							}
 						]

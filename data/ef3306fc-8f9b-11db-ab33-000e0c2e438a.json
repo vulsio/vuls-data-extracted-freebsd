@@ -69,55 +69,61 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "5.3_33",
-											"ge": "5.0"
-										},
-										{
-											"lt": "5.4_18",
-											"ge": "5.4"
-										},
-										{
-											"lt": "5.5_4",
-											"ge": "5.5"
-										},
-										{
-											"lt": "6.0_11",
-											"ge": "6.0"
-										},
-										{
-											"lt": "6.1_6",
-											"ge": "6.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "5.3_33",
+												"ge": "5.0"
+											},
+											{
+												"lt": "5.4_18",
+												"ge": "5.4"
+											},
+											{
+												"lt": "5.5_4",
+												"ge": "5.5"
+											},
+											{
+												"lt": "6.0_11",
+												"ge": "6.0"
+											},
+											{
+												"lt": "6.1_6",
+												"ge": "6.1"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "bind9"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "9.3.2.1",
-											"ge": "9.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "bind9"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "9.3.2.1",
+												"ge": "9.0"
+											}
+										]
+									}
 								}
 							}
 						]

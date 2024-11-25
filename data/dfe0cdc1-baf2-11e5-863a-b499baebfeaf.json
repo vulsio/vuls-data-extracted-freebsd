@@ -73,47 +73,53 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "10.1_27",
-											"ge": "10.1"
-										},
-										{
-											"lt": "10.2_10",
-											"ge": "10.2"
-										},
-										{
-											"lt": "9.3_34",
-											"ge": "9.3"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "10.1_27",
+												"ge": "10.1"
+											},
+											{
+												"lt": "10.2_10",
+												"ge": "10.2"
+											},
+											{
+												"lt": "9.3_34",
+												"ge": "9.3"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "openssh-portable"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "7.1.p2,1",
-											"gt": "5.4.p0,1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "openssh-portable"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.1.p2,1",
+												"gt": "5.4.p0,1"
+											}
+										]
+									}
 								}
 							}
 						]

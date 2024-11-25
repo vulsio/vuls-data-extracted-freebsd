@@ -52,26 +52,29 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "exim"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.84.2"
-										},
-										{
-											"lt": "4.85.2"
-										},
-										{
-											"lt": "4.86.2"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "exim"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.84.2"
+											},
+											{
+												"lt": "4.85.2"
+											},
+											{
+												"lt": "4.86.2"
+											}
+										]
+									}
 								}
 							}
 						]

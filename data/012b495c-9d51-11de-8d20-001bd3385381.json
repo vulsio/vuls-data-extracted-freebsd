@@ -61,25 +61,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "cyrus-imapd"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.2.13_6",
-											"gt": "2.2.0"
-										},
-										{
-											"lt": "2.3.14_2",
-											"gt": "2.3.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "cyrus-imapd"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.2.13_6",
+												"gt": "2.2.0"
+											},
+											{
+												"lt": "2.3.14_2",
+												"gt": "2.3.0"
+											}
+										]
+									}
 								}
 							}
 						]

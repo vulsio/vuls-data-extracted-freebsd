@@ -69,24 +69,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "fetchmail"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "6.3.9"
-										},
-										{
-											"lt": "6.4.20",
-											"ge": "6.3.17"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "fetchmail"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "6.3.9"
+											},
+											{
+												"lt": "6.4.20",
+												"ge": "6.3.17"
+											}
+										]
+									}
 								}
 							}
 						]

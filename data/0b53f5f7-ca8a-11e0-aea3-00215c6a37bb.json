@@ -52,24 +52,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "dovecot"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.2.17"
-										},
-										{
-											"lt": "2.0.13",
-											"gt": "2.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "dovecot"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.2.17"
+											},
+											{
+												"lt": "2.0.13",
+												"gt": "2.0"
+											}
+										]
+									}
 								}
 							}
 						]

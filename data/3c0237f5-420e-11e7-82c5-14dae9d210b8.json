@@ -100,25 +100,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "10.3_18",
-											"ge": "10.3"
-										},
-										{
-											"lt": "11.0_9",
-											"ge": "11.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "10.3_18",
+												"ge": "10.3"
+											},
+											{
+												"lt": "11.0_9",
+												"ge": "11.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -57,24 +57,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "miniupnpc"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.9.20150917",
-											"ge": "1.9.1"
-										},
-										{
-											"lt": "1.9_1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "miniupnpc"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.9.20150917",
+												"ge": "1.9.1"
+											},
+											{
+												"lt": "1.9_1"
+											}
+										]
+									}
 								}
 							}
 						]

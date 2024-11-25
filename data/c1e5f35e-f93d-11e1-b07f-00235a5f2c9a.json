@@ -61,25 +61,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "emacs"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "23.4_2",
-											"gt": "23.*"
-										},
-										{
-											"lt": "24.2",
-											"gt": "24.*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "emacs"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "23.4_2",
+												"gt": "23.*"
+											},
+											{
+												"lt": "24.2",
+												"gt": "24.*"
+											}
+										]
+									}
 								}
 							}
 						]

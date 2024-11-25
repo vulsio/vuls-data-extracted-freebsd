@@ -157,46 +157,52 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "11.3_12",
-											"ge": "11.3"
-										},
-										{
-											"lt": "11.4_2",
-											"ge": "11.4"
-										},
-										{
-											"lt": "12.1_8",
-											"ge": "12.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "11.3_12",
+												"ge": "11.3"
+											},
+											{
+												"lt": "11.4_2",
+												"ge": "11.4"
+											},
+											{
+												"lt": "12.1_8",
+												"ge": "12.1"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "sqlite3"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "3.32.2,1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "sqlite3"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.32.2,1"
+											}
+										]
+									}
 								}
 							}
 						]

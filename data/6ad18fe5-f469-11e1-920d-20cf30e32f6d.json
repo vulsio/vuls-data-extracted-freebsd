@@ -60,29 +60,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "bugzilla"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "3.6.11",
-											"ge": "3.6.0"
-										},
-										{
-											"lt": "4.0.8",
-											"ge": "4.0.0"
-										},
-										{
-											"lt": "4.2.3",
-											"ge": "4.2.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "bugzilla"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.6.11",
+												"ge": "3.6.0"
+											},
+											{
+												"lt": "4.0.8",
+												"ge": "4.0.0"
+											},
+											{
+												"lt": "4.2.3",
+												"ge": "4.2.0"
+											}
+										]
+									}
 								}
 							}
 						]

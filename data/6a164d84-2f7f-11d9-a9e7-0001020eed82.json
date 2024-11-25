@@ -60,28 +60,31 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "postgresql-contrib"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "7.2.6"
-										},
-										{
-											"lt": "7.3.8",
-											"gt": "7.3.*"
-										},
-										{
-											"lt": "7.4.6",
-											"gt": "7.4.*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "postgresql-contrib"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.2.6"
+											},
+											{
+												"lt": "7.3.8",
+												"gt": "7.3.*"
+											},
+											{
+												"lt": "7.4.6",
+												"gt": "7.4.*"
+											}
+										]
+									}
 								}
 							}
 						]

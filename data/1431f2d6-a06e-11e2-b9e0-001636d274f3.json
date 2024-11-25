@@ -52,25 +52,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "nvidia-driver"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "304.88",
-											"ge": "195.22"
-										},
-										{
-											"lt": "310.44",
-											"ge": "310.14"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "nvidia-driver"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "304.88",
+												"ge": "195.22"
+											},
+											{
+												"lt": "310.44",
+												"ge": "310.14"
+											}
+										]
+									}
 								}
 							}
 						]

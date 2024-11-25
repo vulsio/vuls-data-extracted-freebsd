@@ -60,24 +60,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "dovecot-managesieve"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "0.10.4"
-										},
-										{
-											"lt": "0.11.1",
-											"ge": "0.11.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "dovecot-managesieve"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "0.10.4"
+											},
+											{
+												"lt": "0.11.1",
+												"ge": "0.11.0"
+											}
+										]
+									}
 								}
 							}
 						]

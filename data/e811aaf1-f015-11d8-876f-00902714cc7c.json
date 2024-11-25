@@ -61,24 +61,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ruby"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.6.8.2004.07.26"
-										},
-										{
-											"lt": "1.8.1.2004.07.23",
-											"ge": "1.7.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ruby"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.6.8.2004.07.26"
+											},
+											{
+												"lt": "1.8.1.2004.07.23",
+												"ge": "1.7.0"
+											}
+										]
+									}
 								}
 							}
 						]

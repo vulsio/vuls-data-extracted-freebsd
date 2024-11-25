@@ -52,29 +52,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD-kernel"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "10.3_28",
-											"ge": "10.3"
-										},
-										{
-											"lt": "10.4_7",
-											"ge": "10.4"
-										},
-										{
-											"lt": "11.1_7",
-											"ge": "11.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD-kernel"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "10.3_28",
+												"ge": "10.3"
+											},
+											{
+												"lt": "10.4_7",
+												"ge": "10.4"
+											},
+											{
+												"lt": "11.1_7",
+												"ge": "11.1"
+											}
+										]
+									}
 								}
 							}
 						]

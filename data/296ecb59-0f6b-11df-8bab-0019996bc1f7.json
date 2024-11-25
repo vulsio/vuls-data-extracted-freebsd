@@ -53,29 +53,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "squid"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.7.7_3",
-											"ge": "2.7.1"
-										},
-										{
-											"lt": "3.0.23",
-											"ge": "3.0.1"
-										},
-										{
-											"lt": "3.1.0.15_2",
-											"ge": "3.1.0.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "squid"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.7.7_3",
+												"ge": "2.7.1"
+											},
+											{
+												"lt": "3.0.23",
+												"ge": "3.0.1"
+											},
+											{
+												"lt": "3.1.0.15_2",
+												"ge": "3.1.0.1"
+											}
+										]
+									}
 								}
 							}
 						]

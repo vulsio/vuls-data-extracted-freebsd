@@ -52,29 +52,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "payara"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"eq": "4.1.2.181.3"
-										},
-										{
-											"eq": "4.1.2.182"
-										},
-										{
-											"eq": "5.181.3"
-										},
-										{
-											"eq": "5.182"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "payara"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"eq": "4.1.2.181.3"
+											},
+											{
+												"eq": "4.1.2.182"
+											},
+											{
+												"eq": "5.181.3"
+											},
+											{
+												"eq": "5.182"
+											}
+										]
+									}
 								}
 							}
 						]

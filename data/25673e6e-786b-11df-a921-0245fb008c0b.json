@@ -38,23 +38,26 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ziproxy"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"ge": "3.1.0"
-										},
-										{
-											"lt": "3.1.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ziproxy"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"ge": "3.1.0"
+											},
+											{
+												"lt": "3.1.1"
+											}
+										]
+									}
 								}
 							}
 						]

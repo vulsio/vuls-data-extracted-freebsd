@@ -84,25 +84,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "mysql-server"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.0.24",
-											"ge": "4.0.0"
-										},
-										{
-											"lt": "4.1.10a",
-											"ge": "4.1.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "mysql-server"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.0.24",
+												"ge": "4.0.0"
+											},
+											{
+												"lt": "4.1.10a",
+												"ge": "4.1.0"
+											}
+										]
+									}
 								}
 							}
 						]

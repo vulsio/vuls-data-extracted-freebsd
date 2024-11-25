@@ -53,45 +53,51 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ja-samba"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.2.11.j1.0_1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ja-samba"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.2.11.j1.0_1"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "samba"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "3.0.2a",
-											"gt": "3.*"
-										},
-										{
-											"le": "3.0.2a_1,1",
-											"gt": "3.*,1"
-										},
-										{
-											"lt": "2.2.12"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "samba"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "3.0.2a",
+												"gt": "3.*"
+											},
+											{
+												"le": "3.0.2a_1,1",
+												"gt": "3.*,1"
+											},
+											{
+												"lt": "2.2.12"
+											}
+										]
+									}
 								}
 							}
 						]

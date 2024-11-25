@@ -52,32 +52,35 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "postgresql-server"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "11.21"
-										},
-										{
-											"lt": "12.16"
-										},
-										{
-											"lt": "13.12"
-										},
-										{
-											"lt": "14.9"
-										},
-										{
-											"lt": "15.4"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "postgresql-server"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "11.21"
+											},
+											{
+												"lt": "12.16"
+											},
+											{
+												"lt": "13.12"
+											},
+											{
+												"lt": "14.9"
+											},
+											{
+												"lt": "15.4"
+											}
+										]
+									}
 								}
 							}
 						]

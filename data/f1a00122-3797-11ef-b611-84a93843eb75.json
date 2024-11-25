@@ -57,50 +57,56 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "13.2_12",
-											"ge": "13.2"
-										},
-										{
-											"lt": "13.3_4",
-											"ge": "13.3"
-										},
-										{
-											"lt": "14.0_8",
-											"ge": "14.0"
-										},
-										{
-											"lt": "14.1_2",
-											"ge": "14.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "13.2_12",
+												"ge": "13.2"
+											},
+											{
+												"lt": "13.3_4",
+												"ge": "13.3"
+											},
+											{
+												"lt": "14.0_8",
+												"ge": "14.0"
+											},
+											{
+												"lt": "14.1_2",
+												"ge": "14.1"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "openssh-portable"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "9.7.p1_2,1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "openssh-portable"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "9.7.p1_2,1"
+											}
+										]
+									}
 								}
 							}
 						]

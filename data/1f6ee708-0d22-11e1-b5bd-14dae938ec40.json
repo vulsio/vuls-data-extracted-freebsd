@@ -52,24 +52,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "phpMyAdmin"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "3.3.10.5"
-										},
-										{
-											"lt": "3.4.7.1",
-											"gt": "3.4"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "phpMyAdmin"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.3.10.5"
+											},
+											{
+												"lt": "3.4.7.1",
+												"gt": "3.4"
+											}
+										]
+									}
 								}
 							}
 						]

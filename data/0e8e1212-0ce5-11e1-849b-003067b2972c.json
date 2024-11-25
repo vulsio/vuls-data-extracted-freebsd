@@ -228,24 +228,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "linux-f10-flashplugin"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "10.3r183.11"
-										},
-										{
-											"lt": "11.1r102.55",
-											"gt": "11"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "linux-f10-flashplugin"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "10.3r183.11"
+											},
+											{
+												"lt": "11.1r102.55",
+												"gt": "11"
+											}
+										]
+									}
 								}
 							}
 						]

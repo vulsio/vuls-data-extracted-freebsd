@@ -116,37 +116,40 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "7.4_8",
-											"ge": "7.4"
-										},
-										{
-											"lt": "8.1_10",
-											"ge": "8.1"
-										},
-										{
-											"lt": "8.2_8",
-											"ge": "8.2"
-										},
-										{
-											"lt": "8.3_2",
-											"ge": "8.3"
-										},
-										{
-											"lt": "9.0_2",
-											"ge": "9.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.4_8",
+												"ge": "7.4"
+											},
+											{
+												"lt": "8.1_10",
+												"ge": "8.1"
+											},
+											{
+												"lt": "8.2_8",
+												"ge": "8.2"
+											},
+											{
+												"lt": "8.3_2",
+												"ge": "8.3"
+											},
+											{
+												"lt": "9.0_2",
+												"ge": "9.0"
+											}
+										]
+									}
 								}
 							}
 						]

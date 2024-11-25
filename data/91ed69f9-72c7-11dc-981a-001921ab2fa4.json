@@ -34,25 +34,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "firebird-server"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.5.5",
-											"ge": "1.*"
-										},
-										{
-											"lt": "2.0.3",
-											"ge": "2.0.*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "firebird-server"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.5.5",
+												"ge": "1.*"
+											},
+											{
+												"lt": "2.0.3",
+												"ge": "2.0.*"
+											}
+										]
+									}
 								}
 							}
 						]

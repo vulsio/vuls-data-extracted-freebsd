@@ -57,41 +57,47 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "p5-DBI"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.37_1"
-										},
-										{
-											"lt": "1.48",
-											"ge": "1.38"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "p5-DBI"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.37_1"
+											},
+											{
+												"lt": "1.48",
+												"ge": "1.38"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "p5-DBI-137"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"ge": "0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "p5-DBI-137"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"ge": "0"
+											}
+										]
+									}
 								}
 							}
 						]

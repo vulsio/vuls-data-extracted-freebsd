@@ -61,25 +61,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "mod_python"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "2.7.10",
-											"ge": "2.7"
-										},
-										{
-											"lt": "3.0.4",
-											"ge": "3.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "mod_python"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.7.10",
+												"ge": "2.7"
+											},
+											{
+												"lt": "3.0.4",
+												"ge": "3.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -52,45 +52,51 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "qemu"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "0.9.1_10"
-										},
-										{
-											"lt": "0.9.1s.20080620_2",
-											"ge": "0.9.1s.20080101*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "qemu"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "0.9.1_10"
+											},
+											{
+												"lt": "0.9.1s.20080620_2",
+												"ge": "0.9.1s.20080101*"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "qemu-devel"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "0.9.1_10"
-										},
-										{
-											"lt": "0.9.1s.20080620_2",
-											"ge": "0.9.1s.20080101*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "qemu-devel"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "0.9.1_10"
+											},
+											{
+												"lt": "0.9.1s.20080620_2",
+												"ge": "0.9.1s.20080101*"
+											}
+										]
+									}
 								}
 							}
 						]

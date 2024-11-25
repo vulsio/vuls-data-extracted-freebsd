@@ -53,47 +53,53 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "nginx"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.10.1,2",
-											"ge": "1.10.0,2"
-										},
-										{
-											"lt": "1.8.1_3,2",
-											"ge": "1.4.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "nginx"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.10.1,2",
+												"ge": "1.10.0,2"
+											},
+											{
+												"lt": "1.8.1_3,2",
+												"ge": "1.4.0"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "nginx-devel"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.11.1",
-											"ge": "1.10.0"
-										},
-										{
-											"lt": "1.9.15_1",
-											"ge": "1.3.9"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "nginx-devel"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.11.1",
+												"ge": "1.10.0"
+											},
+											{
+												"lt": "1.9.15_1",
+												"ge": "1.3.9"
+											}
+										]
+									}
 								}
 							}
 						]

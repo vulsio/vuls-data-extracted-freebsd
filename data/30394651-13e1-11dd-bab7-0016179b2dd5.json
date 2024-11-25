@@ -65,25 +65,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "gnupg"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "1.4.9",
-											"ge": "1.0.0"
-										},
-										{
-											"lt": "2.0.9",
-											"ge": "2.0.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "gnupg"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.4.9",
+												"ge": "1.0.0"
+											},
+											{
+												"lt": "2.0.9",
+												"ge": "2.0.0"
+											}
+										]
+									}
 								}
 							}
 						]

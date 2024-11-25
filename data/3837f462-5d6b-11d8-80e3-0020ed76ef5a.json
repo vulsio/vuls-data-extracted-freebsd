@@ -101,24 +101,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "XFree86-Server"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "4.3.0_13"
-										},
-										{
-											"le": "4.3.99.15_1",
-											"ge": "4.3.99"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "XFree86-Server"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "4.3.0_13"
+											},
+											{
+												"le": "4.3.99.15_1",
+												"ge": "4.3.99"
+											}
+										]
+									}
 								}
 							}
 						]

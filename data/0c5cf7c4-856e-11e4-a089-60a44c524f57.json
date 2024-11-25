@@ -52,29 +52,32 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "otrs"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "3.2.17",
-											"gt": "3.2.*"
-										},
-										{
-											"lt": "3.3.11",
-											"gt": "3.3.*"
-										},
-										{
-											"lt": "4.0.3",
-											"gt": "4.0.*"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "otrs"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.2.17",
+												"gt": "3.2.*"
+											},
+											{
+												"lt": "3.3.11",
+												"gt": "3.3.*"
+											},
+											{
+												"lt": "4.0.3",
+												"gt": "4.0.*"
+											}
+										]
+									}
 								}
 							}
 						]

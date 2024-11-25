@@ -52,27 +52,30 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "xen-kernel"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "4.5.2_2",
-											"ge": "4.1"
-										},
-										{
-											"eq": "3.4.0"
-										},
-										{
-											"eq": "3.4.1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "xen-kernel"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "4.5.2_2",
+												"ge": "4.1"
+											},
+											{
+												"eq": "3.4.0"
+											},
+											{
+												"eq": "3.4.1"
+											}
+										]
+									}
 								}
 							}
 						]

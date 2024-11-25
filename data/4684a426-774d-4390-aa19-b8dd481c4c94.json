@@ -212,25 +212,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "wireshark"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "2.2.9",
-											"ge": "2.2.0"
-										},
-										{
-											"le": "2.4.1",
-											"ge": "2.4.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "wireshark"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "2.2.9",
+												"ge": "2.2.0"
+											},
+											{
+												"le": "2.4.1",
+												"ge": "2.4.0"
+											}
+										]
+									}
 								}
 							}
 						]

@@ -52,25 +52,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "5.3_19",
-											"ge": "5.*"
-										},
-										{
-											"lt": "5.4_5",
-											"ge": "5.4"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "5.3_19",
+												"ge": "5.*"
+											},
+											{
+												"lt": "5.4_5",
+												"ge": "5.4"
+											}
+										]
+									}
 								}
 							}
 						]

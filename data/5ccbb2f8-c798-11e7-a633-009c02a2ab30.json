@@ -136,24 +136,27 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "ffmpeg"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"le": "3.4.1_4,1",
-											"ge": "3.4,1"
-										},
-										{
-											"lt": "3.3.5_1,1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "ffmpeg"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"le": "3.4.1_4,1",
+												"ge": "3.4,1"
+											},
+											{
+												"lt": "3.3.5_1,1"
+											}
+										]
+									}
 								}
 							}
 						]

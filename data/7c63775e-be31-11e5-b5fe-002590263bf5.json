@@ -105,50 +105,56 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "FreeBSD"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "10.1_35",
-											"ge": "10.1"
-										},
-										{
-											"lt": "10.2_18",
-											"ge": "10.2"
-										},
-										{
-											"lt": "10.3_4",
-											"ge": "10.3"
-										},
-										{
-											"lt": "9.3_43",
-											"ge": "9.3"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "FreeBSD"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "10.1_35",
+												"ge": "10.1"
+											},
+											{
+												"lt": "10.2_18",
+												"ge": "10.2"
+											},
+											{
+												"lt": "10.3_4",
+												"ge": "10.3"
+											},
+											{
+												"lt": "9.3_43",
+												"ge": "9.3"
+											}
+										]
+									}
 								}
 							},
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "libarchive"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "3.1.2_5,1"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "libarchive"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.1.2_5,1"
+											}
+										]
+									}
 								}
 							}
 						]

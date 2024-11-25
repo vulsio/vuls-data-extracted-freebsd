@@ -56,25 +56,28 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"vulnerable": true,
-								"fix_status": {
-									"class": "unknown"
-								},
-								"package": {
-									"name": "tomcat"
-								},
-								"affected": {
-									"type": "freebsd-pkg",
-									"range": [
-										{
-											"lt": "5.5.30",
-											"gt": "5.5.0"
-										},
-										{
-											"lt": "6.0.27",
-											"gt": "6.0.0"
-										}
-									]
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "tomcat"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "5.5.30",
+												"gt": "5.5.0"
+											},
+											{
+												"lt": "6.0.27",
+												"gt": "6.0.0"
+											}
+										]
+									}
 								}
 							}
 						]
