@@ -1,0 +1,146 @@
+{
+	"id": "7d7a28cd-7f5a-450a-852f-c49aaab3fa7e",
+	"advisories": [
+		{
+			"content": {
+				"id": "7d7a28cd-7f5a-450a-852f-c49aaab3fa7e",
+				"title": "keycloak -- Multiple security fixes",
+				"description": "\n\t<p>Keycloak reports:</p>\n\t<blockquote cite=\"https://www.keycloak.org/2024/11/keycloak-2606-released.html\">\n\t  <p>This update includes 5 security fixes:</p>\n\t  <ul>\n\t    <li>CVE-2024-10451: Sensitive Data Exposure in Keycloak Build Process</li>\n\t    <li>CVE-2024-10270: Potential Denial of Service</li>\n\t    <li>CVE-2024-10492: Keycloak path trasversal</li>\n\t    <li>CVE-2024-9666: Keycloak proxy header handling Denial-of-Service (DoS) vulnerability</li>\n\t    <li>CVE-2024-10039: Bypassing mTLS validation</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7d7a28cd-7f5a-450a-852f-c49aaab3fa7e.html"
+					}
+				],
+				"published": "2024-11-25T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2021-10039",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-10039"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-10270",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-10270"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-10451",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-10451"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-10492",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-10492"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-9666",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-9666"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "keycloak"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "26.0.6"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/7d7a28cd-7f5a-450a-852f-c49aaab3fa7e.json"
+		]
+	}
+}
