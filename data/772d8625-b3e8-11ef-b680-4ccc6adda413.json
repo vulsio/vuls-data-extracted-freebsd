@@ -1,0 +1,86 @@
+{
+	"id": "772d8625-b3e8-11ef-b680-4ccc6adda413",
+	"advisories": [
+		{
+			"content": {
+				"id": "772d8625-b3e8-11ef-b680-4ccc6adda413",
+				"title": "gstreamer1-plugins-gdkpixbuf -- NULL-pointer dereference",
+				"description": "\n\t<p>The GStreamer Security Center reports:</p>\n\t<blockquote cite=\"https://gstreamer.freedesktop.org/security/\">\n\t  <p>A NULL-pointer dereference in the gdk-pixbuf decoder that can\n\t    cause crashes for certain input files.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gstreamer.freedesktop.org/security/sa-2024-0025.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/772d8625-b3e8-11ef-b680-4ccc6adda413.html"
+					}
+				],
+				"published": "2024-12-06T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-47613",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-47613"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "gstreamer1-plugins-gdkpixbuf"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.24.10"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/772d8625-b3e8-11ef-b680-4ccc6adda413.json"
+		]
+	}
+}

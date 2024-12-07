@@ -1,0 +1,126 @@
+{
+	"id": "7256fae8-b3e8-11ef-b680-4ccc6adda413",
+	"advisories": [
+		{
+			"content": {
+				"id": "7256fae8-b3e8-11ef-b680-4ccc6adda413",
+				"title": "gstreamer1-plugins -- multiple vulnerabilities",
+				"description": "\n\t<p>The GStreamer Security Center reports:</p>\n\t<blockquote cite=\"https://gstreamer.freedesktop.org/security/\">\n\t  <p>3 security bugs.</p>\n\t  <ul>\n\t    <li>CVE-2024-47542: ID3v2 parser out-of-bounds read and NULL-pointer dereference</li>\n\t    <li>CVE-2024-47600: Out-of-bounds read in gst-discoverer-1.0 commandline tool</li>\n\t    <li>CVE-2024-47541: Out-of-bounds write in SSA subtitle parser</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gstreamer.freedesktop.org/security/sa-2024-0008.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gstreamer.freedesktop.org/security/sa-2024-0018.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://gstreamer.freedesktop.org/security/sa-2024-0023.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/7256fae8-b3e8-11ef-b680-4ccc6adda413.html"
+					}
+				],
+				"published": "2024-12-06T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-47541",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-47541"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47542",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-47542"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47600",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-47600"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"name": "gstreamer1-plugins"
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.24.10"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/7256fae8-b3e8-11ef-b680-4ccc6adda413.json"
+		]
+	}
+}
