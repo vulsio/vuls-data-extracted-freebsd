@@ -1,0 +1,71 @@
+{
+	"id": "ef56065e-81fe-4731-a1e3-606c55925bef",
+	"advisories": [
+		{
+			"content": {
+				"id": "ef56065e-81fe-4731-a1e3-606c55925bef",
+				"title": "zeek -- potential DoS vulnerability",
+				"description": "\n\t<p>Tim Wojtulewicz of Corelight reports:</p>\n\t<blockquote cite=\"https://github.com/zeek/zeek/releases/tag/v7.0.5\">\n\t  <p> Large QUIC packets can cause Zeek to overflow memory\n\t  and potentially crash. Due to the possibility of receiving\n\t  these packets from remote hosts, this is a DoS risk. </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/zeek/zeek/releases/tag/v7.0.5"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ef56065e-81fe-4731-a1e3-606c55925bef.html"
+					}
+				],
+				"published": "2024-12-16T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "zeek"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.0.5"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/ef56065e-81fe-4731-a1e3-606c55925bef.json"
+		]
+	}
+}
