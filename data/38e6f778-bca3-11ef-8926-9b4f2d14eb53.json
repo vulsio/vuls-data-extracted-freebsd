@@ -1,0 +1,75 @@
+{
+	"id": "38e6f778-bca3-11ef-8926-9b4f2d14eb53",
+	"advisories": [
+		{
+			"content": {
+				"id": "38e6f778-bca3-11ef-8926-9b4f2d14eb53",
+				"title": "gitea -- Fix misuse of PublicKeyCallback",
+				"description": "\n       <h1>Problem Description:</h1>\n       <ul>\n       <li>Misuse of ServerConfig.PublicKeyCallback may cause authorization\n       bypass in golang.org/x/crypto</li>\n       </ul>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-v778-237x-gjrc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/go-gitea/gitea/pull/32810"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/38e6f778-bca3-11ef-8926-9b4f2d14eb53.html"
+					}
+				],
+				"published": "2024-12-17T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gitea"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.22.6"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/38e6f778-bca3-11ef-8926-9b4f2d14eb53.json"
+		]
+	}
+}
