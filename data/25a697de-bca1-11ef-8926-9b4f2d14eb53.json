@@ -1,0 +1,71 @@
+{
+	"id": "25a697de-bca1-11ef-8926-9b4f2d14eb53",
+	"advisories": [
+		{
+			"content": {
+				"id": "25a697de-bca1-11ef-8926-9b4f2d14eb53",
+				"title": "forgejo -- unauthorized user impersonation",
+				"description": "\n       <h1>Problem Description:</h1>\n       <ul>\n       <li>When Forgejo is configured to run the internal ssh server with\n       [server].START_SSH_SERVER=true, it was possible for a registered user\n       to impersonate another user.  The rootless container image uses the\n       internal ssh server by default and was vulnerable.  A Forgejo\n       instance running from a binary or from a root container image does\n       not use the internal ssh server by default and was not vulnerable.\n       The incorrect use of the crypto package is the root cause of the\n       vulnerability and was fixed for the internal ssh server.</li>\n       <li>Revert \"allow synchronizing user status from OAuth2 login\n       providers\"</li>\n       </ul>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://codeberg.org/forgejo/forgejo/pulls/6248"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/25a697de-bca1-11ef-8926-9b4f2d14eb53.html"
+					}
+				],
+				"published": "2024-12-17T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "forgejo"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.0.12"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/25a697de-bca1-11ef-8926-9b4f2d14eb53.json"
+		]
+	}
+}
