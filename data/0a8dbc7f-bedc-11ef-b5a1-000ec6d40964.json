@@ -1,0 +1,71 @@
+{
+	"id": "0a8dbc7f-bedc-11ef-b5a1-000ec6d40964",
+	"advisories": [
+		{
+			"content": {
+				"id": "0a8dbc7f-bedc-11ef-b5a1-000ec6d40964",
+				"title": "Vaultwarden -- Admin organization permissions",
+				"description": "\n\t<p>The Vaultwarden project reports:</p>\n\t<blockquote cite=\"https://github.com/dani-garcia/vaultwarden/pull/5291\">\n\t  <p>Admins from any organization were able to modify or delete groups in any other organization if they know the group's uuid.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/dani-garcia/vaultwarden/pull/5291"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/0a8dbc7f-bedc-11ef-b5a1-000ec6d40964.html"
+					}
+				],
+				"published": "2024-12-20T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "vaultwarden"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.32.7"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/0a8dbc7f-bedc-11ef-b5a1-000ec6d40964.json"
+		]
+	}
+}
