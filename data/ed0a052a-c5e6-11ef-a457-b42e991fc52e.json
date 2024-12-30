@@ -1,0 +1,138 @@
+{
+	"id": "ed0a052a-c5e6-11ef-a457-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "ed0a052a-c5e6-11ef-a457-b42e991fc52e",
+				"title": "Apache Tomcat -- RCE due to TOCTOU issue in JSP compilation",
+				"description": "\n\t<p>security@apache.org reports:</p>\n\t<blockquote cite=\"https://lists.apache.org/thread/b2b9qrgjrz1kvo4ym8y2wkfdvwoq6qbp\">\n\t  <p>Time-of-check Time-of-use (TOCTOU) Race Condition\n\tThe mitigation for CVE-2024-50379 was incomplete.\n\tUsers running Tomcat on a case insensitive file system with the\n\tdefault servlet write enabled (readonly initialisation parameter\n\tset to the non-default value of false) may need additional configuration\n\tto fully mitigate CVE-2024-50379 depending on which version of Java\n\tthey are using with Tomcat: - running on Java 8 or Java 11: the\n\tsystem propertysun.io.useCanonCaches must be explicitly set to false\n\t(it defaults to true) - running on Java 17: thesystem property\n\tsun.io.useCanonCaches, if set, must be set to false(it defaults to\n\tfalse) - running on Java 21 onwards: no further configuration is\n\trequired(the system property and the problematic cache have been\n\tremoved)\n\tTomcat 11.0.3, 10.1.35 and 9.0.99 onwards will include checks\n\tthatsun.io.useCanonCaches is set appropriately before allowing the\n\tdefault servlet to be write enabled on a case insensitive file\n\tsystem.  Tomcat will also setsun.io.useCanonCaches to false by\n\tdefault where it can.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56337"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ed0a052a-c5e6-11ef-a457-b42e991fc52e.html"
+					}
+				],
+				"published": "2024-12-29T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-56337",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-56337"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "tomcat101"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "10.1.33",
+												"gt": "10.1.0"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "tomcat110"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "11.0.1",
+												"gt": "11.0.0"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "tomcat9"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "9.0.97",
+												"gt": "9.0.0"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/ed0a052a-c5e6-11ef-a457-b42e991fc52e.json"
+		]
+	}
+}
