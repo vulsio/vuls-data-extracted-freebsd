@@ -1,0 +1,165 @@
+{
+	"id": "163edccf-d2ba-11ef-b10e-589cfc10a551",
+	"advisories": [
+		{
+			"content": {
+				"id": "163edccf-d2ba-11ef-b10e-589cfc10a551",
+				"title": "rsync -- Multiple security fixes",
+				"description": "\n\t<p>rsync reports:</p>\n\t<blockquote cite=\"https://kb.cert.org/vuls/id/952657\">\n\t  <p>This update includes multiple security fixes:</p>\n\t  <ul>\n\t    <li>CVE-2024-12084: Heap Buffer Overflow in Checksum Parsing</li>\n\t    <li>CVE-2024-12085: Info Leak via uninitialized Stack contents defeats ASLR</li>\n\t    <li>CVE-2024-12086: Server leaks arbitrary client files</li>\n\t    <li>CVE-2024-12087: Server can make client write files outside of destination directory using symbolic links</li>\n\t    <li>CVE-2024-12088: --safe-links Bypass</li>\n\t    <li>CVE-2024-12747: symlink race condition</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/163edccf-d2ba-11ef-b10e-589cfc10a551.html"
+					}
+				],
+				"published": "2025-01-14T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-12084",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12084"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-12085",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12085"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-12086",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12086"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-12087",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12087"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-12088",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12088"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-12747",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12747"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "rsync"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "3.4.0"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/163edccf-d2ba-11ef-b10e-589cfc10a551.json"
+		]
+	}
+}
