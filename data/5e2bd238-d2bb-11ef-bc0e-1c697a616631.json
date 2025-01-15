@@ -1,0 +1,101 @@
+{
+	"id": "5e2bd238-d2bb-11ef-bc0e-1c697a616631",
+	"advisories": [
+		{
+			"content": {
+				"id": "5e2bd238-d2bb-11ef-bc0e-1c697a616631",
+				"title": "keycloak -- Multiple security fixes",
+				"description": "\n\t<p>Keycloak reports:</p>\n\t<blockquote cite=\"https://www.keycloak.org/2024/11/keycloak-2606-released.html\">\n\t  <p>This update includes 2 security fixes:</p>\n\t  <ul>\n\t    <li>CVE-2024-11734: Unrestricted admin use of system and environment variables</li>\n\t    <li>CVE-2024-11736: Denial of Service in Keycloak Server via Security Headers</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/5e2bd238-d2bb-11ef-bc0e-1c697a616631.html"
+					}
+				],
+				"published": "2025-01-13T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-11734",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-11734"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-11736",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-11736"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "keycloak"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "26.0.8"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/5e2bd238-d2bb-11ef-bc0e-1c697a616631.json"
+		]
+	}
+}
