@@ -1,0 +1,71 @@
+{
+	"id": "47bc292a-d472-11ef-aaab-7d43732cb6f5",
+	"advisories": [
+		{
+			"content": {
+				"id": "47bc292a-d472-11ef-aaab-7d43732cb6f5",
+				"title": "openvpn -- too long a username or password from a client can confuse openvpn servers",
+				"description": "\n\t<p>Frank Lichtenheld reports:</p>\n\t<blockquote cite=\"https://github.com/OpenVPN/openvpn/releases/tag/v2.6.13\">\n\t  <p>[OpenVPN v2.6.13 ...] improve server-side handling of clients sending\n\t    usernames or passwords longer than USER_PASS_LEN - this would not\n\t    result in a crash, buffer overflow or other security issues, but the\n\t    server would then misparse incoming IV variables and produce misleading\n\t    error messages.</p>\n\t</blockquote>\n       ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/OpenVPN/openvpn/releases/tag/v2.6.13"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/47bc292a-d472-11ef-aaab-7d43732cb6f5.html"
+					}
+				],
+				"published": "2025-01-17T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "openvpn"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.6.13"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/47bc292a-d472-11ef-aaab-7d43732cb6f5.json"
+		]
+	}
+}
