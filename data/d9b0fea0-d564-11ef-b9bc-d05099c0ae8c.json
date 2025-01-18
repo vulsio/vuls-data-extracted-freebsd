@@ -1,0 +1,71 @@
+{
+	"id": "d9b0fea0-d564-11ef-b9bc-d05099c0ae8c",
+	"advisories": [
+		{
+			"content": {
+				"id": "d9b0fea0-d564-11ef-b9bc-d05099c0ae8c",
+				"title": "age -- age vulnerable to malicious plugin names, recipients, or identities causing arbitrary binary execution",
+				"description": "\n\t<p>Filippo Valsorda reports:</p>\n\t<blockquote cite=\"https://github.com/advisories/GHSA-32gq-x56h-299c\">\n\t  <p>A plugin name containing a path separator may allow an\n\t    attacker to execute an arbitrary binary.</p>\n\t  <p>Such a plugin name can be provided to the age CLI through\n\t    an attacker-controlled recipient or identity string, or to\n\t    the plugin.NewIdentity, plugin.NewIdentityWithoutData, or\n\t    plugin.NewRecipient APIs.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/advisories/GHSA-32gq-x56h-299c"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/d9b0fea0-d564-11ef-b9bc-d05099c0ae8c.html"
+					}
+				],
+				"published": "2025-01-18T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "age"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.2.1"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/d9b0fea0-d564-11ef-b9bc-d05099c0ae8c.json"
+		]
+	}
+}
