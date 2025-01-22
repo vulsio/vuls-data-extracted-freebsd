@@ -1,0 +1,132 @@
+{
+	"id": "704aa72a-d840-11ef-a205-901b0e9408dc",
+	"advisories": [
+		{
+			"content": {
+				"id": "704aa72a-d840-11ef-a205-901b0e9408dc",
+				"title": "go -- multiple vulnerabilities",
+				"description": "\n\t<p>The Go project reports:</p>\n\t<blockquote cite=\"https://go.dev/issue/71156\">\n\t  <p>crypto/x509: usage of IPv6 zone IDs can bypass URI name constraints</p>\n\t  <p>A certificate with a URI which has a IPv6 address with a\n\t  zone ID may incorrectly satisfy a URI name constraint that\n\t  applies to the certificate chain.</p>\n\t</blockquote>\n\t<blockquote cite=\"https://go.dev/issue/70530\">\n\t  <p>net/http: sensitive headers incorrectly sent after cross-domain redirect</p>\n\t  <p>The HTTP client drops sensitive headers after following a\n\t  cross-domain redirect.  For example, a request to a.com/\n\t  containing an Authorization header which is redirected to\n\t  b.com/ will not send that header to b.com.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://go.dev/issue/70530"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://go.dev/issue/71156"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/704aa72a-d840-11ef-a205-901b0e9408dc.html"
+					}
+				],
+				"published": "2025-01-21T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-45336",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45336"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-45341",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45341"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "go122"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.22.11"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "go123"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.23.5"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/704aa72a-d840-11ef-a205-901b0e9408dc.json"
+		]
+	}
+}
