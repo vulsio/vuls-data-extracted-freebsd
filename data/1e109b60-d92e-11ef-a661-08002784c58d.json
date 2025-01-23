@@ -1,0 +1,114 @@
+{
+	"id": "1e109b60-d92e-11ef-a661-08002784c58d",
+	"advisories": [
+		{
+			"content": {
+				"id": "1e109b60-d92e-11ef-a661-08002784c58d",
+				"title": "clamav -- Possbile denial-of-service vulnerability",
+				"description": "\n\t<p>The ClamAV project reports:</p>\n\t<blockquote cite=\"https://blog.clamav.net/2025/01/clamav-142-and-108-security-patch.html\">\n\t  <p>\n\t    A possible buffer overflow read bug is found in the OLE2\n\t    file parser that could cause a denial-of-service (DoS)\n\t    condition.\n\t  </p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://blog.clamav.net/2025/01/clamav-142-and-108-security-patch.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1e109b60-d92e-11ef-a661-08002784c58d.html"
+					}
+				],
+				"published": "2025-01-23T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-20128",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-20128"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "clamav"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.4.2,1",
+												"ge": "1.0.0,1"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "clamav-lts"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.0.8,1",
+												"ge": "1.0.0,1"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/1e109b60-d92e-11ef-a661-08002784c58d.json"
+		]
+	}
+}
