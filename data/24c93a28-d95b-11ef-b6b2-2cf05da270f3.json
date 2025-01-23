@@ -1,0 +1,162 @@
+{
+	"id": "24c93a28-d95b-11ef-b6b2-2cf05da270f3",
+	"advisories": [
+		{
+			"content": {
+				"id": "24c93a28-d95b-11ef-b6b2-2cf05da270f3",
+				"title": "Gitlab -- Vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/\">\n\t  <p>Stored XSS via Asciidoctor render</p>\n\t  <p>Developer could exfiltrate protected CI/CD variables via CI lint</p>\n\t  <p>Cyclic reference of epics leads resource exhaustion</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/24c93a28-d95b-11ef-b6b2-2cf05da270f3.html"
+					}
+				],
+				"published": "2025-01-23T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-11931",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-11931"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-6324",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-6324"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-0314",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0314"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gitlab-ce"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "17.6.4",
+												"ge": "15.7.0"
+											},
+											{
+												"lt": "17.7.3",
+												"ge": "17.7.0"
+											},
+											{
+												"lt": "17.8.1",
+												"ge": "17.8.0"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gitlab-ee"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "17.6.4",
+												"ge": "15.7.0"
+											},
+											{
+												"lt": "17.7.3",
+												"ge": "17.7.0"
+											},
+											{
+												"lt": "17.8.1",
+												"ge": "17.8.0"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/24c93a28-d95b-11ef-b6b2-2cf05da270f3.json"
+		]
+	}
+}
