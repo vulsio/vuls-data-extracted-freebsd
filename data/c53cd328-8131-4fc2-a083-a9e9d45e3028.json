@@ -1,0 +1,128 @@
+{
+	"id": "c53cd328-8131-4fc2-a083-a9e9d45e3028",
+	"advisories": [
+		{
+			"content": {
+				"id": "c53cd328-8131-4fc2-a083-a9e9d45e3028",
+				"title": "chromium -- multiple security fixes",
+				"description": "\n       <p>Chrome Releases reports:</p>\n       <blockquote cite=\"https://chromereleases.googleblog.com/2025/01/stable-channel-update-for-desktop_22.html\">\n\t <p>This update includes 3 security fixes:</p>\n\t <ul>\n\t    <li>[386143468] High CVE-2025-0611: Object corruption in V8. Reported by 303f06e3 on 2024-12-26</li>\n\t    <li>[385155406] High CVE-2025-0612: Out of bounds memory access in V8. Reported by Alan Goodman on 2024-12-20</li>\n\t </ul>\n       </blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://chromereleases.googleblog.com/2025/01/stable-channel-update-for-desktop_22.html"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c53cd328-8131-4fc2-a083-a9e9d45e3028.html"
+					}
+				],
+				"published": "2025-01-25T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-0611",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0611"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-0612",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0612"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "chromium"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "132.0.6834.110"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "ungoogled-chromium"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "132.0.6834.110"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/c53cd328-8131-4fc2-a083-a9e9d45e3028.json"
+		]
+	}
+}

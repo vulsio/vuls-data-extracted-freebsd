@@ -1,0 +1,71 @@
+{
+	"id": "41711c0d-db27-11ef-873e-8447094a420f",
+	"advisories": [
+		{
+			"content": {
+				"id": "41711c0d-db27-11ef-873e-8447094a420f",
+				"title": "Vaultwarden -- Muiltiple vulnerabilities",
+				"description": "\n\t<p>The Vaultwarden project reports:</p>\n\t<blockquote cite=\"https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.0\">\n\t  <p>RCE in the admin panel.</p>\n\t  <p>Getting access to the Admin Panel via CSRF.</p>\n\t  <p>Escalation of privilege via variable confusion in OrgHeaders trait.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.0"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/41711c0d-db27-11ef-873e-8447094a420f.html"
+					}
+				],
+				"published": "2025-01-25T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "vaultwarden"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.33.0"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/41711c0d-db27-11ef-873e-8447094a420f.json"
+		]
+	}
+}
