@@ -1,0 +1,98 @@
+{
+	"id": "fa9ae646-debc-11ef-87ba-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "fa9ae646-debc-11ef-87ba-002590c1f29c",
+				"title": "FreeBSD -- Unprivileged access to system files",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>When etcupdate encounters conflicts while merging files, it\n\tsaves a version containing conflict markers in /var/db/etcupdate/conflicts.\n\tThis version does not preserve the mode of the input file, and is\n\tworld-readable.  This applies to files that would normally have\n\trestricted visibility, such as /etc/master.passwd.</p>\n\t<h1>Impact:</h1>\n\t<p>An unprivileged local user may be able to read encrypted root\n\tand user passwords from the temporary master.passwd file created\n\tin /var/db/etcupdate/conflicts.  This is possible only when conflicts\n\twithin the password file arise during an update, and the unprotected\n\tfile is deleted when conflicts are resolved.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-25:03.etcupdate.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fa9ae646-debc-11ef-87ba-002590c1f29c.html"
+					}
+				],
+				"published": "2025-01-30T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-0374",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0374"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "FreeBSD"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "13.4_3",
+												"ge": "13.4"
+											},
+											{
+												"lt": "14.1_7",
+												"ge": "14.1"
+											},
+											{
+												"lt": "14.2_1",
+												"ge": "14.2"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/fa9ae646-debc-11ef-87ba-002590c1f29c.json"
+		]
+	}
+}

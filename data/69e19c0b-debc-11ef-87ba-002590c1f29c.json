@@ -1,0 +1,90 @@
+{
+	"id": "69e19c0b-debc-11ef-87ba-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "69e19c0b-debc-11ef-87ba-002590c1f29c",
+				"title": "FreeBSD -- OpenSSH Keystroke Obfuscation Bypass",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>A logic error in the ssh(1) ObscureKeystrokeTiming feature (on\n\tby default) rendered this feature ineffective.</p>\n\t<h1>Impact:</h1>\n\t<p>A passive observer could detect which network packets contain\n\treal keystrokes, and infer the specific characters being transmitted\n\tfrom packet timing.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-25:01.openssh.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/69e19c0b-debc-11ef-87ba-002590c1f29c.html"
+					}
+				],
+				"published": "2025-01-30T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-39894",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-39894"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "FreeBSD"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "14.1_7",
+												"ge": "14.1"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/69e19c0b-debc-11ef-87ba-002590c1f29c.json"
+		]
+	}
+}
