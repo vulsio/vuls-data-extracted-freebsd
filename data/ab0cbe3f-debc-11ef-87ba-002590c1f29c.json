@@ -1,0 +1,98 @@
+{
+	"id": "ab0cbe3f-debc-11ef-87ba-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "ab0cbe3f-debc-11ef-87ba-002590c1f29c",
+				"title": "FreeBSD -- Buffer overflow in some filesystems via NFS",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>In order to export a file system via NFS, the file system must\n\tdefine a file system identifier (FID) for all exported files.  Each\n\tFreeBSD file system implements operations to translate between FIDs\n\tand vnodes, the kernel's in-memory representation of files.  These\n\toperations are VOP_VPTOFH(9) and VFS_FHTOVP(9).</p>\n\t<p>On 64-bit systems, the implementation of VOP_VPTOFH() in the\n\tcd9660, tarfs and ext2fs filesystems overflows the destination FID\n\tbuffer by 4 bytes, a stack buffer overflow.</p>\n\t<h1>Impact:</h1>\n\t<p>A NFS server that exports a cd9660, tarfs, or ext2fs file system\n\tcan be made to panic by mounting and accessing the export with an\n\tNFS client.  Further exploitation (e.g., bypassing file permission\n\tchecking or remote kernel code execution) is potentially possible,\n\tthough this has not been demonstrated.  In particular, release\n\tkernels are compiled with stack protection enabled, and some instances\n\tof the overflow are caught by this mechanism, causing a panic.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-25:02.fs.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/ab0cbe3f-debc-11ef-87ba-002590c1f29c.html"
+					}
+				],
+				"published": "2025-01-30T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-0373",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0373"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "FreeBSD-kernel"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "13.4_3",
+												"ge": "13.4"
+											},
+											{
+												"lt": "14.1_7",
+												"ge": "14.1"
+											},
+											{
+												"lt": "14.2_1",
+												"ge": "14.2"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/ab0cbe3f-debc-11ef-87ba-002590c1f29c.json"
+		]
+	}
+}

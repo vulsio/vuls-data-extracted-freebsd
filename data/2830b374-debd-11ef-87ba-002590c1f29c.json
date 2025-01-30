@@ -1,0 +1,90 @@
+{
+	"id": "2830b374-debd-11ef-87ba-002590c1f29c",
+	"advisories": [
+		{
+			"content": {
+				"id": "2830b374-debd-11ef-87ba-002590c1f29c",
+				"title": "FreeBSD -- Uninitialized kernel memory disclosure via ktrace(2)",
+				"description": "\n\t<h1>Problem Description:</h1>\n\t<p>In some cases, the ktrace facility will log the contents of\n\tkernel structures to userspace.  In one such case, ktrace dumps a\n\tvariable-sized sockaddr to userspace.  There, the full sockaddr is\n\tcopied, even when it is shorter than the full size.  This can result\n\tin up to 14 uninitialized bytes of kernel memory being copied out\n\tto userspace.</p>\n\t<h1>Impact:</h1>\n\t<p>It is possible for an unprivileged userspace program to leak\n\t14 bytes of a kernel heap allocation to userspace.</p>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-25:04.ktrace.asc"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/2830b374-debd-11ef-87ba-002590c1f29c.html"
+					}
+				],
+				"published": "2025-01-30T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-0662",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0662"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "FreeBSD-kernel"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "14.2_1",
+												"ge": "14.2"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/2830b374-debd-11ef-87ba-002590c1f29c.json"
+		]
+	}
+}

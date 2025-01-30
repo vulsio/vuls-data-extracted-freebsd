@@ -1,0 +1,85 @@
+{
+	"id": "258a58a9-6583-4808-986b-e785c27b0a18",
+	"advisories": [
+		{
+			"content": {
+				"id": "258a58a9-6583-4808-986b-e785c27b0a18",
+				"title": "oauth2-proxy -- Non-linear parsing of case-insensitive content",
+				"description": "\n\t<p>Golang reports:</p>\n\t<blockquote cite=\"https://github.com/advisories/GHSA-w32m-9786-jp63\">\n\t  <p>This update include security fixes:</p>\n\t  <ul>\n\t    <li>CVE-2024-45338: Non-linear parsing of case-insensitive content</li>\n\t  </ul>\n\t</blockquote>\n      ",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/258a58a9-6583-4808-986b-e785c27b0a18.html"
+					}
+				],
+				"published": "2025-01-30T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-45338",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-45338"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "oauth2-proxy"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.8.0"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/258a58a9-6583-4808-986b-e785c27b0a18.json"
+		]
+	}
+}

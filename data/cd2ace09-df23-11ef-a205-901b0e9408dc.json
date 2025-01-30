@@ -1,0 +1,89 @@
+{
+	"id": "cd2ace09-df23-11ef-a205-901b0e9408dc",
+	"advisories": [
+		{
+			"content": {
+				"id": "cd2ace09-df23-11ef-a205-901b0e9408dc",
+				"title": "dendrite -- Server-side request forgery vulnerability",
+				"description": "\n\t<p>Dendrite team reports:</p>\n\t<blockquote cite=\"https://github.com/matrix-org/gomatrixserverlib/security/advisories/GHSA-4ff6-858j-r822\">\n\t  <p>This is a security release, gomatrixserverlib was vulnerable to server-side request forgery, serving content from a private network it can access, under certain conditions.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/matrix-org/gomatrixserverlib/security/advisories/GHSA-4ff6-858j-r822"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cd2ace09-df23-11ef-a205-901b0e9408dc.html"
+					}
+				],
+				"published": "2025-01-30T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-52594",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-52594"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dendrite"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "0.14.1"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/cd2ace09-df23-11ef-a205-901b0e9408dc.json"
+		]
+	}
+}
