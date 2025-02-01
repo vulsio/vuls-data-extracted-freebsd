@@ -4,12 +4,16 @@
 		{
 			"content": {
 				"id": "41711c0d-db27-11ef-873e-8447094a420f",
-				"title": "Vaultwarden -- Muiltiple vulnerabilities",
+				"title": "Vaultwarden -- Multiple vulnerabilities",
 				"description": "\n\t<p>The Vaultwarden project reports:</p>\n\t<blockquote cite=\"https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.0\">\n\t  <p>RCE in the admin panel.</p>\n\t  <p>Getting access to the Admin Panel via CSRF.</p>\n\t  <p>Escalation of privilege via variable confusion in OrgHeaders trait.</p>\n\t</blockquote>\n\t",
 				"references": [
 					{
 						"source": "vuxml.freebsd.org",
-						"url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.0"
+						"url": "https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-h6cc-rc6q-23j4"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-j4h8-vch3-f797"
 					},
 					{
 						"source": "vuxml.freebsd.org",
@@ -17,6 +21,40 @@
 					}
 				],
 				"published": "2025-01-25T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-24364",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-24364"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-24365",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-24365"
+					}
+				]
 			},
 			"segments": [
 				{
