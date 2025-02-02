@@ -85,6 +85,29 @@
 									"package": {
 										"type": "binary",
 										"binary": {
+											"name": "redis-devel"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "7.4.2.20250201"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
 											"name": "redis72"
 										}
 									},
