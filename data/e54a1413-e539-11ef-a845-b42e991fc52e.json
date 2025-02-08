@@ -1,0 +1,203 @@
+{
+	"id": "e54a1413-e539-11ef-a845-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "e54a1413-e539-11ef-a845-b42e991fc52e",
+				"title": "mozilla -- multiple vulnerabilities",
+				"description": "\n\t<p>security@mozilla.org reports:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/buglist.cgi?bug_id=1936601%2C1936844%2C1937694%2C1938469%2C1939583%2C1940994\">\n\t<p>An attacker could have caused a use-after-free via crafted XSLT\n\tdata, leading to a potentially exploitable crash.</p>\n\t<p>An attacker could have caused a use-after-free via the Custom\n\tHighlight API, leading to a potentially exploitable crash.</p>\n\t<p>A race during concurrent delazification could have led to a\n\tuse-after-free.</p>\n\t<p>Memory safety bugs present in Firefox 134, Thunderbird 134, Firefox\n\tESR 115.19, Firefox ESR 128.6, Thunderbird 115.19, and Thunderbird\n\t128.6.  Some of these bugs showed evidence of memory corruption and\n\twe presume that with enough effort some of these could have been\n\texploited to run arbitrary code.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1009"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1010"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1012"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1016"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e54a1413-e539-11ef-a845-b42e991fc52e.html"
+					}
+				],
+				"published": "2025-02-07T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-1009",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1009"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-1010",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1010"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-1012",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1012"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-1016",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1016"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "firefox"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "135.0.0,2"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "firefox-esr"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "115.20,1"
+											},
+											{
+												"lt": "128.6,1",
+												"gt": "116.0,1"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "thunderbird"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "128.7"
+											},
+											{
+												"lt": "135",
+												"gt": "129"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/e54a1413-e539-11ef-a845-b42e991fc52e.json"
+		]
+	}
+}
