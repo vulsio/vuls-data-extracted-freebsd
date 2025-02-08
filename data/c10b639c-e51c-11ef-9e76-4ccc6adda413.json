@@ -1,0 +1,201 @@
+{
+	"id": "c10b639c-e51c-11ef-9e76-4ccc6adda413",
+	"advisories": [
+		{
+			"content": {
+				"id": "c10b639c-e51c-11ef-9e76-4ccc6adda413",
+				"title": "libcaca -- Multiple vulnerabilities",
+				"description": "\n\t<p>Sam Hocevar reports:</p>\n\t<blockquote cite=\"https://github.com/cacalabs/libcaca/releases/tag/v0.99.beta20\">\n\t  <p>Multiple memory leaks and invalid memory accesses:</p>\n\t  <ul>\n\t    <li>CVE-2018-20545: Illegal WRITE memory access at common-image.c</li>\n\t    <li>CVE-2018-20546: Illegal READ memory access at caca/dither.c</li>\n\t    <li>CVE-2018-20547: Illegal READ memory access at caca/dither.c</li>\n\t    <li>CVE-2018-20548: Illegal WRITE memory access at common-image.c</li>\n\t    <li>CVE-2018-20549: Illegal WRITE memory access at caca/file.c</li>\n\t    <li>CVE-2021-3410:  Buffer overflow in libcaca/caca/canvas.c in function caca_resize</li>\n\t    <li>CVE-2021-30498: Heap buffer overflow in export.c in function export_tga</li>\n\t    <li>CVE-2021-30499: Buffer overflow in export.c in function export_troff</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/cacalabs/libcaca/releases/tag/v0.99.beta20"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/c10b639c-e51c-11ef-9e76-4ccc6adda413.html"
+					}
+				],
+				"published": "2025-02-07T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2018-20545",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-20545"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2018-20546",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-20546"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2018-20547",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-20547"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2018-20548",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-20548"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2018-20549",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2018-20549"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-30498",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-30498"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-30499",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-30499"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2021-3410",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2021-3410"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "libcaca"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "0.99.b20"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/c10b639c-e51c-11ef-9e76-4ccc6adda413.json"
+		]
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"id": "830381c7-e539-11ef-a845-b42e991fc52e",
+	"advisories": [
+		{
+			"content": {
+				"id": "830381c7-e539-11ef-a845-b42e991fc52e",
+				"title": "Thundirbird -- unprivileged JavaScript code execution",
+				"description": "\n\t<p>security@mozilla.org reports:</p>\n\t<blockquote cite=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1939458\">\n\t  <p>The Thunderbird Address Book URI fields contained unsanitized links.\n\tThis could be used by an attacker to create and export an address\n\tbook containing a malicious payload in a field.  For example, in\n\tthe Other field of the Instant Messaging section.  If another user\n\timported the address book, clicking on the link could result in\n\topening a web page inside Thunderbird, and that page could execute\n\t(unprivileged) JavaScript.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1015"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/830381c7-e539-11ef-a845-b42e991fc52e.html"
+					}
+				],
+				"published": "2025-02-07T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-1015",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1015"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "mozilla"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "128.7,1"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/830381c7-e539-11ef-a845-b42e991fc52e.json"
+		]
+	}
+}
