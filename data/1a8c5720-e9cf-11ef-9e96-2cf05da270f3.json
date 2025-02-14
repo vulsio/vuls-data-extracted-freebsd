@@ -1,0 +1,242 @@
+{
+	"id": "1a8c5720-e9cf-11ef-9e96-2cf05da270f3",
+	"advisories": [
+		{
+			"content": {
+				"id": "1a8c5720-e9cf-11ef-9e96-2cf05da270f3",
+				"title": "Gitlab -- Vulnerabilities",
+				"description": "\n\t<p>Gitlab reports:</p>\n\t<blockquote cite=\"https://about.gitlab.com/releases/2025/02/12/patch-release-gitlab-17-8-2-released/\">\n\t  <p>A CSP-bypass XSS in merge-request page</p>\n\t  <p>Denial of Service due to Unbounded Symbol Creation</p>\n\t  <p>Exfiltrate content from private issues using Prompt Injection</p>\n\t  <p>A custom permission may allow overriding Repository settings</p>\n\t  <p>Internal HTTP header leak via route confusion in workhorse</p>\n\t  <p>SSRF via workspaces</p>\n\t  <p>Unauthorized Incident Closure and Deletion by Planner Role in GitLab</p>\n\t  <p>ActionCable does not invalidate tokens after revocation</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://about.gitlab.com/releases/2025/02/12/patch-release-gitlab-17-8-2-released/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/1a8c5720-e9cf-11ef-9e96-2cf05da270f3.html"
+					}
+				],
+				"published": "2025-02-13T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-12379",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-12379"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-3303",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-3303"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-9870",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-9870"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-0376",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0376"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-0516",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-0516"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-1042",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1042"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-1198",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1198"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-1212",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1212"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gitlab-ce"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "17.6.5",
+												"ge": "8.3.0"
+											},
+											{
+												"lt": "17.7.4",
+												"ge": "17.7.0"
+											},
+											{
+												"lt": "17.8.2",
+												"ge": "17.8.0"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gitlab-ee"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "17.6.5",
+												"ge": "8.3.0"
+											},
+											{
+												"lt": "17.7.4",
+												"ge": "17.7.0"
+											},
+											{
+												"lt": "17.8.2",
+												"ge": "17.8.0"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/1a8c5720-e9cf-11ef-9e96-2cf05da270f3.json"
+		]
+	}
+}
