@@ -1,0 +1,181 @@
+{
+	"id": "fadf3b41-ea19-11ef-a540-6cc21735f730",
+	"advisories": [
+		{
+			"content": {
+				"id": "fadf3b41-ea19-11ef-a540-6cc21735f730",
+				"title": "PostgreSQL -- PostgreSQL quoting APIs miss neutralizing quoting syntax in text that fails encoding validation",
+				"description": "\n\t<p>The PostgreSQL Project reports:</p>\n\t<blockquote cite=\"https://www.postgresql.org/support/security/CVE-2025-1094/\">\n\t<p>\n\t  Improper neutralization of quoting syntax in PostgreSQL\n\t  libpq functions PQescapeLiteral(), PQescapeIdentifier(),\n\t  PQescapeString(), and PQescapeStringConn() allows a\n\t  database input provider to achieve SQL injection in\n\t  certain usage patterns. Specifically, SQL injection\n\t  requires the application to use the function result to\n\t  construct input to psql, the PostgreSQL interactive\n\t  terminal. Similarly, improper neutralization of quoting\n\t  syntax in PostgreSQL command line utility programs\n\t  allows a source of command line arguments to achieve SQL\n\t  injection when client_encoding is BIG5 and\n\t  server_encoding is one of EUC_TW or MULE_INTERNAL.\n\t  Versions before PostgreSQL 17.3, 16.7, 15.11, 14.16, and\n\t  13.19 are affected.\n\t</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.postgresql.org/support/security/CVE-2025-1094/"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/fadf3b41-ea19-11ef-a540-6cc21735f730.html"
+					}
+				],
+				"published": "2025-02-13T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-1094",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-1094"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql13-client"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "13.19"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql14-client"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "14.16"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql15-client"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "15.11"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql16-client"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "16.7"
+											}
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql17-client"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "17.3"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/fadf3b41-ea19-11ef-a540-6cc21735f730.json"
+		]
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"id": "e915b60e-ea25-11ef-a1c0-0050569f0b83",
+	"advisories": [
+		{
+			"content": {
+				"id": "e915b60e-ea25-11ef-a1c0-0050569f0b83",
+				"title": "security/openvpn-auth-ldap -- Fix buffer overflow in challenge/response",
+				"description": "\n\t<p>Graham Northup reports:</p>\n\t<blockquote cite=\"https://nvd.nist.gov/vuln/detail/CVE-2024-28820\">\n\t  <p>A buffer overflow in extract_openvpn_cr allows attackers with a valid\n\t     LDAP username and who can control the challenge/response password field\n\t     to pass a string with more than 14 colons into this field and cause a\n\t     buffer overflow.</p>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://nvd.nist.gov/vuln/detail/CVE-2024-28820"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/e915b60e-ea25-11ef-a1c0-0050569f0b83.html"
+					}
+				],
+				"published": "2025-02-13T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-28820",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2024-28820"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "openvpn-auth-ldap"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "2.0.4_3"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/e915b60e-ea25-11ef-a1c0-0050569f0b83.json"
+		]
+	}
+}

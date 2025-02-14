@@ -1,0 +1,109 @@
+{
+	"id": "cbf5d976-656b-4bb6-805f-3af038e2de3e",
+	"advisories": [
+		{
+			"content": {
+				"id": "cbf5d976-656b-4bb6-805f-3af038e2de3e",
+				"title": "vscode -- multiple vulnerabilities",
+				"description": "\n\t<p>VSCode developers report:</p>\n\t<blockquote cite=\"https://github.com/microsoft/vscode/releases/tag/1.97.1\">\n\t  <p>The update addresses these issues, including a fix for a security vulnerability.</p>\n\t  <ul>\n\t    <li>Scope node_module binary resolution in js-debug</li>\n\t    <li>Elevation of Privilege Vulnerability with VS Code server for web UI</li>\n\t  </ul>\n\t</blockquote>\n\t",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/microsoft/vscode/security/advisories/GHSA-532g-4pv9-25f2"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://github.com/microsoft/vscode/security/advisories/GHSA-f85p-3684-2g3j"
+					},
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.vuxml.org/freebsd/cbf5d976-656b-4bb6-805f-3af038e2de3e.html"
+					}
+				],
+				"published": "2025-02-13T00:00:00Z"
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2025-24039",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-24039"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2025-24042",
+				"references": [
+					{
+						"source": "vuxml.freebsd.org",
+						"url": "https://www.cve.org/CVERecord?id=CVE-2025-24042"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "freebsd"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "freebsd",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "unknown"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "vscode"
+										}
+									},
+									"affected": {
+										"type": "freebsd-pkg",
+										"range": [
+											{
+												"lt": "1.97.1"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "freebsd",
+		"raws": [
+			"vuls-data-raw-freebsd/cbf5d976-656b-4bb6-805f-3af038e2de3e.json"
+		]
+	}
+}
